@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "E-mail",
+  "description": "Receba e-mails de clientes no atendimento e envie campanhas — dois canais separados, cada um com o próprio requisito.",
+  "icon": "mail",
+  "articles": [
+    "visao-geral",
+    "configurar-email-de-atendimento",
+    "configurar-email-de-envio",
+    "resolver-problemas"
+  ]
+}

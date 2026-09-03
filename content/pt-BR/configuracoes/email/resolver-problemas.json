@@ -1,0 +1,256 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O e-mail não está funcionando",
+  "subtitle": "Roteiros para quando o encaminhamento não verifica, um e-mail de cliente some, o canal de envio não salva, ou você precisa excluir um canal com segurança.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "não verifica",
+    "encaminhamento",
+    "e-mail sumiu",
+    "erro ao salvar",
+    "excluir canal"
+  ],
+  "related": [
+    "configuracoes/email/visao-geral",
+    "configuracoes/email/configurar-email-de-atendimento",
+    "configuracoes/email/configurar-email-de-envio"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A maioria dos casos cai em quatro situações: o encaminhamento não verifica, um e-mail de cliente não chegou no atendimento, o canal de envio não deixa salvar, ou você não sabe se pode excluir um canal sem quebrar alguma automação."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O encaminhamento não verifica"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O encaminhamento foi configurado exatamente para o endereço que a Bevean mostrou?"
+          },
+          {
+            "content": "Um caractere errado no endereço de destino já impede o e-mail de chegar. Copie de novo em vez de digitar"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "Já se passou tempo suficiente para o encaminhamento processar?"
+          },
+          {
+            "content": "Alguns provedores levam alguns minutos para ativar a regra"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "Apareceu algum e-mail de confirmação do próprio Gmail, separado do encaminhamento?"
+          },
+          {
+            "content": "É esperado — confirme essa mensagem também, ela conta como parte da verificação"
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "O e-mail de verificação da Bevean pode ter caído no spam da sua própria caixa?"
+          },
+          {
+            "content": "Ele precisa ser encaminhado, não só recebido — confira a pasta de spam da caixa de origem também"
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "Já tentou reenviar o e-mail de verificação?"
+          },
+          {
+            "content": "O botão fica em Editar canal, na mesma tela do encaminhamento"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Um e-mail de cliente não chegou no atendimento"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O filtro de newsletter e spam está ligado?"
+          },
+          {
+            "content": "Ele pode ter classificado errado. Desligue temporariamente para confirmar se é isso"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "O remetente usa um endereço técnico (no-reply, bounce, ou parecido)?"
+          },
+          {
+            "content": "Esses padrões são tratados como automação, não como cliente — mesmo que o conteúdo seja de uma pessoa"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "É a primeira vez que esse remetente escreve, e o e-mail tem cara de automação (poucos links, layout de template)?"
+          },
+          {
+            "content": "Um remetente novo sem conversa anterior passa por uma análise mais rigorosa que um cliente já conhecido"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se o e-mail perdido foi mandado para o endereço do canal de envio, ele não tinha para onde ir — esse canal não processa entrada. Confirme que o cliente escreveu para o e-mail de atendimento."
+        }
+      ],
+      "title": "O canal de e-mail para envio nunca recebe nada"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O canal de envio não deixa salvar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Mensagem"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "E-mail inválido, o email deve ser do domínio selecionado"
+          },
+          {
+            "content": "O e-mail do remetente precisa terminar exatamente com o domínio escolhido"
+          }
+        ],
+        [
+          {
+            "content": "E-mail obrigatório"
+          },
+          {
+            "content": "O campo de e-mail do remetente ficou vazio"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se o domínio nem aparece para escolher, o problema é anterior a este canal — veja "
+        },
+        {
+          "type": "text",
+          "text": "o domínio não verifica",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "configuracoes/dominios/resolver-problemas"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Antes de excluir um canal de e-mail"
+    },
+    {
+      "type": "paragraph",
+      "content": "A tela mostra os fluxos e as comunicações vinculados a esse canal antes de confirmar a exclusão — vale revisar essa lista, porque uma automação ou campanha que dependia dele pode parar de funcionar até outro canal ser configurado no lugar."
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Posso ter mais de um e-mail de atendimento?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Sim, desde que sejam endereços diferentes — o mesmo endereço não pode estar ativo em dois canais, nem na sua conta nem em outra conta Bevean."
+            }
+          ]
+        },
+        {
+          "question": "Excluí o e-mail de atendimento e recriei com o mesmo endereço. Preciso configurar o encaminhamento de novo?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. O encaminhamento que você já tinha configurado no seu provedor continua valendo, e as conversas anteriores continuam no histórico."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o canal de E-mail",
+  "subtitle": "São dois canais separados — atendimento e envio — cada um com o próprio requisito. Entenda a diferença antes de configurar qualquer um dos dois.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "e-mail",
+    "atendimento",
+    "envio",
+    "campanhas",
+    "domínio"
+  ],
+  "related": [
+    "configuracoes/email/configurar-email-de-atendimento",
+    "configuracoes/email/configurar-email-de-envio",
+    "configuracoes/dominios/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O canal de e-mail é na verdade dois canais separados, criados em fluxos diferentes: um para receber e responder e-mail de cliente no atendimento, outro para enviar campanhas. Um mesmo endereço não faz as duas coisas — são duas conexões distintas."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.email"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os dois tipos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Para que serve"
+        },
+        {
+          "content": "Como chega o e-mail"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "E-mail para atendimento"
+          },
+          {
+            "content": "Receber e responder e-mail de cliente dentro do helpdesk"
+          },
+          {
+            "content": "Você encaminha a sua caixa (suporte@suaempresa.com) para um endereço que a Bevean gera"
+          }
+        ],
+        [
+          {
+            "content": "E-mail para envio"
+          },
+          {
+            "content": "Enviar campanhas e disparos em massa"
+          },
+          {
+            "content": "Não recebe nada — só envia, a partir de um domínio verificado"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A tela mostra os dois tipos numa tabela só, com uma coluna dizendo qual é qual. Editar um abre o formulário certo automaticamente, dependendo do tipo."
+        }
+      ],
+      "title": "Os dois aparecem juntos na mesma lista"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Por que o e-mail de envio pede um domínio, e o de atendimento não pede"
+    },
+    {
+      "type": "paragraph",
+      "content": "O de envio manda mensagem em nome da sua marca para gente que não te conhece ainda — sem um domínio seu verificado, provedores como Gmail marcam como suspeito. Por isso ele exige um domínio."
+    },
+    {
+      "type": "paragraph",
+      "content": "O de atendimento é diferente: ele só responde quem já escreveu para você. Por padrão as respostas saem por um remetente da Bevean, e dá para trocar depois — mas exige o mesmo domínio verificado."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Sem um domínio verificado, o e-mail de envio nem chega a ser criado, e o de atendimento fica preso no remetente padrão da Bevean. Veja "
+            },
+            {
+              "type": "text",
+              "text": "como funciona o domínio próprio",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "configuracoes/dominios/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Os dois dependem de Configurações › Domínios"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Antes de excluir um canal de e-mail"
+    },
+    {
+      "type": "paragraph",
+      "content": "Excluir qualquer canal mostra antes uma lista do que está vinculado a ele — automações e campanhas que dependem dele podem parar de funcionar até você configurar outro canal no lugar."
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se você recriar o canal com o mesmo endereço, o encaminhamento que você já configurou no Gmail ou Outlook continua valendo — não precisa refazer nada lá. As conversas anteriores também continuam."
+        }
+      ],
+      "title": "Excluir e recriar o e-mail de atendimento não perde o encaminhamento"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/email/configurar-email-de-atendimento",
+          "description": "Conectar a caixa de suporte ao helpdesk."
+        },
+        {
+          "ref": "configuracoes/email/configurar-email-de-envio",
+          "description": "Habilitar o envio de campanhas por e-mail."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

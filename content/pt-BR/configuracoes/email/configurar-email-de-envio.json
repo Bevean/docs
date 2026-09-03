@@ -1,0 +1,201 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Configurar o e-mail de envio",
+  "subtitle": "O domínio verificado é obrigatório aqui, sem opção de remetente compartilhado — o passo a passo e o erro mais comum ao preencher o remetente.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "e-mail de envio",
+    "campanhas",
+    "domínio obrigatório",
+    "remetente"
+  ],
+  "related": [
+    "configuracoes/email/visao-geral",
+    "configuracoes/email/configurar-email-de-atendimento",
+    "configuracoes/dominios/conectar-seu-dominio"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é um canal pronto para disparar campanhas por e-mail, enviando pelo seu próprio domínio."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.email"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão "
+        },
+        {
+          "type": "text",
+          "text": "E-mail para envio",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Diferente do e-mail de atendimento, este canal não tem alternativa de remetente compartilhado. Sem um domínio verificado, o formulário não deixa concluir. Veja "
+            },
+            {
+              "type": "text",
+              "text": "conectar seu domínio",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "configuracoes/dominios/conectar-seu-dominio"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " primeiro."
+            }
+          ]
+        }
+      ],
+      "title": "Precisa de um domínio verificado antes de começar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Criar o canal"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Escolha o domínio",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A lista mostra só domínios de e-mail já verificados. Se não aparecer nenhum, é porque ainda não há um."
+            }
+          ]
+        },
+        {
+          "title": "Preencha o nome do remetente",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "É o nome que aparece na caixa de entrada de quem recebe — não precisa ser igual ao domínio."
+            }
+          ]
+        },
+        {
+          "title": "Preencha o e-mail do remetente",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Precisa terminar com o domínio escolhido no primeiro passo. "
+                },
+                {
+                  "type": "text",
+                  "text": "contato@suaempresa.com",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " funciona se o domínio for "
+                },
+                {
+                  "type": "text",
+                  "text": "suaempresa.com",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "; um e-mail de outro domínio não passa."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Salve"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "É o aviso quando o e-mail do remetente não bate com o domínio escolhido. Confira se não sobrou um domínio antigo ou um erro de digitação."
+        }
+      ],
+      "title": "\"E-mail inválido, o email deve ser do domínio selecionado\""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que esse canal não faz"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Não recebe e-mail nenhum — é só envio. Resposta de cliente não aparece em lugar nenhum por esse canal."
+        },
+        {
+          "content": "Não tem opção de remetente compartilhado da Bevean — o domínio verificado é obrigatório do início ao fim."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/email/resolver-problemas",
+          "description": "O canal não deixa salvar, ou a campanha não sai."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

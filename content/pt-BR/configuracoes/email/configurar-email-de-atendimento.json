@@ -1,0 +1,258 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Configurar o e-mail de atendimento",
+  "subtitle": "Do formulário de criação até o encaminhamento confirmado — e o que o filtro de newsletter e spam realmente bloqueia.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "e-mail de atendimento",
+    "encaminhamento",
+    "inbound",
+    "spam",
+    "newsletter",
+    "helpdesk"
+  ],
+  "related": [
+    "configuracoes/email/visao-geral",
+    "configuracoes/email/configurar-email-de-envio",
+    "configuracoes/email/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é a sua caixa de e-mail (suporte@suaempresa.com) entregando as mensagens dos clientes direto no helpdesk, e as respostas saindo por ela."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.email"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão "
+        },
+        {
+          "type": "text",
+          "text": "E-mail para atendimento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Criar o canal"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Preencha o nome do canal e o e-mail de atendimento",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O nome aparece como remetente nas respostas. O e-mail é a caixa que os seus clientes já usam."
+            }
+          ]
+        },
+        {
+          "title": "Decida se vai enviar pelo seu domínio",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A chave "
+                },
+                {
+                  "type": "text",
+                  "text": "Enviar respostas pelo meu domínio",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " exige um domínio de e-mail verificado. Sem ela, as respostas saem por um remetente da Bevean, com o nome do canal — e dá para ligar essa opção depois."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escolha se quer filtrar newsletter e spam",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Vem ligado por padrão. A seção abaixo explica exatamente o que isso filtra."
+            }
+          ]
+        },
+        {
+          "title": "Clique em Criar canal"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Configurar o encaminhamento"
+    },
+    {
+      "type": "paragraph",
+      "content": "Criar o canal não é suficiente — é preciso encaminhar a sua caixa de e-mail de verdade para um endereço que a Bevean gera. Depois de criar, a própria tela mostra o passo a passo:"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Acesse as configurações da sua caixa de e-mail",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "No Gmail: Configurações › Encaminhamento. No Outlook: Regras › Encaminhar."
+            }
+          ]
+        },
+        {
+          "title": "Adicione o endereço mostrado na Bevean como destino do encaminhamento",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "É um endereço só seu, no formato "
+                },
+                {
+                  "type": "text",
+                  "text": "algumtoken@inbound.bevean.com",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " — copie exatamente como aparece."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Aguarde a verificação",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean manda um e-mail de verificação para a sua caixa. Quando o encaminhamento estiver ativo, esse e-mail chega até a Bevean e o canal ativa sozinho — sem precisar clicar em nada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O Google às vezes pede uma confirmação separada para liberar o encaminhamento. Os e-mails dessa confirmação também chegam até a Bevean e contam como parte da verificação."
+        }
+      ],
+      "title": "No Gmail, pode aparecer uma confirmação própria do Google antes"
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O canal ativa sozinho assim que o encaminhamento for detectado, mesmo com a tela fechada. Se precisar reenviar o e-mail de verificação, o botão fica na mesma tela, em Editar canal."
+        }
+      ],
+      "title": "Dá para fechar a tela antes de terminar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O filtro de newsletter e spam"
+    },
+    {
+      "type": "paragraph",
+      "content": "Toda caixa pública recebe promoção, relatório automático e boletim — não só cliente. O filtro decide o que entra no atendimento:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Regra"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Quem já tem conversa nunca é filtrado"
+          },
+          {
+            "content": "Um cliente que já falou com você antes sempre entra, mesmo que o e-mail pareça automático"
+          }
+        ],
+        [
+          {
+            "content": "Cliente cadastrado nunca é filtrado"
+          },
+          {
+            "content": "Se o remetente é um contato conhecido, entra direto"
+          }
+        ],
+        [
+          {
+            "content": "Na dúvida, entra"
+          },
+          {
+            "content": "Um e-mail ambíguo — nem claramente newsletter, nem claramente cliente — é liberado para o atendimento, não descartado"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Perder um e-mail de cliente de verdade custa mais caro que deixar passar uma promoção. O filtro foi construído para nunca arriscar o primeiro."
+        }
+      ],
+      "title": "O filtro erra para o lado de deixar passar, não de bloquear"
+    }
+  ]
+}
