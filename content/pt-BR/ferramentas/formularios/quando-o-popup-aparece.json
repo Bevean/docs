@@ -1,0 +1,477 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Quando o pop-up aparece, e para quem",
+  "subtitle": "Disparo, regras de URL, frequência e audiência — as quatro configurações que decidem se o visitante vê o seu pop-up.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "pop-up",
+    "disparo",
+    "frequência",
+    "audiência",
+    "regras de URL",
+    "exit intent"
+  ],
+  "related": [
+    "ferramentas/formularios/resolver-problemas",
+    "ferramentas/formularios/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Estas quatro seções ficam na aba "
+        },
+        {
+          "type": "text",
+          "text": "Comportamento",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e valem só para pop-up: um formulário incorporado está sempre na página onde foi instalado. Elas funcionam em conjunto — o pop-up aparece quando "
+        },
+        {
+          "type": "text",
+          "text": "todas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " as condições são satisfeitas ao mesmo tempo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Disparo: o que faz ele abrir"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um formulário tem um único tipo de disparo."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Parâmetro"
+        },
+        {
+          "content": "Faixa"
+        },
+        {
+          "content": "Observação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Ao carregar a página"
+          },
+          {
+            "content": "Atraso"
+          },
+          {
+            "content": "0 a 60 segundos"
+          },
+          {
+            "content": "É o padrão, com atraso zero."
+          }
+        ],
+        [
+          {
+            "content": "Ao atingir scroll"
+          },
+          {
+            "content": "Percentual da página"
+          },
+          {
+            "content": "10% a 90%"
+          },
+          {
+            "content": "Padrão de 50%. Acima de 80% exige rolar quase tudo."
+          }
+        ],
+        [
+          {
+            "content": "Intenção de saída"
+          },
+          {
+            "content": "—"
+          },
+          {
+            "content": "—"
+          },
+          {
+            "content": "Só desktop. Não existe equivalente em celular."
+          }
+        ],
+        [
+          {
+            "content": "Ao clicar em elemento"
+          },
+          {
+            "content": "Seletor CSS"
+          },
+          {
+            "content": "—"
+          },
+          {
+            "content": "Obrigatório. Vazio bloqueia a publicação."
+          }
+        ],
+        [
+          {
+            "content": "Por temporizador"
+          },
+          {
+            "content": "Atraso"
+          },
+          {
+            "content": "0 a 60 segundos"
+          },
+          {
+            "content": "Conta o tempo na página."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O disparo depende do movimento do cursor em direção a fechar a aba, e não há cursor no celular. Um pop-up configurado assim nunca aparece para quem acessa pelo telefone — o que costuma ser a maior parte do tráfego."
+        }
+      ],
+      "title": "Intenção de saída não funciona em celular"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Regras de URL: em quais páginas"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sem nenhuma regra, o pop-up pode aparecer em todas as páginas."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Operador"
+        },
+        {
+          "content": "Casa quando a URL"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Contém"
+          },
+          {
+            "content": "contém o texto informado."
+          }
+        ],
+        [
+          {
+            "content": "Não contém"
+          },
+          {
+            "content": "não contém o texto informado."
+          }
+        ],
+        [
+          {
+            "content": "Igual a"
+          },
+          {
+            "content": "é exatamente igual ao valor, URL completa."
+          }
+        ],
+        [
+          {
+            "content": "Inicia com"
+          },
+          {
+            "content": "começa com o valor."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Quando há mais de uma regra, "
+            },
+            {
+              "type": "text",
+              "text": "todas",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " precisam ser satisfeitas ao mesmo tempo. Duas regras “Contém /promo” e “Contém /blog” nunca casam juntas, e o pop-up jamais aparece."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para exibir em uma página "
+            },
+            {
+              "type": "text",
+              "text": "ou",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " outra, hoje o caminho é usar um denominador comum com “Inicia com”, ou criar dois formulários."
+            }
+          ]
+        }
+      ],
+      "title": "Várias regras se somam, não se alternam"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Frequência: quantas vezes a mesma pessoa vê"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Regra"
+        },
+        {
+          "content": "Significado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Sempre"
+          },
+          {
+            "content": "Sem limite."
+          }
+        ],
+        [
+          {
+            "content": "Uma vez por sessão"
+          },
+          {
+            "content": "Uma exibição por sessão do navegador."
+          }
+        ],
+        [
+          {
+            "content": "Uma vez a cada N dias"
+          },
+          {
+            "content": "Nova exibição só depois de N dias da última."
+          }
+        ],
+        [
+          {
+            "content": "Uma vez por visitante"
+          },
+          {
+            "content": "Uma única exibição, para sempre."
+          }
+        ],
+        [
+          {
+            "content": "Nunca após envio"
+          },
+          {
+            "content": "Aparece até a pessoa enviar; depois nunca mais."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O controle de frequência fica no navegador de quem visita. Depois de ver o pop-up uma vez, você não o verá de novo no mesmo navegador."
+        },
+        {
+          "type": "paragraph",
+          "content": "Para testar de novo: use uma aba anônima, outro navegador, ou limpe os dados do site nas ferramentas de desenvolvedor. Se o armazenamento do navegador estiver bloqueado, a regra passa a se comportar como “sempre”."
+        }
+      ],
+      "title": "Como testar sem esperar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Audiência: para qual visitante"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Filtro"
+        },
+        {
+          "content": "Opções"
+        },
+        {
+          "content": "Como é determinado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Tipo de visitante"
+          },
+          {
+            "content": "Todos, Novo ou Recorrente"
+          },
+          {
+            "content": "Pelo primeiro acesso naquele navegador, guardado por um ano."
+          }
+        ],
+        [
+          {
+            "content": "Tipo de identificação"
+          },
+          {
+            "content": "Todos, Identificado ou Anônimo"
+          },
+          {
+            "content": "Depende de o site informar quem está logado."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A opção só funciona se a sua loja informar o usuário logado para o script da Bevean. Sem isso todo visitante conta como anônimo, e um pop-up filtrado por “Identificado” nunca aparece."
+        }
+      ],
+      "title": "“Identificado” exige configuração no site"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "“Novo visitante” significa primeiro acesso "
+        },
+        {
+          "type": "text",
+          "text": "naquele navegador",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Quem limpa os cookies volta a contar como novo, e quem usa dois navegadores é novo nos dois."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O efeito combinado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada configuração restringe quem vê. Somadas, elas podem reduzir a audiência a quase ninguém sem que nada indique erro:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Disparo por intenção de saída elimina todo o tráfego de celular."
+        },
+        {
+          "content": "Duas regras de URL que não coexistem eliminam todas as páginas."
+        },
+        {
+          "content": "Frequência “uma vez por visitante” elimina quem já viu, incluindo você testando."
+        },
+        {
+          "content": "Audiência “Identificado” sem identificação configurada elimina todo mundo."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se o pop-up não aparece, afrouxe as restrições até ele surgir e depois aperte de novo uma a uma. O roteiro completo está em "
+            },
+            {
+              "type": "text",
+              "text": "resolver problemas",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/formularios/resolver-problemas"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Ao configurar, mude uma coisa por vez"
+    }
+  ]
+}

@@ -1,0 +1,798 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar e publicar um formulário",
+  "subtitle": "Do botão Criar formulário até o formulário no ar, e o que fazer quando o botão Publicar está bloqueado.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "publicar",
+    "pendências",
+    "etapas",
+    "editor",
+    "rascunho"
+  ],
+  "related": [
+    "ferramentas/formularios/visao-geral",
+    "ferramentas/formularios/campos-e-conteudo"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Todo formulário nasce como rascunho e só existe na loja depois de publicado. O caminho é sempre o mesmo, e o painel bloqueia a publicação até que tudo o que é obrigatório esteja preenchido."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O passo a passo"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Criar formulário e escolha o tipo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Pop-up ou incorporado. A escolha muda quais opções aparecem depois — veja "
+                },
+                {
+                  "type": "text",
+                  "text": "como funcionam os formulários",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "ferramentas/formularios/visao-geral"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Dê um nome",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O nome é interno, para você achar o formulário na listagem. O visitante não o vê. Até 120 caracteres."
+            }
+          ]
+        },
+        {
+          "title": "Monte o conteúdo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Na aba "
+                },
+                {
+                  "type": "text",
+                  "text": "Conteúdo",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", adicione os blocos e os campos que você quer coletar. Veja "
+                },
+                {
+                  "type": "text",
+                  "text": "campos e conteúdo",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "ferramentas/formularios/campos-e-conteudo"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escolha a lista de leads",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Na aba "
+                },
+                {
+                  "type": "text",
+                  "text": "Comportamento",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", em "
+                },
+                {
+                  "type": "text",
+                  "text": "Lista de leads",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". É obrigatório: é por essa lista que suas campanhas e automações vão encontrar quem se cadastrou."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ajuste onde e quando ele aparece",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Incorporado precisa ser instalado na página. Pop-up precisa de regras de disparo. Cada um tem seu artigo."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Salve e publique",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Salvar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " grava o rascunho. "
+                },
+                {
+                  "type": "text",
+                  "text": "Publicar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " é o que faz o formulário existir na loja — e só habilita quando não há pendências."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A tela do editor"
+    },
+    {
+      "type": "image",
+      "src": "./assets/editor.png",
+      "alt": "Editor de formulário com a barra superior, o canvas central mostrando o formulário sobre a página de referência, e a doca de abas na parte inferior",
+      "width": 1271,
+      "height": 907,
+      "caption": "A barra superior concentra status, etapas, preview por dispositivo e as ações de salvar e publicar.",
+      "capturedAt": "2026-08-03"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O painel lateral abre clicando numa aba da doca inferior; clicar na aba já aberta fecha o painel. Clicar num bloco do canvas troca o painel pela configuração daquele bloco."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aba"
+        },
+        {
+          "content": "Responde a pergunta"
+        },
+        {
+          "content": "Vale para"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Layout"
+          },
+          {
+            "content": "Onde o formulário aparece e como o conteúdo se organiza?"
+          },
+          {
+            "content": "Formulário e etapa ativa"
+          }
+        ],
+        [
+          {
+            "content": "Conteúdo"
+          },
+          {
+            "content": "Quais blocos e campos existem nesta etapa?"
+          },
+          {
+            "content": "Etapa ativa"
+          }
+        ],
+        [
+          {
+            "content": "Estilo"
+          },
+          {
+            "content": "Como ele se parece?"
+          },
+          {
+            "content": "Formulário inteiro"
+          }
+        ],
+        [
+          {
+            "content": "Comportamento"
+          },
+          {
+            "content": "Quando aparece, para quem, e o que acontece no envio?"
+          },
+          {
+            "content": "Formulário inteiro"
+          }
+        ],
+        [
+          {
+            "content": "Configurações"
+          },
+          {
+            "content": "Qual versão estou editando? Está ativo? Arquivar?"
+          },
+          {
+            "content": "Versão e formulário"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Etapas"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um formulário pode ter mais de uma etapa. Pedir menos de uma vez costuma converter melhor do que um formulário longo."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo de etapa"
+        },
+        {
+          "content": "Para que serve"
+        },
+        {
+          "content": "Aceita campos?"
+        },
+        {
+          "content": "Quantidade"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Teaser"
+          },
+          {
+            "content": "Chamada inicial, antes do formulário"
+          },
+          {
+            "content": "Não, só conteúdo e botões"
+          },
+          {
+            "content": "No máximo 1"
+          }
+        ],
+        [
+          {
+            "content": "Etapa de formulário"
+          },
+          {
+            "content": "Onde ficam os campos de captura"
+          },
+          {
+            "content": "Sim, ao menos um"
+          },
+          {
+            "content": "De 1 a 5"
+          }
+        ],
+        [
+          {
+            "content": "Sucesso"
+          },
+          {
+            "content": "Tela pós-envio: agradecimento, cupom, instruções"
+          },
+          {
+            "content": "Não, só conteúdo"
+          },
+          {
+            "content": "Exatamente 1"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Os botões de navegação"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os botões ("
+        },
+        {
+          "type": "text",
+          "text": "Voltar",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Próximo",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Enviar",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") são blocos normais no canvas: podem ser movidos, restilizados e removidos. A Bevean cria automaticamente os botões esperados conforme a posição da etapa."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Situação da etapa"
+        },
+        {
+          "content": "Botões criados"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Teaser"
+          },
+          {
+            "content": "Próximo"
+          }
+        ],
+        [
+          {
+            "content": "Única etapa de formulário"
+          },
+          {
+            "content": "Enviar"
+          }
+        ],
+        [
+          {
+            "content": "Primeira de várias"
+          },
+          {
+            "content": "Próximo"
+          }
+        ],
+        [
+          {
+            "content": "Intermediária"
+          },
+          {
+            "content": "Voltar e Próximo"
+          }
+        ],
+        [
+          {
+            "content": "Última de várias"
+          },
+          {
+            "content": "Voltar e Enviar"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se você remover um botão criado automaticamente, o sistema não o recria. Um formulário sem o botão "
+            },
+            {
+              "type": "text",
+              "text": "Enviar",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " na última etapa não tem como ser submetido — e nada avisa o visitante."
+            }
+          ]
+        }
+      ],
+      "title": "Botão apagado não volta sozinho"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando o botão Publicar está bloqueado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O contador de "
+        },
+        {
+          "type": "text",
+          "text": "pendências",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na barra superior lista tudo o que falta. Cada item é clicável e leva ao lugar exato, inclusive selecionando a etapa com problema."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Mensagem"
+        },
+        {
+          "content": "O que resolve"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Informe um nome para o formulário"
+          },
+          {
+            "content": "Clique no nome na barra superior e preencha."
+          }
+        ],
+        [
+          {
+            "content": "Adicione ao menos um identificador válido"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Aba "
+              },
+              {
+                "type": "text",
+                "text": "Conteúdo",
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " › Campos › adicione E-mail ou Telefone."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Não é possível publicar um formulário vazio"
+          },
+          {
+            "content": "Adicione campos ao formulário."
+          }
+        ],
+        [
+          {
+            "content": "Cada passo precisa ter ao menos um campo"
+          },
+          {
+            "content": "Adicione um campo na etapa marcada, ou remova a etapa."
+          }
+        ],
+        [
+          {
+            "content": "A tela de sucesso precisa ter ao menos um bloco"
+          },
+          {
+            "content": "Adicione conteúdo na etapa Sucesso, ou troque a ação de sucesso."
+          }
+        ],
+        [
+          {
+            "content": "Selecione uma lista de segmento"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Aba "
+              },
+              {
+                "type": "text",
+                "text": "Comportamento",
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " › Lista de leads."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Existem campos com o mesmo identificador (name)"
+          },
+          {
+            "content": "Dois campos têm rótulos que geram o mesmo identificador. Renomeie um deles."
+          }
+        ],
+        [
+          {
+            "content": "As etapas Teaser e Sucesso aceitam apenas módulos de conteúdo"
+          },
+          {
+            "content": "Mova ou remova o campo que está numa dessas etapas."
+          }
+        ],
+        [
+          {
+            "content": "O formulário aceita no máximo 5 etapas"
+          },
+          {
+            "content": "Remova etapas."
+          }
+        ],
+        [
+          {
+            "content": "Informe uma URL de redirecionamento válida"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Use a URL completa, com "
+              },
+              {
+                "type": "text",
+                "text": "https://",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Adicione um seletor CSS para o disparo por clique"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Aba "
+              },
+              {
+                "type": "text",
+                "text": "Comportamento",
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " › Disparo › preencha o seletor."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Um campo personalizado foi removido, arquivado ou teve seu tipo alterado"
+          },
+          {
+            "content": "Reabra o campo no formulário e selecione a propriedade novamente."
+          }
+        ],
+        [
+          {
+            "content": "Este campo de lista não possui opções cadastradas"
+          },
+          {
+            "content": "Edite a propriedade personalizada e cadastre as opções antes de usá-la."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Salvar grava o rascunho para você continuar depois. Publicar é o que coloca o formulário na loja. E é preciso salvar antes de publicar."
+        }
+      ],
+      "title": "Salvar não é publicar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Depois de publicar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A versão publicada fica imutável. Para mudar qualquer coisa, use "
+        },
+        {
+          "type": "text",
+          "text": "Nova versão",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na aba "
+        },
+        {
+          "type": "text",
+          "text": "Configurações",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": ela cria um rascunho a partir da versão no ar, e a loja continua exibindo a anterior até você publicar o novo rascunho."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para parar de exibir sem perder nada, use "
+        },
+        {
+          "type": "text",
+          "text": "Pausar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — disponível tanto na listagem quanto na aba Configurações. Pausar interrompe a exibição e bloqueia novos envios."
+        }
+      ]
+    }
+  ]
+}

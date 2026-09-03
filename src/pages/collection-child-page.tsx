@@ -14,7 +14,7 @@ export function CollectionChildPage() {
   const node = collection && child ? getNode(`${collection}/${child}`) : null
 
   if (!node) return <NotFoundPage />
-  if (node.kind === 'section') return <SectionPage />
+  if (node.kind === 'section') return <SectionPage path={node.meta.path} />
   if (node.kind === 'article') return <ArticlePage path={node.meta.path} />
   return <NotFoundPage />
 }

@@ -286,6 +286,103 @@ O leitor é quem opera o CRM, não quem o construiu.
    para quem escreveu raramente é para quem lê.
 8. **Um artigo, uma tarefa.** Se o título precisa de "e", provavelmente são dois.
 
+A estrutura recomendada por tipo de artigo está em
+[Anatomia de um artigo](#anatomia-de-um-artigo).
+
+---
+
+## Anatomia de um artigo
+
+Antes de escrever, decida **qual dos três tipos** você está fazendo. Cada um tem
+uma ordem que funciona, descoberta escrevendo a seção de Formulários.
+
+### Conceito ("Como funciona X")
+
+```
+parágrafo: o que é, em uma frase, do ponto de vista do resultado
+parágrafo: "Onde fica:" + uiPath
+imagem da tela principal
+heading: o que isso produz          → tabela
+heading: pré-requisitos             → tabela do que falta + callout do que engana
+heading: as variações               → tabela comparativa
+heading: os estados                 → tabela status × comportamento
+```
+
+### Tarefa ("Criar e publicar", "Instalar no site")
+
+```
+parágrafo: o resultado e a condição de conclusão
+heading: o passo a passo            → bloco steps, sem detalhe demais em cada passo
+heading: a tela                     → imagem + tabela das regiões
+heading: as decisões                → uma seção por decisão que o passo a passo adiou
+heading: o que impede de concluir   → tabela mensagem × solução
+```
+
+### Diagnóstico ("O formulário não está funcionando")
+
+```
+parágrafo: os básicos que resolvem a maioria dos casos
+heading: um por sintoma, com o título na voz de quem reclama
+  → tabela numerada "#, verifique, se for isso"
+heading: outras perguntas           → bloco faq
+```
+
+### Seção ou artigo?
+
+Se a fonte tem mais de oito assuntos de primeiro nível, ela é uma **seção**, não
+um artigo. A doc interna de Formulários tinha 557 linhas e virou sete artigos: a
+pessoa chega buscando um problema específico, não lendo um manual.
+
+Divida por **pergunta que o leitor tem**, nunca pela organização interna do
+produto. "Quando o pop-up aparece" é um artigo; "Aba Comportamento" não é.
+
+---
+
+## Padrões descobertos escrevendo
+
+> Lista viva. Ao escrever um artigo novo e descobrir uma regra que valeria para
+> os próximos, acrescente aqui.
+
+**Traduza a voz da fonte.** A documentação interna fala *sobre* o cliente, para o
+time de suporte. O artigo fala *com* o cliente. Some com "erro comum de cliente",
+"o suporte deve", "ao escalar um ticket" e com as seções de referência técnica
+para atendimento.
+
+**Não migre nomes internos.** `customer.emailOptinStatus`, nome de tabela, chave
+de `localStorage`, rota de API — nada disso ajuda quem opera a loja. A exceção é
+quando a chave é acionável para o leitor (limpar o armazenamento para testar de
+novo), e aí ela vira instrução, não referência.
+
+**Título de callout é uma frase com a conclusão**, não um rótulo. "Várias regras
+se somam, não se alternam" ensina; "Atenção" não ensina nada.
+
+**Mensagem de erro da interface vira linha de tabela, escrita literalmente.** A
+pessoa copia a mensagem e cola na busca — é assim que ela acha o artigo. Uma
+tabela "mensagem × o que resolve" vale mais que três parágrafos.
+
+**Comportamento contra-intuitivo merece `callout`, e o motivo junto.** Se o
+produto faz algo que o leitor não esperaria, diga também *por que* — "o sorteio é
+por e-mail para impedir que a pessoa gire até ganhar o melhor prêmio" evita o
+ticket de "está viciado".
+
+**Limite entra onde a pessoa configura**, não numa tabela de limites no fim. A
+faixa de 10% a 90% do scroll pertence à tabela de disparo.
+
+**Cross-link no lugar de repetir.** Cada artigo da seção cita os vizinhos com
+`docLink`. Repetir a explicação em dois artigos garante que um dos dois vai ficar
+desatualizado.
+
+**Recurso que não existe só entra quando a expectativa é frequente**, e como
+pergunta no bloco `faq` ("Como exporto as submissões?"), nunca como uma lista de
+ausências.
+
+**Tabela comparativa precisa de canto rotulado.** A primeira célula do cabeçalho
+não pode ficar vazia — o validador recusa, e um leitor de tela anunciando coluna
+sem nome não ajuda ninguém. Use o nome do eixo ("Característica").
+
+**Nomeie o artigo pela tarefa ou pela pergunta**, com as palavras do leitor. "O
+formulário não está funcionando" acha mais gente que "Solução de problemas".
+
 ---
 
 ## Onde achar a matéria-prima
@@ -294,7 +391,7 @@ Antes de escrever do zero, procure a fonte nos repositórios irmãos:
 
 | Assunto | Fonte |
 |---|---|
-| Formulários, Gerador de Links, Tracker, Webhooks | `admin-front/apps/crm/src/modules/backoffice/docs/content/*.md` — já em PT-BR, quase publicável |
+| Gerador de Links, Tracker, Webhooks | `admin-front/apps/crm/src/modules/backoffice/docs/content/*.md` — já em PT-BR, escrito para o time de suporte. **Formulários já foi convertido**: use `content/pt-BR/ferramentas/formularios/` como referência de como traduzir a voz e dividir em artigos |
 | Instalar o tracker, carrinho abandonado | `monocore-api/docs/integrations/tracker-guia-suporte.md` — versão sem jargão, com matriz por plataforma |
 | Primeiros passos | `admin-front/apps/crm/src/modules/onboarding/` (`locales/pt.json` + `data/onboarding-flow.ts`) — 9 trilhas com copy pronta |
 | Relatórios | `admin-front/apps/reports-react/src/shared/i18n/locales/pt.json`, chave `analysisCatalog` — 37 análises com "o que responde" |

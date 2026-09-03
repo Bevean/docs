@@ -1,4 +1,3 @@
-import { useParams } from 'react-router'
 import { Breadcrumbs } from '@/app/breadcrumbs.tsx'
 import { useDocumentMeta } from '@/app/use-document-meta.ts'
 import { getCollection, getSection, manifest } from '@/content/content-repository.ts'
@@ -6,10 +5,14 @@ import type { ArticleMeta } from '@/content/content-types.ts'
 import { ArticleList } from './article-list.tsx'
 import { NotFoundPage } from './not-found-page.tsx'
 
-export function SectionPage() {
-  const { collection: collectionSlug, section: sectionSlug } = useParams()
-  const section = collectionSlug && sectionSlug ? getSection(`${collectionSlug}/${sectionSlug}`) : null
-  const collection = collectionSlug ? getCollection(collectionSlug) : null
+/**
+ * Recebe o caminho pronto em vez de ler `useParams`: quem resolve a ambiguidade
+ * entre seção e artigo é a CollectionChildPage, e o nome do parâmetro da rota
+ * (`child`) não é o mesmo do conceito.
+ */
+export function SectionPage({ path }: { path: string }) {
+  const section = getSection(path)
+  const collection = section ? getCollection(section.collection) : null
 
   useDocumentMeta(
     section ? `${section.title} — Central de Ajuda Bevean` : 'Central de Ajuda Bevean',
@@ -37,6 +40,9 @@ export function SectionPage() {
         {section.description && (
           <p className="mt-2 text-[15px] leading-7 text-muted-foreground">{section.description}</p>
         )}
+        <p className="mt-3 text-[13px] font-medium text-primary">
+          {articles.length} {articles.length === 1 ? 'artigo' : 'artigos'}
+        </p>
       </header>
 
       <div className="mt-8">

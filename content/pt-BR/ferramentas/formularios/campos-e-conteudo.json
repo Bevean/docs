@@ -1,0 +1,497 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Campos e conteúdo do formulário",
+  "subtitle": "Quais blocos existem, quais dados você pode pedir e por que E-mail ou Telefone é obrigatório.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "campos",
+    "blocos",
+    "propriedades",
+    "metafields",
+    "opt-in"
+  ],
+  "related": [
+    "ferramentas/formularios/criar-e-publicar",
+    "ferramentas/formularios/roleta-e-cupom"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A aba "
+        },
+        {
+          "type": "text",
+          "text": "Conteúdo",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " monta a etapa que está aberta. Ela tem até três seções: os blocos de conteúdo, os campos de perfil e os campos personalizados. As duas últimas só aparecem quando a etapa ativa é uma etapa de formulário — Teaser e Sucesso não aceitam campos."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "./assets/aba-conteudo.png",
+      "alt": "Aba Conteúdo do editor, com os blocos de conteúdo no topo e a lista de campos de perfil abaixo",
+      "width": 1271,
+      "height": 907,
+      "caption": "Campos já usados aparecem marcados como Adicionado e não podem entrar duas vezes.",
+      "capturedAt": "2026-08-03"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Blocos de conteúdo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Bloco"
+        },
+        {
+          "content": "Para que serve"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Título"
+          },
+          {
+            "content": "A chamada principal da etapa."
+          }
+        ],
+        [
+          {
+            "content": "Resumo"
+          },
+          {
+            "content": "Texto de apoio abaixo do título."
+          }
+        ],
+        [
+          {
+            "content": "Badge"
+          },
+          {
+            "content": "Etiqueta curta de destaque, tipo “Oferta por tempo limitado”."
+          }
+        ],
+        [
+          {
+            "content": "Imagem"
+          },
+          {
+            "content": "Imagem no corpo do formulário. Aceita arquivo e largura diferentes para desktop e celular."
+          }
+        ],
+        [
+          {
+            "content": "Botão"
+          },
+          {
+            "content": "Ação de navegação ou envio."
+          }
+        ],
+        [
+          {
+            "content": "Roleta"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Sorteio de prêmio. Veja "
+              },
+              {
+                "type": "text",
+                "text": "roleta e cupom",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/formularios/roleta-e-cupom"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Cupom"
+          },
+          {
+            "content": "Exibe um código de desconto, fixo ou vindo da roleta."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Campos de perfil"
+    },
+    {
+      "type": "paragraph",
+      "content": "São os campos padrão do contato. Cada um já chega vinculado à propriedade certa — você não precisa configurar mapeamento."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Tipo"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nome"
+          },
+          {
+            "content": "Texto"
+          }
+        ],
+        [
+          {
+            "content": "E-mail"
+          },
+          {
+            "content": "E-mail"
+          }
+        ],
+        [
+          {
+            "content": "Telefone"
+          },
+          {
+            "content": "Telefone"
+          }
+        ],
+        [
+          {
+            "content": "Documento"
+          },
+          {
+            "content": "Texto"
+          }
+        ],
+        [
+          {
+            "content": "Data de nascimento"
+          },
+          {
+            "content": "Data"
+          }
+        ],
+        [
+          {
+            "content": "Gênero"
+          },
+          {
+            "content": "Lista: Masculino, Feminino ou Outro"
+          }
+        ],
+        [
+          {
+            "content": "Aceita marketing por e-mail"
+          },
+          {
+            "content": "Aceite"
+          }
+        ],
+        [
+          {
+            "content": "Aceita marketing por telefone"
+          },
+          {
+            "content": "Aceite"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um campo já usado aparece marcado como "
+        },
+        {
+          "type": "text",
+          "text": "Adicionado",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e não pode ser incluído de novo: cada propriedade entra uma única vez no formulário, mesmo em etapas diferentes."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "São os únicos campos que identificam quem preencheu. Sem pelo menos um deles a publicação é bloqueada — e um envio sem identificador vira submissão sem contato vinculado, ou seja, sem lista e sem opt-in."
+        }
+      ],
+      "title": "E-mail ou Telefone é obrigatório"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Sobre os campos de aceite"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Marcar "
+        },
+        {
+          "type": "text",
+          "text": "Aceita marketing por e-mail",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " atualiza o opt-in do contato no CRM com origem “cliente”. É o que autoriza suas campanhas a alcançarem essa pessoa — vale pedir sempre que a captação tiver esse objetivo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Campos personalizados"
+    },
+    {
+      "type": "paragraph",
+      "content": "São as propriedades personalizadas do contato: o que a sua operação coleta além do padrão."
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "O tipo da propriedade define o tipo do campo no formulário: texto, número, aceite, data ou lista."
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O botão "
+            },
+            {
+              "type": "text",
+              "text": "Criar campo personalizado",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " cadastra uma propriedade nova e já a adiciona ao formulário."
+            }
+          ]
+        },
+        {
+          "content": "Com mais de seis propriedades, aparece um campo de busca na lista."
+        },
+        {
+          "content": "Propriedade do tipo lista sem opções cadastradas não pode ser adicionada — edite a propriedade e cadastre as opções antes."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se uma propriedade personalizada usada no formulário for removida, arquivada ou tiver o tipo alterado, a publicação passa a falhar. A correção é reabrir o campo no formulário e escolher a propriedade novamente."
+        }
+      ],
+      "title": "Mudar a propriedade depois quebra a publicação"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ajustes disponíveis em todo campo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Ajuste"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Rótulo"
+          },
+          {
+            "content": "O texto visível acima do campo."
+          }
+        ],
+        [
+          {
+            "content": "Obrigatório"
+          },
+          {
+            "content": "Impede avançar ou enviar com o campo vazio."
+          }
+        ],
+        [
+          {
+            "content": "Texto de apoio"
+          },
+          {
+            "content": "O texto cinza dentro do campo, que some ao digitar."
+          }
+        ],
+        [
+          {
+            "content": "Texto de ajuda"
+          },
+          {
+            "content": "Uma linha auxiliar abaixo do campo."
+          }
+        ],
+        [
+          {
+            "content": "Valor padrão"
+          },
+          {
+            "content": "Deixa o campo pré-preenchido."
+          }
+        ],
+        [
+          {
+            "content": "Opções"
+          },
+          {
+            "content": "Para Lista, Rádio e Aceite. Em campo personalizado de lista, as opções vêm da propriedade e não são editáveis aqui."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O identificador interno de cada campo é derivado do rótulo. Dois rótulos iguais, mesmo em etapas diferentes, geram o mesmo identificador e a publicação é recusada. Renomeie um deles."
+        }
+      ],
+      "title": "Dois campos com o mesmo rótulo bloqueiam a publicação"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Organização em colunas"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na aba "
+        },
+        {
+          "type": "text",
+          "text": "Layout",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", a seção "
+        },
+        {
+          "type": "text",
+          "text": "Estrutura do conteúdo",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " define a organização dos blocos da etapa aberta — cada etapa pode ter uma estrutura diferente."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Opção"
+        },
+        {
+          "content": "Comportamento"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Uma coluna"
+          },
+          {
+            "content": "Todos os blocos empilhados. Ao voltar de duas colunas para uma, os blocos das duas são reunidos na primeira — nada é perdido."
+          }
+        ],
+        [
+          {
+            "content": "Duas colunas"
+          },
+          {
+            "content": "Duas regiões independentes, 50/50 por padrão. O caso clássico é imagem à esquerda e campos à direita."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Clicando numa coluna no canvas você ajusta visibilidade por dispositivo, largura (de 25% a 75%, com a coluna irmã recebendo o complemento), a ordem no celular quando as colunas empilham, o espaçamento interno e a cor de fundo."
+    }
+  ]
+}

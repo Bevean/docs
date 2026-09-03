@@ -1,0 +1,226 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Instalar um formulário incorporado na página",
+  "subtitle": "Formulário incorporado precisa saber onde nascer na página. Há dois caminhos: uma tag no tema ou a seleção visual de um elemento.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "incorporado",
+    "embed",
+    "tag",
+    "seletor",
+    "instalação"
+  ],
+  "related": [
+    "ferramentas/formularios/visao-geral",
+    "ferramentas/formularios/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Pop-up aparece sobre a página e não precisa de instalação. "
+        },
+        {
+          "type": "text",
+          "text": "Incorporado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " entra no fluxo da página, então precisa de um ponto de referência. Você escolhe o caminho na aba "
+        },
+        {
+          "type": "text",
+          "text": "Layout",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", na seção "
+        },
+        {
+          "type": "text",
+          "text": "Inserir na página",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Os dois modos são exclusivos: use um ou outro."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Modo Código no tema"
+    },
+    {
+      "type": "paragraph",
+      "content": "Gera uma tag para você colar no tema da loja, no ponto exato onde o formulário deve aparecer."
+    },
+    {
+      "type": "code",
+      "language": "html",
+      "code": "<div data-bevean-form=\"ID_DO_GRUPO_DO_FORMULARIO\"></div>"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "A tag só é gerada depois de salvar o formulário pela primeira vez."
+        },
+        {
+          "content": "O identificador é do formulário, não da versão: a mesma tag continua valendo quando você publica novas versões."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Você controla exatamente onde o formulário nasce, e o ponto não se perde quando o layout da página muda. Em compensação, exige editar o tema da loja."
+        }
+      ],
+      "title": "Quando esse modo compensa"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Modo Selecionar elemento"
+    },
+    {
+      "type": "paragraph",
+      "content": "Carrega a página real dentro do editor. Você clica num elemento de referência e escolhe onde o formulário entra em relação a ele. Não exige mexer no tema."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Posição"
+        },
+        {
+          "content": "Onde o formulário entra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Antes do elemento"
+          },
+          {
+            "content": "Imediatamente acima do elemento escolhido."
+          }
+        ],
+        [
+          {
+            "content": "Depois do elemento"
+          },
+          {
+            "content": "Imediatamente abaixo. É o padrão."
+          }
+        ],
+        [
+          {
+            "content": "Dentro, no início"
+          },
+          {
+            "content": "Como primeiro item dentro do elemento."
+          }
+        ],
+        [
+          {
+            "content": "Dentro, no fim"
+          },
+          {
+            "content": "Como último item dentro do elemento."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A seleção guarda uma referência à estrutura da página. Quando o tema muda, essa estrutura muda junto e a referência pode deixar de existir — o formulário simplesmente para de aparecer, sem erro visível na loja."
+        }
+      ],
+      "title": "Trocou o tema da loja? Selecione o elemento de novo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Avisos do preview"
+    },
+    {
+      "type": "paragraph",
+      "content": "O preview da página dentro do editor testa a instalação e diz o que encontrou:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aviso"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nenhum elemento selecionado"
+          },
+          {
+            "content": "Você está no modo seletor e ainda não escolheu o elemento de referência. O formulário não tem onde ser inserido."
+          }
+        ],
+        [
+          {
+            "content": "A tag deste formulário não foi encontrada nesta página"
+          },
+          {
+            "content": "Você está no modo tag e ela não está no tema, ou não existe naquela URL específica."
+          }
+        ],
+        [
+          {
+            "content": "O elemento selecionado não foi encontrado nesta página"
+          },
+          {
+            "content": "O elemento escolhido não existe na URL carregada. Pode ser outra página, ou o tema mudou."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Um formulário incorporado só aparece onde a tag ou o elemento existem. Se a tag foi colada na página de produto, ele não vai aparecer na home — e isso é o esperado, não um defeito."
+        }
+      ],
+      "title": "Teste na URL certa"
+    }
+  ]
+}

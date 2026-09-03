@@ -1,0 +1,303 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Roleta de prêmios e cupom",
+  "subtitle": "Como montar o sorteio, por que o mesmo e-mail sempre ganha o mesmo prêmio e o que a Bevean não faz pelos seus cupons.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "roleta",
+    "cupom",
+    "sorteio",
+    "gamificação",
+    "desconto"
+  ],
+  "related": [
+    "ferramentas/formularios/campos-e-conteudo"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A roleta troca o desconto por um cadastro: a pessoa preenche o e-mail, gira e recebe um cupom. Ela é um bloco como qualquer outro, e o cupom ganho aparece na tela de sucesso."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como montar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Adicione o bloco Roleta na etapa do formulário"
+        },
+        {
+          "title": "Configure as fatias",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "De 2 a 8 fatias. Cada uma precisa de "
+                },
+                {
+                  "type": "text",
+                  "text": "Prêmio",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " (o texto que aparece na fatia), "
+                },
+                {
+                  "type": "text",
+                  "text": "Código do cupom",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e "
+                },
+                {
+                  "type": "text",
+                  "text": "Chance no sorteio",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Adicione um Botão com a ação Girar roleta"
+        },
+        {
+          "title": "Na etapa Sucesso, adicione o bloco Cupom",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Com origem "
+                },
+                {
+                  "type": "text",
+                  "text": "Dinâmico (resultado da roleta)",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". É o que mostra à pessoa o código que ela ganhou."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O bloco Cupom também aceita origem "
+        },
+        {
+          "type": "text",
+          "text": "Cupom estático",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", quando não há roleta: nesse caso o código é fixo e igual para todo mundo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O mesmo e-mail sempre ganha o mesmo prêmio"
+    },
+    {
+      "type": "paragraph",
+      "content": "O resultado do sorteio é calculado a partir do e-mail informado. Isso é intencional: impede que a pessoa recarregue a página e gire de novo até tirar o melhor prêmio."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "“Testei cinco vezes e sempre ganho 10%.” "
+            },
+            {
+              "type": "text",
+              "text": "Esperado.",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " Você usou o mesmo e-mail nas cinco vezes. Para ver outro prêmio, teste com e-mails diferentes."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "“A roleta está viciada.” "
+            },
+            {
+              "type": "text",
+              "text": "Não está.",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " Ela é consistente por pessoa, e as chances que você configurou se distribuem ao longo da sua base."
+            }
+          ]
+        }
+      ],
+      "title": "Duas consequências que costumam assustar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Regras que fazem a roleta sumir ou encolher"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Regra"
+        },
+        {
+          "content": "O que acontece se não for respeitada"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Mínimo de 2 fatias válidas"
+          },
+          {
+            "content": "A roleta não é publicada no formulário — o visitante não vê nada no lugar dela."
+          }
+        ],
+        [
+          {
+            "content": "Cada fatia precisa de prêmio, cupom e chance maior que zero"
+          },
+          {
+            "content": "Fatias sem um desses são descartadas em silêncio."
+          }
+        ],
+        [
+          {
+            "content": "Máximo de 8 fatias"
+          },
+          {
+            "content": "As excedentes não entram."
+          }
+        ],
+        [
+          {
+            "content": "O e-mail precisa estar preenchido para girar"
+          },
+          {
+            "content": "O giro é recusado."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "É a causa mais comum. Duas fatias provavelmente ficaram sem código de cupom ou com chance zero, e foram descartadas sem aviso. Revise fatia por fatia."
+        }
+      ],
+      "title": "“Configurei cinco prêmios e só aparecem três”"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os cupons precisam existir na sua loja"
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Os códigos que você configura nas fatias precisam existir e estar válidos na sua loja. Se a pessoa ganha BEMVINDO20 e esse cupom não existe, ela recebe o código e não consegue usar — e a frustração chega ao seu atendimento."
+        }
+      ],
+      "title": "A Bevean não cria o cupom na plataforma"
+    },
+    {
+      "type": "paragraph",
+      "content": "Vale conferir também a validade e as regras de cada cupom antes de publicar a roleta: valor mínimo de compra, produtos elegíveis e data de expiração continuam sendo os da sua loja."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um cuidado que a Bevean toma por você: os códigos das fatias "
+        },
+        {
+          "type": "text",
+          "text": "não ficam expostos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no código da página. Quem visita recebe apenas o código do prêmio que efetivamente ganhou, e não consegue inspecionar o site para descobrir o melhor cupom."
+        }
+      ]
+    }
+  ]
+}

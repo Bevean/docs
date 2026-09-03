@@ -1,0 +1,504 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O formulário não está funcionando",
+  "subtitle": "Roteiros para os três casos mais comuns: ele não aparece, o lead não chegou, ou você editou e nada mudou.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "não aparece",
+    "problema",
+    "lead",
+    "diagnóstico",
+    "submissões",
+    "erro"
+  ],
+  "related": [
+    "ferramentas/formularios/quando-o-popup-aparece",
+    "ferramentas/formularios/instalar-no-site"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Antes de qualquer coisa, confirme os três básicos: o formulário está publicado, está ativo (não pausado), e o script da Bevean está carregando na loja. A maioria dos casos termina aqui."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O formulário não aparece no site"
+    },
+    {
+      "type": "paragraph",
+      "content": "Percorra na ordem. Cada linha elimina uma causa."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O status é Publicado?"
+          },
+          {
+            "content": "Rascunho não aparece. Publique — inclusive se a edição virou uma nova versão que ficou em rascunho."
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "Está ativo, não pausado?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Retome pela listagem ou pela aba "
+              },
+              {
+                "type": "text",
+                "text": "Configurações",
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O script está carregando nas páginas da loja?"
+          },
+          {
+            "content": "Abra a página e confira o console do navegador."
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "Incorporado: a tag está no tema, ou o elemento ainda existe?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Carregue a página no preview do editor — ele avisa o que não encontrou. Veja "
+              },
+              {
+                "type": "text",
+                "text": "instalar no site",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/formularios/instalar-no-site"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "Pop-up: as regras de URL casam com a página que você testou?"
+          },
+          {
+            "content": "Lembre que todas as regras precisam casar ao mesmo tempo."
+          }
+        ],
+        [
+          {
+            "content": "6"
+          },
+          {
+            "content": "Pop-up: você já viu esse pop-up neste navegador?"
+          },
+          {
+            "content": "A frequência pode já ter sido consumida. Teste em aba anônima."
+          }
+        ],
+        [
+          {
+            "content": "7"
+          },
+          {
+            "content": "Pop-up: a audiência está restrita?"
+          },
+          {
+            "content": "“Identificado” sem identificação configurada nunca aparece. “Novo visitante” não aparece para quem já visitou."
+          }
+        ],
+        [
+          {
+            "content": "8"
+          },
+          {
+            "content": "Pop-up: o disparo chegou a acontecer?"
+          },
+          {
+            "content": "Intenção de saída não funciona em celular. Scroll de 90% exige rolar quase tudo. Clique exige o seletor correto."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se o pop-up sumiu depois de você mexer nas configurações, coloque temporariamente frequência “Sempre”, audiência “Todos” e remova as regras de URL. Se ele voltar, o problema é uma dessas restrições — reaplique uma por vez. Detalhe de cada uma em "
+            },
+            {
+              "type": "text",
+              "text": "quando o pop-up aparece",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/formularios/quando-o-popup-aparece"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Um atalho para isolar a causa"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ele aparece, mas o lead não chegou no CRM"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A primeira pergunta é sempre a mesma: existe submissão registrada? O painel de submissões fica no ícone de caixa de entrada, na doca do editor, e reúne os envios de "
+        },
+        {
+          "type": "text",
+          "text": "todas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " as versões do formulário."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "O que indica"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Há submissão registrada?"
+          },
+          {
+            "content": "Sim, o envio chegou e o problema é de vínculo ou de lista. Não, o envio não chegou — investigue o formulário na loja."
+          }
+        ],
+        [
+          {
+            "content": "A submissão tem e-mail ou telefone?"
+          },
+          {
+            "content": "Sem identificador não há contato vinculado, e por consequência não há lista nem opt-in. Confira se o campo é obrigatório no formulário."
+          }
+        ],
+        [
+          {
+            "content": "A lista configurada é do tipo Lista?"
+          },
+          {
+            "content": "Segmento dinâmico ou de RFV não recebe o lead. A submissão fica registrada, mas a lista continua vazia."
+          }
+        ],
+        [
+          {
+            "content": "O contato já existia no CRM?"
+          },
+          {
+            "content": "Nesse caso ele foi atualizado, não criado. Procure pelo e-mail em Contatos, e não pela data de cadastro."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se o formulário for pausado ou arquivado, os envios que chegarem são descartados: não geram contato, nem entrada na lista, nem submissão. Não há como recuperá-los depois."
+        }
+      ],
+      "title": "Formulário pausado descarta o envio"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "O caminho que o lead percorre"
+    },
+    {
+      "type": "paragraph",
+      "content": "Entender a ordem ajuda a saber onde olhar:"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        {
+          "content": "A pessoa envia, e o script valida os campos obrigatórios."
+        },
+        {
+          "content": "A Bevean confirma que o formulário está publicado e ativo. Se não estiver, o envio é descartado."
+        },
+        {
+          "content": "O contato é buscado por e-mail ou telefone, e criado se não existir."
+        },
+        {
+          "content": "Os opt-ins de marketing e as propriedades personalizadas são gravados no contato."
+        },
+        {
+          "content": "O contato é adicionado à lista configurada."
+        },
+        {
+          "content": "A submissão é registrada e os eventos de visualização e envio são disparados."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Editei e nada mudou no site"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Formulário publicado é imutável. Suas edições foram para uma "
+        },
+        {
+          "type": "text",
+          "text": "nova versão em rascunho",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e a loja continua exibindo a versão publicada até você publicar o rascunho."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Confira o status da versão que você editou, na aba "
+            },
+            {
+              "type": "text",
+              "text": "Configurações",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " do editor."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Alterações não salvas se perdem ao trocar de versão ou ao usar "
+            },
+            {
+              "type": "text",
+              "text": "Descartar",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": "Se você acabou de publicar, recarregue a página do site ignorando o cache."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Não consigo publicar, o botão está bloqueado",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Abra o contador de pendências na barra superior: ele lista o que falta e cada item leva ao lugar exato. A tradução de cada mensagem está em "
+                },
+                {
+                  "type": "text",
+                  "text": "criar e publicar",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "ferramentas/formularios/criar-e-publicar"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Configurei prêmios na roleta e nem todos aparecem",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Fatias sem código de cupom ou com chance zero são descartadas em silêncio. Veja "
+                },
+                {
+                  "type": "text",
+                  "text": "roleta e cupom",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "ferramentas/formularios/roleta-e-cupom"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "O layout quebra no celular",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Use o preview em modo celular na barra superior do editor. Em formulários de duas colunas, confira a ordem das colunas no celular e a visibilidade de cada uma. O bloco Imagem tem arquivo e largura separados para celular."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Como exporto as submissões?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não há exportação de submissões no painel. O caminho para trabalhar os leads em massa é a lista onde eles entram: por ela você monta campanhas, automações e segmentações."
+            }
+          ]
+        },
+        {
+          "question": "O visitante enviou duas vezes. Vou ter contato duplicado?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Quando o e-mail ou telefone já existe, o contato é atualizado em vez de duplicado. É o comportamento esperado, e vale para envios do mesmo formulário ou de formulários diferentes."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

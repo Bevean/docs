@@ -1,0 +1,627 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam os formulários",
+  "subtitle": "Formulários capturam leads no seu site: cada envio vira um contato no CRM, dentro da lista que você escolher.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "formulários",
+    "leads",
+    "pop-up",
+    "captação",
+    "tracker"
+  ],
+  "related": [
+    "ferramentas/formularios/criar-e-publicar",
+    "ferramentas/formularios/instalar-no-site"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um formulário da Bevean aparece "
+        },
+        {
+          "type": "text",
+          "text": "no seu site",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", não dentro do painel. Ele é exibido pelo script da Bevean instalado na loja, e cada envio vira um contato no CRM, adicionado a uma lista que você define na configuração."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.forms"
+          }
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "./assets/listagem.png",
+      "alt": "Listagem de formulários no painel, mostrando nome, status, data de atualização e os ícones de ação de cada linha",
+      "width": 1271,
+      "height": 907,
+      "caption": "A listagem mostra a versão mais recente de cada formulário, com busca por nome e filtro por status.",
+      "capturedAt": "2026-08-03"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que um envio produz"
+    },
+    {
+      "type": "paragraph",
+      "content": "Todo envio bem-sucedido gera três coisas ao mesmo tempo:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "O que é criado"
+        },
+        {
+          "content": "Onde encontrar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "O contato (criado ou atualizado)"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Em "
+              },
+              {
+                "type": "uiPath",
+                "attrs": {
+                  "ref": "audience.customers"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "A entrada na lista escolhida"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Em "
+              },
+              {
+                "type": "uiPath",
+                "attrs": {
+                  "ref": "audience.segments"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "A submissão, com os valores brutos"
+          },
+          {
+            "content": "No painel de submissões, dentro do editor do formulário"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O envio também dispara os eventos de "
+        },
+        {
+          "type": "text",
+          "text": "formulário visualizado",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "formulário enviado",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que você pode usar como gatilho de automação e que alimentam os relatórios."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Antes de começar: o script na loja"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Formulário só aparece onde o script da Bevean está carregando. Ele é ativado na integração da sua plataforma, em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Ao abrir a tela de formulários, o painel avisa se algo falta:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "O que aparece na tela"
+        },
+        {
+          "content": "O que significa"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Ative o tracker para criar formulários"
+          },
+          {
+            "content": "Existe integração compatível, mas o script não foi ativado nela."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Use o botão "
+              },
+              {
+                "type": "text",
+                "text": "Configurar tracker",
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " para ir direto à tela de script da integração."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Nenhuma integração ativa é compatível com o tracker"
+          },
+          {
+            "content": "Não há integração compatível ativa na sua conta."
+          },
+          {
+            "content": "Conecte ou ative uma plataforma suportada antes de continuar."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O painel só sabe que você ativou o script na integração. Se o formulário está publicado e ativo e mesmo assim não aparece, o próximo passo é conferir se o script está de fato carregando nas páginas da loja."
+        }
+      ],
+      "title": "Ativo no painel não é o mesmo que carregando na loja"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os dois tipos de formulário"
+    },
+    {
+      "type": "paragraph",
+      "content": "Você escolhe o tipo ao criar, e a escolha muda quais opções existem depois no editor."
+    },
+    {
+      "type": "image",
+      "src": "./assets/criar-formulario.png",
+      "alt": "Seletor com os dois tipos de formulário disponíveis ao criar: Pop-up e Incorporado",
+      "width": 1271,
+      "height": 907,
+      "caption": "Pop-up aparece sobre a página; incorporado entra em uma região dela.",
+      "capturedAt": "2026-08-03"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Característica"
+        },
+        {
+          "content": "Pop-up"
+        },
+        {
+          "content": "Incorporado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Como aparece"
+          },
+          {
+            "content": "Sobre o conteúdo, com um escurecimento atrás"
+          },
+          {
+            "content": "Dentro do fluxo da página"
+          }
+        ],
+        [
+          {
+            "content": "Precisa de instalação na página?"
+          },
+          {
+            "content": "Não, basta o script ativo"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Sim — veja "
+              },
+              {
+                "type": "text",
+                "text": "instalar no site",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/formularios/instalar-no-site"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Tem regras de quando aparecer?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Sim — veja "
+              },
+              {
+                "type": "text",
+                "text": "quando o pop-up aparece",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/formularios/quando-o-popup-aparece"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Não. Ele está sempre na página"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Formulários antigos podem ter sido criados como "
+            },
+            {
+              "type": "text",
+              "text": "faixa",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ou "
+            },
+            {
+              "type": "text",
+              "text": "painel lateral",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Eles continuam funcionando e abrem com o aviso “Formulário legado detectado”, mas o tipo não pode mais ser alterado e só o conteúdo compatível é editável."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Status: o que cada um significa"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status"
+        },
+        {
+          "content": "Pode editar?"
+        },
+        {
+          "content": "Aparece na loja?"
+        },
+        {
+          "content": "Recebe envios?"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Rascunho"
+          },
+          {
+            "content": "Sim"
+          },
+          {
+            "content": "Não"
+          },
+          {
+            "content": "Não"
+          }
+        ],
+        [
+          {
+            "content": "Publicado"
+          },
+          {
+            "content": "Só criando uma nova versão"
+          },
+          {
+            "content": "Sim"
+          },
+          {
+            "content": "Sim"
+          }
+        ],
+        [
+          {
+            "content": "Pausado"
+          },
+          {
+            "content": "Não"
+          },
+          {
+            "content": "Não"
+          },
+          {
+            "content": "Não"
+          }
+        ],
+        [
+          {
+            "content": "Arquivado"
+          },
+          {
+            "content": "Não"
+          },
+          {
+            "content": "Não"
+          },
+          {
+            "content": "Não"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Pausado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " não é um status separado: é um formulário publicado com a exibição desligada. O botão de pausar e retomar só existe para formulários publicados, e está tanto na listagem quanto na aba "
+        },
+        {
+          "type": "text",
+          "text": "Configurações",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " do editor."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Arquivar remove o formulário da operação e não pode ser desfeito. Se a intenção é só parar de exibir por um tempo, use pausar."
+        }
+      ],
+      "title": "Arquivar não tem volta"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Versões: por que o site não muda quando você edita"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Formulário publicado é imutável. Para mudar qualquer coisa você cria uma "
+        },
+        {
+          "type": "text",
+          "text": "nova versão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que nasce como rascunho a partir da versão publicada. Enquanto esse rascunho não for publicado, a loja continua exibindo a versão anterior."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O seletor de versões fica na aba "
+            },
+            {
+              "type": "text",
+              "text": "Configurações",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " do editor."
+            }
+          ]
+        },
+        {
+          "content": "A listagem sempre mostra a versão mais recente, publicada ou não."
+        },
+        {
+          "content": "Trocar de versão com alterações não salvas descarta essas alterações. O painel pede confirmação antes."
+        },
+        {
+          "content": "Ao abrir uma versão já publicada, os painéis ficam bloqueados e aparece um resumo da configuração."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Antes de procurar outra causa, confira o status da versão que você editou. Se ela está em rascunho, o site ainda mostra a anterior — veja "
+            },
+            {
+              "type": "text",
+              "text": "resolver problemas",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/formularios/resolver-problemas"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "É a explicação de quase todo “editei e não mudou nada”"
+    }
+  ]
+}

@@ -109,8 +109,8 @@ emite `sitemap.xml`, `robots.txt` e `_redirects`.
 
 ## O que ainda não existe
 
-- Conteúdo: só um artigo real (`ferramentas/formularios`). As outras 9 coleções estão
-  como marcadores, com estado vazio próprio.
+- Conteúdo: a seção `ferramentas/formularios` está escrita (7 artigos). As outras 9
+  coleções estão como marcadores, com estado vazio próprio.
 - Editor visual. O campo `editor` de cada contrato já declara os controles; falta ligar
   o painel, no molde do `settings-loader` do `admin-front`.
 - Testes automatizados do renderer.

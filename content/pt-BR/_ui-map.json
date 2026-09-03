@@ -1,4 +1,29 @@
 {
-  "tools.forms": { "segments": ["Painel", "Ferramentas", "Formulários"], "href": "/content/forms" },
-  "settings.integrations": { "segments": ["Painel", "Integrações"], "href": "/integrations" }
+  "tools.forms": {
+    "segments": [
+      "Ferramentas",
+      "Formulários"
+    ],
+    "href": "/content/forms"
+  },
+  "settings.integrations": {
+    "segments": [
+      "Integrações"
+    ],
+    "href": "/integrations"
+  },
+  "audience.segments": {
+    "segments": [
+      "Audiência",
+      "Segmentos e Listas"
+    ],
+    "href": "/segments"
+  },
+  "audience.customers": {
+    "segments": [
+      "Audiência",
+      "Contatos"
+    ],
+    "href": "/customers"
+  }
 }

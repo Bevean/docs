@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Formulários",
+  "description": "Capture leads no seu site com pop-ups e formulários incorporados, sem mexer no código da loja.",
+  "icon": "clipboard-list",
+  "articles": [
+    "visao-geral",
+    "criar-e-publicar",
+    "campos-e-conteudo",
+    "instalar-no-site",
+    "quando-o-popup-aparece",
+    "roleta-e-cupom",
+    "resolver-problemas"
+  ]
+}
