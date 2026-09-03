@@ -81,6 +81,7 @@ em silêncio.
 | Contrato de bloco | `src/content/block-contract.ts` | Espelha o `EditorModuleContract` do editor de e-mail, em modo leitura |
 | Registry | `src/content/blocks/blocks-registry.ts` | `type` → contrato, com três travas de tipo contra deriva |
 | Renderer | `src/content/renderer/` | Percorre a árvore; a recursão passa por React, não por import |
+| Repositório | `src/content/content-repository.ts` | Única porta para o conteúdo: manifest eager, corpo do artigo sob demanda |
 | Build | `scripts/content-build.ts` | Valida (estrutural + grafo) e monta o manifest |
 | Prerender | `scripts/prerender.ts` | Um HTML por rota, com `<head>` montado a partir do manifest |
 
@@ -90,6 +91,23 @@ em silêncio.
 que não existe mais na v7) e só opera preso à v6. Como todas as rotas são conhecidas no
 build e o `<head>` de cada uma é função pura do manifest, montá-lo no script é mais
 simples e mais confiável que uma lib de head em runtime.
+
+### Um chunk por artigo
+
+O manifest (navegação, títulos, contagens) é eager porque toda página precisa dele.
+O **corpo** do artigo não: é um chunk próprio, carregado quando alguém abre aquele
+artigo. Com o corpo no bundle inicial, cada artigo escrito custava ~1,5 KB gzip a
+toda visita, e a biblioteca crescia contra o orçamento de JS em vez de contra o disco.
+
+O manifest carrega só metadado. Sumário e trilha de navegação, que já foram campos
+dele, são derivados na página de artigo — `toc.ts` e `breadcrumb.ts`, as mesmas
+funções que o build usa para validar.
+
+O custo é que ler um corpo virou assíncrono e o prerender é síncrono. Por isso o
+repositório separa `loadArticleDoc` (aquece o cache) de `getArticle` (lê do cache), e
+tanto o prerender quanto a hidratação chamam `preloadRouteContent` antes de renderizar.
+O `check:bundle` mede o **carregamento inicial** — o chunk de entrada mais o que o Vite
+pré-carrega com ele —, não a soma dos chunks.
 
 ### zod não entra no bundle
 

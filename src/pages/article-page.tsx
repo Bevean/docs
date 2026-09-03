@@ -1,32 +1,45 @@
+import { use } from 'react'
 import { Link } from 'react-router'
 import type { Block } from '#schema'
 import { Breadcrumbs } from '@/app/breadcrumbs.tsx'
 import { useDocumentMeta } from '@/app/use-document-meta.ts'
-import { getArticle, getSiblings } from '@/content/content-repository.ts'
+import {
+  getArticleDoc,
+  getArticleMeta,
+  getBreadcrumb,
+  getSiblings,
+  loadArticleDoc
+} from '@/content/content-repository.ts'
 import { createRenderContext } from '@/content/render-context.ts'
 import { BlockList } from '@/content/renderer/block-renderer.tsx'
+import { buildToc } from '@/content/toc.ts'
 import { NotFoundPage } from './not-found-page.tsx'
 import { TableOfContents } from './table-of-contents.tsx'
 
 export function ArticlePage({ path }: { path: string }) {
-  const article = getArticle(path)
+  const meta = getArticleMeta(path)
+
+  // Cache frio só acontece em navegação dentro do site: o prerender e a
+  // hidratação passam por `preloadRouteContent` antes de renderizar. Aqui o
+  // `use` suspende e o Suspense da rota mostra o esqueleto.
+  const doc = getArticleDoc(path) ?? (meta ? use(loadArticleDoc(path)) : undefined)
 
   useDocumentMeta(
-    article ? `${article.meta.title} — Central de Ajuda Bevean` : 'Central de Ajuda Bevean',
-    article?.doc.seo?.description ?? article?.meta.subtitle
+    meta ? `${meta.title} — Central de Ajuda Bevean` : 'Central de Ajuda Bevean',
+    doc?.seo?.description ?? meta?.subtitle
   )
 
-  if (!article) return <NotFoundPage />
+  if (!meta || !doc) return <NotFoundPage />
 
-  const { meta, doc } = article
   const body = doc.body as Block[]
   const ctx = createRenderContext(meta, body)
+  const toc = buildToc(body, ctx)
   const siblings = getSiblings(meta)
 
   return (
     <div className="mx-auto grid max-w-6xl gap-10 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_240px]">
       <article className="min-w-0">
-        <Breadcrumbs items={meta.breadcrumb} />
+        <Breadcrumbs items={getBreadcrumb(meta)} />
 
         <header className="mt-6">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">{meta.title}</h1>
@@ -35,9 +48,9 @@ export function ArticlePage({ path }: { path: string }) {
           )}
         </header>
 
-        {meta.toc.length > 1 && (
+        {toc.length > 1 && (
           <div className="mt-8 lg:hidden">
-            <TableOfContents entries={meta.toc} />
+            <TableOfContents entries={toc} />
           </div>
         )}
 
@@ -59,7 +72,7 @@ export function ArticlePage({ path }: { path: string }) {
 
       <aside className="hidden lg:block">
         <div className="sticky top-[calc(var(--header-height)+1.5rem)] space-y-8">
-          {meta.toc.length > 1 && <TableOfContents entries={meta.toc} />}
+          {toc.length > 1 && <TableOfContents entries={toc} />}
 
           {siblings && (
             <nav aria-labelledby="artigos-irmaos">

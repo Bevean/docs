@@ -16,13 +16,15 @@ import { articleZod, collectionZod, contentIndexZod, sectionZod, uiMapZod } from
 import type { ArticleDoc, Block, HeadingBlock } from '#schema'
 import { computeAnchors } from '../src/content/anchors.ts'
 import { blockToPlainText, getBlockContract } from '../src/content/blocks/blocks-registry.ts'
+import { buildBreadcrumb } from '../src/content/breadcrumb.ts'
+import { buildToc } from '../src/content/toc.ts'
+import { walkBlocks } from '../src/content/walk-blocks.ts'
 import { CONTENT_ICONS } from '../src/app/content-icons.ts'
 import type {
   ArticleMeta,
   CollectionMeta,
   ContentManifest,
   ContentNode,
-  Crumb,
   SectionMeta,
   TocEntry
 } from '../src/content/content-types.ts'
@@ -72,19 +74,6 @@ async function readJson(file: string): Promise<unknown> {
   return JSON.parse(await readFile(file, 'utf8'))
 }
 
-/** Percorre a árvore inteira de blocos, entrando nos aninhados. */
-function walkBlocks(blocks: Block[], visit: (block: Block) => void): void {
-  for (const block of blocks) {
-    visit(block)
-    if (block.type === 'callout') walkBlocks(block.body as Block[], visit)
-    else if (block.type === 'steps') {
-      for (const step of block.items) if (step.body) walkBlocks(step.body as Block[], visit)
-    } else if (block.type === 'faq') {
-      for (const item of block.items) walkBlocks(item.answer as Block[], visit)
-    }
-  }
-}
-
 export async function buildContent(): Promise<BuildResult> {
   const issues: Issue[] = []
   const docs = new Map<string, ArticleDoc>()
@@ -97,6 +86,18 @@ export async function buildContent(): Promise<BuildResult> {
   const collections: CollectionMeta[] = []
   const sections: Record<string, SectionMeta> = {}
   const articles: Record<string, ArticleMeta> = {}
+  /**
+   * Sumário por artigo. Fica no build (L008 e o índice de busca precisam dele)
+   * e NÃO vai para o manifest: a página de artigo o deriva do corpo, que ela
+   * já tem em mãos.
+   */
+  const tocByPath = new Map<string, TocEntry[]>()
+  /**
+   * Índice de nó por caminho, usado só aqui — pelas checagens de referência,
+   * que precisam sugerir o caminho parecido. O manifest deixou de carregá-lo:
+   * era uma cópia integral de coleções + seções + artigos, e o repositório o
+   * reconstrói em memória sem duplicar nada.
+   */
   const byPath: Record<string, ContentNode> = {}
   const aliases: Record<string, string> = {}
 
@@ -162,11 +163,6 @@ export async function buildContent(): Promise<BuildResult> {
     byPath[collectionSlug] = { kind: 'collection', meta }
     for (const alias of collection.aliases) registerAlias(alias, collectionSlug, collectionFile)
 
-    const crumbs: Crumb[] = [
-      { title: 'Todas as coleções', url: HELP_BASE },
-      { title: collection.title, url: meta.url }
-    ]
-
     // Slug duplicado entre seção e artigo solto deixa a rota ambígua.
     const claimed = new Set<string>()
     for (const slug of [...collection.sections, ...collection.articles]) {
@@ -178,7 +174,7 @@ export async function buildContent(): Promise<BuildResult> {
 
     for (const slug of collection.articles) {
       const file = path.join(collectionDir, `${slug}.json`)
-      await ingestArticle({ file, collectionSlug, sectionSlug: undefined, slug, crumbs })
+      await ingestArticle({ file, collectionSlug, sectionSlug: undefined, slug })
     }
 
     for (const sectionSlug of collection.sections) {
@@ -212,10 +208,9 @@ export async function buildContent(): Promise<BuildResult> {
       byPath[sectionPath] = { kind: 'section', meta: sectionMeta }
       for (const alias of section.aliases) registerAlias(alias, sectionPath, sectionFile)
 
-      const sectionCrumbs: Crumb[] = [...crumbs, { title: section.title, url: sectionMeta.url }]
       for (const slug of section.articles) {
         const file = path.join(sectionDir, `${slug}.json`)
-        await ingestArticle({ file, collectionSlug, sectionSlug, slug, crumbs: sectionCrumbs })
+        await ingestArticle({ file, collectionSlug, sectionSlug, slug })
       }
 
       await reportOrphans(sectionDir, section.articles, sectionFile)
@@ -232,9 +227,8 @@ export async function buildContent(): Promise<BuildResult> {
     collectionSlug: string
     sectionSlug: string | undefined
     slug: string
-    crumbs: Crumb[]
   }): Promise<void> {
-    const { file, collectionSlug, sectionSlug, slug, crumbs } = args
+    const { file, collectionSlug, sectionSlug, slug } = args
 
     if (!existsSync(file)) {
       issues.push({ file: rel(file), code: 'R008', level: 'error', message: `artigo "${slug}" está listado mas não existe no disco` })
@@ -254,15 +248,15 @@ export async function buildContent(): Promise<BuildResult> {
     const body = doc.body as Block[]
     const anchors = computeAnchors(body)
 
-    const toc: TocEntry[] = []
     walkBlocks(body, (block) => {
-      const contract = getBlockContract(block.type)
-      if (!contract) {
+      if (!getBlockContract(block.type)) {
         issues.push({ file: rel(file), code: 'S006', level: 'error', message: `bloco "${block.type}" não existe no registry` })
-        return
       }
-      toc.push(...(contract.collectToc?.(block, buildCtx(anchors)) ?? []))
     })
+
+    // Mesma função que a página de artigo usa em runtime: o sumário que o
+    // validador julga é exatamente o que o leitor vai ver.
+    const toc = buildToc(body, buildCtx(anchors))
 
     if (body.length > 8 && toc.length === 0) {
       issues.push({ file: rel(file), code: 'L008', level: 'warning', message: 'artigo longo sem nenhum heading — o sumário fica vazio' })
@@ -279,12 +273,11 @@ export async function buildContent(): Promise<BuildResult> {
       updatedAt: doc.updatedAt,
       tags: doc.tags ?? [],
       collection: collectionSlug,
-      section: sectionSlug ? `${collectionSlug}/${sectionSlug}` : undefined,
-      breadcrumb: [...crumbs, { title: doc.title, url: `${HELP_BASE}/${docPath}` }],
-      toc
+      section: sectionSlug ? `${collectionSlug}/${sectionSlug}` : undefined
     }
 
     articles[docPath] = meta
+    tocByPath.set(docPath, toc)
     byPath[docPath] = { kind: 'article', meta }
     docs.set(docPath, doc)
     for (const alias of doc.aliases ?? []) registerAlias(alias, docPath, file)
@@ -388,7 +381,6 @@ export async function buildContent(): Promise<BuildResult> {
     collections,
     sections,
     articles,
-    byPath,
     featured: index.featured,
     popular: index.popular,
     uiMap,
@@ -429,7 +421,7 @@ export async function buildContent(): Promise<BuildResult> {
     }
   }
 
-  return { manifest, docs, searchDocuments: buildSearchDocuments(manifest, docs), issues }
+  return { manifest, docs, searchDocuments: buildSearchDocuments(manifest, docs, tocByPath), issues }
 }
 
 /**
@@ -438,7 +430,8 @@ export async function buildContent(): Promise<BuildResult> {
  */
 function buildSearchDocuments(
   manifest: ContentManifest,
-  docs: Map<string, ArticleDoc>
+  docs: Map<string, ArticleDoc>,
+  tocByPath: Map<string, TocEntry[]>
 ): SearchDocument[] {
   const documents: SearchDocument[] = []
 
@@ -463,7 +456,7 @@ function buildSearchDocuments(
       kind: 'section',
       title: section.title,
       subtitle: section.description ?? '',
-      breadcrumb: manifest.byPath[section.collection]?.meta.title ?? '',
+      breadcrumb: manifest.collections.find((c) => c.path === section.collection)?.title ?? '',
       headings: '',
       tags: '',
       body: section.description ?? ''
@@ -486,8 +479,11 @@ function buildSearchDocuments(
       kind: 'article',
       title: meta.title,
       subtitle: meta.subtitle ?? '',
-      breadcrumb: meta.breadcrumb.slice(1, -1).map((c) => c.title).join(' › '),
-      headings: meta.toc.map((t) => t.text).join(' '),
+      breadcrumb: buildBreadcrumb(meta, manifest)
+        .slice(1, -1)
+        .map((c) => c.title)
+        .join(' › '),
+      headings: (tocByPath.get(docPath) ?? []).map((t) => t.text).join(' '),
       tags: meta.tags.join(' '),
       body: parts.join(' ')
     })
@@ -534,7 +530,6 @@ function emptyManifest(): ContentManifest {
     collections: [],
     sections: {},
     articles: {},
-    byPath: {},
     featured: [],
     popular: [],
     uiMap: {},

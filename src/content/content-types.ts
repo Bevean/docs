@@ -40,8 +40,6 @@ export interface ArticleMeta {
   tags: string[]
   collection: string
   section?: string
-  breadcrumb: Crumb[]
-  toc: TocEntry[]
 }
 
 export interface SectionMeta {
@@ -80,8 +78,6 @@ export interface ContentManifest {
   collections: CollectionMeta[]
   sections: Record<string, SectionMeta>
   articles: Record<string, ArticleMeta>
-  /** Resolve qualquer caminho de conteúdo para o nó, sem ambiguidade de rota. */
-  byPath: Record<string, ContentNode>
   featured: string[]
   popular: string[]
   uiMap: Record<string, UiPathTarget>

@@ -10,6 +10,7 @@
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
+import { buildBreadcrumb } from '../src/content/breadcrumb.ts'
 import type { ContentManifest } from '../src/content/content-types.ts'
 
 const ROOT = path.resolve(import.meta.dirname, '..')
@@ -85,13 +86,18 @@ function outputPath(url: string): string {
 export async function prerender(routes: PrerenderRoute[]): Promise<void> {
   const template = await readFile(path.join(DIST, 'index.html'), 'utf8')
   const entry = pathToFileURL(path.join(DIST_SSR, 'entry-server.js')).href
-  const { render } = (await import(entry)) as { render: (url: string) => string }
+  const { prepare, render } = (await import(entry)) as {
+    prepare: (url: string) => Promise<void>
+    render: (url: string) => string
+  }
 
   if (!template.includes('<div id="root"></div>')) {
     throw new Error('index.html não tem <div id="root"></div> — o template mudou?')
   }
 
   for (const route of routes) {
+    // O corpo do artigo é um chunk assíncrono; `render` é síncrono.
+    await prepare(route.url)
     const appHtml = render(route.url)
     const html = template
       .replace('</head>', `  ${renderHead(route)}\n  </head>`)
@@ -160,7 +166,7 @@ function routesFromManifest(manifest: ContentManifest): PrerenderRoute[] {
     title: `${a.title} — ${SITE_TITLE}`,
     description: a.subtitle,
     jsonLd: [
-      breadcrumbLd(a.breadcrumb),
+      breadcrumbLd(buildBreadcrumb(a, manifest)),
       {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

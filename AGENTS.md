@@ -589,8 +589,11 @@ Além do validador, `pnpm build` roda o `check:bundle`:
 
 | Falha | O que significa | O que fazer |
 |---|---|---|
-| `JS em … KB gzip, acima do orçamento` | O corpo dos artigos ainda entra no bundle inicial, então a biblioteca crescer empurra esse número | **Não corte conteúdo para caber.** É hora de carregar o artigo sob demanda, em `src/content/content-repository.ts` — a decisão está comentada lá. Avise o usuário e pare |
+| `carregamento inicial em … KB gzip, acima do orçamento` | Cresceu o **código** do site, não o conteúdo: cada artigo é um chunk próprio e não entra nessa conta. Quase sempre é dependência nova | Não é problema de conteúdo — escrever artigo não move esse número. Avise o usuário |
 | `zod vazou para o bundle` | Algum `import` de schema em `src/` deixou de ser `import type` | Corrija o import; nunca relaxe a checagem |
+
+Escrever artigo mexe só no chunk daquele artigo e numa linha do manifest. Se um
+artigo novo estourar o orçamento, é sinal de que algo está errado no motor.
 
 ---
 
@@ -611,6 +614,17 @@ mais é um bloco a mais no editor visual, na busca e na cabeça de quem escreve.
 
 **Não crie um bloco `html`.** Escape hatch de HTML cru mata o editor visual antes
 de ele nascer, produz deriva de estilo e abre XSS.
+
+### O corpo do artigo é assíncrono
+
+`getArticle` lê do cache e é **síncrono**; `loadArticleDoc` carrega o chunk e é
+**assíncrono**. Todo caminho que renderiza um artigo passa antes por
+`preloadRouteContent`: o prerender (via `prepare`, no `entry-server.tsx`) e a
+hidratação (no `entry-client.tsx`). Sem isso o React suspenderia no meio de um
+render síncrono, que é erro e não espera.
+
+Se você criar uma página nova que mostre corpo de artigo, ela precisa ficar dentro
+do `ArticleBoundary` — ou aquecer o cache antes.
 
 ### Regras do código
 
