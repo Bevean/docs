@@ -388,6 +388,22 @@ sem nome não ajuda ninguém. Use o nome do eixo ("Característica").
 **Nomeie o artigo pela tarefa ou pela pergunta**, com as palavras do leitor. "O
 formulário não está funcionando" acha mais gente que "Solução de problemas".
 
+**A fonte interna agrupa por quem dá suporte, não por quem lê.** A doc de Links
+cobre duas telas de módulos diferentes — o gerador em Ferramentas e a origem da
+conversa no Atendimento — porque o atendente lida com as duas no mesmo ticket.
+Quem lê não. Ao converter, pergunte em qual coleção o leitor procuraria, não em
+qual arquivo a informação estava.
+
+**Quando a resposta é "duas coleções", escolha a que já tem conteúdo** e deixe o
+resto cross-linkado. Mandar o leitor para uma coleção vazia é pior que agrupar
+imperfeitamente. Foi o caso de `origem-da-conversa`, que conceitualmente pertence
+a Atendimento e hoje mora em Ferramentas › Gerador de Links.
+
+Quando chegar a hora de mudar o artigo de lugar, o `aliases` do destino é o que
+preserva o endereço: ele lista os caminhos antigos da página. Não dá para
+pré-registrar — o alias aponta do caminho antigo para o atual, então só existe
+depois da mudança.
+
 ---
 
 ## Por que não há prints

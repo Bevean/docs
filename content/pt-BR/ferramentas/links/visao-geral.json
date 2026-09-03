@@ -1,0 +1,282 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o gerador de links",
+  "subtitle": "Crie links curtos para WhatsApp ou para o seu site e descubra de qual anúncio, post ou campanha veio cada conversa.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "links",
+    "link curto",
+    "rastreamento",
+    "utm",
+    "origem",
+    "atribuição"
+  ],
+  "related": [
+    "ferramentas/links/criar-um-link",
+    "ferramentas/links/origem-da-conversa"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Você divulga um link em um anúncio, na bio do Instagram ou num QR code impresso. Quando alguém clica e começa uma conversa, a Bevean reconhece de qual link veio — e mostra isso no atendimento, sem você precisar perguntar “como você chegou até nós?”."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.links"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A origem detectada não aparece nesta tela. Ela fica dentro do atendimento, na seção "
+        },
+        {
+          "type": "text",
+          "text": "Origem da conversa",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " do painel do contato — veja "
+        },
+        {
+          "type": "text",
+          "text": "de onde veio esta conversa",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/links/origem-da-conversa"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A regra que explica quase tudo"
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "É o único momento em que existe sinal para ler. Se a pessoa já estava conversando com você e clicou no link depois, ou se apagou a mensagem pré-preenchida e escreveu a própria, não há origem para identificar."
+        },
+        {
+          "type": "paragraph",
+          "content": "Isso é o comportamento esperado, não uma falha. Vale ter em mente antes de investigar qualquer conversa sem origem."
+        }
+      ],
+      "title": "A origem é capturada na primeira mensagem de um atendimento novo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os dois tipos de link"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Você escolhe o tipo ao criar, e ele "
+        },
+        {
+          "type": "text",
+          "text": "não pode ser trocado depois",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — para mudar, crie um link novo."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Característica"
+        },
+        {
+          "content": "WhatsApp"
+        },
+        {
+          "content": "Redirecionamento"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "O que faz"
+          },
+          {
+            "content": "Abre uma conversa de WhatsApp com um número seu, já com a mensagem inicial escrita"
+          },
+          {
+            "content": "Leva para qualquer endereço: seu site, uma landing page, um catálogo"
+          }
+        ],
+        [
+          {
+            "content": "O que exige"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Um canal WhatsApp conectado em "
+              },
+              {
+                "type": "uiPath",
+                "attrs": {
+                  "ref": "settings.channels"
+                }
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Uma URL válida, começando com "
+              },
+              {
+                "type": "text",
+                "text": "https://",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Como rastreia"
+          },
+          {
+            "content": "Uma referência invisível no fim da mensagem pré-preenchida"
+          },
+          {
+            "content": "Parâmetros UTM anexados ao endereço de destino"
+          }
+        ],
+        [
+          {
+            "content": "Identifica a conversa?"
+          },
+          {
+            "content": "Sim, no atendimento"
+          },
+          {
+            "content": "Não. Ele alimenta a sua ferramenta de análise pelos UTMs"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Além dos links: anúncios da Meta"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Conversas que chegam por anúncios “Clique para o WhatsApp” do Facebook e do Instagram são identificadas automaticamente, "
+        },
+        {
+          "type": "text",
+          "text": "sem precisar criar link nenhum",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e sem nada para conectar no painel. Veja "
+        },
+        {
+          "type": "text",
+          "text": "conversas vindas de anúncios da Meta",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/links/anuncios-da-meta"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o gerador não faz"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Não gera QR code. Copie a URL curta e gere o código em uma ferramenta externa apontando para ela."
+        },
+        {
+          "content": "Não substitui a sua ferramenta de análise. O link de redirecionamento anexa os UTMs; quem lê esses UTMs é o seu analytics."
+        },
+        {
+          "content": "Não muda o tipo depois de criado."
+        }
+      ]
+    }
+  ]
+}

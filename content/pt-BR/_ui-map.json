@@ -25,5 +25,32 @@
       "Contatos"
     ],
     "href": "/customers"
+  },
+  "tools.links": {
+    "segments": [
+      "Ferramentas",
+      "Links"
+    ],
+    "href": "/tools/links"
+  },
+  "settings.attribution": {
+    "segments": [
+      "Configurações",
+      "Períodos de atribuição"
+    ],
+    "href": "/settings/attribution"
+  },
+  "settings.channels": {
+    "segments": [
+      "Configurações",
+      "Canais"
+    ],
+    "href": "/settings/channels"
+  },
+  "helpdesk": {
+    "segments": [
+      "Atendimento"
+    ],
+    "href": "/helpdesk"
   }
 }

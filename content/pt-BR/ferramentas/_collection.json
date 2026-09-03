@@ -4,7 +4,8 @@
   "description": "Formulários, cashback, gerador de links e o que mais ajuda a captar e converter.",
   "icon": "wrench",
   "sections": [
-    "formularios"
+    "formularios",
+    "links"
   ],
   "articles": []
 }

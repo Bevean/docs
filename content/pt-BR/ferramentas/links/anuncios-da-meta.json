@@ -1,0 +1,186 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conversas vindas de anúncios da Meta",
+  "subtitle": "Anúncios “Clique para o WhatsApp” do Facebook e do Instagram são identificados sozinhos, sem link e sem configuração.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "meta",
+    "facebook",
+    "instagram",
+    "anúncio",
+    "click to whatsapp",
+    "ctwa",
+    "tráfego pago"
+  ],
+  "related": [
+    "ferramentas/links/origem-da-conversa",
+    "ferramentas/links/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando alguém clica em um anúncio do tipo "
+        },
+        {
+          "type": "text",
+          "text": "Clique para o WhatsApp",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e a conversa abre, a própria Meta envia junto com a primeira mensagem os dados do anúncio. A Bevean lê isso e já mostra a origem no atendimento."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Não existe um passo de vincular a sua conta de anúncios à Bevean para isso funcionar. O único requisito é que o número seja WhatsApp Oficial e que o anúncio aponte para ele."
+        }
+      ],
+      "title": "Não há nada para conectar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que aparece no atendimento"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que traz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Fonte"
+          },
+          {
+            "content": "Anúncio da Meta."
+          }
+        ],
+        [
+          {
+            "content": "Confiança"
+          },
+          {
+            "content": "Sempre alta. Diferente do link, aqui não há correlação por janela de tempo: é a Meta que garante o vínculo entre o clique e a mensagem."
+          }
+        ],
+        [
+          {
+            "content": "Campanha"
+          },
+          {
+            "content": "O título do anúncio."
+          }
+        ],
+        [
+          {
+            "content": "Origem"
+          },
+          {
+            "content": "O identificador do anúncio."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A Bevean guarda mais dados do que exibe — texto do anúncio, mídia e endereço de origem ficam salvos, mas ainda não aparecem na tela."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Onde funciona, e onde não"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Canal"
+        },
+        {
+          "content": "Recebe a origem do anúncio?"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "WhatsApp Oficial"
+          },
+          {
+            "content": "Sim. É o único canal com essa atribuição hoje."
+          }
+        ],
+        [
+          {
+            "content": "WhatsApp Web"
+          },
+          {
+            "content": "Não. Esse canal não recebe o dado da Meta de forma nenhuma."
+          }
+        ],
+        [
+          {
+            "content": "Instagram e Messenger"
+          },
+          {
+            "content": "Ainda não. A Meta envia um dado equivalente, mas a Bevean não o utiliza nesses canais por enquanto."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se você investe em anúncio “Clique para o WhatsApp” e usa WhatsApp Web, a origem nunca vai aparecer, por mais que o anúncio esteja correto. Migrar o número para WhatsApp Oficial é a única forma de ter esse dado."
+        }
+      ],
+      "title": "É um limite do canal, não uma configuração faltando"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Detalhes que vale conhecer"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Clique feito pelo navegador, no computador, pode chegar com dados incompletos: a conversa ainda aparece como vinda de anúncio da Meta, mas campanha e origem podem vir vazias. A própria Meta avisa sobre isso."
+        },
+        {
+          "content": "Editar ou apagar o anúncio depois não muda o que já foi capturado. O que aparece no atendimento é uma cópia do momento da mensagem."
+        },
+        {
+          "content": "As janelas de atribuição configuradas no painel não se aplicam aqui: não há prazo para expirar nem reconciliação a fazer."
+        }
+      ]
+    }
+  ]
+}

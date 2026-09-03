@@ -1,0 +1,337 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar um link rastreável",
+  "subtitle": "Do botão Criar link até a URL curta pronta para divulgar, e o que cada ação da lista faz.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "criar link",
+    "utm",
+    "expiração",
+    "desativar",
+    "mensagem inicial"
+  ],
+  "related": [
+    "ferramentas/links/visao-geral",
+    "ferramentas/links/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A URL curta é gerada na hora em que você salva, e já pode ser copiada da lista."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O passo a passo"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra Ferramentas › Links e clique em Criar link"
+        },
+        {
+          "title": "Dê um nome interno",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Só para você se organizar, tipo “Google · Campanha de inverno”. O nome não aparece para quem clica. Até 255 caracteres."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escolha o tipo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "WhatsApp ou Redirecionamento. Essa escolha é definitiva: para mudar depois, crie outro link."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Preencha os campos do tipo escolhido",
+          "body": [
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "WhatsApp",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " — selecione o número (só aparecem canais WhatsApp conectados) e escreva a mensagem inicial, de até 1500 caracteres."
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Redirecionamento",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " — informe o endereço de destino e, se quiser, os parâmetros "
+                    },
+                    {
+                      "type": "text",
+                      "text": "utm_source",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ", "
+                    },
+                    {
+                      "type": "text",
+                      "text": "utm_medium",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ", "
+                    },
+                    {
+                      "type": "text",
+                      "text": "utm_campaign",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ", "
+                    },
+                    {
+                      "type": "text",
+                      "text": "utm_term",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " e "
+                    },
+                    {
+                      "type": "text",
+                      "text": "utm_content",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Defina uma data de expiração, se fizer sentido",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Opcional. Depois dela o link para de funcionar mesmo estando ativo — útil para promoção com prazo."
+            }
+          ]
+        },
+        {
+          "title": "Salve e copie o link",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A URL curta é gerada imediatamente e fica disponível na lista."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "No link de WhatsApp, a Bevean anexa uma referência ao fim da mensagem pré-preenchida. É ela que identifica a origem quando a pessoa envia. Se você reescrever a mensagem no campo, mantenha esse final intacto — e oriente quem for divulgar a não pedir para o consumidor apagar nada antes de enviar."
+            }
+          ]
+        }
+      ],
+      "title": "Não edite o final da mensagem inicial"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que dá para fazer na lista"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Ação"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Copiar link"
+          },
+          {
+            "content": "Copia a URL curta para a área de transferência."
+          }
+        ],
+        [
+          {
+            "content": "Testar link"
+          },
+          {
+            "content": "Abre o link em uma nova aba, exatamente como quem clicar vai ver."
+          }
+        ],
+        [
+          {
+            "content": "Editar"
+          },
+          {
+            "content": "Muda nome, destino ou número, mensagem, UTMs e expiração. O tipo continua fixo."
+          }
+        ],
+        [
+          {
+            "content": "Desativar"
+          },
+          {
+            "content": "Tira o link de circulação. O histórico de cliques é preservado."
+          }
+        ],
+        [
+          {
+            "content": "Cliques"
+          },
+          {
+            "content": "A coluna mostra quantas vezes o link foi acessado."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Por causa de cache, um link recém-desativado pode continuar redirecionando por cerca de 60 segundos. Passado esse tempo ele para. Se continuar funcionando bem depois disso, aí sim vale reportar."
+        }
+      ],
+      "title": "Desativar leva até um minuto para valer"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Limites"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Item"
+        },
+        {
+          "content": "Limite"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nome interno"
+          },
+          {
+            "content": "1 a 255 caracteres"
+          }
+        ],
+        [
+          {
+            "content": "Mensagem inicial do WhatsApp"
+          },
+          {
+            "content": "até 1500 caracteres"
+          }
+        ],
+        [
+          {
+            "content": "Tipo do link"
+          },
+          {
+            "content": "fixo depois de criado"
+          }
+        ],
+        [
+          {
+            "content": "Número usado no link de WhatsApp"
+          },
+          {
+            "content": "precisa estar conectado na sua conta"
+          }
+        ]
+      ]
+    }
+  ]
+}

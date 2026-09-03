@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Gerador de Links",
+  "description": "Links curtos e rastreáveis para WhatsApp e para o seu site, que identificam de onde veio cada conversa.",
+  "icon": "link",
+  "articles": [
+    "visao-geral",
+    "criar-um-link",
+    "origem-da-conversa",
+    "anuncios-da-meta",
+    "resolver-problemas"
+  ]
+}

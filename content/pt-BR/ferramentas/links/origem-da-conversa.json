@@ -1,0 +1,365 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "De onde veio esta conversa",
+  "subtitle": "Onde ver a origem de cada atendimento, o que significa cada nível de confiança e como corrigir quando a Bevean errou.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "origem",
+    "atribuição",
+    "confiança",
+    "corrigir origem",
+    "episódio",
+    "atendimento"
+  ],
+  "related": [
+    "ferramentas/links/visao-geral",
+    "ferramentas/links/anuncios-da-meta",
+    "ferramentas/links/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao abrir um atendimento em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", o painel do contato tem uma seção "
+        },
+        {
+          "type": "text",
+          "text": "Origem da conversa",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". É ali que aparece de qual link, anúncio ou automação aquela conversa nasceu."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a seção mostra"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que traz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Fonte"
+          },
+          {
+            "content": "Link gerenciado, Anúncio da Meta, ou Flux (quando uma automação passou a conversa para atendimento humano)."
+          }
+        ],
+        [
+          {
+            "content": "Nível de confiança"
+          },
+          {
+            "content": "Alta ou média. Veja a tabela abaixo."
+          }
+        ],
+        [
+          {
+            "content": "Nome do link"
+          },
+          {
+            "content": "O nome interno que você deu, quando a origem foi um link criado por você."
+          }
+        ],
+        [
+          {
+            "content": "Campanha e origem"
+          },
+          {
+            "content": "Os UTMs do link, ou o título e o identificador do anúncio."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando nada foi identificado, a seção diz "
+        },
+        {
+          "type": "text",
+          "text": "“Nenhuma origem identificada para este atendimento”",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". É o normal para quem salvou o seu número e chamou direto."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A origem é do atendimento, não do contato"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Cada episódio de atendimento é avaliado sozinho. Se a pessoa falou com você hoje vinda de um anúncio e voltar daqui a duas semanas por um link da bio, o segundo atendimento terá a origem do segundo caminho — e o primeiro continua com a dele."
+        }
+      ],
+      "title": "O mesmo cliente pode ter origens diferentes ao longo do tempo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Níveis de confiança"
+    },
+    {
+      "type": "paragraph",
+      "content": "A Bevean diz o quanto tem certeza da origem, para você saber quando confiar no dado ao analisar suas campanhas."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Confiança"
+        },
+        {
+          "content": "Quando acontece"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Alta"
+          },
+          {
+            "content": "O clique e a mensagem se correspondem sem ambiguidade. É sempre o caso das conversas vindas de anúncios da Meta."
+          },
+          {
+            "content": "Pode usar o dado sem ressalva."
+          }
+        ],
+        [
+          {
+            "content": "Média"
+          },
+          {
+            "content": "A referência chegou na mensagem, mas sem um clique que a confirmasse — ou ela veio de um jeito inconsistente, por exemplo colada de outra conversa ou já usada em outro atendimento."
+          },
+          {
+            "content": "O dado provavelmente está certo, mas evite conclusões finas em cima de um volume pequeno."
+          }
+        ],
+        [
+          {
+            "content": "Sem origem"
+          },
+          {
+            "content": "Nenhum sinal foi encontrado, ou o prazo de atribuição passou antes de o clique ser confirmado."
+          },
+          {
+            "content": "Nada a fazer. É esperado para contato direto."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Corrigir a origem manualmente"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No mesmo painel existe o botão "
+        },
+        {
+          "type": "text",
+          "text": "Corrigir origem",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Ele fica visível apenas para quem tem perfil de supervisor com visão daquele canal."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Escolher um dos sinais que a Bevean detectou, mesmo que não seja o de maior confiança."
+        },
+        {
+          "content": "Marcar a origem manualmente — link, anúncio ou automação — com um motivo opcional."
+        },
+        {
+          "content": "Voltar para a atribuição automática, desfazendo a correção."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Toda correção fica registrada com autor, data e motivo, então dá para reconstruir depois por que aquele atendimento está classificado daquele jeito."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Por quanto tempo um clique ainda conta"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.attribution"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Define a janela em que um clique ou uma entrega ainda são considerados a origem de uma conversa ou de um pedido."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Grupo"
+        },
+        {
+          "content": "O que a janela cobre"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "E-mail"
+          },
+          {
+            "content": "E-mail aberto e clique no e-mail."
+          }
+        ],
+        [
+          {
+            "content": "Mensagem de texto"
+          },
+          {
+            "content": "Mensagem entregue e mensagem clicada, em WhatsApp, SMS e Instagram."
+          }
+        ],
+        [
+          {
+            "content": "Conversas do atendimento"
+          },
+          {
+            "content": "A duração de um episódio de atendimento. Máximo de 90 dias."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A alteração vale a partir dali, para novos atendimentos e pedidos. O que já foi classificado permanece como está."
+        }
+      ],
+      "title": "Mudar a janela não recalcula o passado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Essas janelas "
+        },
+        {
+          "type": "text",
+          "text": "não se aplicam",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " às conversas vindas de anúncios da Meta — nesse caso é a própria Meta que garante o vínculo. Veja "
+        },
+        {
+          "type": "text",
+          "text": "conversas vindas de anúncios da Meta",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/links/anuncios-da-meta"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

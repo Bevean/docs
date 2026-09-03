@@ -1,0 +1,363 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "A origem da conversa não apareceu",
+  "subtitle": "Roteiros para quando o link não identifica a conversa, o anúncio não aparece como origem, ou o link desativado continua funcionando.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "não aparece",
+    "origem",
+    "problema",
+    "diagnóstico",
+    "link quebrado"
+  ],
+  "related": [
+    "ferramentas/links/origem-da-conversa",
+    "ferramentas/links/anuncios-da-meta"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Antes de tudo, o básico: a origem só é capturada na "
+        },
+        {
+          "type": "text",
+          "text": "primeira mensagem de um atendimento novo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Conversa que já estava em andamento não recebe origem, mesmo que a pessoa clique no link depois. A maioria dos casos termina aqui."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Criei o link, mas a origem não apareceu"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "A mensagem enviada foi a primeira daquele atendimento?"
+          },
+          {
+            "content": "Atribuição não retroage. Uma conversa em andamento continua sem origem."
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "A pessoa enviou a mensagem pré-preenchida sem apagar o final?"
+          },
+          {
+            "content": "É onde fica a referência de rastreio. Se ela reescreveu a mensagem do zero, não há o que identificar — comportamento esperado."
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O link está ativo e dentro da validade?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Confira em "
+              },
+              {
+                "type": "uiPath",
+                "attrs": {
+                  "ref": "tools.links"
+                }
+              },
+              {
+                "type": "text",
+                "text": ". Link expirado para de funcionar mesmo estando ativo."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "O número usado no link ainda está conectado?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Um canal desconectado quebra o fluxo. Veja em "
+              },
+              {
+                "type": "uiPath",
+                "attrs": {
+                  "ref": "settings.channels"
+                }
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "O atendimento é recente, de poucos minutos?"
+          },
+          {
+            "content": "Pode estar aguardando a confirmação do clique. Confira de novo em alguns minutos."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Use um número que ainda não tem conversa aberta com você, clique no link, e envie a mensagem exatamente como ela vem — sem apagar nada. Testar de um número que já está em atendimento vai sempre dar “sem origem”, e o teste não prova nada."
+            }
+          ]
+        }
+      ],
+      "title": "Como testar do jeito certo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Investi em anúncio da Meta e não aparece origem"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O número é WhatsApp Oficial?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Só ele recebe esse dado. WhatsApp Web nunca vai receber — veja "
+              },
+              {
+                "type": "text",
+                "text": "conversas vindas de anúncios da Meta",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/links/anuncios-da-meta"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "O anúncio é do tipo “Clique para o WhatsApp”?"
+          },
+          {
+            "content": "Outros formatos de anúncio não enviam a referência, mesmo que levem à conversa."
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O anúncio aponta para esse mesmo número?"
+          },
+          {
+            "content": "Se aponta para outro número seu, a origem aparece no atendimento daquele outro número."
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "A conversa veio pelo Instagram ou Messenger, e não pelo WhatsApp?"
+          },
+          {
+            "content": "Esses canais ainda não têm essa atribuição na Bevean."
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "Aparece como anúncio, mas sem campanha e sem origem?"
+          },
+          {
+            "content": "Clique feito pelo navegador no computador costuma chegar incompleto. É limite da Meta, não da configuração."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Desativei o link e ele continua funcionando"
+    },
+    {
+      "type": "paragraph",
+      "content": "Normal por até 60 segundos, por causa de cache. Se continuar redirecionando bem depois disso, aí sim vale reportar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "A confiança está como “média”. O dado está errado?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Não necessariamente. Média quer dizer que a referência chegou na mensagem, mas sem um clique que a confirmasse. Costuma estar certo — só evite tirar conclusões finas de um volume pequeno. Os níveis estão explicados em "
+                },
+                {
+                  "type": "text",
+                  "text": "de onde veio esta conversa",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "ferramentas/links/origem-da-conversa"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Como eu gero um QR code do link?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean não gera QR code. Copie a URL curta e gere o código em uma ferramenta externa apontando para ela. Como a URL é fixa, o QR code impresso continua valendo mesmo se você editar o destino do link depois."
+            }
+          ]
+        },
+        {
+          "question": "Preciso mudar o tipo do link de WhatsApp para redirecionamento",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "O tipo é definido na criação e não pode ser alterado. Crie um link novo com o tipo certo e desative o antigo — o histórico de cliques dele é preservado."
+            }
+          ]
+        },
+        {
+          "question": "A origem apareceu errada. Dá para corrigir?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Sim, pelo botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Corrigir origem",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " no painel do atendimento, disponível para perfis de supervisor com visão daquele canal. A correção fica registrada com autor, data e motivo."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Mudei a janela de atribuição e os atendimentos antigos continuam iguais",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "É o esperado. A mudança vale só para o que acontecer dali em diante; nada é reclassificado retroativamente."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
