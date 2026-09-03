@@ -586,8 +586,29 @@ Antes de escrever do zero, procure a fonte nos repositórios irmãos:
 | O que cada integração sincroniza | `monocore-api/apps/migrator/MIGRATOR_GUIDE.md`, seção 7 |
 | Nomes exatos dos menus | `admin-front/apps/crm/src/shared/components/sidebar-main/` (`sidebar-main-data.tsx` + `locales/pt.json`) |
 | Rotas e payloads da API | `monocore-api/apps/crm/OVERVIEW.md` |
+| Conhecimento de painel de terceiro (DNS, provedores) que não está em código nenhum | `https://bevean.featurebase.app/pt-BR/help` — help center antigo, ainda linkado de dentro do produto ("Saiba mais", "Ver tutorial"). Trate com cuidado: veja a nota abaixo |
 
 Rótulo de tela **sempre** vem do `pt.json` do módulo, nunca da memória.
+
+### O help center antigo (Featurebase) existe e ainda é linkado
+
+Além do Mintlify (aposentado) e da Central de Ajuda que este projeto substitui, existe
+um **terceiro** sistema, `bevean.featurebase.app`, com artigos que o produto atual
+ainda referencia em botões "Saiba mais" e "Ver tutorial" — descoberto documentando
+Domínios, onde os 8 guias de provedor de DNS moram lá.
+
+**Antes de usar qualquer coisa de lá como fonte, confira a data de "última
+atualização" e compare com o código.** Dos 8 guias de provedor encontrados, 3
+descreviam um fluxo que não existe mais (ativação manual pedindo para "avisar a
+equipe" — o produto de hoje verifica sozinho), e os outros 5 tinham a contagem de
+registros desatualizada (a Bevean adicionou um registro depois que os guias foram
+escritos). Datado de 6 meses já é motivo para desconfiar do que é específico da
+Bevean.
+
+O que sobrevive é o que é específico do PAINEL DO TERCEIRO (nome de menu do
+Cloudflare, da Registro.br, etc.) — isso muda pouco e não dá para confirmar em
+nenhum código nosso. Separe as duas coisas: reescreva o lado Bevean a partir do
+código atual, e só reaproveite o caminho de navegação de dentro do painel alheio.
 
 ### Quando não existe doc interna do assunto
 
