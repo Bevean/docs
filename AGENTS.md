@@ -63,6 +63,11 @@ O mesmo vale para a voz: a doc interna fala *sobre* o cliente, para o time de
 suporte. O artigo fala *com* o cliente. Some com "erro comum de cliente", "o
 suporte deve" e as seções de escalar ticket.
 
+O `content:check` avisa (`L009`) quando encontra propriedade em camelCase, nome de
+tabela ou chave interna no texto. É heurística e cobre só o caso mais grosseiro —
+a regra continua sendo sua. Bloco de código fica de fora da checagem, porque é
+ali que conteúdo técnico é legítimo.
+
 **Explique o "porquê" quando ele muda o que a pessoa faz.** "O sorteio é por
 e-mail para impedir que a pessoa gire até ganhar o melhor prêmio" evita um ticket.
 "O sorteio usa um hash do e-mail" não evita nada.
@@ -533,6 +538,8 @@ Rótulo de tela **sempre** vem do `pt.json` do módulo, nunca da memória.
 | `R010` | Alias colide | Escolha outro alias |
 | `L005` | `updatedAt` no futuro | Use a data de hoje |
 | `L008` (aviso) | Artigo longo sem heading | Adicione headings; sem eles o sumário fica vazio |
+| `L009` (aviso) | Nome interno no texto do artigo | Troque pelo nome que aparece na tela, ou corte. Blocos de código não são checados |
+| `R012` | Nome de ícone desconhecido | Use um dos registrados, ou registre o novo em `src/app/content-icons.ts` |
 
 ---
 

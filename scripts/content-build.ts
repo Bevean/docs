@@ -289,7 +289,42 @@ export async function buildContent(): Promise<BuildResult> {
     docs.set(docPath, doc)
     for (const alias of doc.aliases ?? []) registerAlias(alias, docPath, file)
 
+    checkInternalNames(file, body)
     await validateRefs(file, docPath, body)
+  }
+
+  /**
+   * Nomes que só existem para quem tem acesso ao código: propriedade em
+   * camelCase, prefixo de schema do banco, chave interna em snake_case.
+   *
+   * Heurística, então é aviso e não erro — e blocos de código ficam de fora,
+   * porque é exatamente ali que conteúdo técnico é legítimo (a tag que a pessoa
+   * cola no tema, um payload de exemplo).
+   */
+  function checkInternalNames(file: string, body: Block[]): void {
+    const padroes = [
+      { re: /\b[a-z][a-z0-9]*\.[a-z][a-z0-9]*[A-Z]\w*/g, o_que: 'propriedade interna' },
+      { re: /\b(?:crm|helpdesk|flux|public)\.[a-z_]{3,}/g, o_que: 'tabela ou schema do banco' },
+      { re: /\b[a-z]{2,}_[a-z]{2,}_[a-z]{2,}\b/g, o_que: 'chave interna' }
+    ]
+
+    const encontrados = new Set<string>()
+    walkBlocks(body, (block) => {
+      if (block.type === 'code') return
+      const texto = blockToPlainText(block)
+      for (const { re, o_que } of padroes) {
+        for (const achado of texto.match(re) ?? []) encontrados.add(`${achado} (${o_que})`)
+      }
+    })
+
+    if (encontrados.size > 0) {
+      issues.push({
+        file: rel(file),
+        code: 'L009',
+        level: 'warning',
+        message: `nome interno no texto: ${[...encontrados].join(', ')}. O leitor não pode fazer nada com isso — troque pelo nome que aparece na tela, ou corte`
+      })
+    }
   }
 
   /**
