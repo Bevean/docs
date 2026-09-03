@@ -500,6 +500,16 @@ Isso importa especialmente para as funcionalidades que são "insumo" de outras
 (Canais, Integrações): a lista do que elas destravam está espalhada, e ler só a
 própria tela subestima o alcance real.
 
+**Confira se o botão faz o que o rótulo promete — não assuma pela UI.** Documentando
+o WhatsApp Oficial, o botão "Reconectar" do painel manda `token`/`wabaId`/`phoneId`
+novos para o backend, mas o método que os recebe não tem nenhum tratamento para esse
+tipo de canal e devolve o registro inalterado. A UI parece completa; só o rastreio no
+serviço do backend (não no componente, não na rota) mostra que a ação não muda nada.
+Quando isso acontece: não descreva a ação como se resolvesse o problema — descreva
+só o caminho que você confirmou que funciona (aqui, remover e conectar de novo), e
+avise o usuário do achado separadamente da tarefa de documentação — não é uma
+decisão de conteúdo, é um bug em produção.
+
 ---
 
 ## Por que não há prints
