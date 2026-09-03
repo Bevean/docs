@@ -461,6 +461,31 @@ preserva o endereço: ele lista os caminhos antigos da página. Não dá para
 pré-registrar — o alias aponta do caminho antigo para o atual, então só existe
 depois da mudança.
 
+**A ajuda embutida da tela já é conteúdo pronto.** Texto de apoio de campo,
+placeholder, descrição de opção e tooltip de indicador de relatório foram escritos
+para o usuário final, e conferem por construção. Traduza a voz e corte o que só
+serve dentro do formulário; não reescreva do zero o que a tela já explica bem.
+
+**Faixa de validação vira tabela "campo × faixa aceita".** Onde o botão de salvar
+apenas desabilita, sem dizer o motivo, a pessoa fica presa sem ter o que pesquisar.
+A tabela sai da condição que habilita o botão, e costuma ser a informação mais
+valiosa de um artigo de configuração.
+
+**Lista de plataformas suportadas sai do código da integração**, nunca da memória
+nem do material de venda. No Cashback, quais lojas permitem gerar o cupom do resgate
+está nas capacidades declaradas por cada integração — e uma delas tem a capacidade
+marcada como pendente no próprio código, o que a mantém fora da lista.
+
+**Referência a outro artigo dentro de célula de tabela também é `docLink`.** Citar
+o título em texto puro numa célula deixa o leitor no meio de um diagnóstico sem
+saída — e é fácil de deixar passar, porque a frase parece completa.
+
+**Rótulo traduzido não prova que o estado existe.** A lista de tipos de lançamento
+do Cashback oferece um "Expiração" que nada no produto chega a criar: o rótulo está
+no `pt.json`, o valor está no enum, e nenhum código o produz. Antes de virar linha
+de tabela, confirme que existe código criando aquele estado — enum e tradução
+sobrevivem a mudanças que apagaram o comportamento.
+
 ---
 
 ## Por que não há prints
@@ -520,6 +545,25 @@ Antes de escrever do zero, procure a fonte nos repositórios irmãos:
 
 Rótulo de tela **sempre** vem do `pt.json` do módulo, nunca da memória.
 
+### Quando não existe doc interna do assunto
+
+Foi o caso de Cashback: nenhum `.md`, só o produto. A receita que funcionou, nessa
+ordem — cada camada responde uma pergunta diferente, e nenhuma responde as três:
+
+1. **`locales/pt.json` do módulo** → os rótulos, os textos de ajuda dos campos, as
+   mensagens de erro e de sucesso. É o material mais bem escrito que existe, porque
+   já foi redigido para o usuário final por quem construiu a tela.
+2. **O componente da tela** (`components/*.tsx`) → as regras da interface: o que
+   desabilita o botão de salvar, o que só aparece em certa condição, os valores
+   padrão dos campos.
+3. **O serviço no backend** → o comportamento que a tela não mostra: o que dispara,
+   o que é ignorado, o que acontece no cancelamento, em que ordem as coisas saem.
+
+O rótulo de menu é a exceção: ele vem do `sidebar-main-data.tsx` e do `pt.json` do
+sidebar, **nunca** de uma frase escrita dentro de outro módulo. Uma mensagem do
+editor de automações manda "configure em Créditos › Cashback", e esse menu não
+existe — o caminho real é Ferramentas › Cashback.
+
 ---
 
 ## Erros do build e o que fazer
@@ -540,6 +584,13 @@ Rótulo de tela **sempre** vem do `pt.json` do módulo, nunca da memória.
 | `L008` (aviso) | Artigo longo sem heading | Adicione headings; sem eles o sumário fica vazio |
 | `L009` (aviso) | Nome interno no texto do artigo | Troque pelo nome que aparece na tela, ou corte. Blocos de código não são checados |
 | `R012` | Nome de ícone desconhecido | Use um dos registrados, ou registre o novo em `src/app/content-icons.ts` |
+
+Além do validador, `pnpm build` roda o `check:bundle`:
+
+| Falha | O que significa | O que fazer |
+|---|---|---|
+| `JS em … KB gzip, acima do orçamento` | O corpo dos artigos ainda entra no bundle inicial, então a biblioteca crescer empurra esse número | **Não corte conteúdo para caber.** É hora de carregar o artigo sob demanda, em `src/content/content-repository.ts` — a decisão está comentada lá. Avise o usuário e pare |
+| `zod vazou para o bundle` | Algum `import` de schema em `src/` deixou de ser `import type` | Corrija o import; nunca relaxe a checagem |
 
 ---
 
