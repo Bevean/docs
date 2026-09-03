@@ -510,6 +510,12 @@ só o caminho que você confirmou que funciona (aqui, remover e conectar de novo
 avise o usuário do achado separadamente da tarefa de documentação — não é uma
 decisão de conteúdo, é um bug em produção.
 
+**O rótulo do mesmo botão pode mudar conforme o estado anterior da tela.** No
+WhatsApp Web, o botão que reconecta um número mostra "Conectar" ou "Reconectar"
+dependendo de uma checagem de status ter rodado antes — os dois chamam exatamente o
+mesmo handler. Descreva a ação ("clique no botão de conectar ao lado do número"), não
+garanta um texto fixo que só aparece em parte dos casos.
+
 ---
 
 ## Por que não há prints
