@@ -312,6 +312,10 @@
       "type": "linkCards",
       "items": [
         {
+          "ref": "configuracoes/dominios/adicionar-registros-por-provedor",
+          "description": "O caminho exato dentro do painel da Cloudflare, Registro.br, Locaweb e outros seis provedores."
+        },
+        {
           "ref": "configuracoes/dominios/resolver-problemas",
           "description": "O domínio não verifica, ou o e-mail continua saindo pelo remetente da Bevean."
         }

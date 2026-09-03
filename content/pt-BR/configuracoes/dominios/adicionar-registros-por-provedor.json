@@ -1,0 +1,238 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Adicionar os registros no seu provedor",
+  "subtitle": "O caminho dentro do painel de cada provedor de DNS para colar os registros que a Bevean gerou — Cloudflare, Registro.br, Locaweb e outros.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "cloudflare",
+    "registro.br",
+    "locaweb",
+    "hostgator",
+    "kinghost",
+    "godaddy",
+    "uol host",
+    "umbler",
+    "dns"
+  ],
+  "related": [
+    "configuracoes/dominios/conectar-seu-dominio",
+    "configuracoes/dominios/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Este artigo pressupõe que você já gerou os registros na Bevean — se ainda não fez isso, veja "
+        },
+        {
+          "type": "text",
+          "text": "conectar seu domínio",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "configuracoes/dominios/conectar-seu-dominio"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " primeiro. Aqui é só o caminho dentro do painel de cada provedor para chegar até a tela onde eles são colados."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Tipo, Nome e Valor (às vezes chamado de Dados, Conteúdo ou Destino) — exatamente como a Bevean mostra. O registro de MX também tem um campo de Prioridade, que a tela da Bevean também informa."
+        }
+      ],
+      "title": "Todo provedor pede os mesmos três campos"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Cloudflare"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Selecione o domínio na conta da Cloudflare"
+        },
+        {
+          "title": "Abra DNS › Configurações de DNS"
+        },
+        {
+          "title": "Clique em Adicionar registro, para cada registro da Bevean"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A Cloudflare oferece proxy (nuvem laranja) para qualquer registro. Os registros da Bevean precisam ficar sem proxy — nuvem cinza, \"DNS only\". Com o proxy ligado, a verificação não conclui."
+        }
+      ],
+      "title": "Deixe o status do registro em cinza (\"somente DNS\")"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "GoDaddy"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Acesse Meus Produtos › Domínios › Gerenciar DNS"
+        },
+        {
+          "title": "Clique em Adicionar"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "HostGator / cPanel"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "No Portal do Cliente, abra a aba Domínios e selecione o seu"
+        },
+        {
+          "title": "Clique em Configurar Domínio"
+        },
+        {
+          "title": "Abra Editar Zona Avançada de DNS e confirme"
+        },
+        {
+          "title": "Clique em Adicionar registro, para cada registro da Bevean"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "KingHost"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "No painel da KingHost, abra Gerenciar DNS"
+        },
+        {
+          "title": "Adicione um registro novo para cada um que a Bevean gerou"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Locaweb"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Na Central do Cliente, abra Meus Produtos › Registro de domínio"
+        },
+        {
+          "title": "Clique em Administrar, no nome do domínio"
+        },
+        {
+          "title": "Abra Consulte e altere zona de DNS"
+        },
+        {
+          "title": "Clique em Adicionar Entrada, para cada registro da Bevean"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Registro.br"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Em Domínios, selecione o domínio"
+        },
+        {
+          "title": "Abra DNS › Configurar zona de DNS"
+        },
+        {
+          "title": "Clique em Nova Entrada, para cada registro da Bevean"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "UOL Host"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "No painel, abra Domínios › Gerenciar DNS"
+        },
+        {
+          "title": "Clique em Adicionar Registro"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Umbler"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Na barra lateral, clique no nome do domínio"
+        },
+        {
+          "title": "Abra a aba Editor de DNS"
+        },
+        {
+          "title": "Clique em + Adicionar, para cada registro da Bevean"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Seu provedor não está nesta lista?"
+    },
+    {
+      "type": "paragraph",
+      "content": "O princípio é sempre o mesmo: encontre a área de gerenciamento de DNS do seu domínio (geralmente chamada de \"Zona de DNS\", \"Editor de DNS\" ou \"Gerenciar DNS\") e adicione cada registro que a Bevean mostrou, com o mesmo Tipo, Nome e Valor."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/dominios/resolver-problemas",
+          "description": "O domínio ficou pendente mesmo depois de cadastrar os registros."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}
