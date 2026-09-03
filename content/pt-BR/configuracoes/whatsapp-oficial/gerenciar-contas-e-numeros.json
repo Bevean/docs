@@ -1,0 +1,277 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Gerenciar contas e números",
+  "subtitle": "Adicionar mais um número, conectar outra conta, e o que cada ação da lista — Atualizar, Registrar, Remover — realmente faz.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "adicionar número",
+    "adicionar conta",
+    "registrar",
+    "remover",
+    "verificar status"
+  ],
+  "related": [
+    "configuracoes/whatsapp-oficial/visao-geral",
+    "configuracoes/whatsapp-oficial/conectar-sua-conta",
+    "configuracoes/whatsapp-oficial/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Cada conta conectada aparece em um cartão, com a tabela de números embaixo. As ações do dia a dia — adicionar, verificar, remover — ficam ali mesmo, sem precisar sair da tela."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.whatsapp_official"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Adicionar mais um número"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No cartão da conta, o botão "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar telefone",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " abre a mesma janela da Meta usada na primeira conexão — só que já dentro da conta atual, então a Meta não pede para autorizar de novo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar uma conta diferente"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar conta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no topo da tela, começa do zero: outra autorização na Meta, para outra empresa ou outro Gerenciador de Negócios. Use isso quando o número novo não pertence à conta que você já tem conectada."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As ações de cada número"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Ação"
+        },
+        {
+          "content": "O que faz"
+        },
+        {
+          "content": "Quando usar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Atualizar"
+          },
+          {
+            "content": "Consulta a Meta de novo e atualiza o status na hora"
+          },
+          {
+            "content": "Para conferir se algo mudou sem esperar a Bevean checar sozinha"
+          }
+        ],
+        [
+          {
+            "content": "Registrar"
+          },
+          {
+            "content": "Repete o registro do número na Meta com o PIN de segurança que a Bevean define"
+          },
+          {
+            "content": "Depois de resolver um problema de vínculo — veja resolver problemas — para tentar de novo"
+          }
+        ],
+        [
+          {
+            "content": "Remover"
+          },
+          {
+            "content": "Desconecta esse número específico, sem mexer nos outros da mesma conta"
+          },
+          {
+            "content": "Quando um número não vai mais ser usado"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Em um número do tipo Coexistência, clicar em Registrar não muda nada — o registro dele é feito pelo próprio aplicativo do WhatsApp Business, não pela Bevean."
+        }
+      ],
+      "title": "Registrar só faz algo em números do tipo API"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Remover a conta inteira"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão "
+        },
+        {
+          "type": "text",
+          "text": "Remover",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no cabeçalho do cartão desconecta "
+        },
+        {
+          "type": "text",
+          "text": "todos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " os números daquela conta de uma vez — não é possível desfazer pela Bevean."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se você quiser conectar o mesmo número em outro lugar depois, pode ser necessário desvincular ele diretamente no Gerenciador de Negócios da Meta."
+        }
+      ],
+      "title": "Remover a conta não libera o número na Meta automaticamente"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Verificar status"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No menu de "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " do cartão, "
+        },
+        {
+          "type": "text",
+          "text": "Verificar status",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " aparece quando nenhum número da conta está conectado — é um atalho para checar todos de uma vez, em vez de um por um na tabela."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Preciso adicionar cada número em uma conta separada?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Números que pertencem à mesma empresa na Meta ficam juntos na mesma conta — use Adicionar telefone. Só use Adicionar conta para uma empresa diferente."
+            }
+          ]
+        },
+        {
+          "question": "Dá para mudar um número de tipo API para Coexistência?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Isso depende de ativar o aplicativo do WhatsApp Business com esse número pelo lado da Meta, não de uma configuração na Bevean. A Bevean só reflete o que a Meta informa."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

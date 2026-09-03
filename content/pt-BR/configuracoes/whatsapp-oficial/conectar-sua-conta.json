@@ -1,0 +1,228 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar sua primeira conta",
+  "subtitle": "Da autorização na Meta até o número aparecer Conectado — e o que fazer quando a Meta não devolve o número automaticamente.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "conectar whatsapp",
+    "meta",
+    "autorizar",
+    "número",
+    "onboarding"
+  ],
+  "related": [
+    "configuracoes/whatsapp-oficial/visao-geral",
+    "configuracoes/whatsapp-oficial/gerenciar-contas-e-numeros",
+    "configuracoes/whatsapp-oficial/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é um número aparecendo com o status "
+        },
+        {
+          "type": "text",
+          "text": "Conectado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na tela — pronto para enviar e receber mensagens pela Bevean."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.whatsapp_official"
+          }
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "É lá que fica a conta do WhatsApp Business que você vai autorizar. Se você nunca configurou o WhatsApp Business API antes, é a Meta que vai pedir os dados da empresa durante o processo — a Bevean só recebe o resultado."
+        }
+      ],
+      "title": "Tenha em mãos o acesso ao Gerenciador de Negócios da Meta"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Conectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Sem nenhuma conta ainda, esse é o único botão na tela."
+            }
+          ]
+        },
+        {
+          "title": "Autorize a Bevean na janela da Meta",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Abre uma janela da própria Meta, por cima da Bevean. Faça login na conta certa se tiver mais de uma."
+            }
+          ]
+        },
+        {
+          "title": "Escolha a conta e o número do WhatsApp Business",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Meta mostra as contas e os números disponíveis para você escolher dentro da janela dela."
+            }
+          ]
+        },
+        {
+          "title": "Aguarde a Bevean confirmar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A janela fecha sozinha e o número aparece na lista, normalmente já como "
+                },
+                {
+                  "type": "text",
+                  "text": "Conectado",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando a Meta não devolve o número escolhido"
+    },
+    {
+      "type": "paragraph",
+      "content": "Às vezes a autorização conclui mas a Meta não informa qual número foi escolhido. Nesse caso a Bevean mostra uma segunda etapa:"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Uma lista com os números da conta autorizada aparece para você escolher manualmente. É o mesmo resultado — só um passo a mais."
+        }
+      ],
+      "title": "Selecione o número do WhatsApp"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que acontece logo depois de conectar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Se o número for do tipo API (sem uso simultâneo no aplicativo do WhatsApp Business), a Bevean tenta registrá-lo na Meta automaticamente, com um PIN de segurança que ela mesma define. Números do tipo Coexistência pulam essa etapa — o registro deles já está feito pelo próprio aplicativo."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se o número já estiver vinculado a outra empresa ou a outra plataforma, é aqui que isso é detectado. Veja como resolver em "
+            },
+            {
+              "type": "text",
+              "text": "número desconectado ou com erro",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "configuracoes/whatsapp-oficial/resolver-problemas"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "É nesse registro automático que os dois erros mais comuns aparecem"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Próxima conta ou próximo número"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para adicionar mais um número dentro da mesma conta já conectada, ou para conectar uma conta diferente, veja "
+        },
+        {
+          "type": "text",
+          "text": "gerenciar contas e números",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "configuracoes/whatsapp-oficial/gerenciar-contas-e-numeros"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

@@ -11,6 +11,7 @@ import {
   MessageCircle,
   Plug,
   Settings,
+  Smartphone,
   Users,
   Workflow,
   Wrench,
@@ -35,6 +36,7 @@ export const CONTENT_ICONS: Record<string, LucideIcon> = {
   'message-circle': MessageCircle,
   plug: Plug,
   settings: Settings,
+  smartphone: Smartphone,
   users: Users,
   workflow: Workflow,
   wrench: Wrench

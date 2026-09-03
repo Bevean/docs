@@ -4,7 +4,8 @@
   "description": "Conecte canais, configure domínios e ajuste o que a plataforma faz por você.",
   "icon": "settings",
   "sections": [
-    "dominios"
+    "dominios",
+    "whatsapp-oficial"
   ],
   "articles": []
 }

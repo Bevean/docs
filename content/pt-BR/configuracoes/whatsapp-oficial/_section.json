@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "WhatsApp Oficial",
+  "description": "Conecte a API oficial do WhatsApp Business para atender pelo canal mais usado pelos seus clientes.",
+  "icon": "smartphone",
+  "articles": [
+    "visao-geral",
+    "conectar-sua-conta",
+    "gerenciar-contas-e-numeros",
+    "resolver-problemas"
+  ]
+}

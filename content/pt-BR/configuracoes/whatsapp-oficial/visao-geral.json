@@ -1,0 +1,265 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o WhatsApp Oficial",
+  "subtitle": "A conta e os números que ela agrupa, a diferença entre API e Coexistência, e o que qualidade e limite de mensagens significam.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "whatsapp oficial",
+    "api",
+    "coexistência",
+    "meta",
+    "qualidade",
+    "limite de mensagens"
+  ],
+  "related": [
+    "configuracoes/whatsapp-oficial/conectar-sua-conta",
+    "configuracoes/whatsapp-oficial/gerenciar-contas-e-numeros",
+    "configuracoes/whatsapp-oficial/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O WhatsApp Oficial conecta a API do WhatsApp Business à Bevean, direto pela Meta — sem QR code e sem depender do aplicativo aberto no celular. É o canal recomendado para quem atende em volume ou tem mais de uma pessoa respondendo."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.whatsapp_official"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conta e números: dois níveis"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Nível"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Conta"
+          },
+          {
+            "content": "A conta do WhatsApp Business na Meta. Uma autorização, um token — mas pode ter vários números dentro"
+          }
+        ],
+        [
+          {
+            "content": "Número"
+          },
+          {
+            "content": "Um número de telefone específico, com o próprio status, qualidade e limite de mensagens"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Adicionar um número novo à mesma conta não pede autorização de novo — só adicionar um número dentro dela. Conectar uma conta diferente (outra empresa, outro Gerenciador de Negócios da Meta) é que exige autorizar de novo."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "API ou Coexistência — você não escolhe, a Bevean detecta"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um número aparece com um desses dois tipos, e a diferença é se ele também está sendo usado no aplicativo do WhatsApp Business no celular:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Quando aparece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "API"
+          },
+          {
+            "content": "O número só existe pela API — ninguém usa o aplicativo do WhatsApp Business com ele"
+          }
+        ],
+        [
+          {
+            "content": "Coexistência"
+          },
+          {
+            "content": "O número está ativo tanto na API quanto no aplicativo do WhatsApp Business, ao mesmo tempo"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Não existe uma opção para escolher um tipo ou outro. A Bevean pergunta à Meta se aquele número está no aplicativo, e mostra o que a resposta for."
+        }
+      ],
+      "title": "Isso é constatado pela Meta, não configurado na Bevean"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Qualidade e limite de mensagens"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada número carrega dois indicadores que a Meta calcula, não a Bevean:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Indicador"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Qualidade"
+          },
+          {
+            "content": "Boa, Não disponível, ou Desconhecido — reflete quantos clientes bloqueiam ou denunciam as suas mensagens"
+          }
+        ],
+        [
+          {
+            "content": "Limite de mensagens"
+          },
+          {
+            "content": "Quantas conversas o número pode iniciar em 24 horas. Sobe conforme o volume e a qualidade se mantêm boas"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Aparece tanto quando a Meta ainda não determinou o limite quanto quando a conta já tem envio sem limite definido — os dois casos mostram o mesmo texto."
+        }
+      ],
+      "title": "\"Não informado\" no limite não é sempre um problema"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os status de um número"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Conectado"
+          },
+          {
+            "content": "Funcionando — a Bevean consegue enviar e receber por esse número"
+          }
+        ],
+        [
+          {
+            "content": "Pendente"
+          },
+          {
+            "content": "A conexão está em andamento ou aguardando confirmação da Meta"
+          }
+        ],
+        [
+          {
+            "content": "Falhou"
+          },
+          {
+            "content": "A última tentativa de registrar o número na Meta não deu certo"
+          }
+        ],
+        [
+          {
+            "content": "Desconectado"
+          },
+          {
+            "content": "O número não está mais autorizado. Veja o número desconectado ou com erro"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que essa tela não faz"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Não mostra nem edita os modelos de mensagem (templates) aprovados pela Meta — isso fica em outra área da plataforma."
+        },
+        {
+          "content": "Não configura se o nome do usuário aparece na mensagem, nem o assistente de IA do canal — essas opções ficam na configuração do atendimento, não aqui."
+        },
+        {
+          "content": "Não substitui o WhatsApp Web como canal — são dois canais diferentes, cada um com a própria tela de conexão."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/whatsapp-oficial/conectar-sua-conta",
+          "description": "Autorizar a Meta e conectar o primeiro número."
+        },
+        {
+          "ref": "configuracoes/whatsapp-oficial/gerenciar-contas-e-numeros",
+          "description": "Adicionar mais números, verificar status, remover."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Número desconectado ou com erro",
+  "subtitle": "Roteiros para quando o número aparece Desconectado ou Falhou, quando surge um aviso de vínculo com outra empresa, e o que qualidade e limite realmente indicam.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "desconectado",
+    "falhou",
+    "vinculado a outra empresa",
+    "reconectar",
+    "erro"
+  ],
+  "related": [
+    "configuracoes/whatsapp-oficial/visao-geral",
+    "configuracoes/whatsapp-oficial/conectar-sua-conta",
+    "configuracoes/whatsapp-oficial/gerenciar-contas-e-numeros"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A maioria dos casos cai em três situações: o número aparece Desconectado ou Falhou, aparece um aviso de vínculo com outra empresa ou plataforma, ou algum indicador (qualidade, limite) mostra algo que parece errado mas não é."
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Conectado é o único status em que o canal está de fato ativo. Pendente, Falhou e Desconectado precisam de ação — a diferença entre eles está nas linhas abaixo."
+        }
+      ],
+      "title": "Antes de investigar, confirme o status na tabela de números"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O número está Desconectado"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "Você já tentou Reconectar e autorizou de novo na Meta?"
+          },
+          {
+            "content": "Se depois disso o status continuar Desconectado, remova o número (menu de ações › Remover) e conecte-o de novo em Adicionar telefone ou Adicionar conta — é o caminho que resolve quando reconectar não muda o status"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "O número foi desvinculado ou removido diretamente no Gerenciador de Negócios da Meta?"
+          },
+          {
+            "content": "Precisa ser conectado de novo pela Bevean; a Bevean não detecta essa mudança sozinha até você tentar usar o número"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "É um número do tipo Coexistência e o aplicativo do WhatsApp Business foi desconectado no celular?"
+          },
+          {
+            "content": "Isso também desconecta o lado da API. Reative o aplicativo no celular primeiro"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Apareceu um aviso de número vinculado a outra empresa ou plataforma"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aviso"
+        },
+        {
+          "content": "O que significa"
+        },
+        {
+          "content": "Como resolver"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Número vinculado a outra empresa"
+          },
+          {
+            "content": "Esse número já está associado a outra conta do WhatsApp Business API — não dá para usá-lo em duas ao mesmo tempo"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Desvincule o número da empresa anterior direto no Gerenciador de Negócios da Meta — a própria Meta explica "
+              },
+              {
+                "type": "text",
+                "text": "como fazer isso",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "https://faq.whatsapp.com/3347469605523961/?locale=pt_BR"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Depois, volte à Bevean e clique em "
+              },
+              {
+                "type": "text",
+                "text": "Registrar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Número vinculado a outra plataforma"
+          },
+          {
+            "content": "O número está conectado em outra ferramenta de atendimento (não é a Meta que aparece aqui, é outro sistema por fora)"
+          },
+          {
+            "content": "Remova o número do WhatsApp Business nessa outra plataforma primeiro, depois clique em Registrar na Bevean"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Aparecem no momento em que a Bevean tenta registrar o número na Meta — algo que só se aplica ao tipo API. Um número Coexistência não passa por esse registro."
+        }
+      ],
+      "title": "Esses dois avisos só acontecem em números do tipo API"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Qualidade aparece Desconhecido"
+    },
+    {
+      "type": "paragraph",
+      "content": "Não significa necessariamente qualidade ruim. Acontece em três situações: o número é novo e a Meta ainda não avaliou; a consulta à Meta falhou no momento em que a tela carregou; ou a qualidade genuinamente não está disponível para esse número."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Limite de mensagens aparece Não informado"
+    },
+    {
+      "type": "paragraph",
+      "content": "O mesmo texto cobre dois casos bem diferentes: a Meta ainda não determinou um limite, ou a conta já tem envio sem limite definido. Não dá para saber qual dos dois só olhando o texto."
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "O número está com o status Falhou. É a mesma coisa que Desconectado?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Falhou quer dizer que a última tentativa de registrar o número deu errado — geralmente por um dos dois avisos de vínculo acima. Desconectado é o número não ter mais autorização válida com a Meta."
+            }
+          ]
+        },
+        {
+          "question": "Removi um número por engano. Dá para recuperar?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não pelo painel — é preciso conectar de novo, do zero, em Adicionar telefone ou Adicionar conta. Os dados de atendimento anteriores (conversas) não se perdem, mas a conexão com a Meta precisa ser refeita."
+            }
+          ]
+        },
+        {
+          "question": "Onde configuro se o nome do usuário aparece nas mensagens, ou o assistente de IA?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não é nesta tela. Essas opções ficam na configuração do atendimento, não na conexão do canal."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
