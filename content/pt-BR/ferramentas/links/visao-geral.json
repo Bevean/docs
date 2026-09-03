@@ -218,6 +218,47 @@
     {
       "type": "heading",
       "level": 2,
+      "content": "De que domínio sai o link curto"
+    },
+    {
+      "type": "paragraph",
+      "content": "Por padrão, o link sai com o domínio compartilhado da Bevean. Se você conectar o seu próprio domínio, os links criados a partir daí passam a sair com o seu endereço — mas os que já existiam continuam com o domínio antigo, sem conversão."
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Automações e campanhas que geram link (como o link de resgate do cashback) seguem a mesma regra. Veja "
+            },
+            {
+              "type": "text",
+              "text": "como funciona o domínio próprio",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "configuracoes/dominios/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Isso vale para todos os links curtos, não só os criados aqui"
+    },
+    {
+      "type": "heading",
+      "level": 2,
       "content": "Além dos links: anúncios da Meta"
     },
     {
