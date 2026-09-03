@@ -35,6 +35,11 @@ pnpm type-check && pnpm lint
 
 ## Regras que não se negociam
 
+- **Nunca invente conteúdo.** Só escreva o que foi confirmado no produto: rótulo,
+  mensagem de erro e limite se verificam no código. Sem confirmação, deixe a
+  lacuna e avise — não preencha com o que parece fazer sentido.
+- **É documentação para quem usa a plataforma**, não para dev nem para o suporte.
+  Se o leitor não pode fazer nada com a informação, ela não entra.
 - Conteúdo inválido não vira site. Não relaxe o schema nem desative regra do
   validador para fazer um artigo passar.
 - `zod` é build-only: em `src/`, só `import type`.

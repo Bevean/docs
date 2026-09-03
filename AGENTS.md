@@ -6,6 +6,69 @@
 > Para editar o **código** do site (blocos, renderer, build), veja a seção
 > [Mexer no motor](#mexer-no-motor) no final.
 
+## As duas regras acima de todas
+
+O validador cuida da forma. Estas duas cuidam do conteúdo, e nenhuma máquina
+consegue verificá-las por você.
+
+### 1. Nunca invente
+
+**Só escreva o que você confirmou no produto.** Rótulo de botão, mensagem de erro,
+limite numérico, nome de campo, ordem dos passos — tudo isso se verifica, e tudo
+isso é tentador de preencher com o que "faz sentido".
+
+Um artigo que manda clicar num botão que não existe é pior que artigo nenhum:
+gera exatamente o ticket que a documentação existia para evitar, e queima a
+confiança em todo o resto da central.
+
+Onde confirmar cada coisa:
+
+| O que | Onde está a verdade |
+|---|---|
+| Rótulo de tela, texto de botão, nome de menu | O `pt.json` do módulo em `admin-front`, nunca a memória |
+| Mensagem de erro | O código que a emite, escrita literalmente |
+| Limite, faixa, quantidade máxima | A validação no código, não o que parece razoável |
+| Comportamento em caso de borda | O código do fluxo, ou a doc interna de suporte |
+
+**Quando não der para confirmar, não escreva.** Deixe a lacuna e diga na resposta
+ao usuário o que ficou de fora e por quê. Nunca deixe um marcador de dúvida dentro
+do artigo — o que está em `content/` é publicado.
+
+As três coisas que mais se inventa sem perceber: um limite ("até 10 itens"), um
+rótulo aproximado ("clique em Salvar" quando o botão diz "Salvar alterações"), e um
+passo intermediário que parece óbvio mas não existe na tela.
+
+### 2. Escreva para quem usa, não para quem construiu
+
+Quem lê opera uma loja. Não tem acesso ao código, ao banco nem ao painel interno,
+e não quer saber como o produto funciona por dentro — quer resolver o que veio
+fazer.
+
+O teste é sempre o mesmo: **se o leitor não pode fazer nada com essa informação,
+corte.**
+
+Note que isso não é "evite conteúdo técnico". O seletor CSS do disparo por clique
+e a tag `<div data-bevean-form>` são técnicos e precisam estar no artigo — a pessoa
+digita aquilo. O que sai é o técnico que ela não pode acionar.
+
+| Fica | Sai |
+|---|---|
+| A tag que a pessoa cola no tema da loja | O nome da tabela onde o formulário é gravado |
+| "Fatias sem cupom são descartadas" | O nome do serviço que faz o descarte |
+| "Limpe os dados do site para testar de novo" | O nome da chave em `localStorage` |
+| O nome exato do campo na tela | O nome da propriedade no banco (`customer.emailOptinStatus`) |
+| "Só WhatsApp Oficial recebe esse dado" | Como o webhook da Meta é processado |
+
+O mesmo vale para a voz: a doc interna fala *sobre* o cliente, para o time de
+suporte. O artigo fala *com* o cliente. Some com "erro comum de cliente", "o
+suporte deve" e as seções de escalar ticket.
+
+**Explique o "porquê" quando ele muda o que a pessoa faz.** "O sorteio é por
+e-mail para impedir que a pessoa gire até ganhar o melhor prêmio" evita um ticket.
+"O sorteio usa um hash do e-mail" não evita nada.
+
+---
+
 ## A regra de ouro
 
 Conteúdo aqui é **dado validado**, não texto livre. O build recusa JSON inválido,
@@ -284,12 +347,11 @@ O leitor é quem opera o CRM, não quem o construiu.
 3. **Escreva os rótulos exatos da interface.** Se o botão diz "Conectar com Meta",
    não escreva "clique em conectar à Meta". A pessoa está procurando na tela.
 4. **Prefira a tabela ao parágrafo** quando a informação for matriz.
-5. **Não invente comportamento.** Se não confirmou no código ou na tela, não
-   escreva. Deixe a lacuna explícita para quem revisar.
-6. **Não documente o que não existe.** Recurso em roadmap não entra.
-7. **Português direto.** Evite "simplesmente", "apenas", "basta" — o que é óbvio
+5. **Não documente o que não existe.** Recurso em roadmap não entra — veja
+   [as duas regras acima de todas](#as-duas-regras-acima-de-todas).
+6. **Português direto.** Evite "simplesmente", "apenas", "basta" — o que é óbvio
    para quem escreveu raramente é para quem lê.
-8. **Um artigo, uma tarefa.** Se o título precisa de "e", provavelmente são dois.
+7. **Um artigo, uma tarefa.** Se o título precisa de "e", provavelmente são dois.
 
 A estrutura recomendada por tipo de artigo está em
 [Anatomia de um artigo](#anatomia-de-um-artigo).
@@ -347,16 +409,6 @@ produto. "Quando o pop-up aparece" é um artigo; "Aba Comportamento" não é.
 
 > Lista viva. Ao escrever um artigo novo e descobrir uma regra que valeria para
 > os próximos, acrescente aqui.
-
-**Traduza a voz da fonte.** A documentação interna fala *sobre* o cliente, para o
-time de suporte. O artigo fala *com* o cliente. Some com "erro comum de cliente",
-"o suporte deve", "ao escalar um ticket" e com as seções de referência técnica
-para atendimento.
-
-**Não migre nomes internos.** `customer.emailOptinStatus`, nome de tabela, chave
-de `localStorage`, rota de API — nada disso ajuda quem opera a loja. A exceção é
-quando a chave é acionável para o leitor (limpar o armazenamento para testar de
-novo), e aí ela vira instrução, não referência.
 
 **Título de callout é uma frase com a conclusão**, não um rótulo. "Várias regras
 se somam, não se alternam" ensina; "Atenção" não ensina nada.
