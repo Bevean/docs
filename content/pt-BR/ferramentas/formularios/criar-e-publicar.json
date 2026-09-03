@@ -212,13 +212,52 @@
       "content": "A tela do editor"
     },
     {
-      "type": "image",
-      "src": "./assets/editor.png",
-      "alt": "Editor de formulário com a barra superior, o canvas central mostrando o formulário sobre a página de referência, e a doca de abas na parte inferior",
-      "width": 1271,
-      "height": 907,
-      "caption": "A barra superior concentra status, etapas, preview por dispositivo e as ações de salvar e publicar.",
-      "capturedAt": "2026-08-03"
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tela do editor tem três regiões. A "
+        },
+        {
+          "type": "text",
+          "text": "barra superior",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " concentra o nome, o status, o navegador de etapas, o preview por dispositivo e as ações de salvar e publicar. O "
+        },
+        {
+          "type": "text",
+          "text": "canvas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no centro mostra o formulário sobre uma página de referência. A "
+        },
+        {
+          "type": "text",
+          "text": "doca de abas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na parte de baixo abre os painéis de configuração."
+        }
+      ]
     },
     {
       "type": "paragraph",

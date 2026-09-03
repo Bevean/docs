@@ -58,13 +58,26 @@
       ]
     },
     {
-      "type": "image",
-      "src": "./assets/listagem.png",
-      "alt": "Listagem de formulários no painel, mostrando nome, status, data de atualização e os ícones de ação de cada linha",
-      "width": 1271,
-      "height": 907,
-      "caption": "A listagem mostra a versão mais recente de cada formulário, com busca por nome e filtro por status.",
-      "capturedAt": "2026-08-03"
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A listagem mostra a "
+        },
+        {
+          "type": "text",
+          "text": "versão mais recente",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " de cada formulário, com busca por nome e filtro por status. As ações de editar, pausar, retomar e arquivar ficam nos ícones à direita de cada linha."
+        }
+      ]
     },
     {
       "type": "heading",
@@ -272,15 +285,6 @@
     {
       "type": "paragraph",
       "content": "Você escolhe o tipo ao criar, e a escolha muda quais opções existem depois no editor."
-    },
-    {
-      "type": "image",
-      "src": "./assets/criar-formulario.png",
-      "alt": "Seletor com os dois tipos de formulário disponíveis ao criar: Pop-up e Incorporado",
-      "width": 1271,
-      "height": 907,
-      "caption": "Pop-up aparece sobre a página; incorporado entra em uma região dela.",
-      "capturedAt": "2026-08-03"
     },
     {
       "type": "table",

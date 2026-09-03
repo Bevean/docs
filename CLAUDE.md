@@ -39,6 +39,8 @@ pnpm type-check && pnpm lint
   validador para fazer um artigo passar.
 - `zod` é build-only: em `src/`, só `import type`.
 - Emoji não é estrutura: aviso é `callout`, passo numerado é `steps`.
+- Sem capturas de tela nesta fase. O motivo e a condição de revisão estão no
+  `AGENTS.md`.
 - Nada é commitado sem pedido explícito.
 
 ## Estrutura

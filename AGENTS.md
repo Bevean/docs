@@ -194,6 +194,11 @@ A numeração vem do CSS. **Nunca** escreva "1." no `title`.
 Um callout por ideia. Três callouts seguidos viram ruído e o leitor para de vê-los.
 
 ### `image`
+
+> **Nesta fase, não use.** A Central de Ajuda nasce sem capturas de tela — veja
+> [Por que não há prints](#por-que-não-há-prints). O bloco continua no schema
+> para quando essa decisão for revista.
+
 ```json
 { "type": "image", "src": "./assets/listagem.png",
   "alt": "Listagem de formulários com os selos de status",
@@ -382,6 +387,46 @@ sem nome não ajuda ninguém. Use o nome do eixo ("Característica").
 
 **Nomeie o artigo pela tarefa ou pela pergunta**, com as palavras do leitor. "O
 formulário não está funcionando" acha mais gente que "Solução de problemas".
+
+---
+
+## Por que não há prints
+
+Decisão do MVP: **nenhum artigo leva captura de tela.** A regra não tem exceção,
+de propósito — "só em alguns casos" exige julgamento de quem escreve, e quem
+escreve o próximo artigo pode ser outra pessoa ou outro agente.
+
+O que sustenta a decisão:
+
+- **Print é o conteúdo que envelhece mais rápido.** O painel muda toda semana; o
+  artigo, não. Uma captura de tela cheia ainda amarra o artigo ao menu lateral
+  inteiro — um item novo no menu invalida todas de uma vez.
+- **Tabela costuma dizer mais.** Nos quatro prints que a seção de Formulários
+  tinha, três eram cobertos por uma tabela logo abaixo. Tabela é mais precisa,
+  entra no índice de busca e não precisa ser refeita.
+- **O bloco `uiPath` já responde "onde fica"** em uma linha, e se atualiza pelo
+  `_ui-map.json` quando o menu do produto muda de nome.
+- **Captura de ambiente local mostra o que não deveria**: nomes de teste como
+  "Formulário sem nome2", itens de menu marcados "Em breve", módulos que o leitor
+  não contratou. Numa central pública, isso ensina errado.
+
+### Quando revisitar
+
+Quando as quatro condições abaixo estiverem resolvidas — não antes:
+
+1. Um **tenant de demonstração** com dados críveis (nomes, produtos e datas que
+   pareçam de uma loja de verdade), não seed de desenvolvimento.
+2. **Recorte da região** relevante em vez de tela cheia, para a imagem não
+   depender do resto do painel.
+3. Uma decisão sobre **tema**: a captura fica sempre em claro ou escuro, e o site
+   tem os dois.
+4. Um **dono da recaptura** — quem refaz as imagens quando a UI muda, e como
+   descobre quais artigos são afetados. O campo `capturedAt` e um relatório de
+   captura velha existem para isso.
+
+A perda conhecida dessa decisão: a visão geral de uma tela complexa, como o
+editor de formulários, é o único caso em que a imagem fazia trabalho que o texto
+não faz. Hoje isso é descrito em prosa, e é uma descrição pior que a imagem.
 
 ---
 

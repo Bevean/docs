@@ -38,15 +38,6 @@
       ]
     },
     {
-      "type": "image",
-      "src": "./assets/aba-conteudo.png",
-      "alt": "Aba Conteúdo do editor, com os blocos de conteúdo no topo e a lista de campos de perfil abaixo",
-      "width": 1271,
-      "height": 907,
-      "caption": "Campos já usados aparecem marcados como Adicionado e não podem entrar duas vezes.",
-      "capturedAt": "2026-08-03"
-    },
-    {
       "type": "heading",
       "level": 2,
       "content": "Blocos de conteúdo"
