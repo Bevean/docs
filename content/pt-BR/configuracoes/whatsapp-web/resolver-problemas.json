@@ -160,6 +160,15 @@
       ]
     },
     {
+      "type": "heading",
+      "level": 2,
+      "content": "Antes de excluir um número"
+    },
+    {
+      "type": "paragraph",
+      "content": "A tela mostra os fluxos e as comunicações vinculados a esse número antes de confirmar a exclusão — vale conferir essa lista, porque uma automação ou campanha que dependia dele pode parar de funcionar até outro canal ser configurado no lugar."
+    },
+    {
       "type": "faq",
       "items": [
         {

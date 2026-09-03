@@ -140,7 +140,7 @@
             "content": "Remover"
           },
           {
-            "content": "Desconecta esse número específico, sem mexer nos outros da mesma conta"
+            "content": "Mostra os fluxos e comunicações vinculados a esse número antes de confirmar, e desconecta só ele, sem mexer nos outros da mesma conta"
           },
           {
             "content": "Quando um número não vai mais ser usado"
@@ -209,6 +209,17 @@
         }
       ],
       "title": "Remover a conta não libera o número na Meta automaticamente"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A confirmação aqui é só \"tem certeza?\" — sem a lista de fluxos e comunicações que aparece ao remover um número específico. Se quiser revisar os vínculos antes, remova os números um a um em vez de usar este botão."
+        }
+      ],
+      "title": "Diferente de remover um número, remover a conta inteira não mostra o que está vinculado antes"
     },
     {
       "type": "heading",
