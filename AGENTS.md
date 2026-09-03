@@ -516,6 +516,20 @@ dependendo de uma checagem de status ter rodado antes — os dois chamam exatame
 mesmo handler. Descreva a ação ("clique no botão de conectar ao lado do número"), não
 garanta um texto fixo que só aparece em parte dos casos.
 
+**Duas ações que parecem a mesma coisa podem ter caminhos diferentes no código.**
+No WhatsApp Oficial, "remover a conta inteira" e "remover um número" chamam rotas
+diferentes — só a segunda mostra os fluxos e comunicações vinculados antes de
+confirmar. Quando a tela tem mais de um botão para o que parece a mesma ação
+(excluir, remover, desconectar), confira CADA um no código antes de descrever os
+dois como equivalentes.
+
+**Quando o artigo de destino ainda não existe, escreva o texto plano e volte
+depois.** Aconteceu duas vezes: Links citando Domínios antes de Domínios existir, e
+Domínios citando o canal de E-mail antes dele existir. Nos dois casos o texto ficou
+sem `docLink` (que quebraria o build) até o artigo nascer — e a volta para converter
+em link, quando a seção seguinte foi escrita, é o que fecha o ciclo. Ao escrever uma
+seção nova, vale checar se algum artigo anterior já a menciona em texto plano.
+
 ---
 
 ## Por que não há prints
