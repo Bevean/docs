@@ -174,7 +174,10 @@
               "text": "E-mail para atendimento",
               "marks": [
                 {
-                  "type": "bold"
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "configuracoes/email/configurar-email-de-atendimento"
+                  }
                 }
               ]
             },
@@ -208,7 +211,10 @@
               "text": "E-mail para envio",
               "marks": [
                 {
-                  "type": "bold"
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "configuracoes/email/configurar-email-de-envio"
+                  }
                 }
               ]
             },
