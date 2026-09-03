@@ -94,5 +94,13 @@
       "WhatsApp Oficial"
     ],
     "href": "/settings/channels/whatsapp-official"
+  },
+  "settings.channels.whatsapp_web": {
+    "segments": [
+      "Configurações",
+      "Canais",
+      "WhatsApp Web"
+    ],
+    "href": "/settings/channels/whatsapp-web"
   }
 }

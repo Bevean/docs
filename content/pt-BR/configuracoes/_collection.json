@@ -5,7 +5,8 @@
   "icon": "settings",
   "sections": [
     "dominios",
-    "whatsapp-oficial"
+    "whatsapp-oficial",
+    "whatsapp-web"
   ],
   "articles": []
 }

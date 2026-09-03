@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "WhatsApp Web",
+  "description": "Conecte o WhatsApp do seu celular escaneando um QR code, sem precisar da API oficial da Meta.",
+  "icon": "qr-code",
+  "articles": [
+    "visao-geral",
+    "conectar-um-numero",
+    "resolver-problemas"
+  ]
+}

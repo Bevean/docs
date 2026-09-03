@@ -1,0 +1,266 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o WhatsApp Web",
+  "subtitle": "Cada número conectado vira um canal próprio, sem agrupamento por conta. Entenda os status e quando faz mais sentido que o WhatsApp Oficial.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "whatsapp web",
+    "qr code",
+    "número",
+    "duplicado",
+    "status"
+  ],
+  "related": [
+    "configuracoes/whatsapp-web/conectar-um-numero",
+    "configuracoes/whatsapp-web/resolver-problemas",
+    "configuracoes/whatsapp-oficial/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O WhatsApp Web conecta o WhatsApp do seu celular à Bevean escaneando um QR code — o mesmo gesto de abrir o WhatsApp Web num navegador, só que quem recebe as mensagens é a Bevean."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.whatsapp_web"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Um número, um canal"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada número conectado vira um canal separado, com o próprio status. Não existe agrupamento por conta como no WhatsApp Oficial — aqui é sempre número por número."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para conectar o primeiro número, o botão "
+        },
+        {
+          "type": "text",
+          "text": "Conectar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " já cria o canal e abre o QR code na hora. Para o segundo em diante, "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar número",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " pede um nome de uso interno antes de mostrar o QR code — é assim que você distingue os números na lista."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os status de um número"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Conectado"
+          },
+          {
+            "content": "Funcionando — a Bevean envia e recebe por esse número"
+          }
+        ],
+        [
+          {
+            "content": "Pendente"
+          },
+          {
+            "content": "O QR code foi gerado mas ainda não foi escaneado"
+          }
+        ],
+        [
+          {
+            "content": "Desconectado"
+          },
+          {
+            "content": "A sessão caiu. É preciso escanear o QR code de novo"
+          }
+        ],
+        [
+          {
+            "content": "Falha"
+          },
+          {
+            "content": "Algo deu errado ao tentar conectar"
+          }
+        ],
+        [
+          {
+            "content": "Duplicado"
+          },
+          {
+            "content": "Esse número já está conectado em outro canal da conta. Veja resolver problemas"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que essa tela não faz"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Não configura se o nome do usuário aparece na mensagem, nem o assistente de IA — essas opções ficam na configuração do atendimento, não aqui."
+        },
+        {
+          "content": "Não passa pela Meta nem pede aprovação de número — é por isso que a conexão é praticamente instantânea."
+        },
+        {
+          "content": "Não tem limite de mensagens por dia nem indicador de qualidade — esses dois existem só no WhatsApp Oficial."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando usar WhatsApp Web em vez de WhatsApp Oficial"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Característica"
+        },
+        {
+          "content": "WhatsApp Web"
+        },
+        {
+          "content": "WhatsApp Oficial"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Como conecta"
+          },
+          {
+            "content": "Escaneando um QR code no celular"
+          },
+          {
+            "content": "Autorizando a Meta"
+          }
+        ],
+        [
+          {
+            "content": "Depende de aprovação"
+          },
+          {
+            "content": "Não"
+          },
+          {
+            "content": "Às vezes — números novos podem entrar como pendentes de aprovação"
+          }
+        ],
+        [
+          {
+            "content": "Limite de mensagens"
+          },
+          {
+            "content": "Não existe"
+          },
+          {
+            "content": "Definido pela Meta, cresce com o volume e a qualidade"
+          }
+        ],
+        [
+          {
+            "content": "Indicador de qualidade"
+          },
+          {
+            "content": "Não existe"
+          },
+          {
+            "content": "Sim, calculado pela Meta"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Detalhes de conta, número e os dois indicadores estão em "
+        },
+        {
+          "type": "text",
+          "text": "como funciona o WhatsApp Oficial",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "configuracoes/whatsapp-oficial/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/whatsapp-web/conectar-um-numero",
+          "description": "Escanear o QR code e conectar o primeiro número."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

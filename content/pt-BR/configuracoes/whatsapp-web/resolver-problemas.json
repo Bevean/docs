@@ -1,0 +1,186 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Número desconectado, duplicado ou com falha",
+  "subtitle": "Roteiros para quando o número cai, aparece como Duplicado, o QR code não confirma, ou as mensagens param de chegar mesmo com o status Conectado.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "desconectado",
+    "duplicado",
+    "qr code não funciona",
+    "falha",
+    "reconectar"
+  ],
+  "related": [
+    "configuracoes/whatsapp-web/visao-geral",
+    "configuracoes/whatsapp-web/conectar-um-numero"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A maioria dos casos cai em quatro situações: o número desconectou, apareceu como Duplicado, o QR code não confirma, ou o número mostra Conectado mas as mensagens pararam de chegar."
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Conectado é o único status em que o canal está de fato ativo. Os outros — Pendente, Desconectado, Falha, Duplicado — precisam de uma ação diferente cada um."
+        }
+      ],
+      "title": "Antes de investigar, confirme o status na lista"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O número aparece Desconectado ou com Falha"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O celular com esse número ficou muito tempo sem internet, ou o WhatsApp foi desinstalado?"
+          },
+          {
+            "content": "A sessão cai quando o celular fica indisponível por tempo demais. Clique no botão de conectar ao lado do número e escaneie o QR code de novo"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "Alguém encerrou essa sessão pelo próprio celular (WhatsApp > Aparelhos conectados)?"
+          },
+          {
+            "content": "Mesma solução: o botão de conectar ao lado do número gera um QR code novo para escanear"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O status mudou para Falha logo depois de tentar conectar?"
+          },
+          {
+            "content": "Tente conectar de novo uma vez mais. Se continuar falhando, o número pode estar com alguma restrição do próprio WhatsApp — teste abrir o WhatsApp Web comum nesse número para confirmar se ele conecta por fora da Bevean"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Ao clicar no botão de conectar de um número que caiu, a Bevean descarta a sessão anterior e cria uma do zero. É por isso que sempre pede para escanear o QR code de novo, mesmo que a queda tenha sido rápida."
+        }
+      ],
+      "title": "Conectar de novo gera uma sessão nova — não é retomar a antiga"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O número aparece Duplicado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Esse status aparece quando o mesmo número de WhatsApp já está conectado em outro canal desta conta — geralmente porque alguém tentou conectar de novo em um canal separado, achando que era o primeiro."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Ela marca o mais novo como Duplicado e mantém o outro como estava. Remova o canal Duplicado — o número continua funcionando pelo canal original, sem precisar reconectar nada."
+        }
+      ],
+      "title": "A Bevean não escolhe qual dos dois manter"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O QR code não confirma depois de escanear"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Confira se o celular continua com internet até o fim da sincronização — fechar o WhatsApp ou perder conexão no meio do processo cancela a leitura."
+        },
+        {
+          "content": "Se a janela do QR code ficou aberta por muito tempo sem escanear, feche e clique em Conectar de novo para gerar um código atual."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O número mostra Conectado mas parou de receber mensagens"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Antes de qualquer outra coisa, use o "
+        },
+        {
+          "type": "text",
+          "text": "Atualizar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no menu de ações desse número. Quando o número já está Conectado, essa ação reinicia a sessão por trás — sem pedir QR code de novo — e costuma resolver quando a conexão ficou instável sem chegar a cair de vez."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Removi um número por engano. Dá para recuperar a conversa?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "O histórico de conversas não se perde, mas a conexão com o WhatsApp precisa ser refeita — conecte o mesmo número de novo em Adicionar número e escaneie o QR code."
+            }
+          ]
+        },
+        {
+          "question": "Posso usar o mesmo número no WhatsApp Web do navegador e na Bevean ao mesmo tempo?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "O WhatsApp permite várias sessões simultâneas no mesmo número (é a mesma tecnologia de \"Aparelhos conectados\"). O que não dá é conectar o mesmo número em dois canais diferentes dentro da Bevean — isso é o que gera o status Duplicado."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

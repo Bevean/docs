@@ -1,0 +1,172 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar um número",
+  "subtitle": "Do botão Conectar até o QR code escaneado — e como adicionar mais números depois do primeiro.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "conectar whatsapp",
+    "qr code",
+    "escanear",
+    "adicionar número"
+  ],
+  "related": [
+    "configuracoes/whatsapp-web/visao-geral",
+    "configuracoes/whatsapp-web/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é o número aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Conectado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista, pronto para enviar e receber pela Bevean."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.whatsapp_web"
+          }
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "É nele que você vai escanear o QR code — o mesmo celular onde o WhatsApp desse número está instalado."
+        }
+      ],
+      "title": "Tenha o celular com o número em mãos"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar o primeiro número"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Conectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Sem nenhum número ainda, esse é o único botão na tela. O QR code aparece na mesma hora."
+            }
+          ]
+        },
+        {
+          "title": "No celular, abra o WhatsApp e vá em Opções > Conectar ao computador",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "É a mesma tela que o WhatsApp usa para abrir sessões em outros aparelhos."
+            }
+          ]
+        },
+        {
+          "title": "Escaneie o QR code",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A tela na Bevean confirma sozinha, sem precisar clicar em nada — o status muda para Conectado assim que o celular termina de sincronizar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Adicionar mais números"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Com pelo menos um número já conectado, o botão muda para "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar número",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no topo da tela. Ele pede um nome de uso interno antes de mostrar o QR code — escolha algo que identifique esse número na lista, como o setor ou a pessoa responsável."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando o QR code expira"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique no botão "
+        },
+        {
+          "type": "text",
+          "text": "Conectar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ao lado desse número na lista, para gerar um QR code novo."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/whatsapp-web/resolver-problemas",
+          "description": "O número desconectou, duplicou, ou o QR code não confirma."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}
