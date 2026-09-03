@@ -1,4 +1,5 @@
 import {
+  BadgePercent,
   BarChart3,
   BookOpen,
   Building2,
@@ -21,6 +22,7 @@ import {
  * `content:check`, então o fallback aqui nunca deveria aparecer em produção.
  */
 export const CONTENT_ICONS: Record<string, LucideIcon> = {
+  'badge-percent': BadgePercent,
   'bar-chart-3': BarChart3,
   'book-open': BookOpen,
   'building-2': Building2,

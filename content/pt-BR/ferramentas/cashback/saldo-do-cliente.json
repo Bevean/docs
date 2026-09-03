@@ -1,0 +1,501 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Saldo, extrato e ajuste manual",
+  "subtitle": "Consulte o saldo de um cliente, entenda o que cada lançamento significa e credite ou debite valor à mão quando precisar.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "saldo",
+    "extrato",
+    "ajuste manual",
+    "creditar",
+    "debitar",
+    "lançamento"
+  ],
+  "related": [
+    "ferramentas/cashback/visao-geral",
+    "ferramentas/cashback/como-o-cliente-resgata",
+    "ferramentas/cashback/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Todo cliente tem um saldo e um extrato. Você consulta os dois no contato, e pode creditar ou debitar valor à mão quando precisar — uma cortesia por atraso, um acerto depois de uma troca."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.customers"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", abrindo o contato. O extrato completo da loja fica em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.cashback"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O card de cashback do contato"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "O que aparece"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Saldo disponível"
+          },
+          {
+            "content": "O que o cliente pode resgatar agora. Crédito em carência não entra nessa conta"
+          }
+        ],
+        [
+          {
+            "content": "Cupom de resgate"
+          },
+          {
+            "content": "O último resgate dele: o código, o valor e o que aconteceu depois"
+          }
+        ],
+        [
+          {
+            "content": "Gerou … em vendas"
+          },
+          {
+            "content": "O valor do pedido em que o cupom foi usado. É o retorno daquele resgate"
+          }
+        ],
+        [
+          {
+            "content": "Motivo da falha"
+          },
+          {
+            "content": "Aparece quando a plataforma da loja recusou a criação do benefício"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "O selo ao lado do código resume a situação do cupom:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Selo"
+        },
+        {
+          "content": "Situação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Disponível"
+          },
+          {
+            "content": "Gerado, dentro da validade e ainda não usado"
+          }
+        ],
+        [
+          {
+            "content": "Utilizado"
+          },
+          {
+            "content": "Já foi aplicado em um pedido"
+          }
+        ],
+        [
+          {
+            "content": "Expirado"
+          },
+          {
+            "content": "Passou da validade sem ser usado"
+          }
+        ],
+        [
+          {
+            "content": "Processando"
+          },
+          {
+            "content": "O resgate começou e ainda não terminou"
+          }
+        ],
+        [
+          {
+            "content": "Falhou"
+          },
+          {
+            "content": "Não foi possível criar o benefício. O saldo volta para o cliente"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ajustar o saldo à mão"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra o contato e clique em Ajustar saldo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O botão fica no card de cashback. Se ele não aparece para você, é permissão: o ajuste manual é liberado separadamente do resto do cashback. Peça a quem administra a conta."
+            }
+          ]
+        },
+        {
+          "title": "Escolha entre Creditar e Debitar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O diálogo mostra o saldo atual do cliente no topo, para você não precisar sair conferindo."
+            }
+          ]
+        },
+        {
+          "title": "Informe o valor e o Motivo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O motivo é obrigatório e fica registrado no extrato, visível para quem consultar depois. Escreva algo que outra pessoa entenda daqui a três meses."
+            }
+          ]
+        },
+        {
+          "title": "Se for crédito, decida a validade e o aviso",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Validade vazia significa que esse crédito nunca expira. A chave "
+                },
+                {
+                  "type": "text",
+                  "text": "Notificar cliente",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " decide se ele vai saber."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Confirme em Creditar ou Debitar"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Regra do ajuste"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Crédito manual não tem carência"
+          },
+          {
+            "content": "Ele fica disponível na hora, diferente do cashback de pedido"
+          }
+        ],
+        [
+          {
+            "content": "Débito não pode passar do saldo"
+          },
+          {
+            "content": "O painel bloqueia com “Acima do saldo disponível”"
+          }
+        ],
+        [
+          {
+            "content": "Débito nunca notifica o cliente"
+          },
+          {
+            "content": "A chave de aviso só existe no crédito"
+          }
+        ],
+        [
+          {
+            "content": "O lançamento aparece como Manual"
+          },
+          {
+            "content": "É assim que ele se distingue do cashback gerado por pedido"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Com a chave ligada, o crédito manual entra pelos mesmos gatilhos do cashback de pedido, e as suas automações de novo crédito rodam."
+        },
+        {
+          "type": "paragraph",
+          "content": "Desligada, o saldo entra em silêncio — útil para acertos internos que o cliente não precisa ver, e um problema se você esperava que ele fosse avisado."
+        }
+      ],
+      "title": "Notificar cliente é o que dispara as automações"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O extrato da loja inteira"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tela de "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.cashback"
+          }
+        },
+        {
+          "type": "text",
+          "text": " lista todos os lançamentos de todos os clientes, com o cliente, o valor, o saldo restante daquele lançamento, o status e a data de expiração."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A coluna "
+        },
+        {
+          "type": "text",
+          "text": "Tipo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " diz de onde o lançamento veio:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Origem"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Cashback gerado por uma compra aprovada"
+          }
+        ],
+        [
+          {
+            "content": "Manual"
+          },
+          {
+            "content": "Ajuste feito por alguém do time no contato"
+          }
+        ],
+        [
+          {
+            "content": "Resgate"
+          },
+          {
+            "content": "O débito do saldo quando o cliente resgatou"
+          }
+        ],
+        [
+          {
+            "content": "Ajuste"
+          },
+          {
+            "content": "Estorno automático — o pedido que gerou o crédito foi cancelado ou reembolsado"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Filtrar por "
+            },
+            {
+              "type": "text",
+              "text": "Próximos 7 dias",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " revela quanto saldo a loja está prestes a perder. É o número que justifica montar "
+            },
+            {
+              "type": "text",
+              "text": "o lembrete de vencimento",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/cashback/avisos-automaticos"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "O filtro de expiração mostra o que está prestes a vencer"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Qual crédito é gasto primeiro"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando o cliente resgata, o saldo sai dos créditos que "
+        },
+        {
+          "type": "text",
+          "text": "vencem primeiro",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". É o que garante que ninguém perca crédito antigo enquanto tinha crédito novo sobrando."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Como o resgate leva o saldo inteiro, isso costuma ser invisível — mas aparece no extrato, com vários lançamentos zerando de uma vez."
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Debitei sem querer. Dá para desfazer?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não existe botão de desfazer, mas o efeito se reverte com um crédito manual do mesmo valor. Escreva no motivo que é o estorno do ajuste anterior — os dois lançamentos ficam no extrato e a conta fecha."
+            }
+          ]
+        },
+        {
+          "question": "O saldo do card não bate com a soma dos lançamentos",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "O saldo conta só o que está disponível: lançamentos em carência, já usados e expirados ficam de fora. A coluna "
+                },
+                {
+                  "type": "text",
+                  "text": "Saldo restante",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " mostra quanto sobrou de cada lançamento individualmente."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

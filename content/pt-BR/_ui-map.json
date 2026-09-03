@@ -52,5 +52,24 @@
       "Atendimento"
     ],
     "href": "/helpdesk"
+  },
+  "tools.cashback": {
+    "segments": [
+      "Ferramentas",
+      "Cashback"
+    ],
+    "href": "/content/integrations/credits"
+  },
+  "automations": {
+    "segments": [
+      "Automações"
+    ],
+    "href": "/automations"
+  },
+  "reports": {
+    "segments": [
+      "Relatórios"
+    ],
+    "href": "/reports"
   }
 }

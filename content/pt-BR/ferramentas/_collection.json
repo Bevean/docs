@@ -5,7 +5,8 @@
   "icon": "wrench",
   "sections": [
     "formularios",
-    "links"
+    "links",
+    "cashback"
   ],
   "articles": []
 }

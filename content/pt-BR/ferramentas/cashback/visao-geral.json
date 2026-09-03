@@ -1,0 +1,408 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o cashback",
+  "subtitle": "Entenda quando o crédito nasce, quando ele fica disponível para o cliente e o que acontece se ele não usar.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "cashback",
+    "crédito",
+    "saldo",
+    "fidelidade",
+    "carência",
+    "validade"
+  ],
+  "related": [
+    "ferramentas/cashback/ativar-o-programa",
+    "ferramentas/cashback/como-o-cliente-resgata",
+    "ferramentas/cashback/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O cashback devolve ao cliente uma parte do que ele gastou, em forma de saldo na sua loja. Ele volta para gastar esse saldo, e o programa só custa dinheiro quando essa volta acontece."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.cashback"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A configuração é uma só e vale para a loja inteira: um percentual, uma carência, uma validade. Não existe regra diferente por produto, por categoria ou por cliente."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O caminho de um cashback"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        {
+          "content": "O pedido é aprovado. A Bevean calcula o percentual e lança o crédito no nome do cliente."
+        },
+        {
+          "content": "O crédito fica disponível — na hora, ou depois da carência que você definiu."
+        },
+        {
+          "content": "O cliente resgata: o saldo inteiro vira um cupom de uso único ou créditos na loja."
+        },
+        {
+          "content": "O cliente compra usando o benefício. É essa volta que o programa existe para provocar."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Não existe aviso embutido no programa: quem avisa o cliente é uma automação que você monta. Sem ela, boa parte do cashback simplesmente vence."
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Veja "
+            },
+            {
+              "type": "text",
+              "text": "como avisar o cliente automaticamente",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/cashback/avisos-automaticos"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Crédito que não é resgatado até a validade expira e some do saldo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que gera cashback"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Situação"
+        },
+        {
+          "content": "Gera crédito?"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pedido entra aprovado, ou passa de pendente para aprovado"
+          },
+          {
+            "content": "Sim, enquanto o programa estiver ativo"
+          }
+        ],
+        [
+          {
+            "content": "Pedido aprovado antes de você ativar o programa"
+          },
+          {
+            "content": "Não. A ativação marca uma data de início e o que veio antes fica de fora"
+          }
+        ],
+        [
+          {
+            "content": "Pedido abaixo do pedido mínimo que você configurou"
+          },
+          {
+            "content": "Não"
+          }
+        ],
+        [
+          {
+            "content": "Pedido cancelado, reembolsado ou com chargeback"
+          },
+          {
+            "content": "Não. E o crédito que ele já tinha gerado é estornado"
+          }
+        ],
+        [
+          {
+            "content": "Pedido que entrou por importação de arquivo"
+          },
+          {
+            "content": "Não. Importação é carga de histórico"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se o cliente já resgatou e o pedido é cancelado depois, não há o que estornar — aquele saldo já virou cupom. O cancelamento não cobra o benefício de volta."
+        }
+      ],
+      "title": "O estorno só alcança crédito que ainda está no saldo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando o crédito fica disponível"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A "
+        },
+        {
+          "type": "text",
+          "text": "carência",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " é o tempo entre o pedido aprovado e o crédito virar saldo resgatável. Serve para não pagar cashback de um pedido que ainda pode ser cancelado ou devolvido."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Com carência "
+            },
+            {
+              "type": "text",
+              "text": "zero",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", o crédito nasce disponível: o cliente pode resgatar no mesmo minuto."
+            }
+          ]
+        },
+        {
+          "content": "Com carência, o crédito existe desde a aprovação, mas fica bloqueado até a data de liberação."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Com 7 dias de carência e 90 de validade, o cliente tem os 90 dias inteiros a partir do sétimo — e não 83. A vida total do crédito é a soma dos dois prazos."
+        }
+      ],
+      "title": "A validade só começa a contar depois da liberação"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os três estados de um crédito"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada lançamento aparece na listagem de "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.cashback"
+          }
+        },
+        {
+          "type": "text",
+          "text": " com um destes status:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Ativo"
+          },
+          {
+            "content": "Ainda vale. É o que soma no saldo do cliente"
+          }
+        ],
+        [
+          {
+            "content": "Usado"
+          },
+          {
+            "content": "Já virou benefício — foi resgatado ou consumido em um lançamento"
+          }
+        ],
+        [
+          {
+            "content": "Expirado"
+          },
+          {
+            "content": "Venceu sem ser usado. Não volta e não pode ser reativado"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o cliente recebe no resgate"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O saldo não vira desconto sozinho: enquanto o cliente não resgatar, ele é só saldo. No resgate você escolhe entre "
+        },
+        {
+          "type": "text",
+          "text": "cupom exclusivo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — um código de uso único no valor do saldo — e "
+        },
+        {
+          "type": "text",
+          "text": "créditos na loja",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que a própria plataforma aplica na conta dele."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os dois métodos, o que cada um exige e o que o cliente vê estão em "
+        },
+        {
+          "type": "text",
+          "text": "como o cliente resgata o cashback",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/cashback/como-o-cliente-resgata"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o programa não faz"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Não dá percentual diferente por produto, categoria ou cliente. A regra é uma só."
+        },
+        {
+          "content": "Não aplica o saldo sozinho no checkout: sem resgate, nada acontece."
+        },
+        {
+          "content": "Não avisa o cliente por conta própria — o aviso é uma automação que você cria."
+        },
+        {
+          "content": "Não gera cashback sobre pedido importado por arquivo, nem sobre pedido aprovado antes da ativação."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "ferramentas/cashback/ativar-o-programa",
+          "description": "Ligar o programa e definir percentual, carência e validade."
+        },
+        {
+          "ref": "ferramentas/cashback/como-o-cliente-resgata",
+          "description": "O que o cliente vê e o que cada método de resgate exige."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

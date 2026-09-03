@@ -1,0 +1,568 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O cashback não está funcionando",
+  "subtitle": "Cashback que não foi gerado, resgate que não conclui, aviso que não sai: onde olhar em cada caso.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "problema",
+    "erro",
+    "não gerou",
+    "resgate falhou",
+    "cupom inválido"
+  ],
+  "related": [
+    "ferramentas/cashback/visao-geral",
+    "ferramentas/cashback/como-o-cliente-resgata",
+    "ferramentas/cashback/avisos-automaticos"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Quase todo problema de cashback cai em um destes: o crédito não nasceu, o resgate não concluiu ou o aviso não saiu. Comece pelo sintoma que o cliente relatou."
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "list",
+          "style": "bullet",
+          "items": [
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "O programa está "
+                },
+                {
+                  "type": "text",
+                  "text": "Ativo",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " no aviso do topo de "
+                },
+                {
+                  "type": "uiPath",
+                  "attrs": {
+                    "ref": "tools.cashback"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            },
+            {
+              "content": "O pedido em questão está aprovado — não pendente, não cancelado."
+            },
+            {
+              "content": "O pedido é posterior à data em que você ativou o programa."
+            }
+          ]
+        }
+      ],
+      "title": "Antes de investigar, confirme três coisas"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O pedido foi aprovado e o cliente não ganhou cashback"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O pedido tem um contato vinculado?"
+          },
+          {
+            "content": "Pedido sem cliente identificado não gera crédito — não há para quem lançar"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "O pedido é anterior à ativação do programa?"
+          },
+          {
+            "content": "Fica de fora, mesmo que a integração só tenha sincronizado ele hoje"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O programa chegou a ser desligado e religado?"
+          },
+          {
+            "content": "Religar marca uma data de início nova. Tudo que foi aprovado no intervalo desligado fica de fora"
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "O valor passou do pedido mínimo?"
+          },
+          {
+            "content": "A comparação usa a base de cálculo. Com a base Produtos, o frete não conta e o pedido pode ficar abaixo sem parecer"
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "O percentual sobre esse pedido dá menos de um centavo?"
+          },
+          {
+            "content": "Nada é lançado. Acontece com percentual muito baixo em pedido pequeno"
+          }
+        ],
+        [
+          {
+            "content": "6"
+          },
+          {
+            "content": "O pedido entrou por importação de arquivo?"
+          },
+          {
+            "content": "Importação é carga de histórico e nunca gera cashback"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O cliente clica em resgatar e não conclui"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "A plataforma da sua loja permite criar cupom pela integração?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Sem isso o resgate por cupom não tem onde ser criado. A lista de plataformas está em "
+              },
+              {
+                "type": "text",
+                "text": "como o cliente resgata o cashback",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/cashback/como-o-cliente-resgata"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "A integração da loja está conectada e ativa?"
+          },
+          {
+            "content": "O cupom é criado na loja no momento do clique. Integração fora do ar derruba o resgate"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O método é Créditos na loja e o cliente tem cadastro na plataforma?"
+          },
+          {
+            "content": "Sem o cadastro dele lá, esse método não conclui. O de cupom funciona mesmo sem"
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "O método é Créditos na loja e a integração foi reconectada depois de escolher esse método?"
+          },
+          {
+            "content": "A permissão de crédito na loja só é liberada na reconexão"
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "Você tem mais de uma plataforma de loja conectada?"
+          },
+          {
+            "content": "Quando o contato não veio de nenhuma delas, não há como escolher em qual criar o cupom, e o resgate para"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O valor volta para o cliente automaticamente, e o card de cashback do contato mostra o selo "
+            },
+            {
+              "type": "text",
+              "text": "Falhou",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " com o motivo que a plataforma retornou. Ele pode tentar de novo pelo mesmo link."
+            }
+          ]
+        }
+      ],
+      "title": "Resgate que falha devolve o saldo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O link de resgate diz que é inválido ou expirado"
+    },
+    {
+      "type": "paragraph",
+      "content": "O link tem prazo de validade e é gerado no momento do envio. Um link antigo — de uma automação de meses atrás, ou de um print que o cliente guardou — deixa de valer."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A solução é sempre a mesma: mandar um novo. Qualquer envio que use a informação "
+        },
+        {
+          "type": "text",
+          "text": "Link de resgate",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " cria um link novo e válido."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se um cliente encaminhar o link para outra pessoa, ela vê e pode resgatar o saldo do primeiro. Evite publicar o link em post, grupo ou material impresso — ele só funciona bem em mensagem individual."
+        }
+      ],
+      "title": "O link é pessoal e mostra o saldo de quem ele identifica"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A automação de vencimento não dispara"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "Há alguma antecedência em Avisar sobre o vencimento?"
+          },
+          {
+            "content": "Sem antecedência configurada o gatilho nunca dispara, e a automação fica ativa em silêncio"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "A antecedência é menor que a validade do cashback?"
+          },
+          {
+            "content": "Um aviso de 7 dias antes em um crédito que vive 5 dias cai antes de o crédito existir"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O crédito tem data de expiração?"
+          },
+          {
+            "content": "Cashback configurado para não expirar nunca entra na fila de vencimento"
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "O filtro Dias até vencer da automação bate com as antecedências configuradas?"
+          },
+          {
+            "content": "Filtro em uma antecedência que não existe no cashback não casa com nada"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O relatório mostra resgates, mas a receita está zerada"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "O que indica"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "O método de resgate é Créditos na loja"
+          },
+          {
+            "content": "Sem cupom não há como ligar a venda ao resgate. A receita nunca vai aparecer"
+          }
+        ],
+        [
+          {
+            "content": "Os clientes resgataram há pouco tempo"
+          },
+          {
+            "content": "A receita entra quando o cupom é usado, e isso costuma levar dias"
+          }
+        ],
+        [
+          {
+            "content": "O pedido que usou o cupom foi cancelado"
+          },
+          {
+            "content": "A receita daquele resgate volta a zero — a venda deixou de existir"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O cliente diz que o cupom não funciona no checkout"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "Ele já usou esse cupom?"
+          },
+          {
+            "content": "É de uso único. Depois do primeiro pedido, o código não vale mais"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "A validade passou?"
+          },
+          {
+            "content": "O prazo do cupom corre a partir do resgate, e é independente da validade do crédito"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "Ele está comprando com o mesmo cadastro?"
+          },
+          {
+            "content": "Quando a Bevean conhece o cadastro dele na loja, o cupom fica restrito a esse cadastro"
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "Ele está tentando somar com outro cupom?"
+          },
+          {
+            "content": "Quem decide se cupons acumulam é a sua plataforma de loja, não a Bevean"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Dá para dar cashback só para um grupo de clientes?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Não. A regra do programa é uma só para a loja inteira. Para beneficiar alguém em específico, use o ajuste manual de saldo no contato — veja "
+                },
+                {
+                  "type": "text",
+                  "text": "saldo, extrato e ajuste manual",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "ferramentas/cashback/saldo-do-cliente"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Mudei o percentual e os créditos antigos continuaram com o valor de antes",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "É o comportamento esperado. Cada crédito guarda o valor, a data de liberação e a de vencimento que valiam quando ele nasceu. A configuração nova vale para os pedidos seguintes."
+            }
+          ]
+        },
+        {
+          "question": "O cliente comprou com o cupom do resgate. Esse pedido gera cashback de novo?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Gera, sobre o valor do pedido depois do desconto — o cupom entra na conta como qualquer outro desconto quando a base é "
+                },
+                {
+                  "type": "text",
+                  "text": "Produtos (sem frete)",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

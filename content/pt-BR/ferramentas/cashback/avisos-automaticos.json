@@ -1,0 +1,560 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Avisar o cliente sobre o cashback",
+  "subtitle": "Monte as automações que contam ao cliente que ele tem saldo — e o lembrete que impede o crédito de vencer em silêncio.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "automação",
+    "aviso",
+    "vencimento",
+    "expirando",
+    "lembrete",
+    "gatilho"
+  ],
+  "related": [
+    "ferramentas/cashback/como-o-cliente-resgata",
+    "ferramentas/cashback/ativar-o-programa",
+    "ferramentas/cashback/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O programa não fala com o cliente sozinho. Quem avisa que ele ganhou crédito, que o crédito foi liberado e que ele está prestes a vencer é uma automação sua — e é ela que decide se o cashback vira venda ou vira saldo expirado."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "automations"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os quatro momentos que disparam uma automação"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Gatilho"
+        },
+        {
+          "content": "Dispara quando"
+        },
+        {
+          "content": "Serve para"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nova entrada de crédito"
+          },
+          {
+            "content": "Um crédito é lançado no nome do cliente"
+          },
+          {
+            "content": "Avisar na hora da compra: “você acabou de ganhar…”"
+          }
+        ],
+        [
+          {
+            "content": "Crédito liberado"
+          },
+          {
+            "content": "O crédito sai da carência e vira saldo resgatável"
+          },
+          {
+            "content": "Chamar de volta quem já pode usar"
+          }
+        ],
+        [
+          {
+            "content": "Crédito expirando"
+          },
+          {
+            "content": "Falta o número de dias que você configurou para o vencimento"
+          },
+          {
+            "content": "O lembrete que evita a perda do saldo"
+          }
+        ],
+        [
+          {
+            "content": "Cashback resgatado"
+          },
+          {
+            "content": "O cliente conclui um resgate"
+          },
+          {
+            "content": "Entregar o código do cupom e lembrar do prazo"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Com carência zero, o crédito nasce já disponível e os dois gatilhos disparam praticamente no mesmo instante. Escolha um dos dois para o aviso de boas-vindas, ou o cliente recebe duas mensagens quase iguais."
+        }
+      ],
+      "title": "Nova entrada e Crédito liberado saem juntos quando não há carência"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Montar o lembrete de vencimento"
+    },
+    {
+      "type": "paragraph",
+      "content": "É o aviso que mais devolve resultado, e o único que depende de uma configuração fora da automação."
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Defina as antecedências no cashback",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Em "
+                },
+                {
+                  "type": "uiPath",
+                  "attrs": {
+                    "ref": "tools.cashback"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", o campo "
+                },
+                {
+                  "type": "text",
+                  "text": "Avisar sobre o vencimento",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " recebe os dias de antecedência — 7, 3 e 1, por exemplo. São no máximo cinco."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Crie a automação e escolha o gatilho Crédito expirando",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O painel mostra ali mesmo quais antecedências estão configuradas no cashback."
+            }
+          ]
+        },
+        {
+          "title": "Decida em quais antecedências ela roda",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Sem filtro, a mesma automação roda uma vez em cada antecedência configurada. Para separar as mensagens, filtre pelo campo "
+                },
+                {
+                  "type": "text",
+                  "text": "Dias até vencer",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e crie uma automação por antecedência."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escreva a mensagem",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Use "
+                },
+                {
+                  "type": "text",
+                  "text": "Valor expirando",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "Dias até vencer",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "Data de expiração",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e, principalmente, "
+                },
+                {
+                  "type": "text",
+                  "text": "Link de resgate",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " — sem ele o cliente não tem como agir."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ative a automação"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Um aviso de 7 dias antes, em um cashback que vale 5 dias, cai em uma data em que o crédito ainda não existia. O painel marca essas antecedências em vermelho na hora de salvar."
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "E se nenhuma antecedência estiver configurada, o gatilho "
+            },
+            {
+              "type": "text",
+              "text": "Crédito expirando",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " não dispara nunca — a automação fica ativa e em silêncio."
+            }
+          ]
+        }
+      ],
+      "title": "Antecedência maior que a validade nunca dispara"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que dá para colocar na mensagem"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No editor da mensagem, o grupo "
+        },
+        {
+          "type": "text",
+          "text": "Cashback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " oferece:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Informação"
+        },
+        {
+          "content": "O que traz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Link de resgate"
+          },
+          {
+            "content": "O endereço da página de resgate daquele cliente. É o item indispensável"
+          }
+        ],
+        [
+          {
+            "content": "Saldo de cashback"
+          },
+          {
+            "content": "O saldo total disponível dele no momento do envio"
+          }
+        ],
+        [
+          {
+            "content": "Valor liberado"
+          },
+          {
+            "content": "Quanto acabou de sair da carência"
+          }
+        ],
+        [
+          {
+            "content": "Valor creditado/resgatado"
+          },
+          {
+            "content": "O valor do lançamento ou do resgate que disparou o fluxo"
+          }
+        ],
+        [
+          {
+            "content": "Valor expirando"
+          },
+          {
+            "content": "Quanto vence naquela data"
+          }
+        ],
+        [
+          {
+            "content": "Dias até vencer"
+          },
+          {
+            "content": "A antecedência do aviso"
+          }
+        ],
+        [
+          {
+            "content": "Data de liberação e Data de expiração"
+          },
+          {
+            "content": "As datas do crédito, prontas para exibir"
+          }
+        ],
+        [
+          {
+            "content": "Código do cupom e Validade do cupom"
+          },
+          {
+            "content": "O código gerado no resgate e até quando ele vale"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A lista é a mesma em todos os fluxos de cashback, mas cada gatilho carrega só os seus dados. "
+            },
+            {
+              "type": "text",
+              "text": "Dias até vencer",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " em um fluxo de "
+            },
+            {
+              "type": "text",
+              "text": "Cashback resgatado",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " sai vazio na mensagem — e vazio no meio de uma frase é pior do que não ter escrito nada."
+            }
+          ]
+        }
+      ],
+      "title": "Escolha a informação que combina com o gatilho"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Resgatar dentro da conversa"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Existe também uma ação de automação chamada "
+        },
+        {
+          "type": "text",
+          "text": "Resgatar cashback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": em vez de mandar o link, ela converte o saldo do contato ali mesmo e deixa o "
+        },
+        {
+          "type": "text",
+          "text": "Código do cupom",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e o "
+        },
+        {
+          "type": "text",
+          "text": "Valor resgatado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " disponíveis para as mensagens seguintes do fluxo."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "É o caminho para um menu de WhatsApp em que o cliente aperta um botão e recebe o código na resposta, sem sair da conversa."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O saldo é debitado e o cupom é criado no mesmo instante. Coloque a ação depois de uma confirmação explícita do cliente — nunca no começo de um fluxo que ele pode ter aberto sem querer."
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Quando o resgate não conclui, o fluxo segue com o "
+            },
+            {
+              "type": "text",
+              "text": "Status do resgate",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " marcado como falha, e é nele que a condição do fluxo deve olhar antes de prometer um cupom."
+            }
+          ]
+        }
+      ],
+      "title": "A ação resgata de verdade, não simula"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "ferramentas/cashback/como-o-cliente-resgata",
+          "description": "O que acontece depois que o cliente abre o link."
+        },
+        {
+          "ref": "ferramentas/cashback/acompanhar-resultados",
+          "description": "Medir se o aviso virou venda."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

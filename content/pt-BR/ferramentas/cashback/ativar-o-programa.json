@@ -1,0 +1,610 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Ativar e configurar o cashback",
+  "subtitle": "Defina quanto devolver, sobre qual valor e por quanto tempo o crédito vale — e entenda o que cada limite faz.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "ativar cashback",
+    "percentual",
+    "carência",
+    "validade",
+    "pedido mínimo",
+    "teto"
+  ],
+  "related": [
+    "ferramentas/cashback/visao-geral",
+    "ferramentas/cashback/como-o-cliente-resgata",
+    "ferramentas/cashback/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ligar o cashback leva um minuto: você define quanto devolve, sobre o que devolve e por quanto tempo o crédito vale. A partir do "
+        },
+        {
+          "type": "text",
+          "text": "Salvar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", todo pedido que entrar aprovado começa a gerar crédito."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.cashback"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ativar o programa"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra a tela de cashback",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "O aviso no topo mostra se o programa está "
+                },
+                {
+                  "type": "text",
+                  "text": "Ativo",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ou "
+                },
+                {
+                  "type": "text",
+                  "text": "Inativo",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Clique em Ativar cashback",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Com o programa já ligado, o mesmo botão passa a se chamar "
+                },
+                {
+                  "type": "text",
+                  "text": "Configurações",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ligue a chave Cashback ativo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Enquanto ela estiver desligada, o resto do formulário continua editável, mas nenhum pedido gera crédito."
+            }
+          ]
+        },
+        {
+          "title": "Preencha Percentual (%) e Base de cálculo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "São os dois únicos campos obrigatórios para o programa funcionar. Os outros têm valor padrão."
+            }
+          ]
+        },
+        {
+          "title": "Defina Carência (dias) e Validade (dias)",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A carência atrasa a liberação do crédito; a validade define quanto tempo ele dura depois de liberado."
+            }
+          ]
+        },
+        {
+          "title": "Clique em Salvar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A mensagem "
+                },
+                {
+                  "type": "text",
+                  "text": "Configurações de cashback salvas.",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " confirma. O aviso do topo passa a resumir o programa em uma linha."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Salvar as configurações não garante que o cliente vai conseguir resgatar: o cupom é criado na plataforma da loja, e nem toda plataforma permite isso. Confira antes em "
+            },
+            {
+              "type": "text",
+              "text": "como o cliente resgata o cashback",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/cashback/como-o-cliente-resgata"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "O resgate depende da plataforma da sua loja"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quanto devolver: percentual e base de cálculo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O percentual é aplicado sobre a "
+        },
+        {
+          "type": "text",
+          "text": "base de cálculo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", não necessariamente sobre o valor total que o cliente pagou."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Base de cálculo"
+        },
+        {
+          "content": "O que entra na conta"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Produtos (sem frete)"
+          },
+          {
+            "content": "Só os produtos, já com os descontos abatidos. Frete fica de fora"
+          }
+        ],
+        [
+          {
+            "content": "Total pago (com frete)"
+          },
+          {
+            "content": "O valor cheio do pedido, frete incluído"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Um pedido de R$ 200 com R$ 50 de desconto gera cashback sobre R$ 150. Na base "
+            },
+            {
+              "type": "text",
+              "text": "Total pago",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", a conta segue o valor que o cliente efetivamente pagou."
+            }
+          ]
+        }
+      ],
+      "title": "Cupom de desconto reduz o cashback na base “Produtos”"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Limitar o custo: pedido mínimo e teto"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Para que serve"
+        },
+        {
+          "content": "Se ficar vazio"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pedido mínimo"
+          },
+          {
+            "content": "Pedido abaixo desse valor não gera cashback nenhum"
+          },
+          {
+            "content": "Todo pedido gera, por menor que seja"
+          }
+        ],
+        [
+          {
+            "content": "Teto por pedido"
+          },
+          {
+            "content": "Valor máximo de crédito que um único pedido pode gerar"
+          },
+          {
+            "content": "Não há teto — o percentual vale para qualquer valor"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se a base for "
+            },
+            {
+              "type": "text",
+              "text": "Produtos (sem frete)",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", um pedido de R$ 110 com R$ 20 de frete vale R$ 90 na comparação. Com pedido mínimo de R$ 100, ele não gera cashback."
+            }
+          ]
+        }
+      ],
+      "title": "O pedido mínimo é comparado com a base de cálculo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Por quanto tempo: carência e validade"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que faz"
+        },
+        {
+          "content": "Valor especial"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Carência (dias)"
+          },
+          {
+            "content": "Dias até o crédito ficar disponível para resgate"
+          },
+          {
+            "content": "0 libera na hora"
+          }
+        ],
+        [
+          {
+            "content": "Validade (dias)"
+          },
+          {
+            "content": "Dias de vida do crédito depois de liberado"
+          },
+          {
+            "content": "Vazio = o crédito não expira"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Vale repetir, porque é a confusão mais comum: a validade "
+        },
+        {
+          "type": "text",
+          "text": "começa a contar na liberação",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", não na compra. Carência de 7 com validade de 90 dá 97 dias entre o pedido e o vencimento."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O saldo que nunca expira fica no passivo do programa para sempre e some do relatório de perdas. Um prazo — mesmo longo — é o que cria a urgência que traz o cliente de volta."
+        }
+      ],
+      "title": "Cashback sem validade vira dívida permanente"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o painel não deixa salvar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão "
+        },
+        {
+          "type": "text",
+          "text": "Salvar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " fica desabilitado enquanto algum campo estiver fora da faixa:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Faixa aceita"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Percentual (%)"
+          },
+          {
+            "content": "Maior que 0 e até 100"
+          }
+        ],
+        [
+          {
+            "content": "Carência (dias)"
+          },
+          {
+            "content": "Número inteiro de 0 a 365"
+          }
+        ],
+        [
+          {
+            "content": "Validade (dias)"
+          },
+          {
+            "content": "Número inteiro a partir de 1, ou vazio"
+          }
+        ],
+        [
+          {
+            "content": "Prefixo do cupom"
+          },
+          {
+            "content": "1 a 16 caracteres, só letras e números"
+          }
+        ],
+        [
+          {
+            "content": "Validade do cupom (dias)"
+          },
+          {
+            "content": "Número inteiro a partir de 1"
+          }
+        ],
+        [
+          {
+            "content": "Avisar sobre o vencimento"
+          },
+          {
+            "content": "No máximo 5 avisos, cada um de 0 a 3650 dias"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Prefixo e validade do cupom são checados sempre. O percentual e os prazos só são exigidos quando a chave "
+            },
+            {
+              "type": "text",
+              "text": "Cashback ativo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " está ligada."
+            }
+          ]
+        }
+      ],
+      "title": "As regras de cupom valem mesmo com o programa desligado"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Mudar a configuração depois"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Crédito já lançado não muda. A data de liberação e a de vencimento ficaram gravadas quando o crédito nasceu; alterar o percentual ou a validade só afeta os pedidos seguintes."
+        },
+        {
+          "content": "Desligar o programa para o lançamento de novos créditos. O saldo que os clientes já têm continua lá e continua podendo ser resgatado."
+        },
+        {
+          "content": "Religar o programa marca uma data de início nova: os pedidos aprovados durante o período desligado não geram cashback, nem quando a integração sincroniza depois."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "ferramentas/cashback/como-o-cliente-resgata",
+          "description": "Escolher entre cupom e créditos na loja."
+        },
+        {
+          "ref": "ferramentas/cashback/avisos-automaticos",
+          "description": "Avisar o cliente que ele tem saldo antes de vencer."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

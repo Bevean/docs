@@ -1,0 +1,372 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Acompanhar os resultados do programa",
+  "subtitle": "Leia o relatório de cashback: quanto o programa custou, quanto trouxe de volta e onde o dinheiro está sendo perdido.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "relatório",
+    "roas",
+    "receita",
+    "taxa de uso",
+    "saldo ativo",
+    "expirado"
+  ],
+  "related": [
+    "ferramentas/cashback/avisos-automaticos",
+    "ferramentas/cashback/como-o-cliente-resgata",
+    "ferramentas/cashback/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O cashback custa dinheiro no dia do resgate e devolve dinheiro no dia da compra seguinte. O relatório do programa põe os dois lados lado a lado, para você saber se a conta fecha."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "reports"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", na categoria "
+        },
+        {
+          "type": "text",
+          "text": "Retenção & LTV",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", em "
+        },
+        {
+          "type": "text",
+          "text": "Desempenho de cashback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os números do topo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Indicador"
+        },
+        {
+          "content": "O que mede"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Cashback gerado"
+          },
+          {
+            "content": "Tudo que foi concedido aos clientes no período"
+          }
+        ],
+        [
+          {
+            "content": "Saldo ativo"
+          },
+          {
+            "content": "O que os clientes têm em mãos agora, válido e sem uso. É o passivo do programa"
+          }
+        ],
+        [
+          {
+            "content": "Resgatado"
+          },
+          {
+            "content": "O valor que virou benefício no período. É o custo real"
+          }
+        ],
+        [
+          {
+            "content": "Taxa de uso"
+          },
+          {
+            "content": "Dos resgates do período, quantos viraram pedido de verdade"
+          }
+        ],
+        [
+          {
+            "content": "Receita gerada"
+          },
+          {
+            "content": "O valor dos pedidos que usaram o cupom do resgate"
+          }
+        ],
+        [
+          {
+            "content": "ROAS"
+          },
+          {
+            "content": "Receita dividida por resgatado. Quanto voltou para cada real devolvido"
+          }
+        ],
+        [
+          {
+            "content": "Revertido"
+          },
+          {
+            "content": "Cashback estornado porque o pedido de origem caiu"
+          }
+        ],
+        [
+          {
+            "content": "Expirado"
+          },
+          {
+            "content": "Cashback que venceu sem ninguém usar"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Os outros números respeitam as datas escolhidas; esse é sempre uma foto de agora. Faz sentido: é o que a loja deve aos clientes neste momento, não o que devia no mês passado."
+        }
+      ],
+      "title": "Saldo ativo ignora o filtro de período"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como ler o resultado"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Gerado muito acima de "
+            },
+            {
+              "type": "text",
+              "text": "Resgatado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " não é lucro: é saldo parado, que vai virar resgate depois ou vencer. O "
+            },
+            {
+              "type": "text",
+              "text": "Saldo ativo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " mostra o tamanho dessa fila."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Muito "
+            },
+            {
+              "type": "text",
+              "text": "Expirado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " é dinheiro que você prometeu e o cliente não usou. Quase sempre é falta de aviso, não falta de interesse — veja "
+            },
+            {
+              "type": "text",
+              "text": "os avisos automáticos",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/cashback/avisos-automaticos"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Taxa de uso baixa significa que o cliente resgatou, recebeu o cupom e não comprou. Olhe o prazo do cupom: curto demais não dá tempo, longo demais tira a urgência."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "ROAS",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " abaixo de 1 quer dizer que cada real devolvido trouxe menos de um real de volta. É o sinal de que o percentual está alto demais para o seu ticket."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Com o método "
+            },
+            {
+              "type": "text",
+              "text": "Créditos na loja",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", o saldo é aplicado direto na conta do cliente e não existe código para ligar à venda. O resgate entra como custo, a receita nunca aparece, e o ROAS fica artificialmente baixo."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se medir o retorno importa, o método de cupom é o que permite medir. A comparação está em "
+            },
+            {
+              "type": "text",
+              "text": "como o cliente resgata o cashback",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/cashback/como-o-cliente-resgata"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "O relatório só enxerga a receita quando o resgate gera cupom"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que não entra na conta"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Ajustes manuais de saldo. O relatório mede o programa, então crédito lançado à mão no contato não conta como cashback gerado — mas o cliente pode resgatá-lo, e aí ele conta como custo."
+        },
+        {
+          "content": "Pedidos que usaram um cupom qualquer da sua loja. Só o cupom criado pelo resgate é rastreado."
+        },
+        {
+          "content": "Vendas de um cliente que resgatou e comprou sem usar o cupom. Do ponto de vista do relatório, aquele resgate não virou receita."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando o gráfico está vazio"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um programa recém-ativado mostra cashback gerado e mais nada. É esperado: resgate, receita, ROAS e taxa de uso só aparecem quando os primeiros clientes começarem a usar o saldo, o que leva no mínimo a carência que você configurou."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "ferramentas/cashback/avisos-automaticos",
+          "description": "Reduzir o cashback que expira sem uso."
+        },
+        {
+          "ref": "ferramentas/cashback/ativar-o-programa",
+          "description": "Ajustar percentual, carência e validade."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

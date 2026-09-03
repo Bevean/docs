@@ -1,0 +1,541 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como o cliente resgata o cashback",
+  "subtitle": "Escolha entre cupom e créditos na loja, e saiba exatamente o que o cliente vê ao abrir o link de resgate.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "resgate",
+    "cupom",
+    "store credit",
+    "créditos na loja",
+    "meu cashback"
+  ],
+  "related": [
+    "ferramentas/cashback/ativar-o-programa",
+    "ferramentas/cashback/avisos-automaticos",
+    "ferramentas/cashback/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O saldo de cashback não vira desconto sozinho. O cliente precisa abrir uma página, clicar em resgatar e receber o benefício — um cupom ou créditos na conta dele na loja."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde se configura: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.cashback"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", no bloco "
+        },
+        {
+          "type": "text",
+          "text": "Resgate",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " das configurações."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Não existe resgate parcial. Quem tem R$ 47,30 resgata R$ 47,30 de uma vez. Por isso o valor do cupom quase nunca é redondo — e por isso vale usar o "
+            },
+            {
+              "type": "text",
+              "text": "Saldo mínimo para resgatar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", que segura o resgate até o saldo compensar."
+            }
+          ]
+        }
+      ],
+      "title": "O resgate leva o saldo inteiro, sempre"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os dois métodos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Característica"
+        },
+        {
+          "content": "Cupom exclusivo (uso único)"
+        },
+        {
+          "content": "Créditos na loja"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "O que o cliente recebe"
+          },
+          {
+            "content": "Um código de desconto no valor do saldo, para digitar no checkout"
+          },
+          {
+            "content": "O saldo aplicado na conta dele na loja, sem código nenhum"
+          }
+        ],
+        [
+          {
+            "content": "Onde é criado"
+          },
+          {
+            "content": "Na plataforma da sua loja, como um cupom de valor fixo"
+          },
+          {
+            "content": "Na conta do cliente na plataforma"
+          }
+        ],
+        [
+          {
+            "content": "Exige cadastro do cliente na loja"
+          },
+          {
+            "content": "Não, mas quando existe o cupom fica restrito a ele"
+          },
+          {
+            "content": "Sim. Sem o cadastro na plataforma, o resgate não conclui"
+          }
+        ],
+        [
+          {
+            "content": "Aparece no relatório de cashback"
+          },
+          {
+            "content": "Sim: receita, taxa de uso e ROAS saem daí"
+          },
+          {
+            "content": "Não. Sem cupom, não há como ligar a venda ao resgate"
+          }
+        ],
+        [
+          {
+            "content": "Validade do benefício"
+          },
+          {
+            "content": "Definida em Validade do cupom (dias), contada a partir do resgate"
+          },
+          {
+            "content": "A mesma configuração de validade do cupom"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "É o método recomendado no próprio painel, e o motivo é medição: sem cupom, a receita que o programa trouxe de volta não aparece em lugar nenhum. Veja "
+            },
+            {
+              "type": "text",
+              "text": "acompanhar os resultados do programa",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/cashback/acompanhar-resultados"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Na dúvida, cupom"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A opção "
+            },
+            {
+              "type": "text",
+              "text": "Créditos na loja (Shopify)",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " exige reconectar a integração para liberar essa permissão. Se ela não for liberada, o resgate falha na hora do clique."
+            }
+          ]
+        }
+      ],
+      "title": "Créditos na loja precisam de permissão extra na integração"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Onde o resgate por cupom funciona"
+    },
+    {
+      "type": "paragraph",
+      "content": "O cupom é criado na plataforma da sua loja, então ele só existe onde a plataforma permite criar cupom por integração:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Bagy"
+        },
+        {
+          "content": "Nuvemshop"
+        },
+        {
+          "content": "Shopify"
+        },
+        {
+          "content": "Tray"
+        },
+        {
+          "content": "VNDA"
+        },
+        {
+          "content": "VTEX"
+        },
+        {
+          "content": "wBuy"
+        },
+        {
+          "content": "Yampi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Em uma plataforma fora dessa lista o programa continua acumulando saldo normalmente, mas o clique em resgatar não conclui. Vale conferir antes de anunciar o cashback para a base."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o cliente vê"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A página se chama "
+        },
+        {
+          "type": "text",
+          "text": "Meu cashback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e cabe em uma tela de celular: o nome dele, o saldo disponível e um botão. Depois do clique, o cupom aparece com um botão "
+        },
+        {
+          "type": "text",
+          "text": "Copiar código",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e a data de validade."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "O que a página mostra"
+        },
+        {
+          "content": "Quando aparece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "O saldo e o botão de resgate"
+          },
+          {
+            "content": "Há saldo disponível e ele atingiu o mínimo, se você configurou um"
+          }
+        ],
+        [
+          {
+            "content": "“O resgate está disponível a partir de …”"
+          },
+          {
+            "content": "Ele tem saldo, mas abaixo do mínimo que você exigiu"
+          }
+        ],
+        [
+          {
+            "content": "“Sem saldo disponível”"
+          },
+          {
+            "content": "Nada liberado ainda — o crédito pode existir e estar em carência"
+          }
+        ],
+        [
+          {
+            "content": "“Programa indisponível”"
+          },
+          {
+            "content": "O programa está desligado no painel"
+          }
+        ],
+        [
+          {
+            "content": "“Link inválido ou expirado”"
+          },
+          {
+            "content": "O link venceu ou foi alterado. Um envio novo resolve"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Enquanto o cupom não for usado nem vencer, a página mostra o código de novo — o cliente não perde o benefício se fechar a tela."
+        },
+        {
+          "type": "paragraph",
+          "content": "Depois que o cupom é usado em um pedido, ele some da página. Se houver saldo novo, o botão de resgate volta."
+        }
+      ],
+      "title": "Reabrir o link depois de resgatar mostra o mesmo cupom"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como o cliente chega até a página"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Não existe link fixo: cada cliente tem o seu, e ele é criado na hora do envio. Você o insere em uma mensagem pela variável "
+        },
+        {
+          "type": "text",
+          "text": "Link de resgate",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — a mesma que aparece no editor de modelos e nos envios de automação."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O passo a passo de montar esse envio está em "
+        },
+        {
+          "type": "text",
+          "text": "avisar o cliente sobre o cashback",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/cashback/avisos-automaticos"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que também mostra como resgatar dentro de uma conversa, sem o cliente sair do WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O cupom gerado"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Regra"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Código"
+          },
+          {
+            "content": "O prefixo que você definiu, mais oito caracteres sorteados: CASH-A1B2C3D4"
+          }
+        ],
+        [
+          {
+            "content": "Valor"
+          },
+          {
+            "content": "Fixo, igual ao saldo resgatado"
+          }
+        ],
+        [
+          {
+            "content": "Uso"
+          },
+          {
+            "content": "Uma vez só, uma vez por cliente"
+          }
+        ],
+        [
+          {
+            "content": "Dono"
+          },
+          {
+            "content": "Quando a Bevean conhece o cadastro do cliente na plataforma, o cupom fica restrito a ele"
+          }
+        ],
+        [
+          {
+            "content": "Prazo"
+          },
+          {
+            "content": "Vale a partir do resgate, pelos dias configurados em Validade do cupom (dias)"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "O cliente pode resgatar de novo?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Só depois que o benefício atual sair de cena — ou seja, quando o cupom for usado em um pedido ou vencer. Enquanto ele estiver válido e sem uso, um novo clique devolve o mesmo código."
+            }
+          ]
+        },
+        {
+          "question": "Dá para cancelar um resgate?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Não pelo painel. O saldo já foi debitado e o cupom já existe na plataforma da loja. O que dá para fazer é devolver o valor ao cliente com um ajuste manual de saldo e cancelar o cupom no admin da sua loja — veja "
+                },
+                {
+                  "type": "text",
+                  "text": "saldo e ajuste manual no contato",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "ferramentas/cashback/saldo-do-cliente"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "O cupom do resgate pode ser somado a outro cupom?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Isso depende inteiramente das regras da sua plataforma de loja, não da Bevean. O cupom é criado lá como um cupom de valor fixo comum."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

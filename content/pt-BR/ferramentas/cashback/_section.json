@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Cashback",
+  "description": "Devolva uma parte de cada compra em crédito e traga o cliente de volta para gastar esse saldo na sua loja.",
+  "icon": "badge-percent",
+  "articles": [
+    "visao-geral",
+    "ativar-o-programa",
+    "como-o-cliente-resgata",
+    "avisos-automaticos",
+    "saldo-do-cliente",
+    "acompanhar-resultados",
+    "resolver-problemas"
+  ]
+}
