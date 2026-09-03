@@ -1,0 +1,16 @@
+# dependências e build
+node_modules
+dist
+dist-ssr
+
+# derivados de `pnpm content:generate` — regenerados a cada build
+src/content/generated/
+public/content-assets/
+public/search-index.json
+
+# derivados de `pnpm content:schema` — regenerados sob demanda
+.vscode/schemas
+
+# local
+*.local
+.DS_Store

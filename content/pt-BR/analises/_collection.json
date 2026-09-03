@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../.vscode/schemas/collection.schema.json",
+  "title": "Análises",
+  "description": "Relatórios para entender o que aconteceu e decidir o próximo passo.",
+  "icon": "bar-chart-3",
+  "sections": [],
+  "articles": []
+}

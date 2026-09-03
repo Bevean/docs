@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../.vscode/schemas/collection.schema.json",
+  "title": "Audiência",
+  "description": "Contatos, segmentos, listas e a leitura de quem é a sua base.",
+  "icon": "users",
+  "sections": [],
+  "articles": []
+}

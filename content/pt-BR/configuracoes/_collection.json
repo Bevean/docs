@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../.vscode/schemas/collection.schema.json",
+  "title": "Configurações",
+  "description": "Conecte canais, configure domínios e ajuste o que a plataforma faz por você.",
+  "icon": "settings",
+  "sections": [],
+  "articles": []
+}

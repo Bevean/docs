@@ -1,0 +1,353 @@
+# AGENTS.md — como escrever documentação neste projeto
+
+> Guia para agentes de IA (Claude, GPT, etc.) que vão **criar ou editar artigos**
+> da Central de Ajuda. Leia antes de tocar em qualquer coisa dentro de `content/`.
+>
+> Para editar o **código** do site (blocos, renderer, build), veja a seção
+> [Mexer no motor](#mexer-no-motor) no final.
+
+## A regra de ouro
+
+Conteúdo aqui é **dado validado**, não texto livre. O build recusa JSON inválido,
+link quebrado, imagem ausente e artigo órfão. Isso é proposital: é mais barato
+falhar no `content:check` do que publicar um artigo que ninguém acha.
+
+**Nunca** contorne o validador — nem relaxando o schema, nem removendo a regra que
+está incomodando. Se uma regra parece errada, diga isso e pare; não a desative.
+
+Ao terminar qualquer edição de conteúdo, rode:
+
+```bash
+pnpm content:check
+```
+
+Só considere a tarefa concluída quando ele sair com `✔`.
+
+---
+
+## Criar um artigo
+
+### 1. Escolha o lugar
+
+A rota **é** o caminho do arquivo. Não existe campo `slug`.
+
+```
+content/pt-BR/<coleção>/<artigo>.json            → /ajuda/<coleção>/<artigo>
+content/pt-BR/<coleção>/<seção>/<artigo>.json    → /ajuda/<coleção>/<seção>/<artigo>
+```
+
+Profundidade máxima é essa: coleção → seção → artigo. Não existe sub-seção.
+
+As coleções são a arquitetura de informação do painel. Antes de criar uma nova,
+confira se o assunto não cabe numa existente — a lista está em
+`content/pt-BR/_index.json`.
+
+### 2. Crie o esqueleto pelo comando, não à mão
+
+```bash
+pnpm content:new ferramentas/cashback
+pnpm content:new configuracoes/whatsapp-oficial/conectar-numero
+```
+
+Ele cria o arquivo **e registra o slug na ordem explícita do pai**. Um arquivo que
+ninguém listou não aparece no site e quebra o build (`R007`) — criar o JSON na mão
+e esquecer de registrar é o erro mais comum.
+
+### 3. Escreva o corpo
+
+Substitua o `body` de exemplo pelos blocos reais. A referência completa está
+abaixo. Enquanto escreve, o VS Code dá autocomplete e sublinha erro, porque o
+arquivo aponta para o JSON Schema gerado (`pnpm content:schema` regenera).
+
+### 4. Valide
+
+```bash
+pnpm content:check
+```
+
+---
+
+## Cabeçalho do artigo
+
+| Campo | Obrigatório | Observação |
+|---|---|---|
+| `title` | sim | Máx. 120 caracteres. O nome que aparece na listagem e no `<title>` |
+| `updatedAt` | sim | `YYYY-MM-DD`. Data de hoje. O build recusa data no futuro (`L005`) |
+| `body` | sim | Ao menos um bloco |
+| `subtitle` | não | Uma frase dizendo o que a pessoa consegue fazer depois de ler |
+| `tags` | não | Termos de busca que não aparecem no texto ("2FA", "coex") |
+| `aliases` | não | Slugs antigos desta página; viram redirect 301 no build |
+| `related` | não | Até 6 caminhos de conteúdo |
+| `seo.description` | não | Se ausente, o `subtitle` é usado |
+| `status` | não | `published` (padrão) ou `draft` |
+
+Sempre atualize o `updatedAt` quando mexer no `body`.
+
+---
+
+## Texto: string ou nós tipados
+
+Onde o schema pede texto, **uma string simples basta**:
+
+```json
+{ "type": "paragraph", "content": "Um parágrafo sem nenhuma ênfase." }
+```
+
+Use a forma de nós **só quando precisar** de negrito, link, código inline ou um
+caminho de menu. O formato é o documento do TipTap, porque o editor visual futuro
+será TipTap:
+
+```json
+{ "type": "paragraph", "content": [
+  { "type": "text", "text": "Acesse " },
+  { "type": "uiPath", "attrs": { "ref": "tools.forms" } },
+  { "type": "text", "text": " e clique em " },
+  { "type": "text", "text": "Publicar", "marks": [{ "type": "bold" }] },
+  { "type": "text", "text": ". Veja também " },
+  { "type": "text", "text": "como instalar o tracker",
+    "marks": [{ "type": "docLink", "attrs": { "ref": "integracoes/tracker" } }] },
+  { "type": "text", "text": "." }
+]}
+```
+
+### Marcas (`marks`)
+
+| Marca | Uso |
+|---|---|
+| `bold` | O termo que a pessoa vai procurar na tela. Não use para dar ênfase emocional |
+| `italic` | Rótulo citado da interface ("clique em _Salvar_") |
+| `code` | Nome de campo técnico, valor literal, cabeçalho HTTP |
+| `link` | URL externa. **Precisa ser `https://`** — o schema recusa `http://` |
+| `docLink` | Outro artigo, por caminho de conteúdo. Link quebrado derruba o build (`R001`) |
+
+### Nós atômicos
+
+| Nó | Uso |
+|---|---|
+| `uiPath` | Caminho de menu do painel. Use `{ "ref": "tools.forms" }`, que resolve pelo `_ui-map.json`. Só use `{ "segments": [...] }` quando o caminho for de um sistema de terceiro (Meta, Shopify) |
+| `kbd` | Atalho de teclado: `{ "attrs": { "keys": ["Cmd", "K"] } }` |
+| `hardBreak` | Quebra de linha dentro do mesmo parágrafo. Raro; prefira dois parágrafos |
+
+**Caminho de menu novo?** Adicione a chave em `content/pt-BR/_ui-map.json` antes de
+usar — `uiPath` desconhecido quebra o build (`R004`). Isso existe para que renomear
+um menu do produto mexa em um arquivo, não em duzentos artigos.
+
+---
+
+## Referência dos blocos
+
+### `paragraph`
+```json
+{ "type": "paragraph", "content": "Texto do parágrafo." }
+```
+
+### `heading`
+`level` é `2` ou `3`. Nada de `h4` — se o artigo precisa de quatro níveis, ele
+precisa é ser dois artigos.
+
+```json
+{ "type": "heading", "level": 2, "content": "Configurar o domínio" }
+```
+
+**Emoji em heading é erro de build.** O site atual usa 📌 ⚠️ ✅ 1️⃣ como se fossem
+estrutura; aqui, aviso é `callout` e passo numerado é `steps`.
+
+### `list`
+```json
+{ "type": "list", "style": "bullet", "items": [
+  { "content": "Primeiro item." },
+  { "content": "Item com sub-lista.", "children": {
+    "type": "list", "style": "bullet", "items": [{ "content": "Aninhado." }]
+  }}
+]}
+```
+`style`: `bullet` | `ordered`. Use `ordered` para itens em ordem lógica que **não**
+são um procedimento; procedimento é `steps`.
+
+### `steps`
+Procedimento que a pessoa executa na ordem. Mínimo de 2 passos — um passo sozinho
+é um parágrafo.
+
+```json
+{ "type": "steps", "items": [
+  { "title": "Abra as configurações do canal",
+    "body": [{ "type": "paragraph", "content": "Detalhe do passo." }] },
+  { "title": "Clique em Conectar" }
+]}
+```
+A numeração vem do CSS. **Nunca** escreva "1." no `title`.
+
+### `callout`
+```json
+{ "type": "callout", "variant": "warning", "title": "Opcional",
+  "body": [{ "type": "paragraph", "content": "Texto do aviso." }] }
+```
+
+| `variant` | Quando usar |
+|---|---|
+| `info` | Contexto que ajuda, mas não muda o que fazer |
+| `tip` | Atalho ou boa prática |
+| `success` | Pré-requisito ou confirmação: "antes de investigar, confirme três coisas" |
+| `warning` | Limitação, comportamento inesperado, custo |
+| `danger` | Ação destrutiva ou irreversível |
+
+Um callout por ideia. Três callouts seguidos viram ruído e o leitor para de vê-los.
+
+### `image`
+```json
+{ "type": "image", "src": "./assets/listagem.png",
+  "alt": "Listagem de formulários com os selos de status",
+  "width": 1271, "height": 907,
+  "caption": "Legenda opcional.", "capturedAt": "2026-09-02" }
+```
+
+- `src` é **relativo ao arquivo do artigo**; as imagens ficam em `assets/` ao lado dele.
+- `width`/`height` são obrigatórios e **conferidos contra o arquivo real** (`R006`).
+  Sem eles o layout salta durante o carregamento. Se não souber, leia com
+  `image-size` em vez de chutar.
+- `alt` descreve o que a imagem mostra, não o nome do arquivo. Vazio é erro.
+- `capturedAt` alimenta o relatório de captura velha — screenshot de painel envelhece.
+- `frame`: `shadow` (padrão) | `none` | `browser`.
+
+### `table`
+Todas as linhas precisam do mesmo número de colunas do cabeçalho.
+
+```json
+{ "type": "table",
+  "head": [{ "content": "Status" }, { "content": "Aparece na loja?" }],
+  "rows": [
+    [{ "content": "Publicado" }, { "content": "Sim" }],
+    [{ "content": "Pausado" }, { "content": "Não" }]
+  ]}
+```
+Tabela é a melhor forma para matriz (status × comportamento, integração × recurso).
+Não use para dois pares de chave-valor — isso é uma lista.
+
+### `faq`
+```json
+{ "type": "faq", "items": [
+  { "question": "Editei e nada mudou. Por quê?",
+    "answer": [{ "type": "paragraph", "content": "Resposta." }] }
+]}
+```
+Use no fim do artigo, para "problemas comuns". Renderiza com `<details>` nativo,
+então abre sem JavaScript.
+
+### `code`
+```json
+{ "type": "code", "language": "bash", "filename": "opcional.sh", "code": "pnpm build" }
+```
+`language`: `json` | `bash` | `http` | `html` | `javascript` | `typescript` | `csv` | `text`.
+
+### `video`
+```json
+{ "type": "video", "provider": "youtube", "videoId": "abc123", "title": "Como conectar" }
+```
+`title` é obrigatório — é o que o leitor de tela anuncia.
+
+### `linkCards`
+```json
+{ "type": "linkCards", "title": "Próximos passos", "items": [
+  { "ref": "ferramentas/formularios", "description": "Capturar leads no site." }
+]}
+```
+O título do cartão vem do artigo referenciado, não se escreve à mão.
+
+### `divider`
+```json
+{ "type": "divider" }
+```
+Separa blocos temáticos grandes. Se você precisa de mais de um por artigo, o
+artigo provavelmente são dois.
+
+### Onde cada bloco pode aparecer
+
+Dentro de `callout.body`, `steps[].body` e `faq[].answer` só entram:
+`paragraph`, `list`, `image`, `code`, `table`, `divider`.
+
+Sem `steps` dentro de `steps`, sem `heading` dentro de `callout`.
+
+---
+
+## Como escrever
+
+O leitor é quem opera o CRM, não quem o construiu.
+
+1. **Comece pelo resultado, não pelo mecanismo.** "Capture leads no seu site sem
+   mexer no código da loja", não "O módulo de formulários renderiza via tracker".
+2. **Diga onde fica.** Todo artigo sobre uma tela abre com um `uiPath`.
+3. **Escreva os rótulos exatos da interface.** Se o botão diz "Conectar com Meta",
+   não escreva "clique em conectar à Meta". A pessoa está procurando na tela.
+4. **Prefira a tabela ao parágrafo** quando a informação for matriz.
+5. **Não invente comportamento.** Se não confirmou no código ou na tela, não
+   escreva. Deixe a lacuna explícita para quem revisar.
+6. **Não documente o que não existe.** Recurso em roadmap não entra.
+7. **Português direto.** Evite "simplesmente", "apenas", "basta" — o que é óbvio
+   para quem escreveu raramente é para quem lê.
+8. **Um artigo, uma tarefa.** Se o título precisa de "e", provavelmente são dois.
+
+---
+
+## Onde achar a matéria-prima
+
+Antes de escrever do zero, procure a fonte nos repositórios irmãos:
+
+| Assunto | Fonte |
+|---|---|
+| Formulários, Gerador de Links, Tracker, Webhooks | `admin-front/apps/crm/src/modules/backoffice/docs/content/*.md` — já em PT-BR, quase publicável |
+| Instalar o tracker, carrinho abandonado | `monocore-api/docs/integrations/tracker-guia-suporte.md` — versão sem jargão, com matriz por plataforma |
+| Primeiros passos | `admin-front/apps/crm/src/modules/onboarding/` (`locales/pt.json` + `data/onboarding-flow.ts`) — 9 trilhas com copy pronta |
+| Relatórios | `admin-front/apps/reports-react/src/shared/i18n/locales/pt.json`, chave `analysisCatalog` — 37 análises com "o que responde" |
+| Conectar cada integração | `admin-front/apps/crm/src/modules/integration/apps/<handle>/<handle>-instructions.tsx` — 22 telas com passo a passo |
+| O que cada integração sincroniza | `monocore-api/apps/migrator/MIGRATOR_GUIDE.md`, seção 7 |
+| Nomes exatos dos menus | `admin-front/apps/crm/src/shared/components/sidebar-main/` (`sidebar-main-data.tsx` + `locales/pt.json`) |
+| Rotas e payloads da API | `monocore-api/apps/crm/OVERVIEW.md` |
+
+Rótulo de tela **sempre** vem do `pt.json` do módulo, nunca da memória.
+
+---
+
+## Erros do build e o que fazer
+
+| Código | Significado | Correção |
+|---|---|---|
+| `S00x` | O JSON não bate com o schema | Leia a mensagem: ela aponta o caminho exato (`body.3.items.1.title`) |
+| `R001` | `docLink` aponta para artigo inexistente | O erro sugere o caminho parecido. Confira o caminho, não invente |
+| `R003` | `related` ou destaque órfão | Idem |
+| `R004` | `uiPath` fora do `_ui-map.json` | Adicione a chave no `_ui-map.json` |
+| `R005` | Imagem não existe | Confira o caminho relativo e se o arquivo foi copiado para `assets/` |
+| `R006` | `width`/`height` divergem do arquivo | Use as dimensões reais |
+| `R007` | Artigo no disco não listado no pai | Adicione o slug em `articles` do `_collection.json`/`_section.json` |
+| `R008` | Listado mas não existe no disco | Crie o arquivo ou tire da lista |
+| `R009` | Seção e artigo com o mesmo slug | Renomeie um dos dois — a rota fica ambígua |
+| `R010` | Alias colide | Escolha outro alias |
+| `L005` | `updatedAt` no futuro | Use a data de hoje |
+| `L008` (aviso) | Artigo longo sem heading | Adicione headings; sem eles o sumário fica vazio |
+
+---
+
+## Mexer no motor
+
+Se a tarefa exige um **tipo de bloco novo** (e não apenas conteúdo), toque nestes
+quatro pontos — e em nenhum outro:
+
+1. `schema/blocks.zod.ts` — o schema zod e a entrada em `BLOCK_TYPES`
+2. `schema/index.ts` — o tipo e sua entrada na união `Block`
+3. `src/content/blocks/<nome>.tsx` — o contrato, via `defineBlock`
+4. `src/content/blocks/blocks-registry.ts` — registre o contrato
+
+Três travas de tipo quebram a compilação se você esquecer qualquer um deles.
+
+Antes de criar um bloco, pergunte se o conteúdo não cabe num existente. Um bloco a
+mais é um bloco a mais no editor visual, na busca e na cabeça de quem escreve.
+
+**Não crie um bloco `html`.** Escape hatch de HTML cru mata o editor visual antes
+de ele nascer, produz deriva de estilo e abre XSS.
+
+### Regras do código
+
+- `zod` é **build-only**. Em `src/`, importe schemas só com `import type` — o lint
+  bloqueia e `pnpm check:bundle` falha se a biblioteca vazar para o bundle.
+- Todo bloco novo precisa de `toPlainText`, senão ele fica invisível na busca.
+- Nada de `setState` dentro de `useEffect`; estado externo é `useSyncExternalStore`.
+- Antes de encerrar: `pnpm content:check && pnpm type-check && pnpm lint && pnpm build`.

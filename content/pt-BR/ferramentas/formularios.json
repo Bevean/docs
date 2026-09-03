@@ -1,0 +1,192 @@
+{
+  "$schema": "../../../.vscode/schemas/article.schema.json",
+  "title": "Formulários",
+  "subtitle": "Capture leads no seu site com formulários publicados pela Bevean, sem precisar mexer no código da loja.",
+  "updatedAt": "2026-09-02",
+  "tags": ["formulários", "leads", "tracker", "captação"],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Formulários criam capturas de lead que aparecem " },
+        { "type": "text", "text": "no site do seu cliente", "marks": [{ "type": "bold" }] },
+        { "type": "text", "text": ", não dentro do painel. Eles são renderizados pelo tracker — o script da Bevean instalado na loja — e cada envio vira um contato no CRM, adicionado a uma lista escolhida na configuração." }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Onde fica: ", "marks": [{ "type": "bold" }] },
+        { "type": "uiPath", "attrs": { "ref": "tools.forms" } }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "title": "Antes de investigar qualquer problema",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Confirme três coisas: o formulário está publicado, está ativo (não pausado) e o tracker está instalado na loja. A maioria dos casos de \"formulário não aparece\" termina aqui."
+        }
+      ]
+    },
+    { "type": "heading", "level": 2, "content": "Pré-requisito: o tracker" },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Ao abrir a tela, o painel verifica se existe uma integração compatível com o tracker e se ele está ativo. Se não houver, você verá um destes dois bloqueios — cada um com uma ação própria em " },
+        { "type": "uiPath", "attrs": { "ref": "settings.integrations" } },
+        { "type": "text", "text": "." }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        { "content": "O que aparece na tela" },
+        { "content": "O que significa" },
+        { "content": "O que fazer" }
+      ],
+      "rows": [
+        [
+          { "content": "Ative o tracker para criar formulários" },
+          { "content": "Existe integração compatível, mas o tracker não foi ativado nela." },
+          { "content": [{ "type": "text", "text": "Clique em " }, { "type": "text", "text": "Configurar tracker", "marks": [{ "type": "italic" }] }, { "type": "text", "text": " e ative na tela de script da integração." }] }
+        ],
+        [
+          { "content": "Nenhuma integração ativa é compatível com o tracker" },
+          { "content": "Não há integração compatível ativa na conta." },
+          { "content": "Conecte ou ative uma plataforma suportada antes de continuar." }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Tracker ativo no painel não garante que o script esteja carregando na loja. Se o formulário está publicado, ativo e mesmo assim não aparece, verifique no site se o script da Bevean está presente e sem erro no console."
+        }
+      ]
+    },
+    { "type": "heading", "level": 2, "content": "Status e versões" },
+    {
+      "type": "paragraph",
+      "content": "Entender os status resolve metade das dúvidas de \"editei e não mudou nada\"."
+    },
+    {
+      "type": "table",
+      "head": [
+        { "content": "Status" },
+        { "content": "Pode editar?" },
+        { "content": "Aparece na loja?" },
+        { "content": "Recebe envios?" }
+      ],
+      "rows": [
+        [{ "content": "Rascunho" }, { "content": "Sim" }, { "content": "Não" }, { "content": "Não" }],
+        [{ "content": "Publicado" }, { "content": "Só criando nova versão" }, { "content": "Sim" }, { "content": "Sim" }],
+        [{ "content": "Pausado" }, { "content": "Não" }, { "content": "Não" }, { "content": "Não" }],
+        [{ "content": "Arquivado" }, { "content": "Não" }, { "content": "Não" }, { "content": "Não" }]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Pausado", "marks": [{ "type": "bold" }] },
+        { "type": "text", "text": " não é um status separado: é um formulário publicado com a exibição desligada. O botão de pausar e retomar só existe para formulários publicados." }
+      ]
+    },
+    { "type": "heading", "level": 3, "content": "A listagem" },
+    {
+      "type": "paragraph",
+      "content": "A tela inicial lista a versão mais recente de cada formulário, com busca por nome e filtro por status. Clicar na linha abre o editor apenas para rascunhos; para publicados e pausados, use o nome ou o ícone de lápis."
+    },
+    {
+      "type": "image",
+      "src": "./assets/formularios-listagem.png",
+      "alt": "Listagem de formulários no painel, com os selos de status e os ícones de ação à direita de cada linha",
+      "width": 1271,
+      "height": 907,
+      "caption": "Os selos comunicam o status atual; as ações à direita permitem editar, pausar, retomar ou arquivar.",
+      "capturedAt": "2026-08-03"
+    },
+    { "type": "heading", "level": 2, "content": "Publicar um formulário" },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Crie o formulário",
+          "body": [
+            { "type": "paragraph", "content": "Dê um nome interno — ele não aparece para o visitante, serve para você achar o formulário na listagem." }
+          ]
+        },
+        {
+          "title": "Monte o conteúdo no editor",
+          "body": [
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                { "content": "Arraste os campos que você precisa coletar." },
+                { "content": "Marque como obrigatórios apenas os campos sem os quais o lead não serve — cada campo a mais derruba a conversão." },
+                { "content": "Escreva o texto do botão dizendo o que acontece ao clicar." }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escolha onde ele aparece",
+          "body": [
+            { "type": "paragraph", "content": "Defina o formato (pop-up, faixa ou incorporado na página) e em quais páginas da loja ele deve ser exibido." }
+          ]
+        },
+        {
+          "title": "Escolha a lista de destino",
+          "body": [
+            { "type": "paragraph", "content": "Todo envio vira um contato nessa lista. É por ela que suas campanhas e automações vão encontrar quem se cadastrou." }
+          ]
+        },
+        {
+          "title": "Publique",
+          "body": [
+            { "type": "paragraph", "content": "A partir da publicação o formulário passa a aparecer na loja e a receber envios. Para mudar qualquer coisa depois, crie uma nova versão." }
+          ]
+        }
+      ]
+    },
+    { "type": "divider" },
+    { "type": "heading", "level": 2, "content": "Problemas comuns" },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Editei o formulário e nada mudou na loja",
+          "answer": [
+            { "type": "paragraph", "content": "Formulário publicado não é editado no lugar: as alterações entram em uma nova versão, que só passa a valer depois de publicada. Confira se a versão publicada é a que você editou." }
+          ]
+        },
+        {
+          "question": "O formulário não aparece no site",
+          "answer": [
+            {
+              "type": "list",
+              "style": "ordered",
+              "items": [
+                { "content": "Confirme que o status é Publicado e que ele não está pausado." },
+                { "content": "Confirme que a página em que você está olhando é uma das páginas configuradas para exibição." },
+                { "content": "Abra o console do navegador na loja e verifique se o script da Bevean carregou sem erro." }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Recebi o envio, mas o contato não entrou na lista",
+          "answer": [
+            { "type": "paragraph", "content": "Verifique qual lista está selecionada na configuração do formulário. A submissão fica registrada mesmo quando a lista está errada, então o dado não se perde — mas as automações ligadas à lista certa não disparam." }
+          ]
+        }
+      ]
+    }
+  ]
+}

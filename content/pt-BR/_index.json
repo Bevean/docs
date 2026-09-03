@@ -1,0 +1,18 @@
+{
+  "collections": [
+    "configuracoes",
+    "integracoes",
+    "campanhas",
+    "automacoes",
+    "atendimento",
+    "audiencia",
+    "conteudos",
+    "meu-negocio",
+    "ferramentas",
+    "analises"
+  ],
+  "featured": [
+    "ferramentas/formularios"
+  ],
+  "popular": []
+}

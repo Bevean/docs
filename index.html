@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Inline e antes do CSS de propósito: a página é pré-renderizada, então
+      // decidir o tema depois da hidratação daria flash branco em quem usa tema
+      // escuro. A chave e a lógica precisam bater com src/app/theme-store.ts.
+      try {
+        var stored = localStorage.getItem('bevean-docs-theme')
+        var dark =
+          stored === 'dark' ||
+          (stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.toggle('dark', dark)
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/entry-client.tsx"></script>
+  </body>
+</html>

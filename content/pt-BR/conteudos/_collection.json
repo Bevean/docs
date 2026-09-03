@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../.vscode/schemas/collection.schema.json",
+  "title": "Conteúdos e dados",
+  "description": "Modelos de mensagem, arquivos, produtos, pedidos e carrinhos.",
+  "icon": "database",
+  "sections": [],
+  "articles": []
+}

@@ -1,0 +1,35 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/content/*/*/*.json",
+        "/content/*/*/*/*.json"
+      ],
+      "url": "./.vscode/schemas/article.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/_collection.json"
+      ],
+      "url": "./.vscode/schemas/collection.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/_section.json"
+      ],
+      "url": "./.vscode/schemas/section.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/content/*/_index.json"
+      ],
+      "url": "./.vscode/schemas/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/_ui-map.json"
+      ],
+      "url": "./.vscode/schemas/ui-map.schema.json"
+    }
+  ]
+}

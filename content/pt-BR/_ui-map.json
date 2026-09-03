@@ -1,0 +1,4 @@
+{
+  "tools.forms": { "segments": ["Painel", "Ferramentas", "Formulários"], "href": "/content/forms" },
+  "settings.integrations": { "segments": ["Painel", "Integrações"], "href": "/integrations" }
+}

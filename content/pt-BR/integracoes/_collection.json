@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../.vscode/schemas/collection.schema.json",
+  "title": "Integrações",
+  "description": "Conecte sua loja, seu ERP e suas ferramentas para os dados chegarem sozinhos.",
+  "icon": "plug",
+  "sections": [],
+  "articles": []
+}

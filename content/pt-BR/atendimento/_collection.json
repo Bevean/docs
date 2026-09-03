@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../.vscode/schemas/collection.schema.json",
+  "title": "Atendimento",
+  "description": "Conversas, filas, times e tudo o que acontece no helpdesk.",
+  "icon": "message-circle",
+  "sections": [],
+  "articles": []
+}
