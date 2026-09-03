@@ -486,6 +486,20 @@ no `pt.json`, o valor está no enum, e nenhum código o produz. Antes de virar l
 de tabela, confirme que existe código criando aquele estado — enum e tradução
 sobrevivem a mudanças que apagaram o comportamento.
 
+**O mesmo vale para um recurso inteiro, não só um valor de enum.** Documentando
+Domínios, o registro de DNS "CDN" é criado automaticamente (Cloudflare, SES) mas
+nenhum outro módulo do backend chega a consultá-lo — provisionado, sem consumidor.
+Antes de prometer o que um recurso desbloqueia, confirme que outro lugar do código
+realmente o lê.
+
+**Para achar "o que depende disto", busque pelo TIPO no resto do código — não leia
+só o módulo da própria funcionalidade.** A dependência de Domínios em Canais de
+e-mail e em Links não aparecia em nenhum arquivo do módulo `domain`; apareceu
+buscando `DomainType.EMAIL` e `DomainStatus.VERIFIED` nos módulos que os consomem.
+Isso importa especialmente para as funcionalidades que são "insumo" de outras
+(Canais, Integrações): a lista do que elas destravam está espalhada, e ler só a
+própria tela subestima o alcance real.
+
 ---
 
 ## Por que não há prints
