@@ -16,6 +16,7 @@ import { articleZod, collectionZod, contentIndexZod, sectionZod, uiMapZod } from
 import type { ArticleDoc, Block, HeadingBlock } from '#schema'
 import { computeAnchors } from '../src/content/anchors.ts'
 import { blockToPlainText, getBlockContract } from '../src/content/blocks/blocks-registry.ts'
+import { CONTENT_ICONS } from '../src/app/content-icons.ts'
 import type {
   ArticleMeta,
   CollectionMeta,
@@ -156,6 +157,7 @@ export async function buildContent(): Promise<BuildResult> {
       articles: collection.articles.map((a) => `${collectionSlug}/${a}`),
       articleCount: 0
     }
+    checkIcon(collection.icon, collectionFile)
     collections.push(meta)
     byPath[collectionSlug] = { kind: 'collection', meta }
     for (const alias of collection.aliases) registerAlias(alias, collectionSlug, collectionFile)
@@ -205,6 +207,7 @@ export async function buildContent(): Promise<BuildResult> {
         collection: collectionSlug,
         articles: section.articles.map((a) => `${sectionPath}/${a}`)
       }
+      checkIcon(section.icon, sectionFile)
       sections[sectionPath] = sectionMeta
       byPath[sectionPath] = { kind: 'section', meta: sectionMeta }
       for (const alias of section.aliases) registerAlias(alias, sectionPath, sectionFile)
@@ -287,6 +290,20 @@ export async function buildContent(): Promise<BuildResult> {
     for (const alias of doc.aliases ?? []) registerAlias(alias, docPath, file)
 
     await validateRefs(file, docPath, body)
+  }
+
+  /**
+   * Ícone desconhecido rendereria o fallback em silêncio, e ninguém repara num
+   * ícone genérico. Melhor quebrar o build com a lista do que existe.
+   */
+  function checkIcon(icon: string | undefined, file: string): void {
+    if (!icon || icon in CONTENT_ICONS) return
+    issues.push({
+      file: rel(file),
+      code: 'R012',
+      level: 'error',
+      message: `ícone "${icon}" não existe. Registre-o em src/app/content-icons.ts, ou use um destes: ${Object.keys(CONTENT_ICONS).sort().join(', ')}`
+    })
   }
 
   /** Arquivo no disco que ninguém listou é conteúdo que nunca aparece no site. */

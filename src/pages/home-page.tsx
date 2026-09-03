@@ -1,8 +1,9 @@
-import { ArrowRight, BookOpen, Search } from 'lucide-react'
+import { ArrowRight, Search } from 'lucide-react'
 import { Link } from 'react-router'
 import { useDocumentMeta } from '@/app/use-document-meta.ts'
 import { manifest } from '@/content/content-repository.ts'
 import { useOpenSearch } from '@/search/search-context.tsx'
+import { ContentIconBadge } from '@/app/content-icon.tsx'
 
 const TITLE = 'Central de Ajuda — Bevean'
 const DESCRIPTION = 'Tutoriais, respostas rápidas e guias sobre a plataforma Bevean.'
@@ -43,9 +44,7 @@ export function HomePage() {
               to={collection.url}
               className="group flex flex-col rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-muted/30"
             >
-              <span className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <BookOpen aria-hidden className="size-4.5" />
-              </span>
+              <ContentIconBadge name={collection.icon} />
               <span className="mt-4 flex items-center gap-1.5 font-semibold text-foreground">
                 {collection.title}
                 <ArrowRight

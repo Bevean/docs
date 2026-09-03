@@ -1,8 +1,9 @@
 import { Breadcrumbs } from '@/app/breadcrumbs.tsx'
+import { ContentIconBadge } from '@/app/content-icon.tsx'
 import { useDocumentMeta } from '@/app/use-document-meta.ts'
 import { getCollection, getSection, manifest } from '@/content/content-repository.ts'
 import type { ArticleMeta } from '@/content/content-types.ts'
-import { ArticleList } from './article-list.tsx'
+import { ArticleGrid } from './article-grid.tsx'
 import { NotFoundPage } from './not-found-page.tsx'
 
 /**
@@ -26,7 +27,7 @@ export function SectionPage({ path }: { path: string }) {
     .filter((a): a is ArticleMeta => Boolean(a))
 
   return (
-    <div className="mx-auto max-w-4xl px-6 py-10">
+    <div className="mx-auto max-w-5xl px-6 py-10">
       <Breadcrumbs
         items={[
           { title: 'Todas as coleções', url: '/ajuda' },
@@ -35,18 +36,23 @@ export function SectionPage({ path }: { path: string }) {
         ]}
       />
 
-      <header className="mt-6">
-        <h1 className="text-2xl font-bold tracking-tight text-foreground">{section.title}</h1>
-        {section.description && (
-          <p className="mt-2 text-[15px] leading-7 text-muted-foreground">{section.description}</p>
-        )}
-        <p className="mt-3 text-[13px] font-medium text-primary">
-          {articles.length} {articles.length === 1 ? 'artigo' : 'artigos'}
-        </p>
+      <header className="mt-6 flex items-start gap-3">
+        <ContentIconBadge name={section.icon} className="mt-0.5 size-10" />
+        <div className="min-w-0">
+          <h1 className="text-2xl font-bold tracking-tight text-foreground">{section.title}</h1>
+          {section.description && (
+            <p className="mt-1.5 text-[15px] leading-7 text-muted-foreground">
+              {section.description}
+            </p>
+          )}
+          <p className="mt-2 text-[13px] font-medium text-muted-foreground">
+            {articles.length} {articles.length === 1 ? 'artigo' : 'artigos'}
+          </p>
+        </div>
       </header>
 
       <div className="mt-8">
-        <ArticleList articles={articles} />
+        <ArticleGrid articles={articles} />
       </div>
     </div>
   )
