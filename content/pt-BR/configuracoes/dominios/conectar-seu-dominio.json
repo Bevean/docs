@@ -1,0 +1,322 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar seu domínio",
+  "subtitle": "Do formulário com o nome do domínio até o registro DNS colado no seu provedor — e o que cada grupo de registros faz.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "conectar domínio",
+    "dns",
+    "spf",
+    "dkim",
+    "dmarc",
+    "cname",
+    "provedor"
+  ],
+  "related": [
+    "configuracoes/dominios/visao-geral",
+    "configuracoes/dominios/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é o domínio aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Domínio conectado com sucesso",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na tela de configuração. A partir daí, os canais de e-mail e os links gerados pela Bevean já podem usar o seu domínio."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.domains"
+          }
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "É lá — no Registro.br, GoDaddy, Cloudflare, ou onde seu domínio estiver hospedado — que os registros são colados. Sem esse acesso, não dá para concluir."
+        }
+      ],
+      "title": "Antes de começar, tenha em mãos o acesso ao painel de DNS do seu provedor"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar o domínio"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Digite o domínio e clique em Configurar DNS",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Use o domínio raiz da sua loja, como "
+                },
+                {
+                  "type": "text",
+                  "text": "minhaloja.com.br",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Não é preciso digitar "
+                },
+                {
+                  "type": "text",
+                  "text": "https://",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " nem "
+                },
+                {
+                  "type": "text",
+                  "text": "www.",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " — se colar a URL completa, a Bevean extrai só o domínio."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Copie os registros que aparecem na tela",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "São três grupos — um para e-mail, um para links, um para arquivos internos. O passo seguinte detalha o que cada um contém."
+            }
+          ]
+        },
+        {
+          "title": "Cole os registros no painel de DNS do seu provedor",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Se a Bevean reconhecer o provedor do seu domínio, ela mostra o nome dele e um link direto para o tutorial daquele provedor."
+            }
+          ]
+        },
+        {
+          "title": "Volte à Bevean e clique em Verificar domínio",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A verificação também acontece sozinha nos primeiros dias depois de você configurar o DNS — o clique serve para confirmar na hora, sem esperar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os registros, grupo por grupo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada grupo é uma seção que abre e fecha na tela, com o nome, o tipo e o valor de cada registro — e um botão para copiar cada campo."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Grupo"
+        },
+        {
+          "content": "Registros"
+        },
+        {
+          "content": "Para que serve"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Mail"
+          },
+          {
+            "content": "2 registros de SPF (um MX, um TXT), 1 DKIM, 1 DMARC"
+          },
+          {
+            "content": "Autentica seus e-mails para os provedores (Gmail, Outlook) confiarem neles"
+          }
+        ],
+        [
+          {
+            "content": "Link"
+          },
+          {
+            "content": "1 CNAME"
+          },
+          {
+            "content": "Aponta link.seudominio.com para a infraestrutura de links curtos da Bevean"
+          }
+        ],
+        [
+          {
+            "content": "CDN"
+          },
+          {
+            "content": "1 CNAME"
+          },
+          {
+            "content": "Aponta cdn.seudominio.com para arquivos internos da Bevean. Não exige nenhuma ação além de criar o registro"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O domínio passa a "
+            },
+            {
+              "type": "text",
+              "text": "Verificado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " assim que os dois registros de SPF e o DKIM estiverem certos — o DMARC pode continuar pendente sem travar nada. Ele existe para quem quer uma política extra de proteção contra falsificação de remetente."
+            }
+          ]
+        }
+      ],
+      "title": "O registro DMARC é o único que não precisa ficar verde"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quanto tempo demora"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A propagação de DNS pode levar até 72 horas, embora normalmente seja bem mais rápida. Nesse período, a Bevean reverifica os registros sozinha de tempos em tempos — o clique em "
+        },
+        {
+          "type": "text",
+          "text": "Verificar domínio",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " força uma checagem imediata, mas não é obrigatório usá-lo toda hora."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que impede de concluir"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Mensagem"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Informe um domínio válido para continuar"
+          },
+          {
+            "content": "O campo está vazio ou o domínio digitado não tem um formato válido"
+          }
+        ],
+        [
+          {
+            "content": "Já existe um registro com o valor informado"
+          },
+          {
+            "content": "Esse domínio já está conectado em outra conta Bevean — confirme se você não criou o domínio duas vezes, ou se é o domínio certo"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/dominios/resolver-problemas",
+          "description": "O domínio não verifica, ou o e-mail continua saindo pelo remetente da Bevean."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

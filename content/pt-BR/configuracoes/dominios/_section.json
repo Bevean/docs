@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Domínios",
+  "description": "Conecte o domínio da sua loja para enviar e-mail com a sua marca e ter links curtos que não parecem de outra empresa.",
+  "icon": "globe",
+  "articles": [
+    "visao-geral",
+    "conectar-seu-dominio",
+    "resolver-problemas"
+  ]
+}

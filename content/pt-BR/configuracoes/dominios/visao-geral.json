@@ -1,0 +1,298 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o domínio próprio",
+  "subtitle": "Um domínio conectado muda o remetente do seu e-mail e o endereço dos seus links curtos. Entenda o que cada parte faz antes de configurar.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "domínio",
+    "dns",
+    "e-mail",
+    "links",
+    "deliverability",
+    "marca"
+  ],
+  "related": [
+    "configuracoes/dominios/conectar-seu-dominio",
+    "configuracoes/dominios/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Conectar o domínio da sua loja faz três coisas ao mesmo tempo: seus e-mails saem com menos chance de cair em spam, seus links curtos ficam com o endereço da sua marca em vez de um domínio genérico, e alguns arquivos que a Bevean serve passam pelo seu domínio também. É uma configuração única — ela não pertence a nenhuma ferramenta específica, é a base que outras usam."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.domains"
+          }
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao informar "
+            },
+            {
+              "type": "text",
+              "text": "minhaloja.com.br",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", a Bevean prepara automaticamente "
+            },
+            {
+              "type": "text",
+              "text": "minhaloja.com.br",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " (para e-mail), "
+            },
+            {
+              "type": "text",
+              "text": "link.minhaloja.com.br",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " (para links curtos) e "
+            },
+            {
+              "type": "text",
+              "text": "cdn.minhaloja.com.br",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " (para arquivos internos). Você só cria os registros de DNS uma vez, mas os três aparecem na tela de configuração."
+            }
+          ]
+        }
+      ],
+      "title": "Você conecta um domínio, e ele vira três"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que cada parte destrava"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Parte"
+        },
+        {
+          "content": "O que muda quando está verificada"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "E-mail"
+          },
+          {
+            "content": "Você pode escolher enviar pelo seu próprio domínio nos canais de e-mail. Sem isso, os disparos saem por um remetente da Bevean"
+          }
+        ],
+        [
+          {
+            "content": "Links curtos"
+          },
+          {
+            "content": "Automações, campanhas e o gerador de links passam a usar seu domínio nos links que geram. Sem isso, eles usam um domínio compartilhado da Bevean"
+          }
+        ],
+        [
+          {
+            "content": "Arquivos internos"
+          },
+          {
+            "content": "Infraestrutura interna da Bevean passa a servir alguns arquivos pelo seu domínio. Não exige nenhuma ação sua além de criar o registro"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Onde isso aparece na prática"
+    },
+    {
+      "type": "paragraph",
+      "content": "Duas telas mudam de comportamento sozinhas assim que o domínio de e-mail estiver verificado:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "No canal de "
+            },
+            {
+              "type": "text",
+              "text": "E-mail para atendimento",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", a opção "
+            },
+            {
+              "type": "text",
+              "text": "Enviar respostas pelo meu domínio",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " passa a funcionar. Sem domínio verificado, essa opção fica sem nenhum domínio para escolher, e as respostas continuam saindo por um remetente da Bevean."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "No canal de "
+            },
+            {
+              "type": "text",
+              "text": "E-mail para envio",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", usado nos disparos de campanha, um domínio verificado é "
+            },
+            {
+              "type": "text",
+              "text": "obrigatório",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — não existe opção de remetente compartilhado para esse canal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Um link criado antes de você conectar o domínio sai com o endereço compartilhado da Bevean. O mesmo link, criado depois da verificação, sai com o seu. Não há como converter um link antigo — o que muda é só o que é gerado dali em diante."
+        }
+      ],
+      "title": "Gerador de Links e automações trocam de domínio sozinhos, sem aviso"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Só um domínio por vez"
+    },
+    {
+      "type": "paragraph",
+      "content": "A tela de configuração cuida de um domínio por conta. Para trocar, é preciso excluir o atual e conectar o novo — não existe edição."
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se algum canal de e-mail estiver configurado para enviar pelo seu domínio, excluir o domínio interrompe esses envios. A Bevean não avisa quais canais serão afetados antes de você confirmar a exclusão — confira isso você mesmo antes de excluir."
+        }
+      ],
+      "title": "Excluir o domínio derruba o que depende dele, sem confirmação extra"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que essa tela não faz"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Não registra nem renova o domínio em si — isso continua com o seu provedor (Registro.br, GoDaddy, e outros)."
+        },
+        {
+          "content": "Não substitui o servidor de e-mail da sua loja. É só o remetente dos disparos e respostas feitos pela Bevean."
+        },
+        {
+          "content": "Não converte links já criados para o novo domínio."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/dominios/conectar-seu-dominio",
+          "description": "O passo a passo, da configuração de DNS até o domínio verificado."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

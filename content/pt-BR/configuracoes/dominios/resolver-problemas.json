@@ -1,0 +1,255 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O domínio não verifica",
+  "subtitle": "Roteiros para quando o domínio fica pendente, o e-mail continua saindo pelo remetente da Bevean, ou os links não trocam de endereço.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "não verifica",
+    "pendente",
+    "dns não propagou",
+    "erro",
+    "remetente"
+  ],
+  "related": [
+    "configuracoes/dominios/visao-geral",
+    "configuracoes/dominios/conectar-seu-dominio"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A maioria dos casos cai em três situações: o domínio não fica verde, o e-mail continua saindo pelo remetente da Bevean mesmo com tudo certo, ou os links continuam com o domínio compartilhado."
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "list",
+          "style": "bullet",
+          "items": [
+            {
+              "content": "Já se passaram pelo menos alguns minutos desde que você colou os registros — DNS não é instantâneo."
+            },
+            {
+              "content": "Você copiou o valor de cada registro por inteiro, sem cortar nem adicionar espaço no início ou no fim."
+            },
+            {
+              "content": "Você colou os registros no domínio raiz certo, e não em um subdomínio diferente por engano."
+            }
+          ]
+        }
+      ],
+      "title": "Antes de investigar, confirme três coisas"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O domínio continua Pendente"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "Já se passaram mais de algumas horas desde que os registros foram colados?"
+          },
+          {
+            "content": "A propagação de DNS pode levar até 72h. A Bevean reverifica sozinha nesse período — não é preciso ficar clicando em Verificar domínio"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "O registro DMARC é o único pendente?"
+          },
+          {
+            "content": "Não é problema. O domínio já mostra Verificado sem o DMARC — só o SPF (2 registros) e o DKIM precisam estar certos"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "Os registros foram colados num subdomínio (como www) em vez do domínio raiz?"
+          },
+          {
+            "content": "Registros de e-mail vão no domínio raiz (minhaloja.com.br), não em www.minhaloja.com.br"
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "O painel do seu provedor adicionou o domínio automaticamente no fim do valor?"
+          },
+          {
+            "content": "Alguns painéis de DNS completam o domínio sozinhos quando você cola um valor que já termina com ele, duplicando o final. Confira como o registro ficou salvo no painel, não só o que você colou"
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "Já se passaram mais de 72h com os registros certos?"
+          },
+          {
+            "content": "Clique em Verificar domínio para forçar uma checagem imediata. Se continuar pendente, fale com o suporte"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O e-mail continua saindo por um remetente da Bevean"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O domínio de e-mail está com o selo Verificado?"
+          },
+          {
+            "content": "Enquanto ele estiver Pendente, o canal não consegue usar o seu domínio"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "No canal de E-mail para atendimento, a chave Enviar respostas pelo meu domínio está ligada?"
+          },
+          {
+            "content": "Ela começa desligada. Ligá-la é uma ação separada de conectar o domínio — o domínio verificado só faz a opção ficar disponível para escolher"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O canal é de envio de campanha (E-mail para envio)?"
+          },
+          {
+            "content": "Esse canal só é criado com um domínio verificado — não existe opção de remetente compartilhado nele. Se você conectou o domínio depois de já ter um canal de atendimento configurado, basta editar esse canal e ligar a chave agora que o domínio aparece para escolher"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os links continuam com o domínio compartilhado da Bevean"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O domínio de link está com o selo Verificado?"
+          },
+          {
+            "content": "Enquanto pendente, tudo continua saindo pelo domínio compartilhado"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "O link em questão foi criado antes de o domínio ficar verificado?"
+          },
+          {
+            "content": "Links já criados não mudam de domínio. Só os gerados depois da verificação usam o seu"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "O que aconteceu com o domínio antigo depois que eu troquei?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Ele foi excluído: os registros de e-mail, o link e o CDN dele deixam de funcionar. Não é uma troca — é excluir o antigo e conectar um novo do zero, então o domínio novo passa pelo mesmo processo de verificação."
+            }
+          ]
+        },
+        {
+          "question": "Meu provedor de DNS não está na lista de tutoriais. Isso é um problema?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Sem um provedor reconhecido, a Bevean mostra uma orientação genérica em vez do tutorial específico — os registros a colar são exatamente os mesmos, independente do provedor."
+            }
+          ]
+        },
+        {
+          "question": "Dá para usar um subdomínio no lugar do domínio raiz (ex: loja.minhaempresa.com)?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "O formulário aceita o que você digitar, mas os registros de e-mail (SPF, DKIM, DMARC) são pensados para o domínio raiz da sua loja. Usar um subdomínio que já serve outra finalidade pode conflitar com registros que já existem lá."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

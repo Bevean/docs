@@ -71,5 +71,20 @@
       "Relatórios"
     ],
     "href": "/reports"
+  },
+  "settings.domains": {
+    "segments": [
+      "Configurações",
+      "Domínios"
+    ],
+    "href": "/settings/domains"
+  },
+  "settings.channels.email": {
+    "segments": [
+      "Configurações",
+      "Canais",
+      "E-mail"
+    ],
+    "href": "/settings/channels/email"
   }
 }
