@@ -547,18 +547,38 @@ expõe o método. A config default mente sobre o que realmente roda; confirme
 sempre pelo par worker + método de SDK, não pela lista de recursos marcados como
 habilitados na instalação.
 
-**O helper Python de autoria (`callout()`, `table()`) não aceita uma lista como
-argumento variádico.** `callout(variant, title, *body)` espera os blocos soltos
-(`callout("info", None, p(...), p(...))`), não uma lista (`callout("info", None,
-[p(...)])`) — passar a lista produz um `body` aninhado em dobro que só o
-`content:check` pega (`S005`, tipo de bloco desconhecido). Do mesmo jeito,
-`table(head, rows)` não tem parâmetro de alinhamento: cabeçalho é lista de
+**`callout()` do helper Python aceita as duas formas de chamada, de propósito.**
+O erro de passar uma lista em vez de argumentos soltos (`callout("info", None,
+[p(...)])` em vez de `callout("info", None, p(...), p(...))`) se repetiu por
+escrito — a correção "lembrar a regra" não pegou, então o helper em
+`scratchpad/blocks.py` foi ajustado para desembrulhar `[p(...)]` sozinho. Se
+outro helper do tipo `*args` variádico voltar a dar `S005` de bloco duplamente
+aninhado, o conserto é no helper, não em escrever com mais cuidado.
+
+`table(head, rows)` continua sem parâmetro de alinhamento: cabeçalho é lista de
 strings simples (`["Campo", "Onde encontrar"]`), nunca tupla `("Campo", "left")`
 — isso concatena o texto do rótulo com a palavra do alinhamento no JSON gerado, e
 só aparece revisando o artigo no navegador, porque o `content:check` valida a
 forma do bloco, não o conteúdo visual da célula.
 
----
+**Existe um portão de permissão cruzando TODA seção já escrita e toda seção que
+vier depois — documente-o antes de continuar.** Cada tela citada nos artigos de
+Audiência, Ferramentas, Atendimento etc. é travada por um scope (`read_customer`,
+`read_template`, `read_chat`...) que só existe em alguns dos 6 perfis de acesso
+prontos (`meu-negocio/usuarios-e-permissoes`). Sem esse artigo existir primeiro,
+qualquer outro artigo que diga "abra tal tela" está pressupondo um acesso que a
+pessoa pode não ter, sem avisar. Foi o mesmo raciocínio de insumo que levou a
+escrever Domínios/Canais antes de Integrações — permissão é ainda mais
+transversal, porque trava literalmente tudo, não só uma categoria.
+
+**Perfil de acesso pode "desalinhar" silenciosamente do catálogo.** Um usuário
+guarda os próprios `scopes` no banco; aplicar um perfil pronto só copia o
+catálogo atual para cima dele uma vez — não é um vínculo vivo. Editar o que um
+perfil concede no código não muda quem já tinha esse perfil aplicado (confirmado
+por um comentário de aviso no próprio código-fonte do catálogo). A interface
+reflete isso com a marca "Personalizado" quando o que o usuário tem não bate mais
+com nenhum perfil do catálogo — vale citar esse rótulo pelo nome exato, porque é
+a pista que o leitor vê na tela quando isso acontece com um colega.
 
 ## Por que não há prints
 
