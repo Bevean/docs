@@ -1,0 +1,194 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar sua conta do Instagram",
+  "subtitle": "A autorização usa a conta ativa no navegador, não uma escolhida na hora — veja como confirmar a conta certa antes de conectar.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "conectar instagram",
+    "autorizar",
+    "conta ativa",
+    "direct"
+  ],
+  "related": [
+    "configuracoes/instagram/visao-geral",
+    "configuracoes/instagram/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a conta aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Conectado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista, com o direct chegando no atendimento."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.instagram"
+          }
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A autorização do Instagram não pergunta qual conta usar — ela usa a que já está aberta no navegador no momento. Se for conectar uma conta diferente da que está logada, troque de conta no Instagram primeiro."
+        }
+      ],
+      "title": "A conta que conecta é a que está ativa no navegador"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Conectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Sem nenhuma conta ainda, esse é o único botão na tela."
+            }
+          ]
+        },
+        {
+          "title": "Confirme o aviso sobre qual conta está ativa",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean pergunta se a conta certa já está ativa no Instagram antes de prosseguir — é a chance de trocar de conta se precisar."
+            }
+          ]
+        },
+        {
+          "title": "Autorize na tela do Instagram",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Você sai da Bevean por um instante — a autorização acontece direto no site do Instagram, não numa janela por cima."
+            }
+          ]
+        },
+        {
+          "title": "Volte automaticamente para a Bevean já conectado",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Depois de autorizar, o Instagram te traz de volta e a conta já aparece na lista."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Se a conta já estiver conectada"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tentar conectar de novo uma conta que já está na lista não cria um segundo canal — aparece o aviso "
+        },
+        {
+          "type": "text",
+          "text": "\"Esta conta do Instagram já está conectada. Troque para a outra conta no Instagram e tente novamente.\"",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Se a intenção era mesmo reconectar essa conta (por exemplo, depois de uma falha), use o "
+        },
+        {
+          "type": "text",
+          "text": "Reconectar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no menu daquela linha, não o botão de adicionar conta."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Adicionar mais contas"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar conta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no topo da tela, repete o mesmo fluxo. Cada conta nova exige a mesma confirmação sobre qual conta está ativa no navegador."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/instagram/resolver-problemas",
+          "description": "A conexão falhou, ou apareceu como duplicada."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

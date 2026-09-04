@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Instagram",
+  "description": "Receba e responda direct do Instagram direto no atendimento da Bevean.",
+  "icon": "camera",
+  "articles": [
+    "visao-geral",
+    "conectar-sua-conta",
+    "resolver-problemas"
+  ]
+}

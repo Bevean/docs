@@ -1,0 +1,163 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O Instagram não está funcionando",
+  "subtitle": "Roteiros para quando a conexão falha na autorização, a conta aparece Duplicada, ou desconecta sozinha depois de um tempo.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "falhou",
+    "duplicado",
+    "desconectado",
+    "reconectar",
+    "erro"
+  ],
+  "related": [
+    "configuracoes/instagram/visao-geral",
+    "configuracoes/instagram/conectar-sua-conta"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A maioria dos casos cai em três situações: a conexão falha na hora de autorizar, a conta aparece Duplicada, ou a conta desconecta sozinha depois de um tempo."
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Conectado é o único status em que o canal está de fato recebendo mensagens. Falhou e Desconectado precisam de ação — a diferença entre eles está nas linhas abaixo."
+        }
+      ],
+      "title": "Antes de investigar, confirme o status na lista"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A conexão falhou"
+    },
+    {
+      "type": "paragraph",
+      "content": "Quando a autorização não dá certo, a mensagem exata que o Instagram devolveu aparece destacada no topo da tela — ela é o primeiro lugar a olhar, porque é mais específica do que qualquer roteiro genérico."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "A mensagem de erro está visível no banner do topo?"
+          },
+          {
+            "content": "Leia com atenção — normalmente ela já diz o motivo (permissão negada, conta sem os requisitos do Instagram Business, etc.)"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "Não apareceu nenhuma mensagem específica?"
+          },
+          {
+            "content": "Clique em Reconectar e tente de novo — a tela mostra a orientação padrão quando o motivo exato não vem da Meta"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A conta aparece Duplicada"
+    },
+    {
+      "type": "paragraph",
+      "content": "Esse status aparece quando a mesma conta do Instagram já está conectada em outro canal — geralmente porque alguém tentou conectar de novo em vez de usar a conta já existente."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A Bevean mantém o canal mais antigo funcionando e marca o mais novo como Duplicado. Remover o duplicado não afeta o canal original — ele continua recebendo mensagens normalmente."
+        }
+      ],
+      "title": "Remova o canal duplicado, não o original"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A conta desconectou sozinha"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "A autorização foi revogada diretamente no Instagram (em Aplicativos e sites conectados, ou trocando a senha da conta)."
+        },
+        {
+          "content": "A conta trocou de tipo (por exemplo, deixou de ser uma conta comercial/criador) e perdeu acesso à API de mensagens."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Nos dois casos, a solução é a mesma: clique em "
+        },
+        {
+          "type": "text",
+          "text": "Reconectar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " naquela linha e autorize de novo."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Reconectar cria uma conta nova na lista?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Reconectar atualiza a autorização do canal que já existe — não duplica a linha, mesmo que a conta ativa no navegador no momento seja diferente. Se a conta autorizada for diferente da que o canal já tinha, a Bevean recusa a troca."
+            }
+          ]
+        },
+        {
+          "question": "Desconectei sem querer. Perco o histórico de conversas?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. O histórico fica guardado; só a conexão com o Instagram precisa ser refeita para voltar a receber mensagens novas."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

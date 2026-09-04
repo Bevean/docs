@@ -1,0 +1,155 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o Instagram",
+  "subtitle": "Cada conta conectada vira um canal próprio. Entenda os status e por que você não precisa renovar a conexão manualmente.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "instagram",
+    "direct",
+    "conta",
+    "duplicado"
+  ],
+  "related": [
+    "configuracoes/instagram/conectar-sua-conta",
+    "configuracoes/instagram/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O canal do Instagram traz o direct da sua conta para dentro do atendimento da Bevean. Cada conta conectada vira um canal separado."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.instagram"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Uma conta, um canal"
+    },
+    {
+      "type": "paragraph",
+      "content": "Não existe agrupamento — cada conta do Instagram que você conecta aparece como uma linha própria na lista, com o nome de usuário e uma foto de perfil."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os status de uma conta"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Conectado"
+          },
+          {
+            "content": "Funcionando — o direct chega no atendimento"
+          }
+        ],
+        [
+          {
+            "content": "Desconectado"
+          },
+          {
+            "content": "A autorização caiu. É preciso reconectar"
+          }
+        ],
+        [
+          {
+            "content": "Falhou"
+          },
+          {
+            "content": "A conexão não deu certo. A mensagem exata do problema aparece destacada no topo da tela"
+          }
+        ],
+        [
+          {
+            "content": "Duplicado"
+          },
+          {
+            "content": "Essa conta já está conectada em outro canal. Veja resolver problemas"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Você não precisa manter a conexão \"viva\" manualmente"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A autorização do Instagram tem prazo, mas a Bevean renova sozinha antes de vencer — não é preciso clicar em nada periodicamente para a conexão continuar funcionando. O botão "
+        },
+        {
+          "type": "text",
+          "text": "Atualizar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " existe para conferir o status na hora, não para manter a conexão."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que essa tela não faz"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Não configura se o nome do usuário aparece na mensagem, nem o assistente de IA — essas opções ficam na configuração do atendimento, não aqui."
+        },
+        {
+          "content": "Não publica nem agenda posts, stories ou reels — é só o canal de mensagens diretas."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/instagram/conectar-sua-conta",
+          "description": "Autorizar a conta e conectar o primeiro canal."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}
