@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Alterar os seus dados de acesso",
+  "subtitle": "Nome, e-mail, telefone e o login com o Google — dados que só você altera na sua própria conta.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "minha conta",
+    "meus dados",
+    "login com google"
+  ],
+  "related": [
+    "meu-negocio/usuarios-e-permissoes/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "É onde você altera os seus próprios dados de cadastro — nome, e-mail e telefone. Ninguém mais pode alterar esses dados por você, nem quem tem Acesso total."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.account"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que dá para alterar"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Primeiro nome e sobrenome"
+            },
+            {
+              "type": "text",
+              "text": "E-mail (usado para entrar na Bevean)"
+            },
+            {
+              "type": "text",
+              "text": "Telefone"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A senha não é alterada nessa tela — use o fluxo de \"esqueci minha senha\" na tela de login."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Login com o Google"
+    },
+    {
+      "type": "paragraph",
+      "content": "Nessa mesma tela você pode conectar a sua conta Google, para entrar na Bevean sem digitar senha, ou desconectar se já tiver conectado antes."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/usuarios-e-permissoes/visao-geral",
+          "description": "Como funcionam usuários e permissões."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

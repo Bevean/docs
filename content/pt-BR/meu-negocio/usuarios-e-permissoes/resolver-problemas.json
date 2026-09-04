@@ -1,0 +1,161 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Um colega não vê uma tela, ou não consegue entrar",
+  "subtitle": "Menu acinzentado, mensagem de permissão negada e os avisos ao salvar um usuário.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "permissão negada",
+    "não vejo",
+    "não consigo salvar"
+  ],
+  "related": [
+    "meu-negocio/usuarios-e-permissoes/visao-geral",
+    "meu-negocio/usuarios-e-permissoes/gerenciar-usuarios"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A maioria dos casos de \"não consigo ver\" ou \"não consigo fazer\" é o perfil de acesso do usuário não incluindo aquela área. Veja em "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam usuários e permissões",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/usuarios-e-permissoes/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " o que cada perfil libera antes de seguir os sintomas abaixo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"O menu está acinzentado e não clica em nada\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "É o comportamento esperado quando o perfil do usuário não inclui aquela área — a Bevean não mostra nenhum aviso ou mensagem nesse caso, só desabilita visualmente o item. Confira o perfil da pessoa em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.users"
+          }
+        },
+        {
+          "type": "text",
+          "text": " e ajuste, se for necessário."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Fui direto pelo link e apareceu 'Você não tem permissão para acessar esta área'\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "É a mesma causa do item acima — o usuário tentou acessar diretamente uma tela que o perfil dele não libera. Ajuste o perfil em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.users"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo salvar o novo usuário — apareceu 'Selecione um perfil base'\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Falta escolher um dos 6 perfis prontos, ou marcar Avançado, antes de salvar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo desativar ou remover um usuário\""
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Situação"
+        },
+        {
+          "content": "O que verificar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "É a sua própria conta"
+          },
+          {
+            "content": "Você não pode desativar nem remover a própria conta por essa tela. Peça para outra pessoa com Acesso total fazer isso."
+          }
+        ],
+        [
+          {
+            "content": "É a conta do titular"
+          },
+          {
+            "content": "O titular da conta nunca aparece com opção de editar ou remover, para ninguém."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Como troco a senha de um colega?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não é possível redefinir a senha de outra pessoa por essa tela. A própria pessoa usa a opção \"esqueci minha senha\" na tela de login."
+            }
+          ]
+        },
+        {
+          "question": "O e-mail que eu tentei cadastrar já existe — o que faço?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean recusa o cadastro e mostra o erro retornado. Confira se essa pessoa já tem uma conta com outro perfil antes de tentar cadastrar de novo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

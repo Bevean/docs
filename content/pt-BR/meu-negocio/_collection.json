@@ -3,6 +3,8 @@
   "title": "Meu negócio",
   "description": "Conta, usuários, permissões, vendedores, lojas e faturas.",
   "icon": "building-2",
-  "sections": [],
+  "sections": [
+    "usuarios-e-permissoes"
+  ],
   "articles": []
 }

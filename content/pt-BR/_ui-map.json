@@ -124,5 +124,19 @@
       "Integrações"
     ],
     "href": "/integrations/list"
+  },
+  "settings.users": {
+    "segments": [
+      "Configurações",
+      "Usuários"
+    ],
+    "href": "/settings/users"
+  },
+  "settings.account": {
+    "segments": [
+      "Configurações",
+      "Minha Conta"
+    ],
+    "href": "/settings/account"
   }
 }

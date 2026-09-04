@@ -1,0 +1,186 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Adicionar um usuário",
+  "subtitle": "O passo a passo para convidar alguém da sua equipe e definir o que essa pessoa pode ver e fazer.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "adicionar usuário",
+    "convidar",
+    "senha"
+  ],
+  "related": [
+    "meu-negocio/usuarios-e-permissoes/visao-geral",
+    "meu-negocio/usuarios-e-permissoes/gerenciar-usuarios"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é um novo login pronto para você compartilhar com a pessoa da sua equipe. Só quem tem Acesso total (o perfil Administrador geral, ou um perfil Avançado com Acesso total marcado) vê o botão de adicionar usuário."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.users"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar usuário",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Antes de começar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam usuários e permissões",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/usuarios-e-permissoes/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O passo a passo"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Adicionar usuário"
+        },
+        {
+          "title": "Preencha Primeiro nome, Sobrenome, Telefone e E-mail"
+        },
+        {
+          "title": "Defina a senha",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Digite uma senha (mínimo 6 caracteres) ou clique em "
+                },
+                {
+                  "type": "text",
+                  "text": "Gerar senha",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " para a Bevean criar uma automaticamente."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escolha o acesso",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Selecione um dos 6 perfis prontos, ou marque "
+                },
+                {
+                  "type": "text",
+                  "text": "Avançado",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " para montar as permissões manualmente. Veja o que cada perfil libera em "
+                },
+                {
+                  "type": "text",
+                  "text": "como funcionam usuários e permissões",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "meu-negocio/usuarios-e-permissoes/visao-geral"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Clique em salvar"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Compartilhe o acesso com segurança"
+    },
+    {
+      "type": "paragraph",
+      "content": "Depois de salvar, a Bevean mostra o link de acesso, o e-mail e a senha que você definiu — é a única vez que a senha aparece na tela. Copie essas informações e envie para a pessoa por um canal seguro (não por e-mail em texto puro, por exemplo); a Bevean não reenvia isso depois."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/usuarios-e-permissoes/gerenciar-usuarios",
+          "description": "Mude o perfil, desative ou remova um usuário."
+        },
+        {
+          "ref": "meu-negocio/usuarios-e-permissoes/resolver-problemas",
+          "description": "Um colega não vê uma tela, ou não consegue entrar."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

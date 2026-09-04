@@ -1,0 +1,164 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Gerenciar um usuário",
+  "subtitle": "Trocar o perfil de acesso, suspender ou remover um usuário da sua equipe.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "editar usuário",
+    "desativar usuário",
+    "remover usuário",
+    "excluir usuário"
+  ],
+  "related": [
+    "meu-negocio/usuarios-e-permissoes/visao-geral",
+    "meu-negocio/usuarios-e-permissoes/minha-conta"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Depois que um usuário é criado, você pode trocar o perfil de acesso dele, suspender o acesso temporariamente ou remover o usuário. Nome, sobrenome, telefone e e-mail só são alterados pela própria pessoa, em "
+        },
+        {
+          "type": "text",
+          "text": "Minha Conta",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/usuarios-e-permissoes/minha-conta"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — não por aqui."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.users"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Trocar o perfil de acesso"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique no ícone de editar na linha do usuário e escolha um novo perfil, ou marque Avançado para ajustar as permissões manualmente. Veja o aviso sobre trocar de perfil em "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam usuários e permissões",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/usuarios-e-permissoes/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Suspender o acesso (desativar)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Desligue a chave "
+        },
+        {
+          "type": "text",
+          "text": "Usuário ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na tela de edição. O cadastro continua existindo e pode ser reativado a qualquer momento — nada é apagado."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Você não pode desativar a própria conta por aqui, nem a conta do titular da conta. Peça para outra pessoa com Acesso total fazer isso, se for o seu caso."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Remover um usuário"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clique no ícone de lixeira na linha do usuário e confirme."
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Remover um usuário apaga o vínculo dele com a sua conta Bevean. Não há como restaurar depois de confirmar."
+        }
+      ],
+      "title": "Essa ação não pode ser desfeita"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/usuarios-e-permissoes/resolver-problemas",
+          "description": "Um colega não vê uma tela, ou não consegue entrar."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

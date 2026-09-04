@@ -1,0 +1,282 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam usuários e permissões",
+  "subtitle": "Cada pessoa da equipe tem seu próprio login, e um perfil de acesso decide o que ela vê e pode fazer.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "usuários",
+    "permissões",
+    "perfil de acesso",
+    "acesso total"
+  ],
+  "related": [
+    "meu-negocio/usuarios-e-permissoes/adicionar-um-usuario",
+    "meu-negocio/usuarios-e-permissoes/gerenciar-usuarios"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada pessoa da sua equipe entra na Bevean com o próprio login, e o que ela vê e pode fazer depende do "
+        },
+        {
+          "type": "text",
+          "text": "perfil de acesso",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " que você atribui a ela."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.users"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O titular da conta"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quem criou a conta Bevean é o "
+        },
+        {
+          "type": "text",
+          "text": "titular",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O titular aparece separado na lista de usuários, sempre com acesso completo, e não pode ser editado nem excluído por ninguém — inclusive por outros usuários com Acesso total."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Perfis de acesso"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ao adicionar um usuário, você escolhe um destes 6 perfis prontos:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Perfil"
+        },
+        {
+          "content": "O que ele permite"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Administrador geral"
+          },
+          {
+            "content": "Acesso completo à operação e às configurações, inclusive ao gerenciamento de usuários."
+          }
+        ],
+        [
+          {
+            "content": "Marketing"
+          },
+          {
+            "content": "Gerencia campanhas, automações, segmentos, conteúdo e ferramentas, e consulta contatos, RFV e relatórios. Não acessa as rotinas de atendimento."
+          }
+        ],
+        [
+          {
+            "content": "Administrador Atendimento"
+          },
+          {
+            "content": "Configura o atendimento e o assistente, atende conversas e consulta relatórios."
+          }
+        ],
+        [
+          {
+            "content": "Gestor Atendimento"
+          },
+          {
+            "content": "Configura o atendimento, atende conversas e consulta relatórios. Não configura o assistente."
+          }
+        ],
+        [
+          {
+            "content": "Atendente"
+          },
+          {
+            "content": "Atende e organiza conversas no pipeline, sem configurar o atendimento."
+          }
+        ],
+        [
+          {
+            "content": "Vendedor"
+          },
+          {
+            "content": "Atende conversas e gerencia contatos e cards no pipeline."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "\"Administrador geral\" é o único perfil com Acesso total — ele nunca é bloqueado por uma tela nova que a Bevean lance, mesmo sem estar na lista acima. Os outros 5 perfis só alcançam o que está descrito na tabela."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Acesso avançado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se nenhum dos 6 perfis prontos serve, marque "
+        },
+        {
+          "type": "text",
+          "text": "Avançado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ao adicionar ou editar um usuário e escolha manualmente o que ele pode ver (visualizar) e alterar (gerenciar) em cada área — ou marque "
+        },
+        {
+          "type": "text",
+          "text": "Acesso total",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para dar a ele o mesmo alcance do Administrador geral."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se você aplicar um dos 6 perfis prontos sobre um usuário que já tinha acesso avançado, a Bevean substitui as permissões dele pelas do perfil escolhido. A tela avisa antes de confirmar."
+        }
+      ],
+      "title": "Trocar de perfil apaga as permissões avançadas"
+    },
+    {
+      "type": "paragraph",
+      "content": "Quando as permissões de um usuário não batem mais exatamente com nenhum perfil pronto — porque foram ajustadas manualmente, ou porque o perfil que ele tinha mudou depois — a lista de usuários mostra a marca \"Personalizado\" ao lado do nome do perfil."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Estados de um usuário"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Estado"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Ativo"
+          },
+          {
+            "content": "Acessa o painel normalmente."
+          }
+        ],
+        [
+          {
+            "content": "Inativo"
+          },
+          {
+            "content": "O acesso está suspenso, mas o cadastro continua existindo — pode ser reativado a qualquer momento."
+          }
+        ],
+        [
+          {
+            "content": "Convidado"
+          },
+          {
+            "content": "O usuário foi criado mas ainda não fez o primeiro login."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/usuarios-e-permissoes/adicionar-um-usuario",
+          "description": "Convide alguém da sua equipe."
+        },
+        {
+          "ref": "meu-negocio/usuarios-e-permissoes/gerenciar-usuarios",
+          "description": "Mude o perfil, desative ou remova um usuário."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

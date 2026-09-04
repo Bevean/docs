@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Usuários e permissões",
+  "description": "Adicione a sua equipe e controle o que cada pessoa pode ver e fazer no painel.",
+  "icon": "users",
+  "articles": [
+    "visao-geral",
+    "adicionar-um-usuario",
+    "gerenciar-usuarios",
+    "minha-conta",
+    "resolver-problemas"
+  ]
+}
