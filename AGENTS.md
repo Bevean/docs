@@ -590,25 +590,39 @@ Antes de escrever do zero, procure a fonte nos repositórios irmãos:
 
 Rótulo de tela **sempre** vem do `pt.json` do módulo, nunca da memória.
 
-### O help center antigo (Featurebase) existe e ainda é linkado
+### Existem pelo menos QUATRO sistemas de ajuda na história da Bevean
 
-Além do Mintlify (aposentado) e da Central de Ajuda que este projeto substitui, existe
-um **terceiro** sistema, `bevean.featurebase.app`, com artigos que o produto atual
-ainda referencia em botões "Saiba mais" e "Ver tutorial" — descoberto documentando
-Domínios, onde os 8 guias de provedor de DNS moram lá.
+Além do Mintlify (aposentado) e deste projeto: `bevean.featurebase.app` (achado
+documentando Domínios — os 8 guias de provedor de DNS moram lá) e **o próprio
+`ajuda.bevean.com` — o site que este projeto substitui —, que continua NO AR** e
+ainda é o destino de "artigo completo" linkado de dentro do produto para várias
+integrações (achado documentando Integrações: Bling e outras apontam pra lá
+diretamente; o botão de instruções do Shopify passa por um quarto domínio,
+`help-bevean.lovable.app`, que redireciona pro `ajuda.bevean.com`). Ele tem
+conteúdo bem mais completo que os textinhos de 3 linhas dentro do produto — vale
+a pena buscar lá antes de escrever do zero, com o mesmo cuidado abaixo.
 
-**Antes de usar qualquer coisa de lá como fonte, confira a data de "última
-atualização" e compare com o código.** Dos 8 guias de provedor encontrados, 3
-descreviam um fluxo que não existe mais (ativação manual pedindo para "avisar a
-equipe" — o produto de hoje verifica sozinho), e os outros 5 tinham a contagem de
-registros desatualizada (a Bevean adicionou um registro depois que os guias foram
-escritos). Datado de 6 meses já é motivo para desconfiar do que é específico da
-Bevean.
+**Antes de usar qualquer coisa de uma fonte externa, confira a data de "última
+atualização" e compare com o código.** Nos guias de DNS, 3 de 8 descreviam um
+fluxo que não existe mais (ativação manual pedindo para "avisar a equipe" — o
+produto de hoje verifica sozinho); nas integrações, 3 de 10 artigos do
+`ajuda.bevean.com` estavam desatualizados do mesmo jeito (um wizard de 6 etapas
+que virou 3, um campo de credencial que não existe mais). Datado de 6 meses já é
+motivo para desconfiar do que é específico da Bevean.
 
-O que sobrevive é o que é específico do PAINEL DO TERCEIRO (nome de menu do
-Cloudflare, da Registro.br, etc.) — isso muda pouco e não dá para confirmar em
-nenhum código nosso. Separe as duas coisas: reescreva o lado Bevean a partir do
-código atual, e só reaproveite o caminho de navegação de dentro do painel alheio.
+**A fonte mais recente nem sempre é a mais completa — compare campo por campo.**
+Documentando Integrações, o textinho ATUAL dentro do produto (mais novo que o
+artigo do `ajuda.bevean.com`) omitia um campo de credencial inteiro em duas
+integrações (VTEX: faltava o campo "Account"; Yampi: não nomeava os três campos
+que o formulário realmente pede). A fonte mais nova venceu no fluxo geral, mas a
+mais antiga tinha o detalhe que a mais nova cortou — o desempate final é sempre o
+código do formulário de credenciais, nunca a data de qual texto é mais recente.
+
+O que sobrevive de uma fonte externa é o que é específico do PAINEL DO TERCEIRO
+(nome de menu da Cloudflare, da Registro.br, da plataforma de e-commerce etc.) —
+isso muda pouco e não dá para confirmar em nenhum código nosso. Separe as duas
+coisas: reescreva o lado Bevean a partir do código atual, e só reaproveite o
+caminho de navegação de dentro do painel alheio.
 
 ### Quando não existe doc interna do assunto
 
