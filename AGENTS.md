@@ -530,6 +530,34 @@ sem `docLink` (que quebraria o build) até o artigo nascer — e a volta para co
 em link, quando a seção seguinte foi escrita, é o que fecha o ciclo. Ao escrever uma
 seção nova, vale checar se algum artigo anterior já a menciona em texto plano.
 
+**O texto de instrução pode prometer um TIPO de campo que o formulário real nem
+tem** — não só omitir um campo, o caso já registrado acima. Documentando as
+integrações Linx e Magazord, o texto de instrução dentro do produto diz "gere um
+token de acesso", mas o formulário de credenciais de verdade (`*-auth.tsx`) pede
+três campos completamente diferentes: Conta, Usuário e Senha (autenticação HTTP
+Basic, confirmada no client da SDK). Documentar "token" aqui teria descrito uma
+tela que não existe. O desempate é sempre o componente do formulário, nunca o
+texto de instrução — mesmo quando o texto parece mais recente ou mais claro.
+
+**Confirme que o recurso marcado como sincronizado tem worker de verdade, não só
+config habilitada.** A tela de conexão da Magazord liga "Pedidos" por padrão
+(`getDefaultInstallConfig`), mas não existe nenhum arquivo de sincronização de
+pedido para essa integração no `migrator` — só de cliente — e o client da SDK nem
+expõe o método. A config default mente sobre o que realmente roda; confirme
+sempre pelo par worker + método de SDK, não pela lista de recursos marcados como
+habilitados na instalação.
+
+**O helper Python de autoria (`callout()`, `table()`) não aceita uma lista como
+argumento variádico.** `callout(variant, title, *body)` espera os blocos soltos
+(`callout("info", None, p(...), p(...))`), não uma lista (`callout("info", None,
+[p(...)])`) — passar a lista produz um `body` aninhado em dobro que só o
+`content:check` pega (`S005`, tipo de bloco desconhecido). Do mesmo jeito,
+`table(head, rows)` não tem parâmetro de alinhamento: cabeçalho é lista de
+strings simples (`["Campo", "Onde encontrar"]`), nunca tupla `("Campo", "left")`
+— isso concatena o texto do rótulo com a palavra do alinhamento no JSON gerado, e
+só aparece revisando o artigo no navegador, porque o `content:check` valida a
+forma do bloco, não o conteúdo visual da célula.
+
 ---
 
 ## Por que não há prints
