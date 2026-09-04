@@ -1,0 +1,152 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar o Digital Manager Guru",
+  "subtitle": "O User Token gerado na Guru e o cadastro manual do webhook — sem isso os avisos de venda não chegam.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "digital manager guru",
+    "guru",
+    "webhook",
+    "user token"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O Digital Manager Guru não avisa a Bevean sozinho quando algo acontece — é preciso configurar um webhook manualmente, dentro do painel da Guru, depois de conectar."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 1 — Gerar o token na Guru"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Na Guru, acesse Meu Perfil > Tokens API > Adicionar"
+        },
+        {
+          "title": "Copie o User Token gerado"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 2 — Conectar na Bevean"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Cole o User Token"
+        },
+        {
+          "title": "Clique em Conectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean mostra uma URL de webhook. Guarde essa URL — ela é usada no próximo passo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 3 — Configurar o webhook na Guru"
+    },
+    {
+      "type": "paragraph",
+      "content": "A Guru não tem uma API para criar o webhook automaticamente — esse cadastro é sempre manual."
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "No painel da Guru, acesse Webhooks > Novo"
+        },
+        {
+          "title": "Cole a URL de webhook mostrada pela Bevean no passo anterior"
+        },
+        {
+          "title": "Salve o webhook"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se você desconectar essa integração mais tarde, remova o webhook manualmente também no painel da Guru — a Bevean não consegue apagá-lo automaticamente."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Contatos, Transações (vendas avulsas e assinaturas), Produtos, Carrinhos abandonados, Cupons e Leads."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

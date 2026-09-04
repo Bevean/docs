@@ -1,0 +1,125 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar a CISS Live",
+  "subtitle": "O token de acesso gerado no painel da CISS já identifica sua conta — nenhum outro dado é necessário.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "cisslive",
+    "ciss live",
+    "token"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a loja CISS Live aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista de integrações."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Credenciais"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A conexão pede só o "
+        },
+        {
+          "type": "text",
+          "text": "Token de acesso",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", gerado em Central de Integrações / CISS Live API dentro do painel da CISS. Não é preciso informar CNPJ nem outro identificador da empresa — o token já identifica sua conta."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clientes, Pedidos, Produtos e Estoque."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

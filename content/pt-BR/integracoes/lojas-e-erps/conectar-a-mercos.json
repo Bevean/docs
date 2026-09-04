@@ -1,0 +1,140 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar a Mercos",
+  "subtitle": "Application Token e Company Token do painel da Mercos, com a opção de usar o ambiente de testes (Sandbox).",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "mercos",
+    "application token",
+    "company token"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a loja Mercos aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista de integrações. Conectar também vincula o app da Bevean dentro do próprio painel da Mercos."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Credenciais"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Onde encontrar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Application Token"
+          },
+          {
+            "content": "Painel da Mercos, em Minha Conta > Sistema > Integração."
+          }
+        ],
+        [
+          {
+            "content": "Company Token"
+          },
+          {
+            "content": "Painel da Mercos, na mesma tela."
+          }
+        ],
+        [
+          {
+            "content": "Ambiente"
+          },
+          {
+            "content": "Produção ou Sandbox — deixe em Produção, a menos que a Mercos tenha te orientado a usar Sandbox para testes."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clientes, Pedidos e Produtos (com categorias)."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar a Wake",
+  "subtitle": "A API Key que a Wake gera para colar na Bevean — o aviso automático de pedidos é registrado sozinho ao conectar.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "wake",
+    "api key"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a loja Wake aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista de integrações."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar na Bevean"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "No painel da Wake, gere ou copie a API Key da loja"
+        },
+        {
+          "title": "Cole a API Key na Bevean"
+        },
+        {
+          "title": "Clique em Conectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean já registra o aviso automático (webhook) de pedidos nesse momento — não é preciso configurar nada manualmente na Wake para isso."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clientes, Leads, Pedidos e Produtos. Veja em "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " como desligar algum depois de conectado."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

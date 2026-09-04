@@ -1,0 +1,245 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar a Hotmart",
+  "subtitle": "Credenciais geradas na Hotmart e o cadastro manual do webhook em cada produto — sem isso os avisos de venda não chegam.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "hotmart",
+    "webhook",
+    "client id",
+    "client secret"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A Hotmart não avisa a Bevean sozinha quando algo acontece — é preciso configurar um webhook manualmente, dentro do painel da Hotmart, depois de conectar."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 1 — Gerar as credenciais na Hotmart"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Na Hotmart, acesse Ferramentas > Credenciais Hotmart > Criar credencial"
+        },
+        {
+          "title": "Copie os três valores gerados",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Client ID, Client Secret e o token Basic — copie o Basic exatamente como a Hotmart mostra. Ele não é simplesmente a combinação do Client ID com o Client Secret: gerar essa combinação por conta própria pode não funcionar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 2 — Conectar na Bevean"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Cole Client ID, Client Secret e o token Basic"
+        },
+        {
+          "title": "Escolha o ambiente",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Produção ou Sandbox, de acordo com a credencial gerada."
+            }
+          ]
+        },
+        {
+          "title": "Clique em Conectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A Bevean mostra uma URL de webhook (algo como "
+                },
+                {
+                  "type": "text",
+                  "text": "https://connector.bevean.com/webhooks/hotmart?...",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "). Guarde essa URL — ela é usada no próximo passo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 3 — Configurar o webhook na Hotmart"
+    },
+    {
+      "type": "paragraph",
+      "content": "A Hotmart não tem uma API para criar o webhook automaticamente — esse cadastro é sempre manual, feito uma vez para cada produto."
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Na Hotmart, acesse Produtos > [seu produto] > Ferramentas > Webhook"
+        },
+        {
+          "title": "Cole a URL de webhook mostrada pela Bevean no passo anterior"
+        },
+        {
+          "title": "Marque os eventos",
+          "body": [
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Compra aprovada"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Compra completa"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Compra cancelada"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Reembolso"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Chargeback"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Boleto impresso"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Compra atrasada"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Compra expirada"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Carrinho abandonado"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Compra em contestação"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Salve o webhook"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Esse evento não aparece em alguns exemplos de configuração, mas a Bevean usa ele para marcar o pedido como em contestação. Sem marcar, esse status nunca chega."
+        }
+      ],
+      "title": "Não pule \"Compra em contestação\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Se você vende mais de um produto na Hotmart, repita o cadastro do webhook em cada produto."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Pedidos (vendas), Produtos e Carrinhos abandonados. Não há lista de clientes própria — clientes chegam junto com os pedidos."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

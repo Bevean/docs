@@ -1,0 +1,159 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar a Linx",
+  "subtitle": "Conta, usuário e senha de acesso à API da Linx.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "linx",
+    "conta",
+    "usuário",
+    "senha"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a loja Linx aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista de integrações."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Credenciais"
+    },
+    {
+      "type": "paragraph",
+      "content": "A conexão pede 3 dados de acesso à API:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Onde encontrar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Conta (Account)"
+          },
+          {
+            "content": "O identificador da sua loja na Linx — normalmente aparece no endereço do painel da Linx."
+          }
+        ],
+        [
+          {
+            "content": "Usuário"
+          },
+          {
+            "content": "Usuário de acesso à API, cadastrado com o suporte ou o administrador da conta Linx."
+          }
+        ],
+        [
+          {
+            "content": "Senha"
+          },
+          {
+            "content": "Senha desse usuário de API."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Solicite os 3 dados ao suporte ou ao administrador da sua conta Linx antes de começar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clientes, Pedidos e Carrinhos abandonados."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A recuperação de carrinho abandonado da Linx funciona de um jeito diferente das outras integrações: ao clicar no link enviado pela Bevean, a loja reconhece o cliente por um cookie de sessão, não por um código no próprio link."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

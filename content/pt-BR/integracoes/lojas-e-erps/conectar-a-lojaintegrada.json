@@ -1,0 +1,132 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar a Loja Integrada",
+  "subtitle": "Aplicação e Chave API do painel Configurações > Chave para API.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "loja integrada",
+    "aplicação",
+    "chave api"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a loja Loja Integrada aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista de integrações."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Credenciais"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Onde encontrar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Aplicação"
+          },
+          {
+            "content": "Código interno mostrado ao lado da chave de API, em Configurações > Chave para API no painel da Loja Integrada."
+          }
+        ],
+        [
+          {
+            "content": "Chave API"
+          },
+          {
+            "content": "A chave de API na mesma tela."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Newsletter, Clientes, Pedidos e Produtos."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

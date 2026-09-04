@@ -1,0 +1,159 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar a Magazord",
+  "subtitle": "Conta, usuário e senha de acesso à API da Magazord — hoje só clientes são sincronizados.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "magazord",
+    "conta",
+    "usuário",
+    "senha"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a loja Magazord aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista de integrações."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Credenciais"
+    },
+    {
+      "type": "paragraph",
+      "content": "A Magazord não usa token — a conexão pede 3 dados de acesso à API:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Onde encontrar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Conta (Account)"
+          },
+          {
+            "content": "O subdomínio da sua loja na Magazord."
+          }
+        ],
+        [
+          {
+            "content": "Usuário"
+          },
+          {
+            "content": "Usuário de acesso à API, cadastrado no painel da Magazord."
+          }
+        ],
+        [
+          {
+            "content": "Senha"
+          },
+          {
+            "content": "Senha desse usuário de API."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Solicite os 3 dados ao suporte ou ao administrador da sua conta Magazord antes de começar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clientes."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Pedidos ainda não são sincronizados por essa integração, mesmo aparecendo como opção na tela de conexão. Se você depende de pedidos da Magazord para automações ou relatórios, fale com o suporte antes de conectar."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}
