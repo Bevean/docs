@@ -1,0 +1,239 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Uma integração não está sincronizando",
+  "subtitle": "Roteiros para quando a integração fica Inativa, um tipo de dado nunca chega, ela trava em Conectado sem virar Ativa, ou você precisa desconectar sem perder o histórico.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "inativo",
+    "não sincroniza",
+    "conectado mas não ativo",
+    "desconectar",
+    "erro"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A maioria dos casos cai em quatro situações: a integração fica Inativa, um tipo de dado nunca chega, a integração fica Conectada mas nunca vira Ativa, ou você não sabe se pode desconectar sem perder o que já foi importado."
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ativo é o único status em que os dados de fato chegam. Veja o significado de cada um em "
+            },
+            {
+              "type": "text",
+              "text": "como funcionam as integrações",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Antes de investigar, confirme o status na lista de integrações"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A integração está Inativa"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "A credencial ainda é válida na plataforma de origem?"
+          },
+          {
+            "content": "Uma senha trocada, um token revogado ou um usuário removido do lado de lá derruba a conexão. Use Testar conexão para confirmar"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "O app da Bevean foi desinstalado ou desautorizado na plataforma?"
+          },
+          {
+            "content": "Precisa reconectar do zero, gerando credenciais novas"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "Já clicou em Tentar novamente, no aviso do topo da tela?"
+          },
+          {
+            "content": "É o primeiro passo antes de investigar mais fundo"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Um tipo de dado nunca chega"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "Esse tipo está ligado na aba de Sincronização?"
+          },
+          {
+            "content": "Vem tudo ligado por padrão, mas pode ter sido desligado em algum momento"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "É Pedidos, e Clientes ou Produtos ainda não sincronizaram nenhuma vez?"
+          },
+          {
+            "content": "Pedidos esperam os dois sincronizarem primeiro — não é travamento, é a ordem esperada"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "Esse tipo falhou 3 vezes seguidas?"
+          },
+          {
+            "content": "Depois da terceira falha a Bevean para de tentar sozinha. Use Sincronizar agora para retomar manualmente"
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "A plataforma realmente tem esse dado (ex: carrinho abandonado, cupom)?"
+          },
+          {
+            "content": "Nem toda plataforma oferece todos os tipos — confira o que a sua integração sincroniza no artigo específico dela"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A integração ficou Conectada e nunca virou Ativa"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Acontece só nas integrações que autorizam direto na plataforma (Shopify, Bling, Tiny): depois de autorizar, ainda falta voltar à Bevean e clicar em "
+        },
+        {
+          "type": "text",
+          "text": "Salvar e continuar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na tela de configuração de sincronização. Sem esse clique, a integração fica parada em Conectado."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Desconectar sem perder o histórico"
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Remover a integração encerra só a conexão — clientes, pedidos e produtos que já chegaram continuam na Bevean. O que para é a chegada de dado novo."
+        }
+      ],
+      "title": "Desconectar não apaga o que já foi importado"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Reconectar depois de desconectar traz os dados de novo, ou duplica?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "O histórico que já está na Bevean não se duplica ao reconectar — a identificação de cada registro pela plataforma de origem evita isso."
+            }
+          ]
+        },
+        {
+          "question": "Trocar de plataforma (por exemplo, sair da Bagy e migrar para a Shopify) mantém o histórico?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "O histórico de cada plataforma fica vinculado a ela. Desconectar a antiga não apaga o que ela já trouxe; conectar a nova traz o dela — os dois convivem na mesma base de clientes e pedidos."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Lojas e ERPs",
+  "description": "Conecte a plataforma da sua loja ou o seu ERP para os dados de clientes, pedidos e produtos chegarem sozinhos.",
+  "icon": "plug",
+  "articles": [
+    "como-funcionam-as-integracoes",
+    "conectar-a-shopify",
+    "conectar-a-nuvemshop",
+    "conectar-a-vtex",
+    "conectar-a-tray",
+    "conectar-a-bagy",
+    "conectar-a-vnda",
+    "conectar-a-wbuy",
+    "conectar-a-yampi",
+    "conectar-o-bling",
+    "conectar-o-tiny",
+    "resolver-problemas"
+  ]
+}

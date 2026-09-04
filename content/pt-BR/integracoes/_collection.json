@@ -3,6 +3,8 @@
   "title": "Integrações",
   "description": "Conecte sua loja, seu ERP e suas ferramentas para os dados chegarem sozinhos.",
   "icon": "plug",
-  "sections": [],
+  "sections": [
+    "lojas-e-erps"
+  ],
   "articles": []
 }

@@ -118,5 +118,11 @@
       "Messenger"
     ],
     "href": "/settings/channels/messenger"
+  },
+  "integrations": {
+    "segments": [
+      "Integrações"
+    ],
+    "href": "/integrations/list"
   }
 }

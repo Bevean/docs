@@ -1,0 +1,322 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar a Shopify",
+  "subtitle": "Criar o app personalizado, marcar os escopos certos e autorizar — e o que acontece se você desinstalar o app pelo lado da Shopify depois.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "shopify",
+    "app personalizado",
+    "scopes",
+    "client id",
+    "client secret"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a loja Shopify aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista de integrações, com clientes, pedidos e produtos chegando na Bevean."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para entender o que sincroniza e quando."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "É lá que ficam as credenciais que a Bevean pede. Se nunca criou um app personalizado antes, é dentro do próprio admin da Shopify, em Configurações › Apps e canais de vendas › Desenvolver apps."
+        }
+      ],
+      "title": "Você vai precisar criar um aplicativo personalizado no admin da Shopify"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Criar o app na Shopify"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "No admin da Shopify, crie ou abra o aplicativo personalizado da loja"
+        },
+        {
+          "title": "Configure a URL de redirecionamento",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "https://crm.bevean.com/api/integrations/shopify",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Marque estas permissões (scopes) no app",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "read_customers",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "read_orders",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "read_products",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "read_discounts",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "read_inventory",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "read_locations",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "write_pixels",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e "
+                },
+                {
+                  "type": "text",
+                  "text": "write_discounts",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Copie o domínio da loja (termina em .myshopify.com), o Client ID e o Client Secret do aplicativo"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar na Bevean"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Informe as credenciais na Bevean e clique em Conectar"
+        },
+        {
+          "title": "Autorize o aplicativo na tela da Shopify"
+        },
+        {
+          "title": "Volte automaticamente para a Bevean, já sincronizando",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean registra os avisos automáticos (webhooks) de cliente, pedido, produto, carrinho, estoque e cupom nesse momento — não é preciso configurar nada manualmente na Shopify para isso."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clientes, Pedidos, Produtos, Carrinho abandonado, Cupons e Estoque, todos com aviso automático — veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para o que cada um significa e como desligar algum."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Se você desinstalar o app pelo lado da Shopify"
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Quando a Shopify avisa que o app foi desinstalado (ou que a loja pediu exclusão de dados), a Bevean desativa a integração e remove os dados pessoais dos clientes e pedidos vindos dela — nome, e-mail, telefone e endereço somem, mantendo só o necessário para histórico. Não é possível desfazer. Se a intenção era só pausar a sincronização, desligue os tipos de dado na Bevean em vez de desinstalar o app na Shopify."
+        }
+      ],
+      "title": "Desinstalar na Shopify anonimiza os clientes na Bevean"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, autorização que não conclui, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

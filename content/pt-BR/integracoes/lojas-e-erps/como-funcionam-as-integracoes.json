@@ -1,0 +1,357 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam as integrações",
+  "subtitle": "O caminho de conectar, o que cada tipo de dado sincroniza, quando a importação realmente acontece, e o que cada status significa.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "integração",
+    "sincronização",
+    "conectar",
+    "webhook",
+    "status"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Uma integração conecta a plataforma da sua loja ou o seu ERP à Bevean, para clientes, pedidos e produtos chegarem sozinhos — sem planilha, sem digitar nada duas vezes."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar, em geral"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O caminho é o mesmo para qualquer plataforma: clique em "
+        },
+        {
+          "type": "text",
+          "text": "Explorar integrações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", escolha a sua e clique em "
+        },
+        {
+          "type": "text",
+          "text": "Instalar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Isso abre uma tela com três blocos — instruções específicas daquela plataforma, o que sincronizar, e as credenciais."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A partir daí, o fluxo se divide em dois tipos, dependendo da plataforma:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Direto"
+          },
+          {
+            "content": "Você cola a credencial (token, chave de API) e clica em Conectar. Numa única ação, a Bevean valida e já deixa a integração pronta para sincronizar"
+          }
+        ],
+        [
+          {
+            "content": "Autorização (OAuth)"
+          },
+          {
+            "content": "Você clica em Conectar e é levado para a própria plataforma (Shopify, Bling, Tiny) para autorizar. Ao voltar, ainda falta um passo: clicar em Salvar e continuar"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Depois de autorizar na plataforma, a tela volta para a Bevean já com as permissões concedidas — mas a integração só passa a sincronizar depois desse clique final."
+        }
+      ],
+      "title": "No fluxo de autorização, esquecer o \"Salvar e continuar\" deixa a integração pela metade"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que sincroniza, e o que você pode desligar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada plataforma sincroniza um conjunto próprio de dados — nem toda integração lida com carrinho abandonado, por exemplo. Os tipos mais comuns:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo de dado"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Clientes"
+          },
+          {
+            "content": "As pessoas cadastradas na loja"
+          }
+        ],
+        [
+          {
+            "content": "Pedidos"
+          },
+          {
+            "content": "As vendas, com status de pagamento e entrega"
+          }
+        ],
+        [
+          {
+            "content": "Produtos"
+          },
+          {
+            "content": "O catálogo, com variações e estoque quando a plataforma informa"
+          }
+        ],
+        [
+          {
+            "content": "Carrinho abandonado"
+          },
+          {
+            "content": "Quem começou a comprar e não terminou"
+          }
+        ],
+        [
+          {
+            "content": "Newsletter"
+          },
+          {
+            "content": "Quem se inscreveu para receber novidades, sem necessariamente ter comprado"
+          }
+        ],
+        [
+          {
+            "content": "Cupons"
+          },
+          {
+            "content": "Os descontos criados na própria plataforma"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Todos vêm ligados por padrão quando você conecta. Desligar um tipo não apaga o que já foi importado — só para de trazer coisa nova daquele tipo a partir dali. Religar retoma de onde parou."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se as três estiverem ligadas, a Bevean só começa a importar pedidos depois que clientes e produtos já tiverem rodado ao menos uma vez — é assim que ela evita um pedido chegar antes de existir cliente ou produto para vincular. Isso pode fazer a lista de Pedidos parecer atrasada nos primeiros minutos, e é esperado."
+        }
+      ],
+      "title": "Pedidos esperam Clientes e Produtos sincronizarem primeiro"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando a sincronização acontece"
+    },
+    {
+      "type": "paragraph",
+      "content": "Conectar não importa os dados na mesma hora. O que acontece de imediato é diferente do que acontece depois:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Em algumas plataformas, a Bevean registra um aviso automático (webhook) assim que você conecta — isso faz pedidos e clientes novos chegarem quase em tempo real dali em diante."
+        },
+        {
+          "content": "Em outras, não existe esse aviso automático, e a atualização depende só do ciclo periódico da Bevean."
+        },
+        {
+          "content": "Em qualquer uma das duas, a primeira importação de histórico começa no próximo ciclo — não no instante em que você clica em Conectar."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Ao conectar, a Bevean busca todo o histórico disponível na plataforma, não só o que vier a partir de hoje. Uma loja com anos de pedidos pode levar mais tempo na primeira rodada do que nas seguintes."
+        }
+      ],
+      "title": "A primeira sincronização traz o histórico inteiro, não só as vendas novas"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os status de uma integração"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pendente"
+          },
+          {
+            "content": "Você clicou em Instalar, mas ainda não preencheu as credenciais"
+          }
+        ],
+        [
+          {
+            "content": "Conectado"
+          },
+          {
+            "content": "As credenciais foram validadas. No fluxo de autorização, falta clicar em Salvar e continuar"
+          }
+        ],
+        [
+          {
+            "content": "Ativo"
+          },
+          {
+            "content": "Sincronizando de verdade — é o único status em que os dados realmente chegam"
+          }
+        ],
+        [
+          {
+            "content": "Inativo"
+          },
+          {
+            "content": "Parou de funcionar. Aparece um aviso no topo da tela com a opção de tentar de novo"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão "
+        },
+        {
+          "type": "text",
+          "text": "Testar conexão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", na tela de detalhe, confirma se as credenciais ainda são válidas — mas um teste que falha não muda o status sozinho, só avisa na hora."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Um tipo de dado que falha algumas vezes seguidas é retomado automaticamente nos próximos ciclos. Depois de 3 falhas seguidas, ela para de insistir sozinha — nesse ponto, o botão "
+            },
+            {
+              "type": "text",
+              "text": "Sincronizar agora",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " é o que retoma manualmente."
+            }
+          ]
+        }
+      ],
+      "title": "Depois de falhar 3 vezes seguidas, a Bevean para de tentar sozinha"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, sincronização travada, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

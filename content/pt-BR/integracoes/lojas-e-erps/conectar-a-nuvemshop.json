@@ -1,0 +1,155 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar a Nuvemshop",
+  "subtitle": "Sem credencial para copiar — é um aplicativo que você autoriza direto na Nuvemshop, e a sincronização começa sozinha.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "nuvemshop",
+    "app",
+    "autorizar"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a loja Nuvemshop aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista de integrações."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A Nuvemshop conecta como um aplicativo instalado pela própria loja da Nuvemshop, não por token colado à mão — mais parecido com instalar um app na Shopify do que com preencher um formulário."
+        }
+      ],
+      "title": "Não existe credencial para copiar aqui"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Instalar e depois em Conectar"
+        },
+        {
+          "title": "Você é levado para a Nuvemshop para autorizar o aplicativo da Bevean"
+        },
+        {
+          "title": "Volte automaticamente para a Bevean, já sincronizando",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean registra os avisos automáticos (webhooks) nesse momento — não é preciso configurar nada manualmente na Nuvemshop."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Veja em "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " o que cada tipo de dado significa e como desligar algum depois de conectado."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "A autorização não conclui, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

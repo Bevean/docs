@@ -1,0 +1,234 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar a Bagy",
+  "subtitle": "Bagy e Bagy 3.0 pedem credenciais diferentes — confira qual é a sua. Inclui como trocar o token quando ele para de funcionar.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "bagy",
+    "bagy 3.0",
+    "token",
+    "testar credencial"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a loja Bagy aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista de integrações."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Bagy e Bagy 3.0 são versões diferentes da plataforma, com telas de credencial diferentes. Se você não sabe qual usa, confira com o suporte da Bagy antes de seguir um dos dois caminhos abaixo."
+        }
+      ],
+      "title": "Existem duas versões — confirme qual é a sua antes de começar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Bagy"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "No painel da Bagy, acesse Configurações › API e Webhooks"
+        },
+        {
+          "title": "Gere uma nova API com o nome \"Bevean\""
+        },
+        {
+          "title": "Copie o Token de acesso gerado"
+        },
+        {
+          "title": "Informe o token na Bevean e clique em Conectar"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Bagy 3.0"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "No painel da Bagy 3.0, gere as credenciais de integração"
+        },
+        {
+          "title": "Copie os dois valores",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "URL da API",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e "
+                },
+                {
+                  "type": "text",
+                  "text": "Código de Autorização",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Informe os dois valores na Bevean e clique em Conectar"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Veja em "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " o que cada tipo de dado significa."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Trocar o token depois de já conectado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Se o usuário que gerou o token original foi alterado ou removido na Bagy, a conexão para de funcionar e o token precisa ser trocado:"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Gere um novo token no painel da Bagy, do mesmo jeito que da primeira vez"
+        },
+        {
+          "title": "Na tela de detalhe da integração, cole o novo token e clique em Testar credencial"
+        },
+        {
+          "title": "Só depois do teste dar certo o botão Salvar libera",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "É assim de propósito — a Bevean não deixa salvar uma credencial sem confirmar que ela funciona antes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, ou dado que não chega."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}
