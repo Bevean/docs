@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Messenger",
+  "description": "Receba e responda mensagens da sua página do Facebook direto no atendimento da Bevean.",
+  "icon": "messages-square",
+  "articles": [
+    "visao-geral",
+    "conectar-uma-pagina",
+    "resolver-problemas"
+  ]
+}

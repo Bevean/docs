@@ -1,0 +1,108 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O Messenger não está funcionando",
+  "subtitle": "Roteiros para quando a conexão falha, nenhuma página nova aparece, uma página é marcada como Duplicada, ou o reconectar não encontra a página certa.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "falhou",
+    "duplicado",
+    "página não disponível",
+    "reconectar",
+    "erro"
+  ],
+  "related": [
+    "configuracoes/messenger/visao-geral",
+    "configuracoes/messenger/conectar-uma-pagina"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A maioria dos casos cai em quatro situações: a conexão falha na autorização, nenhuma página nova aparece para conectar, a página aparece Duplicada, ou reconectar não encontra a página."
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Conectado é o único status em que o canal está de fato recebendo mensagens. Os outros precisam de uma ação diferente cada um."
+        }
+      ],
+      "title": "Antes de investigar, confirme o status na lista"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A conexão falhou"
+    },
+    {
+      "type": "paragraph",
+      "content": "Quando a autorização não dá certo, a mensagem exata que o Facebook devolveu aparece destacada no topo da tela — ela é o primeiro lugar a olhar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Nenhuma página nova para conectar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Aparece quando todas as páginas que você administra no Facebook já estão conectadas na Bevean — não é um erro, é o esperado. Se a página que você queria conectar não é sua, ou você não é administrador dela no Facebook, ela nem chega a aparecer na lista de autorização."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A página aparece Duplicada"
+    },
+    {
+      "type": "paragraph",
+      "content": "Esse status aparece quando a mesma página do Facebook já está conectada em outro canal — geralmente porque alguém tentou conectar de novo em vez de usar o canal já existente."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A Bevean mantém o canal mais antigo funcionando e marca o mais novo como Duplicado. Remover o duplicado não afeta o canal original."
+        }
+      ],
+      "title": "Remova o canal duplicado, não o original"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Reconectar diz que a página não está disponível"
+    },
+    {
+      "type": "paragraph",
+      "content": "Essa mensagem aparece quando, na autorização de reconexão, você não marcou a página que aquele canal específico usa — só marcou outras, ou nenhuma."
+    },
+    {
+      "type": "paragraph",
+      "content": "A solução é reconectar de novo e, na tela do Facebook, garantir que a página certa esteja marcada entre as autorizadas."
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Desconectei uma página sem querer. Perco o histórico de conversas?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. O histórico fica guardado; só a conexão com o Facebook precisa ser refeita para voltar a receber mensagens novas."
+            }
+          ]
+        },
+        {
+          "question": "Preciso reautorizar todas as páginas quando reconecto uma?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Reconectar é por canal — a tela de autorização do Facebook pode até mostrar todas as suas páginas, mas só a página vinculada àquele canal específico é atualizada."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

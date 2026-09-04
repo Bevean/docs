@@ -1,0 +1,151 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o Messenger",
+  "subtitle": "É por página, não por conta — quem administra várias páginas do Facebook pode conectar todas de uma vez. Entenda os status de cada uma.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "messenger",
+    "página do facebook",
+    "duplicado"
+  ],
+  "related": [
+    "configuracoes/messenger/conectar-uma-pagina",
+    "configuracoes/messenger/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O canal do Messenger traz as mensagens da sua página do Facebook para dentro do atendimento da Bevean. É por página, não por conta do Facebook — quem administra várias páginas pode conectar mais de uma."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.messenger"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Uma página, um canal"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada página conectada vira uma linha própria na lista, com o nome e a foto da página. Se você administra várias páginas na mesma conta do Facebook, pode conectar todas de uma vez — o passo a passo está em "
+        },
+        {
+          "type": "text",
+          "text": "conectar uma ou mais páginas",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "configuracoes/messenger/conectar-uma-pagina"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os status de uma página"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Conectado"
+          },
+          {
+            "content": "Funcionando — as mensagens da página chegam no atendimento"
+          }
+        ],
+        [
+          {
+            "content": "Desconectado"
+          },
+          {
+            "content": "A autorização caiu. É preciso reconectar"
+          }
+        ],
+        [
+          {
+            "content": "Falhou"
+          },
+          {
+            "content": "A conexão não deu certo. A mensagem exata do problema aparece destacada no topo da tela"
+          }
+        ],
+        [
+          {
+            "content": "Duplicado"
+          },
+          {
+            "content": "Essa página já está conectada em outro canal. Veja resolver problemas"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que essa tela não faz"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Não configura se o nome do usuário aparece na mensagem, nem o assistente de IA — essas opções ficam na configuração do atendimento, não aqui."
+        },
+        {
+          "content": "Não publica nem agenda posts na página — é só o canal de mensagens."
+        },
+        {
+          "content": "Não conecta a página sozinha: cada uma exige autorização explícita, mesmo que você administre várias na mesma conta do Facebook."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/messenger/conectar-uma-pagina",
+          "description": "Autorizar o Facebook e escolher quais páginas conectar."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

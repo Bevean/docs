@@ -1,0 +1,165 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar uma ou mais páginas",
+  "subtitle": "Autorize uma vez no Facebook e escolha quais páginas conectar — dá para marcar várias de uma vez, e o resultado avisa se alguma não deu certo.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "conectar messenger",
+    "autorizar facebook",
+    "várias páginas",
+    "selecionar páginas"
+  ],
+  "related": [
+    "configuracoes/messenger/visao-geral",
+    "configuracoes/messenger/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é a página aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Conectado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista, com as mensagens do Messenger chegando no atendimento."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.messenger"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Conectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Sem nenhuma página ainda, esse é o único botão na tela."
+            }
+          ]
+        },
+        {
+          "title": "Autorize na tela do Facebook",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Você sai da Bevean por um instante — a autorização acontece direto no Facebook, não numa janela por cima. Na tela da Meta, marque as páginas que quer atender pela Bevean."
+            }
+          ]
+        },
+        {
+          "title": "Volte automaticamente para a Bevean",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O Facebook te traz de volta assim que a autorização termina."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Se você autorizou mais de uma página"
+    },
+    {
+      "type": "paragraph",
+      "content": "Com uma página só autorizada, a Bevean conecta ela direto, sem perguntar nada. Com mais de uma, aparece uma lista para você escolher — dá para marcar quantas quiser e conectar todas de uma vez."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se todas as páginas que você tem no Facebook já estiverem conectadas, a lista vem vazia — não há nada novo para adicionar."
+        }
+      ],
+      "title": "Páginas já conectadas não aparecem na lista de escolha"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se uma das páginas selecionadas falhar, as outras continuam sendo conectadas normalmente. A mensagem no final diz quantas de fato conectaram, para você saber se precisa tentar de novo com alguma específica."
+        }
+      ],
+      "title": "Conectar várias ao mesmo tempo pode terminar parcial"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Adicionar mais páginas depois"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar página",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no topo da tela, repete o mesmo fluxo — autorize de novo e escolha entre as páginas que ainda não estão conectadas."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/messenger/resolver-problemas",
+          "description": "A conexão falhou, apareceu duplicada, ou o reconectar não encontra a página."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}
