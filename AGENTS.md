@@ -580,6 +580,27 @@ reflete isso com a marca "Personalizado" quando o que o usuário tem não bate m
 com nenhum perfil do catálogo — vale citar esse rótulo pelo nome exato, porque é
 a pista que o leitor vê na tela quando isso acontece com um colega.
 
+**Célula de tabela com `docLink` no meio do texto: passe uma lista direto no
+`table()`, não construa o nó à mão.** `table(head, rows)` já trata cada célula
+com `_content()`, que aceita uma lista misturando string solta e `doc(...)` —
+`["texto antes ", doc("um link", "artigo/ref"), " texto depois"]` funciona sem
+nenhum `t()` explícito. Documentando Audiência, isso foi descoberto tarde demais
+duas vezes: a tentativa de "corrigir depois" reescrevendo a célula já escrita
+(`row[1] = [t(...), [...]]`) produzia um `content` mal formado (`Invalid input`)
+porque o formato esperado é `{"content": [...]}`, não a lista crua. Mais simples
+escrever a lista certa dentro do `rows=[[...]]` do `table()` desde a primeira
+vez do que corrigir depois.
+
+**Texto fixo do produto pode divergir do dado dinâmico exibido ao lado dele —
+não documente o número fixo sem checar o dinâmico.** Na Matriz RFV, a frase de
+alerta da tela de processamento cita um requisito fixo ("100 pedidos, 90 dias")
+mas as duas linhas de checklist bem acima, na mesma tela, mostram os valores
+reais vindos da API (e o backend usa outro default, 50). Quando um número
+aparece tanto em prosa fixa quanto em um contador/checklist dinâmico na mesma
+tela, o dinâmico é a fonte — a prosa pode ter ficado presa numa versão antiga.
+Nesses casos, descreva o mecanismo (o que a tela mostra) em vez de cravar o
+número, e flague a divergência como achado, não como conteúdo.
+
 ## Por que não há prints
 
 Decisão do MVP: **nenhum artigo leva captura de tela.** A regra não tem exceção,
