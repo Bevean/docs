@@ -622,7 +622,27 @@ só em Acesso total), mas nenhuma das 5 telas aparece na tabela de regras do
 diferente de Usuários, que trava dos dois lados. Ao documentar qualquer tela em
 Configurações, vale conferir essa tabela e o item do menu correspondente antes
 de assumir que "só quem tem permissão vê isso", porque a maioria das telas
-novas não segue esse padrão ainda.
+novas não segue esse padrão ainda. (Mas não é regra universal — Modelos,
+Arquivos, Produtos, Pedidos e Carrinhos, documentados logo depois, têm a trava
+nos dois lados. Confira sempre; não generalize o achado de uma tela pra outra.)
+
+**Uma premissa que você mesmo escreveu no prompt de pesquisa pode estar
+errada — o agente que a recebe deve verificar, não repetir.** Ao pedir a
+pesquisa de Modelos, passei como contexto uma memória antiga ("macro nunca é
+enviado à Meta"). O agente leu o código atual, achou que isso mudou — uma
+macro global do WhatsApp Oficial HOJE pode, sim, ser aprovada pela Meta pra
+reabrir conversa fora da janela de 24h — e corrigiu a premissa no relatório em
+vez de aceitá-la. Isso é o comportamento certo: instruções de pesquisa podem
+carregar contexto desatualizado sem querer, e "confirme X" não deveria nunca
+virar "assuma X".
+
+**Botão de estado vazio pode ter rota errada, copiada de outra tela.** O
+"Criar Carrinho" da lista de Carrinhos abre a criação de um Modelo — claramente
+um leftover de boilerplate, já que não existe (nem nunca existiu) cadastro
+manual de carrinho no produto. Isso só aparece testando o estado vazio de
+verdade (ou lendo o handler do botão), não o fluxo comum de uma tela com dados.
+Nunca documente uma ação "Criar X" só porque o rótulo do botão promete —
+confirme para onde ele navega.
 
 ## Por que não há prints
 
