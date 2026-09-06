@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Conversas",
+  "description": "A caixa de entrada do atendimento: mensagens, notas internas, e as ações do dia a dia.",
+  "icon": "inbox",
+  "articles": [
+    "visao-geral",
+    "enviar-mensagens-e-notas",
+    "gerenciar-uma-conversa",
+    "acompanhar-o-sla",
+    "resolver-problemas"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Usar uma mensagem rápida no chat",
+  "subtitle": "A barra \"/\" para buscar, navegar e combinar mais de uma mensagem rápida na mesma resposta.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "barra de mensagem rápida",
+    "atalho de chat"
+  ],
+  "related": [
+    "atendimento/mensagens-rapidas/criar-uma-mensagem-rapida",
+    "atendimento/conversas/enviar-mensagens-e-notas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Digite \"/\" no início da mensagem, ou logo depois de um espaço, para abrir a busca de mensagens rápidas."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como buscar"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Continue digitando depois da barra para filtrar pelo nome — pode incluir espaço (\"/kit gpl\" encontra \"Kit Saúde GPL\")."
+        },
+        {
+          "content": "Use as setas para navegar na lista e Enter para escolher, ou Esc para fechar."
+        },
+        {
+          "content": "A busca mistura as mensagens do time com as suas pessoais — cada uma com um selo \"Minha\" quando for pessoal."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Uma mensagem com um anexo que o canal atual não sabe enviar (um vídeo no Messenger, por exemplo) simplesmente não aparece na lista."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Combinar mais de uma na mesma mensagem"
+    },
+    {
+      "type": "paragraph",
+      "content": "Dá para usar uma mensagem rápida, continuar escrevendo, e usar \"/\" de novo para inserir outra — cada uma substitui só o texto \"/busca\" daquele ponto, sem apagar o que você já tinha escrito."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Mensagens rápidas",
+  "description": "Respostas prontas para o time usar no chat, sem digitar a mesma coisa toda vez.",
+  "icon": "zap",
+  "articles": [
+    "visao-geral",
+    "criar-uma-mensagem-rapida",
+    "usar-no-chat",
+    "aprovar-na-meta",
+    "resolver-problemas"
+  ]
+}

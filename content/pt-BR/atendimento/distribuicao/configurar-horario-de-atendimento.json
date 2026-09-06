@@ -1,0 +1,84 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Configurar o horário de atendimento",
+  "subtitle": "As janelas de horário por canal, e o que acontece com uma conversa que chega fora do expediente.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "horário de atendimento",
+    "janela de atendimento",
+    "fuso horário"
+  ],
+  "related": [
+    "atendimento/distribuicao/visao-geral",
+    "atendimento/distribuicao/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Define quando cada canal distribui conversas automaticamente — fora do horário, elas ficam na fila até o expediente abrir."
+    },
+    {
+      "type": "paragraph",
+      "content": "Configurável por canal, dentro de Distribuição."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como configurar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ligue "
+        },
+        {
+          "type": "text",
+          "text": "Definir horário",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e monte as janelas de cada dia da semana. Sem essa opção ligada, o canal atende 24 horas por dia, todos os dias."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Uma janela pode cruzar a meia-noite (por exemplo, 22:00–02:00)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que acontece fora do horário"
+    },
+    {
+      "type": "paragraph",
+      "content": "A conversa que chega fora da janela configurada não é distribuída — fica esperando na fila até o próximo horário aberto, quando é liberada automaticamente."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Isso vale só para a distribuição automática. O cliente pode mandar mensagem a qualquer hora, e um atendente pode pegar a conversa manualmente na fila mesmo fora do horário."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Fuso horário"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada configuração de horário tem seu próprio fuso — o padrão é o horário de Brasília."
+    }
+  ]
+}

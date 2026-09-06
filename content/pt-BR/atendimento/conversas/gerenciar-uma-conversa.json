@@ -1,0 +1,135 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Gerenciar uma conversa",
+  "subtitle": "Resolver, transferir, lembrar depois ou colocar em espera — e quando o motivo de encerramento é obrigatório.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "resolver conversa",
+    "transferir conversa",
+    "tabulação",
+    "motivo de encerramento"
+  ],
+  "related": [
+    "atendimento/conversas/visao-geral",
+    "atendimento/distribuicao/configurar-times-e-visibilidade"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "As ações de uma conversa ficam no menu de contexto (clique com o botão direito, ou o menu que aparece ao passar o mouse) e na barra de ações no topo."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As ações"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Ação"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Resolver"
+          },
+          {
+            "content": "Encerra a conversa. Pode pedir um motivo — veja abaixo."
+          }
+        ],
+        [
+          {
+            "content": "Reabrir conversa"
+          },
+          {
+            "content": "Só aparece em conversa resolvida. Quem reabre vira o novo responsável."
+          }
+        ],
+        [
+          {
+            "content": "Transferir"
+          },
+          {
+            "content": "Passa a conversa para outro atendente ou para um time."
+          }
+        ],
+        [
+          {
+            "content": "Lembrar em"
+          },
+          {
+            "content": "Some da sua lista e volta sozinha no prazo escolhido (20 min, 1h, 6h, 12h, ou uma data específica)."
+          }
+        ],
+        [
+          {
+            "content": "Espera (sem prazo)"
+          },
+          {
+            "content": "Tira a conversa da sua lista até o cliente responder de novo. Bloqueada se o cliente foi quem falou por último — responda antes."
+          }
+        ],
+        [
+          {
+            "content": "Marcar como lida/não lida"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Favoritar"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Fixar no topo"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Marcadores"
+          },
+          {
+            "content": "Adicione ou gerencie marcadores da conversa."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O motivo do encerramento (tabulação)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Se a sua conta tem motivos de encerramento cadastrados, escolher um é obrigatório para resolver — a não ser que o seu time tenha a opção \"Resolver sem tabular\" ativada (pensada para times de vendas). Sem nenhum motivo cadastrado na conta, \"Resolver\" encerra direto, sem perguntar nada."
+    },
+    {
+      "type": "paragraph",
+      "content": "Alguns motivos pedem um formulário extra (por exemplo, número do pedido) antes de confirmar."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Resolver em massa (selecionando várias conversas de uma vez) não funciona com um motivo que exige formulário — nesse caso, resolva uma por vez."
+        }
+      ]
+    }
+  ]
+}

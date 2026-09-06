@@ -1,0 +1,119 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o pipeline",
+  "subtitle": "O quadro de conversas por etapa, as 3 etapas fixas de todo pipeline, e como mover uma conversa.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "pipeline",
+    "kanban",
+    "etapas",
+    "atendimento"
+  ],
+  "related": [
+    "atendimento/pipeline/gerenciar-etapas-e-pipelines"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O pipeline mostra as conversas num quadro, organizadas por etapa — como um Kanban."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.pipeline"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As 3 etapas de todo pipeline"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Etapa"
+        },
+        {
+          "content": "Tipo"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Aguardando atendimento"
+          },
+          {
+            "content": "Entrada — fixa, sempre a primeira."
+          }
+        ],
+        [
+          {
+            "content": "Em atendimento"
+          },
+          {
+            "content": "Etapa do meio — essa você pode editar ou substituir."
+          }
+        ],
+        [
+          {
+            "content": "Encerrado"
+          },
+          {
+            "content": "Saída — fixa, sempre a última."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Entrada e Saída são fixas e não podem ser excluídas. Só as etapas do meio são suas para criar, renomear ou remover."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Mover uma conversa de etapa"
+    },
+    {
+      "type": "paragraph",
+      "content": "Arraste o card para outra coluna, ou abra a conversa e use o seletor de etapa no painel de informações do cliente."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Mais de um pipeline"
+    },
+    {
+      "type": "paragraph",
+      "content": "Dá para ter vários pipelines — cada um com seu próprio conjunto de etapas do meio — e trocar entre eles pelo seletor no topo do quadro."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "atendimento/pipeline/gerenciar-etapas-e-pipelines",
+          "description": "Crie etapas e novos pipelines."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

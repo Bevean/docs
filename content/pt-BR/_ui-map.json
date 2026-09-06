@@ -236,5 +236,57 @@
       "Campanhas"
     ],
     "href": "/broadcast"
+  },
+  "helpdesk.inbox": {
+    "segments": [
+      "Atendimento"
+    ],
+    "href": "/helpdesk"
+  },
+  "helpdesk.pipeline": {
+    "segments": [
+      "Atendimento",
+      "Pipeline"
+    ],
+    "href": "/helpdesk/pipeline"
+  },
+  "helpdesk.my_quick_replies": {
+    "segments": [
+      "Atendimento",
+      "Minhas mensagens rápidas"
+    ],
+    "href": "/my-quick-replies"
+  },
+  "helpdesk.settings.quick_replies": {
+    "segments": [
+      "Atendimento",
+      "Configurações",
+      "Mensagens rápidas"
+    ],
+    "href": "/helpdesk/settings/quick-replies"
+  },
+  "helpdesk.settings.pipelines": {
+    "segments": [
+      "Atendimento",
+      "Configurações",
+      "Pipelines"
+    ],
+    "href": "/helpdesk/settings/pipelines"
+  },
+  "helpdesk.settings.distribution": {
+    "segments": [
+      "Atendimento",
+      "Configurações",
+      "Distribuição"
+    ],
+    "href": "/helpdesk/settings/distribution"
+  },
+  "helpdesk.settings.teams": {
+    "segments": [
+      "Atendimento",
+      "Configurações",
+      "Times"
+    ],
+    "href": "/helpdesk/settings/teams"
   }
 }

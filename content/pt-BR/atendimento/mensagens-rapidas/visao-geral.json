@@ -1,0 +1,73 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam as mensagens rápidas",
+  "subtitle": "A diferença entre mensagens do time e mensagens pessoais, e por que uma não vira a outra depois de criada.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "mensagens rápidas",
+    "macro",
+    "respostas prontas"
+  ],
+  "related": [
+    "atendimento/mensagens-rapidas/criar-uma-mensagem-rapida",
+    "atendimento/mensagens-rapidas/usar-no-chat"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Mensagens rápidas são respostas prontas para usar durante o atendimento, digitando \"/\" no compositor."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Duas telas, dois alcances"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Onde"
+        },
+        {
+          "content": "Quem vê"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Mensagens rápidas (Configurações)"
+          },
+          {
+            "content": "As do time inteiro — qualquer atendente pode usar, mas só quem configura o atendimento pode criar ou editar. Exige a permissão de configurar."
+          }
+        ],
+        [
+          {
+            "content": "Minhas mensagens rápidas"
+          },
+          {
+            "content": "Só suas — criadas e vistas por você, sem exigir nenhuma permissão especial."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Uma mensagem não pode trocar de time para pessoal (ou o contrário) depois de criada — o alcance é decidido na hora da criação, pela tela que você abriu."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "atendimento/mensagens-rapidas/criar-uma-mensagem-rapida",
+          "description": "Monte uma mensagem rápida."
+        },
+        {
+          "ref": "atendimento/mensagens-rapidas/usar-no-chat",
+          "description": "Use no chat com \"/\"."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

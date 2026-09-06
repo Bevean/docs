@@ -1,0 +1,146 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Aprovar uma mensagem rápida na Meta",
+  "subtitle": "Como enviar uma mensagem rápida do time para aprovação, os status possíveis, e o que fazer se for rejeitada.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "aprovação meta",
+    "template whatsapp oficial",
+    "mensagem rápida rejeitada"
+  ],
+  "related": [
+    "atendimento/mensagens-rapidas/criar-uma-mensagem-rapida",
+    "conteudos/modelos/aprovar-um-modelo-de-whatsapp-oficial"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Fora da janela de 24h, só uma mensagem aprovada pela Meta reabre a conversa no WhatsApp Oficial — inclusive uma mensagem rápida do time."
+    },
+    {
+      "type": "paragraph",
+      "content": "Só se aplica a mensagens rápidas do time (não às pessoais)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Enviar para aprovação"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Na lista de mensagens rápidas, clique no ícone de aprovação da linha"
+        },
+        {
+          "title": "Escolha a categoria",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Marketing (promoções, custo maior por conversa) ou Utilidade (atualizações de pedido/conta, custo menor — a Meta pode reclassificar como Marketing se identificar conteúdo promocional)."
+            }
+          ]
+        },
+        {
+          "title": "Escolha as contas de WhatsApp Oficial",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Uma aprovação vale só para a conta (WABA) escolhida — se você tem mais de uma, pode enviar para todas de uma vez."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A análise costuma levar minutos, mas pode chegar a 48 horas. O status atualiza sozinho, sem precisar recarregar a tela."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Status possíveis"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status"
+        },
+        {
+          "content": "Significado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Aprovado"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Em análise"
+          },
+          {
+            "content": "A Meta ainda está revisando."
+          }
+        ],
+        [
+          {
+            "content": "Parcial"
+          },
+          {
+            "content": "Aprovada em algumas contas e não em outras, quando você tem mais de uma."
+          }
+        ],
+        [
+          {
+            "content": "Rejeitado"
+          },
+          {
+            "content": "A Meta recusou — o motivo aparece no detalhe."
+          }
+        ],
+        [
+          {
+            "content": "Atenção"
+          },
+          {
+            "content": "Pausada, desativada ou sinalizada pela Meta."
+          }
+        ],
+        [
+          {
+            "content": "Desatualizado"
+          },
+          {
+            "content": "O conteúdo mudou depois da última aprovação — reenvie."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Enquanto está em análise"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Editar e reenviar ficam bloqueados enquanto o status é \"Em análise\". Excluir continua disponível."
+        }
+      ],
+      "title": "Edição travada durante a análise"
+    },
+    {
+      "type": "paragraph",
+      "content": "Se for rejeitada, a edição NÃO fica travada — ajuste o conteúdo e envie para análise de novo."
+    }
+  ]
+}

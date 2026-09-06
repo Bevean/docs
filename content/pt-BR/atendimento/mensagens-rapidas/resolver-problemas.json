@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Mensagem rápida não aparece, ou não consigo editar",
+  "subtitle": "Anexo incompatível com o canal escondendo a mensagem, e a edição travada durante a análise da Meta.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "mensagem rápida não aparece",
+    "não consigo editar mensagem rápida"
+  ],
+  "related": [
+    "atendimento/mensagens-rapidas/usar-no-chat",
+    "atendimento/mensagens-rapidas/aprovar-na-meta"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Uma mensagem rápida não aparece na busca do '/'\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Se ela tem um anexo que o canal atual não sabe enviar (por exemplo, um vídeo no Messenger, ou um arquivo que não é PDF no Instagram), ela simplesmente não aparece na lista naquela conversa."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo editar uma mensagem rápida\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Ela está em análise na Meta. Edição e reenvio ficam bloqueados até a análise terminar — exclusão continua disponível."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Quero que uma mensagem minha vire uma do time (ou o contrário)\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Não existe essa opção — o alcance é fixado na criação. Recrie a mensagem na outra tela."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Dá para ver quantas vezes uma mensagem rápida foi usada?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não existe essa estatística hoje."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

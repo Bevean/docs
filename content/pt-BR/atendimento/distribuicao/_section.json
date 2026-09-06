@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Distribuição",
+  "description": "Decida como as conversas novas chegam até cada atendente.",
+  "icon": "shuffle",
+  "articles": [
+    "visao-geral",
+    "configurar-times-e-visibilidade",
+    "configurar-horario-de-atendimento",
+    "resolver-problemas"
+  ]
+}

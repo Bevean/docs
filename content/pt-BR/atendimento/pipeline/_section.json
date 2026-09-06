@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Pipeline",
+  "description": "Acompanhe as conversas num quadro, organizadas por etapa do atendimento.",
+  "icon": "kanban",
+  "articles": [
+    "visao-geral",
+    "gerenciar-etapas-e-pipelines",
+    "resolver-problemas"
+  ]
+}

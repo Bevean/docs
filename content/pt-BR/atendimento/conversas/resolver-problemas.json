@@ -1,0 +1,72 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Não vejo todas as conversas, ou não consigo colocar em espera",
+  "subtitle": "Permissões de aba e filtro, o bloqueio de espera quando o cliente falou por último, e o envio de áudio.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "não vejo conversas",
+    "não consigo colocar em espera",
+    "enviar áudio"
+  ],
+  "related": [
+    "atendimento/conversas/gerenciar-uma-conversa",
+    "atendimento/distribuicao/configurar-times-e-visibilidade"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não vejo a aba Todos, nem o filtro por responsável\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Essas duas coisas são restritas a quem configura o atendimento ou é supervisor. Um atendente comum só vê Meus, Fila e Espera."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo colocar a conversa em espera\""
+    },
+    {
+      "type": "paragraph",
+      "content": "O botão fica bloqueado quando o cliente foi quem mandou a última mensagem — responda antes de colocar em espera."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Cliquei em Resolver e não perguntou motivo nenhum\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Esperado, se a sua conta ainda não tem nenhum motivo de encerramento cadastrado, ou se o seu time tem \"Resolver sem tabular\" ativado."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo mandar um arquivo de áudio pelo chat\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Áudio só é enviado gravando na hora, pelo microfone. Um arquivo de áudio já pronto sai como um arquivo comum, não como mensagem de voz."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Dá para eu mandar a pesquisa de satisfação manualmente?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não — o envio da pesquisa ao encerrar é decidido automaticamente pelo motivo de encerramento escolhido, não por uma ação manual do atendente."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

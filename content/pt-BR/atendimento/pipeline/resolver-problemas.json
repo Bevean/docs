@@ -1,0 +1,53 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Não consigo excluir uma etapa, ou automatizar por mudança de etapa",
+  "subtitle": "Por que uma etapa exige estar vazia para ser excluída, e por que mudar de etapa não dispara automação.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "excluir etapa",
+    "automação por etapa"
+  ],
+  "related": [
+    "atendimento/pipeline/gerenciar-etapas-e-pipelines",
+    "automacoes/automacoes/escolher-um-gatilho"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo excluir uma etapa\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Uma etapa só pode ser excluída vazia, sem nenhuma conversa dentro. Mova as conversas para outra etapa primeiro."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Quero automatizar uma mensagem quando a conversa muda de etapa\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Não existe esse gatilho em automações — o pipeline não dispara nenhuma automação sozinho ao mudar de etapa. As automações do atendimento reagem a mensagem recebida ou conversa iniciada, não a mudança de etapa."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Dá para ter uma etapa de \"perdido\", separada de \"Encerrado\"?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não — hoje só existe uma etapa de saída por pipeline. O motivo de encerramento (tabulação), escolhido ao resolver a conversa, é quem registra se foi um atendimento bem-sucedido ou não, para fins de relatório."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

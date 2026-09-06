@@ -1,0 +1,61 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Acompanhar o SLA",
+  "subtitle": "O contador de prazo em cada conversa, como encontrar o que está atrasado, e o painel com os números do time.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "sla",
+    "tempo de resposta",
+    "cockpit",
+    "atraso"
+  ],
+  "related": [
+    "atendimento/conversas/visao-geral",
+    "atendimento/distribuicao/configurar-horario-de-atendimento"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Quando um canal tem uma meta de tempo de resposta configurada, cada conversa atribuída mostra um contador."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como o contador se comporta"
+    },
+    {
+      "type": "paragraph",
+      "content": "Verde e regressivo enquanto há tempo. Vira vermelho e passa a contar para cima assim que estoura o prazo."
+    },
+    {
+      "type": "paragraph",
+      "content": "Só aparece quando a conversa está aberta, tem um responsável, e o canal tem uma meta de SLA configurada — conversa na fila (sem responsável) não mostra contador, porque ainda não há quem cobrar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Encontrar o que está atrasado"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Filtro \"SLA em atraso\"."
+        },
+        {
+          "content": "Ordenação \"SLA primeiro\" — é a ordem padrão da lista, com o mais atrasado no topo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Painel (Cockpit)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um painel à parte reúne os números do time: SLA em atraso, Não atendidas, Em aberto, Aguardando resposta, Respondidas, Não lidas, os próximos SLAs perto de vencer, e o tempo médio de primeira resposta do dia."
+    }
+  ]
+}

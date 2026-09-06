@@ -11,6 +11,8 @@ import {
   Folder,
   Globe,
   Grid3x3,
+  Inbox,
+  Kanban,
   LayoutTemplate,
   Link as LinkIcon,
   Mail,
@@ -22,6 +24,7 @@ import {
   QrCode,
   Receipt,
   Settings,
+  Shuffle,
   ShoppingCart,
   Smartphone,
   Smile,
@@ -31,6 +34,7 @@ import {
   Users,
   Workflow,
   Wrench,
+  Zap,
   type LucideIcon
 } from 'lucide-react'
 
@@ -52,6 +56,8 @@ export const CONTENT_ICONS: Record<string, LucideIcon> = {
   folder: Folder,
   globe: Globe,
   'grid-3x3': Grid3x3,
+  inbox: Inbox,
+  kanban: Kanban,
   'layout-template': LayoutTemplate,
   link: LinkIcon,
   mail: Mail,
@@ -63,6 +69,7 @@ export const CONTENT_ICONS: Record<string, LucideIcon> = {
   'qr-code': QrCode,
   receipt: Receipt,
   settings: Settings,
+  shuffle: Shuffle,
   'shopping-cart': ShoppingCart,
   smartphone: Smartphone,
   smile: Smile,
@@ -71,5 +78,6 @@ export const CONTENT_ICONS: Record<string, LucideIcon> = {
   upload: Upload,
   users: Users,
   workflow: Workflow,
-  wrench: Wrench
+  wrench: Wrench,
+  zap: Zap
 }

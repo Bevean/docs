@@ -1,0 +1,86 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Enviar mensagens e notas internas",
+  "subtitle": "O que pode ser enviado ao cliente, o que muda fora da janela de 24h, e como escrever uma nota que só a equipe vê.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "enviar mensagem",
+    "nota interna",
+    "janela de 24 horas",
+    "áudio"
+  ],
+  "related": [
+    "atendimento/conversas/visao-geral",
+    "atendimento/mensagens-rapidas/usar-no-chat"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O compositor da conversa manda mensagem para o cliente, ou uma nota que só a sua equipe vê."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que dá para enviar ao cliente"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Texto."
+        },
+        {
+          "content": "Foto e vídeo."
+        },
+        {
+          "content": "Arquivo (documento) — no Instagram, só PDF."
+        },
+        {
+          "content": "Áudio — só gravado na hora, pelo microfone. Não dá para anexar um arquivo de áudio já pronto como mensagem de voz."
+        },
+        {
+          "content": "Uma mensagem rápida, digitando \"/\"."
+        },
+        {
+          "content": "Um link, com o atalho \"Enviar link\"."
+        },
+        {
+          "content": "Responder citando uma mensagem específica."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "GIF e figurinha só chegam do cliente — não é possível enviar nenhum dos dois."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Fora da janela de 24 horas"
+    },
+    {
+      "type": "paragraph",
+      "content": "Em WhatsApp Oficial, Instagram e Messenger, depois de 24h sem mensagem do cliente, o texto livre trava e só um modelo aprovado pode reabrir a conversa — o compositor troca sozinho para \"Selecionar modelo\"."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Nota interna"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clique no ícone de nota para trocar o compositor inteiro para modo de nota — fica com borda tracejada em âmbar e o aviso \"Nota interna: visível apenas para a equipe, o cliente não recebe.\" Notas aceitam texto e qualquer tipo de anexo, e continuam disponíveis mesmo com a janela de 24h fechada, porque nunca saem para o cliente."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "atendimento/mensagens-rapidas/visao-geral",
+          "description": "Monte respostas prontas para usar com \"/\"."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

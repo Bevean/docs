@@ -1,0 +1,149 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Configurar times e visibilidade",
+  "subtitle": "Agrupe atendentes em times, decida o que cada um enxerga por canal, e o que acontece ao remover alguém.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "times",
+    "visibilidade",
+    "resolver sem tabular",
+    "remover atendente"
+  ],
+  "related": [
+    "atendimento/distribuicao/visao-geral",
+    "meu-negocio/usuarios-e-permissoes/gerenciar-usuarios"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Times agrupam atendentes para transferência e distribuição automática. Visibilidade decide o que cada atendente enxerga de conversas de outras pessoas."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.settings.teams"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Times"
+    },
+    {
+      "type": "paragraph",
+      "content": "Só atendentes com assento de chat ativo podem entrar num time. Cada time tem:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Nome e membros."
+        },
+        {
+          "content": "Distribuição automática (ligada ou desligada para esse time)."
+        },
+        {
+          "content": "Resolver sem tabular — membros desse time podem encerrar conversas sem escolher motivo. Pensado para times de vendas."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada time também pode ter sua própria fila de distribuição, com ordem e velocidade de liberação próprias, separada da fila geral."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Visibilidade, por canal"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada atendente tem um nível de visibilidade configurável canal por canal:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Nível"
+        },
+        {
+          "content": "O que o atendente vê"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Somente as próprias"
+          },
+          {
+            "content": "Só as conversas atribuídas a ele, naquele canal."
+          }
+        ],
+        [
+          {
+            "content": "Próprias e não atribuídas"
+          },
+          {
+            "content": "As próprias, mais a fila sem responsável daquele canal."
+          }
+        ],
+        [
+          {
+            "content": "Todas do canal"
+          },
+          {
+            "content": "Toda conversa daquele canal, mesmo sem ser dele — típico de coordenador."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Um canal sem visibilidade configurada para um atendente específico usa uma regra geral da conta como padrão."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Restringir transferências só para times"
+    },
+    {
+      "type": "paragraph",
+      "content": "Uma opção geral da conta limita o destino de uma transferência manual a times, em vez de atendentes individuais. Ela não afeta a distribuição automática — regras, automações e a distribuição por rodízio/menor carga continuam escolhendo pessoas normalmente."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Removendo um atendente"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Desativar ou remover um atendente só impede que ele receba conversas NOVAS a partir dali. As conversas que já estavam com ele continuam atribuídas a ele, sem nenhum aviso — reatribua manualmente se precisar."
+        }
+      ],
+      "title": "Conversas já atribuídas não são reatribuídas sozinhas"
+    }
+  ]
+}

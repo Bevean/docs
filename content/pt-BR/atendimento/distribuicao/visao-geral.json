@@ -1,0 +1,143 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona a distribuição de conversas",
+  "subtitle": "Rodízio ou menor carga, e os filtros de teto, status online e horário que decidem quem está elegível.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "distribuição automática",
+    "rodízio",
+    "menor carga"
+  ],
+  "related": [
+    "atendimento/distribuicao/configurar-times-e-visibilidade",
+    "atendimento/distribuicao/configurar-horario-de-atendimento"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Decide como uma conversa nova chega até um atendente — automaticamente, ou só na fila para alguém pegar."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.settings.distribution"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — configurável por canal. Um canal sem configuração própria segue a regra geral da conta."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Tipos de distribuição"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Desativado"
+          },
+          {
+            "content": "Os atendentes escolhem as conversas manualmente, direto da fila."
+          }
+        ],
+        [
+          {
+            "content": "Rodízio"
+          },
+          {
+            "content": "Alterna entre os atendentes elegíveis em sequência circular."
+          }
+        ],
+        [
+          {
+            "content": "Menor carga"
+          },
+          {
+            "content": "Vai sempre para quem tem menos conversas abertas no momento."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quem entra na roda"
+    },
+    {
+      "type": "paragraph",
+      "content": "Antes de aplicar Rodízio ou Menor carga, a Bevean filtra os atendentes elegíveis por:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Teto de conversas — um limite geral da conta ou um limite específico por atendente. Quem está no teto é pulado (transferência manual não é bloqueada por isso)."
+        },
+        {
+          "content": "Status Online, só se a opção \"Distribuir apenas para agentes online\" estiver ativada — se estiver desligada, todo atendente com assento ativo participa, esteja online ou não."
+        },
+        {
+          "content": "Horário de atendimento do canal, se houver um configurado."
+        },
+        {
+          "content": "Estar habilitado para aquele canal especificamente (se o canal tiver uma lista de atendentes restrita)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Carteira de clientes tem prioridade"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se o contato tem um vendedor preferido na Carteira de Clientes, a conversa vai direto para essa pessoa — mesmo offline ou no limite de conversas."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "atendimento/distribuicao/configurar-times-e-visibilidade",
+          "description": "Organize atendentes em times, e defina o que cada um enxerga."
+        },
+        {
+          "ref": "atendimento/distribuicao/configurar-horario-de-atendimento",
+          "description": "Defina quando cada canal distribui conversas."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

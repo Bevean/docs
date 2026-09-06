@@ -1,0 +1,85 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Gerenciar etapas e pipelines",
+  "subtitle": "Criar, colorir e reordenar etapas do meio, e criar um pipeline novo do zero.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "criar etapa",
+    "novo pipeline",
+    "cor da etapa"
+  ],
+  "related": [
+    "atendimento/pipeline/visao-geral",
+    "atendimento/pipeline/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é uma etapa nova no meio do pipeline, ou um pipeline inteiro novo para organizar um fluxo de trabalho diferente."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.settings.pipelines"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Criar ou editar uma etapa"
+    },
+    {
+      "type": "paragraph",
+      "content": "Uma etapa do meio só tem dois dados: Nome e Cor (escolhida entre 11 opções prontas). Etapas de entrada e saída não têm essa opção — elas já vêm fixas em todo pipeline."
+    },
+    {
+      "type": "paragraph",
+      "content": "Reordene arrastando. Uma etapa só pode ser excluída se estiver vazia."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Criar um pipeline novo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Nova pipeline",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e dê um nome. O pipeline novo já nasce com as etapas fixas de Entrada e Saída — as etapas do meio você adiciona depois."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conversas acumulando na fila, ou sempre com a mesma pessoa",
+  "subtitle": "Horário de atendimento, atendentes offline, teto de conversas, e o que fica com um ex-atendente.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "fila acumulando",
+    "distribuição desigual",
+    "atendente removido"
+  ],
+  "related": [
+    "atendimento/distribuicao/visao-geral",
+    "atendimento/distribuicao/configurar-horario-de-atendimento"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Conversas estão acumulando na fila sem distribuir\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Confira, nessa ordem:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "O canal está fora do horário de atendimento configurado."
+        },
+        {
+          "content": "\"Distribuir apenas para agentes online\" está ligado, e ninguém está com o status Online."
+        },
+        {
+          "content": "Todos os atendentes elegíveis já estão no teto de conversas abertas."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Um ex-atendente ainda tem conversas atribuídas\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Esperado — remover ou desativar alguém só impede que ele receba conversas novas. As que já eram dele continuam com ele, sem reatribuição automática. Transfira manualmente para outro atendente ou time."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"As conversas sempre caem com a mesma pessoa\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Verifique o teto de conversas dos outros atendentes (pode estar baixo demais, tirando-os da roda) e se todos estão com o status Online quando a opção de só distribuir para quem está online estiver ativada."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "O horário de atendimento bloqueia o cliente de mandar mensagem?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não — o cliente pode escrever a qualquer hora. O horário só afeta a distribuição automática para um atendente."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

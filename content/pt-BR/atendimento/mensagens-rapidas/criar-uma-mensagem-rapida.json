@@ -1,0 +1,138 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar uma mensagem rápida",
+  "subtitle": "Nome, conteúdo com variáveis do cliente, e como vários anexos numa mensagem só são enviados.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "criar mensagem rápida",
+    "variáveis do cliente",
+    "anexos"
+  ],
+  "related": [
+    "atendimento/mensagens-rapidas/visao-geral",
+    "atendimento/mensagens-rapidas/usar-no-chat"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é uma mensagem pronta, disponível digitando \"/\" no chat."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.settings.quick_replies"
+          }
+        },
+        {
+          "type": "text",
+          "text": " (do time) ou "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.my_quick_replies"
+          }
+        },
+        {
+          "type": "text",
+          "text": " (pessoal) — botão "
+        },
+        {
+          "type": "text",
+          "text": "Nova mensagem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os campos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Observação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nome"
+          },
+          {
+            "content": "Como ela aparece na busca do \"/\"."
+          }
+        ],
+        [
+          {
+            "content": "Conteúdo"
+          },
+          {
+            "content": "Até 1.000 caracteres. Aceita emoji e variáveis do cliente."
+          }
+        ],
+        [
+          {
+            "content": "Anexos"
+          },
+          {
+            "content": "Fotos, vídeos ou arquivos, em qualquer quantidade."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Preencha Nome e pelo menos um dos dois — Conteúdo ou um anexo. Uma mensagem só de anexo (por exemplo, um catálogo em PDF, sem nenhum texto) é válida."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Variáveis disponíveis"
+    },
+    {
+      "type": "paragraph",
+      "content": "Primeiro nome, Nome completo, Email, Telefone e Data de nascimento do cliente — inseridas pelo botão de variável, e preenchidas com o dado real assim que a mensagem é usada numa conversa."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Vários anexos numa mensagem só"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Cada anexo vira uma mensagem separada, na ordem da lista, no formato nativo de cada canal. O texto digitado vai como legenda do primeiro anexo."
+        }
+      ]
+    }
+  ]
+}

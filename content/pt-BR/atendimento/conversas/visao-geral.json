@@ -1,0 +1,154 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o Atendimento",
+  "subtitle": "O helpdesk é uma aplicação própria: as abas Meus, Fila, Todos e Espera, e o que cada linha da lista mostra.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "atendimento",
+    "helpdesk",
+    "caixa de entrada",
+    "fila"
+  ],
+  "related": [
+    "atendimento/conversas/enviar-mensagens-e-notas",
+    "atendimento/conversas/gerenciar-uma-conversa"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O Atendimento é uma aplicação própria, separada do resto do painel — mas com o mesmo login. Clicar em Atendimento abre essa aplicação numa aba nova."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.inbox"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As abas"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aba"
+        },
+        {
+          "content": "O que mostra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Meus"
+          },
+          {
+            "content": "Conversas atribuídas a você."
+          }
+        ],
+        [
+          {
+            "content": "Fila"
+          },
+          {
+            "content": "Conversas sem responsável."
+          }
+        ],
+        [
+          {
+            "content": "Todos"
+          },
+          {
+            "content": "Toda conversa do tenant, de qualquer atendente — só aparece para quem configura o atendimento ou é supervisor."
+          }
+        ],
+        [
+          {
+            "content": "Espera"
+          },
+          {
+            "content": "Conversas que você mesmo colocou em espera. Voltam sozinhas para você assim que o cliente responder."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Abertas ou Resolvidas"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um segundo filtro alterna entre conversas Abertas e Resolvidas."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que cada linha mostra"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Canal e o atendente responsável."
+        },
+        {
+          "content": "Nome do contato, com um selo \"Expirada\" se ela foi fechada sozinha por inatividade."
+        },
+        {
+          "content": "Prévia da última mensagem (inclusive o tipo — Áudio, Vídeo, Foto, Arquivo — quando não for texto)."
+        },
+        {
+          "content": "Estrela de favorito, contagem de não lidas, e o contador de SLA quando há um prazo correndo."
+        },
+        {
+          "content": "Até 3 marcadores."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outros filtros disponíveis"
+    },
+    {
+      "type": "paragraph",
+      "content": "Não lidas, canal específico, marcador, responsável (\"Não atribuídas\" incluso — mesma restrição da aba Todos), SLA em atraso, e favoritas."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "atendimento/conversas/enviar-mensagens-e-notas",
+          "description": "Envie mensagens e notas internas."
+        },
+        {
+          "ref": "atendimento/conversas/gerenciar-uma-conversa",
+          "description": "Resolva, transfira ou coloque uma conversa em espera."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}
