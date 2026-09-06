@@ -664,9 +664,23 @@ duplique, escreva uma vez e faça a outra citar.** Campanhas e Automações são
 literalmente o mesmo componente React (`flux-index.tsx`/`flux-canvas.tsx`)
 com um flag trocando o comportamento. O relatório de resultados, por exemplo,
 é byte a byte o mesmo painel. Escrevi a versão de Automações mais completa
-(porque lá o \"Por etapa\" é mais relevante, com vários envios) e a de
+(porque lá o "Por etapa" é mais relevante, com vários envios) e a de
 Campanhas mais enxuta, com um card ao final apontando pra versão completa —
 em vez de reescrever a mesma mecânica duas vezes.
+
+**`ul()`/`ol()` do helper Python tinham o mesmo bug do `callout()` — e passou
+despercebido por muito mais tempo.** `ul(*items)` é variádico: `ul(["a", "b"])`
+(uma lista só) vira UM item de lista com os dois textos colados dentro,
+sem erro de schema (um bullet com vários nós de texto é uma forma válida) —
+só aparece olhando a página renderizada, porque `content:check` e o texto
+extraído por `get_page_text` não distinguem "3 bullets" de "1 bullet com 3
+frases coladas". Achado tarde (14 blocos em 11 artigos já commitados, alguns
+de semanas atrás) porque a maioria das chamadas de `ul()` nesta sessão usou a
+forma certa (`ul("a", "b")`, sem colchete) — o helper agora aceita as duas
+formas, mas o alerta vale para qualquer helper `*args` novo: um bug de
+lista-vs-varargs não dá erro, só renderiza errado, e passa batido a menos que
+alguém abra a página e leia com atenção a pontuação (frases coladas sem
+separação são o sintoma).
 
 ## Por que não há prints
 
