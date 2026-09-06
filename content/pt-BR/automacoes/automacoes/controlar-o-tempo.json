@@ -1,0 +1,349 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Controlar quando a mensagem sai",
+  "subtitle": "O passo de Atraso, o passo Digitando e a janela de horário da automação.",
+  "updatedAt": "2026-09-06",
+  "tags": [
+    "automacoes",
+    "atraso",
+    "horario",
+    "flux"
+  ],
+  "related": [
+    "automacoes/automacoes/montar-o-fluxo",
+    "automacoes/automacoes/testar-publicar-pausar-e-cancelar"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Três controles diferentes decidem quando uma mensagem sai: o passo de "
+        },
+        {
+          "type": "text",
+          "text": "Atraso inteligente",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", o passo "
+        },
+        {
+          "type": "text",
+          "text": "Digitando…",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e a janela de envio da automação inteira."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Atraso inteligente"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Pausa a jornada antes de continuar. O painel tem um campo de "
+        },
+        {
+          "type": "text",
+          "text": "Duração do atraso",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — um número mais a unidade "
+        },
+        {
+          "type": "text",
+          "text": "Minutos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Horas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "Dias",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O padrão é 1 hora, e não há limite máximo."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "O cartão do passo mostra o resumo: \"Aguarde pelo menos 2 dias\", por exemplo."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O painel oferece "
+            },
+            {
+              "type": "text",
+              "text": "Definir intervalo de tempo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", com "
+            },
+            {
+              "type": "text",
+              "text": "Continuar entre",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " dois horários e a escolha entre qualquer dia, dias de semana ou fins de semana. A configuração é salva, mas hoje o fluxo continua a qualquer hora e em qualquer dia."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": "Para restringir horário de verdade, use a janela de envio da automação, mais abaixo."
+        }
+      ],
+      "title": "O intervalo de horário do Atraso ainda não é respeitado"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Digitando…"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mostra o indicador de digitação antes do próximo passo. O único campo é a "
+        },
+        {
+          "type": "text",
+          "text": "Duração",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", de 1 a 30 segundos, com 3 como padrão."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "O indicador só aparece quando o passo está ligado diretamente a um passo de envio. Colocado no meio de outros passos, ele é apenas atravessado."
+        },
+        {
+          "content": "No WhatsApp Oficial, ele depende de uma mensagem recente do contato para ter onde aparecer — em uma jornada que começa pela loja, não há o que mostrar."
+        },
+        {
+          "content": "A espera real é de poucos segundos, mesmo com um número maior configurado."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O passo descrito aqui é diferente do bloco de mesmo nome que existe dentro de uma "
+            },
+            {
+              "type": "text",
+              "text": "mensagem regular",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "automacoes/automacoes/blocos-da-mensagem"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — aquele dá ritmo entre os balões de uma mesma mensagem."
+            }
+          ]
+        }
+      ],
+      "title": "Há um bloco \"Digitando\" também dentro da mensagem"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A janela de envio da automação"
+    },
+    {
+      "type": "paragraph",
+      "content": "É a única restrição de horário que vale de fato. Fica na configuração de envio da automação, disponível depois que ela está publicada — e pode ser alterada sem destravar a edição do fluxo."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Detalhe"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Restringir horário de envio"
+          },
+          {
+            "content": "A chave que liga a janela. Desligada, a automação envia a qualquer hora."
+          }
+        ],
+        [
+          {
+            "content": "Dias permitidos para enviar"
+          },
+          {
+            "content": "Por padrão, de segunda a sexta."
+          }
+        ],
+        [
+          {
+            "content": "Horário permitido"
+          },
+          {
+            "content": "Por padrão das 9h às 18h, em intervalos de 30 minutos. O horário final é o fechamento: às 18h já está fechado."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Mensagem que cai fora da janela não é perdida — fica aguardando e sai na próxima abertura."
+        },
+        {
+          "content": "O horário é o do fuso da sua conta, não o do navegador de quem configurou."
+        },
+        {
+          "content": "A mudança vale na hora, inclusive para jornadas que já estão em andamento."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao rodar o fluxo inteiro em teste, cada atraso vale cerca de 10 segundos — o teste não espera dias. Veja "
+            },
+            {
+              "type": "text",
+              "text": "testar, publicar, pausar e cancelar",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "automacoes/automacoes/testar-publicar-pausar-e-cancelar"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "No teste, os atrasos são acelerados"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/montar-o-fluxo",
+          "description": "Os demais passos do quadro."
+        },
+        {
+          "ref": "automacoes/automacoes/blocos-da-mensagem",
+          "description": "Atraso e Digitando dentro de uma mensagem."
+        }
+      ]
+    }
+  ]
+}

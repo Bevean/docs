@@ -1,0 +1,306 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Chamar um sistema externo",
+  "subtitle": "O passo de Requisição HTTP: chamar um endereço no meio da jornada e usar a resposta nos passos seguintes.",
+  "updatedAt": "2026-09-06",
+  "tags": [
+    "automacoes",
+    "integracao",
+    "http",
+    "flux"
+  ],
+  "related": [
+    "automacoes/automacoes/montar-o-fluxo",
+    "automacoes/automacoes/disparador-externo"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O passo de "
+        },
+        {
+          "type": "text",
+          "text": "Requisição HTTP",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " chama um endereço do seu sistema no meio da jornada e permite usar a resposta nos passos seguintes — para consultar um saldo, validar um cadastro ou buscar um código antes de mandar a mensagem."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "no menu de passos, na categoria "
+        },
+        {
+          "type": "text",
+          "text": "Integrações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O passo não aparece no menu de uma campanha, e uma campanha que tenha um não publica."
+        }
+      ],
+      "title": "Só existe em automações"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Requisição"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Detalhe"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Método"
+          },
+          {
+            "content": "GET, POST, PUT, PATCH ou DELETE. O padrão é POST."
+          }
+        ],
+        [
+          {
+            "content": "Endereço (URL)"
+          },
+          {
+            "content": "Obrigatório, e só aceita endereços https. Aceita variáveis do fluxo."
+          }
+        ],
+        [
+          {
+            "content": "Cabeçalhos"
+          },
+          {
+            "content": "Pares de nome e valor. Marque Valor secreto no que for chave ou token."
+          }
+        ],
+        [
+          {
+            "content": "Formato do conteúdo"
+          },
+          {
+            "content": "application/json (padrão), application/x-www-form-urlencoded ou text/plain. Só aparece nos métodos que enviam corpo."
+          }
+        ],
+        [
+          {
+            "content": "Corpo"
+          },
+          {
+            "content": "O conteúdo enviado, com variáveis. O botão Usar o payload do gatilho preenche com os dados do evento que iniciou a jornada."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Entrega"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Detalhe"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Tempo limite (segundos)"
+          },
+          {
+            "content": "De 1 a 30. O padrão é 10."
+          }
+        ],
+        [
+          {
+            "content": "Tentativas"
+          },
+          {
+            "content": "1, 2 ou 3. O padrão é 3."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A repetição só acontece em falha que pode passar: sem resposta, tempo esgotado ou erro do servidor. Erro de configuração — não autorizado, endereço inexistente, dados recusados — vai direto para a saída de falha, sem repetir."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Resposta"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para usar o retorno nos próximos passos, cole em "
+        },
+        {
+          "type": "text",
+          "text": "JSON de exemplo da resposta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " uma resposta de verdade da sua API. Os campos dela ficam selecionáveis em "
+        },
+        {
+          "type": "text",
+          "text": "Guardar campos da resposta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", onde você dá um nome a cada um."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os nomes escolhidos passam a aparecer no seletor de variáveis das mensagens seguintes, no grupo "
+        },
+        {
+          "type": "text",
+          "text": "Requisição HTTP",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Sem colar o JSON de exemplo, não há como mapear campo nenhum."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os dois caminhos de saída"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Este passo não tem "
+        },
+        {
+          "type": "text",
+          "text": "Próximo passo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Ele tem duas saídas fixas — "
+        },
+        {
+          "type": "text",
+          "text": "Deu certo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Falhou",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — e as duas precisam ser ligadas se você quiser que a jornada continue nos dois casos. Deixar a saída de falha solta encerra o fluxo para quem cair nela."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/montar-o-fluxo",
+          "description": "Os demais passos do quadro."
+        },
+        {
+          "ref": "automacoes/automacoes/disparador-externo",
+          "description": "O caminho inverso: outro sistema iniciando a automação."
+        }
+      ]
+    }
+  ]
+}

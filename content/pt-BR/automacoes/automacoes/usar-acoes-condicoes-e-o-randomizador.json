@@ -1,19 +1,41 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Usar Ações, Condição e Randomizador",
-  "subtitle": "O que cada um desses 3 passos de lógica faz, e o cuidado ao publicar um teste A/B.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "Os passos que agem no contato e decidem por qual caminho a jornada segue.",
+  "updatedAt": "2026-09-06",
   "tags": [
-    "ações",
-    "condição",
-    "randomizador",
-    "teste a/b"
+    "automacoes",
+    "condicao",
+    "acoes",
+    "flux"
   ],
   "related": [
     "automacoes/automacoes/montar-o-fluxo",
-    "automacoes/automacoes/testar-publicar-pausar-e-cancelar"
+    "automacoes/automacoes/controlar-o-tempo"
   ],
   "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Três passos da categoria "
+        },
+        {
+          "type": "text",
+          "text": "Lógica",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " fazem o fluxo decidir e agir sem mandar mensagem nenhuma."
+        }
+      ]
+    },
     {
       "type": "heading",
       "level": 2,
@@ -21,16 +43,50 @@
     },
     {
       "type": "paragraph",
-      "content": "Um passo de Ações executa uma ou mais das seguintes, empilhadas:"
+      "content": [
+        {
+          "type": "text",
+          "text": "Um passo de "
+        },
+        {
+          "type": "text",
+          "text": "Ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " executa uma ou mais ações empilhadas, na ordem em que estão, e segue para o próximo passo. Use "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar ação",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para abrir a lista; as ações podem ser reordenadas pelas setas ou removidas."
+        }
+      ]
     },
     {
       "type": "table",
       "head": [
         {
-          "content": "Categoria"
+          "content": "Grupo"
         },
         {
-          "content": "Ações"
+          "content": "Ação"
+        },
+        {
+          "content": "O que você preenche"
         }
       ],
       "rows": [
@@ -39,7 +95,54 @@
             "content": "Dados do contato"
           },
           {
-            "content": "Definir campo do contato, Adicionar tag, Remover tag, Adicionar à lista, Remover da lista."
+            "content": "Adicionar tag"
+          },
+          {
+            "content": "A tag. Dá para criar uma nova ali mesmo."
+          }
+        ],
+        [
+          {
+            "content": "Dados do contato"
+          },
+          {
+            "content": "Remover tag"
+          },
+          {
+            "content": "A tag."
+          }
+        ],
+        [
+          {
+            "content": "Dados do contato"
+          },
+          {
+            "content": "Definir campo do contato"
+          },
+          {
+            "content": "O campo (nome, primeiro nome, sobrenome, e-mail, telefone ou um campo personalizado) e o valor."
+          }
+        ],
+        [
+          {
+            "content": "Dados do contato"
+          },
+          {
+            "content": "Adicionar à lista"
+          },
+          {
+            "content": "A lista."
+          }
+        ],
+        [
+          {
+            "content": "Dados do contato"
+          },
+          {
+            "content": "Remover da lista"
+          },
+          {
+            "content": "A lista."
           }
         ],
         [
@@ -47,7 +150,32 @@
             "content": "Caixa de entrada"
           },
           {
-            "content": "Marcar conversa como aberta, Marcar conversa como fechada, Atribuir conversa (a um agente ou grupo)."
+            "content": "Marcar conversa como aberta"
+          },
+          {
+            "content": "Nada."
+          }
+        ],
+        [
+          {
+            "content": "Caixa de entrada"
+          },
+          {
+            "content": "Marcar conversa como fechada"
+          },
+          {
+            "content": "Nada."
+          }
+        ],
+        [
+          {
+            "content": "Caixa de entrada"
+          },
+          {
+            "content": "Atribuir conversa"
+          },
+          {
+            "content": "O agente ou o grupo."
           }
         ],
         [
@@ -55,10 +183,24 @@
             "content": "Recompensas"
           },
           {
-            "content": "Resgatar cashback."
+            "content": "Resgatar cashback"
+          },
+          {
+            "content": "Nada. Depois deste passo, os dados do resgate ficam disponíveis como variável nas mensagens seguintes."
           }
         ]
       ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O passo logo depois do público-alvo tem de ser uma mensagem, uma condição ou um randomizador. Em automações não há essa restrição."
+        }
+      ],
+      "title": "Numa campanha, Ações não pode ser o primeiro passo"
     },
     {
       "type": "heading",
@@ -67,38 +209,190 @@
     },
     {
       "type": "paragraph",
-      "content": "Um passo de Condição divide o fluxo em ramos, a partir de regras montadas com campos de:"
+      "content": [
+        {
+          "type": "text",
+          "text": "Um passo de "
+        },
+        {
+          "type": "text",
+          "text": "Condição",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " divide o fluxo em caminhos. Cada regra que você cria vira uma saída própria no cartão, e "
+        },
+        {
+          "type": "text",
+          "text": "o contato segue pela primeira regra que corresponder",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — não é um sim ou não, é uma sequência avaliada de cima para baixo."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quem não corresponde a nenhuma delas sai pelo caminho padrão, chamado "
+        },
+        {
+          "type": "text",
+          "text": "Se não",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no painel e rotulado "
+        },
+        {
+          "type": "text",
+          "text": "Não corresponde a nenhuma dessas condições",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no quadro."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "As regras são montadas com campos de:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Grupo"
+        },
+        {
+          "content": "O que dá para checar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Perfil do contato"
+          },
+          {
+            "content": "Os campos do cadastro."
+          }
+        ],
+        [
+          {
+            "content": "Segmento"
+          },
+          {
+            "content": "Está ou não está em um segmento ou lista."
+          }
+        ],
+        [
+          {
+            "content": "Tags"
+          },
+          {
+            "content": "As tags do contato."
+          }
+        ],
+        [
+          {
+            "content": "Campos personalizados"
+          },
+          {
+            "content": "As propriedades que você criou."
+          }
+        ],
+        [
+          {
+            "content": "Desde a entrada no fluxo"
+          },
+          {
+            "content": "Quantas vezes o contato fez algo depois de entrar: pedido pago, pedido de qualquer status, pedido expirado, checkout iniciado, produto adicionado ao carrinho, carrinho visto, produto visto, página vista."
+          }
+        ],
+        [
+          {
+            "content": "Engajamento neste fluxo"
+          },
+          {
+            "content": "Se respondeu, clicou, abriu, recebeu ou falhou um envio anterior deste mesmo fluxo."
+          }
+        ],
+        [
+          {
+            "content": "Gatilho"
+          },
+          {
+            "content": "Os dados do evento que iniciou a automação. Não existe em campanhas."
+          }
+        ]
+      ]
     },
     {
       "type": "list",
       "style": "bullet",
       "items": [
         {
-          "content": "Perfil do contato (campos de sistema)."
+          "content": "Uma regra de engajamento precisa apontar para um envio que acontece antes desta condição no fluxo — apontar para um passo posterior impede publicar."
         },
         {
-          "content": "Segmento — está ou não está em um segmento/lista."
-        },
-        {
-          "content": "Tags do contato."
-        },
-        {
-          "content": "Campos personalizados."
-        },
-        {
-          "content": "Desde a entrada no fluxo — quantas vezes o contato fez algo (pedido, checkout iniciado, produto visualizado...) depois de entrar na automação."
-        },
-        {
-          "content": "Engajamento neste fluxo — se respondeu, clicou, abriu, recebeu ou falhou um envio anterior do mesmo fluxo."
-        },
-        {
-          "content": "Gatilho — dados do evento que iniciou a automação."
+          "content": "Numa campanha, se a condição for o primeiro passo, ela só aceita regras de perfil, e cada caminho precisa levar a uma mensagem."
         }
       ]
     },
     {
-      "type": "paragraph",
-      "content": "Não existe uma condição de horário do dia — restrição de horário só existe como janela de envio da automação inteira, ou dentro do próprio passo de Atraso."
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para restringir horário, o caminho é a janela de envio da automação — veja "
+            },
+            {
+              "type": "text",
+              "text": "controlar quando a mensagem sai",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "automacoes/automacoes/controlar-o-tempo"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Não existe condição de horário do dia"
     },
     {
       "type": "heading",
@@ -107,36 +401,20 @@
     },
     {
       "type": "paragraph",
-      "content": [
+      "content": "Divide o tráfego entre variações — A, B, C e assim por diante — cada uma com um peso em porcentagem. A soma precisa fechar 100%, senão o passo fica pendente. O passo nasce com duas variações de 50%."
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
         {
-          "type": "text",
-          "text": "Divide o tráfego entre variações — A, B, C e assim por diante — cada uma com um peso em % (a soma tem que fechar 100%). Use "
+          "content": "Distribuir igualmente reparte o total sem você calcular na mão."
         },
         {
-          "type": "text",
-          "text": "Distribuir igualmente",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "content": "Selecione uma opção aleatória a cada vez sorteia a variação por contato; desligado, a divisão é feita de forma a respeitar a porcentagem exata."
         },
         {
-          "type": "text",
-          "text": " para dividir sem calcular na mão, ou marque "
-        },
-        {
-          "type": "text",
-          "text": "Selecione uma opção aleatória a cada vez",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " para sortear a variação por contato em vez de um split fixo."
+          "content": "Não há caminho padrão: todo contato cai em alguma variação."
         }
       ]
     },
@@ -146,10 +424,27 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "Um Randomizador só direciona tráfego pelas variações depois que o fluxo é salvo e publicado. Montar as variações sem publicar pode fazer todo mundo cair no mesmo ramo antigo."
+          "content": "Um randomizador só direciona tráfego pelas variações depois que o fluxo é salvo e publicado. Montar as variações sem publicar pode fazer todo mundo cair no mesmo caminho antigo."
         }
       ],
       "title": "Salve e publique antes de confiar no resultado"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/montar-o-fluxo",
+          "description": "Os demais passos do quadro."
+        },
+        {
+          "ref": "automacoes/automacoes/controlar-o-tempo",
+          "description": "Atraso, Digitando e a janela de envio."
+        },
+        {
+          "ref": "automacoes/automacoes/acompanhar-resultados",
+          "description": "Ver quantos contatos passaram por cada caminho."
+        }
+      ]
     }
   ]
 }

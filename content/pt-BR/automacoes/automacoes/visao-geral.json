@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funcionam as automações",
   "subtitle": "Um fluxo que dispara sozinho a partir do comportamento do contato, com os estados que ele passa até ser cancelado.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-06",
   "tags": [
     "automações",
     "fluxo",
@@ -178,17 +178,21 @@
     },
     {
       "type": "linkCards",
+      "title": "Próximos passos",
       "items": [
         {
           "ref": "automacoes/automacoes/escolher-um-gatilho",
-          "description": "Veja os eventos que podem iniciar uma automação."
+          "description": "Os eventos que podem iniciar uma automação."
         },
         {
           "ref": "automacoes/automacoes/montar-o-fluxo",
-          "description": "Conheça as peças disponíveis para montar o fluxo."
+          "description": "Os passos disponíveis e como ligá-los."
+        },
+        {
+          "ref": "automacoes/automacoes/enviar-uma-mensagem",
+          "description": "Configurar o envio por cada canal."
         }
-      ],
-      "title": "Próximos passos"
+      ]
     }
   ]
 }

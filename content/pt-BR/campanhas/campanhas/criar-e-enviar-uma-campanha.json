@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Criar e enviar uma campanha",
   "subtitle": "Definir o público-alvo, adicionar o envio, e as opções de agendamento e estratégia de disparo.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-06",
   "tags": [
     "criar campanha",
     "nova transmissão",
@@ -77,7 +77,28 @@
           "body": [
             {
               "type": "paragraph",
-              "content": "No menu que aparece ligado ao público-alvo, escolha o canal (WhatsApp Oficial, WhatsApp Web, Instagram, E-mail ou SMS, conforme o que você tiver conectado) e o conteúdo."
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No menu ligado ao público-alvo, escolha o canal e o conteúdo — veja "
+                },
+                {
+                  "type": "text",
+                  "text": "configurar um passo de envio",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "automacoes/automacoes/enviar-uma-mensagem"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
             }
           ]
         },
@@ -104,25 +125,7 @@
           "body": [
             {
               "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Botão "
-                },
-                {
-                  "type": "text",
-                  "text": "Agendar ou enviar agora",
-                  "marks": [
-                    {
-                      "type": "bold"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " — veja as opções abaixo."
-                }
-              ]
+              "content": "Botão Agendar ou enviar agora — veja as opções abaixo."
             }
           ]
         }
@@ -144,6 +147,86 @@
       ]
     },
     {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Há ainda as chaves "
+        },
+        {
+          "type": "text",
+          "text": "Parar de enviar se o contato…",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — fez um pedido pago, fez um pedido de qualquer status ou iniciou um carrinho novo. Elas interrompem os envios seguintes de quem cumprir a condição depois que a campanha começou."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Uma campanha também é um fluxo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Depois do envio inicial você pode continuar a jornada no mesmo quadro das automações: mais mensagens, "
+        },
+        {
+          "type": "text",
+          "text": "condições e ações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "atraso",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/controlar-o-tempo"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e randomizador para teste A/B. Duas diferenças em relação a uma automação:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "O passo logo depois do público-alvo tem de ser uma mensagem, uma condição ou um randomizador — e, sendo condição ou randomizador, cada caminho precisa levar a uma mensagem."
+        },
+        {
+          "content": "O passo de Requisição HTTP não existe em campanhas."
+        }
+      ]
+    },
+    {
       "type": "heading",
       "level": 2,
       "content": "Quando enviar"
@@ -155,7 +238,7 @@
           "content": "Opção"
         },
         {
-          "content": "O que é"
+          "content": "Detalhe"
         }
       ],
       "rows": [
@@ -189,7 +272,7 @@
           "content": "Opção"
         },
         {
-          "content": "O que é"
+          "content": "Detalhe"
         }
       ],
       "rows": [
@@ -255,11 +338,18 @@
       "type": "linkCards",
       "items": [
         {
+          "ref": "automacoes/automacoes/enviar-uma-mensagem",
+          "description": "Escolher canal, modelo ou mensagem regular."
+        },
+        {
+          "ref": "automacoes/automacoes/blocos-da-mensagem",
+          "description": "Botões, lista e carrossel."
+        },
+        {
           "ref": "campanhas/campanhas/acompanhar-resultados",
-          "description": "Veja quantos abriram, clicaram e compraram."
+          "description": "Ver o que aconteceu depois do disparo."
         }
-      ],
-      "title": "Próximos passos"
+      ]
     }
   ]
 }

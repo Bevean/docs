@@ -1,21 +1,205 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Escolher um gatilho",
-  "subtitle": "Os eventos que podem iniciar uma automação, os filtros para refinar quem entra, e as regras de reentrada.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "O evento que coloca o contato dentro da automação, e o que cada um dos gatilhos disponíveis significa.",
+  "updatedAt": "2026-09-06",
   "tags": [
+    "automacoes",
     "gatilho",
-    "quando alguém",
-    "reentrada"
+    "flux"
   ],
   "related": [
-    "automacoes/automacoes/visao-geral",
+    "automacoes/automacoes/filtrar-quem-entra",
     "automacoes/automacoes/montar-o-fluxo"
   ],
   "body": [
     {
       "type": "paragraph",
-      "content": "O gatilho decide quando um contato entra na automação. Escolha-o clicando no cartão \"Quando alguém...\" no topo do fluxo."
+      "content": "O gatilho é o evento que coloca um contato dentro da automação. Toda automação tem exatamente um, e sem ele o fluxo não publica."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "no cartão "
+        },
+        {
+          "type": "text",
+          "text": "Quando alguém…",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no topo do fluxo — clique em "
+        },
+        {
+          "type": "text",
+          "text": "+ Adicionar gatilho",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para abrir a lista."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Campanhas não têm gatilho. Numa campanha, quem entra é o "
+            },
+            {
+              "type": "text",
+              "text": "Público alvo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " que você monta na hora do envio — veja "
+            },
+            {
+              "type": "text",
+              "text": "como funcionam as campanhas",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "campanhas/campanhas/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como escolher"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em + Adicionar gatilho",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A lista abre com as categorias na coluna da esquerda e os gatilhos daquela categoria à direita."
+            }
+          ]
+        },
+        {
+          "title": "Escolha o gatilho",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Em cada cartão, a frase em destaque é a explicação (\"Um cliente visualizou um produto\") e o nome curto aparece acima, em cinza — é esse nome curto que aparece depois no cartão do fluxo."
+            }
+          ]
+        },
+        {
+          "title": "Refine quem entra",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Depois de escolher, aparecem os filtros e a política de reentrada — veja "
+                },
+                {
+                  "type": "text",
+                  "text": "filtrar quem entra",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "automacoes/automacoes/filtrar-quem-entra"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para trocar depois, use o botão "
+        },
+        {
+          "type": "text",
+          "text": "Trocar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no próprio cartão. Trocar entre um gatilho de evento e o "
+        },
+        {
+          "type": "text",
+          "text": "disparador externo",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/disparador-externo"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " só é possível enquanto a automação for um rascunho."
+        }
+      ]
     },
     {
       "type": "heading",
@@ -29,7 +213,10 @@
           "content": "Categoria"
         },
         {
-          "content": "Gatilhos"
+          "content": "Gatilho"
+        },
+        {
+          "content": "Dispara quando"
         }
       ],
       "rows": [
@@ -38,7 +225,10 @@
             "content": "Navegação"
           },
           {
-            "content": "Página visualizada."
+            "content": "Página visualizada"
+          },
+          {
+            "content": "Alguém abre qualquer página da loja."
           }
         ],
         [
@@ -46,7 +236,21 @@
             "content": "Produto"
           },
           {
-            "content": "Produto visualizado, Produto abandonado."
+            "content": "Produto visualizado"
+          },
+          {
+            "content": "Alguém abre a página de um produto."
+          }
+        ],
+        [
+          {
+            "content": "Produto"
+          },
+          {
+            "content": "Produto abandonado"
+          },
+          {
+            "content": "Alguém viu um produto e, meia hora depois, não colocou no carrinho nem comprou. Se a pessoa adicionar ao carrinho, iniciar o checkout ou comprar nesse meio-tempo, o gatilho é cancelado."
           }
         ],
         [
@@ -54,7 +258,10 @@
             "content": "Categoria"
           },
           {
-            "content": "Categoria visualizada."
+            "content": "Categoria visualizada"
+          },
+          {
+            "content": "Alguém abre a página de uma categoria."
           }
         ],
         [
@@ -62,7 +269,21 @@
             "content": "Carrinho"
           },
           {
-            "content": "Produto adicionado ao carrinho, Carrinho abandonado."
+            "content": "Produto adicionado ao carrinho"
+          },
+          {
+            "content": "Alguém coloca um produto no carrinho."
+          }
+        ],
+        [
+          {
+            "content": "Carrinho"
+          },
+          {
+            "content": "Carrinho abandonado"
+          },
+          {
+            "content": "Alguém inicia o checkout e deixa itens para trás."
           }
         ],
         [
@@ -70,7 +291,98 @@
             "content": "Pedido"
           },
           {
-            "content": "Novo pedido, Pagamento aprovado, Pagamento negado, Pagamento expirando, Pagamento expirado, Pedido faturado, Pedido despachado, Pedido entregue, Pedido disponível para retirada."
+            "content": "Novo pedido"
+          },
+          {
+            "content": "Um pedido novo entra — da loja, da importação ou do cadastro manual."
+          }
+        ],
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Pagamento aprovado"
+          },
+          {
+            "content": "O pagamento de um pedido é aprovado."
+          }
+        ],
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Pagamento negado"
+          },
+          {
+            "content": "O pagamento é recusado."
+          }
+        ],
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Pagamento expirando"
+          },
+          {
+            "content": "Um pedido com pagamento pendente está perto de expirar. Dispara no máximo uma vez por pedido."
+          }
+        ],
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Pagamento expirado"
+          },
+          {
+            "content": "O prazo de pagamento acabou sem que o pedido fosse pago."
+          }
+        ],
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Pedido faturado"
+          },
+          {
+            "content": "O pedido é faturado."
+          }
+        ],
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Pedido despachado"
+          },
+          {
+            "content": "O pedido é despachado."
+          }
+        ],
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Pedido entregue"
+          },
+          {
+            "content": "O pedido recebe o status de entregue."
+          }
+        ],
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Pedido disponível para retirada"
+          },
+          {
+            "content": "O pedido fica pronto para o cliente retirar na loja."
           }
         ],
         [
@@ -78,7 +390,10 @@
             "content": "Contato"
           },
           {
-            "content": "Novo cadastro."
+            "content": "Novo cadastro"
+          },
+          {
+            "content": "Um contato novo entra na base."
           }
         ],
         [
@@ -86,7 +401,21 @@
             "content": "Segmento"
           },
           {
-            "content": "Entrou no segmento, Saiu do segmento."
+            "content": "Entrou no segmento"
+          },
+          {
+            "content": "O contato passa a fazer parte de um segmento ou de uma lista."
+          }
+        ],
+        [
+          {
+            "content": "Segmento"
+          },
+          {
+            "content": "Saiu do segmento"
+          },
+          {
+            "content": "O contato deixa de fazer parte de um segmento ou de uma lista."
           }
         ],
         [
@@ -94,7 +423,10 @@
             "content": "Reposição"
           },
           {
-            "content": "Produto acabando (reposição)."
+            "content": "Produto acabando (reposição)"
+          },
+          {
+            "content": "Chega a data estimada de reposição de um produto que o contato comprou."
           }
         ],
         [
@@ -102,7 +434,43 @@
             "content": "Crédito"
           },
           {
-            "content": "Crédito liberado, Crédito expirando, Nova entrada de crédito, Cashback resgatado."
+            "content": "Crédito liberado"
+          },
+          {
+            "content": "Um crédito de cashback fica disponível para uso."
+          }
+        ],
+        [
+          {
+            "content": "Crédito"
+          },
+          {
+            "content": "Crédito expirando"
+          },
+          {
+            "content": "Um crédito do contato está perto de vencer."
+          }
+        ],
+        [
+          {
+            "content": "Crédito"
+          },
+          {
+            "content": "Nova entrada de crédito"
+          },
+          {
+            "content": "Um novo crédito é registrado para o contato."
+          }
+        ],
+        [
+          {
+            "content": "Crédito"
+          },
+          {
+            "content": "Cashback resgatado"
+          },
+          {
+            "content": "O contato resgata o saldo — em cupom ou em créditos na loja."
           }
         ],
         [
@@ -110,7 +478,21 @@
             "content": "Atendimento"
           },
           {
-            "content": "Conversa iniciada, Mensagem recebida."
+            "content": "Conversa iniciada"
+          },
+          {
+            "content": "O contato abre uma conversa nova no atendimento, ou reabre uma que estava encerrada."
+          }
+        ],
+        [
+          {
+            "content": "Atendimento"
+          },
+          {
+            "content": "Mensagem recebida"
+          },
+          {
+            "content": "O contato manda mensagem no atendimento."
           }
         ],
         [
@@ -118,15 +500,126 @@
             "content": "Pesquisa"
           },
           {
-            "content": "Pesquisa respondida."
+            "content": "Pesquisa respondida"
+          },
+          {
+            "content": "O contato envia a resposta de uma pesquisa."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Quando o pedido entra na Bevean já com o pagamento aprovado — o caso mais comum em Pix e cartão — ele dispara "
+            },
+            {
+              "type": "text",
+              "text": "Novo pedido",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Pagamento aprovado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " na mesma passada. Se as duas automações mandam mensagem, o cliente recebe as duas."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": "Nas atualizações seguintes isso não acontece: um status que já estava lá não dispara de novo."
+        }
+      ],
+      "title": "Um pedido que já chega pago dispara dois gatilhos"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Gatilhos que dependem de outra configuração"
+    },
+    {
+      "type": "paragraph",
+      "content": "Alguns gatilhos ficam disponíveis na lista mesmo quando a configuração que os alimenta não existe — a automação publica e simplesmente nunca dispara."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Gatilho"
+        },
+        {
+          "content": "Só funciona se"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Página, Produto e Categoria visualizados; Produto adicionado ao carrinho; Produto abandonado"
+          },
+          {
+            "content": "O tracker estiver instalado na loja e o visitante estiver identificado."
           }
         ],
         [
           {
-            "content": "Sistemas externos"
+            "content": "Carrinho abandonado"
           },
           {
-            "content": "Ao receber um evento externo — gera uma URL própria para outro sistema chamar."
+            "content": "Nas lojas Bagy e Shopify, o gatilho vem da integração de carrinho — o evento do tracker é ignorado nessas duas plataformas. Nas demais, vale o tracker."
+          }
+        ],
+        [
+          {
+            "content": "Produto acabando (reposição)"
+          },
+          {
+            "content": "O produto tiver a vida útil cadastrada. Sem isso não há data de reposição para comparar."
+          }
+        ],
+        [
+          {
+            "content": "Crédito expirando"
+          },
+          {
+            "content": "Existirem janelas de aviso configuradas no cashback. Sem nenhuma janela, o gatilho nunca dispara — a própria tela avisa isso."
+          }
+        ],
+        [
+          {
+            "content": "Conversa iniciada e Mensagem recebida"
+          },
+          {
+            "content": "A conversa estiver vinculada a um contato. Conversa sem contato identificado não entra em automação."
+          }
+        ],
+        [
+          {
+            "content": "Pesquisa respondida"
+          },
+          {
+            "content": "A resposta tiver identidade comprovada. Resposta anônima nunca dispara."
           }
         ]
       ]
@@ -134,73 +627,128 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "Refinar quem entra"
+      "content": "O que impede um contato de entrar"
     },
     {
       "type": "paragraph",
-      "content": "Cada gatilho tem dois filtros próprios:"
+      "content": "Mesmo com o gatilho certo e os filtros passando, a entrada é descartada nestes casos:"
     },
     {
       "type": "list",
       "style": "bullet",
       "items": [
         {
-          "content": "Filtros do disparador — condições sobre o próprio evento (por exemplo, valor mínimo do pedido)."
+          "content": "A automação não está publicada. Rascunho e automação pausada não aceitam ninguém novo."
         },
         {
-          "content": "Filtros de perfil — condições sobre o contato, o mesmo construtor usado no público-alvo de uma campanha ou na criação de um segmento."
+          "content": "O evento tem mais de 24 horas. Isso é o que evita que uma re-sincronização de pedidos antigos dispare uma enxurrada de mensagens — e é também por isso que importar histórico não aciona automações."
+        },
+        {
+          "content": "O contato já está no meio de uma jornada dessa mesma automação. Nesse caso a entrada é barrada independentemente da política de reentrada escolhida."
+        },
+        {
+          "content": "O evento não tem um contato identificado."
         }
       ]
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Reentrada no fluxo"
+      "content": "Cuidados que valem conhecer antes"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Ao excluir um segmento ou lista, todos os membros saem dele de uma vez — e cada um vira um disparo. Se houver automação ativa nesse gatilho sem filtro de segmento, ela roda para a base inteira daquela lista. Pause a automação antes de apagar a lista."
+        }
+      ],
+      "title": "Apagar um segmento dispara \"Saiu do segmento\" para todo mundo"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Contatos criados por importação de arquivo não disparam o gatilho, e contatos que nascem de uma conversa recebida no atendimento também não. Valem cadastro manual, identificação pelo tracker, resposta de pesquisa, carrinho e integração."
+        }
+      ],
+      "title": "\"Novo cadastro\" não vale para todo contato novo"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se o cliente manda cinco balões seguidos, é um disparo só — as mensagens da mesma rajada são juntadas numa janela de cerca de dez segundos. E \"Conversa iniciada\" não substitui \"Mensagem recebida\": na primeira mensagem de uma conversa nova, os dois disparam."
+        }
+      ],
+      "title": "\"Mensagem recebida\" agrupa a rajada"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que ainda não é gatilho"
     },
     {
       "type": "paragraph",
-      "content": "Define se a mesma pessoa pode entrar de novo na automação depois de já ter entrado uma vez."
-    },
-    {
-      "type": "table",
-      "head": [
+      "content": [
         {
-          "content": "Opção"
+          "type": "text",
+          "text": "Na coluna de categorias aparecem também os canais conectados (WhatsApp Oficial, WhatsApp, Instagram, E-mail, SMS) com o selo "
         },
         {
-          "content": "Quando o contato pode entrar de novo"
+          "type": "text",
+          "text": "Em breve",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Gatilhos por canal — como palavra-chave recebida — ainda não existem; o mais próximo hoje é "
+        },
+        {
+          "type": "text",
+          "text": "Mensagem recebida",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com um filtro de canal."
         }
-      ],
-      "rows": [
-        [
-          {
-            "content": "Pode reentrar quando não estiver no fluxo"
-          },
-          {
-            "content": "Sempre que o evento disparar de novo, desde que ele não tenha uma jornada em andamento. Opção padrão."
-          }
-        ],
-        [
-          {
-            "content": "Não reentrar durante a conversa"
-          },
-          {
-            "content": "Só depois que a jornada atual terminar. Pré-selecionada no gatilho \"Mensagem recebida\", porque um clique em botão também é uma mensagem — sem essa trava, o fluxo reiniciaria a cada clique."
-          }
-        ],
-        [
-          {
-            "content": "Entra no máximo uma vez"
-          },
-          {
-            "content": "Nunca mais, na mesma versão publicada da automação."
-          }
-        ]
       ]
     },
     {
       "type": "paragraph",
-      "content": "No gatilho \"Ao receber um evento externo\", só as opções \"Quando não estiver no fluxo\" e \"Uma vez por versão\" existem — não há o meio-termo de conversa."
+      "content": "Envio de formulário, busca no site e cancelamento de pedido também não estão na lista de gatilhos."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/filtrar-quem-entra",
+          "description": "Filtros do disparador, filtros de perfil e reentrada."
+        },
+        {
+          "ref": "automacoes/automacoes/disparador-externo",
+          "description": "Disparar a automação a partir de outro sistema."
+        },
+        {
+          "ref": "automacoes/automacoes/montar-o-fluxo",
+          "description": "Os passos que vêm depois do gatilho."
+        }
+      ]
     }
   ]
 }

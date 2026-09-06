@@ -1,0 +1,318 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Filtrar quem entra na automação",
+  "subtitle": "Filtros do disparador, filtros de perfil, reentrada e as chaves que interrompem o envio.",
+  "updatedAt": "2026-09-06",
+  "tags": [
+    "automacoes",
+    "gatilho",
+    "filtros",
+    "flux"
+  ],
+  "related": [
+    "automacoes/automacoes/escolher-um-gatilho",
+    "automacoes/automacoes/montar-o-fluxo"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Escolhido o gatilho, quatro controles no mesmo painel decidem quem entra de fato na automação, e quantas vezes."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Exemplo do evento"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um bloco recolhível mostra como os dados chegam quando o gatilho dispara. Vale abrir antes de montar filtro: os campos que aparecem ali são exatamente os que dá para filtrar, e os mesmos que ficam disponíveis como variável nas mensagens."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Filtros do disparador"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "São condições sobre o próprio evento — valor do pedido, forma de pagamento, nome do produto, texto da mensagem. Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Inserir condição",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e escolha entre "
+        },
+        {
+          "type": "text",
+          "text": "Todas as condições",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (todas precisam bater) e "
+        },
+        {
+          "type": "text",
+          "text": "Pelo menos 1 critério",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (basta uma)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os campos mudam conforme o gatilho. O gatilho "
+        },
+        {
+          "type": "text",
+          "text": "Novo cadastro",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " não tem nenhum campo de evento, então essa seção nem aparece para ele."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ao escolher "
+            },
+            {
+              "type": "text",
+              "text": "Entrou no segmento",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ou "
+            },
+            {
+              "type": "text",
+              "text": "Saiu do segmento",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", a Bevean já deixa a condição "
+            },
+            {
+              "type": "text",
+              "text": "Segmento está em",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " montada para você preencher. Se apagar essa regra, a automação passa a valer para qualquer segmento."
+            }
+          ]
+        }
+      ],
+      "title": "Nos gatilhos de segmento, o filtro é onde você escolhe qual segmento"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Filtros de perfil"
+    },
+    {
+      "type": "paragraph",
+      "content": "São condições sobre o contato, não sobre o evento — tag, segmento, campos do cadastro e campos personalizados. É o mesmo construtor usado no público-alvo de uma campanha e na criação de um segmento."
+    },
+    {
+      "type": "paragraph",
+      "content": "Os dois filtros são avaliados uma vez só, no momento da entrada. Uma regra deixada pela metade, sem valor, é ignorada — ela não bloqueia a entrada nem impede publicar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Reentrada no fluxo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Define se a mesma pessoa pode entrar de novo depois de já ter entrado uma vez."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Opção"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pode reentrar quando não estiver no fluxo"
+          },
+          {
+            "content": "Sempre que o evento disparar de novo, desde que a pessoa não esteja com uma jornada em andamento. É o padrão."
+          }
+        ],
+        [
+          {
+            "content": "Não reentrar durante a conversa"
+          },
+          {
+            "content": "Só depois que a jornada atual terminar. Vem pré-selecionada no gatilho Mensagem recebida, porque um clique em botão também é uma mensagem — sem essa trava o menu se reenviaria a cada clique."
+          }
+        ],
+        [
+          {
+            "content": "Entra no máximo uma vez"
+          },
+          {
+            "content": "Uma vez por versão publicada."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A contagem é por versão publicada. Ao editar e publicar de novo, quem já tinha passado pode entrar outra vez — é o comportamento a observar antes de republicar uma automação de boas-vindas ou de cupom único."
+        }
+      ],
+      "title": "\"No máximo uma vez\" volta a zero quando você republica"
+    },
+    {
+      "type": "paragraph",
+      "content": "Independentemente da opção escolhida, ninguém entra duas vezes ao mesmo tempo: quem está no meio de uma jornada dessa automação não reentra."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Parar de enviar se o contato…"
+    },
+    {
+      "type": "paragraph",
+      "content": "São chaves que interrompem os envios seguintes quando o contato faz algo depois de entrar no fluxo — o jeito de não insistir com quem já comprou."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Gatilho"
+        },
+        {
+          "content": "Chaves oferecidas"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "De carrinho"
+          },
+          {
+            "content": "Fez um pedido pago · Fez um pedido (qualquer status) · Iniciou o checkout · Iniciou um carrinho novo"
+          }
+        ],
+        [
+          {
+            "content": "De produto"
+          },
+          {
+            "content": "Fez um pedido pago · Fez um pedido (qualquer status) · Iniciou um carrinho novo · Viu um produto"
+          }
+        ],
+        [
+          {
+            "content": "De navegação"
+          },
+          {
+            "content": "Fez um pedido pago · Fez um pedido (qualquer status) · Iniciou um carrinho novo · Viu uma página"
+          }
+        ],
+        [
+          {
+            "content": "De categoria"
+          },
+          {
+            "content": "Fez um pedido pago · Fez um pedido (qualquer status) · Viu um produto"
+          }
+        ],
+        [
+          {
+            "content": "Os demais"
+          },
+          {
+            "content": "Fez um pedido pago · Fez um pedido (qualquer status)"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A verificação acontece antes de cada envio, não no instante em que o pedido entra — uma mensagem já em rota de saída pode sair mesmo assim."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/escolher-um-gatilho",
+          "description": "O catálogo de gatilhos disponíveis."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+          "description": "O construtor de condições usado nos filtros de perfil."
+        },
+        {
+          "ref": "automacoes/automacoes/testar-publicar-pausar-e-cancelar",
+          "description": "Testar a entrada antes de publicar."
+        }
+      ]
+    }
+  ]
+}

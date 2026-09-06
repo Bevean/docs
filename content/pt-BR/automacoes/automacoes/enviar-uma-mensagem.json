@@ -1,33 +1,229 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Configurar um passo de envio",
-  "subtitle": "A diferença entre template aprovado e mensagem regular, os blocos disponíveis e as variáveis do gatilho.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "Escolher o canal, decidir entre modelo e mensagem regular, e o que cada canal entrega de fato.",
+  "updatedAt": "2026-09-06",
   "tags": [
-    "enviar mensagem",
-    "template aprovado",
-    "mensagem regular",
-    "lista de opções"
+    "automacoes",
+    "mensagem",
+    "canais",
+    "flux"
   ],
   "related": [
-    "automacoes/automacoes/montar-o-fluxo",
+    "automacoes/automacoes/blocos-da-mensagem",
     "conteudos/modelos/visao-geral"
   ],
   "body": [
     {
       "type": "paragraph",
-      "content": "Um passo de envio manda uma mensagem pelo canal escolhido, de duas formas possíveis."
+      "content": "Um passo de envio manda uma mensagem por um canal conectado. É o passo mais usado do fluxo, e cada canal tem possibilidades diferentes."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "no menu de passos, na categoria "
+        },
+        {
+          "type": "text",
+          "text": "Conteúdo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — uma opção por canal."
+        }
+      ]
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Template de mensagem ou mensagem regular"
+      "content": "O que cada canal envia"
     },
     {
       "type": "table",
       "head": [
         {
-          "content": "Tipo"
+          "content": "Canal"
+        },
+        {
+          "content": "O que dá para enviar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "WhatsApp Oficial"
+          },
+          {
+            "content": "Modelo aprovado ou mensagem montada na hora, com botões, lista de opções e carrossel."
+          }
+        ],
+        [
+          {
+            "content": "WhatsApp"
+          },
+          {
+            "content": "Modelo ou mensagem montada na hora, só com texto e imagem — este canal não envia botões nem listas."
+          }
+        ],
+        [
+          {
+            "content": "E-mail"
+          },
+          {
+            "content": "Um modelo de e-mail, com assunto e prévia definidos no próprio passo."
+          }
+        ],
+        [
+          {
+            "content": "SMS"
+          },
+          {
+            "content": "Só texto — por modelo ou escrito na hora."
+          }
+        ],
+        [
+          {
+            "content": "Instagram"
+          },
+          {
+            "content": "Ainda não envia mensagens pelo fluxo."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "É possível montar e publicar um passo de Instagram, e o fluxo não acusa erro — mas a mensagem não é enviada. Enquanto isso não muda, use outro canal nesse ponto do fluxo."
+        }
+      ],
+      "title": "O Instagram aparece no menu, mas não entrega"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um canal sem nenhuma conta conectada aparece desabilitado no menu, com o selo "
+        },
+        {
+          "type": "text",
+          "text": "Sem canal",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — conecte primeiro em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Escolher o canal de envio"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O campo "
+        },
+        {
+          "type": "text",
+          "text": "Canal de envio",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " lista as contas conectadas daquele tipo, identificadas por nome e número. Havendo uma só, ela já vem selecionada."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Se o canal que estava salvo foi desconectado e existe apenas um outro conectado, a troca é automática."
+        },
+        {
+          "content": "Se houver vários, o passo fica pendente até você escolher de novo — e o modelo selecionado é limpo, porque cada modelo pertence a um número."
+        },
+        {
+          "content": "Trocar o canal manualmente também limpa o modelo, pelo mesmo motivo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Modelo de mensagem ou mensagem regular"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em WhatsApp, SMS e Instagram o passo abre com o campo "
+        },
+        {
+          "type": "text",
+          "text": "Tipo de mensagem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Opção"
         },
         {
           "content": "Quando usar"
@@ -39,7 +235,7 @@
             "content": "Template de mensagem"
           },
           {
-            "content": "Um modelo já aprovado pela Meta. Envia a qualquer hora, mesmo fora da janela de 24h de conversa."
+            "content": "Um modelo já aprovado. Chega a qualquer hora, mesmo sem conversa aberta. É o padrão."
           }
         ],
         [
@@ -47,7 +243,7 @@
             "content": "Mensagem regular"
           },
           {
-            "content": "Montada na hora, bloco por bloco. Só chega se houver uma sessão aberta (24h desde a última mensagem do contato)."
+            "content": "Montada na hora, bloco por bloco. No WhatsApp, só chega se houver conversa aberta — a janela de 24 horas desde a última mensagem do contato."
           }
         ]
       ]
@@ -61,7 +257,23 @@
         },
         {
           "type": "text",
-          "text": "como funcionam os modelos",
+          "text": "como montar uma mensagem regular",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/blocos-da-mensagem"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para os blocos disponíveis, e "
+        },
+        {
+          "type": "text",
+          "text": "os modelos de mensagem",
           "marks": [
             {
               "type": "docLink",
@@ -73,72 +285,343 @@
         },
         {
           "type": "text",
-          "text": " para o que entra num Template de mensagem."
+          "text": " para criar e aprovar um modelo."
         }
       ]
     },
     {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Publicar fica bloqueado quando um modelo do WhatsApp Oficial leva direto — pelo caminho automático — a uma mensagem regular do mesmo canal. O motivo é a janela de 24 horas: enviar o modelo não abre conversa, quem abre é o cliente."
+        },
+        {
+          "type": "paragraph",
+          "content": "Para liberar, faça a mensagem regular sair de uma resposta do contato: de um botão do modelo, por exemplo."
+        }
+      ],
+      "title": "Depois de um modelo do WhatsApp Oficial, a mensagem regular precisa de uma resposta no meio"
+    },
+    {
       "type": "heading",
       "level": 2,
-      "content": "Blocos da mensagem regular"
+      "content": "E-mail"
+    },
+    {
+      "type": "paragraph",
+      "content": "O passo de e-mail não tem escolha de tipo — é sempre um modelo. Os campos são:"
     },
     {
       "type": "table",
       "head": [
         {
-          "content": "Bloco"
+          "content": "Campo"
         },
         {
-          "content": "O que é"
+          "content": "Detalhe"
         }
       ],
       "rows": [
         [
           {
-            "content": "Texto e botões interativos"
+            "content": "Canal de envio"
           },
           {
-            "content": "Com uma \"Ação do balão\": Botões de resposta rápida OU Lista de opções — nunca os dois juntos no mesmo bloco."
+            "content": "O remetente que dispara a mensagem."
           }
         ],
         [
           {
-            "content": "Imagem"
+            "content": "Assunto"
           },
           {
-            "content": "—"
+            "content": "Obrigatório, até 50 caracteres. Sem ele o passo fica pendente e o teste não roda."
           }
         ],
         [
           {
-            "content": "Atraso"
+            "content": "Prévia"
           },
           {
-            "content": "Uma pausa curta, em segundos, entre blocos."
+            "content": "Opcional, até 100 caracteres. É o texto que aparece ao lado do assunto na caixa de entrada."
           }
         ],
         [
           {
-            "content": "Digitando..."
+            "content": "Modelo"
           },
           {
-            "content": "Indicador de \"digitando\", só em canais que suportam esse recurso."
+            "content": "Escolha um modelo de e-mail existente ou clique em Criar novo template — o editor visual abre em outra aba."
           }
         ]
       ]
     },
     {
       "type": "paragraph",
-      "content": "Cada botão ou item de lista vira uma saída própria no fluxo, para você continuar o caminho de quem clicou naquela opção específica."
+      "content": "O corpo do e-mail vem sempre do modelo: não há editor dentro do passo, nem campo para colar HTML. Assunto e prévia aceitam variáveis."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Além do "
+            },
+            {
+              "type": "text",
+              "text": "Próximo passo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", um envio por e-mail ganha as saídas "
+            },
+            {
+              "type": "text",
+              "text": "Se abrir",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Se clicar em qualquer link",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — dá para continuar o fluxo de quem interagiu sem montar condição nenhuma."
+            }
+          ]
+        }
+      ],
+      "title": "O passo de e-mail tem dois caminhos a mais"
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Variáveis disponíveis"
+      "content": "SMS"
     },
     {
       "type": "paragraph",
-      "content": "O seletor de variáveis mostra um grupo com o nome do gatilho escolhido (por exemplo, \"Evento · Novo pedido\"), com os dados daquele evento. Se o fluxo tiver uma ação de Resgatar cashback antes desse passo, aparece também um grupo de Cashback; se tiver uma Requisição HTTP com resposta mapeada, aparece um grupo com os campos dessa resposta."
+      "content": "O SMS envia texto e nada mais. A tela mostra o mesmo painel do WhatsApp — inclusive as frases sobre aprovação da Meta e janela de 24 horas, que não valem aqui — e oferece blocos que o canal não entrega:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Bloco de imagem faz o envio falhar."
+        },
+        {
+          "content": "Botões são descartados em silêncio: chega só o texto, e quem depende de um clique para seguir o fluxo fica parado."
+        },
+        {
+          "content": "Não há confirmação de entrega nem de leitura — o envio fica sempre como enviado nos resultados."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Variáveis"
+    },
+    {
+      "type": "paragraph",
+      "content": "O botão de variáveis do editor abre a lista com o que está disponível naquele ponto do fluxo. Além dos dados do contato, o passo acrescenta:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Grupo"
+        },
+        {
+          "content": "Aparece quando"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Evento · <gatilho>"
+          },
+          {
+            "content": "A automação tem gatilho de evento — traz os dados do que disparou a jornada."
+          }
+        ],
+        [
+          {
+            "content": "Resgate de cashback"
+          },
+          {
+            "content": "Existe uma ação de Resgatar cashback antes deste passo."
+          }
+        ],
+        [
+          {
+            "content": "Requisição HTTP"
+          },
+          {
+            "content": "Existe um passo de Requisição HTTP com campos guardados da resposta."
+          }
+        ],
+        [
+          {
+            "content": "Webhook"
+          },
+          {
+            "content": "A automação é disparada por um disparador externo."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Variável que não existe no ponto escolhido aparece destacada em vermelho, com o aviso de variável desconhecida. Já uma variável válida que chega vazia no envio simplesmente não imprime nada — a mensagem sai com o espaço em branco, sem erro."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Testar o passo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão "
+        },
+        {
+          "type": "text",
+          "text": "Enviar teste",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " manda só aquele passo para um número ou e-mail avulso. Vale saber:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "O teste usa a versão salva do passo, não o que está na tela — salve antes."
+        },
+        {
+          "content": "Não cria jornada nem entra nos resultados."
+        },
+        {
+          "content": "Em e-mail, o teste não conta abertura nem clique."
+        },
+        {
+          "content": "Mensagem regular só chega se já houver conversa aberta com aquele número."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que impede de publicar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aviso no passo"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Selecione um canal para enviar"
+          },
+          {
+            "content": "Escolha a conta no campo Canal de envio."
+          }
+        ],
+        [
+          {
+            "content": "Selecione um template aprovado"
+          },
+          {
+            "content": "O modelo não foi escolhido, ou o que estava escolhido pertencia a outro canal."
+          }
+        ],
+        [
+          {
+            "content": "Defina o assunto do e-mail"
+          },
+          {
+            "content": "Preencha o campo Assunto."
+          }
+        ],
+        [
+          {
+            "content": "Adicione o conteúdo da mensagem (texto ou imagem)"
+          },
+          {
+            "content": "A mensagem regular está vazia."
+          }
+        ],
+        [
+          {
+            "content": "Este canal não envia lista de opções · Este canal não envia carrossel de mídia"
+          },
+          {
+            "content": "Recursos exclusivos do WhatsApp Oficial — troque o canal ou o formato."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A lista completa de pendências fica no botão vermelho no topo do editor, e cada item leva direto ao passo com problema."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/blocos-da-mensagem",
+          "description": "Texto, botões, lista e carrossel de uma mensagem regular."
+        },
+        {
+          "ref": "conteudos/modelos/visao-geral",
+          "description": "Criar e aprovar os modelos usados aqui."
+        },
+        {
+          "ref": "automacoes/automacoes/montar-o-fluxo",
+          "description": "Ligar este passo ao resto do fluxo."
+        }
+      ]
     }
   ]
 }

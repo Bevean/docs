@@ -706,6 +706,26 @@ escrevem tabelas parecidas, mas só a segunda tem link de menu. A pergunta
 "isso é o motor atual?" não se resolve olhando um único app: confirme sempre
 qual frontend a tela que o usuário realmente abre está chamando.
 
+**O rótulo que o usuário lê pode não estar no i18n do front.** O catálogo de
+gatilhos do `flux` não está em `locales/pt.json` do `admin-front`: vem de um JSON
+servido pelo backend (`flux-trigger/locales/triggers.pt.json`) e entregue por
+`GET /flux/triggers`. Procurar só no i18n do front dá a impressão de que a tela é
+mais pobre do que é. Quando um catálogo parecer curto demais, pergunte de onde a
+tela busca a lista antes de concluir que ela não existe.
+
+**Numa matriz "recurso × canal", verifique os dois lados antes de escrever.** No
+passo de envio do `flux`, a UI oferece botões em SMS e Instagram, bloco de imagem
+em SMS e o modo template em Instagram — nada disso é entregue pelo motor: SMS só
+manda texto (imagem faz a entrega falhar) e Instagram não envia nada. Documentar
+a partir da tela teria produzido três funcionalidades inexistentes. A regra que
+sobrou: para cada recurso da tela, encontre quem o executa no envio; se não achar
+o executor, é gap, não recurso.
+
+**Campo salvo não é campo respeitado.** O intervalo de horário do passo de Atraso
+é persistido pelo editor e ignorado pelo motor — o próprio tipo do backend diz
+isso num comentário. Vale para qualquer configuração de agendamento: confirme que
+alguém LÊ o campo, não só que ele é gravado.
+
 ## Por que não há prints
 
 Decisão do MVP: **nenhum artigo leva captura de tela.** A regra não tem exceção,

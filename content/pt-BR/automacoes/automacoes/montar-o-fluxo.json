@@ -1,12 +1,12 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Montar o fluxo",
-  "subtitle": "As peças disponíveis para montar uma automação, e como conectá-las no quadro visual.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "Como adicionar e ligar os passos no quadro, e o que cada passo disponível faz.",
+  "updatedAt": "2026-09-06",
   "tags": [
-    "montar fluxo",
-    "quadro visual",
-    "passos da automação"
+    "automacoes",
+    "fluxo",
+    "flux"
   ],
   "related": [
     "automacoes/automacoes/enviar-uma-mensagem",
@@ -15,30 +15,66 @@
   "body": [
     {
       "type": "paragraph",
-      "content": "O fluxo é montado num quadro visual — arraste a partir de um passo para abrir o menu do próximo."
+      "content": "O fluxo é montado num quadro visual: o gatilho no topo e, ligados a ele, os passos que acontecem depois."
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Como montar"
+      "content": "Adicionar um passo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Não existe botão de mais na linha que liga dois passos. São dois gestos:"
     },
     {
       "type": "steps",
       "items": [
         {
-          "title": "Arraste a partir da bolinha de saída de qualquer passo"
+          "title": "No fluxo vazio, use a caixa que já aparece",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Uma caixa tracejada com o título "
+                },
+                {
+                  "type": "text",
+                  "text": "Escolha o primeiro passo 👇",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " vem ligada ao gatilho. Ela some quando existe algum passo e volta se você apagar todos."
+                }
+              ]
+            }
+          ]
         },
         {
-          "title": "Solte no vazio para abrir o menu de próximos passos, ou solte sobre outro passo já existente para conectar direto"
+          "title": "Depois disso, arraste a partir da bolinha de saída",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Puxe da bolinha na borda de um passo e solte no espaço vazio: o menu de passos abre ali. Soltar em cima de um passo já existente liga direto nele, sem abrir menu."
+            }
+          ]
         },
         {
-          "title": "Configure o passo clicando nele"
+          "title": "Escolha o passo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O menu vem agrupado em Conteúdo, Lógica e Integrações. Ao escolher, o passo é criado e o painel de configuração já abre."
+            }
+          ]
         }
       ]
-    },
-    {
-      "type": "paragraph",
-      "content": "A automação salva sozinha enquanto você edita (indicador \"Salvando... / Salvo\" no topo). Outros recursos do quadro: desfazer/refazer, alinhar automaticamente, zoom e notas adesivas."
     },
     {
       "type": "heading",
@@ -49,10 +85,13 @@
       "type": "table",
       "head": [
         {
-          "content": "Grupo"
+          "content": "Categoria"
         },
         {
-          "content": "Passos"
+          "content": "Passo"
+        },
+        {
+          "content": "O que faz"
         }
       ],
       "rows": [
@@ -61,28 +100,10 @@
             "content": "Conteúdo"
           },
           {
-            "content": [
-              {
-                "type": "text",
-                "text": "Um passo de envio por canal: WhatsApp Oficial, WhatsApp, Instagram, E-mail, SMS. Veja "
-              },
-              {
-                "type": "text",
-                "text": "enviar uma mensagem",
-                "marks": [
-                  {
-                    "type": "docLink",
-                    "attrs": {
-                      "ref": "automacoes/automacoes/enviar-uma-mensagem"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
+            "content": "WhatsApp Oficial, WhatsApp, Instagram, E-mail, SMS"
+          },
+          {
+            "content": "Envia uma mensagem pelo canal escolhido."
           }
         ],
         [
@@ -90,28 +111,54 @@
             "content": "Lógica"
           },
           {
-            "content": [
-              {
-                "type": "text",
-                "text": "Ações, Condição, Atraso inteligente, Digitando..., Randomizador. Veja "
-              },
-              {
-                "type": "text",
-                "text": "Ações, Condição e Randomizador",
-                "marks": [
-                  {
-                    "type": "docLink",
-                    "attrs": {
-                      "ref": "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
+            "content": "Ações"
+          },
+          {
+            "content": "Executa uma ou mais ações no contato ou na conversa."
+          }
+        ],
+        [
+          {
+            "content": "Lógica"
+          },
+          {
+            "content": "Condição"
+          },
+          {
+            "content": "Divide o fluxo em caminhos conforme regras."
+          }
+        ],
+        [
+          {
+            "content": "Lógica"
+          },
+          {
+            "content": "Atraso inteligente"
+          },
+          {
+            "content": "Pausa a jornada por um tempo antes de continuar."
+          }
+        ],
+        [
+          {
+            "content": "Lógica"
+          },
+          {
+            "content": "Digitando…"
+          },
+          {
+            "content": "Mostra o indicador de digitação antes do próximo passo."
+          }
+        ],
+        [
+          {
+            "content": "Lógica"
+          },
+          {
+            "content": "Randomizador"
+          },
+          {
+            "content": "Divide o tráfego entre variações, para teste A/B."
           }
         ],
         [
@@ -119,28 +166,207 @@
             "content": "Integrações"
           },
           {
-            "content": "Requisição HTTP — chama um endereço externo, com saídas separadas para \"Deu certo\" e \"Falhou\"."
+            "content": "Requisição HTTP"
+          },
+          {
+            "content": "Chama um endereço externo e usa a resposta nos passos seguintes."
           }
         ]
       ]
     },
     {
       "type": "paragraph",
-      "content": "Um passo de envio por e-mail ganha automaticamente dois ramos de saída extras: \"Se abrir\" e \"Se clicar em qualquer link\"."
+      "content": [
+        {
+          "type": "text",
+          "text": "Um canal sem conta conectada aparece desabilitado, com o selo "
+        },
+        {
+          "type": "text",
+          "text": "Sem canal",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — conecte em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Regras de ligação"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Cada saída aceita uma ligação só. Ligar uma saída que já tinha destino substitui a ligação anterior."
+        },
+        {
+          "content": "Cada passo aceita entrada de um único passo de origem. Tentar ligar um segundo passo diferente no mesmo destino não funciona — e não aparece aviso."
+        },
+        {
+          "content": "Saídas diferentes do mesmo passo podem convergir para o mesmo destino."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Um caminho que você deixar sem ligação encerra a jornada ali — não existe passo de fim."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Trabalhar no quadro"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Recurso"
+        },
+        {
+          "content": "Detalhe"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Salvamento"
+          },
+          {
+            "content": "Automático enquanto você edita, com o indicador Salvando… / Salvo no topo."
+          }
+        ],
+        [
+          {
+            "content": "Ações do passo"
+          },
+          {
+            "content": "No topo de cada passo, ao passar o mouse: duplicar e remover — e Enviar teste, nos passos de envio."
+          }
+        ],
+        [
+          {
+            "content": "Notas"
+          },
+          {
+            "content": "O botão Adicionar nota cria um adesivo redimensionável. Duplo-clique para editar. Notas não se ligam a nada e não afetam a jornada."
+          }
+        ],
+        [
+          {
+            "content": "Outros"
+          },
+          {
+            "content": "Desfazer e refazer, alinhamento automático e zoom."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Passos não podem ser renomeados, e o cartão do gatilho não pode ser excluído."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Antes de publicar ou enviar, um aviso de "
+            },
+            {
+              "type": "text",
+              "text": "Nodes desconectados",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " lista os passos que ficaram sem ligação com o fluxo e oferece "
+            },
+            {
+              "type": "text",
+              "text": "Remover e continuar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — eles são descartados. As notas não são afetadas."
+            }
+          ]
+        }
+      ],
+      "title": "Passo solto é apagado, não bloqueia"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "No fluxo de uma campanha é um pouco diferente"
+    },
+    {
+      "type": "paragraph",
+      "content": "A campanha usa o mesmo quadro, com duas diferenças:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Requisição HTTP não aparece no menu — é exclusiva das automações."
+        },
+        {
+          "content": "O primeiro passo depois do público-alvo tem de ser uma mensagem, uma condição ou um randomizador. Começar por Ações ou por Atraso não é aceito, e caminhos de condição ou randomizador na entrada precisam levar a uma mensagem."
+        }
+      ]
     },
     {
       "type": "linkCards",
       "items": [
         {
           "ref": "automacoes/automacoes/enviar-uma-mensagem",
-          "description": "Configure um passo de envio."
+          "description": "Configurar um passo de envio."
         },
         {
           "ref": "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador",
-          "description": "Configure Ações, Condição ou Randomizador."
+          "description": "Ações, Condição e Randomizador."
+        },
+        {
+          "ref": "automacoes/automacoes/controlar-o-tempo",
+          "description": "Atraso inteligente, Digitando e a janela de envio."
+        },
+        {
+          "ref": "automacoes/automacoes/requisicao-http",
+          "description": "Chamar um sistema externo no meio da jornada."
         }
-      ],
-      "title": "Próximos passos"
+      ]
     }
   ]
 }

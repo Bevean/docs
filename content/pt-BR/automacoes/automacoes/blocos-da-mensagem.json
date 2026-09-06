@@ -1,0 +1,563 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Montar uma mensagem regular",
+  "subtitle": "Texto, botões, lista de opções e carrossel — os blocos de uma mensagem escrita direto no fluxo.",
+  "updatedAt": "2026-09-06",
+  "tags": [
+    "automacoes",
+    "mensagem",
+    "whatsapp",
+    "flux"
+  ],
+  "related": [
+    "automacoes/automacoes/enviar-uma-mensagem",
+    "automacoes/automacoes/montar-o-fluxo"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Uma mensagem regular é montada bloco por bloco, dentro do próprio passo de envio — sem precisar de modelo aprovado. É assim que se fazem menus com botões, listas de opções e carrosséis."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "no passo de envio, com "
+        },
+        {
+          "type": "text",
+          "text": "Tipo de mensagem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " em "
+        },
+        {
+          "type": "text",
+          "text": "Mensagem regular",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — veja "
+        },
+        {
+          "type": "text",
+          "text": "configurar um passo de envio",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/enviar-uma-mensagem"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os blocos disponíveis"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Bloco"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Texto e botões interativos"
+          },
+          {
+            "content": "O balão de texto, com a opção de botões ou de lista."
+          }
+        ],
+        [
+          {
+            "content": "Carrossel de mídia"
+          },
+          {
+            "content": "Cards com imagem lado a lado, cada um com seus botões."
+          }
+        ],
+        [
+          {
+            "content": "Imagem"
+          },
+          {
+            "content": "Uma imagem sozinha."
+          }
+        ],
+        [
+          {
+            "content": "Atraso"
+          },
+          {
+            "content": "Uma pausa curta entre um balão e o próximo, de 1 a 60 segundos. O padrão é 3."
+          }
+        ],
+        [
+          {
+            "content": "Digitando"
+          },
+          {
+            "content": "Mostra \"digitando…\" antes do próximo balão, de 1 a 20 segundos. O padrão é 2."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Os blocos são empilhados na ordem em que vão chegar, e podem ser reordenados pelas setas ou removidos."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Estes dois blocos valem só dentro desta mensagem, para dar ritmo entre os balões. Para pausar o fluxo inteiro por horas ou dias, use o passo "
+            },
+            {
+              "type": "text",
+              "text": "Atraso inteligente",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "automacoes/automacoes/controlar-o-tempo"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Atraso e Digitando aqui não são os passos de mesmo nome"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Botões, lista e carrossel só saem pelo WhatsApp Oficial. No WhatsApp comum a mensagem chega como texto, e no SMS o bloco de imagem faz o envio falhar."
+        }
+      ],
+      "title": "Nem todo canal aceita todos os blocos"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Texto e botões interativos"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O bloco de texto tem o editor da mensagem, com negrito, itálico, tachado, monoespaçado, emojis e variáveis. Acima dele há a opção "
+        },
+        {
+          "type": "text",
+          "text": "Imagem no topo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (JPEG ou PNG, até 5 MB), disponível no WhatsApp Oficial."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Dá para passar do limite sem aviso nenhum na tela e publicar assim. Quem corta o excedente é o WhatsApp, na hora da entrega — confira o tamanho antes de publicar."
+        }
+      ],
+      "title": "O contador de 1024 caracteres não trava a digitação"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em "
+        },
+        {
+          "type": "text",
+          "text": "Ação do balão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " você escolhe um dos dois formatos interativos — nunca os dois no mesmo balão:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Formato"
+        },
+        {
+          "content": "Limite"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Botões de resposta"
+          },
+          {
+            "content": "Até 3 botões, exibidos abaixo do texto."
+          }
+        ],
+        [
+          {
+            "content": "Lista de opções"
+          },
+          {
+            "content": "Até 10 opções, abertas por um botão único."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Trocar de um formato para o outro apaga o que estava montado no anterior, para não deixar caminhos soltos no fluxo."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Botões de resposta"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada botão tem um "
+        },
+        {
+          "type": "text",
+          "text": "Título do botão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " de até 20 caracteres e uma ação em "
+        },
+        {
+          "type": "text",
+          "text": "Quando este botão é pressionado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Ação"
+        },
+        {
+          "content": "O que acontece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Próximo passo"
+          },
+          {
+            "content": "O clique responde a mensagem e segue pelo caminho daquele botão."
+          }
+        ],
+        [
+          {
+            "content": "Abrir Site"
+          },
+          {
+            "content": "Abre o endereço informado em URL do site. Aceita variável."
+          }
+        ],
+        [
+          {
+            "content": "Abrir carrinho"
+          },
+          {
+            "content": "Abre o carrinho do contato. Só aparece quando o gatilho da automação fornece esse link."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Mesmo os botões que abrem um site geram uma saída no quadro — o contato abre o link e a jornada segue por aquele caminho."
+        }
+      ],
+      "title": "Botão de link também continua o fluxo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Lista de opções"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A lista tem um "
+        },
+        {
+          "type": "text",
+          "text": "Texto do botão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (até 20 caracteres — é o botão que abre a lista) e as opções em si. Cada opção tem "
+        },
+        {
+          "type": "text",
+          "text": "Título",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " de até 24 caracteres e uma "
+        },
+        {
+          "type": "text",
+          "text": "Descrição",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " opcional de até 72."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Opção de lista não abre site: ela sempre segue para o próximo passo daquele caminho."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Carrossel de mídia"
+    },
+    {
+      "type": "paragraph",
+      "content": "O carrossel é uma fileira de cards que o contato desliza na conversa. Regras que a tela cobra na hora de publicar:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Regra"
+        },
+        {
+          "content": "Detalhe"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Quantidade de cards"
+          },
+          {
+            "content": "No mínimo 2, no máximo 10. O bloco já nasce com 2."
+          }
+        ],
+        [
+          {
+            "content": "Imagem"
+          },
+          {
+            "content": "Obrigatória em todo card — JPEG ou PNG, até 5 MB."
+          }
+        ],
+        [
+          {
+            "content": "Texto do card"
+          },
+          {
+            "content": "Até 160 caracteres, com no máximo 2 quebras de linha."
+          }
+        ],
+        [
+          {
+            "content": "Botões por card"
+          },
+          {
+            "content": "Até 2, e no máximo um deles pode ser de link."
+          }
+        ],
+        [
+          {
+            "content": "Mesmos botões em todos os cards"
+          },
+          {
+            "content": "Exigência do WhatsApp: mexer nos botões de um card reescreve os demais."
+          }
+        ],
+        [
+          {
+            "content": "Tipos misturados"
+          },
+          {
+            "content": "Um card não pode ter botão de resposta e botão de link ao mesmo tempo."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Cada botão vira um caminho no fluxo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Todo botão, opção de lista e botão de card ganha uma saída própria no cartão do passo, no quadro. É por elas que você continua a jornada de quem escolheu cada opção — e um caminho que você não ligar simplesmente encerra o fluxo para quem clicou ali."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se você monta botões no WhatsApp Oficial e depois muda o passo para o WhatsApp comum, os editores somem da tela mas os botões continuam salvos. O contato recebe só o texto, e quem estava esperando um clique para avançar fica parado ali."
+        },
+        {
+          "type": "paragraph",
+          "content": "Ao trocar de canal, refaça a mensagem em vez de reaproveitar o que estava montado."
+        }
+      ],
+      "title": "Trocar o canal depois de montar os botões deixa caminhos mortos"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conferir antes de enviar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Não há prévia dentro do painel de configuração: quem mostra o resultado é o próprio cartão do passo no quadro, que desenha o balão com os botões, as opções e os cards, cada um com sua saída."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para ver a mensagem no celular, use "
+        },
+        {
+          "type": "text",
+          "text": "Enviar teste",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — lembrando que uma mensagem regular só é entregue se já houver conversa aberta com aquele número."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/enviar-uma-mensagem",
+          "description": "Escolher canal e decidir entre modelo e mensagem regular."
+        },
+        {
+          "ref": "automacoes/automacoes/montar-o-fluxo",
+          "description": "Ligar as saídas dos botões ao resto do fluxo."
+        }
+      ]
+    }
+  ]
+}

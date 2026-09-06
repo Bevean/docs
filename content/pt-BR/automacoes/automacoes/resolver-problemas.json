@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "O fluxo reinicia sozinho, ou não consigo publicar",
   "subtitle": "O gatilho de mensagem recebida reiniciando o fluxo, a lista de pendências antes de publicar, e a diferença entre pausar e cancelar.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-06",
   "tags": [
     "fluxo reinicia",
     "não consigo publicar",
@@ -43,6 +43,46 @@
     {
       "type": "heading",
       "level": 2,
+      "content": "\"A mensagem não chegou pelo Instagram\""
+    },
+    {
+      "type": "paragraph",
+      "content": "O Instagram aparece no menu de passos, deixa montar a mensagem e não impede publicar, mas o envio não sai. Troque o canal desse passo enquanto isso não muda."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Troquei o canal do passo e o contato ficou parado\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Botões e listas só saem pelo WhatsApp Oficial. Ao mudar um passo que tinha botões para o WhatsApp comum, os editores somem da tela mas os botões continuam salvos: o contato recebe só o texto e não tem como avançar pelo caminho que esperava um clique."
+    },
+    {
+      "type": "paragraph",
+      "content": "Refaça a mensagem depois de trocar o canal, em vez de reaproveitar o que estava montado."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Configurei horário no Atraso e a mensagem saiu fora dele\""
+    },
+    {
+      "type": "paragraph",
+      "content": "O intervalo de horário do passo de Atraso é salvo, mas ainda não é respeitado — o fluxo continua a qualquer hora. A restrição que vale é a janela de envio da automação, na configuração de envio."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"O SMS chegou sem os botões, ou não chegou\""
+    },
+    {
+      "type": "paragraph",
+      "content": "O SMS envia só texto. Os botões que a tela permite montar são descartados no envio, e um bloco de imagem faz a mensagem falhar. O SMS também não confirma entrega nem leitura: nos resultados ele fica sempre como enviado."
+    },
+    {
+      "type": "heading",
+      "level": 2,
       "content": "Outras perguntas"
     },
     {
@@ -63,6 +103,24 @@
             {
               "type": "paragraph",
               "content": "Não como gatilho — o mais próximo é configurar uma janela de dias/horários permitidos para o envio, dentro de uma automação já disparada por outro evento."
+            }
+          ]
+        },
+        {
+          "question": "Publiquei de novo e contatos que já tinham passado entraram outra vez. Por quê?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "A reentrada \"Entra no máximo uma vez\" conta por versão publicada. Ao republicar, a contagem recomeça."
+            }
+          ]
+        },
+        {
+          "question": "Apaguei uma lista e uma automação disparou para muita gente.",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Excluir um segmento faz todos os membros saírem dele de uma vez, e cada saída dispara o gatilho \"Saiu do segmento\". Pause a automação antes de apagar a lista."
             }
           ]
         }

@@ -6,9 +6,14 @@
   "articles": [
     "visao-geral",
     "escolher-um-gatilho",
+    "filtrar-quem-entra",
+    "disparador-externo",
     "montar-o-fluxo",
     "enviar-uma-mensagem",
+    "blocos-da-mensagem",
     "usar-acoes-condicoes-e-o-randomizador",
+    "controlar-o-tempo",
+    "requisicao-http",
     "testar-publicar-pausar-e-cancelar",
     "acompanhar-resultados",
     "resolver-problemas"

@@ -1,0 +1,354 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Disparar a automação por outro sistema",
+  "subtitle": "O disparador externo: uma URL exclusiva que outro sistema chama para colocar um contato no fluxo.",
+  "updatedAt": "2026-09-06",
+  "tags": [
+    "automacoes",
+    "gatilho",
+    "webhook",
+    "flux"
+  ],
+  "related": [
+    "automacoes/automacoes/escolher-um-gatilho",
+    "automacoes/automacoes/requisicao-http"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O "
+        },
+        {
+          "type": "text",
+          "text": "Disparador externo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " permite que outro sistema inicie uma automação: a Bevean gera uma URL exclusiva e, a cada chamada nela, o contato indicado entra no fluxo."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "na lista de gatilhos, na categoria "
+        },
+        {
+          "type": "text",
+          "text": "Sistemas externos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Configurar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Salve o rascunho",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O endereço só pode ser gerado depois que a automação existe como rascunho."
+            }
+          ]
+        },
+        {
+          "title": "Cole um JSON de exemplo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Use um envio de verdade do sistema que vai chamar. É dele que saem os campos selecionáveis nos passos seguintes."
+            }
+          ]
+        },
+        {
+          "title": "Indique como encontrar o contato",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Escolha entre ID Bevean, E-mail, Telefone ou Documento (CPF/CNPJ) e aponte qual campo do JSON carrega esse dado. Sem isso o endereço não é gerado."
+            }
+          ]
+        },
+        {
+          "title": "Gere o endpoint",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean devolve o endereço e o segredo usado para assinar as chamadas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os demais campos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Detalhe"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Identificador para evitar eventos duplicados"
+          },
+          {
+            "content": "Opcional. Aponte um campo único do JSON e chamadas repetidas com o mesmo valor não entram duas vezes."
+          }
+        ],
+        [
+          {
+            "content": "Variáveis personalizadas"
+          },
+          {
+            "content": "Dê um nome a campos do JSON para poder usá-los nas mensagens do fluxo."
+          }
+        ],
+        [
+          {
+            "content": "Reentrada"
+          },
+          {
+            "content": "Aqui existem só duas opções: quando não estiver no fluxo, ou no máximo uma vez por versão publicada."
+          }
+        ],
+        [
+          {
+            "content": "Retenção (dias)"
+          },
+          {
+            "content": "Por quantos dias o histórico de eventos recebidos fica guardado. De 1 a 90, com 30 como padrão."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os botões do painel permitem ainda "
+        },
+        {
+          "type": "text",
+          "text": "Rotacionar segredo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Executar teste",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Ver histórico de eventos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Limites da chamada"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Limite"
+        },
+        {
+          "content": "Valor"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Tamanho do envio"
+          },
+          {
+            "content": "Até 256 KB por chamada."
+          }
+        ],
+        [
+          {
+            "content": "Frequência"
+          },
+          {
+            "content": "Até 60 chamadas por minuto."
+          }
+        ],
+        [
+          {
+            "content": "Validade da assinatura"
+          },
+          {
+            "content": "5 minutos — o relógio do servidor que chama precisa estar certo."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se o dado de identificação não corresponder a nenhum contato da base, o evento é descartado. O disparador externo nunca cadastra contato novo — crie o contato antes, ou use o gatilho de cadastro para isso."
+        }
+      ],
+      "title": "Contato que não existe é ignorado, não criado"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que este gatilho não tem"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Diferente dos gatilhos de evento, o disparador externo não oferece "
+        },
+        {
+          "type": "text",
+          "text": "Filtros do disparador",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Filtros de perfil",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " nem "
+        },
+        {
+          "type": "text",
+          "text": "Parar de enviar se o contato…",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Quem decide quem entra é o sistema que chama — filtre do lado de lá, ou use uma "
+        },
+        {
+          "type": "text",
+          "text": "Condição",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " logo no começo do fluxo."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Trocar entre disparador externo e gatilho de evento só é possível enquanto a automação é um rascunho."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/escolher-um-gatilho",
+          "description": "Os gatilhos de evento, para comparação."
+        },
+        {
+          "ref": "automacoes/automacoes/requisicao-http",
+          "description": "O caminho inverso: a automação chamando outro sistema."
+        }
+      ]
+    }
+  ]
+}

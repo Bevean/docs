@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Testar, publicar, pausar e cancelar",
   "subtitle": "As duas formas de testar antes de ativar, o que a publicação exige, e a diferença entre pausar e cancelar.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-06",
   "tags": [
     "testar automação",
     "publicar automação",
@@ -51,6 +51,21 @@
     {
       "type": "paragraph",
       "content": "Se o contato ou o evento simulado esbarrar nos filtros do gatilho, a Bevean avisa exatamente qual filtro barrou — em vez de simplesmente não fazer nada."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Nos gatilhos de pedido, o exemplo usado na simulação traz valores de status diferentes dos que chegam em produção. Um filtro como \"Status do pagamento é Aprovado\" funciona no envio real, mas pode não casar no teste — nesse caso a tela diz que o filtro barrou a entrada."
+        },
+        {
+          "type": "paragraph",
+          "content": "Antes de desfazer o filtro, confira o comportamento com um disparo real."
+        }
+      ],
+      "title": "O teste simulado pode acusar um filtro que está certo"
     },
     {
       "type": "heading",
