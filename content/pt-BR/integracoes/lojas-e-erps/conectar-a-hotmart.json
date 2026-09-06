@@ -155,48 +155,34 @@
               "style": "bullet",
               "items": [
                 {
-                  "content": [
-                    {
-                      "type": "text",
-                      "text": "Compra aprovada"
-                    },
-                    {
-                      "type": "text",
-                      "text": "Compra completa"
-                    },
-                    {
-                      "type": "text",
-                      "text": "Compra cancelada"
-                    },
-                    {
-                      "type": "text",
-                      "text": "Reembolso"
-                    },
-                    {
-                      "type": "text",
-                      "text": "Chargeback"
-                    },
-                    {
-                      "type": "text",
-                      "text": "Boleto impresso"
-                    },
-                    {
-                      "type": "text",
-                      "text": "Compra atrasada"
-                    },
-                    {
-                      "type": "text",
-                      "text": "Compra expirada"
-                    },
-                    {
-                      "type": "text",
-                      "text": "Carrinho abandonado"
-                    },
-                    {
-                      "type": "text",
-                      "text": "Compra em contestação"
-                    }
-                  ]
+                  "content": "Compra aprovada"
+                },
+                {
+                  "content": "Compra completa"
+                },
+                {
+                  "content": "Compra cancelada"
+                },
+                {
+                  "content": "Reembolso"
+                },
+                {
+                  "content": "Chargeback"
+                },
+                {
+                  "content": "Boleto impresso"
+                },
+                {
+                  "content": "Compra atrasada"
+                },
+                {
+                  "content": "Compra expirada"
+                },
+                {
+                  "content": "Carrinho abandonado"
+                },
+                {
+                  "content": "Compra em contestação"
                 }
               ]
             }

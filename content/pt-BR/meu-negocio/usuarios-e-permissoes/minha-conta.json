@@ -50,20 +50,13 @@
       "style": "bullet",
       "items": [
         {
-          "content": [
-            {
-              "type": "text",
-              "text": "Primeiro nome e sobrenome"
-            },
-            {
-              "type": "text",
-              "text": "E-mail (usado para entrar na Bevean)"
-            },
-            {
-              "type": "text",
-              "text": "Telefone"
-            }
-          ]
+          "content": "Primeiro nome e sobrenome"
+        },
+        {
+          "content": "E-mail (usado para entrar na Bevean)"
+        },
+        {
+          "content": "Telefone"
         }
       ]
     },

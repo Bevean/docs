@@ -78,32 +78,22 @@
       "style": "bullet",
       "items": [
         {
-          "content": [
-            {
-              "type": "text",
-              "text": "Não abriram"
-            },
-            {
-              "type": "text",
-              "text": "Abriram"
-            },
-            {
-              "type": "text",
-              "text": "Não clicaram"
-            },
-            {
-              "type": "text",
-              "text": "Clicaram"
-            },
-            {
-              "type": "text",
-              "text": "Responderam"
-            },
-            {
-              "type": "text",
-              "text": "Falharam"
-            }
-          ]
+          "content": "Não abriram"
+        },
+        {
+          "content": "Abriram"
+        },
+        {
+          "content": "Não clicaram"
+        },
+        {
+          "content": "Clicaram"
+        },
+        {
+          "content": "Responderam"
+        },
+        {
+          "content": "Falharam"
         }
       ]
     },

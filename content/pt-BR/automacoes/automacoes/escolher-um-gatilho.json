@@ -145,16 +145,10 @@
       "style": "bullet",
       "items": [
         {
-          "content": [
-            {
-              "type": "text",
-              "text": "Filtros do disparador — condições sobre o próprio evento (por exemplo, valor mínimo do pedido)."
-            },
-            {
-              "type": "text",
-              "text": "Filtros de perfil — condições sobre o contato, o mesmo construtor usado no público-alvo de uma campanha ou na criação de um segmento."
-            }
-          ]
+          "content": "Filtros do disparador — condições sobre o próprio evento (por exemplo, valor mínimo do pedido)."
+        },
+        {
+          "content": "Filtros de perfil — condições sobre o contato, o mesmo construtor usado no público-alvo de uma campanha ou na criação de um segmento."
         }
       ]
     },

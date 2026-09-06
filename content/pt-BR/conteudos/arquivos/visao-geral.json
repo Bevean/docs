@@ -100,24 +100,16 @@
       "style": "bullet",
       "items": [
         {
-          "content": [
-            {
-              "type": "text",
-              "text": "Pastas, com subpastas — uma pasta só pode ser excluída vazia."
-            },
-            {
-              "type": "text",
-              "text": "Busca por nome ou extensão, que procura em todas as pastas de uma vez."
-            },
-            {
-              "type": "text",
-              "text": "Filtro por tipo: Imagens, Vídeos ou Documentos."
-            },
-            {
-              "type": "text",
-              "text": "Ordenar por data, tamanho ou nome, e alternar entre grade e lista."
-            }
-          ]
+          "content": "Pastas, com subpastas — uma pasta só pode ser excluída vazia."
+        },
+        {
+          "content": "Busca por nome ou extensão, que procura em todas as pastas de uma vez."
+        },
+        {
+          "content": "Filtro por tipo: Imagens, Vídeos ou Documentos."
+        },
+        {
+          "content": "Ordenar por data, tamanho ou nome, e alternar entre grade e lista."
         }
       ]
     },
@@ -135,20 +127,13 @@
       "style": "bullet",
       "items": [
         {
-          "content": [
-            {
-              "type": "text",
-              "text": "Imagem (computador e celular) de um formulário ou pop-up."
-            },
-            {
-              "type": "text",
-              "text": "Imagem de cabeçalho, rodapé ou produto num modelo de e-mail — mas se você recortar (crop) a imagem nesse momento, a Bevean cria um arquivo novo, sem desfazer o original."
-            },
-            {
-              "type": "text",
-              "text": "Logotipo de uma pesquisa de satisfação."
-            }
-          ]
+          "content": "Imagem (computador e celular) de um formulário ou pop-up."
+        },
+        {
+          "content": "Imagem de cabeçalho, rodapé ou produto num modelo de e-mail — mas se você recortar (crop) a imagem nesse momento, a Bevean cria um arquivo novo, sem desfazer o original."
+        },
+        {
+          "content": "Logotipo de uma pesquisa de satisfação."
         }
       ]
     },

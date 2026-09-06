@@ -92,24 +92,16 @@
       "style": "ordered",
       "items": [
         {
-          "content": [
-            {
-              "type": "text",
-              "text": "Escolha o tipo de dado e envie o arquivo"
-            },
-            {
-              "type": "text",
-              "text": "Mapeie as colunas do arquivo para os campos da Bevean"
-            },
-            {
-              "type": "text",
-              "text": "Valide antes de importar de verdade, se quiser"
-            },
-            {
-              "type": "text",
-              "text": "Acompanhe o progresso e corrija o que falhar"
-            }
-          ]
+          "content": "Escolha o tipo de dado e envie o arquivo"
+        },
+        {
+          "content": "Mapeie as colunas do arquivo para os campos da Bevean"
+        },
+        {
+          "content": "Valide antes de importar de verdade, se quiser"
+        },
+        {
+          "content": "Acompanhe o progresso e corrija o que falhar"
         }
       ]
     },

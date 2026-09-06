@@ -74,36 +74,25 @@
       "style": "bullet",
       "items": [
         {
-          "content": [
-            {
-              "type": "text",
-              "text": "Perfil do contato (campos de sistema)."
-            },
-            {
-              "type": "text",
-              "text": "Segmento — está ou não está em um segmento/lista."
-            },
-            {
-              "type": "text",
-              "text": "Tags do contato."
-            },
-            {
-              "type": "text",
-              "text": "Campos personalizados."
-            },
-            {
-              "type": "text",
-              "text": "Desde a entrada no fluxo — quantas vezes o contato fez algo (pedido, checkout iniciado, produto visualizado...) depois de entrar na automação."
-            },
-            {
-              "type": "text",
-              "text": "Engajamento neste fluxo — se respondeu, clicou, abriu, recebeu ou falhou um envio anterior do mesmo fluxo."
-            },
-            {
-              "type": "text",
-              "text": "Gatilho — dados do evento que iniciou a automação."
-            }
-          ]
+          "content": "Perfil do contato (campos de sistema)."
+        },
+        {
+          "content": "Segmento — está ou não está em um segmento/lista."
+        },
+        {
+          "content": "Tags do contato."
+        },
+        {
+          "content": "Campos personalizados."
+        },
+        {
+          "content": "Desde a entrada no fluxo — quantas vezes o contato fez algo (pedido, checkout iniciado, produto visualizado...) depois de entrar na automação."
+        },
+        {
+          "content": "Engajamento neste fluxo — se respondeu, clicou, abriu, recebeu ou falhou um envio anterior do mesmo fluxo."
+        },
+        {
+          "content": "Gatilho — dados do evento que iniciou a automação."
         }
       ]
     },
