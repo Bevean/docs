@@ -1,0 +1,140 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Testar, publicar, pausar e cancelar",
+  "subtitle": "As duas formas de testar antes de ativar, o que a publicação exige, e a diferença entre pausar e cancelar.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "testar automação",
+    "publicar automação",
+    "pausar automação",
+    "cancelar automação"
+  ],
+  "related": [
+    "automacoes/automacoes/montar-o-fluxo",
+    "automacoes/automacoes/acompanhar-resultados"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Testar antes de publicar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo de teste"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Enviar teste (num passo específico)"
+          },
+          {
+            "content": "Manda aquele passo para um número ou e-mail avulso, sem criar uma jornada de verdade. Só serve para conferir a aparência da mensagem."
+          }
+        ],
+        [
+          {
+            "content": "Rodar teste (o fluxo inteiro)"
+          },
+          {
+            "content": "Escolha um contato real e, se for uma automação por evento, simule o payload do gatilho (editável, inclusive como JSON). Roda a jornada inteira, passo a passo, com os atrasos acelerados (cerca de 10 segundos cada)."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Se o contato ou o evento simulado esbarrar nos filtros do gatilho, a Bevean avisa exatamente qual filtro barrou — em vez de simplesmente não fazer nada."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Publicar (= ativar)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Antes de publicar, a Bevean confere cada passo alcançável a partir do gatilho e lista qualquer pendência (passo sem canal, sem mensagem, sem gatilho escolhido) num painel — publicar fica bloqueado até essa lista zerar."
+    },
+    {
+      "type": "paragraph",
+      "content": "Publicar uma automação equivale a ativá-la: o botão \"Publicar\" vira \"Publicado\", e o backend já marca a automação como Ativa nesse momento — não é preciso nenhum passo além de publicar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Pausar × Cancelar — não são a mesma coisa"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Ação"
+        },
+        {
+          "content": "O que acontece com quem já está no fluxo"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pausar"
+          },
+          {
+            "content": "Continua andando normalmente. Só impede gente nova de entrar. Reative quando quiser, sem perder o que já estava programado."
+          }
+        ],
+        [
+          {
+            "content": "Cancelar"
+          },
+          {
+            "content": "Para tudo imediatamente, inclusive quem estava no meio do fluxo — mensagens que ainda não saíram são canceladas. Não pode ser desfeito."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Editar uma automação já publicada"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O fluxo abre em modo só leitura, com um aviso \"Você está visualizando uma versão publicada\" e um botão "
+        },
+        {
+          "type": "text",
+          "text": "Editar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Depois de editar, é preciso publicar de novo para as mudanças valerem — enquanto isso, um aviso \"Alterações não publicadas\" fica visível."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A janela de envio (dias e horários permitidos) é uma configuração separada do desenho do fluxo — pode ser mudada mesmo com a automação publicada, sem precisar desbloquear a edição."
+        }
+      ]
+    }
+  ]
+}

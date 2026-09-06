@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Automações",
+  "description": "Um fluxo que dispara sozinho quando um contato faz algo — sem você precisar enviar nada na hora.",
+  "icon": "workflow",
+  "articles": [
+    "visao-geral",
+    "escolher-um-gatilho",
+    "montar-o-fluxo",
+    "enviar-uma-mensagem",
+    "usar-acoes-condicoes-e-o-randomizador",
+    "testar-publicar-pausar-e-cancelar",
+    "acompanhar-resultados",
+    "resolver-problemas"
+  ]
+}

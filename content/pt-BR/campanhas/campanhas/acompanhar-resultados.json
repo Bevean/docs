@@ -1,0 +1,134 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Acompanhar os resultados de uma campanha",
+  "subtitle": "O painel de métricas, o funil de entrada/engajamento/compra, e a lista de quem recebeu cada mensagem.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "resultados da campanha",
+    "métricas",
+    "roas",
+    "taxa de abertura"
+  ],
+  "related": [
+    "campanhas/campanhas/visao-geral",
+    "automacoes/automacoes/acompanhar-resultados"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Depois do envio, a própria tela da campanha vira um painel de resultados — o mesmo mecanismo usado por Automações."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Principais métricas"
+    },
+    {
+      "type": "paragraph",
+      "content": "Abrindo a campanha, um painel lateral mostra Destinatários, Clique único e Conversão (receita, com o número de pedidos). Para WhatsApp Oficial, aparece também Custo estimado e ROAS — os outros canais não têm custo associado."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Relatório completo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No menu de três pontos, clique em "
+        },
+        {
+          "type": "text",
+          "text": "Métricas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para abrir o relatório com o "
+        },
+        {
+          "type": "text",
+          "text": "Funil da jornada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": quantos Entraram, Engajaram e Compraram."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quem recebeu, quem abriu, quem falhou"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em qualquer número do painel para abrir "
+        },
+        {
+          "type": "text",
+          "text": "Atividade por contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — a lista de destinatários com status individual (Enviado, Entregue, Aberto, Clicado, Falhou...) e o motivo exato de cada falha. Mensagens com falha têm um botão de "
+        },
+        {
+          "type": "text",
+          "text": "Reenviar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " individual, e um "
+        },
+        {
+          "type": "text",
+          "text": "Reenviar todas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para o lote inteiro."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/acompanhar-resultados",
+          "description": "O mesmo painel de resultados, explicado no contexto de uma automação com vários envios."
+        }
+      ],
+      "title": "Ver também"
+    }
+  ]
+}

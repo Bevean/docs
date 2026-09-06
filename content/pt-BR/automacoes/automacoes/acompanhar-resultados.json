@@ -1,0 +1,127 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Acompanhar os resultados de uma automação",
+  "subtitle": "As métricas em cada passo do fluxo, o funil da jornada e a lista de atividade por contato.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "resultados da automação",
+    "funil da jornada",
+    "métricas por etapa"
+  ],
+  "related": [
+    "automacoes/automacoes/testar-publicar-pausar-e-cancelar",
+    "automacoes/automacoes/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Uma automação ativa mostra os próprios números direto no quadro visual, além de um relatório completo."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Métricas em cada passo de envio"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada passo de envio no fluxo mostra, sobre o próprio cartão: Enviados, % de clique e, para e-mail, % de abertura. Clique em qualquer número para abrir a lista de contatos daquele passo específico."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Relatório completo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No menu de três pontos da automação, abra "
+        },
+        {
+          "type": "text",
+          "text": "Métricas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para duas visões:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aba"
+        },
+        {
+          "content": "O que mostra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Visão geral"
+          },
+          {
+            "content": "O Funil da jornada: quantos contatos Entraram, Engajaram e Compraram, mais receita atribuída e ROAS total (quando aplicável)."
+          }
+        ],
+        [
+          {
+            "content": "Por etapa"
+          },
+          {
+            "content": "Um funil próprio para cada passo de envio — Enviados, % de entrega, % de abertura, % de clique — só aparece quando o fluxo tem mais de um passo de envio."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Só WhatsApp Oficial tem custo associado, então só ele mostra ROAS — nos outros canais aparece a receita por contato, sem custo."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Atividade por contato"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clicando em qualquer métrica, abre a lista de contatos com status individual: Enviado, Entregue, Aberto, Clicado, Respondeu, Falhou, entre outros — com o motivo exato de cada falha e um botão de "
+        },
+        {
+          "type": "text",
+          "text": "Reenviar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " por contato ou em lote."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Não existe um contador único de \"quantos contatos estão no meio da jornada agora\" — o mais próximo disso é o Funil da jornada (Entraram/Engajaram/Compraram), que é por pessoa, não por passo."
+        }
+      ]
+    }
+  ]
+}

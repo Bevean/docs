@@ -3,6 +3,8 @@
   "title": "Automações",
   "description": "Mensagens que disparam sozinhas a partir do que o cliente faz.",
   "icon": "workflow",
-  "sections": [],
+  "sections": [
+    "automacoes"
+  ],
   "articles": []
 }

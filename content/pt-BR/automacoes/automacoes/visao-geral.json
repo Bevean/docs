@@ -1,0 +1,194 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam as automações",
+  "subtitle": "Um fluxo que dispara sozinho a partir do comportamento do contato, com os estados que ele passa até ser cancelado.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "automações",
+    "fluxo",
+    "gatilho"
+  ],
+  "related": [
+    "automacoes/automacoes/escolher-um-gatilho",
+    "automacoes/automacoes/montar-o-fluxo"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Uma automação é um fluxo que dispara sozinho para cada contato, a partir de algo que ele faz — sem você precisar enviar nada na hora."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "automations"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como um fluxo é montado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um gatilho (\"Quando alguém...\") no topo, e os passos que acontecem depois — mensagens, condições, esperas — conectados num quadro visual. Veja "
+        },
+        {
+          "type": "text",
+          "text": "escolher um gatilho",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/escolher-um-gatilho"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "montar o fluxo",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/montar-o-fluxo"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Estados de uma automação"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Estado"
+        },
+        {
+          "content": "Significado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Rascunho"
+          },
+          {
+            "content": "Ainda sendo montada, nunca publicada."
+          }
+        ],
+        [
+          {
+            "content": "Publicado / Ativo"
+          },
+          {
+            "content": "Rodando — todo novo contato que se enquadrar no gatilho entra no fluxo."
+          }
+        ],
+        [
+          {
+            "content": "Pausado"
+          },
+          {
+            "content": "Parou de aceitar novos contatos. Quem já está dentro continua andando."
+          }
+        ],
+        [
+          {
+            "content": "Cancelado"
+          },
+          {
+            "content": "Parado por completo — inclusive quem estava em andamento. Não tem volta."
+          }
+        ],
+        [
+          {
+            "content": "Falhou"
+          },
+          {
+            "content": "—"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Procurando um envio único, para um público que você escolhe na hora — não algo que dispara sozinho? Veja "
+            },
+            {
+              "type": "text",
+              "text": "Campanhas",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "campanhas/campanhas/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/escolher-um-gatilho",
+          "description": "Veja os eventos que podem iniciar uma automação."
+        },
+        {
+          "ref": "automacoes/automacoes/montar-o-fluxo",
+          "description": "Conheça as peças disponíveis para montar o fluxo."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

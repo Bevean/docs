@@ -1,0 +1,146 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Montar o fluxo",
+  "subtitle": "As peças disponíveis para montar uma automação, e como conectá-las no quadro visual.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "montar fluxo",
+    "quadro visual",
+    "passos da automação"
+  ],
+  "related": [
+    "automacoes/automacoes/enviar-uma-mensagem",
+    "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O fluxo é montado num quadro visual — arraste a partir de um passo para abrir o menu do próximo."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como montar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Arraste a partir da bolinha de saída de qualquer passo"
+        },
+        {
+          "title": "Solte no vazio para abrir o menu de próximos passos, ou solte sobre outro passo já existente para conectar direto"
+        },
+        {
+          "title": "Configure o passo clicando nele"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A automação salva sozinha enquanto você edita (indicador \"Salvando... / Salvo\" no topo). Outros recursos do quadro: desfazer/refazer, alinhar automaticamente, zoom e notas adesivas."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os passos disponíveis"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Grupo"
+        },
+        {
+          "content": "Passos"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Conteúdo"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Um passo de envio por canal: WhatsApp Oficial, WhatsApp, Instagram, E-mail, SMS. Veja "
+              },
+              {
+                "type": "text",
+                "text": "enviar uma mensagem",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "automacoes/automacoes/enviar-uma-mensagem"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Lógica"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Ações, Condição, Atraso inteligente, Digitando..., Randomizador. Veja "
+              },
+              {
+                "type": "text",
+                "text": "Ações, Condição e Randomizador",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Integrações"
+          },
+          {
+            "content": "Requisição HTTP — chama um endereço externo, com saídas separadas para \"Deu certo\" e \"Falhou\"."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Um passo de envio por e-mail ganha automaticamente dois ramos de saída extras: \"Se abrir\" e \"Se clicar em qualquer link\"."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/enviar-uma-mensagem",
+          "description": "Configure um passo de envio."
+        },
+        {
+          "ref": "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador",
+          "description": "Configure Ações, Condição ou Randomizador."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

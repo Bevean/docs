@@ -3,6 +3,8 @@
   "title": "Campanhas",
   "description": "Envios pontuais para a sua base: promoções, lançamentos e comunicados.",
   "icon": "megaphone",
-  "sections": [],
+  "sections": [
+    "campanhas"
+  ],
   "articles": []
 }

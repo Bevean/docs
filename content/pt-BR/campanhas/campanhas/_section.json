@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Campanhas",
+  "description": "Um envio pontual para um público que você escolhe — promoção, lançamento, comunicado.",
+  "icon": "megaphone",
+  "articles": [
+    "visao-geral",
+    "criar-e-enviar-uma-campanha",
+    "repicar-e-gerenciar-uma-campanha",
+    "acompanhar-resultados",
+    "resolver-problemas"
+  ]
+}

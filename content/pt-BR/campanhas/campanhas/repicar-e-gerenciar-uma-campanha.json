@@ -1,0 +1,167 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Repicar e gerenciar uma campanha",
+  "subtitle": "Reenviar para quem não respondeu, duplicar, cancelar um envio agendado ou em andamento.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "repique",
+    "reenviar campanha",
+    "duplicar campanha",
+    "cancelar campanha"
+  ],
+  "related": [
+    "campanhas/campanhas/visao-geral",
+    "campanhas/campanhas/acompanhar-resultados"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Depois de enviada, uma campanha não pode mais ser editada — mas dá para reenviar para quem não respondeu, duplicar, ou cancelar."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "menu de três pontos na linha da campanha, em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "campaigns"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Repique: reenviar só para quem não respondeu"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Disponível depois que a campanha está em andamento, concluída ou falhou. Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Repique",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e escolha o critério:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Não abriram"
+            },
+            {
+              "type": "text",
+              "text": "Abriram"
+            },
+            {
+              "type": "text",
+              "text": "Não clicaram"
+            },
+            {
+              "type": "text",
+              "text": "Clicaram"
+            },
+            {
+              "type": "text",
+              "text": "Responderam"
+            },
+            {
+              "type": "text",
+              "text": "Falharam"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "\"Não abriram\" e \"Não clicaram\" só ficam disponíveis depois que a campanha original está Concluída. O repique cria uma campanha nova, em rascunho, já com esse público — ajuste a mensagem e envie normalmente."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Duplicar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cria uma cópia em rascunho da campanha, com as mesmas configurações, para reenviar do zero em outra ocasião."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Cancelar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Quando"
+        },
+        {
+          "content": "Ação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Agendada"
+          },
+          {
+            "content": "Cancelar agendamento — direto, sem confirmação."
+          }
+        ],
+        [
+          {
+            "content": "Enviando ou pausada"
+          },
+          {
+            "content": "Cancelar fluxo — com confirmação, porque é irreversível. As mensagens que ainda não saíram são canceladas na hora."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Excluir"
+    },
+    {
+      "type": "paragraph",
+      "content": "Move a campanha para a Lixeira — dá para restaurar depois. Excluir permanentemente, a partir da Lixeira, é que não tem volta."
+    }
+  ]
+}

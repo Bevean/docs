@@ -1,0 +1,72 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O fluxo reinicia sozinho, ou não consigo publicar",
+  "subtitle": "O gatilho de mensagem recebida reiniciando o fluxo, a lista de pendências antes de publicar, e a diferença entre pausar e cancelar.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "fluxo reinicia",
+    "não consigo publicar",
+    "pendências"
+  ],
+  "related": [
+    "automacoes/automacoes/escolher-um-gatilho",
+    "automacoes/automacoes/testar-publicar-pausar-e-cancelar"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"O fluxo reinicia toda vez que o contato clica num botão\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Acontece quando a Reentrada está configurada como \"Pode reentrar quando não estiver no fluxo\" num gatilho de mensagem — um clique em botão também conta como mensagem recebida. Troque para \"Não reentrar durante a conversa\" (é a opção pré-selecionada quando o gatilho é \"Mensagem recebida\", exatamente para evitar isso)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo publicar — aparece uma lista de pendências\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Clique na própria lista: cada item leva direto ao passo com problema (sem canal escolhido, sem mensagem, sem gatilho definido). Publicar fica bloqueado até a lista zerar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Pausei a automação e achei que ia parar todo mundo\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Pausar só impede gente nova de entrar — quem já estava dentro continua a jornada normalmente. Para parar tudo, inclusive quem está em andamento, use Cancelar (e essa ação não tem volta)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Dá para colocar manualmente um contato específico numa automação?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não existe essa opção — toda entrada é automática, a partir de um dos gatilhos disponíveis."
+            }
+          ]
+        },
+        {
+          "question": "Dá para automação disparar num horário/dia específico, sem depender de um evento?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não como gatilho — o mais próximo é configurar uma janela de dias/horários permitidos para o envio, dentro de uma automação já disparada por outro evento."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

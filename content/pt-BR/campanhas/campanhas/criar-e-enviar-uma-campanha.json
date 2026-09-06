@@ -1,0 +1,265 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar e enviar uma campanha",
+  "subtitle": "Definir o público-alvo, adicionar o envio, e as opções de agendamento e estratégia de disparo.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "criar campanha",
+    "nova transmissão",
+    "agendar campanha",
+    "público-alvo"
+  ],
+  "related": [
+    "campanhas/campanhas/visao-geral",
+    "campanhas/campanhas/acompanhar-resultados"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é uma campanha enviada agora ou agendada para depois, para o público que você escolher."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "campaigns"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão "
+        },
+        {
+          "type": "text",
+          "text": "Nova transmissão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O passo a passo"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Defina o público-alvo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Clique no primeiro cartão do fluxo e monte as condições — o caso mais comum é escolher um segmento pronto. A Bevean já mostra, em tempo real, quantos contatos vão receber a campanha."
+            }
+          ]
+        },
+        {
+          "title": "Adicione um envio",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "No menu que aparece ligado ao público-alvo, escolha o canal (WhatsApp Oficial, WhatsApp Web, Instagram, E-mail ou SMS, conforme o que você tiver conectado) e o conteúdo."
+            }
+          ]
+        },
+        {
+          "title": "Corrija as pendências, se houver",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Um botão vermelho no topo lista o que falta — geralmente canal ou conteúdo não definidos."
+            }
+          ]
+        },
+        {
+          "title": "Salve",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A campanha salva sozinha enquanto você edita, mas o botão Salvar/Atualizar grava a versão que será realmente enviada."
+            }
+          ]
+        },
+        {
+          "title": "Configure o envio",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Agendar ou enviar agora",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " — veja as opções abaixo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Público-alvo: cuidado com \"todas as condições\""
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se você usar dois ou mais segmentos junto com \"Todas as condições\" (E), o resultado pode ser zero contatos — a maioria dos segmentos é excludente entre si (ninguém está ao mesmo tempo em dois grupos da Matriz RFV, por exemplo). Para somar públicos, use \"Pelo menos 1 critério\" (OU)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando enviar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Opção"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Enviar agora"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Agendar"
+          },
+          {
+            "content": "Escolha data e horário (em intervalos de 30 minutos)."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Estratégia de envio"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Opção"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Enviar tudo de uma vez"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Fracionar o envio em dias"
+          },
+          {
+            "content": "Defina quantos envios por dia e em quais dias da semana. A tela calcula uma previsão de término em tempo real."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Depois de confirmar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Uma tela de sucesso mostra quantos contatos e quantas mensagens estão a caminho. Uma campanha agendada pode ser antecipada ("
+        },
+        {
+          "type": "text",
+          "text": "Enviar agora",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") ou cancelada ("
+        },
+        {
+          "type": "text",
+          "text": "Cancelar agendamento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") antes da hora marcada."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "campanhas/campanhas/acompanhar-resultados",
+          "description": "Veja quantos abriram, clicaram e compraram."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

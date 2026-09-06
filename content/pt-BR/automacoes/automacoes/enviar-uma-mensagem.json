@@ -1,0 +1,144 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Configurar um passo de envio",
+  "subtitle": "A diferença entre template aprovado e mensagem regular, os blocos disponíveis e as variáveis do gatilho.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "enviar mensagem",
+    "template aprovado",
+    "mensagem regular",
+    "lista de opções"
+  ],
+  "related": [
+    "automacoes/automacoes/montar-o-fluxo",
+    "conteudos/modelos/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Um passo de envio manda uma mensagem pelo canal escolhido, de duas formas possíveis."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Template de mensagem ou mensagem regular"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Quando usar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Template de mensagem"
+          },
+          {
+            "content": "Um modelo já aprovado pela Meta. Envia a qualquer hora, mesmo fora da janela de 24h de conversa."
+          }
+        ],
+        [
+          {
+            "content": "Mensagem regular"
+          },
+          {
+            "content": "Montada na hora, bloco por bloco. Só chega se houver uma sessão aberta (24h desde a última mensagem do contato)."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam os modelos",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "conteudos/modelos/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para o que entra num Template de mensagem."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Blocos da mensagem regular"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Bloco"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Texto e botões interativos"
+          },
+          {
+            "content": "Com uma \"Ação do balão\": Botões de resposta rápida OU Lista de opções — nunca os dois juntos no mesmo bloco."
+          }
+        ],
+        [
+          {
+            "content": "Imagem"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Atraso"
+          },
+          {
+            "content": "Uma pausa curta, em segundos, entre blocos."
+          }
+        ],
+        [
+          {
+            "content": "Digitando..."
+          },
+          {
+            "content": "Indicador de \"digitando\", só em canais que suportam esse recurso."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada botão ou item de lista vira uma saída própria no fluxo, para você continuar o caminho de quem clicou naquela opção específica."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Variáveis disponíveis"
+    },
+    {
+      "type": "paragraph",
+      "content": "O seletor de variáveis mostra um grupo com o nome do gatilho escolhido (por exemplo, \"Evento · Novo pedido\"), com os dados daquele evento. Se o fluxo tiver uma ação de Resgatar cashback antes desse passo, aparece também um grupo de Cashback; se tiver uma Requisição HTTP com resposta mapeada, aparece um grupo com os campos dessa resposta."
+    }
+  ]
+}

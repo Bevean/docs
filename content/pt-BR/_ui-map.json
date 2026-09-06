@@ -223,5 +223,11 @@
       "Carrinhos"
     ],
     "href": "/content/integrations/carts"
+  },
+  "campaigns": {
+    "segments": [
+      "Campanhas"
+    ],
+    "href": "/broadcast"
   }
 }

@@ -1,0 +1,222 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam as campanhas",
+  "subtitle": "Um envio único para um público escolhido na hora, com os estados que ele passa até ser concluído.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "campanhas",
+    "transmissão",
+    "envio em massa"
+  ],
+  "related": [
+    "campanhas/campanhas/criar-e-enviar-uma-campanha",
+    "automacoes/automacoes/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Uma campanha é um envio único, para um público que você escolhe na hora — diferente de uma automação, que dispara sozinha a partir do comportamento de cada contato."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "campaigns"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a lista mostra"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Coluna"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nome"
+          },
+          {
+            "content": "Com a data agendada embaixo, se for o caso."
+          }
+        ],
+        [
+          {
+            "content": "Destinatários"
+          },
+          {
+            "content": "Só aparece depois do envio."
+          }
+        ],
+        [
+          {
+            "content": "Receita total"
+          },
+          {
+            "content": "Com o número de pedidos embaixo."
+          }
+        ],
+        [
+          {
+            "content": "Taxa de abertura"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Taxa de cliques"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Primeiro disparo"
+          },
+          {
+            "content": "Ordenação padrão da lista."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Filtre por Estado ou por Período (data de criação, não de envio)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Estados de uma campanha"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Estado"
+        },
+        {
+          "content": "Significado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Rascunho"
+          },
+          {
+            "content": "Ainda sendo montada."
+          }
+        ],
+        [
+          {
+            "content": "Agendado"
+          },
+          {
+            "content": "Data e hora definidas, aguardando o disparo."
+          }
+        ],
+        [
+          {
+            "content": "Ativo"
+          },
+          {
+            "content": "Enviando agora."
+          }
+        ],
+        [
+          {
+            "content": "Concluído"
+          },
+          {
+            "content": "Envio terminado."
+          }
+        ],
+        [
+          {
+            "content": "Cancelado"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Falhou"
+          },
+          {
+            "content": "—"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Procurando um envio que dispara sozinho quando o cliente faz algo — não um envio único? Veja "
+            },
+            {
+              "type": "text",
+              "text": "Automações",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "automacoes/automacoes/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "campanhas/campanhas/criar-e-enviar-uma-campanha",
+          "description": "Monte e envie uma campanha."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

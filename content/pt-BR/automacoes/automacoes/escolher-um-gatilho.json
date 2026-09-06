@@ -1,0 +1,212 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Escolher um gatilho",
+  "subtitle": "Os eventos que podem iniciar uma automação, os filtros para refinar quem entra, e as regras de reentrada.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "gatilho",
+    "quando alguém",
+    "reentrada"
+  ],
+  "related": [
+    "automacoes/automacoes/visao-geral",
+    "automacoes/automacoes/montar-o-fluxo"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O gatilho decide quando um contato entra na automação. Escolha-o clicando no cartão \"Quando alguém...\" no topo do fluxo."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os gatilhos disponíveis"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Categoria"
+        },
+        {
+          "content": "Gatilhos"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Navegação"
+          },
+          {
+            "content": "Página visualizada."
+          }
+        ],
+        [
+          {
+            "content": "Produto"
+          },
+          {
+            "content": "Produto visualizado, Produto abandonado."
+          }
+        ],
+        [
+          {
+            "content": "Categoria"
+          },
+          {
+            "content": "Categoria visualizada."
+          }
+        ],
+        [
+          {
+            "content": "Carrinho"
+          },
+          {
+            "content": "Produto adicionado ao carrinho, Carrinho abandonado."
+          }
+        ],
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Novo pedido, Pagamento aprovado, Pagamento negado, Pagamento expirando, Pagamento expirado, Pedido faturado, Pedido despachado, Pedido entregue, Pedido disponível para retirada."
+          }
+        ],
+        [
+          {
+            "content": "Contato"
+          },
+          {
+            "content": "Novo cadastro."
+          }
+        ],
+        [
+          {
+            "content": "Segmento"
+          },
+          {
+            "content": "Entrou no segmento, Saiu do segmento."
+          }
+        ],
+        [
+          {
+            "content": "Reposição"
+          },
+          {
+            "content": "Produto acabando (reposição)."
+          }
+        ],
+        [
+          {
+            "content": "Crédito"
+          },
+          {
+            "content": "Crédito liberado, Crédito expirando, Nova entrada de crédito, Cashback resgatado."
+          }
+        ],
+        [
+          {
+            "content": "Atendimento"
+          },
+          {
+            "content": "Conversa iniciada, Mensagem recebida."
+          }
+        ],
+        [
+          {
+            "content": "Pesquisa"
+          },
+          {
+            "content": "Pesquisa respondida."
+          }
+        ],
+        [
+          {
+            "content": "Sistemas externos"
+          },
+          {
+            "content": "Ao receber um evento externo — gera uma URL própria para outro sistema chamar."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Refinar quem entra"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada gatilho tem dois filtros próprios:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Filtros do disparador — condições sobre o próprio evento (por exemplo, valor mínimo do pedido)."
+            },
+            {
+              "type": "text",
+              "text": "Filtros de perfil — condições sobre o contato, o mesmo construtor usado no público-alvo de uma campanha ou na criação de um segmento."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Reentrada no fluxo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Define se a mesma pessoa pode entrar de novo na automação depois de já ter entrado uma vez."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Opção"
+        },
+        {
+          "content": "Quando o contato pode entrar de novo"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pode reentrar quando não estiver no fluxo"
+          },
+          {
+            "content": "Sempre que o evento disparar de novo, desde que ele não tenha uma jornada em andamento. Opção padrão."
+          }
+        ],
+        [
+          {
+            "content": "Não reentrar durante a conversa"
+          },
+          {
+            "content": "Só depois que a jornada atual terminar. Pré-selecionada no gatilho \"Mensagem recebida\", porque um clique em botão também é uma mensagem — sem essa trava, o fluxo reiniciaria a cada clique."
+          }
+        ],
+        [
+          {
+            "content": "Entra no máximo uma vez"
+          },
+          {
+            "content": "Nunca mais, na mesma versão publicada da automação."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "No gatilho \"Ao receber um evento externo\", só as opções \"Quando não estiver no fluxo\" e \"Uma vez por versão\" existem — não há o meio-termo de conversa."
+    }
+  ]
+}

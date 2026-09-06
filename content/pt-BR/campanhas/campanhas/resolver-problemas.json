@@ -1,0 +1,100 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Público-alvo com 0 contatos, ou campanha travada para edição",
+  "subtitle": "Segmentos que se excluem, por que uma campanha enviada não pode ser editada, e como reenviar para quem não abriu.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "público zero",
+    "não consigo editar campanha",
+    "teste a/b"
+  ],
+  "related": [
+    "campanhas/campanhas/visao-geral",
+    "campanhas/campanhas/repicar-e-gerenciar-uma-campanha"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"O público-alvo está com 0 contatos\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Confira se você combinou dois ou mais segmentos com \"Todas as condições\" (E) — a maioria dos segmentos é excludente entre si, e essa combinação costuma zerar o público. Troque para \"Pelo menos 1 critério\" (OU)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo editar uma campanha já enviada ou agendada\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Esperado — uma campanha só é editável enquanto está em Rascunho. Depois de enviada, agendada, concluída, cancelada ou com falha, ela abre em modo só leitura. Para mandar algo parecido de novo, duplique ou use um repique."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Mudei uma condição ou um teste A/B e não fez efeito\""
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Qualquer alteração no fluxo — inclusive num Randomizador de teste A/B — só vale de verdade depois de salva. Antes de enviar ou agendar, confira se não há pendências abertas e se a versão mostrada na tela é a que você quer disparar."
+        }
+      ],
+      "title": "Salve e confira as pendências antes de enviar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Quero mandar de novo só para quem não abriu\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Use um Repique — veja "
+        },
+        {
+          "type": "text",
+          "text": "repicar e gerenciar uma campanha",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "campanhas/campanhas/repicar-e-gerenciar-uma-campanha"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Existe teste A/B pronto para campanhas?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não como um assistente dedicado — dá para montar manualmente com o node Randomizador, dividindo o público entre duas mensagens diferentes."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
