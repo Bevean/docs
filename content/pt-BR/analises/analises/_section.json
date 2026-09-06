@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Análises",
+  "description": "Relatórios prontos para entender vendas, base, produtos, mensageria e atendimento.",
+  "icon": "bar-chart-3",
+  "articles": [
+    "visao-geral",
+    "ler-um-relatorio",
+    "exportar-e-favoritar",
+    "catalogo-de-relatorios",
+    "catalogo-de-relatorios-de-atendimento",
+    "resolver-problemas"
+  ]
+}

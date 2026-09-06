@@ -1,0 +1,171 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Catálogo de relatórios de Atendimento",
+  "subtitle": "Os 14 relatórios do helpdesk: produtividade, SLA, CSAT, tabulação e sentimento.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "relatórios de atendimento",
+    "csat",
+    "sla",
+    "produtividade dos atendentes"
+  ],
+  "related": [
+    "analises/analises/catalogo-de-relatorios",
+    "atendimento/conversas/acompanhar-o-sla"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Os relatórios de Atendimento exigem a permissão de Análises e a de Atendimento juntas — sem as duas, essa área nem aparece no catálogo."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "reports.attendance"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Relatório"
+        },
+        {
+          "content": "O que responde"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Visão geral do atendimento"
+          },
+          {
+            "content": "Painel executivo: KPIs, automação, assuntos e sentimento."
+          }
+        ],
+        [
+          {
+            "content": "Métricas"
+          },
+          {
+            "content": "Grade de evolução: cada métrica com valor, variação e tendência."
+          }
+        ],
+        [
+          {
+            "content": "Produtividade dos atendentes"
+          },
+          {
+            "content": "Quem atende quanto, com que rapidez e dentro do SLA."
+          }
+        ],
+        [
+          {
+            "content": "Comparativo de atendentes"
+          },
+          {
+            "content": "Compare a evolução de cada métrica entre atendentes, lado a lado."
+          }
+        ],
+        [
+          {
+            "content": "Tempo de resposta & SLA"
+          },
+          {
+            "content": "Distribuição, evolução no tempo e desempenho por canal."
+          }
+        ],
+        [
+          {
+            "content": "Volume por time"
+          },
+          {
+            "content": "Atendimentos diários por grupo (SAC, Vendas…): evolução do mês."
+          }
+        ],
+        [
+          {
+            "content": "Volume & demanda"
+          },
+          {
+            "content": "Quando chegam as conversas — cruzamento por hora e canal."
+          }
+        ],
+        [
+          {
+            "content": "Atribuição & transferências"
+          },
+          {
+            "content": "Conversas sem atendente, transferências e motivos de roteamento."
+          }
+        ],
+        [
+          {
+            "content": "Marcadores"
+          },
+          {
+            "content": "Ranking dos marcadores (tags) que os atendentes aplicam — dia, semana e mês."
+          }
+        ],
+        [
+          {
+            "content": "Tabulação"
+          },
+          {
+            "content": "Motivo de fechamento por atendimento — ranking, taxa de tabulação e por atendente."
+          }
+        ],
+        [
+          {
+            "content": "CSAT"
+          },
+          {
+            "content": "Satisfação do cliente: taxa de resposta, distribuição de notas e média por atendente."
+          }
+        ],
+        [
+          {
+            "content": "Sentimento & conversas em risco"
+          },
+          {
+            "content": "Clientes insatisfeitos para recuperar, e sentimento por atendente."
+          }
+        ],
+        [
+          {
+            "content": "Relatório de SLA"
+          },
+          {
+            "content": "Linha a linha: cada atendimento com estouros e tempo."
+          }
+        ],
+        [
+          {
+            "content": "Primeira resposta"
+          },
+          {
+            "content": "Atendido dentro do prazo, fora dele ou nunca — o prazo já descontando o horário de atendimento do canal."
+          }
+        ]
+      ]
+    }
+  ]
+}

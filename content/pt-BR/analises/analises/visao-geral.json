@@ -1,0 +1,131 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam as Análises",
+  "subtitle": "Relatórios rodam numa aplicação própria, com uma Visão geral, um Dashboard e o catálogo completo.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "análises",
+    "relatórios",
+    "dashboard"
+  ],
+  "related": [
+    "analises/analises/ler-um-relatorio",
+    "analises/analises/catalogo-de-relatorios"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Análises é, como o Atendimento, uma aplicação própria — clicar em Relatórios abre outra aba, com o mesmo login."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "reports"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As 3 formas de entrar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tela"
+        },
+        {
+          "content": "Para que serve"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Visão geral"
+          },
+          {
+            "content": "A página inicial: receita atribuída ao CRM, composição da base e KPIs de tendência dos últimos 12 meses. Sem seletor de período — é sempre uma foto dos últimos 30 dias."
+          }
+        ],
+        [
+          {
+            "content": "Dashboard"
+          },
+          {
+            "content": "Um resumo de desempenho: receita e ROAS, top 5 automações e campanhas, com um link \"Ver relatório completo\" em cada bloco."
+          }
+        ],
+        [
+          {
+            "content": "Ver todos"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O catálogo inteiro, organizado por área — veja "
+              },
+              {
+                "type": "text",
+                "text": "o catálogo de relatórios",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "analises/analises/catalogo-de-relatorios"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Permissão"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ver relatórios exige uma permissão própria. Os relatórios de Atendimento pedem essa mesma permissão mais o acesso ao Atendimento — sem as duas, a área de Atendimento nem aparece no catálogo."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "analises/analises/ler-um-relatorio",
+          "description": "Entenda os controles comuns a todo relatório."
+        },
+        {
+          "ref": "analises/analises/catalogo-de-relatorios",
+          "description": "Veja a lista completa de relatórios disponíveis."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

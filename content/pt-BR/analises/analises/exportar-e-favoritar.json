@@ -1,0 +1,66 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Exportar e favoritar um relatório",
+  "subtitle": "O CSV pronto para o Excel em português, e como favoritar um relatório para achar mais rápido depois.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "exportar csv",
+    "favoritar relatório"
+  ],
+  "related": [
+    "analises/analises/ler-um-relatorio",
+    "analises/analises/catalogo-de-relatorios"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Exportar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Botão "
+        },
+        {
+          "type": "text",
+          "text": "Exportar CSV",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — some sozinho quando não há nenhuma linha para exportar. O arquivo já sai pronto para abrir no Excel em português (separado por ponto e vírgula, vírgula decimal)."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Não existe exportação em PDF ou imagem, nem envio agendado por e-mail — só CSV, sob demanda."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Favoritar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clique na estrela — na lista do catálogo ou dentro do próprio relatório — para favoritar. Relatórios favoritos ficam reunidos num cartão \"Favoritos\" no topo do catálogo, e sobem para o início da lista completa."
+    },
+    {
+      "type": "paragraph",
+      "content": "O favorito é salvo na sua conta, não só no seu navegador — continua lá se você trocar de computador."
+    }
+  ]
+}

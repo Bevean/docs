@@ -1,0 +1,502 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Catálogo de relatórios",
+  "subtitle": "A lista completa de relatórios de Receita & Vendas, Clientes & Base, Retenção & LTV, Produtos e Mensageria.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "catálogo de relatórios",
+    "lista de relatórios",
+    "rfv",
+    "ltv",
+    "roas"
+  ],
+  "related": [
+    "analises/analises/catalogo-de-relatorios-de-atendimento",
+    "analises/analises/ler-um-relatorio"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A lista completa de relatórios, organizada pelas mesmas 5 áreas que aparecem no catálogo dentro do produto. Para os relatórios de Atendimento, veja "
+        },
+        {
+          "type": "text",
+          "text": "o catálogo de Atendimento",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "analises/analises/catalogo-de-relatorios-de-atendimento"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Receita & Vendas"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Relatório"
+        },
+        {
+          "content": "O que responde"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Participação do CRM na receita"
+          },
+          {
+            "content": "Quanto do faturamento passou pelo CRM."
+          }
+        ],
+        [
+          {
+            "content": "Vendas por método de pagamento"
+          },
+          {
+            "content": "Qual método vende mais e qual aprova melhor."
+          }
+        ],
+        [
+          {
+            "content": "Vendas por origem (UTM)"
+          },
+          {
+            "content": "De qual canal e campanha vem a receita."
+          }
+        ],
+        [
+          {
+            "content": "Vendas por cupom"
+          },
+          {
+            "content": "Quais cupons vendem e quanto de desconto custam."
+          }
+        ],
+        [
+          {
+            "content": "Dependência de desconto"
+          },
+          {
+            "content": "Quanto da receita e da base só compra com desconto."
+          }
+        ],
+        [
+          {
+            "content": "Evolução do ticket médio"
+          },
+          {
+            "content": "Como o valor médio por pedido evolui no tempo."
+          }
+        ],
+        [
+          {
+            "content": "Análise de faturamento"
+          },
+          {
+            "content": "Como o faturamento se compara com outro período (mês anterior, ano passado…)."
+          }
+        ],
+        [
+          {
+            "content": "Vendas por vendedor"
+          },
+          {
+            "content": "Quanto cada vendedor vendeu no período — receita, pedidos, ticket médio e participação."
+          }
+        ],
+        [
+          {
+            "content": "Novos vs recorrentes"
+          },
+          {
+            "content": "Receita de novos clientes vs. recorrentes."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Clientes & Base"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Relatório"
+        },
+        {
+          "content": "O que responde"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Qualidade de cadastro"
+          },
+          {
+            "content": "Quantas vendas saíram com CPF, e-mail e celular utilizáveis — e o que falta nas que não saíram."
+          }
+        ],
+        [
+          {
+            "content": "Qualidade de cadastro por loja"
+          },
+          {
+            "content": "A mesma qualidade de cadastro, loja a loja — onde a captura de dados está falhando."
+          }
+        ],
+        [
+          {
+            "content": "Evolução da RFV"
+          },
+          {
+            "content": "Saúde da base (RFV) mês a mês."
+          }
+        ],
+        [
+          {
+            "content": "Desempenho por segmento"
+          },
+          {
+            "content": "Retorno, recompra e ticket por segmento."
+          }
+        ],
+        [
+          {
+            "content": "Saúde da base"
+          },
+          {
+            "content": "Composição e qualidade da base hoje."
+          }
+        ],
+        [
+          {
+            "content": "Vendas por gênero"
+          },
+          {
+            "content": "Receita e pedidos por gênero."
+          }
+        ],
+        [
+          {
+            "content": "Vendas por faixa etária"
+          },
+          {
+            "content": "Receita e pedidos por faixa etária."
+          }
+        ],
+        [
+          {
+            "content": "Frequência de compra"
+          },
+          {
+            "content": "Compradores por número de compras."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Retenção & LTV"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Relatório"
+        },
+        {
+          "content": "O que responde"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Migração de segmentos RFV"
+          },
+          {
+            "content": "Quem subiu, desceu ou virou perdido entre dois momentos."
+          }
+        ],
+        [
+          {
+            "content": "Win-back / reativação"
+          },
+          {
+            "content": "Quantos clientes dormentes voltaram e o que trouxe eles de volta."
+          }
+        ],
+        [
+          {
+            "content": "Retenção por safra"
+          },
+          {
+            "content": "Quanto cada safra volta a comprar."
+          }
+        ],
+        [
+          {
+            "content": "LTV por safra"
+          },
+          {
+            "content": "Receita acumulada por cliente, por safra."
+          }
+        ],
+        [
+          {
+            "content": "Recompra"
+          },
+          {
+            "content": "Quando o cliente volta e se melhora."
+          }
+        ],
+        [
+          {
+            "content": "Desempenho de cashback"
+          },
+          {
+            "content": "Gerado, saldo ativo, resgate, receita e ROAS do programa de cashback."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Produtos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Relatório"
+        },
+        {
+          "content": "O que responde"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Desempenho de produto"
+          },
+          {
+            "content": "Produtos mais visitados × vendidos × estoque; demanda represada e ruptura por variante."
+          }
+        ],
+        [
+          {
+            "content": "Produtos que fidelizam"
+          },
+          {
+            "content": "Produtos que geram recompra e fidelizam."
+          }
+        ],
+        [
+          {
+            "content": "Comprados juntos"
+          },
+          {
+            "content": "Produtos comprados juntos e o próximo mais provável."
+          }
+        ],
+        [
+          {
+            "content": "Concentração & ABC"
+          },
+          {
+            "content": "Concentração da receita em poucos produtos (curva de Pareto)."
+          }
+        ],
+        [
+          {
+            "content": "Vendas por produto"
+          },
+          {
+            "content": "O que vende por modelo, cor e tamanho — a grade da operação."
+          }
+        ],
+        [
+          {
+            "content": "Produtos mais vendidos"
+          },
+          {
+            "content": "Mais vendidos, com estoque e dias restantes."
+          }
+        ],
+        [
+          {
+            "content": "Estoque acabando"
+          },
+          {
+            "content": "Produtos vendendo que vão faltar."
+          }
+        ],
+        [
+          {
+            "content": "Ruptura de estoque"
+          },
+          {
+            "content": "Produtos zerados ou negativos — e quais ainda vendem."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Mensageria"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Relatório"
+        },
+        {
+          "content": "O que responde"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Origem dos leads"
+          },
+          {
+            "content": "De onde vieram os leads (link gerado, anúncio Meta, fluxo), quantos foram atendidos e em quanto tempo."
+          }
+        ],
+        [
+          {
+            "content": "Performance de modelos"
+          },
+          {
+            "content": "Qual modelo entrega, é lido e converte melhor."
+          }
+        ],
+        [
+          {
+            "content": "Fadiga / pressão de contato"
+          },
+          {
+            "content": "Estou disparando demais? A partir de quantas mensagens o cliente descadastra."
+          }
+        ],
+        [
+          {
+            "content": "Campanhas e automações"
+          },
+          {
+            "content": "Funil, engajamento e receita por campanha."
+          }
+        ],
+        [
+          {
+            "content": "Disparos por canal"
+          },
+          {
+            "content": "Volume e desempenho por canal."
+          }
+        ],
+        [
+          {
+            "content": "Melhor horário de envio"
+          },
+          {
+            "content": "Cruzamento dia × hora por clique/abertura (e-mail e WhatsApp) — quando enviar rende mais."
+          }
+        ],
+        [
+          {
+            "content": "Saúde do E-mail"
+          },
+          {
+            "content": "Entregabilidade, engajamento e reputação do e-mail."
+          }
+        ],
+        [
+          {
+            "content": "Saúde do WhatsApp"
+          },
+          {
+            "content": "Entrega, leitura, resposta e conexão do WhatsApp."
+          }
+        ],
+        [
+          {
+            "content": "Evolução da Base"
+          },
+          {
+            "content": "Entradas, saídas e crescimento líquido."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Esses dois relatórios têm um filtro de \"Experiência\" (Legado + Nova experiência) porque combinam dados de campanhas/automações feitas no motor atual (Flux) com dados de campanhas feitas no motor anterior. Se o número parecer maior do que o que você vê em "
+            },
+            {
+              "type": "text",
+              "text": "Campanhas",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "campanhas/campanhas/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ou "
+            },
+            {
+              "type": "text",
+              "text": "Automações",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "automacoes/automacoes/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", é provável que o relatório esteja somando os dois motores."
+            }
+          ]
+        }
+      ],
+      "title": "\"Campanhas e automações\" e \"Disparos por canal\" somam dois motores"
+    }
+  ]
+}

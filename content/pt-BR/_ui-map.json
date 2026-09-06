@@ -288,5 +288,26 @@
       "Times"
     ],
     "href": "/helpdesk/settings/teams"
+  },
+  "reports.list": {
+    "segments": [
+      "Relatórios",
+      "Ver todos"
+    ],
+    "href": "/reports/list"
+  },
+  "reports.dashboard": {
+    "segments": [
+      "Relatórios",
+      "Dashboard"
+    ],
+    "href": "/reports/dashboard"
+  },
+  "reports.attendance": {
+    "segments": [
+      "Relatórios",
+      "Atendimento"
+    ],
+    "href": "/reports/attendance"
   }
 }

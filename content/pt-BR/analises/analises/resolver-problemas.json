@@ -1,0 +1,83 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Não vejo relatórios de Atendimento, ou os números não batem",
+  "subtitle": "A permissão dupla exigida pelos relatórios de Atendimento, e por que dois relatórios de mensageria somam dois motores diferentes.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "não vejo relatórios",
+    "números não batem"
+  ],
+  "related": [
+    "analises/analises/catalogo-de-relatorios-de-atendimento",
+    "analises/analises/catalogo-de-relatorios"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não vejo os relatórios de Atendimento\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Essa área exige duas permissões ao mesmo tempo — a de Análises e a de Atendimento. Sem as duas, o catálogo nem mostra a opção."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Os números de Campanhas ou Disparos por canal não batem com o que vejo em Automações\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Esses dois relatórios somam o motor atual (Flux) com o motor anterior de campanhas — veja o aviso em "
+        },
+        {
+          "type": "text",
+          "text": "catálogo de relatórios",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "analises/analises/catalogo-de-relatorios"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não encontro como agendar o envio de um relatório por e-mail\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Essa opção não existe — todo relatório é sob demanda, na tela."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Por que não tem gráfico de pizza?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Os relatórios usam só gráfico de área ou de barras. O único visual em formato de anel que existe (na Visão geral) é ilustrativo, não um gráfico de dados clicável."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

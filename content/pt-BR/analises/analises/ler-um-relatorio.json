@@ -1,0 +1,127 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Ler um relatório",
+  "subtitle": "Período, agrupamento, a comparação automática com o período anterior, e como abrir o detalhe de uma linha.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "período do relatório",
+    "agrupar por",
+    "comparação com período anterior"
+  ],
+  "related": [
+    "analises/analises/visao-geral",
+    "analises/analises/exportar-e-favoritar"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A maioria dos relatórios compartilha os mesmos controles — aprender um, você já sabe usar quase todos."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Período"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Opção"
+        },
+        {
+          "content": "Observação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Últimos 7 dias"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Últimos 30 dias"
+          },
+          {
+            "content": "Padrão na maioria dos relatórios."
+          }
+        ],
+        [
+          {
+            "content": "Últimos 90 dias"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Últimos 12 meses"
+          },
+          {
+            "content": "Padrão só no relatório de frequência de compra."
+          }
+        ],
+        [
+          {
+            "content": "Personalizado"
+          },
+          {
+            "content": "Escolha as datas direto no calendário — não é uma opção da lista, aparece sozinha quando você seleciona um intervalo específico."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "O período fica salvo no link da página — copiar e colar a URL leva a outra pessoa para a mesma janela de tempo que você está vendo."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Agrupar por"
+    },
+    {
+      "type": "paragraph",
+      "content": "Dia, Semana, Mês ou Ano — nem todo relatório oferece as 4 opções."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Comparação com o período anterior"
+    },
+    {
+      "type": "paragraph",
+      "content": "A maioria dos números vem com uma seta e uma porcentagem, comparando automaticamente com o período imediatamente anterior, de mesma duração. Não existe uma opção de escolher outro período de comparação — é sempre o \"antes de agora\"."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Gráfico e tabela juntos"
+    },
+    {
+      "type": "paragraph",
+      "content": "Todo relatório mostra o gráfico (de área ou de barras — não há gráfico de pizza) e a tabela de dados na mesma tela, um embaixo do outro. Não existe alternância entre \"ver gráfico\" ou \"ver tabela\" — os dois aparecem sempre."
+    },
+    {
+      "type": "paragraph",
+      "content": "Clique no cabeçalho de uma coluna da tabela para ordenar por ela."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Indo mais fundo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Em alguns relatórios (por exemplo, o de desempenho de produto), clicar numa linha abre um painel lateral com o detalhe daquele item — variantes de um produto, por exemplo."
+    },
+    {
+      "type": "paragraph",
+      "content": "Para ver os eventos individuais por trás de uma métrica (não só o número agregado), veja a seção separada de Métricas, com uma aba de Feed cronológico."
+    }
+  ]
+}
