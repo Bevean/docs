@@ -589,7 +589,11 @@ duas vezes: a tentativa de "corrigir depois" reescrevendo a célula já escrita
 (`row[1] = [t(...), [...]]`) produzia um `content` mal formado (`Invalid input`)
 porque o formato esperado é `{"content": [...]}`, não a lista crua. Mais simples
 escrever a lista certa dentro do `rows=[[...]]` do `table()` desde a primeira
-vez do que corrigir depois.
+vez do que corrigir depois. Repetiu de novo escrevendo Automações — o helper
+ganhou uma função `cell(content)` que devolve o `{"content": ...}` certo (e já
+troca `""` por "—", o outro erro repetido de célula vazia em linha
+autoexplicativa); ao editar uma linha de tabela já escrita, use `cell(...)`,
+nunca monte o dict à mão de novo.
 
 **Texto fixo do produto pode divergir do dado dinâmico exibido ao lado dele —
 não documente o número fixo sem checar o dinâmico.** Na Matriz RFV, a frase de
@@ -643,6 +647,26 @@ manual de carrinho no produto. Isso só aparece testando o estado vazio de
 verdade (ou lendo o handler do botão), não o fluxo comum de uma tela com dados.
 Nunca documente uma ação "Criar X" só porque o rótulo do botão promete —
 confirme para onde ele navega.
+
+**O nome de uma pasta de módulo não prova se ela é o motor atual ou o
+legado — só o `sidebar-main-data.tsx` + `permission-route-access.ts` provam.**
+Documentando Campanhas/Automações, a primeira pesquisa partiu de "communication
+= atual, campaign/flow = legado" (uma leitura razoável dos nomes). Era errado:
+`communication` é tão legado quanto `flow` — o item "Campanhas" do menu hoje
+aponta para o módulo `flux` (que atende tanto Campanhas quanto Automações,
+uma tela só com uma flag `isAutomation`), e `communication` só sobra como
+"Campanhas anteriores", um link direto sem entrada de menu. Antes de aceitar
+qual módulo é "o atual", confirme para onde o item do MENU aponta agora —
+nunca pelo nome do módulo, pela intuição, ou por uma memória antiga.
+
+**Duas coleções podem documentar a mesma tela por ângulos diferentes — não
+duplique, escreva uma vez e faça a outra citar.** Campanhas e Automações são
+literalmente o mesmo componente React (`flux-index.tsx`/`flux-canvas.tsx`)
+com um flag trocando o comportamento. O relatório de resultados, por exemplo,
+é byte a byte o mesmo painel. Escrevi a versão de Automações mais completa
+(porque lá o \"Por etapa\" é mais relevante, com vários envios) e a de
+Campanhas mais enxuta, com um card ao final apontando pra versão completa —
+em vez de reescrever a mesma mecânica duas vezes.
 
 ## Por que não há prints
 
