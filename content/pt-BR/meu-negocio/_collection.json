@@ -5,7 +5,10 @@
   "icon": "building-2",
   "sections": [
     "usuarios-e-permissoes",
-    "vendedores-e-lojas"
+    "vendedores-e-lojas",
+    "atribuicao",
+    "faturas",
+    "importacoes"
   ],
   "articles": []
 }

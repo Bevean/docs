@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Faturas",
+  "description": "Acompanhe as faturas geradas para a sua conta Bevean e o que acontece quando uma fica em aberto.",
+  "icon": "receipt",
+  "articles": [
+    "visao-geral",
+    "resolver-problemas"
+  ]
+}

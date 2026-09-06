@@ -166,5 +166,27 @@
       "Lojas"
     ],
     "href": "/settings/stores"
+  },
+  "settings.invoices": {
+    "segments": [
+      "Configurações",
+      "Faturas"
+    ],
+    "href": "/settings/invoices"
+  },
+  "settings.imports": {
+    "segments": [
+      "Configurações",
+      "Importações"
+    ],
+    "href": "/settings/imports"
+  },
+  "settings.imports_mappings": {
+    "segments": [
+      "Configurações",
+      "Importações",
+      "Mapeamentos salvos"
+    ],
+    "href": "/settings/imports/mappings"
   }
 }

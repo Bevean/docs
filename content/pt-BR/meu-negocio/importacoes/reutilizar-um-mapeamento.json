@@ -1,0 +1,100 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Reutilizar um mapeamento salvo",
+  "subtitle": "Salve as regras de uma importação para não remontar o mapeamento toda vez.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "mapeamento salvo",
+    "mapeamentos",
+    "importação recorrente"
+  ],
+  "related": [
+    "meu-negocio/importacoes/mapear-os-campos",
+    "meu-negocio/importacoes/importar-um-arquivo"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Se você importa o mesmo tipo de planilha regularmente (por exemplo, um relatório recorrente do seu ERP), salve o mapeamento uma vez e reaproveite nas próximas."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Salvar um mapeamento"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao concluir uma importação, dê um nome em "
+        },
+        {
+          "type": "text",
+          "text": "Nome do mapeamento (para reutilização futura)",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — por padrão, a Bevean sugere o nome do arquivo enviado."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Usar um mapeamento salvo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Na próxima importação do mesmo tipo, selecione o mapeamento salvo logo no início — a Bevean aplica as mesmas regras automaticamente (casando as colunas pelo nome) e leva direto para a revisão final, sem repetir o mapeamento do zero."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Gerenciar mapeamentos salvos"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.imports_mappings"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Renomeie, arquive ou reative um mapeamento existente."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Para mudar as regras de um mapeamento (colunas, fórmulas, tipos), não dá para editar direto aqui — inicie uma nova importação selecionando esse mapeamento, ajuste o que precisar e salve por cima dele."
+        }
+      ]
+    }
+  ]
+}

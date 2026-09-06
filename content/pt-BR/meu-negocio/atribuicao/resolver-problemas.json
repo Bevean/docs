@@ -1,0 +1,52 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Uma venda não foi atribuída à automação certa",
+  "subtitle": "A prioridade entre UTM, cupom e o período de atribuição, e por que mudanças não afetam pedidos antigos.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "venda não atribuída",
+    "atribuição errada"
+  ],
+  "related": [
+    "meu-negocio/atribuicao/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Uma venda não foi atribuída à automação/campanha que eu esperava\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Confira a ordem de prioridade: um UTM de campanha ou um cupom usado no pedido sempre vencem o período configurado aqui. Se a venda tinha um UTM ou cupom de outra origem, é isso que decidiu, não o período de atribuição."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Mudei o período, mas pedidos antigos não foram recalculados\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Esperado — mudanças não são retroativas. Só pedidos e episódios de atendimento novos, a partir do momento da mudança, usam a regra atualizada."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "A opção \"Conversas do Helpdesk\" faz alguma coisa?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Ainda não. Ela aparece na tela, mas hoje não influencia a atribuição de nenhum pedido — só os períodos de E-mail e Mensagem de texto valem."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

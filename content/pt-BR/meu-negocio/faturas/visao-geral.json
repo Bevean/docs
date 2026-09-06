@@ -1,0 +1,266 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam as faturas",
+  "subtitle": "A lista de faturas da sua conta, os status possíveis e como visualizar e pagar.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "faturas",
+    "cobrança",
+    "boleto"
+  ],
+  "related": [
+    "meu-negocio/faturas/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Mostra as faturas geradas para a sua conta Bevean. O pagamento em si acontece fora do painel, na página da fatura."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.invoices"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a lista mostra"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Coluna"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Número"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Competência"
+          },
+          {
+            "content": "Mês de referência da fatura."
+          }
+        ],
+        [
+          {
+            "content": "Status"
+          },
+          {
+            "content": "Veja a tabela abaixo."
+          }
+        ],
+        [
+          {
+            "content": "Valor"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Vencimento"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Data de Quitação"
+          },
+          {
+            "content": "Quando foi paga — vazio se ainda não foi."
+          }
+        ],
+        [
+          {
+            "content": "Link da fatura"
+          },
+          {
+            "content": "Botão para visualizar."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Status possíveis"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status"
+        },
+        {
+          "content": "Significado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pendente"
+          },
+          {
+            "content": "Ainda não paga, dentro do prazo."
+          }
+        ],
+        [
+          {
+            "content": "Paga"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Negociada"
+          },
+          {
+            "content": "Renegociada com condições diferentes."
+          }
+        ],
+        [
+          {
+            "content": "Gerada por negociação"
+          },
+          {
+            "content": "Fatura criada a partir de uma negociação."
+          }
+        ],
+        [
+          {
+            "content": "Cancelada"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Negada"
+          },
+          {
+            "content": "Pagamento recusado."
+          }
+        ],
+        [
+          {
+            "content": "Terceirizada"
+          },
+          {
+            "content": "Cobrança repassada a terceiros."
+          }
+        ],
+        [
+          {
+            "content": "Protestada"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Jurídico"
+          },
+          {
+            "content": "Em cobrança judicial."
+          }
+        ],
+        [
+          {
+            "content": "Excluída"
+          },
+          {
+            "content": "—"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ver e pagar uma fatura"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Visualizar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para abrir a fatura dentro da própria tela, ou em "
+        },
+        {
+          "type": "text",
+          "text": "Abrir em nova aba",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " dentro desse modal para ver em tela cheia. Não existe um botão de baixar PDF ou boleto separado — a página da fatura é a mesma usada para pagar."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/faturas/resolver-problemas",
+          "description": "A tela está vazia, ou apareceu um aviso de bloqueio."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

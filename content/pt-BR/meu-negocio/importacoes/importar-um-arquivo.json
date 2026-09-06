@@ -1,0 +1,144 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Importar um arquivo",
+  "subtitle": "Escolher o tipo de dado, baixar o modelo e enviar a planilha.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "enviar arquivo",
+    "csv de exemplo",
+    "novo import"
+  ],
+  "related": [
+    "meu-negocio/importacoes/visao-geral",
+    "meu-negocio/importacoes/mapear-os-campos"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é o arquivo enviado e pronto para o mapeamento de campos."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.imports"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — clique em um dos cartões (Clientes, Pedidos ou Produtos), ou em "
+        },
+        {
+          "type": "text",
+          "text": "Nova importação",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O passo a passo"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Escolha o tipo: Clientes, Pedidos ou Produtos"
+        },
+        {
+          "title": "Baixe o modelo, se precisar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Botão Baixar CSV de exemplo, com as colunas esperadas já no cabeçalho."
+            }
+          ]
+        },
+        {
+          "title": "Já tem um mapeamento salvo para esse tipo?",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Selecione-o aqui para pular direto para a revisão final — veja "
+                },
+                {
+                  "type": "text",
+                  "text": "reutilizar um mapeamento",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "meu-negocio/importacoes/reutilizar-um-mapeamento"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Envie o arquivo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Arraste um .csv, .xls ou .xlsx de até 50 MB."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Depois do envio, a Bevean lê as colunas do arquivo e já sugere um mapeamento automático — o próximo passo é conferir e ajustar isso. Veja "
+        },
+        {
+          "type": "text",
+          "text": "mapear os campos",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/importacoes/mapear-os-campos"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

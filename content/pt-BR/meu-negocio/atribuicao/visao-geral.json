@@ -1,0 +1,142 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam os períodos de atribuição",
+  "subtitle": "Por quanto tempo um e-mail ou uma mensagem ainda pode dar crédito por uma venda, e a ordem de prioridade da Bevean.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "atribuição",
+    "período de atribuição",
+    "janela de atribuição"
+  ],
+  "related": [
+    "meu-negocio/atribuicao/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Determina por quanto tempo uma interação do cliente (abrir um e-mail, clicar num link) ainda pode dar crédito por uma venda que vem depois."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.attribution"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando essa regra vale"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ela só entra em ação quando a venda não tem como ser atribuída de um jeito mais direto — a Bevean sempre prioriza um UTM correspondente ou um cupom usado no pedido antes de recorrer ao período configurado aqui."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os grupos configuráveis"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Grupo"
+        },
+        {
+          "content": "Pontos de contato"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "E-mail"
+          },
+          {
+            "content": "E-mail aberto, Clicou no e-mail"
+          }
+        ],
+        [
+          {
+            "content": "Mensagem de texto"
+          },
+          {
+            "content": "Mensagem de texto entregue, Mensagem de texto clicada"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O período de Mensagem de texto é usado para WhatsApp, SMS, Instagram e qualquer outro canal que não seja e-mail — não é preciso configurar cada canal separadamente."
+        }
+      ],
+      "title": "\"Mensagem de texto\" vale para todos os canais"
+    },
+    {
+      "type": "paragraph",
+      "content": "Para cada ponto de contato, você define: se ele conta ou não (uma chave de ativar/desativar), o número, e a unidade — Dias ou Horas."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Limites"
+    },
+    {
+      "type": "paragraph",
+      "content": "De 1 a 3.650 (dias ou horas, o número máximo é o mesmo nas duas unidades)."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Alterações valem para novos pedidos e episódios de atendimento. Registros já atribuídos mantêm a regra aplicada no momento da captura."
+        }
+      ],
+      "title": "Mudanças não são retroativas"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A tela também mostra uma opção \"Conversas do Helpdesk\" — hoje ela ainda não afeta a atribuição de nenhum pedido. Só os períodos de E-mail e Mensagem de texto valem."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/atribuicao/resolver-problemas",
+          "description": "Uma venda não foi atribuída à automação que eu esperava."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

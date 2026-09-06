@@ -1,0 +1,165 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam as importações",
+  "subtitle": "Traga Clientes, Pedidos ou Produtos de uma planilha, com mapeamento de campos sob seu controle.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "importações",
+    "importar planilha",
+    "importar csv"
+  ],
+  "related": [
+    "meu-negocio/importacoes/importar-um-arquivo",
+    "audiencia/contatos/importar-e-exportar-contatos"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Traz Clientes, Pedidos ou Produtos de uma planilha para dentro da Bevean, com um mapeamento de campos que você controla."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.imports"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se você só precisa cadastrar contatos em massa, "
+            },
+            {
+              "type": "text",
+              "text": "a importação de dentro de Contatos",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "audiencia/contatos/importar-e-exportar-contatos"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " é mais direta — sem mapeamento de campos. Use esta tela quando precisar importar Pedidos ou Produtos, ou quando precisar de controle fino sobre quais colunas viram quais campos."
+            }
+          ]
+        }
+      ],
+      "title": "Diferente da importação de Contatos"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que pode ser importado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clientes, Pedidos ou Produtos, a partir de um arquivo CSV ou Excel (.xls/.xlsx) com cabeçalho na primeira linha. Limite: 50 MB e até 100.000 linhas."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O passo a passo, em resumo"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Escolha o tipo de dado e envie o arquivo"
+            },
+            {
+              "type": "text",
+              "text": "Mapeie as colunas do arquivo para os campos da Bevean"
+            },
+            {
+              "type": "text",
+              "text": "Valide antes de importar de verdade, se quiser"
+            },
+            {
+              "type": "text",
+              "text": "Acompanhe o progresso e corrija o que falhar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada etapa tem seu próprio artigo — comece por "
+        },
+        {
+          "type": "text",
+          "text": "importar um arquivo",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/importacoes/importar-um-arquivo"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Onde acompanhar"
+    },
+    {
+      "type": "paragraph",
+      "content": "A própria tela de Importações lista as importações já feitas, com status e um resumo de quantos registros deram certo, falharam ou ficaram inválidos. Ela atualiza sozinha enquanto uma importação está em andamento."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/importacoes/importar-um-arquivo",
+          "description": "Envie o arquivo e comece o mapeamento."
+        },
+        {
+          "ref": "meu-negocio/importacoes/mapear-os-campos",
+          "description": "Entenda as 4 formas de preencher um campo."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

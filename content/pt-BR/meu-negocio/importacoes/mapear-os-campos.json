@@ -1,0 +1,151 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Mapear os campos da importação",
+  "subtitle": "As 4 formas de preencher um campo, o mapeamento de valores para campos de opção, e o que é obrigatório.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "mapeamento de campos",
+    "mapear coluna",
+    "fórmula de importação"
+  ],
+  "related": [
+    "meu-negocio/importacoes/importar-um-arquivo",
+    "meu-negocio/importacoes/reutilizar-um-mapeamento"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Depois de enviar o arquivo, a Bevean já sugere um mapeamento automático (com um selo \"IA\" e o quanto ela está confiante). Confira campo por campo e ajuste o que precisar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As 4 formas de preencher um campo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Origem"
+        },
+        {
+          "content": "Quando usar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Coluna do arquivo"
+          },
+          {
+            "content": "O caso comum: uma coluna da planilha vira esse campo, direto."
+          }
+        ],
+        [
+          {
+            "content": "Fórmula"
+          },
+          {
+            "content": "Combine mais de uma coluna, com prefixo, sufixo ou texto fixo — por exemplo, juntar Filial e Número da nota num único código."
+          }
+        ],
+        [
+          {
+            "content": "Valor fixo"
+          },
+          {
+            "content": "O mesmo valor para todas as linhas — por exemplo, marcar todos os produtos importados com uma mesma categoria."
+          }
+        ],
+        [
+          {
+            "content": "Não importar"
+          },
+          {
+            "content": "Deixa o campo de fora dessa importação."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Campos de opções (enum)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Campos com uma lista fixa de valores (por exemplo, status do pedido) ganham um botão "
+        },
+        {
+          "type": "text",
+          "text": "Mapear valores",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": abre uma tela para dizer o que cada valor da sua planilha significa na Bevean — com "
+        },
+        {
+          "type": "text",
+          "text": "Auto-detectar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (por aproximação de texto) e "
+        },
+        {
+          "type": "text",
+          "text": "Sugerir com IA",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para acelerar, e um valor padrão para o que não for reconhecido."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a Bevean exige antes de importar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Pelo menos um campo de identificação do cliente precisa estar mapeado — CPF/CNPJ, e-mail ou telefone — para localizar e não duplicar o contato. Qualquer outro campo obrigatório não mapeado também bloqueia a importação, com a lista do que falta."
+    },
+    {
+      "type": "paragraph",
+      "content": "Antes de confirmar, a tela mostra uma prévia com as primeiras linhas já processadas pelo mapeamento atual, para você conferir o resultado."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/importacoes/importar-pedidos-com-varias-linhas",
+          "description": "Se você está importando pedidos com mais de um item por linha."
+        },
+        {
+          "ref": "meu-negocio/importacoes/reutilizar-um-mapeamento",
+          "description": "Salve esse mapeamento para não refazer da próxima vez."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

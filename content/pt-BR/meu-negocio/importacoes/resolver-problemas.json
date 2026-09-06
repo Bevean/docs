@@ -1,0 +1,114 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O arquivo foi recusado, ou linhas ficaram de fora",
+  "subtitle": "Formato e tamanho do arquivo, campos obrigatórios de identificação, e o agrupamento de pedidos com várias linhas.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "arquivo recusado",
+    "linhas não importadas",
+    "erro na importação"
+  ],
+  "related": [
+    "meu-negocio/importacoes/acompanhar-e-corrigir-erros",
+    "meu-negocio/importacoes/importar-pedidos-com-varias-linhas"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"O arquivo foi recusado no envio\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Confira o formato (CSV, .xls ou .xlsx) e o tamanho (limite de 50 MB). O cabeçalho precisa estar na primeira linha."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo avançar do mapeamento\""
+    },
+    {
+      "type": "paragraph",
+      "content": "A tela lista os campos obrigatórios que ainda faltam mapear. Para Clientes e Pedidos, pelo menos um campo de identificação — CPF/CNPJ, e-mail ou telefone — é sempre exigido, mesmo que os outros já estejam prontos."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Meu pedido de várias linhas virou vários pedidos separados\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Veja "
+        },
+        {
+          "type": "text",
+          "text": "importar pedidos com várias linhas",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/importacoes/importar-pedidos-com-varias-linhas"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — provavelmente a opção de agrupar por pedido não foi ativada."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Algumas linhas não foram importadas\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Abra os detalhes da importação e confira se caíram na fase de Validação ou de Persistência — veja "
+        },
+        {
+          "type": "text",
+          "text": "acompanhar e corrigir erros",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/importacoes/acompanhar-e-corrigir-erros"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para o significado de cada uma, e baixe o relatório completo para ver linha por linha."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Uma importação trava a tela até terminar?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não — ela roda em segundo plano. Você pode fechar a tela e voltar depois para acompanhar o progresso."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

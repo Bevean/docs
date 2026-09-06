@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Importações",
+  "description": "Importe clientes, pedidos ou produtos de uma planilha, mapeando cada coluna para o campo certo.",
+  "icon": "upload",
+  "articles": [
+    "visao-geral",
+    "importar-um-arquivo",
+    "mapear-os-campos",
+    "importar-pedidos-com-varias-linhas",
+    "reutilizar-um-mapeamento",
+    "acompanhar-e-corrigir-erros",
+    "resolver-problemas"
+  ]
+}

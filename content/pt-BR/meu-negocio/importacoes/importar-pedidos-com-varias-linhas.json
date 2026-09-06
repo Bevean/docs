@@ -1,0 +1,88 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Importar pedidos com várias linhas por pedido",
+  "subtitle": "Como juntar várias linhas da planilha (uma por item) em um único pedido na importação.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "pedido com múltiplos itens",
+    "agrupar linhas",
+    "importar pedidos"
+  ],
+  "related": [
+    "meu-negocio/importacoes/mapear-os-campos",
+    "meu-negocio/importacoes/importar-um-arquivo"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Muitas planilhas de pedido têm uma linha por item, não uma linha por pedido — o mesmo número de pedido se repete várias vezes, um por produto. A Bevean sabe juntar essas linhas em um único pedido, se você configurar isso."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Só se aplica à importação de Pedidos. Veja "
+        },
+        {
+          "type": "text",
+          "text": "mapear os campos",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/importacoes/mapear-os-campos"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para o resto do mapeamento."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como ativar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na etapa de mapeamento, responda "
+        },
+        {
+          "type": "text",
+          "text": "Várias linhas representam o mesmo pedido?",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e escolha qual coluna identifica o pedido (normalmente sugerida automaticamente, como um campo de ID)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A tela mostra uma prévia ao vivo — algo como \"120 linhas → 34 pedidos\" — para você confirmar que o agrupamento está certo antes de importar."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se você deixar essa opção desativada com um arquivo de várias linhas por pedido, cada linha cria (ou sobrescreve) um pedido individual — o que normalmente não é o que você quer."
+        }
+      ],
+      "title": "Sem isso, cada linha vira um pedido separado"
+    }
+  ]
+}

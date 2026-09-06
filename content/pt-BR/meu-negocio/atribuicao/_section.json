@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Períodos de atribuição",
+  "description": "Defina por quantos dias uma interação ainda pode dar crédito por uma venda.",
+  "icon": "target",
+  "articles": [
+    "visao-geral",
+    "resolver-problemas"
+  ]
+}

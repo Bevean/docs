@@ -1,0 +1,108 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Sistema bloqueado por fatura em aberto, ou tela vazia",
+  "subtitle": "A régua de cobrança até o bloqueio de acesso, e o que fazer se a lista de faturas não aparece.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "sistema bloqueado",
+    "fatura em aberto",
+    "acesso suspenso"
+  ],
+  "related": [
+    "meu-negocio/faturas/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Apareceu um aviso dizendo que o sistema vai ser bloqueado\""
+    },
+    {
+      "type": "paragraph",
+      "content": "É a régua de cobrança da Bevean, que fica mais séria conforme uma fatura continua em aberto:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Quando"
+        },
+        {
+          "content": "O que aparece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Até 5 dias antes do vencimento"
+          },
+          {
+            "content": "Um lembrete discreto, com link para a fatura."
+          }
+        ],
+        [
+          {
+            "content": "De 1 a 3 dias em atraso"
+          },
+          {
+            "content": "Um aviso de \"Pagamento pendente\" com o botão Pagar agora."
+          }
+        ],
+        [
+          {
+            "content": "Mais de 3 dias em atraso"
+          },
+          {
+            "content": "O aviso continua, e uma tela \"Sistema será bloqueado em breve\" aparece também — pode ser fechada."
+          }
+        ],
+        [
+          {
+            "content": "Mais de 14 dias em atraso"
+          },
+          {
+            "content": "Uma tela \"Sistema temporariamente bloqueado\" que não pode ser fechada, até a fatura ser paga."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Depois de confirmado o pagamento, o acesso volta automaticamente — a Bevean informa que isso leva cerca de 1 hora."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Minha tela de Faturas está vazia, mas eu sei que tenho cobrança\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Se a sua conta não tem um cadastro de cobrança configurado, essa tela não tem o que mostrar. Fale com o suporte da Bevean para confirmar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Dá para baixar o boleto em PDF?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não existe um botão de download separado. Use Visualizar ou Abrir em nova aba — a própria página da fatura tem as opções de pagamento."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

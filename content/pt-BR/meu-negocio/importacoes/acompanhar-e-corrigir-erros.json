@@ -1,0 +1,160 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Acompanhar uma importação e corrigir erros",
+  "subtitle": "Validar antes de importar de verdade, e as duas fases de erro — validação e persistência.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "erros de importação",
+    "validar antes de importar",
+    "relatório de erros"
+  ],
+  "related": [
+    "meu-negocio/importacoes/visao-geral",
+    "meu-negocio/importacoes/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Uma importação real não trava por causa de linhas com problema — elas ficam de fora, e você vê exatamente quais e por quê."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Validar antes de importar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na etapa de mapeamento, use "
+        },
+        {
+          "type": "text",
+          "text": "Validar sem importar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para rodar uma checagem completa sem gravar nada — mostra quantas linhas são válidas, quantas têm problema, e uma prévia de como o primeiro registro ficaria."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Acompanhar uma importação em andamento"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.imports"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". A lista de importações atualiza sozinha enquanto alguma está em processamento, com Total, Sucessos, Falhas, Inválidas e o progresso."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As duas fases de erro"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Fase"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Validação"
+          },
+          {
+            "content": "Linhas que não passaram nas regras do mapeamento — campo obrigatório faltando, data em formato errado, valor não mapeado."
+          }
+        ],
+        [
+          {
+            "content": "Persistência"
+          },
+          {
+            "content": "Linhas válidas que foram rejeitadas ao tentar salvar (por exemplo, cliente sem nenhum contato)."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Abra "
+        },
+        {
+          "type": "text",
+          "text": "Ver detalhes",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " em qualquer importação para ver exemplos de cada fase, linha por linha."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Baixar o relatório completo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tela mostra só uma amostra de cada fase. Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Baixar relatório de erros",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para o CSV completo, com todas as linhas que falharam."
+        }
+      ]
+    }
+  ]
+}
