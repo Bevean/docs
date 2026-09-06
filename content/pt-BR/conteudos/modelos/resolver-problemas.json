@@ -1,0 +1,93 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Modelo rejeitado, travado para edição, ou carrossel não aparece",
+  "subtitle": "O que fazer com um modelo rejeitado pela Meta, por que um modelo aprovado não pode ser editado direto, e por que o carrossel some no WhatsApp Web.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "modelo rejeitado",
+    "não consigo editar modelo",
+    "carrossel não aparece"
+  ],
+  "related": [
+    "conteudos/modelos/aprovar-um-modelo-de-whatsapp-oficial",
+    "conteudos/modelos/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Meu modelo de WhatsApp Oficial foi rejeitado\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Veja "
+        },
+        {
+          "type": "text",
+          "text": "aprovar um modelo de WhatsApp Oficial",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "conteudos/modelos/aprovar-um-modelo-de-whatsapp-oficial"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para a lista de motivos e o que fazer."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo editar um modelo\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Um modelo de WhatsApp Oficial aprovado, aguardando aprovação, ou em recurso fica travado para edição direta. Duplique-o e edite a cópia."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"O carrossel não aparece no WhatsApp Web do meu cliente\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Esperado — carrossel só é exibido no aplicativo do WhatsApp no celular. No WhatsApp Web a mensagem chega, mas sem os cards."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não encontro como montar uma lista de opções ou uma enquete\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Esse formato de mensagem não existe aqui em Modelos — ele só pode ser montado dentro de uma automação, como mensagem de sessão."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Posso usar um modelo como resposta rápida no chat do atendimento?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Modelos de WhatsApp, SMS e RCS têm uma opção \"Habilitar para o chat\" — quando marcada, o modelo pode ser usado como mensagem rápida durante o atendimento."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

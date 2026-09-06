@@ -1,0 +1,61 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Não consigo editar um produto, ou a integração foi desconectada",
+  "subtitle": "Por que a maioria dos campos é só leitura, e o que acontece com os produtos quando uma integração é desconectada.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "produto não edita",
+    "produto sem categoria"
+  ],
+  "related": [
+    "conteudos/produtos/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo editar o nome/a imagem/o preço de um produto\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Esperado, quando o produto vem de uma integração — só Status, Descrição e Vida útil são editáveis por aqui. O resto muda na origem (sua loja ou ERP) e chega atualizado na próxima sincronização."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Desconectei uma integração e os produtos continuam aparecendo\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Esperado — o produto fica exatamente como estava na última sincronização. Nada é removido ou sinalizado automaticamente."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não encontro onde definir a categoria de um produto\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Essa opção não existe — categoria só chega pela integração, mesmo em um produto cadastrado manualmente."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Dá para exportar a lista de produtos?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não — não existe uma opção de exportação nem de edição em massa para produtos."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

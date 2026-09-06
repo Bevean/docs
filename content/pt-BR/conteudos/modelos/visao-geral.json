@@ -1,0 +1,263 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam os modelos",
+  "subtitle": "Os 5 tipos de modelo, seus status e o que fazer com um modelo já existente.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "modelos",
+    "templates",
+    "modelo de mensagem"
+  ],
+  "related": [
+    "conteudos/modelos/criar-um-modelo-de-email",
+    "conteudos/modelos/criar-um-modelo-de-whatsapp-ou-sms"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Um modelo é um conteúdo de mensagem que você monta uma vez e reaproveita depois em campanhas e automações."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.templates"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os tipos de modelo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Quando usar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "E-mail"
+          },
+          {
+            "content": "Editor visual de blocos, sem aprovação prévia."
+          }
+        ],
+        [
+          {
+            "content": "WhatsApp Web"
+          },
+          {
+            "content": "Formato livre, sem exigência de aprovação pela Meta. Perfeito para mensagens enviadas em menor escala e de forma cadenciada."
+          }
+        ],
+        [
+          {
+            "content": "WhatsApp Oficial"
+          },
+          {
+            "content": "Mensagens com estrutura padronizada e aprovação prévia da Meta. Indicadas para comunicações automatizadas em larga escala."
+          }
+        ],
+        [
+          {
+            "content": "SMS"
+          },
+          {
+            "content": "Mensagens de texto curtas enviadas via operadora. Ideal para alertas, confirmações e comunicações pontuais."
+          }
+        ],
+        [
+          {
+            "content": "RCS"
+          },
+          {
+            "content": "Mensagens ricas com mídia, botões e cards. Compatível com Android e operadoras parceiras."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Status de um modelo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Modelos de E-mail, WhatsApp Web, SMS e RCS ficam em Rascunho até você marcar como Ativo. Modelos de WhatsApp Oficial passam por um fluxo próprio de aprovação da Meta — veja "
+        },
+        {
+          "type": "text",
+          "text": "aprovar um modelo de WhatsApp Oficial",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "conteudos/modelos/aprovar-um-modelo-de-whatsapp-oficial"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status (WhatsApp Oficial)"
+        },
+        {
+          "content": "Significado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Rascunho"
+          },
+          {
+            "content": "Ainda não enviado para aprovação."
+          }
+        ],
+        [
+          {
+            "content": "Aguardando aprovação"
+          },
+          {
+            "content": "Enviado, esperando a análise da Meta."
+          }
+        ],
+        [
+          {
+            "content": "Aprovado"
+          },
+          {
+            "content": "Pronto para uso."
+          }
+        ],
+        [
+          {
+            "content": "Em recurso"
+          },
+          {
+            "content": "Rejeitado, mas em contestação."
+          }
+        ],
+        [
+          {
+            "content": "Rejeitado"
+          },
+          {
+            "content": "A Meta recusou o modelo."
+          }
+        ],
+        [
+          {
+            "content": "Pausado"
+          },
+          {
+            "content": "Meta suspendeu temporariamente."
+          }
+        ],
+        [
+          {
+            "content": "Desativado"
+          },
+          {
+            "content": "Meta desativou o modelo."
+          }
+        ],
+        [
+          {
+            "content": "Em risco"
+          },
+          {
+            "content": "Sinalizado pela Meta, mas ainda ativo."
+          }
+        ],
+        [
+          {
+            "content": "Limite ultrapassado"
+          },
+          {
+            "content": "Passou do limite de modelos permitido pela Meta."
+          }
+        ],
+        [
+          {
+            "content": "Erro"
+          },
+          {
+            "content": "Falha de sincronização entre a Bevean e a Meta."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que dá para fazer com um modelo existente"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Duplicar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " cria uma cópia nova e independente, sem nenhum estado de aprovação da Meta — é o caminho para alterar um modelo já aprovado, que fica travado para edição direta."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "conteudos/modelos/criar-um-modelo-de-email",
+          "description": "Monte um e-mail no editor de blocos."
+        },
+        {
+          "ref": "conteudos/modelos/criar-um-modelo-de-whatsapp-ou-sms",
+          "description": "Monte uma mensagem de WhatsApp, SMS ou RCS."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

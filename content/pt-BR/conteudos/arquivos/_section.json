@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Arquivos",
+  "description": "Envie e organize imagens e documentos para usar em formulários, e-mails e pesquisas.",
+  "icon": "folder",
+  "articles": [
+    "visao-geral",
+    "resolver-problemas"
+  ]
+}

@@ -188,5 +188,40 @@
       "Mapeamentos salvos"
     ],
     "href": "/settings/imports/mappings"
+  },
+  "content.templates": {
+    "segments": [
+      "Conteúdos & Dados",
+      "Modelos"
+    ],
+    "href": "/content"
+  },
+  "content.files": {
+    "segments": [
+      "Conteúdos & Dados",
+      "Arquivos"
+    ],
+    "href": "/content/files"
+  },
+  "content.products": {
+    "segments": [
+      "Conteúdos & Dados",
+      "Produtos"
+    ],
+    "href": "/content/integrations/products"
+  },
+  "content.orders": {
+    "segments": [
+      "Conteúdos & Dados",
+      "Pedidos"
+    ],
+    "href": "/content/integrations/orders"
+  },
+  "content.carts": {
+    "segments": [
+      "Conteúdos & Dados",
+      "Carrinhos"
+    ],
+    "href": "/content/integrations/carts"
   }
 }

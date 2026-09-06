@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Pedidos e Carrinhos",
+  "description": "Os pedidos sincronizados das suas lojas e os carrinhos que ainda não viraram venda.",
+  "icon": "shopping-cart",
+  "articles": [
+    "visao-geral",
+    "criar-um-pedido-manual",
+    "editar-o-status-de-um-pedido",
+    "resolver-problemas"
+  ]
+}

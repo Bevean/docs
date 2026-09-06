@@ -1,0 +1,105 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Vendedor não atribuído, ou carrinho que não some da lista",
+  "subtitle": "Por que vendedor e loja de um pedido não são editáveis, e como funciona a recuperação de carrinho abandonado.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "vendedor não atribuído",
+    "carrinho não some",
+    "recuperação de carrinho"
+  ],
+  "related": [
+    "conteudos/pedidos-e-carrinhos/visao-geral",
+    "meu-negocio/vendedores-e-lojas/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo atribuir um vendedor ou uma loja a um pedido\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Esperado — esse dado vem da integração, nunca é atribuído manualmente. Veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam vendedores e lojas",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/vendedores-e-lojas/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Um carrinho já virou pedido, mas continua aparecendo como Abandonado\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A lista de carrinhos já esconde os que a própria integração marca como convertidos. Se um carrinho aberto direto pela ficha ainda mostra \"Abandonado\" mesmo depois da compra, pode ser uma sincronização atrasada entre o pedido e o carrinho de origem — confira se o pedido correspondente já apareceu em "
+        },
+        {
+          "type": "text",
+          "text": "Pedidos",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "conteudos/pedidos-e-carrinhos/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Quero mandar uma mensagem de recuperação para quem abandonou o carrinho\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Não existe um botão de envio manual nessa tela — a recuperação de carrinho abandonado acontece por uma automação, configurada à parte."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Dá para excluir um pedido ou um carrinho?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não existe uma opção de excluir em nenhuma das duas telas."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

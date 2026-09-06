@@ -1,0 +1,52 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Um arquivo excluído sumiu de outro lugar",
+  "subtitle": "Por que excluir um arquivo em uso não é bloqueado, e por que um arquivo não aparece em certos seletores.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "arquivo sumiu",
+    "não encontro o arquivo"
+  ],
+  "related": [
+    "conteudos/arquivos/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Excluí um arquivo e ele sumiu de um formulário/e-mail\""
+    },
+    {
+      "type": "paragraph",
+      "content": "É esperado — a Bevean avisa isso antes de confirmar a exclusão, mas não impede: se o arquivo estava em uso em algum lugar, ele deixa de aparecer lá assim que é excluído. Envie o arquivo de novo e selecione-o outra vez no lugar onde ele sumiu."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não encontro meu arquivo no seletor de uma tela\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Alguns seletores só aceitam um tipo de arquivo (por exemplo, só imagens). Se o seu arquivo é de outro tipo, ele não aparece ali mesmo estando na biblioteca."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Existe um limite de espaço para os arquivos da minha conta?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não há um limite de espaço total visível na tela. O que existe é um limite por arquivo enviado."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

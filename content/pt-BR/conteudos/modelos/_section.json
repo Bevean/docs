@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Modelos",
+  "description": "Crie modelos de e-mail e de mensagem para usar em campanhas, automações e no chat.",
+  "icon": "layout-template",
+  "articles": [
+    "visao-geral",
+    "criar-um-modelo-de-email",
+    "criar-um-modelo-de-whatsapp-ou-sms",
+    "usar-variaveis",
+    "aprovar-um-modelo-de-whatsapp-oficial",
+    "usar-a-biblioteca-de-modelos",
+    "resolver-problemas"
+  ]
+}

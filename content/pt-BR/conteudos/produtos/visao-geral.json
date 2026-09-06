@@ -1,0 +1,221 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o catálogo de produtos",
+  "subtitle": "O que vem das integrações, o que é editável e o cadastro manual de um produto.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "produtos",
+    "catálogo",
+    "variantes"
+  ],
+  "related": [
+    "conteudos/produtos/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O catálogo de produtos que chega das suas integrações — com espaço para cadastrar um produto à mão quando precisar."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.products"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a lista mostra"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Coluna"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Imagem"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Nome"
+          },
+          {
+            "content": "Abre o detalhe do produto."
+          }
+        ],
+        [
+          {
+            "content": "Preço"
+          },
+          {
+            "content": "Faixa mínima–máxima entre as variantes."
+          }
+        ],
+        [
+          {
+            "content": "Variantes"
+          },
+          {
+            "content": "Quantidade."
+          }
+        ],
+        [
+          {
+            "content": "Origem"
+          },
+          {
+            "content": "De qual integração o produto veio."
+          }
+        ],
+        [
+          {
+            "content": "Status"
+          },
+          {
+            "content": "Ativo, Inativo ou Rascunho."
+          }
+        ],
+        [
+          {
+            "content": "Criado em"
+          },
+          {
+            "content": "—"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a ficha do produto mostra"
+    },
+    {
+      "type": "paragraph",
+      "content": "Informações gerais, imagens (do produto e por variante), a tabela de variantes (SKU, código de barras, estoque, preço, custo), categorias e a origem/integração — tudo isso é só leitura."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que dá para editar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Num produto que já veio de uma integração, só 3 campos são editáveis: "
+        },
+        {
+          "type": "text",
+          "text": "Status",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Descrição",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Vida útil (dias)",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O resto (nome, imagens, variantes, categorias) só muda na origem, e chega atualizado na próxima sincronização."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Não existe uma tela para atribuir categoria manualmente — categoria só vem da integração, mesmo em um produto cadastrado à mão por aqui."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Cadastrar um produto manualmente"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar produto",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para um formulário completo — nome, descrição, imagens, preço, SKU e outros dados. Um produto criado assim entra com origem \"manual\"."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "conteudos/produtos/resolver-problemas",
+          "description": "Um campo não deixa editar, ou a integração foi desconectada."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

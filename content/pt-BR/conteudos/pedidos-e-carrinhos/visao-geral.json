@@ -1,0 +1,162 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam pedidos e carrinhos",
+  "subtitle": "O que vem das integrações, o que é editável, e como um carrinho é marcado como recuperado.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "pedidos",
+    "carrinhos",
+    "carrinho abandonado",
+    "carrinho recuperado"
+  ],
+  "related": [
+    "conteudos/pedidos-e-carrinhos/criar-um-pedido-manual",
+    "conteudos/pedidos-e-carrinhos/editar-o-status-de-um-pedido"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Pedidos e carrinhos chegam das suas integrações — a Bevean só edita um espaço pequeno e bem definido de cada um."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde ficam: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.orders"
+          }
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.carts"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Pedidos"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A lista mostra Código, Cliente, Total, Origem, e os 3 status (veja "
+        },
+        {
+          "type": "text",
+          "text": "editar o status de um pedido",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "conteudos/pedidos-e-carrinhos/editar-o-status-de-um-pedido"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "). A ficha do pedido detalha cliente, itens, descontos, pagamentos, envio (fulfillment) e nota fiscal — tudo isso é só leitura, vindo da integração."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Vendedor e loja de um pedido também são só leitura aqui — eles vêm da integração, nunca são atribuídos manualmente. Veja "
+            },
+            {
+              "type": "text",
+              "text": "como funcionam vendedores e lojas",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "meu-negocio/vendedores-e-lojas/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Carrinhos"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mostra carrinhos que ainda não geraram pedido: Cliente, Total, Origem e Data. A ficha do carrinho detalha os itens, o resumo de valores e um card de "
+        },
+        {
+          "type": "text",
+          "text": "Recuperação",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " com o link do carrinho na loja."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Um carrinho vira \"Recuperado\" automaticamente quando a Bevean identifica, pela sincronização de pedidos, que aquele carrinho gerou uma venda — não existe uma ação manual de marcar como recuperado, nem de enviar uma cobrança pelo carrinho direto dessa tela. A recuperação de carrinho abandonado, quando existe, acontece por uma automação."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "conteudos/pedidos-e-carrinhos/criar-um-pedido-manual",
+          "description": "Cadastre um pedido que não veio de nenhuma integração."
+        },
+        {
+          "ref": "conteudos/pedidos-e-carrinhos/editar-o-status-de-um-pedido",
+          "description": "Mude o status de pagamento, entrega ou do pedido em si."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

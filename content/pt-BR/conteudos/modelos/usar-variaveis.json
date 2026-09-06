@@ -1,0 +1,154 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Usar variáveis num modelo",
+  "subtitle": "Como inserir um dado dinâmico no texto, os grupos disponíveis, e a diferença entre amostra e valor padrão.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "variáveis",
+    "personalização",
+    "dados dinâmicos"
+  ],
+  "related": [
+    "conteudos/modelos/criar-um-modelo-de-whatsapp-ou-sms",
+    "conteudos/modelos/aprovar-um-modelo-de-whatsapp-oficial"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Variáveis colocam um dado real — nome do cliente, número do pedido — no lugar de um texto fixo, preenchido automaticamente no momento do envio."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como inserir"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique no botão de variável (ícone {}) na barra de ferramentas do texto"
+        },
+        {
+          "title": "Busque ou navegue pelos grupos disponíveis"
+        },
+        {
+          "title": "Clique na variável — ela entra no texto como um bloco não editável"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Grupos de variáveis"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Grupo"
+        },
+        {
+          "content": "Exemplos"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Comunicação"
+          },
+          {
+            "content": "Dados do próprio envio."
+          }
+        ],
+        [
+          {
+            "content": "Loja"
+          },
+          {
+            "content": "Dados da sua conta Bevean."
+          }
+        ],
+        [
+          {
+            "content": "Cliente"
+          },
+          {
+            "content": "Nome, e-mail, telefone do destinatário."
+          }
+        ],
+        [
+          {
+            "content": "Personalizadas"
+          },
+          {
+            "content": "Os campos que você criou em Propriedades personalizadas."
+          }
+        ],
+        [
+          {
+            "content": "Automação"
+          },
+          {
+            "content": "Só aparece quando o modelo é usado numa automação — Pedido criado, Checkout iniciado, Produto abandonado, Cashback, Pesquisa."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Amostra e valor padrão (só WhatsApp Oficial)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Modelos de WhatsApp Oficial pedem, para cada variável usada, dois valores em "
+        },
+        {
+          "type": "text",
+          "text": "Exemplos de variáveis",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Para que serve"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Amostra"
+          },
+          {
+            "content": "O valor enviado à Meta só para a análise de aprovação — nunca aparece num envio real."
+          }
+        ],
+        [
+          {
+            "content": "Valor padrão"
+          },
+          {
+            "content": "O valor usado de verdade quando a mensagem é enviada sem um dado mais específico para preencher a variável."
+          }
+        ]
+      ]
+    }
+  ]
+}

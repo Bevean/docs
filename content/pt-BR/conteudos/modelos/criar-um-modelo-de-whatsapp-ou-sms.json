@@ -1,0 +1,309 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar um modelo de WhatsApp, SMS ou RCS",
+  "subtitle": "As seções disponíveis por canal, os tipos de botão e os limites de caracteres.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "modelo de whatsapp",
+    "modelo de sms",
+    "modelo de rcs",
+    "carrossel"
+  ],
+  "related": [
+    "conteudos/modelos/visao-geral",
+    "conteudos/modelos/aprovar-um-modelo-de-whatsapp-oficial"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é uma mensagem de WhatsApp, SMS ou RCS pronta para usar. Diferente do e-mail, aqui você preenche seções fixas — não é um editor de arrastar e soltar."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.templates"
+          }
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Criar conteúdo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " → escolha o tipo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As seções"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Seção"
+        },
+        {
+          "content": "Disponível em"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Layout (Mensagem única ou Carrossel)"
+          },
+          {
+            "content": "WhatsApp Oficial e RCS."
+          }
+        ],
+        [
+          {
+            "content": "Cabeçalho (Texto, Imagem, Vídeo ou Documento)"
+          },
+          {
+            "content": "Todos, exceto SMS."
+          }
+        ],
+        [
+          {
+            "content": "Mensagem"
+          },
+          {
+            "content": "Todos."
+          }
+        ],
+        [
+          {
+            "content": "Mensagem de fechamento (rodapé)"
+          },
+          {
+            "content": "Só WhatsApp Oficial."
+          }
+        ],
+        [
+          {
+            "content": "Botões clicáveis"
+          },
+          {
+            "content": "Todos, exceto WhatsApp Web e SMS."
+          }
+        ],
+        [
+          {
+            "content": "Cartões (quando o layout é Carrossel)"
+          },
+          {
+            "content": "WhatsApp Oficial e RCS."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Tipos de botão disponíveis: Resposta rápida, Abrir URL, Ligar, Copiar código (inclusive um modo \"Copiar cupom\" automático, que puxa o valor da campanha ou automação que enviar a mensagem). RCS tem também Evento no calendário e localização."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Limites por canal"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Canal"
+        },
+        {
+          "content": "Corpo da mensagem"
+        },
+        {
+          "content": "Outros limites"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "WhatsApp Web"
+          },
+          {
+            "content": "4.096 caracteres"
+          },
+          {
+            "content": "Sem cabeçalho estruturado, sem botões."
+          }
+        ],
+        [
+          {
+            "content": "WhatsApp Oficial"
+          },
+          {
+            "content": "1.024 caracteres"
+          },
+          {
+            "content": "Cabeçalho até 60, rodapé até 60, até 10 botões."
+          }
+        ],
+        [
+          {
+            "content": "SMS"
+          },
+          {
+            "content": "160 caracteres"
+          },
+          {
+            "content": "Só texto, sem cabeçalho nem botões."
+          }
+        ],
+        [
+          {
+            "content": "RCS"
+          },
+          {
+            "content": "4.096 caracteres"
+          },
+          {
+            "content": "Até 5 botões."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Recursos de apoio"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão "
+        },
+        {
+          "type": "text",
+          "text": "Melhorar com IA",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ajusta o texto que você já escreveu. "
+        },
+        {
+          "type": "text",
+          "text": "Rascunhar com IA",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " gera uma mensagem inteira a partir de uma descrição."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A prévia ao lado mostra a mensagem como ela aparece dentro do WhatsApp, com um alternador entre o valor de "
+        },
+        {
+          "type": "text",
+          "text": "Amostra",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e o "
+        },
+        {
+          "type": "text",
+          "text": "Padrão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — veja "
+        },
+        {
+          "type": "text",
+          "text": "usar variáveis",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "conteudos/modelos/usar-variaveis"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para o que isso significa."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Modelos em carrossel só são exibidos no aplicativo do WhatsApp no celular. No WhatsApp Web a mensagem chega, mas os cards não aparecem."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "conteudos/modelos/usar-variaveis",
+          "description": "Insira dados do cliente ou do pedido no texto."
+        },
+        {
+          "ref": "conteudos/modelos/aprovar-um-modelo-de-whatsapp-oficial",
+          "description": "Envie um modelo de WhatsApp Oficial para aprovação da Meta."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

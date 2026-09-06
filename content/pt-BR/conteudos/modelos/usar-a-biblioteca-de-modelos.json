@@ -1,0 +1,118 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Usar a biblioteca de modelos",
+  "subtitle": "Modelos prontos da Bevean para usar como ponto de partida, com filtro por categoria.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "biblioteca de modelos",
+    "modelos prontos"
+  ],
+  "related": [
+    "conteudos/modelos/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A Biblioteca reúne modelos prontos da própria Bevean, para você usar como ponto de partida em vez de montar do zero."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.templates"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — abas "
+        },
+        {
+          "type": "text",
+          "text": "Biblioteca de e-mails",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Biblioteca de WhatsApp",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como filtrar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Busque por nome, ou filtre por Categoria (Marketing, Geral, Transacional, Relacionamento, Conversão, Reativação). Na biblioteca de WhatsApp, também dá para filtrar por Tipo (WhatsApp Web ou Oficial) e, para os de WhatsApp Oficial, pela categoria exigida pela Meta (Marketing, Utilitário ou Autenticação)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Usar um modelo da biblioteca"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Visualizar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para conferir antes, ou direto em "
+        },
+        {
+          "type": "text",
+          "text": "Usar modelo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — a Bevean cria uma cópia sua, editável, e já abre no editor."
+        }
+      ]
+    }
+  ]
+}

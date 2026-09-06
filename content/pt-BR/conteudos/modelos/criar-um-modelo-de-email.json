@@ -1,0 +1,305 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar um modelo de e-mail",
+  "subtitle": "Os blocos do editor visual, as preferências gerais e o modo avançado de HTML.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "editor de e-mail",
+    "blocos de e-mail",
+    "criar e-mail"
+  ],
+  "related": [
+    "conteudos/modelos/visao-geral",
+    "conteudos/modelos/usar-variaveis"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é um e-mail pronto para usar em campanhas e automações, montado arrastando blocos de conteúdo."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.templates"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — aba "
+        },
+        {
+          "type": "text",
+          "text": "E-mail",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Criar conteúdo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os blocos disponíveis"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Bloco"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Texto"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Imagem"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Título"
+          },
+          {
+            "content": "Um texto de destaque (heading)."
+          }
+        ],
+        [
+          {
+            "content": "Botão"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Divisor"
+          },
+          {
+            "content": "Uma linha separando seções."
+          }
+        ],
+        [
+          {
+            "content": "Carrinho"
+          },
+          {
+            "content": "Mostra os produtos do carrinho abandonado do destinatário."
+          }
+        ],
+        [
+          {
+            "content": "Produto"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "HTML"
+          },
+          {
+            "content": "Um trecho de HTML cru, para quem precisa de algo fora dos blocos prontos."
+          }
+        ],
+        [
+          {
+            "content": "Cabeçalho"
+          },
+          {
+            "content": "Logo e links de menu."
+          }
+        ],
+        [
+          {
+            "content": "Rodapé"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Colunas"
+          },
+          {
+            "content": "Divide o espaço em colunas, cada uma podendo ter outro bloco dentro."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Arraste um bloco da barra lateral (aba "
+        },
+        {
+          "type": "text",
+          "text": "Conteúdo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") para o e-mail. Clique em um bloco já colocado para configurar o que é específico dele."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Preferências gerais"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na aba "
+        },
+        {
+          "type": "text",
+          "text": "Preferências",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " da barra lateral: Tipografia, texto de Descadastro, Plano de fundo e Largura máxima — valem para o e-mail inteiro, não para um bloco específico."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Editor avançado (HTML)"
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Ativar o Editor avançado (HTML) troca todo o e-mail por um editor de código. Depois de salvar nesse modo, não é possível voltar para o editor de blocos."
+        }
+      ],
+      "title": "Não tem volta"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Prévia e exportação"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A prévia mostra o e-mail já renderizado, com variáveis preenchidas por dados de exemplo. Use "
+        },
+        {
+          "type": "text",
+          "text": "Exportar HTML",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "Exportar JSON",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para levar o e-mail para fora da Bevean, ou "
+        },
+        {
+          "type": "text",
+          "text": "Importar JSON",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para trazer um de volta."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "conteudos/modelos/usar-variaveis",
+          "description": "Insira dados do cliente ou do pedido no texto."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

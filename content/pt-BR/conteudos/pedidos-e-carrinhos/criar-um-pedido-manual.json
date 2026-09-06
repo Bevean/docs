@@ -1,0 +1,131 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar um pedido manual",
+  "subtitle": "Vincular um cliente e produtos já cadastrados, e por que o pagamento entra sempre como aprovado.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "pedido manual",
+    "adicionar pedido",
+    "novo pedido"
+  ],
+  "related": [
+    "conteudos/pedidos-e-carrinhos/visao-geral",
+    "conteudos/pedidos-e-carrinhos/editar-o-status-de-um-pedido"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é um pedido cadastrado à mão, para uma venda que não passou por nenhuma integração conectada."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.orders"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar pedido",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O passo a passo"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Busque o cliente",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Só é possível vincular um cliente que já existe na sua base — não dá para cadastrar um novo cliente direto por aqui."
+            }
+          ]
+        },
+        {
+          "title": "Adicione os produtos",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Busque entre os produtos já cadastrados. Quantidade e preço vêm do produto/variante escolhido."
+            }
+          ]
+        },
+        {
+          "title": "Escolha a forma de pagamento",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Cartão de Crédito, PIX ou Boleto."
+            }
+          ]
+        },
+        {
+          "title": "Desconto (opcional)",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Em porcentagem ou valor fixo."
+            }
+          ]
+        },
+        {
+          "title": "Frete (opcional)",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Nome e valor, digitados à mão — não busca em nenhuma integração de frete."
+            }
+          ]
+        },
+        {
+          "title": "Confira a data do pedido e salve"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Qualquer forma de pagamento escolhida num pedido manual já entra com o status de pagamento Aprovado — não há uma etapa de confirmação de pagamento."
+        }
+      ],
+      "title": "O pagamento entra como Aprovado automaticamente"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um pedido criado manualmente não tem vendedor nem loja atribuídos — esses campos não aparecem no formulário de criação."
+    }
+  ]
+}

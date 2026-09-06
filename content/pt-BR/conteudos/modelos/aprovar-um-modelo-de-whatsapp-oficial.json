@@ -1,0 +1,216 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Aprovar um modelo de WhatsApp Oficial",
+  "subtitle": "A categoria da mensagem, o fluxo de aprovação da Meta e o que fazer se o modelo for rejeitado.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "aprovação meta",
+    "categoria da mensagem",
+    "modelo rejeitado"
+  ],
+  "related": [
+    "conteudos/modelos/visao-geral",
+    "conteudos/modelos/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Todo modelo de WhatsApp Oficial passa pela análise da própria Meta antes de poder ser enviado — a Bevean não decide isso."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Categoria da mensagem"
+    },
+    {
+      "type": "paragraph",
+      "content": "Escolha entre:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Categoria"
+        },
+        {
+          "content": "Observação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Marketing"
+          },
+          {
+            "content": "Custo por mensagem mais alto."
+          }
+        ],
+        [
+          {
+            "content": "Utilitário"
+          },
+          {
+            "content": "Custo por mensagem mais baixo. Não permite o botão Copiar código nem o layout em carrossel."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A Meta pode reclassificar como Marketing um modelo criado como Utilitário, se identificar conteúdo promocional."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que acontece depois de enviar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O modelo entra em "
+        },
+        {
+          "type": "text",
+          "text": "Aguardando aprovação",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e a Meta decide. Veja o status completo em "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam os modelos",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "conteudos/modelos/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Enquanto o status for Aprovado, Aguardando aprovação ou Em recurso, o modelo fica travado para edição — para mudar qualquer coisa, duplique e ajuste a cópia."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Se for rejeitado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Ver erros",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para o motivo, traduzido pela Bevean a partir do código que a Meta retorna:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Motivo (Meta)"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Conteúdo abusivo"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Formato inválido"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Conteúdo enganoso"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Categoria incompatível"
+          },
+          {
+            "content": "O conteúdo não bate com a categoria escolhida."
+          }
+        ],
+        [
+          {
+            "content": "Categoria incorreta"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Conteúdo promocional"
+          },
+          {
+            "content": "Comum quando a categoria escolhida foi Utilitário."
+          }
+        ],
+        [
+          {
+            "content": "Motivo não especificado"
+          },
+          {
+            "content": "A Meta não detalhou o motivo."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Duplique o modelo rejeitado, ajuste o que for necessário e envie a cópia para uma nova análise."
+    }
+  ]
+}

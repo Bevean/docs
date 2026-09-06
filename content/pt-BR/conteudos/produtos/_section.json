@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Produtos",
+  "description": "O catálogo sincronizado das suas integrações, com espaço para cadastro manual.",
+  "icon": "package",
+  "articles": [
+    "visao-geral",
+    "resolver-problemas"
+  ]
+}

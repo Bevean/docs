@@ -1,0 +1,127 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Editar o status de um pedido",
+  "subtitle": "Os 3 status editáveis, e por que não existe um botão de cancelar ou reembolsar separado.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "status do pedido",
+    "cancelar pedido",
+    "status de pagamento",
+    "status de entrega"
+  ],
+  "related": [
+    "conteudos/pedidos-e-carrinhos/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Os 3 status de um pedido são o único dado realmente editável na ficha — o resto (cliente, itens, pagamento, frete) é só leitura."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "na ficha do pedido, card "
+        },
+        {
+          "type": "text",
+          "text": "Status editáveis",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os 3 status"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Status"
+        },
+        {
+          "content": "Opções"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Aberto, Cancelado, Concluído, Arquivado."
+          }
+        ],
+        [
+          {
+            "content": "Pagamento"
+          },
+          {
+            "content": "Pendente, Aprovado, Negado, Chargeback, Expirado, Cancelado, Reembolsado, Pago."
+          }
+        ],
+        [
+          {
+            "content": "Entrega"
+          },
+          {
+            "content": "Não enviado, Atendido, Em produção, Faturado, Enviado, Pronto para retirada, Entregue."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Para cancelar um pedido, mude o Status do pedido para Cancelado nesse mesmo Select — é o único caminho, tanto para cancelar quanto para marcar como reembolsado ou entregue."
+        }
+      ],
+      "title": "Não existe um botão de \"Cancelar\" separado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Também dá para escrever uma anotação livre em "
+        },
+        {
+          "type": "text",
+          "text": "Observações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — é um campo de texto único, não um histórico com data de cada mudança."
+        }
+      ]
+    }
+  ]
+}

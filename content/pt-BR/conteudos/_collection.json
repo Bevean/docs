@@ -3,6 +3,11 @@
   "title": "Conteúdos e dados",
   "description": "Modelos de mensagem, arquivos, produtos, pedidos e carrinhos.",
   "icon": "database",
-  "sections": [],
+  "sections": [
+    "modelos",
+    "arquivos",
+    "produtos",
+    "pedidos-e-carrinhos"
+  ],
   "articles": []
 }
