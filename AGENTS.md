@@ -601,6 +601,29 @@ tela, o dinâmico é a fonte — a prosa pode ter ficado presa numa versão anti
 Nesses casos, descreva o mecanismo (o que a tela mostra) em vez de cravar o
 número, e flague a divergência como achado, não como conteúdo.
 
+**Um campo pode existir na tela e no schema sem ter nenhum efeito real —
+confirme o consumidor final, não só a validação.** A tela de Períodos de
+atribuição valida e salva um período para "Conversas do Helpdesk" junto com
+E-mail e Mensagem de texto, mas a função que aplica as janelas na atribuição de
+um pedido só itera os outros dois grupos — o terceiro é aceito, guardado, e não
+lido por ninguém. Mesma família do achado do registro DNS "CDN" (Domínios) e do
+Pedidos da Magazord: a existência de um campo em duas camadas (schema +
+formulário) não prova que uma terceira camada o consome. Quando isso acontece,
+não omita o campo (o leitor vai vê-lo na tela) — descreva os que funcionam com
+confiança e avise, num tom parecido com o já usado para Magazord, que aquele
+específico ainda não faz efeito.
+
+**Uma tela pode ter permissão real no backend sem nenhuma trava no frontend —
+isso não aparece testando só o happy path, aparece grepando o arquivo de
+regras.** Vendedores, Lojas, Atribuição, Faturas e Importações têm scope
+concedido de forma desigual no backend (dois deles nem estão em nenhum perfil,
+só em Acesso total), mas nenhuma das 5 telas aparece na tabela de regras do
+`permission-route-access.ts` nem tem `disabled` condicionado no item do menu —
+diferente de Usuários, que trava dos dois lados. Ao documentar qualquer tela em
+Configurações, vale conferir essa tabela e o item do menu correspondente antes
+de assumir que "só quem tem permissão vê isso", porque a maioria das telas
+novas não segue esse padrão ainda.
+
 ## Por que não há prints
 
 Decisão do MVP: **nenhum artigo leva captura de tela.** A regra não tem exceção,
