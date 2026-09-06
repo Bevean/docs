@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Matriz RFV",
+  "description": "Veja quem são seus melhores clientes e quem está sumindo, a partir do histórico de compras.",
+  "icon": "grid-3x3",
+  "articles": [
+    "visao-geral",
+    "resolver-problemas"
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar um segmento dinâmico",
+  "subtitle": "O passo a passo do filtro e a lista completa de condições disponíveis, por grupo.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "criar segmento",
+    "condições",
+    "filtro dinâmico",
+    "segmentação"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/visao-geral",
+    "audiencia/segmentos-e-listas/gerenciar-um-segmento-ou-lista"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é um segmento que atualiza sozinho a lista de contatos, conforme eles passam a bater (ou deixam de bater) com as condições."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.segments"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão "
+        },
+        {
+          "type": "text",
+          "text": "Criar segmento ou lista",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Criar segmento dinâmico",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Antes de começar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam segmentos e listas",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "audiencia/segmentos-e-listas/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O passo a passo"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Dê um nome ao segmento — a cor e o título da tag são sugeridos automaticamente, mas você pode trocar"
+        },
+        {
+          "title": "Adicione uma condição",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Escolha um grupo, um campo, um operador e um valor. Clique em Adicionar condição para incluir outras, combinando com E ou OU."
+            }
+          ]
+        },
+        {
+          "title": "Clique em Visualizar audiência",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Mostra quantos contatos batem com as condições agora, e o % da sua base — sem salvar nada ainda."
+            }
+          ]
+        },
+        {
+          "title": "Salve"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As condições disponíveis"
+    },
+    {
+      "type": "paragraph",
+      "content": "O grupo muda o que você pode escolher depois. Alguns grupos só aparecem se você já tiver o recurso correspondente configurado (propriedades personalizadas, pesquisas de satisfação)."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Grupo"
+        },
+        {
+          "content": "Você pode filtrar por"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Perfil do contato"
+          },
+          {
+            "content": "Nome, e-mail, telefone, gênero, aniversário, origem e data de cadastro, tipo de documento, status do e-mail/WhatsApp, opt-in de e-mail e telefone, país, estado, cidade, bairro, CEP, e se é lead ou já é cliente."
+          }
+        ],
+        [
+          {
+            "content": "Segmentos ou listas"
+          },
+          {
+            "content": "Está em / não está em outro segmento ou lista — permite combinar segmentos."
+          }
+        ],
+        [
+          {
+            "content": "Tags do contato"
+          },
+          {
+            "content": "Tem tag / não tem tag."
+          }
+        ],
+        [
+          {
+            "content": "Histórico de compras"
+          },
+          {
+            "content": "Quantidade e valor de pedidos (realizados ou aprovados), ticket médio, data e valor do último pedido, vendedor e loja preferidos."
+          }
+        ],
+        [
+          {
+            "content": "Carrinho abandonado"
+          },
+          {
+            "content": "Abandonou (e quando) ou não abandonou, e o valor do carrinho."
+          }
+        ],
+        [
+          {
+            "content": "Detalhes de um pedido"
+          },
+          {
+            "content": "Data, número de itens, valor, cupom usado, desconto, vendedor, loja, se é assinatura, status do pedido/pagamento/entrega, forma de pagamento, produto, SKU e variação."
+          }
+        ],
+        [
+          {
+            "content": "Engajamento"
+          },
+          {
+            "content": "Data do último e-mail ou WhatsApp recebido, aberto, clicado ou (no WhatsApp) respondido."
+          }
+        ],
+        [
+          {
+            "content": "Propriedades personalizadas"
+          },
+          {
+            "content": "Qualquer campo que você criou em Contatos ou em Pedidos."
+          }
+        ],
+        [
+          {
+            "content": "Pesquisa"
+          },
+          {
+            "content": "Respondeu, faixa de satisfação, nota e data de resposta de uma pesquisa publicada."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Não existe uma condição de \"pontuação RFV\" aqui — a Matriz RFV é um agrupamento à parte, gerado automaticamente. Veja "
+            },
+            {
+              "type": "text",
+              "text": "a Matriz RFV",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "audiencia/matriz-rfv/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Automações vinculadas"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se o segmento já tem uma automação ativa ou em rascunho vinculada, a Bevean avisa antes de salvar: mudar as condições pode fazer novos contatos que passem a entrar no segmento disparar essa automação."
+        }
+      ],
+      "title": "Salvar pode disparar automações"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "audiencia/segmentos-e-listas/gerenciar-um-segmento-ou-lista",
+          "description": "Veja quem está no segmento, exporte ou exclua."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

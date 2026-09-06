@@ -1,0 +1,255 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Tags e propriedades personalizadas",
+  "subtitle": "Etiquetas coloridas e campos próprios do seu negócio, além do cadastro padrão de um contato.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "tags",
+    "propriedades personalizadas",
+    "campos personalizados",
+    "metafields"
+  ],
+  "related": [
+    "audiencia/contatos/visao-geral",
+    "audiencia/segmentos-e-listas/criar-um-segmento-dinamico"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Tags e propriedades personalizadas são as duas formas de organizar informação própria do seu negócio em um contato — além dos campos padrão da Bevean."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Tags"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Etiquetas coloridas, compartilhadas por toda a base. Gerencie a lista de tags em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.customers"
+          }
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Gerenciar tags",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e aplique uma ou mais tags direto na ficha do contato."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Propriedades personalizadas"
+    },
+    {
+      "type": "paragraph",
+      "content": "Campos que você mesmo cria, com o tipo de dado que fizer sentido para o seu negócio."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.metafields"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — para criar ou editar um campo. O valor de cada contato é preenchido na própria ficha dele."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Tipos de campo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Uso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Texto"
+          },
+          {
+            "content": "Qualquer texto livre."
+          }
+        ],
+        [
+          {
+            "content": "Número"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Booleano"
+          },
+          {
+            "content": "Sim ou não."
+          }
+        ],
+        [
+          {
+            "content": "Data"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Lista"
+          },
+          {
+            "content": "Opções pré-definidas por você, até 50 por campo."
+          }
+        ],
+        [
+          {
+            "content": "JSON"
+          },
+          {
+            "content": "Dado estruturado, para casos avançados."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Criar um campo"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Em Propriedades personalizadas, clique em Adicionar definição"
+        },
+        {
+          "title": "Digite o Nome — a Chave é gerada automaticamente a partir dele"
+        },
+        {
+          "title": "Escolha o Tipo"
+        },
+        {
+          "title": "Salve"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Só o Nome pode ser editado depois. Revise a Chave antes de salvar se você usa integrações que dependem dela."
+        }
+      ],
+      "title": "A chave não muda depois de criada"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Preencher o valor em um contato"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na ficha do contato, card "
+        },
+        {
+          "type": "text",
+          "text": "Propriedades personalizadas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", clique em "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e preencha o valor. Também é possível criar um campo novo direto por ali."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Remover um campo de Propriedades personalizadas apaga o valor preenchido em todos os contatos que o usam. Não pode ser desfeito."
+        }
+      ],
+      "title": "Excluir uma definição apaga o valor de todo mundo"
+    }
+  ]
+}

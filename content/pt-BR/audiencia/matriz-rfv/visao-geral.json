@@ -1,0 +1,192 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona a Matriz RFV",
+  "subtitle": "Os 10 grupos de clientes calculados a partir de Recência, Frequência e Valor de compra.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "rfv",
+    "matriz rfv",
+    "recência frequência valor",
+    "campeões",
+    "clientes em risco"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/visao-geral",
+    "audiencia/contatos/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A matriz RFV segmenta a sua base automaticamente, a partir do histórico de compras: Recência (quando comprou pela última vez), Frequência (quantas vezes comprou) e Valor (quanto gastou)."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.rfv"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como ler a matriz"
+    },
+    {
+      "type": "paragraph",
+      "content": "A grade cruza Valor (linhas) com Recência (colunas) — Frequência entra como uma média mostrada ao lado, não como um terceiro eixo visual. Cada célula é um dos 10 grupos abaixo, com o % da sua base que ele representa."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os 10 grupos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Grupo"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Campeões"
+          },
+          {
+            "content": "Compram sempre, gastam muito e geram alto valor para o negócio."
+          }
+        ],
+        [
+          {
+            "content": "Fiéis"
+          },
+          {
+            "content": "Compram com frequência e mantêm bom engajamento."
+          }
+        ],
+        [
+          {
+            "content": "Fiéis em potencial"
+          },
+          {
+            "content": "Compram com frequência, mas ainda gastam pouco."
+          }
+        ],
+        [
+          {
+            "content": "Novos"
+          },
+          {
+            "content": "Começaram a comprar agora. Hora de fidelizar."
+          }
+        ],
+        [
+          {
+            "content": "Promissores"
+          },
+          {
+            "content": "Compram às vezes e podem virar clientes fiéis."
+          }
+        ],
+        [
+          {
+            "content": "Precisando de atenção"
+          },
+          {
+            "content": "Estão comprando menos. Reative antes que esfriem."
+          }
+        ],
+        [
+          {
+            "content": "Quase dormentes"
+          },
+          {
+            "content": "Já compraram bem, mas estão há tempos sem comprar."
+          }
+        ],
+        [
+          {
+            "content": "Não pode perder"
+          },
+          {
+            "content": "Clientes valiosos em queda. Aja rápido para reconquistar."
+          }
+        ],
+        [
+          {
+            "content": "Em perigo"
+          },
+          {
+            "content": "Quase parando de comprar. É hora de intervir."
+          }
+        ],
+        [
+          {
+            "content": "Perdidos"
+          },
+          {
+            "content": "Inativos há muito tempo. Ações de resgate são recomendadas."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Usar um grupo da matriz"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clique em uma célula da grade ou em uma linha da tabela abaixo dela para abrir o grupo como um segmento — com a lista de contatos e a opção de exportar. Um grupo da matriz RFV não pode ser editado nem excluído: ele é sempre gerado pela própria matriz."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando os números são recalculados"
+    },
+    {
+      "type": "paragraph",
+      "content": "As faixas que definem cada grupo são calculadas uma vez, na primeira vez que a matriz é gerada para a sua conta, a partir do histórico de pedidos até aquele momento. Depois disso, a quantidade de contatos em cada grupo é atualizada periodicamente — não em tempo real a cada novo pedido."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Não existe uma tela para você ajustar manualmente o que conta como \"recente\" ou \"frequente\" — os critérios são calculados automaticamente a partir da sua própria base."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "audiencia/matriz-rfv/resolver-problemas",
+          "description": "A matriz ainda não apareceu para a sua loja."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

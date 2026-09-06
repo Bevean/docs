@@ -1,0 +1,160 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Não acho um contato, ou não consigo apagar",
+  "subtitle": "Contato suprimido, exclusão bloqueada por ter pedido, e o que acontece com linhas inválidas na importação.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "contato sumiu",
+    "não consigo excluir",
+    "importação com erro"
+  ],
+  "related": [
+    "audiencia/contatos/suprimir-ou-excluir-um-contato",
+    "audiencia/contatos/importar-e-exportar-contatos"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A maioria dos casos de \"não acho um contato\" ou \"não consigo apagar\" tem uma explicação simples abaixo."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Um contato sumiu da lista\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A lista de Contatos nunca mostra contatos suprimidos. Confira em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.customers"
+          }
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Ver contatos suprimidos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " se é esse o caso — veja "
+        },
+        {
+          "type": "text",
+          "text": "suprimir ou excluir um contato",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "audiencia/contatos/suprimir-ou-excluir-um-contato"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para reverter."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo excluir um contato\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Contato com pelo menos um pedido não pode ser excluído — use "
+        },
+        {
+          "type": "text",
+          "text": "Suprimir contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no lugar."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Importei um CSV e alguns contatos ficaram de fora\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Só ficam de fora as linhas sem e-mail e sem telefone. Confira a tela de validação da importação — ela mostra o motivo e o número da linha de cada uma."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"O CSV acusou e-mails duplicados, e agora?\""
+    },
+    {
+      "type": "paragraph",
+      "content": "A duplicidade é só um aviso — a importação continua normalmente. Se dois contatos com o mesmo e-mail acabarem separados na sua base, isso não é resolvido automaticamente por essa tela."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Um contato \"Inativo\" some da segmentação?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Inativo é um rótulo calculado pelo comportamento do contato — diferente de Suprimido, ele continua contável e alcançável normalmente."
+            }
+          ]
+        },
+        {
+          "question": "Consigo exportar só um contato específico?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não — a exportação é sempre da base inteira ou de um segmento, enviada por e-mail. Não existe um botão de exportar os dados de um único contato."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

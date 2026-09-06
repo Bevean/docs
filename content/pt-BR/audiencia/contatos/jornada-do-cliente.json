@@ -1,0 +1,149 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona a jornada do cliente",
+  "subtitle": "A linha do tempo com tudo que um contato fez: navegação, compras e comunicações recebidas.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "jornada",
+    "linha do tempo",
+    "histórico do cliente"
+  ],
+  "related": [
+    "audiencia/contatos/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A jornada é a sequência de tudo que um contato fez — desde navegar pelo seu site até abrir uma comunicação — em uma linha do tempo visual."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na ficha do contato, botão "
+        },
+        {
+          "type": "text",
+          "text": "Ver jornada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam os contatos",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "audiencia/contatos/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para o resto da ficha."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como filtrar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Filtro"
+        },
+        {
+          "content": "Opções"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Origem"
+          },
+          {
+            "content": "Tudo, Navegação ou Comunicações."
+          }
+        ],
+        [
+          {
+            "content": "Período"
+          },
+          {
+            "content": "Hoje, ou os últimos 7, 15, 30, 60 ou 90 dias."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que aparece"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada evento vira um passo na jornada. Clique em um passo para ver os detalhes (canal, data, e o payload bruto do evento)."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Categoria"
+        },
+        {
+          "content": "Exemplos de evento"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Navegação e produto"
+          },
+          {
+            "content": "Página visualizada, Produto visualizado, Produto adicionado ao carrinho, Carrinho visualizado, Checkout iniciado, Busca realizada, Compra realizada."
+          }
+        ],
+        [
+          {
+            "content": "Comunicação"
+          },
+          {
+            "content": "Comunicação enviada, aberta, clicada, entregue, respondida, marcada como spam, ou com falha — por E-mail, WhatsApp Web, WhatsApp Oficial ou Instagram."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Vários envios seguidos pelo mesmo canal, em um intervalo curto, aparecem agrupados em um único passo — para a jornada não virar uma lista repetitiva de \"comunicação enviada\"."
+        }
+      ]
+    }
+  ]
+}

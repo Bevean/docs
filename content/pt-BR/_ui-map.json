@@ -138,5 +138,19 @@
       "Minha Conta"
     ],
     "href": "/settings/account"
+  },
+  "audience.rfv": {
+    "segments": [
+      "Audiência",
+      "Matriz RFV"
+    ],
+    "href": "/rfv"
+  },
+  "settings.metafields": {
+    "segments": [
+      "Configurações",
+      "Propriedades personalizadas"
+    ],
+    "href": "/settings/metafields"
   }
 }

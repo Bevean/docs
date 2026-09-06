@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Contatos",
+  "description": "A ficha de cada pessoa da sua base: dados, histórico de compras, jornada e responsáveis.",
+  "icon": "contact",
+  "articles": [
+    "visao-geral",
+    "adicionar-e-editar-um-contato",
+    "jornada-do-cliente",
+    "tags-e-propriedades-personalizadas",
+    "atribuir-um-responsavel",
+    "importar-e-exportar-contatos",
+    "suprimir-ou-excluir-um-contato",
+    "resolver-problemas"
+  ]
+}

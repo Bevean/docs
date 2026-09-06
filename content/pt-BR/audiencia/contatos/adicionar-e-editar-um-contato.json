@@ -1,0 +1,206 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Adicionar e editar um contato",
+  "subtitle": "Os campos do cadastro manual e como gerenciar mais de um endereço por contato.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "adicionar contato",
+    "editar contato",
+    "endereço",
+    "cadastro manual"
+  ],
+  "related": [
+    "audiencia/contatos/visao-geral",
+    "audiencia/contatos/importar-e-exportar-contatos"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é um contato novo na sua base, ou os dados de um contato existente atualizados."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.customers"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para criar, ou "
+        },
+        {
+          "type": "text",
+          "text": "Editar contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na ficha de um contato existente."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os campos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Observação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nome"
+          },
+          {
+            "content": "Obrigatório."
+          }
+        ],
+        [
+          {
+            "content": "E-mail"
+          },
+          {
+            "content": "Com status (Válido/Inválido) e opt-in (Inscrito/Desinscrito/Não inscrito)."
+          }
+        ],
+        [
+          {
+            "content": "Telefone"
+          },
+          {
+            "content": "Com status e opt-in próprios, iguais aos do e-mail."
+          }
+        ],
+        [
+          {
+            "content": "Data de aniversário"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": "Gênero"
+          },
+          {
+            "content": "Masculino, Feminino ou Outro."
+          }
+        ],
+        [
+          {
+            "content": "Documento"
+          },
+          {
+            "content": "CPF ou CNPJ."
+          }
+        ],
+        [
+          {
+            "content": "Lista"
+          },
+          {
+            "content": "Adiciona o contato a um segmento ou lista já existente."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Endereços"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um contato pode ter mais de um endereço. Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar endereço",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e digite o CEP — a Bevean preenche Endereço, Bairro, Cidade e Estado automaticamente, faltando só Número e Complemento."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Um endereço novo só é salvo quando você salva o contato inteiro (botão Salvar/Aplicar do formulário)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Um contato manual não vem de nenhuma integração"
+    },
+    {
+      "type": "paragraph",
+      "content": "Contatos criados por este formulário ficam marcados com origem \"manual\", diferente dos que chegam por integração, importação ou pelo atendimento."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "audiencia/contatos/importar-e-exportar-contatos",
+          "description": "Cadastre vários contatos de uma vez, por CSV."
+        },
+        {
+          "ref": "audiencia/contatos/tags-e-propriedades-personalizadas",
+          "description": "Adicione tags e campos personalizados ao contato."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

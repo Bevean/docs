@@ -1,0 +1,183 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar uma lista fixa",
+  "subtitle": "Um recorte de contatos que não muda sozinho: por condições congeladas ou por seleção manual.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "criar lista",
+    "lista fixa",
+    "seleção manual de contatos"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/visao-geral",
+    "audiencia/segmentos-e-listas/criar-um-segmento-dinamico"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é uma lista de contatos que não muda sozinha — ideal para uma campanha pontual com um critério que não vai se repetir."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.segments"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão "
+        },
+        {
+          "type": "text",
+          "text": "Criar segmento ou lista",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Criar lista fixa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Antes de começar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam segmentos e listas",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "audiencia/segmentos-e-listas/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Duas formas de montar a lista"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aba"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Consulta"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Monte condições como em um segmento dinâmico (veja "
+              },
+              {
+                "type": "text",
+                "text": "a lista completa",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "audiencia/segmentos-e-listas/criar-um-segmento-dinamico"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ") — só que o resultado fica congelado, não continua se atualizando."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Lista"
+          },
+          {
+            "content": "Marque os contatos manualmente, um a um, nas abas Todos / Selecionados / Não selecionados."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Na aba Consulta, uma vez salva, a lista de contatos fica congelada no momento da criação — ela não passa a incluir ou excluir gente sozinha depois, ao contrário de um segmento dinâmico."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Precisa cadastrar alguém que ainda não existe na sua base? Dá para criar um contato novo direto do construtor da lista, sem sair da tela."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Nome e dê o passo final"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Dê um nome à lista — a cor e o título da tag são sugeridos automaticamente — e clique em "
+        },
+        {
+          "type": "text",
+          "text": "Salvar lista",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

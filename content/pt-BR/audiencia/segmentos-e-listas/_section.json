@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Segmentos e Listas",
+  "description": "Agrupe contatos por comportamento ou escolha manualmente quem entra em uma campanha ou automação.",
+  "icon": "filter",
+  "articles": [
+    "visao-geral",
+    "criar-um-segmento-dinamico",
+    "criar-uma-lista-fixa",
+    "gerenciar-um-segmento-ou-lista",
+    "resolver-problemas"
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Gerenciar um segmento ou lista",
+  "subtitle": "Ver quem está dentro, exportar, editar uma lista fixa e acompanhar a evolução ao longo do tempo.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "editar segmento",
+    "exportar segmento",
+    "excluir segmento",
+    "evolução do segmento"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+    "audiencia/segmentos-e-listas/criar-uma-lista-fixa"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Depois de criado, você pode ver quem está dentro, exportar a lista de contatos, editar quem faz parte (só nas listas fixas) ou excluir."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ver quem está no segmento"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na aba "
+        },
+        {
+          "type": "text",
+          "text": "Contatos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " do segmento, veja a tabela de todos que fazem parte — clique em qualquer linha para abrir um resumo rápido do contato sem sair da tela."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Exportar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Menu "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Exportar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Roda em segundo plano e chega por e-mail, igual à exportação de Contatos. Não disponível para segmentos do tipo RFV."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Editar quem está em uma lista fixa"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Reabra a lista para editar e vá na aba "
+        },
+        {
+          "type": "text",
+          "text": "Lista",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — lá dá para marcar ou desmarcar contatos nas abas Todos / Selecionados / Não selecionados."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Em um segmento dinâmico não existe essa edição manual: quem entra e quem sai é sempre decidido pelas condições, nunca por você escolher um contato específico."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Acompanhar o histórico"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A aba "
+        },
+        {
+          "type": "text",
+          "text": "Evolução",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (disponível em segmentos e RFV, não em listas fixas) mostra um gráfico de quantos contatos entraram e saíram ao longo do tempo, com uma tabela de cada atualização."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "As abas "
+        },
+        {
+          "type": "text",
+          "text": "Campanhas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Automações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostram o que já está usando esse segmento ou lista como público — com link direto para cada um."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Excluir"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Menu "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Excluir",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com confirmação. Segmentos e listas vinculados a uma automação continuam existindo até você excluir — a Bevean não bloqueia a exclusão, mas confira as abas Campanhas/Automações antes para não deixar nada quebrado."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "audiencia/segmentos-e-listas/resolver-problemas",
+          "description": "A contagem não bate, ou não dá para remover um contato específico."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

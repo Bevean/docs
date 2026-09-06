@@ -3,6 +3,10 @@
   "title": "Audiência",
   "description": "Contatos, segmentos, listas e a leitura de quem é a sua base.",
   "icon": "users",
-  "sections": [],
+  "sections": [
+    "contatos",
+    "segmentos-e-listas",
+    "matriz-rfv"
+  ],
   "articles": []
 }

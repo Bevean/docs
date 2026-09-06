@@ -1,0 +1,92 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "A contagem não bate, ou não consigo editar quem está dentro",
+  "subtitle": "Por que a atualização de um segmento não é instantânea, e por que não dá para remover um contato manualmente.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "segmento não atualiza",
+    "remover contato do segmento"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+    "audiencia/segmentos-e-listas/criar-uma-lista-fixa"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"A contagem do meu segmento não mudou ainda\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Um segmento dinâmico não atualiza em tempo real — a lista de contatos é recalculada periodicamente, não a cada mudança de comportamento. Se você acabou de mudar uma condição, a Bevean mostra uma tela de processamento até terminar; depois disso, uma nova atualização leva um tempo para refletir contatos que mudaram de comportamento."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo remover um contato específico de um segmento\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em um segmento dinâmico isso é esperado — quem está dentro é decidido inteiramente pelas condições, nunca por escolha manual de um contato. Se você precisa controlar quem entra e sai manualmente, "
+        },
+        {
+          "type": "text",
+          "text": "crie uma lista fixa",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "audiencia/segmentos-e-listas/criar-uma-lista-fixa"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no lugar."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Apaguei um segmento e minha automação parou\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Confira a aba Automações do segmento antes de excluir — ela mostra tudo que usa aquele segmento como gatilho ou público. A Bevean não bloqueia a exclusão de um segmento em uso."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Um segmento RFV pode ser editado?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não — segmentos RFV são gerados automaticamente pela Matriz RFV e não têm opção de editar nem excluir."
+            }
+          ]
+        },
+        {
+          "question": "Dá para combinar \"E\" e \"OU\" na mesma condição?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Sim — um grupo de condições combinadas com OU pode ficar dentro de uma condição maior combinada com E."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

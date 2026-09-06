@@ -1,0 +1,335 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam os contatos",
+  "subtitle": "A ficha de cada pessoa da sua base, de onde ela vem e o que cada seção da tela mostra.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "contatos",
+    "clientes",
+    "leads",
+    "base de contatos"
+  ],
+  "related": [
+    "audiencia/contatos/adicionar-e-editar-um-contato",
+    "audiencia/segmentos-e-listas/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Todo contato é uma pessoa da sua base — chegou sozinha (integração, importação, ou conversa no atendimento) ou foi cadastrada manualmente."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.customers"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a lista mostra"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Coluna"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nome"
+          },
+          {
+            "content": "Abre a ficha do contato."
+          }
+        ],
+        [
+          {
+            "content": "E-mail / Telefone"
+          },
+          {
+            "content": "Dados de contato."
+          }
+        ],
+        [
+          {
+            "content": "Última compra"
+          },
+          {
+            "content": "Data relativa do pedido mais recente."
+          }
+        ],
+        [
+          {
+            "content": "Pedidos"
+          },
+          {
+            "content": "Quantidade de pedidos do contato."
+          }
+        ],
+        [
+          {
+            "content": "Valor total"
+          },
+          {
+            "content": "Soma de todos os pedidos."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "No topo da lista, 4 números resumem os últimos 30 dias: Total de contatos, Novos contatos, Descadastramentos e Crescimento líquido."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a ficha do contato mostra"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Seção"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Informações"
+          },
+          {
+            "content": "Nome, e-mail, telefone, aniversário, gênero, documento, endereços e a origem do cadastro."
+          }
+        ],
+        [
+          {
+            "content": "Propriedades personalizadas"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Campos que você mesmo define — veja "
+              },
+              {
+                "type": "text",
+                "text": "o artigo dedicado",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "audiencia/contatos/tags-e-propriedades-personalizadas"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Linha do tempo"
+          },
+          {
+            "content": "Anotações manuais e entradas/saídas de segmentos."
+          }
+        ],
+        [
+          {
+            "content": "Cashback"
+          },
+          {
+            "content": "Saldo de créditos, se o contato tiver."
+          }
+        ],
+        [
+          {
+            "content": "Pesquisas"
+          },
+          {
+            "content": "Respostas de pesquisa de satisfação, se houver."
+          }
+        ],
+        [
+          {
+            "content": "Carteira de Clientes"
+          },
+          {
+            "content": "Vendedor e loja preferidos, calculados a partir do histórico de pedidos."
+          }
+        ],
+        [
+          {
+            "content": "Proprietários do atendimento"
+          },
+          {
+            "content": "Quem da sua equipe é responsável por esse contato."
+          }
+        ],
+        [
+          {
+            "content": "Segmentos e listas"
+          },
+          {
+            "content": "Em quais segmentos e listas o contato está — clique para abrir cada um."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Veja "
+            },
+            {
+              "type": "text",
+              "text": "propriedades personalizadas e tags",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "audiencia/contatos/tags-e-propriedades-personalizadas"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "atribuir um responsável",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "audiencia/contatos/atribuir-um-responsavel"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " para o passo a passo dessas duas últimas seções."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Estados de um contato"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Estado"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Ativo"
+          },
+          {
+            "content": "Aparece normalmente na lista, em segmentos e pode receber comunicações."
+          }
+        ],
+        [
+          {
+            "content": "Inativo"
+          },
+          {
+            "content": "Rótulo calculado a partir do comportamento do contato — não impede envios nem some da lista."
+          }
+        ],
+        [
+          {
+            "content": "Suprimido"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Saiu da segmentação, dos disparos e da contagem da base, mas o histórico continua existindo. Veja "
+              },
+              {
+                "type": "text",
+                "text": "como suprimir ou excluir",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "audiencia/contatos/suprimir-ou-excluir-um-contato"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "audiencia/contatos/adicionar-e-editar-um-contato",
+          "description": "Cadastre um contato manualmente."
+        },
+        {
+          "ref": "audiencia/contatos/suprimir-ou-excluir-um-contato",
+          "description": "Remova um contato da sua base, com ou sem apagar o histórico."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

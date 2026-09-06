@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Atribuir um responsável por um contato",
+  "subtitle": "A diferença entre a Carteira de Clientes (calculada) e os Proprietários do atendimento (atribuídos por você).",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "proprietário",
+    "responsável",
+    "carteira de clientes",
+    "vendedor preferido"
+  ],
+  "related": [
+    "audiencia/contatos/visao-geral",
+    "meu-negocio/usuarios-e-permissoes/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A ficha do contato mostra dois tipos de \"dono\" diferentes: um calculado automaticamente pelo histórico de pedidos, e outro que você atribui manualmente."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Carteira de Clientes (automático)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mostra Vendedor preferido, Loja preferida, Último vendedor e Última loja — calculados a partir dos pedidos do contato. É só leitura: não existe um botão para mudar esses valores diretamente aqui."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Proprietários do atendimento (manual)"
+    },
+    {
+      "type": "paragraph",
+      "content": "É quem da sua equipe fica responsável por esse contato."
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Na ficha do contato, card Proprietários do atendimento, clique em Adicionar"
+        },
+        {
+          "title": "Selecione um usuário na lista"
+        },
+        {
+          "title": "Confirme"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um contato pode ter mais de um proprietário. Marque um deles como "
+        },
+        {
+          "type": "text",
+          "text": "Favorito",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — só um por vez pode ser favorito; marcar outro substitui o anterior. Para tirar alguém da lista, clique em "
+        },
+        {
+          "type": "text",
+          "text": "Remover",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/usuarios-e-permissoes/visao-geral",
+          "description": "Como funcionam usuários e permissões."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

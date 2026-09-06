@@ -1,0 +1,231 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Importar e exportar contatos",
+  "subtitle": "O passo a passo do CSV de importação, o descadastro em massa e a exportação da sua base por e-mail.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "importar contatos",
+    "exportar contatos",
+    "csv",
+    "descadastro em massa"
+  ],
+  "related": [
+    "audiencia/contatos/visao-geral",
+    "audiencia/contatos/suprimir-ou-excluir-um-contato"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Importar traz vários contatos de uma vez por CSV. Exportar manda a sua base (ou um segmento) para o seu e-mail."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.customers"
+          }
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Importar contatos"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Nova importação",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Baixe o modelo CSV se ainda não tiver um arquivo pronto."
+            }
+          ]
+        },
+        {
+          "title": "Envie o arquivo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Arraste um .csv (até 10 MB) ou cole uma tabela copiada do Excel/Planilhas."
+            }
+          ]
+        },
+        {
+          "title": "Confira a validação",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean mostra quantas linhas são válidas e quantas têm problema (sem e-mail nem telefone, e-mail inválido, e-mail duplicado), com exemplos das primeiras linhas inválidas."
+            }
+          ]
+        },
+        {
+          "title": "Escolha uma lista (opcional)",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Adicione todos os contatos importados a um segmento ou lista existente."
+            }
+          ]
+        },
+        {
+          "title": "Clique em Importar"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Só ficam de fora as linhas sem e-mail e sem telefone. Uma data ou um campo mal formatado não derruba a linha inteira — o resto do cadastro é importado mesmo assim."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A Bevean avisa quantos e-mails duplicados encontrou no arquivo, mas não impede a importação por causa disso — o mesmo mecanismo que já resolve contatos duplicados no restante do sistema também processa essas linhas."
+        }
+      ],
+      "title": "Duplicidade não é bloqueada na importação"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Acompanhe importações passadas em "
+        },
+        {
+          "type": "text",
+          "text": "Histórico de importações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Importar descadastros"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um fluxo separado, em "
+        },
+        {
+          "type": "text",
+          "text": "Importar descadastros",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": um CSV com colunas de e-mail e/ou telefone que descadastra esses contatos de comunicações por e-mail e SMS. Não confundir com "
+        },
+        {
+          "type": "text",
+          "text": "suprimir um contato",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "audiencia/contatos/suprimir-ou-excluir-um-contato"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — descadastrar só muda o opt-in, o contato continua ativo na base."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Exportar contatos"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Exportar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e confirme. O processo roda em segundo plano e o arquivo chega como anexo no seu e-mail — não há pré-visualização nem escolha de colunas nessa tela."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "audiencia/contatos/resolver-problemas",
+          "description": "Contatos que não aparecem, ou ficaram de fora da importação."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

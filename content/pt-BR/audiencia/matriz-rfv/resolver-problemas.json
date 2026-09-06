@@ -1,0 +1,61 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "A Matriz RFV não aparece, ou ainda está processando",
+  "subtitle": "O que falta para a matriz ser gerada, e por que os grupos não podem ser editados.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "matriz não aparece",
+    "rfv processando"
+  ],
+  "related": [
+    "audiencia/matriz-rfv/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"A Matriz RFV não aparece para a minha loja\""
+    },
+    {
+      "type": "paragraph",
+      "content": "A matriz exige um histórico mínimo de pedidos para ser gerada. Se a sua loja ainda não atingiu esse mínimo, a tela mostra uma lista do que falta (quantidade de pedidos e período de histórico) — acompanhe por ali, os números são calculados em tempo real para a sua conta."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"A matriz está processando há um tempo\""
+    },
+    {
+      "type": "paragraph",
+      "content": "A primeira geração pode levar alguns minutos, dependendo do tamanho da sua base de pedidos. Se continuar assim por muito mais tempo que isso, fale com o suporte."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo editar ou excluir um grupo da matriz\""
+    },
+    {
+      "type": "paragraph",
+      "content": "É esperado — grupos da Matriz RFV são gerados automaticamente e não têm opção de edição nem exclusão, ao contrário de um segmento criado por você."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Dá para eu mesmo definir o que é \"recente\" ou \"frequente\"?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. As faixas são calculadas automaticamente a partir do histórico de pedidos da sua própria conta, sem tela de configuração manual."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

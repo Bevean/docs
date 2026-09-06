@@ -1,0 +1,141 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam segmentos e listas",
+  "subtitle": "Segmento dinâmico, lista fixa e RFV: o que muda entre os 3, e onde cada um é usado depois.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "segmentos",
+    "listas",
+    "audiência",
+    "público de campanha"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+    "audiencia/segmentos-e-listas/criar-uma-lista-fixa"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Segmentos e listas agrupam contatos para você mandar uma campanha, disparar uma automação ou simplesmente entender um pedaço da sua base."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.segments"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os 3 tipos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Segmento (dinâmico)"
+          },
+          {
+            "content": "Um filtro. Contatos entram e saem sozinhos, conforme passam a bater (ou deixam de bater) com as condições."
+          }
+        ],
+        [
+          {
+            "content": "Lista (fixa)"
+          },
+          {
+            "content": "Um recorte fixo. Você escolhe as condições (que ficam congeladas no momento da criação) ou seleciona os contatos manualmente — não muda sozinha depois."
+          }
+        ],
+        [
+          {
+            "content": "RFV"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Gerada automaticamente pela "
+              },
+              {
+                "type": "text",
+                "text": "Matriz RFV",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "audiencia/matriz-rfv/visao-geral"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — você só visualiza, sem criar ou editar."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Onde um segmento é usado depois"
+    },
+    {
+      "type": "paragraph",
+      "content": "Além de servir para consulta, um segmento dinâmico pode ser o gatilho de uma automação — \"Quando entra no segmento\" ou \"Quando sai do segmento\" — e tanto segmentos quanto listas podem ser escolhidos como público de uma campanha. É a diferença prática entre os dois: só o segmento dinâmico dispara esse tipo de evento de entrada/saída."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Estado e atualização"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um segmento ou lista pode estar Ativo ou Inativo (chave na tela de edição). A contagem de contatos de um segmento dinâmico não é instantânea: ao salvar, ele entra em processamento (\"Compilando filtros\" → \"Buscando contatos\" → \"Gerando segmento\") e, depois de pronto, é recalculado periodicamente — não a cada mudança de comportamento de um contato, em tempo real."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+          "description": "Monte um filtro que se atualiza sozinho."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/criar-uma-lista-fixa",
+          "description": "Escolha um recorte fixo de contatos."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

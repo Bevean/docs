@@ -1,0 +1,280 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Suprimir ou excluir um contato",
+  "subtitle": "A diferença entre suprimir (reversível) e excluir (definitivo), individualmente ou em massa.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "suprimir contato",
+    "excluir contato",
+    "limpeza de base",
+    "supressão em massa"
+  ],
+  "related": [
+    "audiencia/contatos/visao-geral",
+    "audiencia/contatos/importar-e-exportar-contatos"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A Bevean tem dois jeitos de tirar um contato de circulação — um reversível, outro não. Escolha pelo que você realmente precisa."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Ação"
+        },
+        {
+          "content": "O que acontece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Suprimir"
+          },
+          {
+            "content": "O contato sai da segmentação, dos disparos e da contagem da base. O histórico continua inteiro, e a ação é reversível a qualquer momento."
+          }
+        ],
+        [
+          {
+            "content": "Excluir"
+          },
+          {
+            "content": "Apaga o contato de verdade. Não pode ser desfeito."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se o contato tem pelo menos um pedido, a Bevean recusa a exclusão e recomenda suprimir no lugar — é a forma de preservar o histórico de vendas."
+        }
+      ],
+      "title": "Contato com pedido não pode ser excluído"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Suprimir ou excluir um contato"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "na ficha do contato, "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao suprimir, a Bevean cancela os disparos já agendados para esse contato — eles não são reenviados quando você reverte. Reverter só volta a torná-lo elegível para novos envios. Depois de suprimido, o mesmo menu mostra "
+        },
+        {
+          "type": "text",
+          "text": "Dessuprimir contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e a ficha ganha um selo \"Suprimido\"."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Suprimir vários contatos de uma vez"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.customers"
+          }
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Ver contatos suprimidos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " → "
+        },
+        {
+          "type": "text",
+          "text": "Suprimir contatos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Monte o filtro de quem deve ser suprimido"
+        },
+        {
+          "title": "Decida sobre contatos recentes",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A opção "
+                },
+                {
+                  "type": "text",
+                  "text": "Suprimir só os inativos",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " vem marcada por padrão e protege quem comprou ou clicou em algo nos últimos 180 dias."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Clique em Calcular audiência",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean mostra quantos contatos serão suprimidos e quantos estão protegidos por atividade recente, antes de qualquer coisa acontecer."
+            }
+          ]
+        },
+        {
+          "title": "Confirme a supressão em massa"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A supressão em massa roda em segundo plano — acompanhe o progresso em "
+        },
+        {
+          "type": "text",
+          "text": "Histórico de limpeza",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". A tela de contatos suprimidos também tem um botão de "
+        },
+        {
+          "type": "text",
+          "text": "Dessuprimir",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " por linha, para reverter individualmente."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Depois de suprimido, o contato não volta a aparecer sozinho mesmo que a integração ou a loja sincronize esse cliente de novo — reverter é sempre manual."
+        }
+      ]
+    }
+  ]
+}
