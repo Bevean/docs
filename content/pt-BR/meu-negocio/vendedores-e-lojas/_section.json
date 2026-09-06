@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Vendedores e Lojas",
+  "description": "Cadastre quem vende e onde vende, para aparecer na ficha de cada cliente.",
+  "icon": "store",
+  "articles": [
+    "visao-geral",
+    "cadastrar-um-vendedor",
+    "cadastrar-uma-loja",
+    "resolver-problemas"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Cadastrar uma loja",
+  "subtitle": "Os campos do cadastro, o preenchimento automático de endereço por CEP, e a diferença entre desativar e excluir.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "cadastrar loja",
+    "nova loja",
+    "editar loja"
+  ],
+  "related": [
+    "meu-negocio/vendedores-e-lojas/visao-geral",
+    "meu-negocio/vendedores-e-lojas/cadastrar-um-vendedor"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é uma loja disponível para vincular a vendedores e, futuramente, aparecer na ficha de clientes com histórico de compra ligado a ela."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.stores"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar loja",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para criar, ou o ícone de editar na lista."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os campos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Observação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nome"
+          },
+          {
+            "content": "Obrigatório."
+          }
+        ],
+        [
+          {
+            "content": "Tipo"
+          },
+          {
+            "content": "Obrigatório — Online, Física, Marketplace, Híbrida ou Outra."
+          }
+        ],
+        [
+          {
+            "content": "Status"
+          },
+          {
+            "content": "Ativa ou Inativa."
+          }
+        ],
+        [
+          {
+            "content": "Código"
+          },
+          {
+            "content": "Opcional."
+          }
+        ],
+        [
+          {
+            "content": "E-mail / Telefone"
+          },
+          {
+            "content": "Opcionais."
+          }
+        ],
+        [
+          {
+            "content": "Endereço"
+          },
+          {
+            "content": "Opcional — digite o CEP para a Bevean preencher Logradouro, Bairro, Cidade e UF automaticamente."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Desativar ou excluir"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mude o Status para Inativa para tirar a loja de circulação sem apagar o cadastro, ou clique no ícone de lixeira na lista para excluir de verdade."
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Não há aviso sobre pedidos, vendedores ou clientes já vinculados a essa loja antes de confirmar a exclusão."
+        }
+      ],
+      "title": "Excluir não pode ser desfeito"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/vendedores-e-lojas/cadastrar-um-vendedor",
+          "description": "Cadastre um vendedor."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

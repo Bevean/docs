@@ -4,7 +4,8 @@
   "description": "Conta, usuários, permissões, vendedores, lojas e faturas.",
   "icon": "building-2",
   "sections": [
-    "usuarios-e-permissoes"
+    "usuarios-e-permissoes",
+    "vendedores-e-lojas"
   ],
   "articles": []
 }

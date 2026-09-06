@@ -19,6 +19,7 @@ import {
   QrCode,
   Settings,
   Smartphone,
+  Store,
   Users,
   Workflow,
   Wrench,
@@ -51,6 +52,7 @@ export const CONTENT_ICONS: Record<string, LucideIcon> = {
   'qr-code': QrCode,
   settings: Settings,
   smartphone: Smartphone,
+  store: Store,
   users: Users,
   workflow: Workflow,
   wrench: Wrench

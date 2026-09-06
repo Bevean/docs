@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Vendedor ou loja não aparece no cliente",
+  "subtitle": "Por que o cadastro sozinho não conecta vendedor/loja a um cliente, e onde não fica o desempenho de vendas.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "vendedor não aparece",
+    "loja não aparece",
+    "desempenho de vendas"
+  ],
+  "related": [
+    "meu-negocio/vendedores-e-lojas/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Cadastrei um vendedor (ou loja), mas ele não aparece na ficha de nenhum cliente\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Isso é esperado. O cadastro por si só não conecta o vendedor ou a loja a clientes ou pedidos — quem faz essa ligação é a integração ou a importação que traz o pedido. Se o pedido não veio com essa informação, o vendedor/loja continua existindo, mas não aparece na Carteira de Clientes de ninguém."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Onde vejo o desempenho de vendas de um vendedor?\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Essa tela não tem relatório de vendas por vendedor. A aba \"Top sellers\" que aparece em Segmentos mostra os produtos mais vendidos — não o desempenho de uma pessoa."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Um vendedor precisa ter login no painel?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. \"Usuário vinculado\" é opcional — dá para cadastrar um vendedor sem nenhuma conta de acesso à Bevean."
+            }
+          ]
+        },
+        {
+          "question": "Uma loja cadastrada aqui vira automaticamente uma integração conectada?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não — são cadastros independentes. Uma loja pode ser criada manualmente aqui ou aparecer sincronizada de uma integração, sem distinção visual entre as duas na lista."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

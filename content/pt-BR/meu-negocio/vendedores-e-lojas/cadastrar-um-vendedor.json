@@ -1,0 +1,154 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Cadastrar um vendedor",
+  "subtitle": "Os campos do cadastro, e a diferença entre desativar e excluir.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "cadastrar vendedor",
+    "novo vendedor",
+    "editar vendedor"
+  ],
+  "related": [
+    "meu-negocio/vendedores-e-lojas/visao-geral",
+    "meu-negocio/vendedores-e-lojas/cadastrar-uma-loja"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é um vendedor disponível para vincular a uma loja e, futuramente, aparecer na ficha de clientes com histórico de compra ligado a ele."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.sellers"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para criar, ou o ícone de editar na lista."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os campos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Observação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nome"
+          },
+          {
+            "content": "Obrigatório."
+          }
+        ],
+        [
+          {
+            "content": "E-mail"
+          },
+          {
+            "content": "Opcional."
+          }
+        ],
+        [
+          {
+            "content": "Telefone"
+          },
+          {
+            "content": "Opcional."
+          }
+        ],
+        [
+          {
+            "content": "Status"
+          },
+          {
+            "content": "Ativo ou Inativo."
+          }
+        ],
+        [
+          {
+            "content": "Loja"
+          },
+          {
+            "content": "Opcional — vincule este vendedor a uma loja já cadastrada."
+          }
+        ],
+        [
+          {
+            "content": "Usuário vinculado"
+          },
+          {
+            "content": "Opcional — associe a um usuário da sua equipe, se ele também tiver login no painel."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Desativar ou excluir"
+    },
+    {
+      "type": "paragraph",
+      "content": "Mude o Status para Inativo para tirar o vendedor de circulação sem apagar o cadastro, ou clique no ícone de lixeira na lista para excluir de verdade."
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Não há aviso sobre pedidos ou clientes já vinculados a esse vendedor antes de confirmar a exclusão."
+        }
+      ],
+      "title": "Excluir não pode ser desfeito"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/vendedores-e-lojas/cadastrar-uma-loja",
+          "description": "Cadastre uma loja."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

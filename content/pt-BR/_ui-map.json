@@ -152,5 +152,19 @@
       "Propriedades personalizadas"
     ],
     "href": "/settings/metafields"
+  },
+  "settings.sellers": {
+    "segments": [
+      "Configurações",
+      "Vendedores"
+    ],
+    "href": "/settings/sellers"
+  },
+  "settings.stores": {
+    "segments": [
+      "Configurações",
+      "Lojas"
+    ],
+    "href": "/settings/stores"
   }
 }

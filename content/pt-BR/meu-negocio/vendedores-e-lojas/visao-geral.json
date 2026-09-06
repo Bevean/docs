@@ -1,0 +1,102 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam vendedores e lojas",
+  "subtitle": "Dois cadastros independentes que aparecem na ficha do cliente e no pedido, sempre por vínculo automático.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "vendedores",
+    "lojas",
+    "carteira de clientes"
+  ],
+  "related": [
+    "meu-negocio/vendedores-e-lojas/cadastrar-um-vendedor",
+    "meu-negocio/vendedores-e-lojas/cadastrar-uma-loja"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Vendedores e lojas são dois cadastros independentes do resto do sistema, que aparecem depois na ficha de cada cliente e nos pedidos."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Vendedor"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um cadastro de pessoa que vende — não é a mesma coisa que um usuário do painel. Um vendedor pode, opcionalmente, ser vinculado a um usuário da sua equipe e a uma loja, mas nenhum dos dois é obrigatório."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Loja"
+    },
+    {
+      "type": "paragraph",
+      "content": "Representa uma loja física ou um canal de venda — não só o físico. Os tipos disponíveis são Online, Física, Marketplace, Híbrida e Outra."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Onde eles aparecem depois"
+    },
+    {
+      "type": "paragraph",
+      "content": "Nem vendedor nem loja são vinculados manualmente a um pedido ou a um cliente por essas telas. Essa ligação é sempre automática:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Onde aparece"
+        },
+        {
+          "content": "Como"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Carteira de Clientes (na ficha do contato)"
+          },
+          {
+            "content": "\"Vendedor preferido\", \"Loja preferida\", \"Último vendedor\" e \"Última loja\" — calculados a partir do histórico de pedidos do cliente."
+          }
+        ],
+        [
+          {
+            "content": "Pedido"
+          },
+          {
+            "content": "Um card de leitura mostra o vendedor e a loja do pedido, quando a integração ou a importação trouxer essa informação."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A ligação com clientes e pedidos vem do histórico de vendas, não do cadastro em si. Criar um vendedor ou uma loja aqui só disponibiliza o registro — quem o conecta a um pedido é a integração ou a importação que trouxe aquele pedido."
+        }
+      ],
+      "title": "Cadastrar um vendedor não faz ele aparecer sozinho num cliente"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "meu-negocio/vendedores-e-lojas/cadastrar-um-vendedor",
+          "description": "Cadastre um vendedor."
+        },
+        {
+          "ref": "meu-negocio/vendedores-e-lojas/cadastrar-uma-loja",
+          "description": "Cadastre uma loja."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}
