@@ -682,6 +682,26 @@ lista-vs-varargs não dá erro, só renderiza errado, e passa batido a menos que
 alguém abra a página e leia com atenção a pontuação (frases coladas sem
 separação são o sintoma).
 
+**O Atendimento não mora no mesmo aplicativo que o resto do produto — é outra
+SPA, outro deploy, outro roteador.** Tudo documentado até aqui vive em
+`admin-front/apps/crm` (Next.js). O helpdesk inteiro (caixa de entrada,
+pipeline, times, distribuição) vive em `admin-front/apps/crm-react` (SPA em
+Vite/TanStack Router), servido por um bucket próprio e alcançado por uma
+navegação de página inteira a partir do link "Atendimento" — não é troca de
+rota client-side, e a sessão passa por um cookie same-origin, não por token
+compartilhado explícito. Isso muda a busca: para qualquer funcionalidade nova
+do atendimento, procure primeiro em `apps/crm-react/src/features/`, não em
+`apps/crm/src/modules/` — o `modules/chat` de lá é hoje só um stub que outros
+módulos ainda importam, com um comentário dizendo isso no próprio código.
+
+**A distinção "legado vs. atual" às vezes cruza a fronteira entre dois apps
+inteiros, não só entre pastas do mesmo app.** Pipeline e distribuição de
+conversas têm implementação COMPLETA e funcional tanto em `apps/crm` (Next.js,
+antiga) quanto em `apps/crm-react`+`apps/helpdesk` (atual) — as duas leem/
+escrevem tabelas parecidas, mas só a segunda tem link de menu. A pergunta
+"isso é o motor atual?" não se resolve olhando um único app: confirme sempre
+qual frontend a tela que o usuário realmente abre está chamando.
+
 ## Por que não há prints
 
 Decisão do MVP: **nenhum artigo leva captura de tela.** A regra não tem exceção,
