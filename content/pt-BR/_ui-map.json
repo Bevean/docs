@@ -6,6 +6,13 @@
     ],
     "href": "/content/forms"
   },
+  "tools.surveys": {
+    "segments": [
+      "Ferramentas",
+      "Pesquisas"
+    ],
+    "href": "/surveys"
+  },
   "settings.integrations": {
     "segments": [
       "Integrações"

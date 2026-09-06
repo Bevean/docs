@@ -1,0 +1,251 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Analisar as respostas de uma pesquisa",
+  "subtitle": "As métricas de NPS e CSAT, as respostas individuais, a exportação, e como usá-las em segmentos e automações.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "nps",
+    "csat",
+    "promotor detrator",
+    "exportar respostas"
+  ],
+  "related": [
+    "ferramentas/pesquisas/publicar-e-versionar",
+    "audiencia/segmentos-e-listas/criar-um-segmento-dinamico"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A própria pesquisa tem uma aba de resultados — com métricas agregadas e, dependendo da permissão, as respostas de cada pessoa."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "aba "
+        },
+        {
+          "type": "text",
+          "text": "Resultados",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", dentro da pesquisa."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Visão geral"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "4 números: Respostas, Identificadas, Não verificadas, Anônimas."
+        },
+        {
+          "content": "Um cartão por pergunta de NPS/CSAT, com a pontuação e a divisão em Promotores, Neutros e Detratores."
+        },
+        {
+          "content": "Uma barra de distribuição por pergunta de escolha, sim/não, estrelas ou escala."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como a pontuação é calculada"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Métrica"
+        },
+        {
+          "content": "Como classifica"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "NPS"
+          },
+          {
+            "content": "Nota 9-10 = Promotor, 7-8 = Neutro, 0-6 = Detrator. Pontuação = % de promotores − % de detratores (vai de −100 a 100)."
+          }
+        ],
+        [
+          {
+            "content": "CSAT"
+          },
+          {
+            "content": "Os 2 pontos mais altos da escala = Promotor, o 3º = Neutro, o resto = Detrator. Pontuação = % de promotores."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Respostas individuais"
+    },
+    {
+      "type": "paragraph",
+      "content": "Uma tabela lista cada resposta, com a data e um selo de vínculo:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Selo"
+        },
+        {
+          "content": "Significado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Atualizado"
+          },
+          {
+            "content": "A resposta mudou um campo do cadastro do contato."
+          }
+        ],
+        [
+          {
+            "content": "Não identificado"
+          },
+          {
+            "content": "Não deu para saber quem respondeu."
+          }
+        ],
+        [
+          {
+            "content": "Não verificado"
+          },
+          {
+            "content": "O contato foi encontrado pelo e-mail/telefone informado na resposta, mas sem confirmação — típico de link público."
+          }
+        ],
+        [
+          {
+            "content": "Tipo incompatível"
+          },
+          {
+            "content": "A resposta não bateu com o tipo esperado do campo."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na ficha do contato, o card "
+        },
+        {
+          "type": "text",
+          "text": "Pesquisas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra as respostas dele, incluindo o \"de → para\" de qualquer campo atualizado."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Exportar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Botão "
+        },
+        {
+          "type": "text",
+          "text": "Exportar CSV",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com uma coluna por pergunta."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Ver as métricas agregadas exige uma permissão; ver as respostas individuais e exportar exige outra, separada. Sem a segunda, aparece só \"Você tem acesso às métricas, mas não às respostas individuais\", e o botão de exportar some."
+        }
+      ],
+      "title": "Duas permissões diferentes"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Usar as respostas em segmentos e automações"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Toda pesquisa publicada gera um grupo de condições \"Baseado em pesquisa\" em "
+        },
+        {
+          "type": "text",
+          "text": "criar um segmento dinâmico",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "audiencia/segmentos-e-listas/criar-um-segmento-dinamico"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (Respondeu, Faixa de satisfação, Nota, Respondeu em). Também existe o gatilho \"Pesquisa respondida\" em automações, para reagir na hora a uma resposta específica — segmento é melhor para alcançar \"todo mundo que já foi detrator alguma vez\"; o gatilho reage só à resposta que acabou de chegar."
+        }
+      ]
+    }
+  ]
+}

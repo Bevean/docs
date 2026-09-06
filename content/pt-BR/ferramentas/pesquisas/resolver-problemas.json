@@ -1,0 +1,72 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "NPS travado em -100, ou não vejo as respostas",
+  "subtitle": "Escala incompleta zerando o NPS, a permissão separada para respostas individuais, e o link da pesquisa sem efeito.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "nps travado",
+    "não vejo respostas",
+    "link da pesquisa não funciona"
+  ],
+  "related": [
+    "ferramentas/pesquisas/analisar-respostas",
+    "ferramentas/pesquisas/escolher-como-distribuir"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Meu NPS está travado em -100\""
+    },
+    {
+      "type": "paragraph",
+      "content": "A pergunta de NPS não está com a escala completa de 0 a 10 — com uma escala reduzida, toda resposta conta como detratora. Publicar uma pesquisa assim nem é permitido; se isso já aconteceu numa versão antiga, edite e publique uma nova versão com a escala correta."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não vejo as respostas de cada pessoa, só os números gerais\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Ver métricas e ver respostas individuais são duas permissões diferentes. Fale com quem administra sua conta para liberar a permissão de respostas individuais."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Publiquei uma nova versão e os resultados zeraram\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Troque o seletor de versão para \"Todas as versões\" — por padrão, uma versão nova mostra separado das anteriores, mas o histórico continua lá."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Coloquei o link da pesquisa na mensagem e não aconteceu nada\""
+    },
+    {
+      "type": "paragraph",
+      "content": "A variável do link só funciona se uma pesquisa publicada estiver de fato anexada naquele passo de envio — publicar o fluxo é bloqueado com um aviso claro se isso não estiver feito."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Qual a diferença entre \"anônima\" e \"não verificado\"?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Anônima é uma pesquisa configurada para nunca vincular ninguém — nada aparece na ficha de nenhum contato. \"Não verificado\" é uma resposta de uma pesquisa com link público, onde a pessoa informou e-mail ou telefone, mas a Bevean não tem como confirmar que é ela mesma."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

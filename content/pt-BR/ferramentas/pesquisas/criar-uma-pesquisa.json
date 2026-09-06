@@ -1,0 +1,182 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar uma pesquisa",
+  "subtitle": "Os 3 modelos de partida, os tipos de pergunta disponíveis e como uma resposta atualiza o cadastro do contato.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "criar pesquisa",
+    "nps",
+    "csat",
+    "tipos de pergunta",
+    "enriquecer contato"
+  ],
+  "related": [
+    "ferramentas/pesquisas/visao-geral",
+    "ferramentas/pesquisas/personalizar-aparencia-e-confirmacao"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O resultado é uma pesquisa em rascunho, com as perguntas que você escolher."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.surveys"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — botão de criar."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Comece de um modelo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Modelo"
+        },
+        {
+          "content": "O que já vem pronto"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Começar do zero"
+          },
+          {
+            "content": "Um formulário vazio, só com título e confirmação."
+          }
+        ],
+        [
+          {
+            "content": "Satisfação pós-compra"
+          },
+          {
+            "content": "CSAT com emojis, NPS e espaço para comentário."
+          }
+        ],
+        [
+          {
+            "content": "Pesquisa pós-evento"
+          },
+          {
+            "content": "Feedback, interesses e contato depois de um evento."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os tipos de pergunta"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Grupo"
+        },
+        {
+          "content": "Tipos"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Avaliação"
+          },
+          {
+            "content": "NPS, CSAT, Estrelas, Escala."
+          }
+        ],
+        [
+          {
+            "content": "Escolha"
+          },
+          {
+            "content": "Escolha única, Múltipla escolha, Sim / Não."
+          }
+        ],
+        [
+          {
+            "content": "Texto"
+          },
+          {
+            "content": "Texto curto, Texto longo."
+          }
+        ],
+        [
+          {
+            "content": "Dados"
+          },
+          {
+            "content": "Número, Data, E-mail, Telefone, Link."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Arraste um tipo para a posição desejada no formulário, ou clique para adicionar ao final."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "NPS e CSAT têm regras próprias"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O NPS precisa da escala completa de 0 a 10 — com menos pontos, toda resposta é contada como detratora e o índice fica travado em −100. Só os dois rótulos das pontas são editáveis."
+        }
+      ],
+      "title": "NPS não pode ter a escala reduzida"
+    },
+    {
+      "type": "paragraph",
+      "content": "CSAT já vem com uma escala de emojis de 0 a 5 (😡🙁😐🙂😀🤩), totalmente editável — dá para trocar emoji e rótulo de cada ponto."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Enriquecer o contato"
+    },
+    {
+      "type": "paragraph",
+      "content": "Qualquer pergunta pode ser vinculada a um campo do cadastro (padrão ou personalizado) — a resposta atualiza esse campo automaticamente. E-mail, telefone e CPF/CNPJ não podem ser vinculados, porque são usados para identificar o contato, não para atualizar."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "ferramentas/pesquisas/personalizar-aparencia-e-confirmacao",
+          "description": "Ajuste as cores, a fonte e a tela de confirmação."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

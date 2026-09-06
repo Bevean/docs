@@ -1,0 +1,134 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funcionam as pesquisas",
+  "subtitle": "Meça satisfação, enriqueça o cadastro do contato e segmente por quem respondeu bem ou mal.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "pesquisas",
+    "nps",
+    "csat",
+    "satisfação"
+  ],
+  "related": [
+    "ferramentas/pesquisas/criar-uma-pesquisa",
+    "ferramentas/pesquisas/escolher-como-distribuir"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Uma pesquisa mede satisfação (NPS, CSAT) e coleta dados que atualizam o cadastro do contato — três coisas em uma."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.surveys"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que dá para fazer com uma pesquisa"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Medir satisfação com NPS e CSAT."
+        },
+        {
+          "content": "Enriquecer o contato: a resposta pode atualizar campos do cadastro."
+        },
+        {
+          "content": "Segmentar por satisfação: separar quem amou de quem teve problema."
+        },
+        {
+          "content": "Automatizar o retorno: uma promoção para quem respondeu bem, um resgate para quem respondeu mal."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Estados de uma pesquisa"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Estado"
+        },
+        {
+          "content": "Significado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Rascunho"
+          },
+          {
+            "content": "Editável livremente."
+          }
+        ],
+        [
+          {
+            "content": "Publicada"
+          },
+          {
+            "content": "Só leitura. Editar cria uma nova versão, sem mexer nas respostas já recebidas."
+          }
+        ],
+        [
+          {
+            "content": "Arquivada"
+          },
+          {
+            "content": "Fora de uso."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Duas permissões diferentes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Quem tem acesso a Pesquisas vê as métricas agregadas de qualquer uma. Ver as respostas individuais e exportá-las em CSV exige uma permissão à parte — sem ela, a Bevean mostra só \"Você tem acesso às métricas, mas não às respostas individuais.\""
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "ferramentas/pesquisas/criar-uma-pesquisa",
+          "description": "Monte as perguntas da sua pesquisa."
+        },
+        {
+          "ref": "ferramentas/pesquisas/escolher-como-distribuir",
+          "description": "Decida como as respostas vão chegar."
+        }
+      ],
+      "title": "Próximos passos"
+    }
+  ]
+}

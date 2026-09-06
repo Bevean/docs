@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Pesquisas",
+  "description": "Meça satisfação com NPS e CSAT, e enriqueça o cadastro dos seus contatos com as respostas.",
+  "icon": "smile",
+  "articles": [
+    "visao-geral",
+    "criar-uma-pesquisa",
+    "personalizar-aparencia-e-confirmacao",
+    "escolher-como-distribuir",
+    "publicar-e-versionar",
+    "analisar-respostas",
+    "resolver-problemas"
+  ]
+}

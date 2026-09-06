@@ -1,0 +1,139 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Escolher como distribuir a pesquisa",
+  "subtitle": "Link individual (por automação ou campanha), link público com QR code, ou pesquisa anônima.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "distribuir pesquisa",
+    "link individual",
+    "link público",
+    "pesquisa anônima"
+  ],
+  "related": [
+    "ferramentas/pesquisas/visao-geral",
+    "automacoes/automacoes/enviar-uma-mensagem"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A forma de coleta muda como a pesquisa identifica quem respondeu — escolha na etapa de Identificação."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Forma"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Link individual"
+          },
+          {
+            "content": "Disparo por e-mail ou WhatsApp para quem já está na base. O contato é identificado pelo link — ideal para automações e campanhas."
+          }
+        ],
+        [
+          {
+            "content": "Link público / QR code"
+          },
+          {
+            "content": "Uma URL única para divulgar onde quiser — QR na loja, bio do Instagram, cupom fiscal. Identifica pelo e-mail ou telefone que a própria pessoa informar na resposta."
+          }
+        ],
+        [
+          {
+            "content": "Pesquisa anônima"
+          },
+          {
+            "content": "Nada é vinculado a um contato — indicado para clima organizacional ou temas sensíveis."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Enviar por automação ou campanha"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O \"Link individual\" funciona através de uma variável — "
+        },
+        {
+          "type": "text",
+          "text": "{{survey.url}}",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — inserida numa mensagem em "
+        },
+        {
+          "type": "text",
+          "text": "Automações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/enviar-uma-mensagem"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou numa campanha. No passo de envio, uma seção "
+        },
+        {
+          "type": "text",
+          "text": "Pesquisa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " deixa você anexar qual pesquisa publicada gerar o link; cada contato recebe o link pessoal dele."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Usar a variável do link sem anexar nenhuma pesquisa naquele passo bloqueia a publicação do fluxo, com o aviso de que falta anexar a pesquisa."
+        }
+      ],
+      "title": "Anexe a pesquisa, não só a variável"
+    },
+    {
+      "type": "paragraph",
+      "content": "Só pesquisas já publicadas podem ser anexadas dessa forma."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Divulgar um link público"
+    },
+    {
+      "type": "paragraph",
+      "content": "Depois de publicada, a própria tela da pesquisa mostra a URL pronta para copiar e divulgar onde quiser."
+    }
+  ]
+}

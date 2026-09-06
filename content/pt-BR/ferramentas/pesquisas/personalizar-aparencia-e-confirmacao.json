@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Personalizar a aparência e a confirmação",
+  "subtitle": "Logo, cores, tipografia, e o que acontece na tela depois que alguém responde.",
+  "updatedAt": "2026-09-03",
+  "tags": [
+    "aparência da pesquisa",
+    "tela de confirmação",
+    "redirecionar"
+  ],
+  "related": [
+    "ferramentas/pesquisas/criar-uma-pesquisa",
+    "ferramentas/pesquisas/publicar-e-versionar"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A etapa de Aparência mostra uma prévia real da pesquisa ao lado das opções — não é uma simulação."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Identidade visual"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Logo (PNG ou SVG com fundo transparente) — aparece no topo do formulário."
+        },
+        {
+          "content": "Cor principal."
+        },
+        {
+          "content": "Cor de fundo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Tipografia"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Fonte (ou \"Padrão do sistema\")."
+        },
+        {
+          "content": "Tamanho do texto, de 10 a 32px."
+        },
+        {
+          "content": "Cor do texto."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Campos"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Fundo do campo"
+        },
+        {
+          "content": "Borda do campo"
+        },
+        {
+          "content": "Texto do campo"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Depois de responder"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure a tela de confirmação: Título, Mensagem e, opcionalmente, um botão (com rótulo e link)."
+    },
+    {
+      "type": "paragraph",
+      "content": "Também dá para redirecionar automaticamente para outra página depois do envio — a resposta é salva antes do redirecionamento acontecer."
+    }
+  ]
+}
