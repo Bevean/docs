@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Filtrar quem entra na automação",
   "subtitle": "Filtros do disparador, filtros de perfil, reentrada e as chaves que interrompem o envio.",
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-09-07",
   "tags": [
     "automacoes",
     "gatilho",
@@ -156,6 +156,212 @@
         }
       ],
       "title": "Nos gatilhos de segmento, o filtro é onde você escolhe qual segmento"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Os campos de cada gatilho"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Gatilho"
+        },
+        {
+          "content": "Campos disponíveis"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Página visualizada"
+          },
+          {
+            "content": "URL, Path, Título, Referrer."
+          }
+        ],
+        [
+          {
+            "content": "Produto visualizado e Produto abandonado"
+          },
+          {
+            "content": "ID do produto, ID da variação, SKU, Nome do produto, Marca, Categoria. Só em Produto abandonado: Link do produto."
+          }
+        ],
+        [
+          {
+            "content": "Categoria visualizada"
+          },
+          {
+            "content": "ID da categoria, Nome da categoria, Handle da categoria, Google taxonomy ID."
+          }
+        ],
+        [
+          {
+            "content": "Produto adicionado ao carrinho e Carrinho abandonado"
+          },
+          {
+            "content": "Origem do carrinho, Quantidade de itens, Total do carrinho, Cupom, dados do produto (ID, variação, SKU, nome, marca, categoria, quantidade), item e valor do checkout. Só em Carrinho abandonado: Link do carrinho."
+          }
+        ],
+        [
+          {
+            "content": "Os nove gatilhos de pedido"
+          },
+          {
+            "content": "Origem do pedido, Total do pedido, Status do pagamento, Status do pedido, Status da entrega, Forma de pagamento, Percentual de desconto, Nome de algum produto, Código de rastreio, Link de rastreio, Transportadora, Número da Nota Fiscal, Código do boleto ou PIX, Link do boleto ou PIX."
+          }
+        ],
+        [
+          {
+            "content": "Novo cadastro"
+          },
+          {
+            "content": "Nenhum — a seção não aparece para este gatilho. Use os filtros de perfil."
+          }
+        ],
+        [
+          {
+            "content": "Entrou no segmento e Saiu do segmento"
+          },
+          {
+            "content": "Segmento e Nome do segmento."
+          }
+        ],
+        [
+          {
+            "content": "Produto acabando (reposição)"
+          },
+          {
+            "content": "ID do produto, ID da variação, SKU, Nome do produto, Quantidade comprada, Dias até acabar."
+          }
+        ],
+        [
+          {
+            "content": "Os quatro gatilhos de crédito"
+          },
+          {
+            "content": "Valor expirando, Saldo total, Valor resgatado, Valor liberado, Dias até vencer, Data de liberação, Data de expiração, Método do resgate, Código do cupom, Validade do cupom, Link de resgate."
+          }
+        ],
+        [
+          {
+            "content": "Conversa iniciada e Mensagem recebida"
+          },
+          {
+            "content": "Texto da mensagem, Tipo de canal, Canal, Tipo de abertura, Quantidade de mensagens, ID da conversa."
+          }
+        ],
+        [
+          {
+            "content": "Pesquisa respondida"
+          },
+          {
+            "content": "Pesquisa, Nome da pesquisa, Versão da pesquisa, Nota, Faixa de satisfação, Tipo da métrica."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Crédito",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " compartilha a mesma lista entre os quatro gatilhos, então aparecem campos que não existem no evento escolhido — \"Código do cupom\", por exemplo, só chega em Cashback resgatado."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Tipo de canal",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", no atendimento, é campo de texto livre: escreva o identificador do canal, como "
+            },
+            {
+              "type": "text",
+              "text": "whatsapp_official",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ou "
+            },
+            {
+              "type": "text",
+              "text": "instagram",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Para escolher um número específico, use o campo "
+            },
+            {
+              "type": "text",
+              "text": "Canal",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Pesquisa respondida",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " filtra por nota e faixa de satisfação, mas não pela resposta de uma pergunta específica."
+            }
+          ]
+        }
+      ],
+      "title": "Três detalhes desses campos"
     },
     {
       "type": "heading",
