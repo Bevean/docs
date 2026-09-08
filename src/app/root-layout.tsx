@@ -60,7 +60,7 @@ export function RootLayout() {
               <span className="font-semibold tracking-tight">Central de Ajuda</span>
             </Link>
 
-            <nav aria-label="Seções" className="ml-6 hidden items-center gap-5 lg:flex">
+            <nav aria-label="Seções" className="hidden flex-1 items-center justify-center gap-5 lg:flex">
               <Link
                 to="/ajuda"
                 aria-current={pathname.startsWith('/ajuda') ? 'page' : undefined}
