@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "NPS travado em -100, ou não vejo as respostas",
   "subtitle": "Escala incompleta zerando o NPS, a permissão separada para respostas individuais, e o link da pesquisa sem efeito.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "nps travado",
     "não vejo respostas",
@@ -34,11 +34,11 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "\"Publiquei uma nova versão e os resultados zeraram\""
+      "content": "\"Publiquei uma nova versão e não sei se os resultados somam\""
     },
     {
       "type": "paragraph",
-      "content": "Troque o seletor de versão para \"Todas as versões\" — por padrão, uma versão nova mostra separado das anteriores, mas o histórico continua lá."
+      "content": "Somam. Por padrão o relatório mostra todas as versões da pesquisa juntas; o seletor de versões só aparece quando existe mais de uma publicada, para você isolar uma delas."
     },
     {
       "type": "heading",

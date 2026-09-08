@@ -1,15 +1,16 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Ler um relatório",
-  "subtitle": "Período, agrupamento, a comparação automática com o período anterior, e como abrir o detalhe de uma linha.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "Período, agrupamento, filtros, comparação e os formatos de visualização que os relatórios usam.",
+  "updatedAt": "2026-09-08",
   "tags": [
-    "período do relatório",
-    "agrupar por",
-    "comparação com período anterior"
+    "relatórios",
+    "período",
+    "filtros",
+    "comparação"
   ],
   "related": [
-    "analises/analises/visao-geral",
+    "analises/analises/catalogo-de-relatorios",
     "analises/analises/exportar-e-favoritar"
   ],
   "body": [
@@ -29,7 +30,7 @@
           "content": "Opção"
         },
         {
-          "content": "Observação"
+          "content": "Detalhe"
         }
       ],
       "rows": [
@@ -38,7 +39,7 @@
             "content": "Últimos 7 dias"
           },
           {
-            "content": "—"
+            "content": "Padrão nos relatórios de SLA, Primeira resposta e Funil de conversão."
           }
         ],
         [
@@ -46,7 +47,7 @@
             "content": "Últimos 30 dias"
           },
           {
-            "content": "Padrão na maioria dos relatórios."
+            "content": "O padrão mais comum."
           }
         ],
         [
@@ -54,7 +55,7 @@
             "content": "Últimos 90 dias"
           },
           {
-            "content": "—"
+            "content": "Padrão em Participação do CRM na receita, Evolução do ticket médio, Desempenho por segmento, Vendas por produto, Melhor horário de envio e Campanhas e automações."
           }
         ],
         [
@@ -62,7 +63,7 @@
             "content": "Últimos 12 meses"
           },
           {
-            "content": "Padrão só no relatório de frequência de compra."
+            "content": "Padrão nos relatórios de safra e ciclo longo — frequência de compra, evolução e migração de RFV, win-back, retenção e LTV por safra, recompra, cashback e dependência de desconto."
           }
         ],
         [
@@ -70,14 +71,14 @@
             "content": "Personalizado"
           },
           {
-            "content": "Escolha as datas direto no calendário — não é uma opção da lista, aparece sozinha quando você seleciona um intervalo específico."
+            "content": "Escolha as datas no calendário. Não é uma opção da lista: aparece quando você seleciona um intervalo específico."
           }
         ]
       ]
     },
     {
       "type": "paragraph",
-      "content": "O período fica salvo no link da página — copiar e colar a URL leva a outra pessoa para a mesma janela de tempo que você está vendo."
+      "content": "O período fica salvo no link da página — copiar e colar a URL leva outra pessoa para a mesma janela de tempo."
     },
     {
       "type": "heading",
@@ -86,7 +87,127 @@
     },
     {
       "type": "paragraph",
-      "content": "Dia, Semana, Mês ou Ano — nem todo relatório oferece as 4 opções."
+      "content": [
+        {
+          "type": "text",
+          "text": "São dois conjuntos, conforme o relatório: "
+        },
+        {
+          "type": "text",
+          "text": "Dia, Mês ou Ano",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na maioria, e "
+        },
+        {
+          "type": "text",
+          "text": "Dia, Semana ou Mês",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " nos que acompanham evolução — Análise de faturamento, Qualidade de cadastro e as telas de Atendimento. Vários relatórios não têm o seletor."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Filtros além do período"
+    },
+    {
+      "type": "paragraph",
+      "content": "Boa parte dos relatórios de Atendimento tem recortes próprios, em chips ao lado do título:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Filtro"
+        },
+        {
+          "content": "Onde aparece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Atendentes"
+          },
+          {
+            "content": "Métricas, Comparativo de atendentes, Tabulação"
+          }
+        ],
+        [
+          {
+            "content": "Times"
+          },
+          {
+            "content": "Tabulação, Primeira resposta"
+          }
+        ],
+        [
+          {
+            "content": "Canais"
+          },
+          {
+            "content": "Volume & demanda, Relatório de SLA, Primeira resposta"
+          }
+        ],
+        [
+          {
+            "content": "Origem"
+          },
+          {
+            "content": "Volume & demanda, Produtividade, Tempo de resposta & SLA, Visão geral, Sentimento. Traz Inbound, Campanha, Automação e Manual — começa em Inbound"
+          }
+        ],
+        [
+          {
+            "content": "Horário"
+          },
+          {
+            "content": "Métricas, Comparativo, Produtividade, Tempo de resposta & SLA. Alterna entre todos os horários e só o horário comercial"
+          }
+        ],
+        [
+          {
+            "content": "Meta de resposta"
+          },
+          {
+            "content": "Produtividade, Tempo de resposta & SLA, Visão geral, Relatório de SLA. Vai de 5 minutos a 1 hora, com 10 minutos como padrão"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Fora do Atendimento existem recortes por loja, por experiência (legado ou nova), por tipo, por plataforma e pela própria dimensão nos relatórios de vendas por canal, estado e cidade."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Só o período e o agrupamento ficam no link. Atendente, time, canal, origem e meta de resposta voltam ao padrão assim que você sai do relatório, e não viajam num link compartilhado."
+        },
+        {
+          "type": "paragraph",
+          "content": "O que a lista de relatórios guarda é o estado dela própria: ao voltar pelo caminho \"Relatórios\", o card, a busca e o filtro de tipo continuam como você deixou."
+        }
+      ],
+      "title": "Esses filtros não sobrevivem à navegação"
     },
     {
       "type": "heading",
@@ -95,20 +216,99 @@
     },
     {
       "type": "paragraph",
-      "content": "A maioria dos números vem com uma seta e uma porcentagem, comparando automaticamente com o período imediatamente anterior, de mesma duração. Não existe uma opção de escolher outro período de comparação — é sempre o \"antes de agora\"."
+      "content": "A maioria dos números vem com seta e porcentagem, comparando com o período imediatamente anterior de mesma duração."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A "
+        },
+        {
+          "type": "text",
+          "text": "Análise de faturamento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " é a exceção: nela dá para escolher entre "
+        },
+        {
+          "type": "text",
+          "text": "Período anterior",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Mesmo período, ano passado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Personalizado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com calendário próprio."
+        }
+      ]
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Gráfico e tabela juntos"
+      "content": "Gráfico e tabela"
     },
     {
       "type": "paragraph",
-      "content": "Todo relatório mostra o gráfico (de área ou de barras — não há gráfico de pizza) e a tabela de dados na mesma tela, um embaixo do outro. Não existe alternância entre \"ver gráfico\" ou \"ver tabela\" — os dois aparecem sempre."
+      "content": "Na maioria dos relatórios o gráfico e a tabela aparecem na mesma tela, um embaixo do outro, sem alternância entre eles. Mas o formato varia:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Há telas só com tabela, como Qualidade de cadastro por loja."
+        },
+        {
+          "content": "Há telas sem tabela, como a Qualidade de cadastro geral, que mostra indicadores e gráficos."
+        },
+        {
+          "content": "Safras, migração de RFV e melhor horário de envio são matrizes de calor, sem gráfico de área ou barra."
+        },
+        {
+          "content": "Também aparecem barra empilhada, medidor, anel de composição e funil."
+        }
+      ]
     },
     {
       "type": "paragraph",
-      "content": "Clique no cabeçalho de uma coluna da tabela para ordenar por ela."
+      "content": "Não há gráfico de pizza em nenhum relatório. Clique no cabeçalho de uma coluna para ordenar a tabela por ela."
     },
     {
       "type": "heading",
@@ -117,11 +317,42 @@
     },
     {
       "type": "paragraph",
-      "content": "Em alguns relatórios (por exemplo, o de desempenho de produto), clicar numa linha abre um painel lateral com o detalhe daquele item — variantes de um produto, por exemplo."
+      "content": "Em três relatórios, clicar numa linha abre um painel lateral: Desempenho de produto mostra as variantes, Campanhas e automações mostra a linha do tempo da campanha, e Atribuição & transferências lista as conversas paradas, com link para o Atendimento."
     },
     {
       "type": "paragraph",
-      "content": "Para ver os eventos individuais por trás de uma métrica (não só o número agregado), veja a seção separada de Métricas, com uma aba de Feed cronológico."
+      "content": [
+        {
+          "type": "text",
+          "text": "Para ver os eventos individuais por trás de uma métrica, use a tela de "
+        },
+        {
+          "type": "text",
+          "text": "Métricas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", cujo detalhe tem três abas: Evolução, Melhores contatos e Atividades."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "analises/analises/catalogo-de-relatorios",
+          "description": "O catálogo completo."
+        },
+        {
+          "ref": "analises/analises/exportar-e-favoritar",
+          "description": "Exportar em CSV e marcar favoritos."
+        }
+      ]
     }
   ]
 }

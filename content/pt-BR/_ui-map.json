@@ -2,7 +2,7 @@
   "tools.forms": {
     "segments": [
       "Ferramentas",
-      "Formulários"
+      "Captura de leads"
     ],
     "href": "/content/forms"
   },
@@ -22,7 +22,7 @@
   "audience.segments": {
     "segments": [
       "Audiência",
-      "Segmentos e Listas"
+      "Segmentos & Listas"
     ],
     "href": "/segments"
   },
@@ -36,7 +36,7 @@
   "tools.links": {
     "segments": [
       "Ferramentas",
-      "Links"
+      "Gerador de Links"
     ],
     "href": "/tools/links"
   },
@@ -291,8 +291,7 @@
   },
   "reports.list": {
     "segments": [
-      "Relatórios",
-      "Ver todos"
+      "Relatórios"
     ],
     "href": "/reports/list"
   },
@@ -305,9 +304,8 @@
   },
   "reports.attendance": {
     "segments": [
-      "Relatórios",
-      "Atendimento"
+      "Relatórios"
     ],
-    "href": "/reports/attendance"
+    "href": "/reports/list"
   }
 }

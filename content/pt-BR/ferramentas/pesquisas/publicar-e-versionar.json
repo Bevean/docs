@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Publicar e versionar uma pesquisa",
   "subtitle": "O que a Bevean confere antes de publicar, e por que editar uma pesquisa publicada cria uma nova versão.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "publicar pesquisa",
     "versão da pesquisa",
@@ -57,7 +57,20 @@
       "content": [
         {
           "type": "text",
-          "text": "Uma pesquisa publicada não pode ser editada diretamente — a Bevean mostra \"Versão publicada — somente leitura\". Clicar em "
+          "text": "Uma pesquisa publicada não pode ser editada diretamente — a Bevean mostra "
+        },
+        {
+          "type": "text",
+          "text": "Versão {n} publicada — somente leitura. Editar cria a próxima versão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Clicar em "
         },
         {
           "type": "text",
@@ -70,7 +83,20 @@
         },
         {
           "type": "text",
-          "text": " cria uma nova versão, sem alterar nem apagar as respostas já recebidas na versão anterior."
+          "text": " apenas libera a edição; a versão nova só nasce no "
+        },
+        {
+          "type": "text",
+          "text": "primeiro salvamento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Abrir e sair sem alterar nada não deixa rascunho, e o botão de publicar fica desativado enquanto não houver mudança."
         }
       ]
     },

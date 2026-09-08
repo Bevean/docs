@@ -1,16 +1,16 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funcionam as Análises",
-  "subtitle": "Relatórios rodam numa aplicação própria, com uma Visão geral, um Dashboard e o catálogo completo.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "As telas da área de relatórios, o que a Visão geral mostra e a permissão que cada parte exige.",
+  "updatedAt": "2026-09-08",
   "tags": [
     "análises",
     "relatórios",
-    "dashboard"
+    "visão geral"
   ],
   "related": [
-    "analises/analises/ler-um-relatorio",
-    "analises/analises/catalogo-de-relatorios"
+    "analises/analises/catalogo-de-relatorios",
+    "analises/analises/ler-um-relatorio"
   ],
   "body": [
     {
@@ -44,65 +44,93 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "As 3 formas de entrar"
+      "content": "As telas disponíveis"
     },
     {
       "type": "table",
       "head": [
         {
+          "content": "Grupo"
+        },
+        {
           "content": "Tela"
         },
         {
-          "content": "Para que serve"
+          "content": "O que traz"
         }
       ],
       "rows": [
         [
           {
+            "content": "CRM"
+          },
+          {
             "content": "Visão geral"
           },
           {
-            "content": "A página inicial: receita atribuída ao CRM, composição da base e KPIs de tendência dos últimos 12 meses. Sem seletor de período — é sempre uma foto dos últimos 30 dias."
+            "content": "A página inicial: receita atribuída ao CRM, composição da base e indicadores de tendência dos últimos 12 meses. Não tem seletor de período — é sempre uma foto dos últimos 30 dias."
           }
         ],
         [
           {
-            "content": "Dashboard"
+            "content": "CRM"
           },
           {
-            "content": "Um resumo de desempenho: receita e ROAS, top 5 automações e campanhas, com um link \"Ver relatório completo\" em cada bloco."
+            "content": "Relatórios"
+          },
+          {
+            "content": "O catálogo completo, com busca e filtros."
           }
         ],
         [
           {
-            "content": "Ver todos"
+            "content": "Eventos"
           },
           {
-            "content": [
-              {
-                "type": "text",
-                "text": "O catálogo inteiro, organizado por área — veja "
-              },
-              {
-                "type": "text",
-                "text": "o catálogo de relatórios",
-                "marks": [
-                  {
-                    "type": "docLink",
-                    "attrs": {
-                      "ref": "analises/analises/catalogo-de-relatorios"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "text": "."
-              }
-            ]
+            "content": "Métricas"
+          },
+          {
+            "content": "Todos os eventos rastreados, com detalhe em três abas por evento."
+          }
+        ],
+        [
+          {
+            "content": "Eventos"
+          },
+          {
+            "content": "Ao vivo"
+          },
+          {
+            "content": "Acompanhamento em tempo real, com mapa e feed de eventos."
+          }
+        ],
+        [
+          {
+            "content": "E-commerce"
+          },
+          {
+            "content": "Funil de conversão"
+          },
+          {
+            "content": "Da visita à compra, com diagnóstico das etapas."
           }
         ]
       ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Na Visão geral, a comparação dos indicadores é dupla: contra o mês anterior e contra o mesmo mês do ano passado."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A tela de Dashboard ainda existe e continua acessível pela URL, mas não aparece mais na navegação."
+        }
+      ],
+      "title": "O Dashboard saiu do menu"
     },
     {
       "type": "heading",
@@ -111,21 +139,20 @@
     },
     {
       "type": "paragraph",
-      "content": "Ver relatórios exige uma permissão própria. Os relatórios de Atendimento pedem essa mesma permissão mais o acesso ao Atendimento — sem as duas, a área de Atendimento nem aparece no catálogo."
+      "content": "Ver relatórios exige uma permissão própria. Os relatórios de Atendimento pedem essa mesma permissão mais o acesso ao Atendimento — sem as duas, o card de Atendimento e suas linhas não aparecem no catálogo, e o acesso direto pela URL é bloqueado."
     },
     {
       "type": "linkCards",
       "items": [
         {
-          "ref": "analises/analises/ler-um-relatorio",
-          "description": "Entenda os controles comuns a todo relatório."
+          "ref": "analises/analises/catalogo-de-relatorios",
+          "description": "O que cada relatório responde."
         },
         {
-          "ref": "analises/analises/catalogo-de-relatorios",
-          "description": "Veja a lista completa de relatórios disponíveis."
+          "ref": "analises/analises/ler-um-relatorio",
+          "description": "Os controles comuns a quase todos."
         }
-      ],
-      "title": "Próximos passos"
+      ]
     }
   ]
 }

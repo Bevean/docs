@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funcionam os formulários",
   "subtitle": "Formulários capturam leads no seu site: cada envio vira um contato no CRM, dentro da lista que você escolher.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "formulários",
     "leads",
@@ -20,11 +20,11 @@
       "content": [
         {
           "type": "text",
-          "text": "Um formulário da Bevean aparece "
+          "text": "No menu, essa área se chama "
         },
         {
           "type": "text",
-          "text": "no seu site",
+          "text": "Captura de leads",
           "marks": [
             {
               "type": "bold"
@@ -33,9 +33,13 @@
         },
         {
           "type": "text",
-          "text": ", não dentro do painel. Ele é exibido pelo script da Bevean instalado na loja, e cada envio vira um contato no CRM, adicionado a uma lista que você define na configuração."
+          "text": ". Cada item que você cria continua sendo chamado de formulário nas telas de edição."
         }
       ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Um formulário da Bevean aparece no seu site, não dentro do painel. Ele é exibido pelo script da Bevean instalado na loja, e cada envio vira um contato no CRM, adicionado a uma lista que você define na configuração."
     },
     {
       "type": "paragraph",
@@ -152,7 +156,7 @@
       "content": [
         {
           "type": "text",
-          "text": "O envio também dispara os eventos de "
+          "text": "O envio também registra os eventos de "
         },
         {
           "type": "text",
@@ -178,7 +182,7 @@
         },
         {
           "type": "text",
-          "text": ", que você pode usar como gatilho de automação e que alimentam os relatórios."
+          "text": ", que alimentam os relatórios. Eles não estão entre os gatilhos disponíveis para automações."
         }
       ]
     },

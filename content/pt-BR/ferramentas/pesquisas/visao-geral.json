@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funcionam as pesquisas",
   "subtitle": "Meça satisfação, enriqueça o cadastro do contato e segmente por quem respondeu bem ou mal.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "pesquisas",
     "nps",
@@ -94,7 +94,7 @@
             "content": "Publicada"
           },
           {
-            "content": "Só leitura. Editar cria uma nova versão, sem mexer nas respostas já recebidas."
+            "content": "Só leitura. Editar libera a edição, e a versão nova nasce quando você salva — sem mexer nas respostas já recebidas."
           }
         ],
         [

@@ -1,8 +1,8 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Acompanhar o SLA",
-  "subtitle": "O contador de prazo em cada conversa, como encontrar o que está atrasado, e o painel com os números do time.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "De quando o prazo conta, o que para o relógio, onde se define a meta e como achar o que está atrasado.",
+  "updatedAt": "2026-09-08",
   "tags": [
     "sla",
     "tempo de resposta",
@@ -16,20 +16,223 @@
   "body": [
     {
       "type": "paragraph",
-      "content": "Quando um canal tem uma meta de tempo de resposta configurada, cada conversa atribuída mostra um contador."
+      "content": "Quando um canal tem uma meta de tempo de resposta, cada conversa atribuída mostra um contador — verde e regressivo enquanto há tempo, vermelho e contando para cima depois que o prazo estoura."
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Como o contador se comporta"
+      "content": "De quando o prazo conta"
     },
     {
       "type": "paragraph",
-      "content": "Verde e regressivo enquanto há tempo. Vira vermelho e passa a contar para cima assim que estoura o prazo."
+      "content": [
+        {
+          "type": "text",
+          "text": "O relógio arma na "
+        },
+        {
+          "type": "text",
+          "text": "primeira mensagem do cliente que ainda não foi respondida",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Mensagens seguintes da mesma pessoa não renovam o prazo: enquanto ninguém responder, a âncora continua sendo a primeira."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Um cliente que manda cinco mensagens seguidas não empurra o prazo cinco vezes. Antes o contador reiniciava a cada mensagem, e uma conversa sem ninguém atendendo podia parecer dentro do prazo."
+        }
+      ],
+      "title": "Por que isso importa"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que para o relógio"
     },
     {
       "type": "paragraph",
-      "content": "Só aparece quando a conversa está aberta, tem um responsável, e o canal tem uma meta de SLA configurada — conversa na fila (sem responsável) não mostra contador, porque ainda não há quem cobrar."
+      "content": [
+        {
+          "type": "text",
+          "text": "Qualquer resposta humana para o contador — ele sumir significa "
+        },
+        {
+          "type": "text",
+          "text": "respondido",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", não resolvido. Não param o relógio:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Resposta do assistente de IA."
+        },
+        {
+          "content": "Nota interna e transferência."
+        },
+        {
+          "content": "Mensagens enviadas por campanha ou automação."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Resolver a conversa desarma o prazo, e o encerramento automático por inatividade também."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O horário de atendimento desconta do prazo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Se o canal tem horário configurado, o prazo consome apenas tempo dentro do expediente:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Mensagem que chega fora do horário começa a contar na próxima abertura — nada nasce estourado."
+        },
+        {
+          "content": "Uma meta de 30 minutos recebida 10 minutos antes de fechar gasta esses 10 e vence 20 minutos depois da abertura seguinte."
+        },
+        {
+          "content": "Canal sem horário definido conta em tempo corrido, 24 horas por dia."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando o contador aparece"
+    },
+    {
+      "type": "paragraph",
+      "content": "São quatro condições ao mesmo tempo: a conversa está aberta, tem responsável, o canal tem meta de resposta, e existe um prazo armado. Conversa na fila, sem responsável, não mostra contador na lista."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "No cartão do Kanban o contador aparece mesmo sem responsável — basta haver meta e prazo armado."
+        }
+      ],
+      "title": "No pipeline a regra é outra"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Onde se configura a meta"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Configurações › SLA, dentro do Atendimento. A política criada ali é ligada ao canal no campo "
+        },
+        {
+          "type": "text",
+          "text": "SLA de atendimento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " da tela de Distribuição — sem esse vínculo, o canal não tem prazo."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Tempo de resposta"
+          },
+          {
+            "content": "A meta para responder quem está aguardando. É ela que alimenta o contador da conversa, o filtro de SLA em atraso e o painel."
+          }
+        ],
+        [
+          {
+            "content": "Tempo de resolução"
+          },
+          {
+            "content": "Opcional, do início ao encerramento. Aparece só nos relatórios — não vira contador na conversa."
+          }
+        ],
+        [
+          {
+            "content": "Reiniciar o prazo de resposta ao transferir"
+          },
+          {
+            "content": "Com a opção ligada, quem recebe a conversa não herda o tempo de quem a segurou: o prazo recomeça na transferência."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "As metas são definidas em segundos, minutos ou horas."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Quando essa opção está ligada, qualquer caminho que dê dono à conversa rearma o prazo — transferência manual, dreno da fila ou rodízio — e o novo prazo conta em tempo corrido, mesmo fora do expediente."
+        }
+      ],
+      "title": "O reinício na transferência ignora o horário de atendimento"
     },
     {
       "type": "heading",
@@ -41,21 +244,109 @@
       "style": "bullet",
       "items": [
         {
-          "content": "Filtro \"SLA em atraso\"."
+          "content": "Filtro \"SLA em atraso\", no painel de filtros."
         },
         {
-          "content": "Ordenação \"SLA primeiro\" — é a ordem padrão da lista, com o mais atrasado no topo."
+          "content": "Ordenação \"SLA primeiro\", que é o padrão da lista, com o mais atrasado no topo."
         }
       ]
     },
     {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Com busca ativa, com o filtro \"SLA em atraso\" ligado, na visão Arquivadas e na visão Resolvidas, a lista volta à ordem cronológica sem avisar."
+        },
+        {
+          "type": "paragraph",
+          "content": "A ordenação é uma preferência do navegador e sobrevive ao \"Limpar filtros\". A outra opção chama-se \"Mais recentes\"."
+        }
+      ],
+      "title": "A ordenação por SLA é desligada em silêncio em quatro situações"
+    },
+    {
       "type": "heading",
       "level": 2,
-      "content": "Painel (Cockpit)"
+      "content": "Painel"
     },
     {
       "type": "paragraph",
-      "content": "Um painel à parte reúne os números do time: SLA em atraso, Não atendidas, Em aberto, Aguardando resposta, Respondidas, Não lidas, os próximos SLAs perto de vencer, e o tempo médio de primeira resposta do dia."
+      "content": [
+        {
+          "type": "text",
+          "text": "Um painel à parte reúne os números do time, com um seletor entre "
+        },
+        {
+          "type": "text",
+          "text": "Minha fila",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Geral",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Os cartões de SLA em atraso, Não atendidas, Em aberto, Aguardando resposta, Respondidas, Não lidas e Resolvidas hoje."
+        },
+        {
+          "content": "Tempo médio de primeira resposta do dia e CSAT dos últimos 7 dias."
+        },
+        {
+          "content": "Abertas por etiqueta."
+        },
+        {
+          "content": "Os próximos SLAs a vencer."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Conversa sem prazo armado não entra mais nessa lista. Antes ela era estimada, o que fazia a ordem se reorganizar sozinha a cada mensagem recebida."
+        }
+      ],
+      "title": "A lista de próximos SLAs só mostra prazo armado"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "atendimento/distribuicao/configurar-horario-de-atendimento",
+          "description": "O horário que o prazo respeita."
+        },
+        {
+          "ref": "atendimento/conversas/visao-geral",
+          "description": "Os filtros e a ordenação da lista."
+        }
+      ]
     }
   ]
 }

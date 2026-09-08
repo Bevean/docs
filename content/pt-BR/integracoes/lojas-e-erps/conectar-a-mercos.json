@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a Mercos",
   "subtitle": "Application Token e Company Token do painel da Mercos, com a opção de usar o ambiente de testes (Sandbox).",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "mercos",
     "application token",
@@ -124,7 +124,29 @@
     },
     {
       "type": "paragraph",
-      "content": "Clientes, Pedidos e Produtos (com categorias)."
+      "content": "Clientes, Pedidos e Produtos."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Categorias de produto "
+        },
+        {
+          "type": "text",
+          "text": "não",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " são sincronizadas — a busca foi desativada porque a API da Mercos recusa esse acesso em parte das contas."
+        }
+      ]
     },
     {
       "type": "linkCards",

@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Alterar os seus dados de acesso",
   "subtitle": "Nome, e-mail, telefone e o login com o Google — dados que só você altera na sua própria conta.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "minha conta",
     "meus dados",
@@ -62,7 +62,25 @@
     },
     {
       "type": "paragraph",
-      "content": "A senha não é alterada nessa tela — use o fluxo de \"esqueci minha senha\" na tela de login."
+      "content": [
+        {
+          "type": "text",
+          "text": "A senha não é alterada nessa tela. Dá para trocá-la no seu perfil dentro do "
+        },
+        {
+          "type": "text",
+          "text": "Atendimento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", informando a senha atual — ou pelo fluxo de \"esqueci minha senha\" na tela de login."
+        }
+      ]
     },
     {
       "type": "heading",

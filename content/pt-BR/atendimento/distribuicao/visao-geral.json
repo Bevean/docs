@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funciona a distribuição de conversas",
   "subtitle": "Rodízio ou menor carga, e os filtros de teto, status online e horário que decidem quem está elegível.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "distribuição automática",
     "rodízio",
@@ -121,7 +121,11 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "Se o contato tem um vendedor preferido na Carteira de Clientes, a conversa vai direto para essa pessoa — mesmo offline ou no limite de conversas."
+          "content": "Se o contato tem um vendedor preferido na Carteira de Clientes, a conversa recebida no canal vai direto para essa pessoa — mesmo offline ou no limite de conversas."
+        },
+        {
+          "type": "paragraph",
+          "content": "Duas ressalvas: canal com distribuição desativada, ou mensagem fora do horário de atendimento, mandam a conversa para a fila mesmo assim. E na transferência para um time a carteira não fura a fila — o vendedor precisa estar entre os elegíveis daquele time."
         }
       ]
     },

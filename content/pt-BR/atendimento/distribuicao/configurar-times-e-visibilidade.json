@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Configurar times e visibilidade",
   "subtitle": "Agrupe atendentes em times, decida o que cada um enxerga por canal, e o que acontece ao remover alguém.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "times",
     "visibilidade",
@@ -68,7 +68,7 @@
     },
     {
       "type": "paragraph",
-      "content": "Cada time também pode ter sua própria fila de distribuição, com ordem e velocidade de liberação próprias, separada da fila geral."
+      "content": "Cada time também pode ter sua própria configuração de fila, com ordem e velocidade de liberação próprias. A fila em si continua sendo a mesma — o que muda é o ritmo com que as conversas daquele time são liberadas."
     },
     {
       "type": "heading",
@@ -118,7 +118,29 @@
     },
     {
       "type": "paragraph",
-      "content": "Um canal sem visibilidade configurada para um atendente específico usa uma regra geral da conta como padrão."
+      "content": [
+        {
+          "type": "text",
+          "text": "Um canal sem visibilidade definida para um atendente usa "
+        },
+        {
+          "type": "text",
+          "text": "Próprias e não atribuídas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Não existe mais uma regra geral da conta: a visibilidade é sempre por canal."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Duas garantias que nenhum nível derruba: conversa atribuída a você é sempre visível, e o dono da conta enxerga tudo."
     },
     {
       "type": "heading",
