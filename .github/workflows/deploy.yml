@@ -19,7 +19,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # 22 é o mínimo do wrangler 4, usado no passo de deploy.
+          node-version: 22
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
