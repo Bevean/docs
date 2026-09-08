@@ -1,0 +1,243 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Recursos que dependem do seu plano",
+  "subtitle": "O que o Atendimento libera sem o módulo contratado, e onde o aviso de recurso bloqueado aparece.",
+  "updatedAt": "2026-09-08",
+  "tags": [
+    "plano",
+    "contrato",
+    "bloqueado",
+    "pipeline"
+  ],
+  "related": [
+    "atendimento/pipeline/visao-geral",
+    "atendimento/distribuicao/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Parte do Atendimento depende de o módulo estar contratado. Os ícones aparecem normalmente na barra lateral mesmo sem contrato — o aviso só surge quando você abre a tela."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que fica disponível sem o módulo contratado"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Entrar no Atendimento e usar a caixa de entrada."
+        },
+        {
+          "content": "Conversar, anexar arquivos, escrever nota interna."
+        },
+        {
+          "content": "Aplicar marcadores, atribuir e resolver conversas, inclusive com tabulação."
+        },
+        {
+          "content": "O painel do contato e a busca."
+        },
+        {
+          "content": "Minhas mensagens rápidas."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que exige o módulo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Recurso"
+        },
+        {
+          "content": "O que acontece sem o contrato"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pipeline"
+          },
+          {
+            "content": "A tela abre com o aviso de recurso não incluído."
+          }
+        ],
+        [
+          {
+            "content": "Painel e cockpit"
+          },
+          {
+            "content": "Mesma tela de aviso."
+          }
+        ],
+        [
+          {
+            "content": "Configurações do Atendimento"
+          },
+          {
+            "content": "Só a lista de Distribuição fica acessível. As demais seções mostram o aviso."
+          }
+        ],
+        [
+          {
+            "content": "Etapa no painel do contato"
+          },
+          {
+            "content": "O seletor de etapa simplesmente não aparece."
+          }
+        ],
+        [
+          {
+            "content": "Sentimento e intenção de compra"
+          },
+          {
+            "content": "Os filtros e o ícone de alerta na lista não aparecem."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os ícones de Pipeline, Painel e Configurações têm a mesma aparência de um item liberado. O bloqueio aparece só no destino, com o aviso "
+            },
+            {
+              "type": "text",
+              "text": "Recurso não incluído no seu plano",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e o botão "
+            },
+            {
+              "type": "text",
+              "text": "Falar com o comercial",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Na barra lateral não há cadeado"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Etapa, sentimento e intenção de compra somem sem nenhum aviso — se você procura um desses campos e não o encontra, é provável que seja o contrato, não um erro."
+        }
+      ],
+      "title": "Dentro da conversa o bloqueio é silencioso"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Vincular canais é permitido"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mesmo sem o módulo, a lista de Distribuição permite "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar canal",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Remover do chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", sem limite de quantidade. O que fica bloqueado é o detalhe do canal — SLA, distribuição automática, horário de atendimento e agentes."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Canal de e-mail não tem a opção de remover."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Se você perder a navegação nas Configurações"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Estando na lista de Distribuição, as demais seções continuam aparecendo como links normais. Ao clicar em qualquer uma delas, a tela inteira — menu incluído — é trocada pelo aviso de recurso não incluído. Use o botão "
+        },
+        {
+          "type": "text",
+          "text": "Voltar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para retomar."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "atendimento/pipeline/visao-geral",
+          "description": "O que o Pipeline faz quando está disponível."
+        },
+        {
+          "ref": "atendimento/distribuicao/visao-geral",
+          "description": "A distribuição de conversas."
+        }
+      ]
+    }
+  ]
+}

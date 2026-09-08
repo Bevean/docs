@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Catálogo de relatórios",
   "subtitle": "A lista completa de relatórios de Receita & Vendas, Clientes & Base, Retenção & LTV, Produtos e Mensageria.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "catálogo de relatórios",
     "lista de relatórios",
@@ -20,11 +20,72 @@
       "content": [
         {
           "type": "text",
-          "text": "A lista completa de relatórios, organizada pelas mesmas 5 áreas que aparecem no catálogo dentro do produto. Para os relatórios de Atendimento, veja "
+          "text": "A lista completa do que existe em Relatórios. No produto, tudo fica numa tela só, com sete cartões no topo — "
         },
         {
           "type": "text",
-          "text": "o catálogo de Atendimento",
+          "text": "Favoritos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mais as seis áreas abaixo — além de busca por nome e um filtro de "
+        },
+        {
+          "type": "text",
+          "text": "Tipo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que separa "
+        },
+        {
+          "type": "text",
+          "text": "Análise",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " de "
+        },
+        {
+          "type": "text",
+          "text": "Relatório",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clicar num cartão filtra a lista; clicar de novo limpa. Os relatórios de Atendimento ficam no sétimo cartão e têm "
+        },
+        {
+          "type": "text",
+          "text": "catálogo próprio",
           "marks": [
             {
               "type": "docLink",
@@ -127,8 +188,36 @@
           {
             "content": "Receita de novos clientes vs. recorrentes."
           }
+        ],
+        [
+          {
+            "content": "Vendas por canal"
+          },
+          {
+            "content": "Receita e pedidos por canal."
+          }
+        ],
+        [
+          {
+            "content": "Vendas por estado"
+          },
+          {
+            "content": "Receita e pedidos por estado."
+          }
+        ],
+        [
+          {
+            "content": "Vendas por cidade"
+          },
+          {
+            "content": "Receita e pedidos por cidade."
+          }
         ]
       ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Os três relatórios de vendas por canal, estado e cidade têm um filtro próprio da dimensão, que aparece quando há mais de um valor no período."
     },
     {
       "type": "heading",
@@ -208,6 +297,14 @@
           },
           {
             "content": "Compradores por número de compras."
+          }
+        ],
+        [
+          {
+            "content": "Evolução da Base"
+          },
+          {
+            "content": "Entradas, saídas e crescimento líquido."
           }
         ]
       ]
@@ -439,14 +536,6 @@
           {
             "content": "Entrega, leitura, resposta e conexão do WhatsApp."
           }
-        ],
-        [
-          {
-            "content": "Evolução da Base"
-          },
-          {
-            "content": "Entradas, saídas e crescimento líquido."
-          }
         ]
       ]
     },
@@ -492,6 +581,41 @@
             {
               "type": "text",
               "text": ", é provável que o relatório esteja somando os dois motores."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O relatório de Campanhas e automações tem ainda filtros de "
+            },
+            {
+              "type": "text",
+              "text": "Tipo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " (campanha ou automação) e de "
+            },
+            {
+              "type": "text",
+              "text": "Canal",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
             }
           ]
         }

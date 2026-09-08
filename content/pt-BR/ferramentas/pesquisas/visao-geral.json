@@ -19,6 +19,17 @@
       "content": "Uma pesquisa mede satisfação (NPS, CSAT) e coleta dados que atualizam o cadastro do contato — três coisas em uma."
     },
     {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O produto sinaliza isso no menu, na listagem e no editor. O recurso está em uso, mas ainda deve mudar."
+        }
+      ],
+      "title": "Pesquisas está em Beta"
+    },
+    {
       "type": "paragraph",
       "content": [
         {

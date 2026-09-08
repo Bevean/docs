@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Catálogo de relatórios de Atendimento",
   "subtitle": "Os 14 relatórios do helpdesk: produtividade, SLA, CSAT, tabulação e sentimento.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "relatórios de atendimento",
     "csat",
@@ -17,6 +17,41 @@
     {
       "type": "paragraph",
       "content": "Os relatórios de Atendimento exigem a permissão de Análises e a de Atendimento juntas — sem as duas, essa área nem aparece no catálogo."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na lista, doze deles aparecem como "
+        },
+        {
+          "type": "text",
+          "text": "Análise",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e dois como "
+        },
+        {
+          "type": "text",
+          "text": "Relatório",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — o Relatório de SLA e o de Primeira resposta, que trazem a linha a linha em vez de números agregados."
+        }
+      ]
     },
     {
       "type": "paragraph",

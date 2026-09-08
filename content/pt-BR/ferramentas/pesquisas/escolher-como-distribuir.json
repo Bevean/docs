@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Escolher como distribuir a pesquisa",
   "subtitle": "Link individual (por automação ou campanha), link público com QR code, ou pesquisa anônima.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "distribuir pesquisa",
     "link individual",
@@ -134,6 +134,39 @@
     {
       "type": "paragraph",
       "content": "Depois de publicada, a própria tela da pesquisa mostra a URL pronta para copiar e divulgar onde quiser."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O link individual é pessoal e tem prazo.",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Cada contato recebe um endereço próprio, válido por 30 dias. Encaminhado para outra pessoa, ele mostra um aviso de que o link é pessoal; vencido, pede um link novo."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Ao usar o link da pesquisa numa mensagem de WhatsApp ou SMS sem anexar a pesquisa, a publicação é recusada. No e-mail essa verificação não alcança o corpo do modelo: o fluxo publica normalmente e o contato recebe um link vazio."
+        },
+        {
+          "type": "paragraph",
+          "content": "Ao montar um e-mail com o link da pesquisa, confira você mesmo que a pesquisa está anexada no passo de envio."
+        }
+      ],
+      "title": "Em e-mail, a proteção contra link vazio não funciona"
     }
   ]
 }
