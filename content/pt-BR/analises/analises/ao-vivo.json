@@ -1,0 +1,257 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Acompanhar a loja ao vivo",
+  "subtitle": "O que a tela em tempo real mostra, o painel de eventos e por que o mapa não é geolocalização.",
+  "updatedAt": "2026-09-08",
+  "tags": [
+    "ao vivo",
+    "tempo real",
+    "eventos"
+  ],
+  "related": [
+    "analises/analises/metricas",
+    "analises/analises/funil-de-conversao"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A tela Ao vivo mostra o que está acontecendo na loja agora: quem está navegando, de onde, o que está sendo comprado e cada evento conforme ele chega."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "no menu do app de relatórios, grupo "
+        },
+        {
+          "type": "text",
+          "text": "Eventos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " › "
+        },
+        {
+          "type": "text",
+          "text": "Ao vivo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". A janela é fixa: "
+        },
+        {
+          "type": "text",
+          "text": "últimos 30 minutos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a tela mostra"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Seis indicadores: Visitantes ativos, Total de vendas, Sessões, Pedidos, Páginas visitadas e Mensageria."
+        },
+        {
+          "content": "Comportamento do cliente — o funil do momento, com Carrinhos, Checkout e Pedidos."
+        },
+        {
+          "content": "Últimos produtos vendidos, Atividade por região e Últimos eventos."
+        },
+        {
+          "content": "Ao fundo, um globo ou um mapa, alternáveis no canto superior direito."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Vários desses blocos são atalhos: clicar leva ao relatório completo correspondente."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Abaixo de um certo tamanho de janela, a visualização geográfica e o alternador somem — os cartões continuam funcionando normalmente."
+        }
+      ],
+      "title": "O globo e o mapa só aparecem em tela grande"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Esse indicador conta os últimos 5 minutos, enquanto o resto da tela usa 30. É normal ele ser bem menor que \"Sessões\" — não é inconsistência."
+        }
+      ],
+      "title": "\"Visitantes ativos\" usa uma janela menor"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O painel de eventos"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão "
+        },
+        {
+          "type": "text",
+          "text": "Ver todos os eventos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " abre um painel com a linha do tempo completa:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Um gráfico de eventos por intervalo e três indicadores — eventos na janela, eventos por minuto e o tipo mais ativo."
+        },
+        {
+          "content": "Botões de janela: 15 min, 30 min, 60 min, 6 h e 24 h."
+        },
+        {
+          "content": "Pausar e retomar a atualização."
+        },
+        {
+          "content": "Filtro por tipo de evento, agrupado em Pedidos, Carrinho, Checkout, Navegação, Mensageria, Contatos e Outros."
+        },
+        {
+          "content": "Clicar numa linha expande os dados brutos daquele evento."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "O painel mostra os 100 eventos mais recentes."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Atualização e origem dos dados"
+    },
+    {
+      "type": "paragraph",
+      "content": "A tela se atualiza a cada 5 segundos, e pausa sozinha quando você troca de aba — voltando, ela retoma."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Bloco"
+        },
+        {
+          "content": "De onde vem"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Visitantes, sessões, páginas e eventos"
+          },
+          {
+            "content": "O script da Bevean instalado na loja."
+          }
+        ],
+        [
+          {
+            "content": "Total de vendas, pedidos e produtos vendidos"
+          },
+          {
+            "content": "Os pedidos sincronizados da integração, de qualquer origem."
+          }
+        ],
+        [
+          {
+            "content": "Atividade por região, globo e mapa"
+          },
+          {
+            "content": "O endereço cadastrado do contato."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A posição vem do endereço no cadastro do contato, não do IP de quem está navegando — e é aproximada, ancorada na capital do estado."
+        },
+        {
+          "type": "paragraph",
+          "content": "Contato sem estado preenchido, ou fora do Brasil, não aparece no mapa nem em Atividade por região. Visitante não identificado também não."
+        }
+      ],
+      "title": "O mapa não é geolocalização"
+    },
+    {
+      "type": "paragraph",
+      "content": "Sem o script instalado, os números de visitantes, sessões e páginas não aparecem, e a tela sinaliza que o script não foi identificado."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "analises/analises/metricas",
+          "description": "O histórico dos mesmos eventos."
+        },
+        {
+          "ref": "analises/analises/funil-de-conversao",
+          "description": "O funil completo, com diagnóstico."
+        }
+      ]
+    }
+  ]
+}

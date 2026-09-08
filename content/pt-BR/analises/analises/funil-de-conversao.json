@@ -1,0 +1,285 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Funil de conversão",
+  "subtitle": "As etapas da visita à compra aprovada, o diagnóstico por etapa e o cuidado ao comparar as duas metades.",
+  "updatedAt": "2026-09-08",
+  "tags": [
+    "funil",
+    "conversão",
+    "e-commerce"
+  ],
+  "related": [
+    "analises/analises/ao-vivo",
+    "analises/analises/metricas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O Funil de conversão mostra onde a loja perde venda entre a visita e o pagamento aprovado, e sugere qual etapa consertar primeiro."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "no menu do app de relatórios, grupo "
+        },
+        {
+          "type": "text",
+          "text": "E-commerce",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " › "
+        },
+        {
+          "type": "text",
+          "text": "Funil de Conversão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As etapas"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Etapa"
+        },
+        {
+          "content": "De onde vem"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Visitantes"
+          },
+          {
+            "content": "Script da loja"
+          }
+        ],
+        [
+          {
+            "content": "Produtos visualizados"
+          },
+          {
+            "content": "Script da loja"
+          }
+        ],
+        [
+          {
+            "content": "Carrinhos"
+          },
+          {
+            "content": "Script da loja"
+          }
+        ],
+        [
+          {
+            "content": "Checkouts"
+          },
+          {
+            "content": "Script da loja — a etapa só aparece quando houve checkout no período"
+          }
+        ],
+        [
+          {
+            "content": "Pedidos"
+          },
+          {
+            "content": "Integração de e-commerce"
+          }
+        ],
+        [
+          {
+            "content": "Compras aprovadas"
+          },
+          {
+            "content": "Integração de e-commerce"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Entre cada par de etapas aparece a taxa de passagem, com um selo de status calculado sobre faixas de referência — o selo tem um tooltip que mostra a faixa usada."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Saúde do funil e diagnóstico"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No topo, um cartão resume a situação em uma palavra — "
+        },
+        {
+          "type": "text",
+          "text": "Excelente",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Saudável",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Atenção",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "Crítico",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — junto da conversão geral e da receita aprovada, comparadas com o período anterior."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada transição com problema traz um botão "
+        },
+        {
+          "type": "text",
+          "text": "Diagnóstico",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", já aberto quando o status é Atenção ou Crítica, com uma explicação do que costuma causar aquela perda e sugestões de onde mexer. As etapas problemáticas são numeradas por prioridade, da pior para a melhor."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Na etapa de pagamento há dois blocos a mais: a aprovação por método de pagamento e o destino dos pedidos não aprovados, separando pendentes, reprovados e cancelados."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Filtros"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Plataforma — multi-seleção, já preenchida com os canais de e-commerce. Ela afeta só as etapas de pedido; a navegação vem do script e não tem canal."
+        },
+        {
+          "content": "Período — o padrão aqui é últimos 7 dias, diferente da maioria dos relatórios."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Este relatório não tem agrupamento, exportação em CSV nem estrela de favoritar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Por que a taxa pode passar de 100%"
+    },
+    {
+      "type": "paragraph",
+      "content": "O topo do funil vem do script da loja e a base vem dos pedidos da integração. Pedido feito fora do site — loja física, WhatsApp, ERP — entra na base sem nunca ter passado pela navegação. A própria tela sinaliza a troca de fonte na transição onde isso acontece."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "As etapas de pedido incluem o dia corrente; as de navegação, não. Em períodos curtos, como o padrão de 7 dias, isso infla a base do funil em relação ao topo."
+        },
+        {
+          "type": "paragraph",
+          "content": "Para comparar as duas metades com justiça, prefira um período que termine ontem."
+        }
+      ],
+      "title": "O dia de hoje pesa diferente nas duas metades"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "analises/analises/ao-vivo",
+          "description": "O funil do momento, em tempo real."
+        },
+        {
+          "ref": "analises/analises/metricas",
+          "description": "Os eventos que alimentam o topo do funil."
+        }
+      ]
+    }
+  ]
+}

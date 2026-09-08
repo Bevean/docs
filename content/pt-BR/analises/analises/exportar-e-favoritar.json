@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Exportar e favoritar um relatório",
   "subtitle": "O CSV pronto para o Excel em português, e como favoritar um relatório para achar mais rápido depois.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-08",
   "tags": [
     "exportar csv",
     "favoritar relatório"
@@ -22,7 +22,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Botão "
+          "text": "Onde existe, o botão "
         },
         {
           "type": "text",
@@ -35,9 +35,38 @@
         },
         {
           "type": "text",
-          "text": " — some sozinho quando não há nenhuma linha para exportar. O arquivo já sai pronto para abrir no Excel em português (separado por ponto e vírgula, vírgula decimal)."
+          "text": " some sozinho quando não há linha nenhuma para exportar. O arquivo já sai pronto para abrir no Excel em português, separado por ponto e vírgula e com vírgula decimal."
         }
       ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Nem todo relatório exporta.",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Cerca de vinte telas têm o botão. Ficam de fora, entre outras, a Qualidade de cadastro geral, a Visão geral do atendimento, o CSAT, as telas de safra e de RFV, e as três telas de Métricas, Ao vivo e Funil de conversão."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Nesses dois o botão fica sempre visível, apenas desabilitado quando não há linhas — e a exportação baixa o resultado inteiro, até cinco mil linhas, não apenas a página que está na tela."
+        }
+      ],
+      "title": "No Relatório de SLA e na Primeira resposta é diferente"
     },
     {
       "type": "callout",
@@ -61,6 +90,10 @@
     {
       "type": "paragraph",
       "content": "O favorito é salvo na sua conta, não só no seu navegador — continua lá se você trocar de computador."
+    },
+    {
+      "type": "paragraph",
+      "content": "Métricas, Ao vivo e Funil de conversão não têm estrela: elas ficam no menu lateral, fora do catálogo de relatórios."
     }
   ]
 }

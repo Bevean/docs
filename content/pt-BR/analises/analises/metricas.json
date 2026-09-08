@@ -1,0 +1,266 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Ver os eventos rastreados",
+  "subtitle": "O catálogo de eventos da conta, o detalhe de cada um em três abas e por que o dia de hoje não soma.",
+  "updatedAt": "2026-09-08",
+  "tags": [
+    "métricas",
+    "eventos",
+    "tracker"
+  ],
+  "related": [
+    "analises/analises/ao-vivo",
+    "analises/analises/catalogo-de-relatorios"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Métricas é o catálogo dos eventos que a sua conta registra: quantas vezes cada um aconteceu, quantos contatos o dispararam e quando foi a última vez."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "no menu do app de relatórios, grupo "
+        },
+        {
+          "type": "text",
+          "text": "Eventos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " › "
+        },
+        {
+          "type": "text",
+          "text": "Métricas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A tela"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "No topo, três indicadores — Total de eventos, Contatos e Tipos de evento — e um gráfico de eventos por dia."
+        },
+        {
+          "content": "Abaixo, a tabela com uma linha por tipo de evento: Métrica, Tipo de evento, Contagem, Contatos e Última atividade."
+        },
+        {
+          "content": "Clique no cabeçalho de qualquer coluna para ordenar. A lista começa pela maior contagem."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Há busca por nome e um filtro que separa os eventos em "
+        },
+        {
+          "type": "text",
+          "text": "E-commerce",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Mensageria",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "CRM",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O botão "
+        },
+        {
+          "type": "text",
+          "text": "Exportar CSV",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " leva as linhas como estão filtradas e ordenadas."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A janela é sempre dos últimos 30 dias até ontem. Um evento que acabou de acontecer aparece em "
+            },
+            {
+              "type": "text",
+              "text": "Última atividade",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " como \"há poucos minutos\", mas não soma na Contagem no mesmo dia — isso é esperado, não é atraso de processamento."
+            }
+          ]
+        }
+      ],
+      "title": "O dia de hoje não entra na contagem"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O detalhe de um evento"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clicar numa linha abre o evento em três abas:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aba"
+        },
+        {
+          "content": "O que mostra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Evolução"
+          },
+          {
+            "content": "O gráfico do evento no tempo, com alternância entre Total e Pessoas, e o seletor de período."
+          }
+        ],
+        [
+          {
+            "content": "Melhores contatos"
+          },
+          {
+            "content": "Quem mais disparou o evento, com a contagem — e o valor, em eventos de pedido e checkout."
+          }
+        ],
+        [
+          {
+            "content": "Atividades"
+          },
+          {
+            "content": "Os eventos um a um, do mais recente para o mais antigo, com contato e horário."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Em eventos de segmento, campanha, produto ou categoria aparece também um filtro pela dimensão correspondente."
+        },
+        {
+          "content": "Melhores contatos mostra no máximo 50 linhas e ignora eventos de visitantes não identificados."
+        },
+        {
+          "content": "Atividades não segue o período escolhido: ela filtra por uma data \"em ou antes de\", e traz 25 por página."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "De onde vêm os eventos"
+    },
+    {
+      "type": "paragraph",
+      "content": "De três origens que alimentam a mesma base: o script da Bevean instalado na loja (navegação, produto, carrinho), a integração de e-commerce (pedidos) e o próprio CRM (mensagens, segmentos, contatos)."
+    },
+    {
+      "type": "paragraph",
+      "content": "Sem o script na loja, os eventos de navegação não aparecem no catálogo — a lista só mostra o que existe no período."
+    },
+    {
+      "type": "paragraph",
+      "content": "A tela não se atualiza sozinha: recarregue para ver dados novos. E não há estrela de favoritar aqui, porque Métricas não é um relatório do catálogo."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "analises/analises/ao-vivo",
+          "description": "Os mesmos eventos, em tempo real."
+        },
+        {
+          "ref": "analises/analises/catalogo-de-relatorios",
+          "description": "Os relatórios do catálogo."
+        }
+      ]
+    }
+  ]
+}
