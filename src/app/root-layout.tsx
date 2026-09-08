@@ -72,9 +72,12 @@ export function RootLayout() {
                 <a
                   key={item.href}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[13px] text-muted-foreground hover:text-foreground"
                 >
                   {item.label}
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               ))}
             </nav>
@@ -128,9 +131,13 @@ export function RootLayout() {
                   <a
                     key={item.href}
                     href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMenuOpen(false)}
                     className="py-2 text-sm text-muted-foreground hover:text-foreground"
                   >
                     {item.label}
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 ))}
               </div>
