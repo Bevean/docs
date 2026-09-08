@@ -28,5 +28,8 @@ jobs:
 
       - uses: cloudflare/wrangler-action@v3
         with:
+          # A action instala a 3.90 por padrão, que ainda exige `main` e não
+          # publica Worker só de assets estáticos como o nosso.
+          wranglerVersion: "4.129.1"
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
