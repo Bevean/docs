@@ -1,0 +1,438 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Suprimir contatos em massa",
+  "subtitle": "Limpar a base por filtro, com prévia antes de confirmar e acompanhamento em segundo plano.",
+  "updatedAt": "2026-09-08",
+  "tags": [
+    "supressão em massa",
+    "limpeza de base",
+    "higienização"
+  ],
+  "related": [
+    "audiencia/contatos/suprimir-ou-excluir-um-contato",
+    "audiencia/contatos/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A supressão em massa tira da operação, de uma vez, todos os contatos que atendem a um filtro — sem apagar nada."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.customers"
+          }
+        },
+        {
+          "type": "text",
+          "text": " › "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " › "
+        },
+        {
+          "type": "text",
+          "text": "Ver contatos suprimidos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " › "
+        },
+        {
+          "type": "text",
+          "text": "Suprimir contatos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O passo a passo"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Monte o filtro",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Você escolhe quem sai montando condições na hora — não é seleção de linhas na lista, e a operação não cria segmento. Sem nenhuma condição, o cálculo não fica disponível."
+            }
+          ]
+        },
+        {
+          "title": "Decida sobre quem teve atividade recente",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A opção "
+                },
+                {
+                  "type": "text",
+                  "text": "Suprimir só os inativos",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " vem marcada e protege quem comprou ou clicou em alguma mensagem nos últimos 180 dias."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Clique em Calcular audiência",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean mostra quantos contatos serão suprimidos antes de qualquer coisa acontecer."
+            }
+          ]
+        },
+        {
+          "title": "Confirme",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O botão passa a mostrar quantos contatos serão suprimidos. A limpeza começa em segundo plano e o histórico abre sozinho."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O botão de confirmação só existe depois da prévia. E mexer no filtro ou na opção de inativos depois de calcular zera a prévia — o botão volta a ser "
+            },
+            {
+              "type": "text",
+              "text": "Calcular audiência",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", para você não confirmar um número que já não corresponde ao filtro."
+            }
+          ]
+        }
+      ],
+      "title": "Sem calcular, não há como confirmar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a prévia mostra"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Situação"
+        },
+        {
+          "content": "O que aparece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Com \"Suprimir só os inativos\" marcada"
+          },
+          {
+            "content": "O total que será suprimido, mais um aviso de que os contatos com atividade recente estão protegidos — sem número."
+          }
+        ],
+        [
+          {
+            "content": "Com a opção desmarcada"
+          },
+          {
+            "content": "O total, mais um alerta em vermelho dizendo quantos desses compraram ou clicaram nos últimos 180 dias, com um atalho para proteger esse grupo."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Contatos que voltaram à base nos últimos 90 dias não entram na supressão e também não entram na contagem — a própria tela avisa isso acima do filtro."
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se o número vier abaixo do esperado, é o primeiro lugar a olhar. Veja "
+            },
+            {
+              "type": "text",
+              "text": "a carência de 90 dias",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "audiencia/contatos/suprimir-ou-excluir-um-contato"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "A prévia pode mostrar menos do que o seu filtro"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Acompanhar a limpeza"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A limpeza roda em segundo plano, em lotes, e o "
+        },
+        {
+          "type": "text",
+          "text": "Histórico de limpeza",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra o andamento. Ele se atualiza sozinho enquanto houver limpeza em andamento, e há um botão de atualizar manual."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada limpeza aparece como um cartão com o estado — "
+        },
+        {
+          "type": "text",
+          "text": "Processando",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Concluída",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "Falhou",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " —, quantos contatos foram processados do total, quantos foram suprimidos, se a audiência veio de filtro ou de segmento, e quem pediu."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Uma limpeza que falha no meio não desfaz o que já suprimiu."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A lista de contatos suprimidos"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A mesma tela lista quem está suprimido, com Nome, E-mail, Telefone, o "
+        },
+        {
+          "type": "text",
+          "text": "Motivo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e quando foi suprimido. O motivo é "
+        },
+        {
+          "type": "text",
+          "text": "Manual",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", quando veio da ficha do contato, ou "
+        },
+        {
+          "type": "text",
+          "text": "Em massa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", quando veio de uma limpeza."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada linha tem um botão "
+        },
+        {
+          "type": "text",
+          "text": "Dessuprimir",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para devolver aquele contato à operação, e clicar na linha abre a ficha."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "No topo há um aviso fixo explicando como a supressão funciona — vale a leitura antes da primeira limpeza."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Limites"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Não há máximo de contatos por operação."
+        },
+        {
+          "content": "Filtro vazio é recusado: uma condição incompleta nunca vira \"a base inteira\"."
+        },
+        {
+          "content": "A supressão em massa, o histórico e o acesso a esta tela exigem a permissão de operações em massa de contatos."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "audiencia/contatos/suprimir-ou-excluir-um-contato",
+          "description": "O que a supressão faz com cada contato."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+          "description": "O construtor de condições usado no filtro."
+        }
+      ]
+    }
+  ]
+}

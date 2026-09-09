@@ -1,22 +1,22 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Suprimir ou excluir um contato",
-  "subtitle": "A diferença entre suprimir (reversível) e excluir (definitivo), individualmente ou em massa.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "A diferença entre suprimir e excluir, o que a supressão alcança, e como um contato volta à operação.",
+  "updatedAt": "2026-09-08",
   "tags": [
     "suprimir contato",
     "excluir contato",
-    "limpeza de base",
-    "supressão em massa"
+    "dessuprimir",
+    "carência"
   ],
   "related": [
-    "audiencia/contatos/visao-geral",
-    "audiencia/contatos/importar-e-exportar-contatos"
+    "audiencia/contatos/suprimir-contatos-em-massa",
+    "audiencia/contatos/visao-geral"
   ],
   "body": [
     {
       "type": "paragraph",
-      "content": "A Bevean tem dois jeitos de tirar um contato de circulação — um reversível, outro não. Escolha pelo que você realmente precisa."
+      "content": "A Bevean tem dois jeitos de tirar um contato de circulação — um reversível, outro não."
     },
     {
       "type": "table",
@@ -25,7 +25,7 @@
           "content": "Ação"
         },
         {
-          "content": "O que acontece"
+          "content": "O que faz"
         }
       ],
       "rows": [
@@ -34,7 +34,7 @@
             "content": "Suprimir"
           },
           {
-            "content": "O contato sai da segmentação, dos disparos e da contagem da base. O histórico continua inteiro, e a ação é reversível a qualquer momento."
+            "content": "O contato sai da operação, mas continua na base com todo o histórico. Reversível."
           }
         ],
         [
@@ -53,7 +53,7 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "Se o contato tem pelo menos um pedido, a Bevean recusa a exclusão e recomenda suprimir no lugar — é a forma de preservar o histórico de vendas."
+          "content": "A Bevean recusa a exclusão e recomenda suprimir no lugar — é assim que o histórico de vendas fica preservado. Suprimir, esse sim, funciona com qualquer contato."
         }
       ],
       "title": "Contato com pedido não pode ser excluído"
@@ -61,7 +61,7 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "Suprimir ou excluir um contato"
+      "content": "Suprimir um contato"
     },
     {
       "type": "paragraph",
@@ -77,11 +77,24 @@
         },
         {
           "type": "text",
-          "text": "na ficha do contato, "
+          "text": "na ficha do contato, em "
         },
         {
           "type": "text",
           "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " › "
+        },
+        {
+          "type": "text",
+          "text": "Suprimir contato",
           "marks": [
             {
               "type": "bold"
@@ -96,10 +109,27 @@
     },
     {
       "type": "paragraph",
+      "content": "A confirmação explica o que vai acontecer: o contato continua existindo com todo o histórico, sai da segmentação, dos disparos e da contagem da base, e os disparos já agendados para ele são cancelados."
+    },
+    {
+      "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "text": "Ao suprimir, a Bevean cancela os disparos já agendados para esse contato — eles não são reenviados quando você reverte. Reverter só volta a torná-lo elegível para novos envios. Depois de suprimido, o mesmo menu mostra "
+          "text": "Depois de suprimido, a ficha ganha o selo "
+        },
+        {
+          "type": "text",
+          "text": "Suprimido",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e o mesmo menu passa a mostrar "
         },
         {
           "type": "text",
@@ -112,158 +142,66 @@
         },
         {
           "type": "text",
-          "text": " e a ficha ganha um selo \"Suprimido\"."
+          "text": "."
         }
       ]
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Suprimir vários contatos de uma vez"
+      "content": "O que a supressão alcança"
     },
     {
-      "type": "paragraph",
-      "content": [
+      "type": "table",
+      "head": [
         {
-          "type": "text",
-          "text": "Onde fica: ",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "content": "O contato…"
         },
         {
-          "type": "uiPath",
-          "attrs": {
-            "ref": "audience.customers"
+          "content": "Detalhe"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Some da lista de contatos"
+          },
+          {
+            "content": "E também dos seletores — ao criar um pedido ou iniciar uma conversa, ele não aparece para escolher."
           }
-        },
-        {
-          "type": "text",
-          "text": " → "
-        },
-        {
-          "type": "text",
-          "text": "Mais ações",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " → "
-        },
-        {
-          "type": "text",
-          "text": "Ver contatos suprimidos",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " → "
-        },
-        {
-          "type": "text",
-          "text": "Suprimir contatos",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    },
-    {
-      "type": "steps",
-      "items": [
-        {
-          "title": "Monte o filtro de quem deve ser suprimido"
-        },
-        {
-          "title": "Decida sobre contatos recentes",
-          "body": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "A opção "
-                },
-                {
-                  "type": "text",
-                  "text": "Suprimir só os inativos",
-                  "marks": [
-                    {
-                      "type": "bold"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " vem marcada por padrão e protege quem comprou ou clicou em algo nos últimos 180 dias."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "Clique em Calcular audiência",
-          "body": [
-            {
-              "type": "paragraph",
-              "content": "A Bevean mostra quantos contatos serão suprimidos e quantos estão protegidos por atividade recente, antes de qualquer coisa acontecer."
-            }
-          ]
-        },
-        {
-          "title": "Confirme a supressão em massa"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "A supressão em massa roda em segundo plano — acompanhe o progresso em "
-        },
-        {
-          "type": "text",
-          "text": "Histórico de limpeza",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": ". A tela de contatos suprimidos também tem um botão de "
-        },
-        {
-          "type": "text",
-          "text": "Dessuprimir",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " por linha, para reverter individualmente."
-        }
+        ],
+        [
+          {
+            "content": "Sai da segmentação"
+          },
+          {
+            "content": "Não entra em segmento dinâmico nem em audiência de campanha, e não é contado no tamanho do segmento."
+          }
+        ],
+        [
+          {
+            "content": "Para de receber"
+          },
+          {
+            "content": "Não entra em automação nem em fluxo. Os envios já programados para ele são cancelados, não apenas bloqueados."
+          }
+        ],
+        [
+          {
+            "content": "Sai da contagem da base"
+          },
+          {
+            "content": "O card de total de contatos e o relatório de saúde da base deixam de contá-lo."
+          }
+        ],
+        [
+          {
+            "content": "Mantém tudo o que já tinha"
+          },
+          {
+            "content": "Pedidos, conversas, notas e a linha do tempo continuam intactos, e a ficha continua abrindo."
+          }
+        ]
       ]
     },
     {
@@ -272,7 +210,116 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "Depois de suprimido, o contato não volta a aparecer sozinho mesmo que a integração ou a loja sincronize esse cliente de novo — reverter é sempre manual."
+          "content": "O que muda são os números de estoque — quantos contatos você tem hoje. As métricas com data continuam como estavam: contatos novos de um período, descadastros, pedidos e recompra não se alteram ao suprimir."
+        },
+        {
+          "type": "paragraph",
+          "content": "Por isso, suprimir duzentos mil contatos não faz o relatório do mês passado encolher."
+        }
+      ],
+      "title": "Os relatórios só mudam em parte"
+    },
+    {
+      "type": "paragraph",
+      "content": "A sincronização da integração também não desfaz a supressão: mesmo que a loja mande o cliente de novo, ele continua suprimido."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Voltar à operação"
+    },
+    {
+      "type": "paragraph",
+      "content": "Há dois caminhos, um manual e um automático:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Caminho"
+        },
+        {
+          "content": "Quando acontece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Dessuprimir"
+          },
+          {
+            "content": "Manual, pela ficha do contato ou pela lista de contatos suprimidos."
+          }
+        ],
+        [
+          {
+            "content": "Pedido novo"
+          },
+          {
+            "content": "Automático. Um contato suprimido que faz um pedido volta sozinho para a base."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A reativação só acontece com pedido mais recente que a supressão. Sincronizar pedidos antigos, ou conectar uma integração pela primeira vez, não traz os suprimidos de volta."
+        }
+      ],
+      "title": "Importar histórico antigo não reativa ninguém"
+    },
+    {
+      "type": "paragraph",
+      "content": "Voltar à operação não mexe no opt-in: quem estava descadastrado continua descadastrado, e segue sem receber mensagem mesmo ativo de novo."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A carência de 90 dias"
+    },
+    {
+      "type": "paragraph",
+      "content": "Depois de voltar à base — por qualquer um dos dois caminhos — o contato não pode ser suprimido de novo por 90 dias."
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Na ficha, o item Suprimir contato aparece desabilitado, dizendo quando ele voltou e a partir de quando poderá ser suprimido outra vez."
+        },
+        {
+          "content": "Na supressão em massa a carência é silenciosa: esses contatos são retirados da audiência antes da conta, e não aparecem no número da prévia."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A carência só impede suprimir. Dessuprimir e todo o resto continuam funcionando normalmente."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quem pode fazer"
+    },
+    {
+      "type": "paragraph",
+      "content": "Suprimir e dessuprimir um contato exigem permissão de escrita de contatos. A supressão em massa, o histórico de limpeza e o próprio acesso à lista de suprimidos exigem a permissão de operações em massa."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "audiencia/contatos/suprimir-contatos-em-massa",
+          "description": "Limpar a base de uma vez, por filtro."
+        },
+        {
+          "ref": "audiencia/contatos/visao-geral",
+          "description": "A ficha do contato."
         }
       ]
     }
