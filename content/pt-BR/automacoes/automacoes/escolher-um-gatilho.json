@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Escolher um gatilho",
   "subtitle": "O evento que coloca o contato dentro da automação, e o que cada um dos gatilhos disponíveis significa.",
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-09-15",
   "tags": [
     "automacoes",
     "gatilho",
@@ -475,6 +475,17 @@
         ],
         [
           {
+            "content": "Crédito"
+          },
+          {
+            "content": "Cashback expirou"
+          },
+          {
+            "content": "O saldo de cashback do contato vence sem ser usado."
+          }
+        ],
+        [
+          {
             "content": "Atendimento"
           },
           {
@@ -603,7 +614,7 @@
             "content": "Crédito expirando"
           },
           {
-            "content": "Existirem janelas de aviso configuradas no cashback. Sem nenhuma janela, o gatilho nunca dispara — a própria tela avisa isso."
+            "content": "A automação definir os dias em Quando avisar, ou o cashback ter antecedências configuradas. Sem um dos dois, o gatilho nunca dispara — a própria tela avisa isso."
           }
         ],
         [
