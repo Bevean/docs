@@ -1,14 +1,13 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a VTEX",
-  "subtitle": "Os três valores que a VTEX pede, e por que o carrinho abandonado depende de uma configuração manual que os pedidos não precisam.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "Gerar a chave de API com as permissões certas, conectar, e instalar os dois códigos que o carrinho abandonado exige.",
+  "updatedAt": "2026-09-15",
   "tags": [
     "vtex",
-    "account",
-    "app key",
-    "app token",
-    "master data"
+    "integração",
+    "e-commerce",
+    "carrinho abandonado"
   ],
   "related": [
     "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
@@ -17,25 +16,7 @@
   "body": [
     {
       "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "O resultado é a loja VTEX aparecendo como "
-        },
-        {
-          "type": "text",
-          "text": "Ativo",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " na lista de integrações."
-        }
-      ]
+      "content": "O resultado é a loja VTEX aparecendo como Ativo na lista de integrações, com clientes, pedidos e produtos sincronizando sozinhos."
     },
     {
       "type": "paragraph",
@@ -52,22 +33,66 @@
         {
           "type": "uiPath",
           "attrs": {
-            "ref": "integrations"
+            "ref": "settings.integrations"
           }
         },
         {
           "type": "text",
-          "text": ". Antes de conectar, veja "
+          "text": " — procure por VTEX e clique em Instalar."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Antes de começar"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Acesso ao Admin da VTEX com permissão para gerenciar chaves de API — normalmente o usuário Master da conta."
+        },
+        {
+          "content": "O nome da conta VTEX, que aparece na URL do Admin: em minhaloja.myvtex.com, a conta é minhaloja."
+        },
+        {
+          "content": "Na Bevean, permissão para gerenciar integrações."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 1: gerar a chave de API na VTEX"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A VTEX autentica integrações com um par de credenciais — "
         },
         {
           "type": "text",
-          "text": "como funcionam as integrações",
+          "text": "App Key",
           "marks": [
             {
-              "type": "docLink",
-              "attrs": {
-                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
-              }
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "App Token",
+          "marks": [
+            {
+              "type": "bold"
             }
           ]
         },
@@ -78,28 +103,21 @@
       ]
     },
     {
-      "type": "heading",
-      "level": 2,
-      "content": "Gerar as credenciais na VTEX"
-    },
-    {
       "type": "steps",
       "items": [
         {
-          "title": "No Admin da VTEX, acesse Configurações da conta › Chaves de API"
-        },
-        {
-          "title": "Crie uma nova chave de API"
-        },
-        {
-          "title": "Copie três valores",
+          "title": "Abra as chaves de API",
           "body": [
             {
               "type": "paragraph",
               "content": [
                 {
                   "type": "text",
-                  "text": "Account",
+                  "text": "No Admin da VTEX, clique no avatar do seu perfil e vá em "
+                },
+                {
+                  "type": "text",
+                  "text": "Configurações da conta",
                   "marks": [
                     {
                       "type": "bold"
@@ -108,14 +126,27 @@
                 },
                 {
                   "type": "text",
-                  "text": " — o nome da conta VTEX, sem espaço e sem o sufixo "
+                  "text": " › "
                 },
                 {
                   "type": "text",
-                  "text": ".myvtex.com",
+                  "text": "Chaves de API",
                   "marks": [
                     {
-                      "type": "code"
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", na aba "
+                },
+                {
+                  "type": "text",
+                  "text": "Geradas",
+                  "marks": [
+                    {
+                      "type": "bold"
                     }
                   ]
                 },
@@ -124,13 +155,22 @@
                   "text": "."
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Gere uma chave nova",
+          "body": [
             {
               "type": "paragraph",
               "content": [
                 {
                   "type": "text",
-                  "text": "App Key",
+                  "text": "Clique em "
+                },
+                {
+                  "type": "text",
+                  "text": "+ Gerar chave",
                   "marks": [
                     {
                       "type": "bold"
@@ -139,11 +179,34 @@
                 },
                 {
                   "type": "text",
-                  "text": " e "
+                  "text": " e preencha a identificação — use algo como \"Bevean\", para reconhecer depois."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Copie a App Key",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Ela aparece na hora, nessa mesma tela."
+            }
+          ]
+        },
+        {
+          "title": "Copie o App Token pelo link de acesso único",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "O token não é exibido direto: a VTEX dá um link que só pode ser aberto "
                 },
                 {
                   "type": "text",
-                  "text": "App Token",
+                  "text": "uma vez",
                   "marks": [
                     {
                       "type": "bold"
@@ -152,7 +215,7 @@
                 },
                 {
                   "type": "text",
-                  "text": " — gerados junto com a chave."
+                  "text": " e expira em 24 horas. Abra o link e copie o token antes de sair da página."
                 }
               ]
             }
@@ -161,48 +224,346 @@
       ]
     },
     {
-      "type": "heading",
-      "level": 2,
-      "content": "Conectar na Bevean"
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Tanto o link quanto o App Token são de exibição única. Se o token se perder antes de você colar na Bevean, não há como recuperá-lo — é preciso gerar uma chave nova e descartar a anterior."
+        }
+      ],
+      "title": "Perdeu o token? Só gerando outra chave"
     },
     {
-      "type": "paragraph",
-      "content": "Informe os três valores e clique em Conectar."
-    },
-    {
       "type": "heading",
       "level": 2,
-      "content": "O que é sincronizado"
+      "content": "Passo 2: dar as permissões à chave"
     },
     {
       "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "text": "Veja em "
+          "text": "Uma chave recém-criada "
         },
         {
           "type": "text",
-          "text": "como funcionam as integrações",
+          "text": "não tem permissão nenhuma",
           "marks": [
             {
-              "type": "docLink",
-              "attrs": {
-                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
-              }
+              "type": "bold"
             }
           ]
         },
         {
           "type": "text",
-          "text": " o que cada tipo de dado significa."
+          "text": ". É o erro mais comum: as credenciais estão certas, a conexão falha, e o motivo é a chave não estar vinculada a um perfil de acesso."
         }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ainda em "
+        },
+        {
+          "type": "text",
+          "text": "Configurações da conta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", associe a chave a um perfil de acesso — existente ou criado para a Bevean — com estes acessos de leitura:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Acesso na VTEX"
+        },
+        {
+          "content": "Para que a Bevean usa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "MasterData — Clientes e Endereços"
+          },
+          {
+            "content": "Importar a base de clientes. É o que a Bevean testa ao conectar."
+          }
+        ],
+        [
+          {
+            "content": "ListOrders e OMSViewer"
+          },
+          {
+            "content": "Importar os pedidos."
+          }
+        ],
+        [
+          {
+            "content": "Feed v3 and Hook Admin"
+          },
+          {
+            "content": "Acompanhar os pedidos novos pelo feed."
+          }
+        ],
+        [
+          {
+            "content": "Catalog › Content"
+          },
+          {
+            "content": "Importar produtos, SKUs e categorias."
+          }
+        ],
+        [
+          {
+            "content": "Pricing › Price List"
+          },
+          {
+            "content": "Ler os preços dos produtos."
+          }
+        ],
+        [
+          {
+            "content": "Manage benefits and rates"
+          },
+          {
+            "content": "Criar cupons a partir da Bevean, quando você usa cashback ou cupom em campanha."
+          }
+        ]
       ]
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Carrinho abandonado é um caso à parte"
+      "content": "Passo 3: conectar na Bevean"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na tela da integração, preencha os três campos e clique em "
+        },
+        {
+          "type": "text",
+          "text": "Conectar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que preencher"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Account"
+          },
+          {
+            "content": "O nome da conta VTEX, sem espaços e sem o .myvtex.com."
+          }
+        ],
+        [
+          {
+            "content": "ApiKey"
+          },
+          {
+            "content": "A App Key gerada no passo 1."
+          }
+        ],
+        [
+          {
+            "content": "ApiToken"
+          },
+          {
+            "content": "O App Token gerado no passo 1."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Ao conectar, a Bevean faz uma chamada de teste à VTEX. Dando certo, a integração passa a Ativo e começa a importar clientes, pedidos e produtos."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Se a conexão falhar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Detalhe"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "A chave tem perfil de acesso?"
+          },
+          {
+            "content": "Sem perfil vinculado, a chave não retorna dado nenhum — mesmo com credencial correta."
+          }
+        ],
+        [
+          {
+            "content": "O Account está limpo?"
+          },
+          {
+            "content": "Sem espaços e sem o sufixo .myvtex.com."
+          }
+        ],
+        [
+          {
+            "content": "A chave e o token vieram inteiros?"
+          },
+          {
+            "content": "Copiar e colar costuma trazer espaço no fim."
+          }
+        ],
+        [
+          {
+            "content": "O token ainda é válido?"
+          },
+          {
+            "content": "Se o link de acesso único expirou sem ser aberto, o token nunca chegou a existir para você."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Carrinho abandonado: precisa do tracker"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A VTEX não entrega carrinho abandonado pela API, então esse dado só existe se você instalar o tracker da Bevean. E são "
+        },
+        {
+          "type": "text",
+          "text": "dois códigos diferentes",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", em dois lugares diferentes — a tela da integração gera os dois para você copiar."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Gere os códigos",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Na integração já conectada, use o botão que cria a chave pública e monta os dois códigos do tracker."
+            }
+          ]
+        },
+        {
+          "title": "Instale o código da vitrine",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Vai no Google Tag Manager da loja, como tag HTML personalizada, disparando em todas as páginas. Publique o container depois."
+            }
+          ]
+        },
+        {
+          "title": "Instale o código do checkout",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No painel da VTEX, em "
+                },
+                {
+                  "type": "text",
+                  "text": "Checkout",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " › "
+                },
+                {
+                  "type": "text",
+                  "text": "Código",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", abra o arquivo "
+                },
+                {
+                  "type": "text",
+                  "text": "checkout6-custom.js",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e cole o código do checkout — que é JavaScript puro, sem a tag de script."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "callout",
@@ -210,20 +571,83 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "A VTEX não tem um aviso automático nativo de pedido — a Bevean busca pedidos pelo ciclo periódico, não por aviso instantâneo. O único aviso automático que existe é o de carrinho abandonado, e ele depende de um Trigger de Master Data configurado manualmente dentro do Admin da VTEX — não é algo que a Bevean registra sozinha ao conectar."
+          "content": [
+            {
+              "type": "text",
+              "text": "O código da vitrine sozinho registra navegação e produto visto, mas não o carrinho. É a etapa do "
+            },
+            {
+              "type": "text",
+              "text": "checkout6-custom.js",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " que habilita o carrinho abandonado."
+            }
+          ]
         }
       ],
-      "title": "A VTEX não avisa sozinha sobre pedido — só sobre carrinho abandonado, e mesmo assim exige um passo manual"
+      "title": "Sem a etapa do checkout, o carrinho abandonado não funciona"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Antes do tracker, o carrinho abandonado da VTEX era configurado por um Trigger no Master Data que chamava um endereço da Bevean. Esse caminho continua funcionando para quem já o tem montado."
+        },
+        {
+          "type": "paragraph",
+          "content": "Para instalar agora, use o tracker: é o caminho que a própria tela da integração ensina."
+        }
+      ],
+      "title": "Lojas antigas podem usar um Trigger de Master Data"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os links de produto e de carrinho"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os links que a Bevean monta nas mensagens usam o domínio configurado na integração. Sem isso preenchido, eles caem no endereço padrão da VTEX ("
+        },
+        {
+          "type": "text",
+          "text": "suaconta.vtexcommercestable.com.br",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") — funciona, mas não é o domínio da sua loja. Vale conferir esse campo depois de conectar."
+        }
+      ]
     },
     {
       "type": "linkCards",
       "items": [
         {
+          "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+          "description": "O que cada tipo de dado significa e com que frequência sincroniza."
+        },
+        {
           "ref": "integracoes/lojas-e-erps/resolver-problemas",
-          "description": "Credenciais inválidas, ou dado que não chega."
+          "description": "Quando a sincronização para ou vem incompleta."
         }
-      ],
-      "title": "Próximos passos"
+      ]
     }
   ]
 }
