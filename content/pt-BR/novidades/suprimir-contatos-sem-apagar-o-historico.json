@@ -19,6 +19,23 @@
       "content": "Base grande costuma ter muito contato que não abre, não clica e não compra há anos. Até agora, tirar essa gente da operação só dava para fazer apagando — e apagar leva junto o histórico de vendas. A supressão resolve isso: o contato sai de circulação e continua na base."
     },
     {
+      "type": "pillars",
+      "items": [
+        {
+          "title": "Sai da operação",
+          "content": "Some da segmentação, dos disparos e da contagem de tamanho da base."
+        },
+        {
+          "title": "Mantém o histórico",
+          "content": "Pedidos, conversas, notas e linha do tempo continuam intactos."
+        },
+        {
+          "title": "Dá para voltar atrás",
+          "content": "Dessuprimir a qualquer momento — e um pedido novo traz o contato sozinho."
+        }
+      ]
+    },
+    {
       "type": "heading",
       "level": 2,
       "content": "Suprimir não é excluir",

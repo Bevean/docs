@@ -76,6 +76,23 @@
       ]
     },
     {
+      "type": "pillars",
+      "items": [
+        {
+          "title": "Reage só ao que importa",
+          "content": "Um fluxo que espera palavra-chave deixa de acordar quando chega uma figurinha."
+        },
+        {
+          "title": "Ouve quem prefere falar",
+          "content": "O áudio do contato vira texto e entra no mesmo filtro por palavra."
+        },
+        {
+          "title": "Sabe de onde ele veio",
+          "content": "Botão, anúncio, link rastreado ou story — cada origem pode abrir um caminho."
+        }
+      ]
+    },
+    {
       "type": "heading",
       "level": 2,
       "content": "Tipo de mensagem",
