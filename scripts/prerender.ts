@@ -11,6 +11,7 @@ import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { buildBreadcrumb } from '../src/content/breadcrumb.ts'
+import { DISPLAY_FONT_HREF } from '../src/app/display-font.ts'
 import { NEWS_COLLECTION, NEWS_SITE_TITLE, NEWS_TITLE } from '../src/content/news-collection.ts'
 import type { ContentManifest } from '../src/content/content-types.ts'
 
@@ -22,6 +23,7 @@ export interface PrerenderRoute {
   /** Caminho absoluto da rota, sem barra final. Ex.: "/ajuda/integracoes" */
   url: string
   title: string
+  displayFont?: boolean
   description?: string
   /** URL absoluta da imagem de compartilhamento. */
   image?: string
@@ -58,6 +60,14 @@ function renderHead(route: PrerenderRoute): string {
     `<meta property="og:url" content="${escapeHtml(canonical)}">`,
     `<meta name="twitter:card" content="${route.image ? 'summary_large_image' : 'summary'}">`
   ]
+
+  if (route.displayFont) {
+    tags.push(
+      `<link rel="preconnect" href="https://fonts.googleapis.com">`,
+      `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`,
+      `<link rel="stylesheet" href="${escapeHtml(DISPLAY_FONT_HREF)}">`
+    )
+  }
 
   if (route.description) {
     tags.push(
@@ -153,6 +163,7 @@ function routesFromManifest(manifest: ContentManifest): PrerenderRoute[] {
   const collections = manifest.collections.map<PrerenderRoute>((c) => ({
     url: c.url,
     title: isDrop(c.path) ? NEWS_TITLE : `${c.title} — ${SITE_TITLE}`,
+    displayFont: isDrop(c.path),
     description: c.description,
     jsonLd: isDrop(c.path)
       ? []
@@ -168,6 +179,7 @@ function routesFromManifest(manifest: ContentManifest): PrerenderRoute[] {
   const articles = Object.values(manifest.articles).map<PrerenderRoute>((a) => ({
     url: a.url,
     title: isDrop(a.collection) ? `${a.title} — ${NEWS_SITE_TITLE}` : `${a.title} — ${SITE_TITLE}`,
+    displayFont: isDrop(a.collection),
     description: a.subtitle,
     jsonLd: isDrop(a.collection)
       ? [

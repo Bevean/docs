@@ -60,21 +60,7 @@ export function ArticlePage({ path }: { path: string }) {
         </div>
 
         <footer className="mt-12 border-t border-border pt-6 text-[13px] text-muted-foreground">
-          {meta.publishedAt ? (
-            <>
-              Publicado em <time dateTime={meta.publishedAt}>{longDate(meta.publishedAt)}</time>
-              {meta.updatedAt !== meta.publishedAt && (
-                <>
-                  {' · atualizado em '}
-                  <time dateTime={meta.updatedAt}>{longDate(meta.updatedAt)}</time>
-                </>
-              )}
-            </>
-          ) : (
-            <>
-              Atualizado em <time dateTime={meta.updatedAt}>{longDate(meta.updatedAt)}</time>
-            </>
-          )}
+          Atualizado em <time dateTime={meta.updatedAt}>{longDate(meta.updatedAt)}</time>
         </footer>
       </article>
 

@@ -142,7 +142,7 @@ pnpm content:check
 | `title` | sim | Máx. 120 caracteres. O nome que aparece na listagem e no `<title>` |
 | `updatedAt` | sim | `YYYY-MM-DD`. Data de hoje. O build recusa data no futuro (`L005`) |
 | `body` | sim | Ao menos um bloco |
-| `publishedAt` | só em Novidades | `YYYY-MM-DD` da data em que o recurso ficou disponível. Ordena a linha do tempo e não muda depois |
+| `publishedAt` | só em Novidades | `YYYY-MM-DD` da data em que o recurso ficou disponível. Ordena a linha do tempo e não muda depois. Fora de `novidades/` o build recusa (`L007`) |
 | `subtitle` | não | Uma frase dizendo o que a pessoa consegue fazer depois de ler |
 | `tags` | não | Termos de busca que não aparecem no texto ("2FA", "coex") |
 | `aliases` | não | Slugs antigos desta página; viram redirect 301 no build |
@@ -259,7 +259,7 @@ A numeração vem do CSS. **Nunca** escreva "1." no `title`.
 | `success` | Pré-requisito ou confirmação: "antes de investigar, confirme três coisas" |
 | `warning` | Limitação, comportamento inesperado, custo |
 | `danger` | Ação destrutiva ou irreversível |
-| `spotlight` | A frase que a pessoa precisa levar embora. Faixa de cor invertida, pesada de propósito — **um por página, no máximo** |
+| `spotlight` | A frase que a pessoa precisa levar embora. Faixa de cor invertida, pesada de propósito — **um por página, no máximo**. É dos drops: num artigo o validador avisa (`L010`) |
 
 Um callout por ideia. Três callouts seguidos viram ruído e o leitor para de vê-los.
 
@@ -339,8 +339,8 @@ De 2 a 4 cartões com a entrega inteira em uma frase cada. Existe para a primeir
 dobra de um drop de Novidades: quem só lê o topo tem de sair sabendo o que mudou.
 O `title` vai até 40 caracteres — é rótulo, não frase.
 
-Num artigo comum quase nunca cabe: se a pessoa veio aprender a fazer, ela quer os
-passos, não um resumo do que vai aprender.
+É bloco de drop. Num artigo o validador avisa (`L010`), e com razão: quem veio
+aprender a fazer quer os passos, não um resumo do que vai aprender.
 
 ### `divider`
 ```json
@@ -872,6 +872,8 @@ existe — o caminho real é Ferramentas › Cashback.
 | `R010` | Alias colide | Escolha outro alias |
 | `L005` | `updatedAt` ou `publishedAt` no futuro | Use a data de hoje |
 | `L006` | `publishedAt` depois de `updatedAt` | Um drop não pode ter sido anunciado depois da última revisão |
+| `L007` | `publishedAt` fora de `novidades/` | Num artigo a data é o `updatedAt`. Só drop tem data de anúncio |
+| `L010` (aviso) | `pillars` ou `callout spotlight` fora de `novidades/` | São do formato dos drops. Num artigo destoam do resto da documentação |
 | `L008` (aviso) | Artigo longo sem heading | Adicione headings; sem eles o sumário fica vazio |
 | `L009` (aviso) | Nome interno no texto do artigo | Troque pelo nome que aparece na tela, ou corte. Blocos de código não são checados |
 | `R012` | Nome de ícone desconhecido | Use um dos registrados, ou registre o novo em `src/app/content-icons.ts` |
@@ -971,6 +973,22 @@ Seções longas cansam num drop mais do que num artigo: quem lê anúncio está
 decidindo se aquilo importa. Se uma seção passou de três parágrafos, provavelmente
 ela é um artigo, e o drop só precisa apontar para ele.
 
+### O formato de drop não sai daqui
+
+Tudo nesta seção vale para `content/pt-BR/novidades/` e só para lá. A
+documentação continua como sempre foi: hierarquia de coleção e seção, sumário à
+direita, artigos irmãos na lateral, título do tamanho de sempre, sem hero e sem
+serifa.
+
+Não é questão de gosto. Um artigo é consultado — a pessoa chega com uma dúvida,
+procura a seção, lê o trecho e sai. Um drop é lido de cima a baixo, uma vez, por
+quem ainda não sabe se aquilo importa para ela. Quem mistura os dois entrega uma
+documentação que se anuncia e um anúncio que ninguém termina.
+
+O validador segura os dois vazamentos mais prováveis: `publishedAt` fora de
+`novidades/` é erro (`L007`), e `pillars` ou `callout spotlight` num artigo é
+aviso (`L010`).
+
 ### Novidades aqui e Novidades no CRM
 
 O CRM tem a própria página de Novidades (`/{handle}/news`): o Updates **semanal**,
@@ -1004,8 +1022,11 @@ Quem for mexer no código encontra isto:
 | `.drop-prose` em `src/globals.css` | A escala tipográfica do corpo num drop. Os blocos são os mesmos do artigo; o que muda é o contexto |
 | `src/routes.tsx` | `ajuda/novidades` e `ajuda/novidades/:drop` são rotas estáticas, declaradas antes das dinâmicas |
 
-A serifa dos títulos é a Lora, carregada no `index.html`. É a única fonte externa
-do site: se ela sair, o hero e os `heading` caem para a serifa do sistema.
+A serifa dos títulos é a Lora, a única fonte externa do site — e ela é carregada
+**só nas rotas de Novidades**: no `<head>` que o prerender escreve para elas, e
+pelo `useDisplayFont` quando se chega ali navegando por dentro. Uma página de
+documentação não paga por ela. Se a fonte sair, o hero e os `heading` caem para a
+serifa do sistema.
 
 ---
 

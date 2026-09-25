@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router'
+import { useDisplayFont } from '@/app/use-display-font.ts'
 import { useDocumentMeta } from '@/app/use-document-meta.ts'
 import { getCollection } from '@/content/content-repository.ts'
 import { NEWS_COLLECTION, NEWS_TITLE, dropDate, getDrops } from '@/content/news.ts'
@@ -65,6 +66,8 @@ function Featured({ drop }: { drop: ArticleMeta }) {
 export function NewsPage() {
   const collection = getCollection(NEWS_COLLECTION)
   const drops = getDrops()
+
+  useDisplayFont()
 
   useDocumentMeta(NEWS_TITLE, collection?.description)
 

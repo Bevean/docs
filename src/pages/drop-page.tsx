@@ -2,6 +2,7 @@ import { use } from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router'
 import type { Block, LinkCardsBlock } from '#schema'
+import { useDisplayFont } from '@/app/use-display-font.ts'
 import { useDocumentMeta } from '@/app/use-document-meta.ts'
 import {
   getArticleDoc,
@@ -17,6 +18,8 @@ import { NotFoundPage } from './not-found-page.tsx'
 export function DropPage({ path }: { path: string }) {
   const meta = getArticleMeta(path)
   const doc = getArticleDoc(path) ?? (meta ? use(loadArticleDoc(path)) : undefined)
+
+  useDisplayFont()
 
   useDocumentMeta(
     meta ? `${meta.title} — ${NEWS_SITE_TITLE}` : NEWS_SITE_TITLE,

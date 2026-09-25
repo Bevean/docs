@@ -20,6 +20,7 @@ import { buildBreadcrumb } from '../src/content/breadcrumb.ts'
 import { buildToc } from '../src/content/toc.ts'
 import { walkBlocks } from '../src/content/walk-blocks.ts'
 import { CONTENT_ICONS } from '../src/app/content-icons.ts'
+import { NEWS_COLLECTION } from '../src/content/news-collection.ts'
 import type {
   ArticleMeta,
   CollectionMeta,
@@ -266,6 +267,22 @@ export async function buildContent(): Promise<BuildResult> {
     }
     if (doc.publishedAt && new Date(doc.publishedAt) > new Date()) {
       issues.push({ file: rel(file), code: 'L005', level: 'error', message: `publishedAt "${doc.publishedAt}" está no futuro` })
+    }
+    if (doc.publishedAt && collectionSlug !== NEWS_COLLECTION) {
+      issues.push({ file: rel(file), code: 'L007', level: 'error', message: `publishedAt só existe em ${NEWS_COLLECTION}/ — num artigo a data é o updatedAt` })
+    }
+    if (collectionSlug !== NEWS_COLLECTION) {
+      walkBlocks(body, (block) => {
+        const soDrop =
+          block.type === 'pillars'
+            ? 'pillars'
+            : block.type === 'callout' && block.variant === 'spotlight'
+              ? 'callout spotlight'
+              : null
+        if (soDrop) {
+          issues.push({ file: rel(file), code: 'L010', level: 'warning', message: `${soDrop} é do formato dos drops de ${NEWS_COLLECTION}/ — num artigo ele destoa do resto da documentação` })
+        }
+      })
     }
     if (doc.publishedAt && new Date(doc.publishedAt) > new Date(doc.updatedAt)) {
       issues.push({ file: rel(file), code: 'L006', level: 'error', message: `publishedAt "${doc.publishedAt}" é depois de updatedAt "${doc.updatedAt}"` })
