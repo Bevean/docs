@@ -1,0 +1,442 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O gatilho de mensagem passou a saber o tipo, o áudio e a origem",
+  "subtitle": "Filtre por tipo de mensagem, procure palavra na transcrição do áudio e descubra se o contato veio de um anúncio, de um botão ou de um link rastreado.",
+  "updatedAt": "2026-09-25",
+  "publishedAt": "2026-09-21",
+  "tags": [
+    "Automações",
+    "Atendimento",
+    "Gatilhos"
+  ],
+  "related": [
+    "automacoes/automacoes/escolher-um-gatilho",
+    "automacoes/automacoes/filtrar-quem-entra"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O gatilho "
+        },
+        {
+          "type": "text",
+          "text": "Mensagem recebida",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " sabia apenas que alguém tinha escrito, e o quê. Agora ele sabe também "
+        },
+        {
+          "type": "text",
+          "text": "que tipo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " de mensagem chegou, "
+        },
+        {
+          "type": "text",
+          "text": "o que foi dito no áudio",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "de onde",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " a pessoa veio — e esses três dados viraram filtro e viraram variável."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Tipo de mensagem",
+      "anchor": "tipo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O filtro "
+        },
+        {
+          "type": "text",
+          "text": "Tipo de mensagem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " separa o que chegou: Texto, Áudio, Imagem, Vídeo, Documento, Figurinha, GIF, Compartilhamento e Não suportado."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "É o que resolve o caso mais comum de automação de atendimento disparando errado: um fluxo que responde a palavra-chave não precisa mais acordar quando o cliente manda só uma figurinha."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Transcrição do áudio",
+      "anchor": "transcricao"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando o contato manda um áudio, o texto transcrito chega junto no campo "
+        },
+        {
+          "type": "text",
+          "text": "Transcrição do áudio",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — dá para filtrar por palavra nele, igual ao texto escrito."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Um fluxo que procura \"cancelar\" ou \"segunda via\" passa a encontrar essas palavras também em quem preferiu falar em vez de digitar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "De onde a pessoa veio",
+      "anchor": "origem"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O campo "
+        },
+        {
+          "type": "text",
+          "text": "Origem da mensagem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " diz o que levou o contato a escrever:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "Clique em botão ou lista"
+          },
+          {
+            "content": "Ele respondeu tocando num botão ou escolhendo item de lista."
+          }
+        ],
+        [
+          {
+            "content": "Anúncio da Meta"
+          },
+          {
+            "content": "Veio de um anúncio de clique para o WhatsApp ou o Direct."
+          }
+        ],
+        [
+          {
+            "content": "Link rastreado"
+          },
+          {
+            "content": "Veio de um link gerado na Bevean."
+          }
+        ],
+        [
+          {
+            "content": "Resposta a story"
+          },
+          {
+            "content": "Respondeu a um story."
+          }
+        ],
+        [
+          {
+            "content": "Resposta citando mensagem"
+          },
+          {
+            "content": "Citou uma mensagem anterior ao responder."
+          }
+        ],
+        [
+          {
+            "content": "Mensagem direta"
+          },
+          {
+            "content": "Escreveu por conta própria, sem nada disso."
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Origem"
+        },
+        {
+          "content": "Significa"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "E junto vêm os detalhes daquela origem, cada um como filtro e como variável: "
+        },
+        {
+          "type": "text",
+          "text": "Texto do botão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "ID do botão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Título do anúncio",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "ID do anúncio",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Link de origem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Código do link",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tem ainda "
+        },
+        {
+          "type": "text",
+          "text": "Automação de origem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que distingue se o botão clicado era de uma automação da Bevean, de uma automação externa, ou de nenhuma."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Um fluxo por campanha de anúncio, sem link diferente para cada uma: filtre por "
+            },
+            {
+              "type": "text",
+              "text": "Título do anúncio",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e responda de um jeito para quem veio do anúncio de frete grátis e de outro para quem veio do de lançamento."
+            }
+          ]
+        }
+      ],
+      "title": "O que isso destrava"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que não mudou",
+      "anchor": "nao-mudou"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A rajada continua sendo um disparo só: cinco balões seguidos do mesmo contato viram um evento, e as mensagens chegam juntas em "
+        },
+        {
+          "type": "text",
+          "text": "Texto da mensagem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " com a "
+        },
+        {
+          "type": "text",
+          "text": "Quantidade de mensagens",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Quando a rajada tem tipos diferentes, o "
+        },
+        {
+          "type": "text",
+          "text": "Tipo de mensagem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " é o da primeira."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/escolher-um-gatilho",
+          "description": "Os gatilhos de conversa e o que cada um dispara."
+        },
+        {
+          "ref": "automacoes/automacoes/filtrar-quem-entra",
+          "description": "Os filtros do disparador, campo por campo."
+        },
+        {
+          "ref": "ferramentas/links/origem-da-conversa",
+          "description": "Como a origem da conversa é identificada."
+        }
+      ],
+      "title": "Onde isso aparece"
+    }
+  ]
+}

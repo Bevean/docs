@@ -4,6 +4,9 @@
   "description": "O que mudou na plataforma: recursos novos, melhorias e o que você precisa fazer para usar cada um.",
   "icon": "sparkles",
   "articles": [
-    "cashback-um-programa-com-painel-e-regras"
+    "cashback-um-programa-com-painel-e-regras",
+    "gatilho-de-mensagem-sabe-o-tipo-o-audio-e-a-origem",
+    "automacao-envia-pelo-instagram",
+    "suprimir-contatos-sem-apagar-o-historico"
   ]
 }

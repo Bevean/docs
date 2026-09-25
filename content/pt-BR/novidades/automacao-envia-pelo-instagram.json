@@ -1,0 +1,294 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "A automação passou a enviar pelo Instagram",
+  "subtitle": "Um passo de Instagram no fluxo, com texto, imagem e botões — dentro da janela de 24 horas e só em automação, nunca em transmissão.",
+  "updatedAt": "2026-09-25",
+  "publishedAt": "2026-09-21",
+  "tags": [
+    "Automações",
+    "Instagram",
+    "Atendimento"
+  ],
+  "related": [
+    "automacoes/automacoes/enviar-uma-mensagem",
+    "automacoes/automacoes/escolher-um-gatilho"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O Instagram já recebia mensagem no atendimento, mas não enviava pelo fluxo. Agora envia: dá para montar um passo de Instagram numa automação, com texto, imagem e botões, e a mensagem chega no Direct do contato."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "São as duas regras que o Instagram impõe, e elas mudam como você monta o fluxo. Vale a pena ler as duas antes de montar o primeiro."
+        }
+      ],
+      "title": "Só em automação, e só dentro de 24 horas"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Regra 1: não existe em transmissão",
+      "anchor": "so-automacao"
+    },
+    {
+      "type": "paragraph",
+      "content": "Transmissão é envio para uma lista, partindo de você. O Instagram não permite isso — a plataforma só entrega mensagem dentro de uma conversa que o contato começou."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se você escolher Instagram num passo de transmissão, o editor avisa: "
+        },
+        {
+          "type": "text",
+          "text": "\"Instagram não envia em transmissão — use uma automação\"",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Regra 2: só até 24 horas depois da última mensagem dele",
+      "anchor": "janela"
+    },
+    {
+      "type": "paragraph",
+      "content": "A janela de 24 horas conta a partir da última mensagem que o contato mandou. Fora dela, a mensagem não é entregue — e no Instagram não existe modelo aprovado para furar a janela, como existe no WhatsApp Oficial."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na prática, o passo de Instagram precisa vir depois de uma resposta do contato dentro do próprio fluxo. O jeito mais direto é começar a automação por um gatilho de conversa: "
+        },
+        {
+          "type": "text",
+          "text": "Mensagem recebida",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "Conversa iniciada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se o passo de Instagram não estiver ao alcance de uma mensagem do contato, publicar fica bloqueado com o aviso: \"O Instagram só entrega até 24h depois da última mensagem do contato. Use um gatilho de conversa ou envie depois de uma resposta dele.\""
+        }
+      ],
+      "title": "O editor não deixa publicar errado"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que cabe na mensagem",
+      "anchor": "mensagem"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "Texto"
+          },
+          {
+            "content": "Até 1.000 caracteres"
+          }
+        ],
+        [
+          {
+            "content": "Texto quando há botões"
+          },
+          {
+            "content": "Até 640 caracteres"
+          }
+        ],
+        [
+          {
+            "content": "Botões"
+          },
+          {
+            "content": "Até 3, com até 20 caracteres cada"
+          }
+        ],
+        [
+          {
+            "content": "Imagem"
+          },
+          {
+            "content": "Sim, com legenda"
+          }
+        ],
+        [
+          {
+            "content": "Modelo aprovado"
+          },
+          {
+            "content": "Não existe no canal — a mensagem é montada no passo"
+          }
+        ],
+        [
+          {
+            "content": "Lista de opções e carrossel"
+          },
+          {
+            "content": "Não"
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Recurso"
+        },
+        {
+          "content": "No Instagram"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "O passo também simula digitação antes de enviar, como no WhatsApp."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Testar antes de publicar",
+      "anchor": "testar"
+    },
+    {
+      "type": "paragraph",
+      "content": "O teste do passo funciona, com uma condição: o contato escolhido precisa ter conversado com a sua conta no Instagram — a tela avisa isso no seletor. O teste vai para a conversa real e obedece a mesma janela de 24 horas."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando a entrega falha",
+      "anchor": "falhas"
+    },
+    {
+      "type": "paragraph",
+      "content": "No relatório da automação, uma entrega de Instagram que não foi pode aparecer com estes motivos:"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "Fora da janela de 24h do Instagram"
+          },
+          {
+            "content": "O contato não manda mensagem há mais de 24 horas."
+          }
+        ],
+        [
+          {
+            "content": "Contato sem conversa no Instagram por este canal"
+          },
+          {
+            "content": "Ele nunca conversou com essa conta."
+          }
+        ],
+        [
+          {
+            "content": "Conversa controlada por outra ferramenta no Instagram"
+          },
+          {
+            "content": "Outra ferramenta conectada à mesma conta está com o controle daquela conversa."
+          }
+        ],
+        [
+          {
+            "content": "A conta desativou as mensagens do Instagram Direct"
+          },
+          {
+            "content": "A permissão de mensagens está desligada na conta do Instagram."
+          }
+        ],
+        [
+          {
+            "content": "Mensagem acima de 1.000 caracteres"
+          },
+          {
+            "content": "O texto passou do limite depois que as variáveis foram substituídas."
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Motivo"
+        },
+        {
+          "content": "O que aconteceu"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O editor conta os caracteres do texto que você escreveu. Se ele tem variáveis — nome do produto, lista de itens — o texto final pode passar de 1.000 na hora do envio. Deixe folga quando a mensagem tiver variável longa."
+        }
+      ],
+      "title": "O último motivo é o que mais pega de surpresa"
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/enviar-uma-mensagem",
+          "description": "O passo de envio, canal por canal."
+        },
+        {
+          "ref": "automacoes/automacoes/escolher-um-gatilho",
+          "description": "Os gatilhos de conversa, que abrem a janela do Instagram."
+        },
+        {
+          "ref": "automacoes/automacoes/blocos-da-mensagem",
+          "description": "Os blocos que montam uma mensagem regular."
+        }
+      ],
+      "title": "Para montar o fluxo"
+    }
+  ]
+}
