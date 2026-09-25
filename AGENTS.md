@@ -259,6 +259,7 @@ A numeração vem do CSS. **Nunca** escreva "1." no `title`.
 | `success` | Pré-requisito ou confirmação: "antes de investigar, confirme três coisas" |
 | `warning` | Limitação, comportamento inesperado, custo |
 | `danger` | Ação destrutiva ou irreversível |
+| `spotlight` | A frase que a pessoa precisa levar embora. Faixa de cor invertida, pesada de propósito — **um por página, no máximo** |
 
 Um callout por ideia. Três callouts seguidos viram ruído e o leitor para de vê-los.
 
@@ -327,6 +328,20 @@ então abre sem JavaScript.
 ```
 O título do cartão vem do artigo referenciado, não se escreve à mão.
 
+### `pillars`
+```json
+{ "type": "pillars", "items": [
+  { "title": "Enxergar", "content": "Quanto saldo existe, de quem é e quando vence." },
+  { "title": "Controlar", "content": "Quais pedidos geram crédito e como é resgatado." }
+]}
+```
+De 2 a 4 cartões com a entrega inteira em uma frase cada. Existe para a primeira
+dobra de um drop de Novidades: quem só lê o topo tem de sair sabendo o que mudou.
+O `title` vai até 40 caracteres — é rótulo, não frase.
+
+Num artigo comum quase nunca cabe: se a pessoa veio aprender a fazer, ela quer os
+passos, não um resumo do que vai aprender.
+
 ### `divider`
 ```json
 { "type": "divider" }
@@ -339,7 +354,8 @@ artigo provavelmente são dois.
 Dentro de `callout.body`, `steps[].body` e `faq[].answer` só entram:
 `paragraph`, `list`, `image`, `code`, `table`, `divider`.
 
-Sem `steps` dentro de `steps`, sem `heading` dentro de `callout`.
+Sem `steps` dentro de `steps`, sem `heading` dentro de `callout`, sem `pillars`
+dentro de nada — ele é bloco de primeiro nível.
 
 ---
 
@@ -876,7 +892,7 @@ artigo novo estourar o orçamento, é sinal de que algo está errado no motor.
 
 `content/pt-BR/novidades/` não é uma coleção de tutoriais. Cada artigo ali é um
 **drop**: o anúncio de uma entrega, com data. A listagem em `/ajuda/novidades` é
-cronológica, ordenada por `publishedAt`, e a home mostra os dois mais recentes.
+cronológica, ordenada por `publishedAt`; `/novidades` redireciona para lá.
 
 Um drop responde três perguntas, nessa ordem: **o que mudou**, **o que você ganha
 com isso** e **o que precisa fazer para usar**. Termina com `linkCards` para os
@@ -904,6 +920,57 @@ interessa a ele, virado do avesso: "cuidado na conversa, o valor de expirado vai
 aparecer maior" vira "o seu número de expirado vai aparecer maior, porque antes o
 vencimento não era contado".
 
+### Escrever um drop
+
+```bash
+pnpm content:new novidades/o-que-mudou
+```
+
+O cabeçalho ganha um campo que os artigos comuns não usam:
+
+| Campo | Observação |
+|---|---|
+| `publishedAt` | A data em que o recurso ficou disponível, não a data em que você escreveu. É por ela que a linha do tempo ordena, e ela não muda depois |
+| `updatedAt` | Como em qualquer artigo: a data de hoje |
+| `subtitle` | Vira a linha de apoio do hero, embaixo do título. Escreva-a como promessa, não como resumo do índice |
+| `tags` | Viram os chips do hero e da listagem. Use as áreas do produto: Automações, Audiência, Ferramentas |
+
+A data de disponibilidade se confere no merge do PR **e** num sinal de produção —
+um registro de deploy, um ajuste posterior que só faz sentido com a coisa no ar.
+Na dúvida entre duas datas, a mais tarde.
+
+### A página monta sozinha
+
+Não escreva no corpo nada que a página já desenha. Vem de graça, dos metadados:
+
+- a volta para "Todas as novidades" no lugar do breadcrumb;
+- a tarja `NOVIDADES DO PRODUTO · <data>`;
+- o título em serifa e o subtítulo, sobre a faixa laranja;
+- os chips das tags;
+- a faixa branca final com os `linkCards` e o "Publicado em".
+
+Ou seja: o corpo começa direto no primeiro parágrafo do assunto. Sem "neste
+artigo você vai ver", sem repetir o título como `heading`, sem data no texto.
+
+### Anatomia
+
+1. **Um parágrafo** dizendo o que mudou, em linguagem de quem usa. Sem rodeio.
+2. **`pillars`** com 2 a 4 cartões — a entrega inteira em uma frase cada. É o que
+   a pessoa lê antes de decidir se continua.
+3. **Um `callout`** respondendo "e o que acontece com o que eu já tenho?", quando
+   a entrega mexe em algo que já estava configurado. É a primeira dúvida real.
+4. **As seções**, uma por mudança, com `heading` nível 2. Cada uma abre dizendo o
+   que a pessoa ganha, e só depois como se faz.
+5. **Um `callout` `spotlight`**, no máximo, com a frase que ela precisa levar
+   embora. Numa entrega que muda números existentes, é quase sempre o aviso sobre
+   isso.
+6. **`faq`** com o que o suporte vai receber.
+7. **`linkCards`** como último bloco, sempre. É o que vira a faixa final.
+
+Seções longas cansam num drop mais do que num artigo: quem lê anúncio está
+decidindo se aquilo importa. Se uma seção passou de três parágrafos, provavelmente
+ela é um artigo, e o drop só precisa apontar para ele.
+
 ### Novidades aqui e Novidades no CRM
 
 O CRM tem a própria página de Novidades (`/{handle}/news`): o Updates **semanal**,
@@ -913,6 +980,32 @@ e avisado pelo sino. Ele é o registro de tudo, e vive atrás do login.
 A coleção daqui é o contrário: poucas entregas, cada uma com profundidade, pública
 e indexável — é o link que se manda para um cliente. Uma entrega grande aparece nos
 dois lugares, e o item da semana aponta para o drop.
+
+### Escrever o drop testa o artigo
+
+Ao escrever um drop você descreve o produto como ele é hoje. Se isso contradiz o
+que o artigo de como-fazer diz, um dos dois está errado — e normalmente é o
+artigo, que envelheceu em silêncio quando a entrega saiu.
+
+Aconteceu com o Instagram: o drop anunciava o envio pelo fluxo enquanto
+`automacoes/automacoes/enviar-uma-mensagem` ainda dizia "Ainda não envia mensagens
+pelo fluxo". **Corrija o artigo no mesmo trabalho**, em commit separado — ele
+estava errado independentemente do drop existir.
+
+### O que o motor faz por Novidades
+
+Quem for mexer no código encontra isto:
+
+| Onde | O quê |
+|---|---|
+| `src/content/news.ts` | O slug da coleção e a ordenação por `publishedAt` |
+| `src/pages/news-page.tsx` | A listagem: destaque + linha do tempo |
+| `src/pages/drop-page.tsx` | A página do drop: hero, corpo, faixa final. Sem sumário e sem lista de irmãos — é leitura corrida, não consulta |
+| `.drop-prose` em `src/globals.css` | A escala tipográfica do corpo num drop. Os blocos são os mesmos do artigo; o que muda é o contexto |
+| `src/routes.tsx` | `ajuda/novidades` e `ajuda/novidades/:drop` são rotas estáticas, declaradas antes das dinâmicas |
+
+A serifa dos títulos é a Lora, carregada no `index.html`. É a única fonte externa
+do site: se ela sair, o hero e os `heading` caem para a serifa do sistema.
 
 ---
 

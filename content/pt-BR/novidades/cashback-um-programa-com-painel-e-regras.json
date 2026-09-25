@@ -20,6 +20,23 @@
       "content": "O cashback deixou de ser só um percentual e uma data de validade. Agora você tem uma tela que mostra quanto saldo existe na mão dos seus clientes, regras para decidir quais pedidos entram no programa, resgate parcial para quem recebe, e gatilhos próprios nas automações."
     },
     {
+      "type": "pillars",
+      "items": [
+        {
+          "title": "Enxergar",
+          "content": "Quanto saldo existe, de quem é, quando libera e quando vence."
+        },
+        {
+          "title": "Controlar",
+          "content": "Quais pedidos geram crédito, quanto vale e como é resgatado."
+        },
+        {
+          "title": "Circular",
+          "content": "Resgate parcial, saldo devolvido e automações de reativação."
+        }
+      ]
+    },
+    {
       "type": "callout",
       "variant": "info",
       "body": [
@@ -799,42 +816,13 @@
       ]
     },
     {
-      "type": "list",
-      "style": "bullet",
-      "items": [
+      "type": "callout",
+      "variant": "spotlight",
+      "title": "Expirado vai aparecer maior do que antes",
+      "body": [
         {
-          "content": [
-            {
-              "type": "text",
-              "text": "Expirado vai aparecer maior do que antes.",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "text": " Não porque os seus clientes passaram a perder mais, e sim porque antes o vencimento não era contado."
-            }
-          ]
-        },
-        {
-          "content": [
-            {
-              "type": "text",
-              "text": "Saldo ativo fica mais fiel.",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "text": " Ele passa a separar o que já liberou do que ainda está em carência."
-            }
-          ]
+          "type": "paragraph",
+          "content": "Não porque os seus clientes passaram a perder mais, e sim porque antes o vencimento não era contado. Em compensação, o saldo ativo fica mais fiel: ele passa a separar o que já liberou do que ainda está em carência."
         }
       ]
     },

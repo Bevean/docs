@@ -19,6 +19,23 @@
       "content": "O Instagram já recebia mensagem no atendimento, mas não enviava pelo fluxo. Agora envia: dá para montar um passo de Instagram numa automação, com texto, imagem e botões, e a mensagem chega no Direct do contato."
     },
     {
+      "type": "pillars",
+      "items": [
+        {
+          "title": "Só em automação",
+          "content": "O Instagram não envia em transmissão — a plataforma não permite."
+        },
+        {
+          "title": "Só em 24 horas",
+          "content": "A janela conta da última mensagem do contato, e não há modelo para furá-la."
+        },
+        {
+          "title": "Texto, imagem e botões",
+          "content": "Até 1.000 caracteres, ou 640 quando a mensagem tem botões."
+        }
+      ]
+    },
+    {
       "type": "callout",
       "variant": "warning",
       "body": [
