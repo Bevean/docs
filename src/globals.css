@@ -285,3 +285,53 @@ body {
 :root {
   --header-height: 4rem;
 }
+
+/* ---------------------------------------------------------------------------
+   Novidades: os drops são página de anúncio, não de consulta.
+   A escala vem do próprio conteúdo em vez de vir de cada bloco, porque os
+   mesmos blocos servem os dois contextos — artigo e drop.
+   --------------------------------------------------------------------------- */
+.drop-prose > * {
+  margin-top: 1.25rem;
+}
+
+.drop-prose > :first-child {
+  margin-top: 0;
+}
+
+.drop-prose > p {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+}
+
+.drop-prose > h2 {
+  margin-top: 3.5rem;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.drop-prose > h3 {
+  margin-top: 2.5rem;
+  font-size: 1.1875rem;
+}
+
+.drop-prose > ul,
+.drop-prose > ol,
+.drop-prose > div {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .drop-prose > h2 {
+    margin-top: 2.75rem;
+    font-size: 1.625rem;
+  }
+
+  .drop-prose > p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+}
