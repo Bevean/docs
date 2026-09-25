@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Filtrar quem entra na automação",
   "subtitle": "Filtros do disparador, filtros de perfil, reentrada e as chaves que interrompem o envio.",
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-25",
   "tags": [
     "automacoes",
     "gatilho",
@@ -250,7 +250,7 @@
             "content": "Conversa iniciada e Mensagem recebida"
           },
           {
-            "content": "Texto da mensagem, Tipo de canal, Canal, Tipo de abertura, Quantidade de mensagens, ID da conversa."
+            "content": "Texto da mensagem, Tipo de canal, Canal, Quantidade de mensagens, ID da conversa, Tipo de mensagem, Transcrição do áudio, Origem da mensagem, Automação de origem, Texto do botão, ID do botão, Título do anúncio, ID do anúncio, Link de origem e Código do link. Tipo de abertura só aparece em Conversa iniciada."
           }
         ],
         [

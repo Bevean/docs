@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Configurar um passo de envio",
   "subtitle": "Escolher o canal, decidir entre modelo e mensagem regular, e o que cada canal entrega de fato.",
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-09-25",
   "tags": [
     "automacoes",
     "mensagem",
@@ -102,7 +102,7 @@
             "content": "Instagram"
           },
           {
-            "content": "Ainda não envia mensagens pelo fluxo."
+            "content": "Mensagem montada na hora, com texto, imagem e até 3 botões. Não tem modelo: o Instagram só entrega dentro da janela de 24 horas."
           }
         ]
       ]
@@ -110,13 +110,17 @@
     {
       "type": "callout",
       "variant": "warning",
+      "title": "O Instagram tem duas regras próprias",
       "body": [
         {
           "type": "paragraph",
-          "content": "É possível montar e publicar um passo de Instagram, e o fluxo não acusa erro — mas a mensagem não é enviada. Enquanto isso não muda, use outro canal nesse ponto do fluxo."
+          "content": "Ele não vale em transmissão — só em automação. E só entrega até 24 horas depois da última mensagem do contato, então o passo precisa vir depois de uma resposta dele no fluxo. Publicar fica bloqueado quando uma das duas regras não é atendida, com o aviso no próprio passo."
+        },
+        {
+          "type": "paragraph",
+          "content": "O texto vai até 1.000 caracteres, ou 640 quando a mensagem tem botões."
         }
-      ],
-      "title": "O Instagram aparece no menu, mas não entrega"
+      ]
     },
     {
       "type": "paragraph",
@@ -202,7 +206,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Em WhatsApp, SMS e Instagram o passo abre com o campo "
+          "text": "Em WhatsApp e SMS o passo abre com o campo "
         },
         {
           "type": "text",
