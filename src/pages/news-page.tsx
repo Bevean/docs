@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router'
 import { useDocumentMeta } from '@/app/use-document-meta.ts'
 import { getCollection } from '@/content/content-repository.ts'
-import { NEWS_COLLECTION, dropDate, getDrops } from '@/content/news.ts'
+import { NEWS_COLLECTION, NEWS_TITLE, dropDate, getDrops } from '@/content/news.ts'
 import type { ArticleMeta } from '@/content/content-types.ts'
 import { longDate } from '@/lib/date.ts'
 import { NotFoundPage } from './not-found-page.tsx'
@@ -66,10 +66,7 @@ export function NewsPage() {
   const collection = getCollection(NEWS_COLLECTION)
   const drops = getDrops()
 
-  useDocumentMeta(
-    'Novidades da Bevean — o que mudou na plataforma',
-    collection?.description
-  )
+  useDocumentMeta(NEWS_TITLE, collection?.description)
 
   if (!collection) return <NotFoundPage />
 

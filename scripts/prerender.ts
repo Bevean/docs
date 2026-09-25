@@ -11,6 +11,7 @@ import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { buildBreadcrumb } from '../src/content/breadcrumb.ts'
+import { NEWS_COLLECTION, NEWS_SITE_TITLE, NEWS_TITLE } from '../src/content/news-collection.ts'
 import type { ContentManifest } from '../src/content/content-types.ts'
 
 const ROOT = path.resolve(import.meta.dirname, '..')
@@ -134,6 +135,7 @@ async function writeSitemap(routes: PrerenderRoute[]): Promise<void> {
 /** Toda rota do site sai do manifest — nada é escrito à mão aqui. */
 function routesFromManifest(manifest: ContentManifest): PrerenderRoute[] {
   const SITE_TITLE = 'Central de Ajuda Bevean'
+  const isDrop = (collection: string) => collection === NEWS_COLLECTION
   const home: PrerenderRoute = {
     url: '/ajuda',
     title: 'Central de Ajuda — Bevean',
@@ -150,9 +152,11 @@ function routesFromManifest(manifest: ContentManifest): PrerenderRoute[] {
 
   const collections = manifest.collections.map<PrerenderRoute>((c) => ({
     url: c.url,
-    title: `${c.title} — ${SITE_TITLE}`,
+    title: isDrop(c.path) ? NEWS_TITLE : `${c.title} — ${SITE_TITLE}`,
     description: c.description,
-    jsonLd: [breadcrumbLd([{ title: 'Todas as coleções', url: '/ajuda' }, { title: c.title, url: c.url }])]
+    jsonLd: isDrop(c.path)
+      ? []
+      : [breadcrumbLd([{ title: 'Todas as coleções', url: '/ajuda' }, { title: c.title, url: c.url }])]
   }))
 
   const sections = Object.values(manifest.sections).map<PrerenderRoute>((s) => ({
@@ -163,20 +167,33 @@ function routesFromManifest(manifest: ContentManifest): PrerenderRoute[] {
 
   const articles = Object.values(manifest.articles).map<PrerenderRoute>((a) => ({
     url: a.url,
-    title: `${a.title} — ${SITE_TITLE}`,
+    title: isDrop(a.collection) ? `${a.title} — ${NEWS_SITE_TITLE}` : `${a.title} — ${SITE_TITLE}`,
     description: a.subtitle,
-    jsonLd: [
-      breadcrumbLd(buildBreadcrumb(a, manifest)),
-      {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        headline: a.title,
-        description: a.subtitle,
-        dateModified: a.updatedAt,
-        inLanguage: 'pt-BR',
-        publisher: { '@type': 'Organization', name: 'Bevean' }
-      }
-    ]
+    jsonLd: isDrop(a.collection)
+      ? [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'NewsArticle',
+            headline: a.title,
+            description: a.subtitle,
+            datePublished: a.publishedAt ?? a.updatedAt,
+            dateModified: a.updatedAt,
+            inLanguage: 'pt-BR',
+            publisher: { '@type': 'Organization', name: 'Bevean' }
+          }
+        ]
+      : [
+          breadcrumbLd(buildBreadcrumb(a, manifest)),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'TechArticle',
+            headline: a.title,
+            description: a.subtitle,
+            dateModified: a.updatedAt,
+            inLanguage: 'pt-BR',
+            publisher: { '@type': 'Organization', name: 'Bevean' }
+          }
+        ]
   }))
 
   return [home, ...collections, ...sections, ...articles]

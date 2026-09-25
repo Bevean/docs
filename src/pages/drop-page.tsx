@@ -8,7 +8,7 @@ import {
   getArticleMeta,
   loadArticleDoc
 } from '@/content/content-repository.ts'
-import { NEWS_URL, dropDate } from '@/content/news.ts'
+import { NEWS_SITE_TITLE, NEWS_URL, dropDate } from '@/content/news.ts'
 import { createRenderContext } from '@/content/render-context.ts'
 import { BlockList } from '@/content/renderer/block-renderer.tsx'
 import { longDate } from '@/lib/date.ts'
@@ -19,7 +19,7 @@ export function DropPage({ path }: { path: string }) {
   const doc = getArticleDoc(path) ?? (meta ? use(loadArticleDoc(path)) : undefined)
 
   useDocumentMeta(
-    meta ? `${meta.title} — Novidades da Bevean` : 'Novidades da Bevean',
+    meta ? `${meta.title} — ${NEWS_SITE_TITLE}` : NEWS_SITE_TITLE,
     doc?.seo?.description ?? meta?.subtitle
   )
 

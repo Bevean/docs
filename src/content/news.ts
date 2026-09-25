@@ -1,8 +1,8 @@
 import { manifest } from './content-repository.ts'
 import type { ArticleMeta } from './content-types.ts'
+import { NEWS_COLLECTION } from './news-collection.ts'
 
-export const NEWS_COLLECTION = 'novidades'
-export const NEWS_URL = `/ajuda/${NEWS_COLLECTION}`
+export { NEWS_COLLECTION, NEWS_URL, NEWS_TITLE, NEWS_SITE_TITLE } from './news-collection.ts'
 
 export const dropDate = (meta: ArticleMeta): string => meta.publishedAt ?? meta.updatedAt
 
