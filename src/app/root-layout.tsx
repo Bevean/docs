@@ -5,23 +5,21 @@ import { SearchDialog } from '@/search/search-dialog.tsx'
 import { SearchContext } from '@/search/search-context.tsx'
 import { BeveanLogo, BeveanMark } from './logo.tsx'
 import { ThemeToggle } from './theme-toggle.tsx'
+import { NEWS_URL } from '@/content/news.ts'
 
-// O menu espelha o do ajuda.bevean.com. Só a Central de Ajuda mora aqui; CRM
-// Club, Feedbacks, Novidades e Suporte continuam no site antigo, por isso são
-// absolutos. Se aquele domínio for desligado, estes quatro links vão junto.
-const SITE_ANTIGO = 'https://ajuda.bevean.com'
-const NAV = [
-  { label: 'CRM Club', href: `${SITE_ANTIGO}/crm-club` },
-  { label: 'Feedbacks', href: `${SITE_ANTIGO}/feedbacks` },
-  { label: 'Últimas Novidades', href: `${SITE_ANTIGO}/novidades` },
-  { label: 'Suporte', href: `${SITE_ANTIGO}/suporte` },
-]
+const EXTERNAL_NAV = [{ label: 'CRM Club', href: 'https://bevean.com/crm-club' }]
 
 export function RootLayout() {
   const [searchOpen, setSearchOpen] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const { pathname, hash } = useLocation()
   const openSearch = useCallback(() => setSearchOpen(true), [])
+
+  const onNews = pathname.startsWith(NEWS_URL)
+  const nav = [
+    { label: 'Central de Ajuda', to: '/ajuda', current: pathname.startsWith('/ajuda') && !onNews },
+    { label: 'Novidades', to: NEWS_URL, current: onNews }
+  ]
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -61,14 +59,17 @@ export function RootLayout() {
             </Link>
 
             <nav aria-label="Seções" className="hidden flex-1 items-center justify-center gap-5 lg:flex">
-              <Link
-                to="/ajuda"
-                aria-current={pathname.startsWith('/ajuda') ? 'page' : undefined}
-                className="text-[13px] text-foreground hover:text-primary aria-[current=page]:text-primary"
-              >
-                Central de Ajuda
-              </Link>
-              {NAV.map(item => (
+              {nav.map(item => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  aria-current={item.current ? 'page' : undefined}
+                  className="text-[13px] text-foreground hover:text-primary aria-[current=page]:text-primary"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              {EXTERNAL_NAV.map(item => (
                 <a
                   key={item.href}
                   href={item.href}
@@ -119,15 +120,18 @@ export function RootLayout() {
               className="border-b border-border bg-background lg:hidden"
             >
               <div className="mx-auto flex max-w-6xl flex-col px-6 py-2">
-                <Link
-                  to="/ajuda"
-                  onClick={() => setMenuOpen(false)}
-                  aria-current={pathname.startsWith('/ajuda') ? 'page' : undefined}
-                  className="py-2 text-sm text-foreground aria-[current=page]:text-primary"
-                >
-                  Central de Ajuda
-                </Link>
-                {NAV.map(item => (
+                {nav.map(item => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setMenuOpen(false)}
+                    aria-current={item.current ? 'page' : undefined}
+                    className="py-2 text-sm text-foreground aria-[current=page]:text-primary"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                {EXTERNAL_NAV.map(item => (
                   <a
                     key={item.href}
                     href={item.href}
