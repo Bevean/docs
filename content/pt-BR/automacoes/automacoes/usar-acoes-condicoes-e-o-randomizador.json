@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Usar Ações, Condição e Randomizador",
   "subtitle": "Os passos que agem no contato e decidem por qual caminho a jornada segue.",
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-09-15",
   "tags": [
     "automacoes",
     "condicao",
@@ -322,6 +322,14 @@
           },
           {
             "content": "As propriedades que você criou."
+          }
+        ],
+        [
+          {
+            "content": "Baseado no cashback"
+          },
+          {
+            "content": "Saldo, data de entrada, de liberação, de expiração e do resgate do cashback, e a situação do cupom de resgate: em aberto e ainda não usado, usado ou vencido sem uso."
           }
         ],
         [

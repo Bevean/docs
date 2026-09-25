@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Avisar o cliente sobre o cashback",
   "subtitle": "Monte as automações que contam ao cliente que ele tem saldo — e o lembrete que impede o crédito de vencer em silêncio.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-15",
   "tags": [
     "automação",
     "aviso",
@@ -44,7 +44,7 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "Os quatro momentos que disparam uma automação"
+      "content": "Os cinco momentos que disparam uma automação"
     },
     {
       "type": "table",
@@ -87,7 +87,7 @@
             "content": "Crédito expirando"
           },
           {
-            "content": "Falta o número de dias que você configurou para o vencimento"
+            "content": "Falta para o vencimento um dos dias que a automação definiu (ou uma das antecedências do cashback)"
           },
           {
             "content": "O lembrete que evita a perda do saldo"
@@ -102,6 +102,17 @@
           },
           {
             "content": "Entregar o código do cupom e lembrar do prazo"
+          }
+        ],
+        [
+          {
+            "content": "Cashback expirou"
+          },
+          {
+            "content": "O saldo do cliente vence sem ser usado"
+          },
+          {
+            "content": "Reativar quem perdeu o crédito, com uma oferta nova"
           }
         ]
       ]
@@ -130,14 +141,52 @@
       "type": "steps",
       "items": [
         {
-          "title": "Defina as antecedências no cashback",
+          "title": "Crie a automação e escolha o gatilho Crédito expirando"
+        },
+        {
+          "title": "Defina os dias em Quando avisar",
           "body": [
             {
               "type": "paragraph",
               "content": [
                 {
                   "type": "text",
-                  "text": "Em "
+                  "text": "O campo "
+                },
+                {
+                  "type": "text",
+                  "text": "Dias antes do vencimento",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " recebe as antecedências desta automação — 7, 3 e 1, por exemplo. O "
+                },
+                {
+                  "type": "text",
+                  "text": "0",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " é o próprio dia do vencimento, e cada dia informado aqui passa a ser avisado pelo cashback mesmo que não esteja na configuração geral."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Deixando vazio, a automação dispara em todas as antecedências configuradas em "
                 },
                 {
                   "type": "uiPath",
@@ -147,7 +196,7 @@
                 },
                 {
                   "type": "text",
-                  "text": ", o campo "
+                  "text": ", no campo "
                 },
                 {
                   "type": "text",
@@ -160,43 +209,7 @@
                 },
                 {
                   "type": "text",
-                  "text": " recebe os dias de antecedência — 7, 3 e 1, por exemplo. São no máximo cinco."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "Crie a automação e escolha o gatilho Crédito expirando",
-          "body": [
-            {
-              "type": "paragraph",
-              "content": "O painel mostra ali mesmo quais antecedências estão configuradas no cashback."
-            }
-          ]
-        },
-        {
-          "title": "Decida em quais antecedências ela roda",
-          "body": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Sem filtro, a mesma automação roda uma vez em cada antecedência configurada. Para separar as mensagens, filtre pelo campo "
-                },
-                {
-                  "type": "text",
-                  "text": "Dias até vencer",
-                  "marks": [
-                    {
-                      "type": "bold"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " e crie uma automação por antecedência."
+                  "text": " — uma vez em cada uma."
                 }
               ]
             }
@@ -286,7 +299,7 @@
           "content": [
             {
               "type": "text",
-              "text": "E se nenhuma antecedência estiver configurada, o gatilho "
+              "text": "Sem dias na automação e sem nenhuma antecedência no cashback, o gatilho "
             },
             {
               "type": "text",
@@ -451,6 +464,189 @@
         }
       ],
       "title": "Escolha a informação que combina com o gatilho"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Lembrar quem resgatou e não usou o cupom"
+    },
+    {
+      "type": "paragraph",
+      "content": "O cupom do resgate tem prazo próprio, e é ali que a maior parte do cashback se perde: o cliente troca o saldo, guarda o código e esquece. Um lembrete no meio do caminho resolve — e não existe gatilho de \"cupom não usado\": ele se monta com o gatilho do resgate mais uma condição."
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Crie a automação com o gatilho Cashback resgatado"
+        },
+        {
+          "title": "Espere de 1 a 3 dias",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Um passo de "
+                },
+                {
+                  "type": "text",
+                  "text": "Atraso inteligente",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " com a "
+                },
+                {
+                  "type": "text",
+                  "text": "Duração do atraso",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " em dias. Quem usa o cupom costuma usar logo, então esperar alguns dias evita lembrar quem já comprou."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Filtre quem ainda não usou",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Um passo de "
+                },
+                {
+                  "type": "text",
+                  "text": "Condição",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " com o grupo "
+                },
+                {
+                  "type": "text",
+                  "text": "Baseado no cashback",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", campo "
+                },
+                {
+                  "type": "text",
+                  "text": "Situação do cupom de resgate",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " igual a "
+                },
+                {
+                  "type": "text",
+                  "text": "Em aberto, ainda não usado",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Quem já usou não corresponde à regra e sai pelo caminho padrão."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escreva a mensagem",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Repita o "
+                },
+                {
+                  "type": "text",
+                  "text": "Código do cupom",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e a "
+                },
+                {
+                  "type": "text",
+                  "text": "Validade do cupom",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " — é a informação que o cliente perdeu."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Repita perto do vencimento",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Outro atraso e a mesma condição, alguns dias antes do prazo do cupom acabar, dão a segunda e última chance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "O cupom vencido devolve o saldo",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Quando o cupom vence sem ser usado, o valor volta como saldo para o cliente, com a validade que o crédito tinha antes do resgate. A devolução vale nas lojas em que a Bevean consegue confirmar o uso do cupom no pedido — WBuy, Yampi e Shopify."
+        }
+      ]
     },
     {
       "type": "heading",
