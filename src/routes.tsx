@@ -5,7 +5,9 @@ import { CollectionPage } from './pages/collection-page'
 import { CollectionChildPage } from './pages/collection-child-page'
 import { ArticleBoundary } from './pages/article-boundary'
 import { ArticleRoute } from './pages/article-route'
+import { NewsPage } from './pages/news-page'
 import { NotFoundPage } from './pages/not-found-page'
+import { NEWS_COLLECTION } from './content/news'
 
 export const routes: RouteObject[] = [
   {
@@ -14,6 +16,7 @@ export const routes: RouteObject[] = [
     children: [
       { index: true, element: <Navigate to="/ajuda" replace /> },
       { path: 'ajuda', element: <HomePage /> },
+      { path: `ajuda/${NEWS_COLLECTION}`, element: <NewsPage /> },
       { path: 'ajuda/:collection', element: <CollectionPage /> },
       {
         // As duas rotas podem cair num artigo, cujo corpo é um chunk próprio.

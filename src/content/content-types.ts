@@ -37,6 +37,7 @@ export interface ArticleMeta {
   title: string
   subtitle?: string
   updatedAt: string
+  publishedAt?: string
   tags: string[]
   collection: string
   section?: string

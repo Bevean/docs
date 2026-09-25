@@ -11,6 +11,7 @@ import {
   loadArticleDoc
 } from '@/content/content-repository.ts'
 import { createRenderContext } from '@/content/render-context.ts'
+import { longDate } from '@/lib/date.ts'
 import { BlockList } from '@/content/renderer/block-renderer.tsx'
 import { buildToc } from '@/content/toc.ts'
 import { NotFoundPage } from './not-found-page.tsx'
@@ -59,14 +60,21 @@ export function ArticlePage({ path }: { path: string }) {
         </div>
 
         <footer className="mt-12 border-t border-border pt-6 text-[13px] text-muted-foreground">
-          Atualizado em{' '}
-          <time dateTime={meta.updatedAt}>
-            {new Date(`${meta.updatedAt}T12:00:00`).toLocaleDateString('pt-BR', {
-              day: '2-digit',
-              month: 'long',
-              year: 'numeric'
-            })}
-          </time>
+          {meta.publishedAt ? (
+            <>
+              Publicado em <time dateTime={meta.publishedAt}>{longDate(meta.publishedAt)}</time>
+              {meta.updatedAt !== meta.publishedAt && (
+                <>
+                  {' · atualizado em '}
+                  <time dateTime={meta.updatedAt}>{longDate(meta.updatedAt)}</time>
+                </>
+              )}
+            </>
+          ) : (
+            <>
+              Atualizado em <time dateTime={meta.updatedAt}>{longDate(meta.updatedAt)}</time>
+            </>
+          )}
         </footer>
       </article>
 

@@ -1,0 +1,944 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O cashback virou um programa, com painel e regras",
+  "subtitle": "Uma tela que mostra o saldo dos seus clientes, regras para escolher quais pedidos geram crédito, resgate parcial e gatilhos próprios nas automações.",
+  "updatedAt": "2026-09-25",
+  "publishedAt": "2026-09-21",
+  "tags": [
+    "Ferramentas",
+    "Cashback",
+    "Automações",
+    "Audiência"
+  ],
+  "related": [
+    "ferramentas/cashback/visao-geral",
+    "ferramentas/cashback/ativar-o-programa"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O cashback deixou de ser só um percentual e uma data de validade. Agora você tem uma tela que mostra quanto saldo existe na mão dos seus clientes, regras para decidir quais pedidos entram no programa, resgate parcial para quem recebe, e gatilhos próprios nas automações."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O que você já tinha configurado continua funcionando igual. As regras novas começam sem restrição nenhuma e a página pública começa desligada — você liga o que quiser, quando quiser."
+        }
+      ],
+      "title": "Você não precisa reconfigurar nada"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A tela mostra o dinheiro que está parado",
+      "anchor": "a-tela"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.cashback"
+          }
+        },
+        {
+          "type": "text",
+          "text": " o topo da página traz quatro números:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Contatos com saldo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — já liberado e ainda não vencido."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Saldo total",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — tudo que os seus contatos podem resgatar hoje, com o que ainda está em carência somado logo abaixo."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Saldo médio",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — por contato com saldo."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Vence em 7 dias",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — o valor e quantos contatos são."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Abaixo, duas abas. "
+        },
+        {
+          "type": "text",
+          "text": "Saldos por contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " lista quem tem saldo com as colunas Saldo, Próximo a liberar, Próximo a expirar, Resgatado e Expirado. "
+        },
+        {
+          "type": "text",
+          "text": "Histórico",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra os lançamentos, um por um."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No menu de cada contato: "
+        },
+        {
+          "type": "text",
+          "text": "Copiar link de resgate",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar ou retirar saldo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Histórico do contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Pedidos do contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A configuração virou uma página, com um resumo em português",
+      "anchor": "configuracao"
+    },
+    {
+      "type": "paragraph",
+      "content": "A configuração saiu da gaveta lateral e virou uma página dividida por assunto: Programa, Geração, Regras, Liberação e validade, Resgate e Página pública de consulta."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao lado dos campos, o "
+        },
+        {
+          "type": "text",
+          "text": "Resumo do programa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " se reescreve enquanto você mexe — \"5% sobre os produtos (sem frete), libera em 7 dias, vale 90 dias, cupom de uso único\" — para você ler numa frase o que acabou de montar, antes de salvar."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Você escolhe quais pedidos geram cashback",
+      "anchor": "regras"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Antes, todo pedido aprovado virava crédito. Em "
+        },
+        {
+          "type": "text",
+          "text": "Regras",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " agora dá para separar:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "Origens que geram cashback"
+          },
+          {
+            "content": "Só os pedidos das origens escolhidas geram crédito. Sem seleção, todas geram."
+          }
+        ],
+        [
+          {
+            "content": "Pedidos de loja física"
+          },
+          {
+            "content": "Pedido registrado no PDV, com loja de origem, pode ficar fora do programa."
+          }
+        ],
+        [
+          {
+            "content": "Não gerar cashback em assinatura"
+          },
+          {
+            "content": "Compras recorrentes deixam de gerar crédito a cada cobrança."
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Regra"
+        },
+        {
+          "content": "Para que serve"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ainda em Regras, "
+        },
+        {
+          "type": "text",
+          "text": "Créditos do contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " decide o que acontece quando o cliente compra de novo: "
+        },
+        {
+          "type": "text",
+          "text": "Acumular",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " soma tudo, e "
+        },
+        {
+          "type": "text",
+          "text": "Manter só o último",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " faz a compra nova substituir o saldo anterior."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Ligar \"Manter só o último\" não apaga o que os seus contatos já têm. A regra passa a valer para os créditos gerados a partir dali."
+        }
+      ],
+      "title": "A troca vale daqui para a frente"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Pedido mínimo no cupom, fixo ou proporcional",
+      "anchor": "pedido-minimo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em "
+        },
+        {
+          "type": "text",
+          "text": "Resgate",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", além do saldo mínimo para resgatar, você pode exigir um pedido mínimo para o cupom ser usado — por um "
+        },
+        {
+          "type": "text",
+          "text": "Valor fixo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " em reais, por um "
+        },
+        {
+          "type": "text",
+          "text": "Máximo do pedido (%)",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", ou pelos dois. Quando os dois estão preenchidos, vale o maior."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A própria tela mostra a conta antes de salvar: \"Um cupom de R$ 50,00 vai exigir pedido de R$ 200,00\"."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se a plataforma conectada não aceita pedido mínimo no cupom, a tela avisa com \"Não suportado pela plataforma\" — e a regra não vai valer no checkout. O aviso aparece antes de você salvar, não depois de o cliente reclamar."
+        }
+      ],
+      "title": "Depende da plataforma da sua loja"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Para o seu cliente: resgate parcial e cupom que devolve o saldo",
+      "anchor": "cliente"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na página de resgate, o cliente escolhe "
+        },
+        {
+          "type": "text",
+          "text": "Quanto você quer resgatar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " em vez de trocar tudo de uma vez. O que sobra fica no saldo, e ele pode ter mais de um cupom em aberto ao mesmo tempo — a página lista todos em "
+        },
+        {
+          "type": "text",
+          "text": "Seus cupons em aberto",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Antes de confirmar, ele já lê o pedido mínimo daquele cupom: \"Esse cupom vale em pedidos a partir de R$ 200,00\". Decide sabendo."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "E resgatar deixou de ser uma aposta: se o cupom vencer sem uso, o saldo volta para o cliente. No cartão do contato o cupom aparece como "
+        },
+        {
+          "type": "text",
+          "text": "Venceu sem uso — saldo devolvido",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Página pública de consulta",
+      "anchor": "pagina-publica"
+    },
+    {
+      "type": "paragraph",
+      "content": "Além do link pessoal que vai nas suas mensagens, você pode publicar um endereço único onde o cliente informa telefone ou e-mail, confirma o CPF ou CNPJ e chega na mesma tela de resgate. Serve para quem perdeu a mensagem, e para você pôr o cashback no rodapé do site."
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Começa desligada. Quando você liga, a tela entrega o link pronto para copiar."
+        },
+        {
+          "content": "Só encontra contatos que têm CPF ou CNPJ cadastrado."
+        },
+        {
+          "content": "Consulta que não confere recebe sempre a mesma resposta, sem revelar se aquele contato existe."
+        },
+        {
+          "content": "O link de resgate das automações continua funcionando com a página desligada."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Nas automações e nos segmentos",
+      "anchor": "automacoes"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Cada automação escolhe seus dias de aviso"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os dias do aviso de vencimento saíram da configuração do programa e foram para dentro de cada automação de "
+        },
+        {
+          "type": "text",
+          "text": "Crédito expirando",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", em "
+        },
+        {
+          "type": "text",
+          "text": "Quando avisar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Você pode listar até 20 dias diferentes, de 0 (no dia do vencimento) a 365 — um envio por dia, para quem tiver crédito vencendo."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Com isso convivem réguas diferentes: uma automação avisando com 30 dias e uma oferta leve, outra com 1 dia e urgência."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Gatilho novo: \"Cashback expirou\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Dispara quando o saldo do contato vence sem ser usado. É a deixa de reativação que não existia: antes, o saldo vencia em silêncio."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A lista completa de gatilhos de cashback hoje: "
+        },
+        {
+          "type": "text",
+          "text": "Nova entrada de crédito",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Crédito liberado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Crédito expirando",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Cashback expirou",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Cashback resgatado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Segmentos e condições por cashback"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No construtor de segmentos e nas condições das automações apareceu o grupo "
+        },
+        {
+          "type": "text",
+          "text": "Baseado no cashback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "Saldo de cashback"
+          },
+          {
+            "content": "Quanto o contato pode resgatar hoje. Quem nunca recebeu conta como zero."
+          }
+        ],
+        [
+          {
+            "content": "Data de entrada do cashback"
+          },
+          {
+            "content": "Quando o crédito foi gerado, mesmo que ainda não tenha liberado."
+          }
+        ],
+        [
+          {
+            "content": "Data de liberação do cashback"
+          },
+          {
+            "content": "Quando o crédito ficou disponível para resgate."
+          }
+        ],
+        [
+          {
+            "content": "Data de expiração do cashback"
+          },
+          {
+            "content": "Quando o saldo vence."
+          }
+        ],
+        [
+          {
+            "content": "Data do resgate do cashback"
+          },
+          {
+            "content": "Quando o contato trocou o saldo por um cupom."
+          }
+        ],
+        [
+          {
+            "content": "Situação do cupom de resgate"
+          },
+          {
+            "content": "Se o cupom está em aberto, foi usado ou venceu sem uso."
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que ele responde"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Junte os dois últimos e você monta a régua do cupom esquecido: resgatou, esperou, não usou, recebe um lembrete com o código."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Se você já usava cashback, dois números vão mudar",
+      "anchor": "numeros"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O crédito que vence agora é baixado de verdade e registrado como um lançamento de "
+        },
+        {
+          "type": "text",
+          "text": "Expiração",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no histórico do contato."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Expirado vai aparecer maior do que antes.",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " Não porque os seus clientes passaram a perder mais, e sim porque antes o vencimento não era contado."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Saldo ativo fica mais fiel.",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " Ele passa a separar o que já liberou do que ainda está em carência."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Veio de outra ferramenta?",
+      "anchor": "importar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se você já tem cashback rodando em outro lugar, importe a relação de saldos por planilha — em "
+        },
+        {
+          "type": "text",
+          "text": "Importar saldos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", o mesmo assistente que você já usa para contatos e pedidos."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Cada contato entra com o saldo que já tinha, sem receber aviso de crédito novo. Se a importação for repetida, o crédito não duplica."
+        }
+      ],
+      "title": "Importe antes de ligar o programa"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Preciso mexer no meu programa para continuar funcionando?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. O que estava configurado continua igual, e as novidades entram sem restrição ou desligadas. Você liga o que quiser, quando quiser."
+            }
+          ]
+        },
+        {
+          "question": "O cliente perde o saldo se resgatar e não usar o cupom?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Quando conseguimos confirmar que o cupom não foi usado, o valor volta para o saldo dele — e o cupom aparece como \"Venceu sem uso — saldo devolvido\"."
+            }
+          ]
+        },
+        {
+          "question": "Qualquer pessoa pode consultar o saldo de um cliente meu na página pública?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. A página é opcional e exige duas informações que combinam: telefone ou e-mail, mais o CPF ou CNPJ completo do cadastro. Consulta que não confere recebe sempre a mesma resposta, e depois de várias tentativas a página pede para tentar mais tarde."
+            }
+          ]
+        },
+        {
+          "question": "Funciona na plataforma da minha loja?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "O cashback funciona em todas as integrações que emitem cupom. O pedido mínimo no cupom depende da plataforma aceitar a regra, e a tela de configuração avisa quando ela não aceita."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "ferramentas/cashback/ativar-o-programa",
+          "description": "As regras, a geração, a liberação e o resgate, campo por campo."
+        },
+        {
+          "ref": "ferramentas/cashback/como-o-cliente-resgata",
+          "description": "A página de resgate pelo lado de quem recebe o cashback."
+        },
+        {
+          "ref": "ferramentas/cashback/avisos-automaticos",
+          "description": "As automações de crédito expirando, liberado e resgatado."
+        },
+        {
+          "ref": "ferramentas/cashback/saldo-do-cliente",
+          "description": "Consultar, lançar e corrigir o saldo de um contato."
+        }
+      ],
+      "title": "Como configurar cada parte"
+    }
+  ]
+}

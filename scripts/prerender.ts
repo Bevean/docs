@@ -201,7 +201,7 @@ async function writeRedirects(manifest: ContentManifest): Promise<void> {
     ([alias, target]) => `/ajuda/${alias} /ajuda/${target} 301`
   )
   // `/` existe só como porta de entrada; o site vive sob /ajuda.
-  lines.unshift('/ /ajuda 302')
+  lines.unshift('/ /ajuda 302', '/novidades /ajuda/novidades 301')
   await writeFile(path.join(DIST, '_redirects'), `${lines.join('\n')}\n`, 'utf8')
 }
 

@@ -264,6 +264,12 @@ export async function buildContent(): Promise<BuildResult> {
     if (new Date(doc.updatedAt) > new Date()) {
       issues.push({ file: rel(file), code: 'L005', level: 'error', message: `updatedAt "${doc.updatedAt}" está no futuro` })
     }
+    if (doc.publishedAt && new Date(doc.publishedAt) > new Date()) {
+      issues.push({ file: rel(file), code: 'L005', level: 'error', message: `publishedAt "${doc.publishedAt}" está no futuro` })
+    }
+    if (doc.publishedAt && new Date(doc.publishedAt) > new Date(doc.updatedAt)) {
+      issues.push({ file: rel(file), code: 'L006', level: 'error', message: `publishedAt "${doc.publishedAt}" é depois de updatedAt "${doc.updatedAt}"` })
+    }
 
     const meta: ArticleMeta = {
       path: docPath,
@@ -271,6 +277,7 @@ export async function buildContent(): Promise<BuildResult> {
       title: doc.title,
       subtitle: doc.subtitle,
       updatedAt: doc.updatedAt,
+      publishedAt: doc.publishedAt,
       tags: doc.tags ?? [],
       collection: collectionSlug,
       section: sectionSlug ? `${collectionSlug}/${sectionSlug}` : undefined

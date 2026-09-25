@@ -142,6 +142,7 @@ pnpm content:check
 | `title` | sim | Máx. 120 caracteres. O nome que aparece na listagem e no `<title>` |
 | `updatedAt` | sim | `YYYY-MM-DD`. Data de hoje. O build recusa data no futuro (`L005`) |
 | `body` | sim | Ao menos um bloco |
+| `publishedAt` | só em Novidades | `YYYY-MM-DD` da data em que o recurso ficou disponível. Ordena a linha do tempo e não muda depois |
 | `subtitle` | não | Uma frase dizendo o que a pessoa consegue fazer depois de ler |
 | `tags` | não | Termos de busca que não aparecem no texto ("2FA", "coex") |
 | `aliases` | não | Slugs antigos desta página; viram redirect 301 no build |
@@ -853,7 +854,8 @@ existe — o caminho real é Ferramentas › Cashback.
 | `R008` | Listado mas não existe no disco | Crie o arquivo ou tire da lista |
 | `R009` | Seção e artigo com o mesmo slug | Renomeie um dos dois — a rota fica ambígua |
 | `R010` | Alias colide | Escolha outro alias |
-| `L005` | `updatedAt` no futuro | Use a data de hoje |
+| `L005` | `updatedAt` ou `publishedAt` no futuro | Use a data de hoje |
+| `L006` | `publishedAt` depois de `updatedAt` | Um drop não pode ter sido anunciado depois da última revisão |
 | `L008` (aviso) | Artigo longo sem heading | Adicione headings; sem eles o sumário fica vazio |
 | `L009` (aviso) | Nome interno no texto do artigo | Troque pelo nome que aparece na tela, ou corte. Blocos de código não são checados |
 | `R012` | Nome de ícone desconhecido | Use um dos registrados, ou registre o novo em `src/app/content-icons.ts` |
@@ -867,6 +869,50 @@ Além do validador, `pnpm build` roda o `check:bundle`:
 
 Escrever artigo mexe só no chunk daquele artigo e numa linha do manifest. Se um
 artigo novo estourar o orçamento, é sinal de que algo está errado no motor.
+
+---
+
+## Novidades: a coleção de drops
+
+`content/pt-BR/novidades/` não é uma coleção de tutoriais. Cada artigo ali é um
+**drop**: o anúncio de uma entrega, com data. A listagem em `/ajuda/novidades` é
+cronológica, ordenada por `publishedAt`, e a home mostra os dois mais recentes.
+
+Um drop responde três perguntas, nessa ordem: **o que mudou**, **o que você ganha
+com isso** e **o que precisa fazer para usar**. Termina com `linkCards` para os
+artigos de como-fazer — o drop conta a novidade, o artigo ensina. Nenhum dos dois
+faz o trabalho do outro.
+
+### As três regras do drop
+
+**1. Só publique o que está em produção.** Não é "o PR foi mergeado" — é "está na
+conta do cliente". Código mergeado é rotineiramente revertido, fica esperando
+migration rodada à mão ou espera o primeiro envio real. Um drop sobre algo que
+ainda não está no ar gera exatamente o ticket que a central existe para evitar.
+
+**2. Drop não se reescreve.** Um artigo é atualizado quando o produto muda; um
+drop é um registro datado do que foi anunciado naquele dia. Se o comportamento
+mudar depois, nasce outro drop. A verdade sobre "como é hoje" mora no artigo de
+ajuda, sempre — e é para lá que o drop aponta. Corrigir erro de digitação ou de
+fato está liberado; reescrever a entrega, não.
+
+**3. Material de vendas não vira drop.** O Updates semanal escrito no backoffice e
+os documentos de apoio comercial falam com o time: trazem argumento de venda,
+objeção e como conduzir a conversa. Esse enquadramento não pode ir para um site
+público — ele ensina o lojista a ser vendido. O fato por baixo quase sempre
+interessa a ele, virado do avesso: "cuidado na conversa, o valor de expirado vai
+aparecer maior" vira "o seu número de expirado vai aparecer maior, porque antes o
+vencimento não era contado".
+
+### Novidades aqui e Novidades no CRM
+
+O CRM tem a própria página de Novidades (`/{handle}/news`): o Updates **semanal**,
+escrito no backoffice, com itens curtos separados em novidade, melhoria e correção,
+e avisado pelo sino. Ele é o registro de tudo, e vive atrás do login.
+
+A coleção daqui é o contrário: poucas entregas, cada uma com profundidade, pública
+e indexável — é o link que se manda para um cliente. Uma entrega grande aparece nos
+dois lugares, e o item da semana aponta para o drop.
 
 ---
 

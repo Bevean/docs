@@ -4,6 +4,8 @@ import { useDocumentMeta } from '@/app/use-document-meta.ts'
 import { manifest } from '@/content/content-repository.ts'
 import { useOpenSearch } from '@/search/search-context.tsx'
 import { ContentIconBadge } from '@/app/content-icon.tsx'
+import { NEWS_COLLECTION, NEWS_URL, dropDate, getDrops } from '@/content/news.ts'
+import { longDate } from '@/lib/date.ts'
 
 const TITLE = 'Central de Ajuda — Bevean'
 const DESCRIPTION = 'Tutoriais, respostas rápidas e guias sobre a plataforma Bevean.'
@@ -11,6 +13,8 @@ const DESCRIPTION = 'Tutoriais, respostas rápidas e guias sobre a plataforma Be
 export function HomePage() {
   useDocumentMeta(TITLE, DESCRIPTION)
   const openSearch = useOpenSearch()
+  const drops = getDrops().slice(0, 2)
+  const collections = manifest.collections.filter((c) => c.path !== NEWS_COLLECTION)
 
   return (
     <>
@@ -34,11 +38,52 @@ export function HomePage() {
         </div>
       </section>
 
+      {drops.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 pt-12">
+          <div className="flex items-baseline justify-between gap-3">
+            <h2 className="text-lg font-semibold tracking-tight text-foreground">Novidades</h2>
+            <Link to={NEWS_URL} className="text-[13px] font-medium text-primary hover:underline">
+              Ver todas
+            </Link>
+          </div>
+
+          <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+            {drops.map((drop) => (
+              <li key={drop.path}>
+                <Link
+                  to={drop.url}
+                  className="group flex h-full flex-col rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-muted/30"
+                >
+                  <time
+                    dateTime={dropDate(drop)}
+                    className="text-[12px] font-medium text-muted-foreground"
+                  >
+                    {longDate(dropDate(drop))}
+                  </time>
+                  <span className="mt-2 flex items-start gap-1.5 font-semibold leading-6 text-foreground">
+                    {drop.title}
+                    <ArrowRight
+                      aria-hidden
+                      className="mt-1 size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5"
+                    />
+                  </span>
+                  {drop.subtitle && (
+                    <span className="mt-1.5 line-clamp-2 text-[13px] leading-6 text-muted-foreground">
+                      {drop.subtitle}
+                    </span>
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <section className="mx-auto max-w-6xl px-6 py-12">
         <h2 className="text-lg font-semibold tracking-tight text-foreground">Coleções</h2>
 
         <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {manifest.collections.map((collection) => (
+          {collections.map((collection) => (
             <Link
               key={collection.path}
               to={collection.url}

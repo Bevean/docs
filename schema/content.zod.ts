@@ -16,6 +16,7 @@ export const articleZod = z.object({
   subtitle: z.string().min(1).max(300).optional(),
   status: z.enum(['published', 'draft']).default('published'),
   updatedAt: z.iso.date(),
+  publishedAt: z.iso.date().optional(),
   tags: z.array(z.string().min(1)).default([]),
   /** Slugs antigos desta página — viram redirect no build. */
   aliases: z.array(z.string().min(1)).default([]),

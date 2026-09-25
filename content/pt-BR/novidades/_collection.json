@@ -1,0 +1,9 @@
+{
+  "$schema": "../../../.vscode/schemas/collection.schema.json",
+  "title": "Novidades",
+  "description": "O que mudou na plataforma: recursos novos, melhorias e o que você precisa fazer para usar cada um.",
+  "icon": "sparkles",
+  "articles": [
+    "cashback-um-programa-com-painel-e-regras"
+  ]
+}
