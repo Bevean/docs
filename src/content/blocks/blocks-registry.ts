@@ -10,6 +10,7 @@ import { videoBlock } from './video.tsx'
 import { codeBlock } from './code.tsx'
 import { tableBlock } from './table.tsx'
 import { faqBlock } from './faq.tsx'
+import { pillarsBlock } from './pillars.tsx'
 import { linkCardsBlock } from './link-cards.tsx'
 import { dividerBlock } from './divider.tsx'
 
@@ -30,6 +31,7 @@ export const blocksRegistry = {
   code: codeBlock,
   table: tableBlock,
   faq: faqBlock,
+  pillars: pillarsBlock,
   linkCards: linkCardsBlock,
   divider: dividerBlock
 }

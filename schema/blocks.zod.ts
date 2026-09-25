@@ -3,7 +3,7 @@ import { inlineContentZod } from './inline.zod.ts'
 
 const slugRe = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const languages = ['json', 'bash', 'http', 'html', 'javascript', 'typescript', 'csv', 'text'] as const
-const calloutVariants = ['info', 'tip', 'success', 'warning', 'danger'] as const
+const calloutVariants = ['info', 'tip', 'success', 'warning', 'danger', 'spotlight'] as const
 
 /** Emoji no texto de um heading é estrutura disfarçada — use `icon`/`callout`/`steps`. */
 const noLeadingEmoji = (value: unknown) => {
@@ -141,6 +141,14 @@ export const faqZod = z.object({
   items: z.array(z.object({ question: z.string().min(1), answer: nestedBodyZod })).min(1)
 })
 
+export const pillarsZod = z.object({
+  type: z.literal('pillars'),
+  items: z
+    .array(z.object({ title: z.string().min(1).max(40), content: inlineContentZod }))
+    .min(2, 'um pilar sozinho não é um resumo — use um parágrafo')
+    .max(4, 'acima de quatro pilares ninguém lê na primeira dobra')
+})
+
 export const linkCardsZod = z.object({
   type: z.literal('linkCards'),
   title: z.string().min(1).optional(),
@@ -166,6 +174,7 @@ export const BLOCK_TYPES = [
   'code',
   'table',
   'faq',
+  'pillars',
   'linkCards',
   'divider'
 ] as const
@@ -183,6 +192,7 @@ export const blockZod = z.discriminatedUnion(
     codeZod,
     tableZod,
     faqZod,
+    pillarsZod,
     linkCardsZod,
     dividerZod
   ],

@@ -15,6 +15,7 @@ export type {
   CodeBlock,
   TableBlock,
   FaqBlock,
+  PillarsBlock,
   LinkCardsBlock,
   DividerBlock
 } from '#schema'

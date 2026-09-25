@@ -1,4 +1,4 @@
-import { AlertTriangle, CheckCircle2, Info, Lightbulb, OctagonAlert } from 'lucide-react'
+import { AlertTriangle, CheckCircle2, Info, Lightbulb, Megaphone, OctagonAlert } from 'lucide-react'
 import type { Block, CalloutBlock } from '#schema'
 import { defineBlock } from '../block-contract.ts'
 import { NestedBlocks } from '../renderer/nested.tsx'
@@ -9,8 +9,11 @@ const VARIANTS = {
   tip: { Icon: Lightbulb, label: 'Dica', box: 'border-violet-500/30 bg-violet-500/5', icon: 'text-violet-600 dark:text-violet-400' },
   success: { Icon: CheckCircle2, label: 'Importante', box: 'border-emerald-500/30 bg-emerald-500/5', icon: 'text-emerald-600 dark:text-emerald-400' },
   warning: { Icon: AlertTriangle, label: 'Atenção', box: 'border-amber-500/40 bg-amber-500/5', icon: 'text-amber-600 dark:text-amber-500' },
-  danger: { Icon: OctagonAlert, label: 'Cuidado', box: 'border-destructive/35 bg-destructive/5', icon: 'text-destructive' }
+  danger: { Icon: OctagonAlert, label: 'Cuidado', box: 'border-destructive/35 bg-destructive/5', icon: 'text-destructive' },
+  spotlight: { Icon: Megaphone, label: 'Em destaque', box: 'border-transparent bg-foreground text-background', icon: 'text-background/70' }
 } as const
+
+const SPOTLIGHT_TEXT = 'text-background [&_p]:text-background/90 [&_strong]:text-background [&_a]:text-background'
 
 export const calloutBlock = defineBlock<CalloutBlock, CalloutBlock>({
   type: 'callout',
@@ -19,12 +22,21 @@ export const calloutBlock = defineBlock<CalloutBlock, CalloutBlock>({
   render: (model) => {
     const { Icon, label, box, icon } = VARIANTS[model.variant]
     return (
-      <div role="note" className={`flex gap-3 rounded-lg border p-4 ${box}`}>
+      <div
+        role="note"
+        className={`flex gap-3 rounded-lg border p-4 ${box} ${model.variant === 'spotlight' ? SPOTLIGHT_TEXT : ''}`}
+      >
         <Icon aria-hidden className={`mt-0.5 size-5 shrink-0 ${icon}`} />
         <div className="min-w-0 flex-1 space-y-2">
           {/* A cor sozinha não informa: o leitor de tela precisa da variante. */}
           <span className="sr-only">{label}: </span>
-          {model.title && <p className="text-[15px] font-semibold text-foreground">{model.title}</p>}
+          {model.title && (
+            <p
+              className={`text-[15px] font-semibold ${model.variant === 'spotlight' ? 'text-background' : 'text-foreground'}`}
+            >
+              {model.title}
+            </p>
+          )}
           <NestedBlocks blocks={model.body as Block[]} />
         </div>
       </div>

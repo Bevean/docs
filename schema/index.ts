@@ -18,6 +18,7 @@ import type {
   codeZod,
   tableZod,
   faqZod,
+  pillarsZod,
   linkCardsZod,
   dividerZod,
   ListInput
@@ -38,6 +39,7 @@ export type VideoBlock = z.input<typeof videoZod>
 export type CodeBlock = z.input<typeof codeZod>
 export type TableBlock = z.input<typeof tableZod>
 export type FaqBlock = z.input<typeof faqZod>
+export type PillarsBlock = z.input<typeof pillarsZod>
 export type LinkCardsBlock = z.input<typeof linkCardsZod>
 export type DividerBlock = z.input<typeof dividerZod>
 
@@ -58,6 +60,7 @@ export type Block =
   | CodeBlock
   | TableBlock
   | FaqBlock
+  | PillarsBlock
   | LinkCardsBlock
   | DividerBlock
 
