@@ -512,6 +512,71 @@
                   "text": " na caixa de diálogo."
                 }
               ]
+            },
+            {
+              "type": "image",
+              "src": "./assets/shopify-pixel-conectado.png",
+              "alt": "Página do pixel bevean na Shopify, com os botões Test, More actions e Disconnect no topo, a seção Customer privacy com Permission e Data sale, e o editor com o código colado",
+              "width": 1577,
+              "height": 1137,
+              "caption": [
+                {
+                  "type": "text",
+                  "text": "A página do pixel depois de conectado. Nela ficam o botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Testar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " (Test), o "
+                },
+                {
+                  "type": "text",
+                  "text": "Desconectar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " (Disconnect) e a seção "
+                },
+                {
+                  "type": "text",
+                  "text": "Privacidade do cliente",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " (Customer privacy), com a "
+                },
+                {
+                  "type": "text",
+                  "text": "Permissão",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " (Permission). Na captura, a chave e o endereço do código estão borrados; no seu, o código aparece inteiro. O admin da Shopify está em inglês."
+                }
+              ]
             }
           ]
         }
@@ -667,6 +732,47 @@
               "type": "text",
               "text": "."
             }
+          ],
+          "body": [
+            {
+              "type": "image",
+              "src": "./assets/shopify-menu-editar-codigo.png",
+              "alt": "Menu de três pontos ao lado do botão Edit theme, com as opções Preview, Rename, Duplicate, Edit code, Edit default theme content e Download theme file",
+              "width": 685,
+              "height": 600,
+              "caption": [
+                {
+                  "type": "text",
+                  "text": "O menu ⋯ ao lado de "
+                },
+                {
+                  "type": "text",
+                  "text": "Editar tema",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " (Edit theme). A opção é "
+                },
+                {
+                  "type": "text",
+                  "text": "Editar código",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " (Edit code). O admin da Shopify está em inglês."
+                }
+              ]
+            }
           ]
         },
         {
@@ -734,6 +840,60 @@
             {
               "type": "text",
               "text": "."
+            }
+          ],
+          "body": [
+            {
+              "type": "image",
+              "src": "./assets/shopify-theme-liquid-head.png",
+              "alt": "Editor de código da Shopify com o arquivo theme.liquid aberto, mostrando o código da Bevean dentro da tag head, logo antes do fechamento do head",
+              "width": 1575,
+              "height": 1018,
+              "caption": [
+                {
+                  "type": "text",
+                  "text": "O "
+                },
+                {
+                  "type": "text",
+                  "text": "theme.liquid",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " com o código da Bevean colado dentro do "
+                },
+                {
+                  "type": "text",
+                  "text": "<head>",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", logo antes de "
+                },
+                {
+                  "type": "text",
+                  "text": "</head>",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Na captura, o endereço do script e a chave estão borrados; no seu, aparecem inteiros."
+                }
+              ]
             }
           ]
         },
