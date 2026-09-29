@@ -1,0 +1,1381 @@
+{
+  "$schema": "../../../../../.vscode/schemas/article.schema.json",
+  "title": "Instalar o script na Shopify",
+  "subtitle": "O Custom Pixel em Eventos do cliente e o código do tema em theme.liquid: dois códigos, cada um num lugar.",
+  "updatedAt": "2026-09-29",
+  "tags": [
+    "Custom Pixel",
+    "pixel",
+    "tema",
+    "theme.liquid",
+    "tracker",
+    "eventos do cliente"
+  ],
+  "related": [
+    "integracoes/instalar-o-script/visao-geral",
+    "integracoes/lojas-e-erps/conectar-a-shopify"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A Shopify pede dois códigos, cada um num lugar. O "
+        },
+        {
+          "type": "text",
+          "text": "Custom Pixel",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " envia os eventos da loja para a Bevean. O "
+        },
+        {
+          "type": "text",
+          "text": "código do tema",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " carrega o script e os formulários da Bevean no site. Instale os dois — cada um faz uma parte que o outro não faz."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A chave pública já vem dentro dos dois códigos, então normalmente não é preciso colá-la em lugar nenhum."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Antes de começar"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "A integração Shopify está conectada e aparece como "
+            },
+            {
+              "type": "text",
+              "text": "Ativo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " em "
+            },
+            {
+              "type": "uiPath",
+              "attrs": {
+                "ref": "integrations"
+              }
+            },
+            {
+              "type": "text",
+              "text": ". Se ainda não, veja "
+            },
+            {
+              "type": "text",
+              "text": "Conectar a Shopify",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "integracoes/lojas-e-erps/conectar-a-shopify"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": "Você tem acesso de administrador na Shopify."
+        },
+        {
+          "content": "Você pode editar o código do tema publicado."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Edite o pixel e o tema que já existem em vez de criar outros. A própria Shopify recomenda remover ou alterar pixels antigos para que os eventos não sejam contados duas vezes."
+        }
+      ],
+      "title": "Vai reinstalar?"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 1: gerar os códigos na Bevean"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Abra "
+            },
+            {
+              "type": "uiPath",
+              "attrs": {
+                "ref": "integrations"
+              }
+            },
+            {
+              "type": "text",
+              "text": " › "
+            },
+            {
+              "type": "text",
+              "text": "Minhas integrações",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e clique na Shopify."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Abra a aba "
+            },
+            {
+              "type": "text",
+              "text": "Script",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e clique em "
+            },
+            {
+              "type": "text",
+              "text": "Gerar PK e códigos",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": "Confira o que apareceu.",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Um cartão com a "
+                },
+                {
+                  "type": "text",
+                  "text": "Chave pública",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e, logo abaixo, dois blocos: "
+                },
+                {
+                  "type": "text",
+                  "text": "Código do Custom Pixel",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " (já aberto) e "
+                },
+                {
+                  "type": "text",
+                  "text": "Código do tema",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " (fechado — clique nele para abrir). Cada um tem o seu botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Copiar script",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 2: instalar o Custom Pixel"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Na aba Script da Bevean, no bloco "
+            },
+            {
+              "type": "text",
+              "text": "Código do Custom Pixel",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", clique em "
+            },
+            {
+              "type": "text",
+              "text": "Copiar script",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "No admin da Shopify, abra "
+            },
+            {
+              "type": "text",
+              "text": "Configurações › Eventos do cliente",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Clique em "
+            },
+            {
+              "type": "text",
+              "text": "Adicionar pixel personalizado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", dê um nome ao pixel (por exemplo, "
+            },
+            {
+              "type": "text",
+              "text": "bevean",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ") e clique em "
+            },
+            {
+              "type": "text",
+              "text": "Adicionar pixel",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Cole o código na janela "
+            },
+            {
+              "type": "text",
+              "text": "Código",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Clique em "
+            },
+            {
+              "type": "text",
+              "text": "Salvar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e depois em "
+            },
+            {
+              "type": "text",
+              "text": "Conectar pixel",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": "Confira se o pixel ficou conectado.",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Em "
+                },
+                {
+                  "type": "text",
+                  "text": "Eventos do cliente",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", o status do pixel deve ser "
+                },
+                {
+                  "type": "text",
+                  "text": "Conectado",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Se não estiver, clique em ⋯ › "
+                },
+                {
+                  "type": "text",
+                  "text": "Ver detalhes",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", depois em "
+                },
+                {
+                  "type": "text",
+                  "text": "Conectar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e confirme em "
+                },
+                {
+                  "type": "text",
+                  "text": "Conectar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " na caixa de diálogo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Na página do pixel, a seção "
+            },
+            {
+              "type": "text",
+              "text": "Privacidade do cliente",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " tem a opção "
+            },
+            {
+              "type": "text",
+              "text": "Permissão",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Se ela estiver como "
+            },
+            {
+              "type": "text",
+              "text": "Obrigatório",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", o pixel só coleta depois que o visitante aceitar o banner de cookies da loja. É uma regra da Shopify, não da Bevean — e explica um pixel conectado que parece não enviar nada."
+            }
+          ]
+        }
+      ],
+      "title": "A privacidade do pixel pode segurar a coleta"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 3: instalar o código do tema"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Na Bevean, abra o bloco "
+            },
+            {
+              "type": "text",
+              "text": "Código do tema",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e clique em "
+            },
+            {
+              "type": "text",
+              "text": "Copiar script",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "No admin da Shopify, abra "
+            },
+            {
+              "type": "text",
+              "text": "Loja virtual › Temas",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "No tema publicado, clique em ⋯ ao lado de "
+            },
+            {
+              "type": "text",
+              "text": "Editar tema",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e escolha "
+            },
+            {
+              "type": "text",
+              "text": "Editar código",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Na pasta "
+            },
+            {
+              "type": "text",
+              "text": "layout",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", abra o arquivo "
+            },
+            {
+              "type": "text",
+              "text": "theme.liquid",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Cole o código dentro da tag "
+            },
+            {
+              "type": "text",
+              "text": "<head>",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", por exemplo logo antes de "
+            },
+            {
+              "type": "text",
+              "text": "</head>",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Clique em "
+            },
+            {
+              "type": "text",
+              "text": "Salvar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Edite o tema que está ativo na loja, não um rascunho — no rascunho o código não aparece para os visitantes."
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A Shopify avisa que, se as alterações de código de um tema forem incompatíveis com uma atualização, elas são removidas na cópia atualizada. Depois de atualizar o tema, ou de trocar de tema, confira se o código da Bevean continua no "
+            },
+            {
+              "type": "text",
+              "text": "theme.liquid",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Se sumiu, cole de novo."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Antes de editar, dá para duplicar o tema em ⋯ › "
+            },
+            {
+              "type": "text",
+              "text": "Duplicar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e ter uma cópia de segurança."
+            }
+          ]
+        }
+      ],
+      "title": "Edite o tema publicado, e confira depois de atualizá-lo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 4: conferir"
+    },
+    {
+      "type": "paragraph",
+      "content": "Comece pelo lado da Shopify:"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Em "
+            },
+            {
+              "type": "text",
+              "text": "Configurações › Eventos do cliente",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", clique no pixel e depois em "
+            },
+            {
+              "type": "text",
+              "text": "Testar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". A loja abre com o Shopify Pixel Helper."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Navegue: abra uma página, um produto e coloque um item no carrinho. Cada ação aparece na seção "
+            },
+            {
+              "type": "text",
+              "text": "Eventos recebidos",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " do Pixel Helper."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se o Pixel Helper mostrar "
+        },
+        {
+          "type": "text",
+          "text": "O pixel está aguardando consentimento",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", aceite o rastreamento no banner de cookies da loja ou clique em "
+        },
+        {
+          "type": "text",
+          "text": "Dar consentimento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para continuar o teste. O Pixel Helper não funciona em loja no modo privado."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Depois, confirme do lado da Bevean, em "
+        },
+        {
+          "type": "text",
+          "text": "Ao vivo",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "analises/analises/ao-vivo"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": os visitantes e os eventos devem aparecer enquanto você navega."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o pixel envia"
+    },
+    {
+      "type": "paragraph",
+      "content": "Estas são as ações da loja que o Custom Pixel manda para a Bevean:"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "Alguém abre uma página"
+          },
+          {
+            "content": "Página visualizada"
+          }
+        ],
+        [
+          {
+            "content": "Abre a página de um produto"
+          },
+          {
+            "content": "Produto visualizado"
+          }
+        ],
+        [
+          {
+            "content": "Abre uma categoria (coleção)"
+          },
+          {
+            "content": "Categoria visualizada"
+          }
+        ],
+        [
+          {
+            "content": "Abre o carrinho"
+          },
+          {
+            "content": "Carrinho visualizado"
+          }
+        ],
+        [
+          {
+            "content": "Coloca um produto no carrinho"
+          },
+          {
+            "content": "Produto adicionado ao carrinho"
+          }
+        ],
+        [
+          {
+            "content": "Começa o checkout"
+          },
+          {
+            "content": "Checkout iniciado — descartado nas lojas Shopify, veja abaixo"
+          }
+        ],
+        [
+          {
+            "content": "Informa o pagamento"
+          },
+          {
+            "content": "Informações de pagamento enviadas"
+          }
+        ],
+        [
+          {
+            "content": "Conclui a compra"
+          },
+          {
+            "content": "Compra concluída"
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Quando acontece na loja"
+        },
+        {
+          "content": "O que a Bevean registra"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O pixel envia o evento, mas a Bevean o descarta nas lojas Shopify. O gatilho "
+            },
+            {
+              "type": "text",
+              "text": "Carrinho abandonado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " da Shopify vem da integração de carrinho, não do script — então instalar ou reinstalar o pixel não muda o comportamento dele. Veja "
+            },
+            {
+              "type": "text",
+              "text": "Escolher um gatilho",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "automacoes/automacoes/escolher-um-gatilho"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Checkout iniciado não vira automação na Shopify"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando algo não funciona"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "O pixel não aparece como Conectado"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Clique em ⋯ › "
+              },
+              {
+                "type": "text",
+                "text": "Ver detalhes",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " › "
+              },
+              {
+                "type": "text",
+                "text": "Conectar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e confirme na caixa de diálogo."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "O Pixel Helper diz que o pixel está aguardando consentimento"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Aceite os cookies no banner da loja, ou clique em "
+              },
+              {
+                "type": "text",
+                "text": "Dar consentimento",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Se persistir, revise a opção "
+              },
+              {
+                "type": "text",
+                "text": "Permissão",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " em "
+              },
+              {
+                "type": "text",
+                "text": "Privacidade do cliente",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "O botão Testar não abre a loja direito"
+          },
+          {
+            "content": "O Pixel Helper não funciona em loja no modo privado. Desative o modo privado para testar."
+          }
+        ],
+        [
+          {
+            "content": "A página do pixel mostra um aviso de que o acesso é isolado (sandbox)"
+          },
+          {
+            "content": "É informativo: a Shopify roda todo pixel personalizado assim. Não precisa fazer nada."
+          }
+        ],
+        [
+          {
+            "content": "Os formulários da Bevean não aparecem no site"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O código do tema não está no "
+              },
+              {
+                "type": "text",
+                "text": "<head>",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " do "
+              },
+              {
+                "type": "text",
+                "text": "theme.liquid",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " do tema publicado, ou uma atualização do tema o removeu. Cole de novo."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Tudo funcionava e parou depois de remover e gerar o script de novo"
+          },
+          {
+            "content": "A chave mudou. Troque o código do pixel e o do tema pelos novos, copiados da aba Script."
+          }
+        ],
+        [
+          {
+            "content": "A Shopify recusa ou o código fica estranho ao colar"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Copie de novo com o botão "
+              },
+              {
+                "type": "text",
+                "text": "Copiar script",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", sem editar o conteúdo."
+              }
+            ]
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "O que você vê"
+        },
+        {
+          "content": "O que verificar"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Remover ou reinstalar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Remover o script na Bevean inativa a chave, mas o que você colou na Shopify continua lá. Para desinstalar de vez:"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Em "
+            },
+            {
+              "type": "text",
+              "text": "Configurações › Eventos do cliente",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", clique em "
+            },
+            {
+              "type": "text",
+              "text": "Desconectar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " no pixel da Bevean. Se quiser apagá-lo, use ⋯ › "
+            },
+            {
+              "type": "text",
+              "text": "Excluir",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Em "
+            },
+            {
+              "type": "text",
+              "text": "theme.liquid",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", apague o trecho que você colou."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Para reinstalar, gere o script de novo na Bevean e troque os dois códigos pelos novos: a chave é outra."
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/instalar-o-script/visao-geral",
+          "description": "O que o script faz e como saber se está funcionando."
+        },
+        {
+          "ref": "integracoes/lojas-e-erps/conectar-a-shopify",
+          "description": "Conectar a integração, se ainda não fez."
+        },
+        {
+          "ref": "ferramentas/formularios/visao-geral",
+          "description": "Os formulários que o código do tema carrega."
+        }
+      ],
+      "title": "Continue por aqui"
+    }
+  ]
+}

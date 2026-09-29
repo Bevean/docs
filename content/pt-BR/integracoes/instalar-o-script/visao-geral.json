@@ -1,0 +1,716 @@
+{
+  "$schema": "../../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o script da Bevean",
+  "subtitle": "O que o script faz na sua loja, como instalá-lo em cada plataforma e como confirmar que ele está funcionando.",
+  "updatedAt": "2026-09-29",
+  "tags": [
+    "tracker",
+    "rastreamento",
+    "pixel",
+    "GTM",
+    "chave pública"
+  ],
+  "related": [
+    "integracoes/instalar-o-script/shopify",
+    "integracoes/instalar-o-script/google-tag-manager"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O script da Bevean é um código que você coloca no seu site para a Bevean enxergar o que os visitantes fazem — que produto olharam, o que colocaram no carrinho, se chegaram ao checkout — e para os formulários da Bevean aparecerem na página. A integração da loja traz os pedidos; o script cobre o que acontece antes deles."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": " › "
+        },
+        {
+          "type": "text",
+          "text": "Minhas integrações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " › clique na sua integração › aba "
+        },
+        {
+          "type": "text",
+          "text": "Script",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Ela só aparece nas integrações em que o script está habilitado. Se a sua integração não mostra a aba, não há código para copiar por ali."
+        }
+      ],
+      "title": "A aba Script nem sempre aparece"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o script faz"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Formulários",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/formularios/visao-geral"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "É o script que carrega o pop-up, o banner ou o formulário embutido no seu site. Vale para qualquer plataforma."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Gatilhos de comportamento",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "automacoes/automacoes/escolher-um-gatilho"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Produto visualizado, Produto adicionado ao carrinho e Produto abandonado só disparam com o script instalado e o visitante identificado."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Ao vivo",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "analises/analises/ao-vivo"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Os números de visitantes, sessões e páginas."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Métricas",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "analises/analises/metricas"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Os eventos de navegação, produto e carrinho. Sem o script, eles não aparecem no catálogo."
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Recurso"
+        },
+        {
+          "content": "O que depende do script"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como instalar em cada plataforma"
+    },
+    {
+      "type": "paragraph",
+      "content": "O código é o mesmo tipo de coisa em todas, mas o lugar onde ele entra muda com a plataforma. A aba Script mostra o passo a passo e o código certos para a sua integração."
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "Shopify"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Dois códigos no admin da Shopify: um em "
+              },
+              {
+                "type": "text",
+                "text": "Eventos do cliente",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e outro no tema da loja."
+              }
+            ]
+          },
+          {
+            "content": "Nada além de ter acesso de administrador. Veja o passo a passo da Shopify."
+          }
+        ],
+        [
+          {
+            "content": "Bagy"
+          },
+          {
+            "content": "Tag HTML personalizada no Google Tag Manager."
+          },
+          {
+            "content": "Ter um contêiner do Google Tag Manager na loja."
+          }
+        ],
+        [
+          {
+            "content": "Wbuy"
+          },
+          {
+            "content": "Tag HTML personalizada no Google Tag Manager."
+          },
+          {
+            "content": "Ter um contêiner do Google Tag Manager na loja."
+          }
+        ],
+        [
+          {
+            "content": "VNDA (Olist Vnda)"
+          },
+          {
+            "content": "Tag HTML personalizada no Google Tag Manager, com o acionador Todas as páginas."
+          },
+          {
+            "content": "Ter acesso ao Google Tag Manager da loja. Se você não tem, peça ao suporte da Olist/VNDA antes de instalar."
+          }
+        ],
+        [
+          {
+            "content": "Wake"
+          },
+          {
+            "content": "Tag HTML personalizada no Google Tag Manager."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Liberar as URLs do script em "
+              },
+              {
+                "type": "text",
+                "text": "Políticas de Segurança",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", no painel da Wake — sem isso o navegador bloqueia o script."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Nuvemshop"
+          },
+          {
+            "content": "Tag HTML personalizada no Google Tag Manager."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Vincular o ID do seu contêiner em "
+              },
+              {
+                "type": "text",
+                "text": "Configurações › Google Tag Manager",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", no painel da Nuvemshop."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Loja Integrada"
+          },
+          {
+            "content": "Tag HTML personalizada no Google Tag Manager."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Instalar o aplicativo Google Tag Manager em "
+              },
+              {
+                "type": "text",
+                "text": "Soluções › Aplicativos",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e informar o ID do contêiner."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "VTEX"
+          },
+          {
+            "content": "Dois códigos: uma tag no Google Tag Manager (vitrine) e o arquivo checkout6-custom.js (checkout)."
+          },
+          {
+            "content": "Os dois são obrigatórios. Veja o passo a passo na página da VTEX."
+          }
+        ],
+        [
+          {
+            "content": "Outras integrações com a aba Script"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Cole o código dentro da tag "
+              },
+              {
+                "type": "text",
+                "text": "<head>",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " do site, em todas as páginas."
+              }
+            ]
+          },
+          {
+            "content": "Nada."
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Plataforma"
+        },
+        {
+          "content": "Onde você instala"
+        },
+        {
+          "content": "O que fazer antes"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os passos completos estão em "
+        },
+        {
+          "type": "text",
+          "text": "Instalar o script na Shopify",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/instalar-o-script/shopify"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e em "
+        },
+        {
+          "type": "text",
+          "text": "Instalar o script pelo Google Tag Manager",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/instalar-o-script/google-tag-manager"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". A VTEX tem o seu em "
+        },
+        {
+          "type": "text",
+          "text": "Conectar a VTEX",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/conectar-a-vtex"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Nas integrações sem instalação própria, o script não captura navegação nem compras sozinho: os formulários funcionam, mas Produto visualizado, Produto adicionado ao carrinho e os números de visitantes dependem de a plataforma estar na tabela."
+        }
+      ],
+      "title": "Fora da lista acima, o script só carrega os formulários"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "E o carrinho abandonado?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ele depende da plataforma. Nas lojas Bagy e Shopify o gatilho vem da integração de carrinho, e o evento de checkout do script é ignorado — instalar o script não muda isso. Na VTEX ele só existe pelo script. Os detalhes de cada gatilho estão em "
+        },
+        {
+          "type": "text",
+          "text": "Escolher um gatilho",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/escolher-um-gatilho"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A chave pública"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada integração tem a sua chave pública, que diz à Bevean de qual conta vêm os dados. Ela já vem dentro do código: você não precisa colá-la em lugar nenhum."
+    },
+    {
+      "type": "paragraph",
+      "content": "Por isso não reaproveite o código de outra loja nem de outra integração. Ele carrega a chave da outra conta, e é lá que os dados vão parar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Gerar, remover e gerar de novo"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Gerar script",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " (na Shopify, "
+              },
+              {
+                "type": "text",
+                "text": "Gerar PK e códigos",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ")"
+              }
+            ]
+          },
+          {
+            "content": "A Bevean cria a chave e mostra o código para copiar."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Remover script",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Pede confirmação. A chave é inativada e o script deixa de funcionar."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Gerar de novo, depois de remover"
+              }
+            ]
+          },
+          {
+            "content": "Cria uma chave nova. O código que já estava no site tem a chave antiga e não volta a funcionar: troque pelo código novo."
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Você clica em"
+        },
+        {
+          "content": "O que acontece"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A Bevean inativa a chave, mas não apaga o que você colou na sua loja. O código continua lá, sem efeito. Para limpar de vez, apague a tag ou o trecho de código por lá."
+        }
+      ],
+      "title": "Remover no painel não tira o código do site"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como saber se está funcionando"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra a sua loja em outra aba e navegue por algumas páginas."
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Na Bevean, abra "
+            },
+            {
+              "type": "text",
+              "text": "Ao vivo",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "analises/analises/ao-vivo"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e veja se os visitantes e os eventos aparecem. Sem o script, a tela sinaliza que ele não foi identificado."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Se quiser conferir o histórico, procure o evento em "
+            },
+            {
+              "type": "text",
+              "text": "Métricas",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "analises/analises/metricas"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Um evento de hoje não soma na contagem no mesmo dia, então use o Ao vivo para o teste do momento."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada plataforma também tem a sua ferramenta de teste: a Shopify tem o botão Testar no pixel, e o Google Tag Manager tem o modo Visualizar."
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Preciso do script se a integração já está conectada?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Para os pedidos, não: a integração sincroniza pedidos, clientes e produtos. Você precisa do script para os formulários, para os gatilhos de comportamento e para os números de navegação."
+            }
+          ]
+        },
+        {
+          "question": "Instalei e não aparece nada. E agora?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Veja a lista de problemas do passo a passo da sua plataforma: a causa mais comum é o código estar no lugar errado ou não ter sido publicado. Se você removeu o script e gerou de novo, a chave mudou: troque o código no site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "integracoes/instalar-o-script/shopify",
+          "description": "Custom Pixel e código do tema, passo a passo."
+        },
+        {
+          "ref": "integracoes/instalar-o-script/google-tag-manager",
+          "description": "Criar, testar e publicar a tag."
+        },
+        {
+          "ref": "integracoes/lojas-e-erps/conectar-a-vtex",
+          "description": "Os dois códigos da VTEX: vitrine e checkout."
+        },
+        {
+          "ref": "ferramentas/formularios/visao-geral",
+          "description": "O que você cria com o script instalado."
+        }
+      ],
+      "title": "Passo a passo por plataforma"
+    }
+  ]
+}

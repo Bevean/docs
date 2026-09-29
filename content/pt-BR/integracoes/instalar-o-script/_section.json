@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Instalar o script",
+  "description": "Coloque o script da Bevean no seu site para os formulários aparecerem e para a Bevean enxergar o que os visitantes fazem.",
+  "icon": "globe",
+  "articles": [
+    "visao-geral",
+    "shopify",
+    "google-tag-manager"
+  ]
+}

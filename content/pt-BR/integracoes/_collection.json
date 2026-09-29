@@ -4,7 +4,8 @@
   "description": "Conecte sua loja, seu ERP e suas ferramentas para os dados chegarem sozinhos.",
   "icon": "plug",
   "sections": [
-    "lojas-e-erps"
+    "lojas-e-erps",
+    "instalar-o-script"
   ],
   "articles": []
 }
