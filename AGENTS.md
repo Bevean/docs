@@ -265,9 +265,10 @@ Um callout por ideia. Três callouts seguidos viram ruído e o leitor para de v�
 
 ### `image`
 
-> **Nesta fase, não use.** A Central de Ajuda nasce sem capturas de tela — veja
-> [Por que não há prints](#por-que-não-há-prints). O bloco continua no schema
-> para quando essa decisão for revista.
+> **Nesta fase, não use para o painel da Bevean.** A Central de Ajuda nasce sem
+> capturas dele — veja [Por que não há prints](#por-que-não-há-prints). A única
+> exceção é a captura recortada de **painel de terceiro** (Shopify, Google Tag
+> Manager), com as condições de [A exceção: painel de terceiro](#a-exceção-painel-de-terceiro).
 
 ```json
 { "type": "image", "src": "./assets/listagem.png",
@@ -762,6 +763,37 @@ O que sustenta a decisão:
 - **Captura de ambiente local mostra o que não deveria**: nomes de teste como
   "Formulário sem nome2", itens de menu marcados "Em breve", módulos que o leitor
   não contratou. Numa central pública, isso ensina errado.
+
+### A exceção: painel de terceiro
+
+O artigo [Instalar o script na Shopify](content/pt-BR/integracoes/instalar-o-script/shopify.json)
+tem três capturas do admin da Shopify. A regra acima é sobre o painel **da
+Bevean**, que muda toda semana e que a gente controla. O painel de terceiro é
+outro caso: a pessoa precisa achar um ponto que só a imagem localiza (o menu ⋯
+ao lado de "Editar tema", onde o código entra no `theme.liquid`), e a Shopify
+muda o admin dela num ritmo que não é o nosso.
+
+Só entra captura de terceiro se **todas** estas valerem:
+
+1. **Recorte da região**, nunca a tela cheia. O leitor vê o menu, o botão ou o
+   trecho de código que importa, não o resto do admin.
+2. **Nada que identifique pessoa, loja de teste ou ambiente**: nome, e-mail,
+   domínio `.myshopify.com`, nome de tema, URL de desenvolvimento, chave pública.
+   Cubra com **pixelado** (desfoque leve é legível), no recorte final.
+3. **Abra a imagem final e olhe antes de commitar.** As coordenadas do pixelado
+   valem para a imagem já recortada, não para a original — foi assim que uma URL
+   de desenvolvimento quase foi publicada: a máscara caiu numa região vazia e o
+   arquivo parecia pronto.
+4. **Se a interface está em outro idioma, diga na legenda** e traga o rótulo nos
+   dois: "Editar código (Edit code)". O texto do artigo usa o rótulo em português
+   e o leitor precisa fazer a ponte.
+5. **`capturedAt` só com a data real da captura.** Sem ela, omita — não use a data
+   de hoje.
+6. **O passo a passo não depende da imagem.** O site não amplia imagem: no celular
+   uma captura de código fica pequena. O texto diz tudo; a imagem só confirma.
+
+Vale só para terceiros. Tela da Bevean continua sem print, e as quatro condições
+de [Quando revisitar](#quando-revisitar) continuam valendo para ela.
 
 ### Quando revisitar
 

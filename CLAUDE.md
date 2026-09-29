@@ -44,8 +44,9 @@ pnpm type-check && pnpm lint
   validador para fazer um artigo passar.
 - `zod` é build-only: em `src/`, só `import type`.
 - Emoji não é estrutura: aviso é `callout`, passo numerado é `steps`.
-- Sem capturas de tela nesta fase. O motivo e a condição de revisão estão no
-  `AGENTS.md`.
+- Sem capturas de tela do painel da Bevean nesta fase. A única exceção é captura
+  recortada de painel de terceiro (Shopify, Google Tag Manager), sem dado pessoal
+  nem de ambiente de teste. O motivo e as condições estão no `AGENTS.md`.
 - Nada é commitado sem pedido explícito.
 
 ## Estrutura
