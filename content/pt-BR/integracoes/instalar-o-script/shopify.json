@@ -2,7 +2,7 @@
   "$schema": "../../../../../.vscode/schemas/article.schema.json",
   "title": "Instalar o script na Shopify",
   "subtitle": "O Custom Pixel em Eventos do cliente e o código do tema em theme.liquid: dois códigos, cada um num lugar.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-09-30",
   "tags": [
     "Custom Pixel",
     "pixel",
@@ -133,7 +133,7 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "Passo 1: gerar os códigos na Bevean"
+      "content": "Passo 1: criar a tag na Bevean"
     },
     {
       "type": "steps",
@@ -147,42 +147,8 @@
             {
               "type": "uiPath",
               "attrs": {
-                "ref": "integrations"
+                "ref": "tools.tracking"
               }
-            },
-            {
-              "type": "text",
-              "text": " › "
-            },
-            {
-              "type": "text",
-              "text": "Minhas integrações",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "text": " e clique na Shopify."
-            }
-          ]
-        },
-        {
-          "title": [
-            {
-              "type": "text",
-              "text": "Abra a aba "
-            },
-            {
-              "type": "text",
-              "text": "Script",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
             },
             {
               "type": "text",
@@ -190,7 +156,7 @@
             },
             {
               "type": "text",
-              "text": "Gerar PK e códigos",
+              "text": "Criar tag",
               "marks": [
                 {
                   "type": "bold"
@@ -204,6 +170,46 @@
           ]
         },
         {
+          "title": [
+            {
+              "type": "text",
+              "text": "Em "
+            },
+            {
+              "type": "text",
+              "text": "Integrações",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", escolha a Shopify e clique em "
+            },
+            {
+              "type": "text",
+              "text": "Criar tag",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ],
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Se a Shopify não aparece, ela já tem uma tag — feche o painel e abra essa tag na lista — ou a integração não está ativa."
+            }
+          ]
+        },
+        {
           "title": "Confira o que apareceu.",
           "body": [
             {
@@ -211,7 +217,7 @@
               "content": [
                 {
                   "type": "text",
-                  "text": "Um cartão com a "
+                  "text": "A tela da tag abre com um cartão com a "
                 },
                 {
                   "type": "text",
@@ -283,7 +289,7 @@
           "title": [
             {
               "type": "text",
-              "text": "Na aba Script da Bevean, no bloco "
+              "text": "Na Bevean, na tela da tag, no bloco "
             },
             {
               "type": "text",
@@ -1391,10 +1397,10 @@
         ],
         [
           {
-            "content": "Tudo funcionava e parou depois de remover e gerar o script de novo"
+            "content": "Tudo funcionava e parou depois de remover a tag e criar outra"
           },
           {
-            "content": "A chave mudou. Troque o código do pixel e o do tema pelos novos, copiados da aba Script."
+            "content": "A chave mudou. Troque o código do pixel e o do tema pelos novos, copiados da tela da tag nova."
           }
         ],
         [
@@ -1440,7 +1446,7 @@
     },
     {
       "type": "paragraph",
-      "content": "Remover o script na Bevean inativa a chave, mas o que você colou na Shopify continua lá. Para desinstalar de vez:"
+      "content": "Remover a tag na Bevean inativa a chave, mas o que você colou na Shopify continua lá. Para desinstalar de vez:"
     },
     {
       "type": "steps",
@@ -1517,7 +1523,22 @@
     },
     {
       "type": "paragraph",
-      "content": "Para reinstalar, gere o script de novo na Bevean e troque os dois códigos pelos novos: a chave é outra."
+      "content": [
+        {
+          "type": "text",
+          "text": "Para reinstalar, crie uma tag nova para a Shopify em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.tracking"
+          }
+        },
+        {
+          "type": "text",
+          "text": " e troque os dois códigos pelos novos: a chave é outra."
+        }
+      ]
     },
     {
       "type": "linkCards",

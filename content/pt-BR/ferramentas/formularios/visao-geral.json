@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funcionam os formulários",
   "subtitle": "Formulários capturam leads no seu site: cada envio vira um contato no CRM, dentro da lista que você escolher.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-09-30",
   "tags": [
     "formulários",
     "leads",
@@ -196,17 +196,17 @@
       "content": [
         {
           "type": "text",
-          "text": "Formulário só aparece onde o script da Bevean está carregando. Ele é ativado na integração da sua plataforma, em "
+          "text": "Formulário só aparece onde o script da Bevean está carregando. Ele é instalado a partir de uma tag criada em "
         },
         {
           "type": "uiPath",
           "attrs": {
-            "ref": "settings.integrations"
+            "ref": "tools.tracking"
           }
         },
         {
           "type": "text",
-          "text": "."
+          "text": ", para a sua loja integrada ou para um site próprio."
         }
       ]
     },
@@ -230,10 +230,10 @@
       "rows": [
         [
           {
-            "content": "Ative o tracker para criar formulários"
+            "content": "Instale o script da Bevean para criar formulários"
           },
           {
-            "content": "Existe integração compatível, mas o script não foi ativado nela."
+            "content": "Não existe nenhuma tag de tracking na conta, nem de integração nem de site próprio."
           },
           {
             "content": [
@@ -243,7 +243,7 @@
               },
               {
                 "type": "text",
-                "text": "Configurar tracker",
+                "text": "Criar tag de tracking",
                 "marks": [
                   {
                     "type": "italic"
@@ -252,11 +252,17 @@
               },
               {
                 "type": "text",
-                "text": " para ir direto à tela de script da integração."
+                "text": " para ir a "
+              },
+              {
+                "type": "uiPath",
+                "attrs": {
+                  "ref": "tools.tracking"
+                }
               },
               {
                 "type": "text",
-                "text": " Para o passo a passo, veja "
+                "text": ", crie a tag e instale o código no site. Para o passo a passo, veja "
               },
               {
                 "type": "text",
@@ -276,17 +282,6 @@
               }
             ]
           }
-        ],
-        [
-          {
-            "content": "Nenhuma integração ativa é compatível com o tracker"
-          },
-          {
-            "content": "Não há integração compatível ativa na sua conta."
-          },
-          {
-            "content": "Conecte ou ative uma plataforma suportada antes de continuar."
-          }
         ]
       ]
     },
@@ -296,7 +291,7 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "O painel só sabe que você ativou o script na integração. Se o formulário está publicado e ativo e mesmo assim não aparece, o próximo passo é conferir se o script está de fato carregando nas páginas da loja."
+          "content": "O painel só sabe que você criou a tag. Se o formulário está publicado e ativo e mesmo assim não aparece, o próximo passo é conferir se o script está de fato carregando nas páginas do site."
         }
       ],
       "title": "Ativo no painel não é o mesmo que carregando na loja"

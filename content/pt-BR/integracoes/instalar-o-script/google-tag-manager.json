@@ -2,7 +2,7 @@
   "$schema": "../../../../../.vscode/schemas/article.schema.json",
   "title": "Instalar o script pelo Google Tag Manager",
   "subtitle": "Crie uma tag HTML personalizada, teste em modo de visualização e publique — o caminho de Bagy, Wbuy, VNDA, Wake, Nuvemshop e Loja Integrada.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-09-30",
   "tags": [
     "GTM",
     "Google Tag Manager",
@@ -244,42 +244,8 @@
             {
               "type": "uiPath",
               "attrs": {
-                "ref": "integrations"
+                "ref": "tools.tracking"
               }
-            },
-            {
-              "type": "text",
-              "text": " › "
-            },
-            {
-              "type": "text",
-              "text": "Minhas integrações",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "text": " e clique na sua integração."
-            }
-          ]
-        },
-        {
-          "title": [
-            {
-              "type": "text",
-              "text": "Abra a aba "
-            },
-            {
-              "type": "text",
-              "text": "Script",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
             },
             {
               "type": "text",
@@ -287,7 +253,7 @@
             },
             {
               "type": "text",
-              "text": "Gerar script",
+              "text": "Criar tag",
               "marks": [
                 {
                   "type": "bold"
@@ -304,7 +270,85 @@
           "title": [
             {
               "type": "text",
-              "text": "Clique em "
+              "text": "Em "
+            },
+            {
+              "type": "text",
+              "text": "Integrações",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", escolha a sua integração e clique em "
+            },
+            {
+              "type": "text",
+              "text": "Criar tag",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ],
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Se a integração não aparece, ela já tem uma tag — feche o painel e abra essa tag na lista — ou não está ativa."
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Site sem plataforma integrada? Escolha "
+                },
+                {
+                  "type": "text",
+                  "text": "Site próprio",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " — veja "
+                },
+                {
+                  "type": "text",
+                  "text": "Instalar o script em um site próprio",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "integracoes/instalar-o-script/site-proprio"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Na tela da tag, clique em "
             },
             {
               "type": "text",
@@ -875,7 +919,7 @@
           "title": [
             {
               "type": "text",
-              "text": "Na aba Script da Bevean, abaixo do código, copie a "
+              "text": "Na Bevean, na tela da tag, abaixo do código, copie a "
             },
             {
               "type": "text",
@@ -1145,12 +1189,12 @@
             "content": "Os dados vão parar na loja errada, ou não chegam"
           },
           {
-            "content": "O código veio de outra integração ou de outra loja. Cada uma tem a sua chave: gere o script na integração correta."
+            "content": "O código veio de outra integração ou de outra loja. Cada uma tem a sua chave: copie o código da tag da integração correta."
           }
         ],
         [
           {
-            "content": "Tudo funcionava e parou depois de remover e gerar o script de novo"
+            "content": "Tudo funcionava e parou depois de remover a tag de tracking e criar outra"
           },
           {
             "content": "A chave mudou. Edite a tag no Google Tag Manager, cole o código novo e publique outra vez."
@@ -1215,7 +1259,7 @@
     },
     {
       "type": "paragraph",
-      "content": "Remover o script na Bevean inativa a chave, mas a tag continua no seu contêiner, sem efeito. Para tirá-la de vez, exclua a tag no Google Tag Manager e publique de novo. Para trocar o código, edite a tag existente em vez de criar outra, para não ficar com duas tags da Bevean no mesmo contêiner."
+      "content": "Remover a tag de tracking na Bevean inativa a chave, mas a tag do Google Tag Manager continua no seu contêiner, sem efeito. Para tirá-la de vez, exclua a tag no Google Tag Manager e publique de novo. Para trocar o código, edite a tag existente em vez de criar outra, para não ficar com duas tags da Bevean no mesmo contêiner."
     },
     {
       "type": "linkCards",

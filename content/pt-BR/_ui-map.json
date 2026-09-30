@@ -40,6 +40,13 @@
     ],
     "href": "/tools/links"
   },
+  "tools.tracking": {
+    "segments": [
+      "Ferramentas",
+      "Tracking"
+    ],
+    "href": "/tools/tracking"
+  },
   "settings.attribution": {
     "segments": [
       "Configurações",

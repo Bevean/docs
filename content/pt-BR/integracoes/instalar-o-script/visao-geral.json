@@ -2,7 +2,7 @@
   "$schema": "../../../../../.vscode/schemas/article.schema.json",
   "title": "Como funciona o script da Bevean",
   "subtitle": "O que o script faz na sua loja, como instalá-lo em cada plataforma e como confirmar que ele está funcionando.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-09-30",
   "tags": [
     "tracker",
     "rastreamento",
@@ -12,7 +12,8 @@
   ],
   "related": [
     "integracoes/instalar-o-script/shopify",
-    "integracoes/instalar-o-script/google-tag-manager"
+    "integracoes/instalar-o-script/google-tag-manager",
+    "integracoes/instalar-o-script/site-proprio"
   ],
   "body": [
     {
@@ -34,38 +35,12 @@
         {
           "type": "uiPath",
           "attrs": {
-            "ref": "integrations"
+            "ref": "tools.tracking"
           }
         },
         {
           "type": "text",
-          "text": " › "
-        },
-        {
-          "type": "text",
-          "text": "Minhas integrações",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " › clique na sua integração › aba "
-        },
-        {
-          "type": "text",
-          "text": "Script",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": "."
+          "text": ". Ali você cria uma tag para a sua loja integrada ou para um site próprio, e a tela da tag mostra a chave pública e o código para instalar."
         }
       ]
     },
@@ -75,10 +50,88 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "Ela só aparece nas integrações em que o script está habilitado. Se a sua integração não mostra a aba, não há código para copiar por ali."
+          "content": [
+            {
+              "type": "text",
+              "text": "Em "
+            },
+            {
+              "type": "text",
+              "text": "Criar tag",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", a lista "
+            },
+            {
+              "type": "text",
+              "text": "Integrações",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " mostra as integrações ativas que aceitam o script e ainda não têm tag: Shopify, Bagy, Wbuy, VNDA, Wake, Nuvemshop, Loja Integrada e VTEX. Cada integração tem no máximo uma tag — se a sua já tem, abra a tag dela na lista. Quando não sobra nenhuma, o painel avisa: "
+            },
+            {
+              "type": "text",
+              "text": "Nenhuma integração ativa com suporte a tracking está sem tag.",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Site sem plataforma integrada usa a opção "
+            },
+            {
+              "type": "text",
+              "text": "Site próprio",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Veja "
+            },
+            {
+              "type": "text",
+              "text": "Instalar o script em um site próprio",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "integracoes/instalar-o-script/site-proprio"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
         }
       ],
-      "title": "A aba Script nem sempre aparece"
+      "title": "Criar tag só lista as integrações ativas que ainda não têm tag"
     },
     {
       "type": "heading",
@@ -189,7 +242,7 @@
     },
     {
       "type": "paragraph",
-      "content": "O código é o mesmo tipo de coisa em todas, mas o lugar onde ele entra muda com a plataforma. A aba Script mostra o passo a passo e o código certos para a sua integração."
+      "content": "O código é o mesmo tipo de coisa em todas, mas o lugar onde ele entra muda com a plataforma. A tela da tag mostra o passo a passo e o código certos para a sua integração."
     },
     {
       "type": "table",
@@ -356,13 +409,13 @@
         ],
         [
           {
-            "content": "Outras integrações com a aba Script"
+            "content": "Site próprio (sem plataforma integrada)"
           },
           {
             "content": [
               {
                 "type": "text",
-                "text": "Cole o código dentro da tag "
+                "text": "Dentro da tag "
               },
               {
                 "type": "text",
@@ -375,12 +428,33 @@
               },
               {
                 "type": "text",
-                "text": " do site, em todas as páginas."
+                "text": " do site, em todas as páginas — ou numa tag HTML personalizada no Google Tag Manager, com o acionador Todas as páginas."
               }
             ]
           },
           {
-            "content": "Nada."
+            "content": [
+              {
+                "type": "text",
+                "text": "Nada. Veja "
+              },
+              {
+                "type": "text",
+                "text": "Instalar o script em um site próprio",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "integracoes/instalar-o-script/site-proprio"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ]
       ],
@@ -459,10 +533,28 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "Nas integrações sem instalação própria, o script não captura navegação nem compras sozinho: os formulários funcionam, mas Produto visualizado, Produto adicionado ao carrinho e os números de visitantes dependem de a plataforma estar na tabela."
+          "content": [
+            {
+              "type": "text",
+              "text": "Os formulários funcionam assim que o script carrega. Produto visto, carrinho e compra não são capturados sozinhos: quem desenvolve o site precisa enviar esses eventos com "
+            },
+            {
+              "type": "text",
+              "text": "window.bevean.push",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Carrinho abandonado não é suportado em site próprio."
+            }
+          ]
         }
       ],
-      "title": "Fora da lista acima, o script só carrega os formulários"
+      "title": "Em site próprio, o script sozinho só carrega os formulários"
     },
     {
       "type": "heading",
@@ -474,7 +566,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Ele depende da plataforma. Nas lojas Bagy e Shopify o gatilho vem da integração de carrinho, e o evento de checkout do script é ignorado — instalar o script não muda isso. Na VTEX ele só existe pelo script. Os detalhes de cada gatilho estão em "
+          "text": "Ele depende da plataforma. Nas lojas Bagy e Shopify o gatilho vem da integração de carrinho, e o evento de checkout do script é ignorado — instalar o script não muda isso. Na VTEX ele só existe pelo script. Em site próprio, não é suportado. Os detalhes de cada gatilho estão em "
         },
         {
           "type": "text",
@@ -501,7 +593,7 @@
     },
     {
       "type": "paragraph",
-      "content": "Cada integração tem a sua chave pública, que diz à Bevean de qual conta vêm os dados. Ela já vem dentro do código: você não precisa colá-la em lugar nenhum."
+      "content": "Cada tag tem a sua chave pública, que diz à Bevean de qual conta vêm os dados. Ela já vem dentro do código: você não precisa colá-la em lugar nenhum."
     },
     {
       "type": "paragraph",
@@ -510,7 +602,7 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "Gerar, remover e gerar de novo"
+      "content": "Criar, remover e criar de novo"
     },
     {
       "type": "table",
@@ -520,42 +612,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "Gerar script",
-                "marks": [
-                  {
-                    "type": "bold"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "text": " (na Shopify, "
-              },
-              {
-                "type": "text",
-                "text": "Gerar PK e códigos",
-                "marks": [
-                  {
-                    "type": "bold"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "text": ")"
-              }
-            ]
-          },
-          {
-            "content": "A Bevean cria a chave e mostra o código para copiar."
-          }
-        ],
-        [
-          {
-            "content": [
-              {
-                "type": "text",
-                "text": "Remover script",
+                "text": "Criar tag",
                 "marks": [
                   {
                     "type": "bold"
@@ -565,7 +622,7 @@
             ]
           },
           {
-            "content": "Pede confirmação. A chave é inativada e o script deixa de funcionar."
+            "content": "A Bevean cria a chave pública e abre a tela da tag, com o código para copiar."
           }
         ],
         [
@@ -573,7 +630,47 @@
             "content": [
               {
                 "type": "text",
-                "text": "Gerar de novo, depois de remover"
+                "text": "Remover",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " (na tela da tag, ou no ícone de lixeira da linha, na lista)"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Pede confirmação em "
+              },
+              {
+                "type": "text",
+                "text": "Remover tag",
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". A chave é inativada e o script instalado deixa de funcionar."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Criar uma tag nova, depois de remover"
               }
             ]
           },
@@ -684,7 +781,7 @@
           "answer": [
             {
               "type": "paragraph",
-              "content": "Veja a lista de problemas do passo a passo da sua plataforma: a causa mais comum é o código estar no lugar errado ou não ter sido publicado. Se você removeu o script e gerou de novo, a chave mudou: troque o código no site."
+              "content": "Veja a lista de problemas do passo a passo da sua plataforma: a causa mais comum é o código estar no lugar errado ou não ter sido publicado. Se você removeu a tag e criou outra, a chave mudou: troque o código no site."
             }
           ]
         }
@@ -704,6 +801,10 @@
         {
           "ref": "integracoes/lojas-e-erps/conectar-a-vtex",
           "description": "Os dois códigos da VTEX: vitrine e checkout."
+        },
+        {
+          "ref": "integracoes/instalar-o-script/site-proprio",
+          "description": "Site sem plataforma integrada: o código no <head> ou no Tag Manager."
         },
         {
           "ref": "ferramentas/formularios/visao-geral",
