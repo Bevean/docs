@@ -1,0 +1,894 @@
+{
+  "$schema": "../../../../../.vscode/schemas/article.schema.json",
+  "title": "Adicionar a forma de pagamento na Meta",
+  "subtitle": "Cadastre o cartão da conta do WhatsApp no Business Manager: sem ele, os modelos não saem e o atendimento para depois da franquia gratuita do mês.",
+  "updatedAt": "2026-09-30",
+  "tags": [
+    "cartão de crédito",
+    "pagamento",
+    "cobrança",
+    "Business Manager",
+    "Meta",
+    "BRL",
+    "dólar",
+    "pendência de pagamento",
+    "erro de cobrança"
+  ],
+  "related": [
+    "configuracoes/whatsapp-oficial/resolver-problemas",
+    "configuracoes/whatsapp-oficial/conectar-sua-conta"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A Meta cobra por mensagem entregue no WhatsApp Oficial, e quem cobra é a própria Meta, na conta do WhatsApp da sua empresa — não a Bevean. Por isso o cartão é cadastrado no Business Manager da Meta, e não no painel da Bevean."
+    },
+    {
+      "type": "paragraph",
+      "content": "Ao final, a conta do WhatsApp conectada à Bevean fica com um cartão de crédito como forma de pagamento."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que acontece sem forma de pagamento"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "Modelos de mensagem — campanhas, automações, primeiro contato"
+          },
+          {
+            "content": "Não saem. A Meta exige uma forma de pagamento para enviar."
+          }
+        ],
+        [
+          {
+            "content": "Respostas no atendimento, dentro das 24 horas"
+          },
+          {
+            "content": "A partir de 1º de outubro de 2026, saem só até a franquia gratuita: 1.000 mensagens por número, por mês. Depois disso, param até o mês virar ou até o cartão ser cadastrado."
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Envio"
+        },
+        {
+          "content": "Sem forma de pagamento"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Na Bevean, o envio recusado aparece com um destes textos:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "No atendimento: "
+            },
+            {
+              "type": "text",
+              "text": "Envio bloqueado por pendência de pagamento na conta da Meta.",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "No relatório de campanhas e automações: "
+            },
+            {
+              "type": "text",
+              "text": "Erro de cobrança na conta do WhatsApp",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A Meta devolve o mesmo aviso quando não há cartão, quando o cartão foi recusado e quando ele venceu. Nos três casos, o caminho é este artigo."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Antes de começar"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Acesso ao Business Manager da empresa, em "
+            },
+            {
+              "type": "text",
+              "text": "business.facebook.com",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://business.facebook.com/"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", com permissão para gerenciar os pagamentos da conta do WhatsApp. Quem é dono da conta já tem."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Um cartão de crédito Visa ou Mastercard.",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " A Meta não aceita American Express nem carteiras digitais como PayPal."
+            }
+          ]
+        },
+        {
+          "content": "Os dados da empresa à mão: nome, endereço e, se a Meta pedir, as informações fiscais."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Escolha a moeda antes de começar"
+    },
+    {
+      "type": "paragraph",
+      "content": "A moeda da conta não se troca depois pela tela da Meta. Então decida antes de preencher o formulário:"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "Real brasileiro (BRL)"
+          },
+          {
+            "content": "Escolha. Desde julho de 2026, a Meta oferece reais para empresas faturadas no Brasil, com a cobrança emitida pela Facebook Brasil."
+          }
+        ],
+        [
+          {
+            "content": "Só Dólar americano"
+          },
+          {
+            "content": "Escolha dólar. A cobrança passa a ser uma compra internacional: o cartão precisa estar liberado para compras internacionais — confirme com o banco antes."
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "Se aparecer"
+        },
+        {
+          "content": "Faça"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A Meta avisa que, para as empresas que já podem ter a conta em reais, contas de mensagens em outra moeda param de entregar a partir de 1º de julho de 2027 se não forem migradas até 30 de junho de 2027."
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A troca de moeda depois é uma migração feita pela API da Meta, e contas em Coexistência não podem ser migradas por ela. Detalhes na "
+            },
+            {
+              "type": "text",
+              "text": "página de preços da Meta",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e em "
+            },
+            {
+              "type": "text",
+              "text": "Change billing currency",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/change-billing-currency"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Conta em dólar tem prazo para as empresas que podem usar reais"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 1: abrir as configurações de pagamento da conta"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Acesse "
+            },
+            {
+              "type": "text",
+              "text": "business.facebook.com",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://business.facebook.com/"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Clique em "
+            },
+            {
+              "type": "text",
+              "text": "Configurações",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", no fim do menu lateral."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "No menu lateral, abra "
+            },
+            {
+              "type": "text",
+              "text": "Contas › Contas do WhatsApp",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": "Selecione a conta do WhatsApp conectada à Bevean."
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Na aba "
+            },
+            {
+              "type": "text",
+              "text": "Summary",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " (Sumário), role até o fim e clique em "
+            },
+            {
+              "type": "text",
+              "text": "Configurações de pagamento",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ],
+          "body": [
+            {
+              "type": "image",
+              "src": "./assets/meta-conta-whatsapp-configuracoes-de-pagamento.png",
+              "alt": "Tela Contas do WhatsApp nas configurações do Business Manager, com Contas do WhatsApp selecionado no menu, a conta escolhida na lista e o botão Configurações de pagamento no fim da aba Summary",
+              "width": 1600,
+              "height": 838,
+              "caption": [
+                {
+                  "type": "text",
+                  "text": "Contas do WhatsApp no Business Manager. Os destaques mostram o item do menu, a conta e o botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Configurações de pagamento",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Na sua tela aparecem o seu portfólio e a sua conta. Alguns rótulos, como "
+                },
+                {
+                  "type": "text",
+                  "text": "Summary",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e "
+                },
+                {
+                  "type": "text",
+                  "text": "Payment method",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", a própria Meta mostra em inglês."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O mesmo lugar abre por "
+        },
+        {
+          "type": "text",
+          "text": "Cobrança e pagamentos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no menu lateral das Configurações: escolha a conta em "
+        },
+        {
+          "type": "text",
+          "text": "Contas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Passo 2: cadastrar o cartão"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Clique em "
+            },
+            {
+              "type": "text",
+              "text": "Adicionar forma de pagamento",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ],
+          "body": [
+            {
+              "type": "image",
+              "src": "./assets/meta-cobranca-adicionar-forma-de-pagamento.png",
+              "alt": "Tela Cobrança e pagamentos da conta, com o botão Adicionar forma de pagamento e, mais abaixo, o botão Editar das Informações comerciais",
+              "width": 2104,
+              "height": 952,
+              "caption": [
+                {
+                  "type": "text",
+                  "text": "Cobrança e pagamentos da conta. Os destaques mostram "
+                },
+                {
+                  "type": "text",
+                  "text": "Adicionar forma de pagamento",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e, mais abaixo, o "
+                },
+                {
+                  "type": "text",
+                  "text": "Editar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " das "
+                },
+                {
+                  "type": "text",
+                  "text": "Informações comerciais",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", para corrigir os dados da empresa depois."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Preencha as "
+            },
+            {
+              "type": "text",
+              "text": "Informações da empresa",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e clique em "
+            },
+            {
+              "type": "text",
+              "text": "Salvar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ],
+          "body": [
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "País ou região de cobrança",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": o país da empresa, por exemplo Brasil."
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Moeda",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": veja a seção anterior — reais, se aparecer."
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Fuso horário",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": o da empresa, por exemplo São Paulo."
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Nome da empresa",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " e "
+                    },
+                    {
+                      "type": "text",
+                      "text": "Endereço da empresa",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Fins comerciais",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": selecione \"Sim, estou comprando os serviços do WhatsApp Business para fins comerciais\"."
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Número da ordem de compra",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ": opcional, pode deixar em branco."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Confirme a localização e a moeda."
+        },
+        {
+          "title": "Informe o cartão de crédito e salve."
+        },
+        {
+          "title": "Aguarde a confirmação da Meta."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A ordem dessas telas pode variar: às vezes a Meta pede o cartão antes das informações da empresa. Os campos são os mesmos."
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Nome, endereço e fuso ficam em "
+            },
+            {
+              "type": "text",
+              "text": "Informações comerciais › Editar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", na mesma tela de pagamentos."
+            }
+          ]
+        }
+      ],
+      "title": "Os dados da empresa você corrige depois; a moeda, não"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conferir"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na tela "
+        },
+        {
+          "type": "text",
+          "text": "Cobrança e pagamentos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", a área "
+        },
+        {
+          "type": "text",
+          "text": "Formas de pagamento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " deixa de dizer "
+        },
+        {
+          "type": "text",
+          "text": "Você não adicionou nenhuma forma de pagamento",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e passa a mostrar o cartão."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Na Bevean não há nada a configurar: depois do cadastro, os próximos envios seguem normalmente."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando algo não funciona"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          {
+            "content": "O cartão foi recusado"
+          },
+          {
+            "content": "Confirme com o banco se ele é de crédito e, se a conta estiver em dólar, se está liberado para compras internacionais."
+          }
+        ],
+        [
+          {
+            "content": "Não aparece Configurações de pagamento"
+          },
+          {
+            "content": "Confira se selecionou a conta certa em Contas do WhatsApp e se você tem permissão para gerenciar os pagamentos dela."
+          }
+        ],
+        [
+          {
+            "content": "Não consigo salvar as Informações da empresa"
+          },
+          {
+            "content": "Confira os campos obrigatórios: país, moeda, fuso horário, nome e endereço da empresa."
+          }
+        ],
+        [
+          {
+            "content": "A moeda ficou errada"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A tela não troca. A troca é uma migração pela API da Meta, que não vale para contas em Coexistência. Veja "
+              },
+              {
+                "type": "text",
+                "text": "Change billing currency",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/change-billing-currency"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Cadastrei o cartão e o envio continua bloqueado"
+          },
+          {
+            "content": "Confira se o cartão foi para a conta do WhatsApp conectada à Bevean — cada conta tem a própria forma de pagamento."
+          }
+        ]
+      ],
+      "head": [
+        {
+          "content": "O que você vê"
+        },
+        {
+          "content": "O que verificar"
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "items": [
+        {
+          "ref": "configuracoes/whatsapp-oficial/resolver-problemas",
+          "description": "Número desconectado, com erro ou com aviso."
+        },
+        {
+          "ref": "configuracoes/whatsapp-oficial/gerenciar-contas-e-numeros",
+          "description": "As contas e os números conectados à Bevean."
+        }
+      ],
+      "title": "Continue por aqui"
+    }
+  ]
+}
