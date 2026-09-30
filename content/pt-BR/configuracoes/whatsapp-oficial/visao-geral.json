@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funciona o WhatsApp Oficial",
   "subtitle": "A conta e os números que ela agrupa, a diferença entre API e Coexistência, e o que qualidade e limite de mensagens significam.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-30",
   "tags": [
     "whatsapp oficial",
     "api",
@@ -253,6 +253,10 @@
         {
           "ref": "configuracoes/whatsapp-oficial/conectar-sua-conta",
           "description": "Autorizar a Meta e conectar o primeiro número."
+        },
+        {
+          "ref": "configuracoes/whatsapp-oficial/adicionar-forma-de-pagamento-na-meta",
+          "description": "O cartão da conta no Business Manager: sem ele, a Meta bloqueia os envios."
         },
         {
           "ref": "configuracoes/whatsapp-oficial/gerenciar-contas-e-numeros",

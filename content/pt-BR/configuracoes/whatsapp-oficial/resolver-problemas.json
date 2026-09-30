@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Número desconectado ou com erro",
   "subtitle": "Roteiros para quando o número aparece Desconectado ou Falhou, quando surge um aviso de vínculo com outra empresa, e o que qualidade e limite realmente indicam.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-30",
   "tags": [
     "desconectado",
     "falhou",
@@ -18,7 +18,7 @@
   "body": [
     {
       "type": "paragraph",
-      "content": "A maioria dos casos cai em três situações: o número aparece Desconectado ou Falhou, aparece um aviso de vínculo com outra empresa ou plataforma, ou algum indicador (qualidade, limite) mostra algo que parece errado mas não é."
+      "content": "A maioria dos casos cai em três situações: o número aparece Desconectado ou Falhou, aparece um aviso de vínculo com outra empresa ou plataforma, ou algum indicador (qualidade, limite) mostra algo que parece errado mas não é. Há ainda um caso que aparece nos envios, e não no número: o bloqueio por pendência de pagamento na Meta."
     },
     {
       "type": "callout",
@@ -190,6 +190,116 @@
     {
       "type": "paragraph",
       "content": "O mesmo texto cobre dois casos bem diferentes: a Meta ainda não determinou um limite, ou a conta já tem envio sem limite definido. Não dá para saber qual dos dois só olhando o texto."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os envios aparecem bloqueados por pagamento"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No atendimento aparece "
+        },
+        {
+          "type": "text",
+          "text": "Envio bloqueado por pendência de pagamento na conta da Meta.",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Nas campanhas e automações, "
+        },
+        {
+          "type": "text",
+          "text": "Erro de cobrança na conta do WhatsApp",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Nos dois casos é a Meta recusando o envio por causa da forma de pagamento da conta."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "A conta do WhatsApp tem um cartão cadastrado no Business Manager?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Cadastre: "
+              },
+              {
+                "type": "text",
+                "text": "Adicionar a forma de pagamento na Meta",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "configuracoes/whatsapp-oficial/adicionar-forma-de-pagamento-na-meta"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "O cartão está válido e não foi recusado?"
+          },
+          {
+            "content": "A Meta devolve o mesmo aviso para cartão ausente, vencido ou recusado. Atualize a forma de pagamento."
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O cartão está na conta do WhatsApp conectada à Bevean?"
+          },
+          {
+            "content": "Cada conta tem a própria forma de pagamento: um cartão em outra conta não vale para esta."
+          }
+        ]
+      ]
     },
     {
       "type": "faq",
