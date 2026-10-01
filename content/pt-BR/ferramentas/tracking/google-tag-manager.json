@@ -2,7 +2,7 @@
   "$schema": "../../../../../.vscode/schemas/article.schema.json",
   "title": "Instalar o script pelo Google Tag Manager",
   "subtitle": "Crie uma tag HTML personalizada, teste em modo de visualização e publique — o caminho de Bagy, Wbuy, VNDA, Wake, Nuvemshop e Loja Integrada.",
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "tags": [
     "GTM",
     "Google Tag Manager",
@@ -12,9 +12,12 @@
     "Nuvemshop",
     "Loja Integrada"
   ],
+  "aliases": [
+    "integracoes/instalar-o-script/google-tag-manager"
+  ],
   "related": [
-    "integracoes/instalar-o-script/visao-geral",
-    "integracoes/instalar-o-script/shopify"
+    "ferramentas/tracking/visao-geral",
+    "ferramentas/tracking/shopify"
   ],
   "body": [
     {
@@ -35,7 +38,7 @@
             {
               "type": "docLink",
               "attrs": {
-                "ref": "integracoes/instalar-o-script/shopify"
+                "ref": "ferramentas/tracking/shopify"
               }
             }
           ]
@@ -331,7 +334,7 @@
                     {
                       "type": "docLink",
                       "attrs": {
-                        "ref": "integracoes/instalar-o-script/site-proprio"
+                        "ref": "ferramentas/tracking/site-proprio"
                       }
                     }
                   ]
@@ -1265,11 +1268,11 @@
       "type": "linkCards",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/visao-geral",
+          "ref": "ferramentas/tracking/visao-geral",
           "description": "O que o script faz e como saber se está funcionando."
         },
         {
-          "ref": "integracoes/instalar-o-script/shopify",
+          "ref": "ferramentas/tracking/shopify",
           "description": "A Shopify não usa o Tag Manager: Custom Pixel e tema."
         },
         {

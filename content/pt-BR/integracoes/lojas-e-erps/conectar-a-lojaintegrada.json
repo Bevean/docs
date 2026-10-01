@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a Loja Integrada",
   "subtitle": "Aplicação e Chave API do painel Configurações > Chave para API.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-01",
   "tags": [
     "loja integrada",
     "aplicação",
@@ -122,7 +122,7 @@
       "type": "linkCards",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/google-tag-manager",
+          "ref": "ferramentas/tracking/google-tag-manager",
           "description": "Instale o aplicativo do Google Tag Manager e o script da Bevean."
         },
         {

@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a WBuy",
   "subtitle": "O usuário e a senha de API que a WBuy gera para colar na Bevean.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-01",
   "tags": [
     "wbuy",
     "usuário de api",
@@ -179,7 +179,7 @@
       "type": "linkCards",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/google-tag-manager",
+          "ref": "ferramentas/tracking/google-tag-manager",
           "description": "Instale o script pelo Google Tag Manager: formulários e gatilhos de comportamento dependem dele."
         },
         {

@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a VTEX",
   "subtitle": "Gerar a chave de API com as permissões certas, conectar, e instalar os dois códigos que o carrinho abandonado exige.",
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "tags": [
     "vtex",
     "integração",
@@ -732,7 +732,7 @@
       "type": "linkCards",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/google-tag-manager",
+          "ref": "ferramentas/tracking/google-tag-manager",
           "description": "Como criar, testar e publicar a tag da vitrine — a primeira metade do tracker da VTEX."
         },
         {

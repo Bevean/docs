@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a Shopify",
   "subtitle": "Criar o app personalizado, marcar os escopos certos e autorizar — e o que acontece se você desinstalar o app pelo lado da Shopify depois.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-01",
   "tags": [
     "shopify",
     "app personalizado",
@@ -312,7 +312,7 @@
       "type": "linkCards",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/shopify",
+          "ref": "ferramentas/tracking/shopify",
           "description": "Instale o Custom Pixel e o código do tema para o script funcionar."
         },
         {

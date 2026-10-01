@@ -5,6 +5,7 @@
   "icon": "wrench",
   "sections": [
     "formularios",
+    "tracking",
     "links",
     "cashback",
     "pesquisas"

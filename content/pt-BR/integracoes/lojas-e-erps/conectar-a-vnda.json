@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a VNDA",
   "subtitle": "O token e a URL da loja no formato exato que a VNDA exige — sem https:// e com o www.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-01",
   "tags": [
     "vnda",
     "olist vnda",
@@ -227,7 +227,7 @@
       "type": "linkCards",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/google-tag-manager",
+          "ref": "ferramentas/tracking/google-tag-manager",
           "description": "Instale o script pelo Google Tag Manager: formulários e gatilhos de comportamento dependem dele."
         },
         {

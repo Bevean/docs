@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Instalar o script em um site próprio",
   "subtitle": "Para site sem plataforma integrada: crie uma tag de Site próprio e cole o código no site, direto ou pelo Google Tag Manager.",
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "tags": [
     "site institucional",
     "sem plataforma",
@@ -10,9 +10,13 @@
     "tracker",
     "head"
   ],
+  "aliases": [
+    "integracoes/instalar-o-script/site-proprio"
+  ],
   "related": [
-    "integracoes/instalar-o-script/visao-geral",
-    "integracoes/instalar-o-script/google-tag-manager",
+    "ferramentas/tracking/eventos-pelo-codigo",
+    "ferramentas/tracking/visao-geral",
+    "ferramentas/tracking/google-tag-manager",
     "ferramentas/formularios/visao-geral"
   ],
   "body": [
@@ -126,6 +130,26 @@
                     "type": "code"
                   }
                 ]
+              },
+              {
+                "type": "text",
+                "text": " — veja "
+              },
+              {
+                "type": "text",
+                "text": "Enviar eventos pelo código do site",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/tracking/eventos-pelo-codigo"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
               }
             ]
           }
@@ -147,7 +171,7 @@
                   {
                     "type": "docLink",
                     "attrs": {
-                      "ref": "integracoes/instalar-o-script/visao-geral"
+                      "ref": "ferramentas/tracking/visao-geral"
                     }
                   }
                 ]
@@ -155,7 +179,7 @@
             ]
           },
           {
-            "content": "Não é suportado"
+            "content": "Só com o evento enviado pelo código do site, sem os itens do carrinho na mensagem"
           }
         ],
         [
@@ -496,7 +520,7 @@
             {
               "type": "docLink",
               "attrs": {
-                "ref": "integracoes/instalar-o-script/google-tag-manager"
+                "ref": "ferramentas/tracking/google-tag-manager"
               }
             }
           ]
@@ -565,6 +589,22 @@
               },
               {
                 "type": "text",
+                "text": " — veja "
+              },
+              {
+                "type": "text",
+                "text": "Enviar eventos pelo código do site",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/tracking/eventos-pelo-codigo"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
                 "text": "."
               }
             ]
@@ -596,14 +636,56 @@
             "content": "Carrinho abandonado"
           },
           {
-            "content": "Não é suportado."
+            "content": [
+              {
+                "type": "text",
+                "text": "Dispara com o evento de início de compra enviado pelo código do site, mas a mensagem não traz os itens do carrinho, e a compra do site não conta como pedido. Veja "
+              },
+              {
+                "type": "text",
+                "text": "Enviar eventos pelo código do site",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/tracking/eventos-pelo-codigo"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ]
       ]
     },
     {
       "type": "paragraph",
-      "content": "Na prática, sem programação no site, a tag de Site próprio serve para os formulários."
+      "content": [
+        {
+          "type": "text",
+          "text": "Na prática, sem programação no site, a tag de Site próprio serve para os formulários. Para quem desenvolve o site, os eventos e o formato de cada um estão em "
+        },
+        {
+          "type": "text",
+          "text": "Enviar eventos pelo código do site",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/tracking/eventos-pelo-codigo"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
     },
     {
       "type": "heading",
@@ -865,11 +947,15 @@
       "title": "Continue por aqui",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/visao-geral",
+          "ref": "ferramentas/tracking/eventos-pelo-codigo",
+          "description": "Os eventos que o código do site envia, com exemplos de cada um."
+        },
+        {
+          "ref": "ferramentas/tracking/visao-geral",
           "description": "O que o script faz em cada plataforma."
         },
         {
-          "ref": "integracoes/instalar-o-script/google-tag-manager",
+          "ref": "ferramentas/tracking/google-tag-manager",
           "description": "Criar, testar e publicar a tag no Tag Manager."
         },
         {

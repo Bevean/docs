@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a Nuvemshop",
   "subtitle": "Sem credencial para copiar — é um aplicativo que você autoriza direto na Nuvemshop, e a sincronização começa sozinha.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-01",
   "tags": [
     "nuvemshop",
     "app",
@@ -145,7 +145,7 @@
       "type": "linkCards",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/google-tag-manager",
+          "ref": "ferramentas/tracking/google-tag-manager",
           "description": "Vincule o contêiner e instale o script pelo Google Tag Manager."
         },
         {

@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funcionam os formulários",
   "subtitle": "Formulários capturam leads no seu site: cada envio vira um contato no CRM, dentro da lista que você escolher.",
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "tags": [
     "formulários",
     "leads",
@@ -271,7 +271,7 @@
                   {
                     "type": "docLink",
                     "attrs": {
-                      "ref": "integracoes/instalar-o-script/visao-geral"
+                      "ref": "ferramentas/tracking/visao-geral"
                     }
                   }
                 ]
