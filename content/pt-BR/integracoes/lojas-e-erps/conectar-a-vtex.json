@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a VTEX",
   "subtitle": "Gerar a chave de API com as permissões certas, conectar, e instalar os dois códigos que o carrinho abandonado exige.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-09-30",
   "tags": [
     "vtex",
     "integração",
@@ -485,7 +485,17 @@
         },
         {
           "type": "text",
-          "text": ", em dois lugares diferentes — a tela da integração gera os dois para você copiar."
+          "text": ", em dois lugares diferentes — a tag da VTEX, em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.tracking"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", mostra os dois para você copiar."
         }
       ]
     },
@@ -493,11 +503,78 @@
       "type": "steps",
       "items": [
         {
-          "title": "Gere os códigos",
+          "title": "Crie a tag da VTEX",
           "body": [
             {
               "type": "paragraph",
-              "content": "Na integração já conectada, use o botão que cria a chave pública e monta os dois códigos do tracker."
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Em "
+                },
+                {
+                  "type": "uiPath",
+                  "attrs": {
+                    "ref": "tools.tracking"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", clique em "
+                },
+                {
+                  "type": "text",
+                  "text": "Criar tag",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", escolha a VTEX em "
+                },
+                {
+                  "type": "text",
+                  "text": "Integrações",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e clique em "
+                },
+                {
+                  "type": "text",
+                  "text": "Criar tag",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". A tela da tag mostra os dois códigos, cada um com o botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Copiar script",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
             }
           ]
         },
@@ -604,7 +681,22 @@
         },
         {
           "type": "paragraph",
-          "content": "Para instalar agora, use o tracker: é o caminho que a própria tela da integração ensina."
+          "content": [
+            {
+              "type": "text",
+              "text": "Para instalar agora, use o tracker: é o caminho que a tag da VTEX, em "
+            },
+            {
+              "type": "uiPath",
+              "attrs": {
+                "ref": "tools.tracking"
+              }
+            },
+            {
+              "type": "text",
+              "text": ", ensina."
+            }
+          ]
         }
       ],
       "title": "Lojas antigas podem usar um Trigger de Master Data"

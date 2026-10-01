@@ -1,0 +1,882 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Instalar o script em um site próprio",
+  "subtitle": "Para site sem plataforma integrada: crie uma tag de Site próprio e cole o código no site, direto ou pelo Google Tag Manager.",
+  "updatedAt": "2026-09-30",
+  "tags": [
+    "site institucional",
+    "sem plataforma",
+    "tag de tracking",
+    "tracker",
+    "head"
+  ],
+  "related": [
+    "integracoes/instalar-o-script/visao-geral",
+    "integracoes/instalar-o-script/google-tag-manager",
+    "ferramentas/formularios/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Se o seu site não é de uma plataforma integrada à Bevean, crie uma tag de Site próprio e cole o código dela no site. Assim que o script carrega nas páginas, os formulários da Bevean passam a aparecer."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.tracking"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". A tela aparece para os perfis Administrador geral e Marketing. Se ela não abre para você, peça acesso a quem administra os usuários da conta — veja "
+        },
+        {
+          "type": "text",
+          "text": "Como funcionam usuários e permissões",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/usuarios-e-permissoes/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Site próprio ou integração?"
+    },
+    {
+      "type": "paragraph",
+      "content": "A escolha muda o que a Bevean recebe sem ajuda de quem desenvolve o site:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Característica"
+        },
+        {
+          "content": "Tag de integração"
+        },
+        {
+          "content": "Site próprio"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Para quê"
+          },
+          {
+            "content": "Loja de uma plataforma integrada e ativa: Shopify, Bagy, Wbuy, VNDA, Wake, Nuvemshop, Loja Integrada ou VTEX"
+          },
+          {
+            "content": "Site sem plataforma integrada"
+          }
+        ],
+        [
+          {
+            "content": "Formulários"
+          },
+          {
+            "content": "Funcionam"
+          },
+          {
+            "content": "Funcionam"
+          }
+        ],
+        [
+          {
+            "content": "Produto visto, carrinho e compra"
+          },
+          {
+            "content": "Capturados automaticamente"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Só se quem desenvolve o site enviar os eventos com "
+              },
+              {
+                "type": "text",
+                "text": "window.bevean.push",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Carrinho abandonado"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Depende da plataforma — veja "
+              },
+              {
+                "type": "text",
+                "text": "Como funciona o script da Bevean",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "integracoes/instalar-o-script/visao-geral"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Não é suportado"
+          }
+        ],
+        [
+          {
+            "content": "Quantas tags"
+          },
+          {
+            "content": "No máximo uma por integração"
+          },
+          {
+            "content": "Quantas você precisar, cada uma com um nome"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Se a sua loja está numa dessas plataformas e a integração está ativa, prefira a tag da integração: os eventos da loja chegam sem programação no site."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Criar a tag"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Abra "
+            },
+            {
+              "type": "uiPath",
+              "attrs": {
+                "ref": "tools.tracking"
+              }
+            },
+            {
+              "type": "text",
+              "text": " e clique em "
+            },
+            {
+              "type": "text",
+              "text": "Criar tag",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "No painel "
+            },
+            {
+              "type": "text",
+              "text": "Criar tag",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", escolha "
+            },
+            {
+              "type": "text",
+              "text": "Site próprio",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Preencha "
+            },
+            {
+              "type": "text",
+              "text": "Nome da tag",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ],
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "O campo é obrigatório. Use o domínio ou o nome da página, para achar a tag depois na lista — por exemplo, "
+                },
+                {
+                  "type": "text",
+                  "text": "Site institucional",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Clique em "
+            },
+            {
+              "type": "text",
+              "text": "Criar tag",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ],
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A tela da tag abre em seguida, com a chave pública e o código de instalação."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Instalar o código no site"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na tela da tag, o cartão "
+        },
+        {
+          "type": "text",
+          "text": "Instalação do script",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " traz o passo a passo e o bloco "
+        },
+        {
+          "type": "text",
+          "text": "Código do tracker",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com o botão "
+        },
+        {
+          "type": "text",
+          "text": "Copiar script",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O código já vem com a chave pública da tag: não é preciso colá-la em outro lugar."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Direto no código do site"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Clique em "
+            },
+            {
+              "type": "text",
+              "text": "Copiar script",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "title": [
+            {
+              "type": "text",
+              "text": "Cole o código dentro da tag "
+            },
+            {
+              "type": "text",
+              "text": "<head>",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " do site, em todas as páginas."
+            }
+          ],
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Cole do jeito que foi copiado, com o "
+                },
+                {
+                  "type": "text",
+                  "text": "<script>",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e o "
+                },
+                {
+                  "type": "text",
+                  "text": "</script>",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " incluídos."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Pelo Google Tag Manager"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se o site usa Google Tag Manager, crie uma tag HTML personalizada com o código, use o acionador "
+        },
+        {
+          "type": "text",
+          "text": "Todas as páginas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e publique o contêiner. O passo a passo, com o teste antes de publicar, está nos passos 2 a 5 de "
+        },
+        {
+          "type": "text",
+          "text": "Instalar o script pelo Google Tag Manager",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/instalar-o-script/google-tag-manager"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que funciona em site próprio"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Recurso"
+        },
+        {
+          "content": "Em site próprio"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Formulários",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/formularios/visao-geral"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Funcionam assim que o script carrega nas páginas."
+          }
+        ],
+        [
+          {
+            "content": "Produto visto, carrinho e compra"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Não são capturados sozinhos. Quem desenvolve o site precisa enviar esses eventos com "
+              },
+              {
+                "type": "text",
+                "text": "window.bevean.push",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Gatilhos de comportamento",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "automacoes/automacoes/escolher-um-gatilho"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Dependem desses eventos. Sem o envio pelo site, Produto visualizado, Produto adicionado ao carrinho e Produto abandonado não disparam."
+          }
+        ],
+        [
+          {
+            "content": "Carrinho abandonado"
+          },
+          {
+            "content": "Não é suportado."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Na prática, sem programação no site, a tag de Site próprio serve para os formulários."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Várias tags: renomear e remover"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Você pode ter quantas tags de Site próprio precisar, cada uma com a sua chave e o seu código. Na lista, a coluna "
+        },
+        {
+          "type": "text",
+          "text": "Tipo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra se a tag é de Site próprio ou de Integração."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Ação"
+        },
+        {
+          "content": "Onde"
+        },
+        {
+          "content": "O que acontece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Renomear",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Na tela da tag. Só existe nas tags de Site próprio."
+          },
+          {
+            "content": "Troca o nome da tag. A chave e o código continuam os mesmos: não é preciso mexer no site."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Remover",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Na tela da tag, ou no ícone de lixeira da linha, na lista."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Pede confirmação em "
+              },
+              {
+                "type": "text",
+                "text": "Remover tag",
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". A chave é inativada, o script instalado deixa de funcionar e os formulários param de aparecer nesse site. O código colado no site continua lá, sem efeito."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Criar uma tag nova, depois de remover"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Criar tag",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", como na primeira vez."
+              }
+            ]
+          },
+          {
+            "content": "Cria uma chave nova. Troque o código do site pelo novo: o antigo não volta a funcionar."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que impede de concluir"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "O que aparece"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Campo obrigatório",
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", em Nome da tag"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Com Site próprio escolhido, o nome é obrigatório. Preencha e clique em "
+              },
+              {
+                "type": "text",
+                "text": "Criar tag",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " de novo."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Não foi possível carregar as integrações disponíveis."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Clique em "
+              },
+              {
+                "type": "text",
+                "text": "Tentar de novo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Enquanto a lista não carrega, o botão "
+              },
+              {
+                "type": "text",
+                "text": "Criar tag",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " fica desabilitado, inclusive para Site próprio."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como saber se está funcionando"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em site próprio, o sinal de que o script está carregando é um formulário publicado e ativo aparecer no site. Se ele não aparece, siga "
+        },
+        {
+          "type": "text",
+          "text": "O formulário não está funcionando",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/formularios/resolver-problemas"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Continue por aqui",
+      "items": [
+        {
+          "ref": "integracoes/instalar-o-script/visao-geral",
+          "description": "O que o script faz em cada plataforma."
+        },
+        {
+          "ref": "integracoes/instalar-o-script/google-tag-manager",
+          "description": "Criar, testar e publicar a tag no Tag Manager."
+        },
+        {
+          "ref": "ferramentas/formularios/visao-geral",
+          "description": "Os formulários que o script carrega no site."
+        }
+      ]
+    }
+  ]
+}
