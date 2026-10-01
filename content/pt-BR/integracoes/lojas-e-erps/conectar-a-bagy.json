@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a Bagy",
   "subtitle": "Bagy e Bagy 3.0 pedem credenciais diferentes — confira qual é a sua. Inclui como trocar o token quando ele para de funcionar.",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-01",
   "tags": [
     "bagy",
     "bagy 3.0",
@@ -224,7 +224,7 @@
       "type": "linkCards",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/google-tag-manager",
+          "ref": "ferramentas/tracking/google-tag-manager",
           "description": "Instale o script pelo Google Tag Manager: formulários e gatilhos de comportamento dependem dele."
         },
         {

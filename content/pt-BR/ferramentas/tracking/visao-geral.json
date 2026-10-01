@@ -2,7 +2,7 @@
   "$schema": "../../../../../.vscode/schemas/article.schema.json",
   "title": "Como funciona o script da Bevean",
   "subtitle": "O que o script faz na sua loja, como instalá-lo em cada plataforma e como confirmar que ele está funcionando.",
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "tags": [
     "tracker",
     "rastreamento",
@@ -10,10 +10,14 @@
     "GTM",
     "chave pública"
   ],
+  "aliases": [
+    "integracoes/instalar-o-script/visao-geral"
+  ],
   "related": [
-    "integracoes/instalar-o-script/shopify",
-    "integracoes/instalar-o-script/google-tag-manager",
-    "integracoes/instalar-o-script/site-proprio"
+    "ferramentas/tracking/shopify",
+    "ferramentas/tracking/google-tag-manager",
+    "ferramentas/tracking/site-proprio",
+    "ferramentas/tracking/eventos-pelo-codigo"
   ],
   "body": [
     {
@@ -119,7 +123,7 @@
                 {
                   "type": "docLink",
                   "attrs": {
-                    "ref": "integracoes/instalar-o-script/site-proprio"
+                    "ref": "ferramentas/tracking/site-proprio"
                   }
                 }
               ]
@@ -445,7 +449,7 @@
                   {
                     "type": "docLink",
                     "attrs": {
-                      "ref": "integracoes/instalar-o-script/site-proprio"
+                      "ref": "ferramentas/tracking/site-proprio"
                     }
                   }
                 ]
@@ -484,7 +488,7 @@
             {
               "type": "docLink",
               "attrs": {
-                "ref": "integracoes/instalar-o-script/shopify"
+                "ref": "ferramentas/tracking/shopify"
               }
             }
           ]
@@ -500,7 +504,7 @@
             {
               "type": "docLink",
               "attrs": {
-                "ref": "integracoes/instalar-o-script/google-tag-manager"
+                "ref": "ferramentas/tracking/google-tag-manager"
               }
             }
           ]
@@ -549,7 +553,23 @@
             },
             {
               "type": "text",
-              "text": ". Carrinho abandonado não é suportado em site próprio."
+              "text": ". Os eventos e o formato de cada um estão em "
+            },
+            {
+              "type": "text",
+              "text": "Enviar eventos pelo código do site",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/tracking/eventos-pelo-codigo"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
             }
           ]
         }
@@ -566,7 +586,23 @@
       "content": [
         {
           "type": "text",
-          "text": "Ele depende da plataforma. Nas lojas Bagy e Shopify o gatilho vem da integração de carrinho, e o evento de checkout do script é ignorado — instalar o script não muda isso. Na VTEX ele só existe pelo script. Em site próprio, não é suportado. Os detalhes de cada gatilho estão em "
+          "text": "Ele depende da plataforma. Nas lojas Bagy e Shopify o gatilho vem da integração de carrinho, e o evento de checkout do script é ignorado — instalar o script não muda isso. Na VTEX ele só existe pelo script. Em site próprio, ele dispara com o evento de início de compra enviado pelo código do site, sem os itens do carrinho na mensagem — veja "
+        },
+        {
+          "type": "text",
+          "text": "Enviar eventos pelo código do site",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/tracking/eventos-pelo-codigo"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Os detalhes de cada gatilho estão em "
         },
         {
           "type": "text",
@@ -791,11 +827,11 @@
       "type": "linkCards",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/shopify",
+          "ref": "ferramentas/tracking/shopify",
           "description": "Custom Pixel e código do tema, passo a passo."
         },
         {
-          "ref": "integracoes/instalar-o-script/google-tag-manager",
+          "ref": "ferramentas/tracking/google-tag-manager",
           "description": "Criar, testar e publicar a tag."
         },
         {
@@ -803,12 +839,16 @@
           "description": "Os dois códigos da VTEX: vitrine e checkout."
         },
         {
-          "ref": "integracoes/instalar-o-script/site-proprio",
+          "ref": "ferramentas/tracking/site-proprio",
           "description": "Site sem plataforma integrada: o código no <head> ou no Tag Manager."
         },
         {
           "ref": "ferramentas/formularios/visao-geral",
           "description": "O que você cria com o script instalado."
+        },
+        {
+          "ref": "ferramentas/tracking/eventos-pelo-codigo",
+          "description": "Os eventos que o código de um site próprio envia, com exemplos."
         }
       ],
       "title": "Passo a passo por plataforma"

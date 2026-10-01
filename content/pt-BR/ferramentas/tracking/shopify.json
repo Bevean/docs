@@ -2,7 +2,7 @@
   "$schema": "../../../../../.vscode/schemas/article.schema.json",
   "title": "Instalar o script na Shopify",
   "subtitle": "O Custom Pixel em Eventos do cliente e o código do tema em theme.liquid: dois códigos, cada um num lugar.",
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "tags": [
     "Custom Pixel",
     "pixel",
@@ -11,8 +11,11 @@
     "tracker",
     "eventos do cliente"
   ],
+  "aliases": [
+    "integracoes/instalar-o-script/shopify"
+  ],
   "related": [
-    "integracoes/instalar-o-script/visao-geral",
+    "ferramentas/tracking/visao-geral",
     "integracoes/lojas-e-erps/conectar-a-shopify"
   ],
   "body": [
@@ -1544,7 +1547,7 @@
       "type": "linkCards",
       "items": [
         {
-          "ref": "integracoes/instalar-o-script/visao-geral",
+          "ref": "ferramentas/tracking/visao-geral",
           "description": "O que o script faz e como saber se está funcionando."
         },
         {

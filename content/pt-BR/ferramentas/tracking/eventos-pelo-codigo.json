@@ -1,0 +1,1512 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Enviar eventos pelo código do site",
+  "subtitle": "Para quem desenvolve o site próprio: como avisar a Bevean de produto visto, carrinho e compra, com o formato aceito de cada evento.",
+  "updatedAt": "2026-10-01",
+  "tags": [
+    "window.bevean.push",
+    "payload",
+    "eventos",
+    "desenvolvedor",
+    "resolveUser",
+    "API do script",
+    "site próprio"
+  ],
+  "related": [
+    "ferramentas/tracking/site-proprio",
+    "ferramentas/tracking/visao-geral",
+    "automacoes/automacoes/escolher-um-gatilho"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Em site próprio, o script da Bevean carrega os formulários, mas não sabe sozinho qual produto o visitante abriu, o que ele pôs no carrinho ou se comprou. Quem desenvolve o site avisa a Bevean de cada um desses momentos com uma linha de JavaScript — e, com o visitante identificado, os gatilhos de comportamento passam a disparar."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Antes: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "o código da tag de Site próprio precisa estar em todas as páginas do site. Veja "
+        },
+        {
+          "type": "text",
+          "text": "Instalar o script em um site próprio",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/tracking/site-proprio"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "Loja de plataforma integrada não precisa disto",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Nas tags de integração (Shopify, Bagy, Wbuy, VNDA, Wake, Nuvemshop, Loja Integrada e VTEX), o script já envia esses eventos sozinho."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como enviar um evento"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada evento é um objeto com o nome do evento em "
+        },
+        {
+          "type": "text",
+          "text": "event",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e os dados em "
+        },
+        {
+          "type": "text",
+          "text": "data",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", enviado com "
+        },
+        {
+          "type": "text",
+          "text": "window.bevean.push",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "window.bevean = window.bevean || [];\nwindow.bevean.push({\n  event: 'product_viewed',\n  data: { productId: '123', name: 'Camiseta Azul', price: 89.9 }\n});"
+    },
+    {
+      "type": "paragraph",
+      "content": "A primeira linha faz a chamada funcionar mesmo antes de o script terminar de carregar: o evento espera numa fila e sai assim que o script fica pronto. O script envia os eventos em lotes — a cada 2 segundos, ou assim que juntar 5 — e completa sozinho o endereço da página, o horário e quem é o visitante."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "Use sempre o formato com event e data",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Chamadas como "
+            },
+            {
+              "type": "text",
+              "text": "window.bevean.push('product_viewed', dados)",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ou no formato do Google Analytics ("
+            },
+            {
+              "type": "text",
+              "text": "['track', 'product_viewed', dados]",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ") se perdem quando acontecem antes de o script carregar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Identificar o visitante"
+    },
+    {
+      "type": "paragraph",
+      "content": "As automações só começam para contatos. Enquanto a Bevean não sabe quem é o visitante, os eventos ficam registrados como anônimos e nenhum gatilho dispara para eles."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Como o visitante é identificado"
+        },
+        {
+          "content": "O que acontece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Formulário da Bevean",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/formularios/visao-geral"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " enviado com e-mail ou telefone"
+              }
+            ]
+          },
+          {
+            "content": "O navegador passa a ser daquele contato."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "resolveUser",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " no código do script, com e-mail"
+              }
+            ]
+          },
+          {
+            "content": "O navegador é ligado ao contato com aquele e-mail. Se não houver, a Bevean cria o contato."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "resolveUser",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " só com telefone, ou só com o id do cliente"
+              }
+            ]
+          },
+          {
+            "content": "Não identifica. Para o código do site identificar o visitante, o e-mail é obrigatório."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para usar "
+        },
+        {
+          "type": "text",
+          "text": "resolveUser",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", copie o código na tela da tag e acrescente a função depois da linha "
+        },
+        {
+          "type": "text",
+          "text": "platform",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Ela devolve os dados do cliente logado no seu site, ou "
+        },
+        {
+          "type": "text",
+          "text": "null",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " quando não há ninguém logado:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": "html",
+      "code": "<script>\n(function (w, d, s, src, cfg) {\n  w.beveanConfig = cfg;\n  w.bevean = w.bevean || [];\n  var js = d.createElement(s);\n  js.async = true;\n  js.src = src;\n  d.head.appendChild(js);\n})(window, document, 'script', \"https://cdn.bevean.ai/tracker/bevean.sdk.js\", {\n  publicKey: \"pk_bevean_...\",\n  platform: \"core\",\n  resolveUser: function () {\n    var cliente = window.clienteLogado; // o objeto que o seu site expõe\n    if (!cliente || !cliente.email) return null;\n    return {\n      userId: String(cliente.id),\n      email: cliente.email,\n      name: cliente.nome,\n      phone: cliente.telefone\n    };\n  }\n});\n</script>"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Regra"
+        },
+        {
+          "content": "Por quê"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A função é síncrona: não use "
+              },
+              {
+                "type": "text",
+                "text": "await",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " nem devolva uma Promise."
+              }
+            ]
+          },
+          {
+            "content": "Com uma Promise, o visitante fica anônimo."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Todos os valores são texto. Converta o id com "
+              },
+              {
+                "type": "text",
+                "text": "String(...)",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "content": "Número no lugar de texto é ignorado."
+          }
+        ],
+        [
+          {
+            "content": "O e-mail precisa ser válido."
+          },
+          {
+            "content": "Um e-mail inválido faz a Bevean recusar o lote inteiro de eventos."
+          }
+        ],
+        [
+          {
+            "content": "A função é chamada a cada envio de lote."
+          },
+          {
+            "content": "O visitante que entra na conta no meio da navegação passa a ser identificado a partir do próximo lote."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "Computador compartilhado",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Depois de identificado, o navegador continua ligado ao primeiro contato, mesmo que outra pessoa entre na conta depois."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os eventos aceitos"
+    },
+    {
+      "type": "paragraph",
+      "content": "A Bevean aceita só os eventos abaixo. Qualquer outro nome faz o lote inteiro ser recusado — inclusive os eventos certos que iam junto com ele."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Evento"
+        },
+        {
+          "content": "Quando enviar"
+        },
+        {
+          "content": "O que libera"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "page_viewed",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "A cada página vista. Em site de página única (SPA), a cada troca de tela."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Gatilho "
+              },
+              {
+                "type": "text",
+                "text": "Página visualizada",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "automacoes/automacoes/escolher-um-gatilho"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "product_viewed",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Ao abrir a página de um produto."
+          },
+          {
+            "content": "Gatilho Produto visualizado. É também a base do Produto abandonado."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "category_viewed",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Ao abrir uma categoria ou uma lista de produtos."
+          },
+          {
+            "content": "Gatilho Categoria visualizada."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "product_added_to_cart",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Quando o visitante põe um produto no carrinho."
+          },
+          {
+            "content": "Gatilho Produto adicionado ao carrinho. Cancela o Produto abandonado."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "cart_viewed",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Ao abrir o carrinho."
+          },
+          {
+            "content": "Fica no histórico do contato, para condições de automação."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "checkout_initiated",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Quando o visitante começa a finalizar a compra."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Gatilho Carrinho abandonado — veja os limites em "
+              },
+              {
+                "type": "text",
+                "text": "Carrinho abandonado em site próprio",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", abaixo. Cancela o Produto abandonado."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "add_payment_info",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Quando o visitante escolhe a forma de pagamento."
+          },
+          {
+            "content": "Fica registrado. Não dispara automação."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "purchase",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Na página de pedido confirmado."
+          },
+          {
+            "content": "Cancela o Produto abandonado. Não vira pedido na Bevean."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "form_viewed",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "form_submitted",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " o script envia sozinho, com os formulários da Bevean. Não envie esses dois pelo código."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Exemplos de cada evento"
+    },
+    {
+      "type": "paragraph",
+      "content": "Os campos são os mesmos em todos os eventos de produto. Nenhum é obrigatório para o evento ser aceito, mas é deles que saem o nome, a foto, o preço e o link do produto nas mensagens."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Página vista"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O script completa sozinho o endereço, o caminho e o título da página. Em site de página única (SPA), mande os três a cada troca de tela, porque o script lê o endereço na hora em que o lote sai:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "window.bevean.push({\n  event: 'page_viewed',\n  data: {\n    url: 'https://www.sualoja.com.br/camisetas',\n    path: '/camisetas',\n    title: 'Camisetas | Sua Loja'\n  }\n});"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Produto visto"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "window.bevean.push({\n  event: 'product_viewed',\n  data: {\n    productId: '123',\n    variantId: '123-AZ-M',\n    sku: 'CAM-AZ-M',\n    name: 'Camiseta Azul',\n    price: 89.9,\n    currency: 'BRL',\n    image: 'https://www.sualoja.com.br/img/camiseta-azul.jpg',\n    url: 'https://www.sualoja.com.br/p/camiseta-azul',\n    categoryId: '10',\n    category: 'Camisetas',\n    brand: 'Sua Marca'\n  }\n});"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Categoria vista"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "window.bevean.push({\n  event: 'category_viewed',\n  data: {\n    categoryId: '10',\n    name: 'Camisetas',\n    handle: 'camisetas',\n    url: 'https://www.sualoja.com.br/c/camisetas',\n    items: [\n      { productId: '123', name: 'Camiseta Azul', price: 89.9, url: 'https://www.sualoja.com.br/p/camiseta-azul', image: 'https://www.sualoja.com.br/img/camiseta-azul.jpg' }\n    ]\n  }\n});"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Produto adicionado ao carrinho"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mande o carrinho em "
+        },
+        {
+          "type": "text",
+          "text": "items",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e repita os campos do produto que acabou de entrar na raiz de "
+        },
+        {
+          "type": "text",
+          "text": "data",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". É da raiz que a mensagem do gatilho Produto adicionado ao carrinho tira o produto:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "window.bevean.push({\n  event: 'product_added_to_cart',\n  data: {\n    productId: '123',\n    variantId: '123-AZ-M',\n    sku: 'CAM-AZ-M',\n    name: 'Camiseta Azul',\n    price: 89.9,\n    quantity: 2,\n    image: 'https://www.sualoja.com.br/img/camiseta-azul.jpg',\n    url: 'https://www.sualoja.com.br/p/camiseta-azul',\n    cartToken: 'c_abc123',\n    value: 179.8,\n    currency: 'BRL',\n    items: [\n      { productId: '123', variantId: '123-AZ-M', sku: 'CAM-AZ-M', name: 'Camiseta Azul', price: 89.9, quantity: 2 }\n    ]\n  }\n});"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Carrinho visto"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "window.bevean.push({\n  event: 'cart_viewed',\n  data: {\n    cartToken: 'c_abc123',\n    value: 179.8,\n    currency: 'BRL',\n    items: [\n      { productId: '123', variantId: '123-AZ-M', sku: 'CAM-AZ-M', name: 'Camiseta Azul', price: 89.9, quantity: 2 }\n    ]\n  }\n});"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Início da finalização da compra"
+    },
+    {
+      "type": "paragraph",
+      "content": "Envie numa página cujo endereço traga o carrinho de volta: é esse endereço que a mensagem de carrinho abandonado usa como link."
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "window.bevean.push({\n  event: 'checkout_initiated',\n  data: {\n    value: 179.8,\n    currency: 'BRL',\n    coupon: 'BEMVINDO10',\n    items: [\n      { productId: '123', variantId: '123-AZ-M', sku: 'CAM-AZ-M', name: 'Camiseta Azul', price: 89.9, quantity: 2 }\n    ]\n  }\n});"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Forma de pagamento escolhida"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "window.bevean.push({\n  event: 'add_payment_info',\n  data: {\n    value: 179.8,\n    currency: 'BRL',\n    paymentType: 'pix',\n    items: [\n      { productId: '123', name: 'Camiseta Azul', price: 89.9, quantity: 2 }\n    ]\n  }\n});"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Compra concluída"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "window.bevean.push({\n  event: 'purchase',\n  data: {\n    transactionId: 'PED-1043',\n    value: 179.8,\n    currency: 'BRL',\n    coupon: 'BEMVINDO10',\n    items: [\n      { productId: '123', variantId: '123-AZ-M', sku: 'CAM-AZ-M', name: 'Camiseta Azul', price: 89.9, quantity: 2 }\n    ]\n  }\n});"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Campos dos produtos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Observação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "productId",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "texto"
+          },
+          {
+            "content": "O identificador do produto no seu site."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "variantId",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "texto"
+          },
+          {
+            "content": "A variação: cor, tamanho."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "sku",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "texto"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "name",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "texto"
+          },
+          {
+            "content": "O nome que aparece nas mensagens."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "price",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "número"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Sem símbolo de moeda: "
+              },
+              {
+                "type": "text",
+                "text": "89.9",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", não "
+              },
+              {
+                "type": "text",
+                "text": "'R$ 89,90'",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "quantity",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "número"
+          },
+          {
+            "content": "—"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "currency",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "texto"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "'BRL'",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "image",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "texto"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Endereço completo, começando com "
+              },
+              {
+                "type": "text",
+                "text": "https://",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Um endereço relativo, começando com "
+              },
+              {
+                "type": "text",
+                "text": "/",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", não mostra a imagem nas mensagens."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "url",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "texto"
+          },
+          {
+            "content": "Endereço completo da página do produto."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "category",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "categoryId",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "brand",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "texto"
+          },
+          {
+            "content": "—"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Valores do pedido e do carrinho ("
+        },
+        {
+          "type": "text",
+          "text": "value",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") também são número. Identificadores ("
+        },
+        {
+          "type": "text",
+          "text": "transactionId",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "cartToken",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") são texto."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Carrinho abandonado em site próprio"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O gatilho Carrinho abandonado dispara com o "
+        },
+        {
+          "type": "text",
+          "text": "checkout_initiated",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " do seu site, para visitantes identificados. Antes de ativar uma automação com ele, conheça os limites:"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "A compra do site não conta como pedido",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A condição "
+            },
+            {
+              "type": "text",
+              "text": "Fez um pedido pago",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " só enxerga pedidos que chegam por integração. O evento "
+            },
+            {
+              "type": "text",
+              "text": "purchase",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " não é pedido para a Bevean — então quem comprou no seu site também pode receber a mensagem de carrinho abandonado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "O que"
+        },
+        {
+          "content": "Em site próprio"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Link do carrinho na mensagem"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "É o endereço da página em que o "
+              },
+              {
+                "type": "text",
+                "text": "checkout_initiated",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " foi enviado."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Itens e valor do carrinho na mensagem"
+          },
+          {
+            "content": "Não aparecem: a Bevean só guarda o carrinho de lojas integradas."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que impede de funcionar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Sintoma"
+        },
+        {
+          "content": "Causa provável"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nenhum evento chega, nem os certos"
+          },
+          {
+            "content": "Algum evento do lote tem nome fora da lista, ou o e-mail do resolveUser é inválido. A Bevean recusa o lote inteiro."
+          }
+        ],
+        [
+          {
+            "content": "Os eventos chegam, mas a automação não começa"
+          },
+          {
+            "content": "O visitante não está identificado. Confira o resolveUser ou se o visitante preencheu um formulário da Bevean."
+          }
+        ],
+        [
+          {
+            "content": "Em site de página única, todos os eventos saem com o mesmo endereço"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O script lê o endereço na hora do envio do lote. Mande "
+              },
+              {
+                "type": "text",
+                "text": "url",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "path",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e "
+              },
+              {
+                "type": "text",
+                "text": "title",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " no "
+              },
+              {
+                "type": "text",
+                "text": "page_viewed",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "A mensagem sai sem foto ou com link errado"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Use endereços completos em "
+              },
+              {
+                "type": "text",
+                "text": "image",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e "
+              },
+              {
+                "type": "text",
+                "text": "url",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para conferir os envios, abra as ferramentas de desenvolvedor do navegador, na aba "
+        },
+        {
+          "type": "text",
+          "text": "Rede",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ("
+        },
+        {
+          "type": "text",
+          "text": "Network",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "), e filtre por "
+        },
+        {
+          "type": "text",
+          "text": "events",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": cada lote aparece como uma chamada."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Continue por aqui",
+      "items": [
+        {
+          "ref": "ferramentas/tracking/site-proprio",
+          "description": "Criar a tag de Site próprio e instalar o código."
+        },
+        {
+          "ref": "automacoes/automacoes/escolher-um-gatilho",
+          "description": "Os gatilhos que esses eventos disparam."
+        },
+        {
+          "ref": "ferramentas/formularios/visao-geral",
+          "description": "Os formulários, que também identificam o visitante."
+        }
+      ]
+    }
+  ]
+}
