@@ -1,0 +1,513 @@
+{
+  "$schema": "../../../.vscode/schemas/article.schema.json",
+  "title": "Giftback: o cupom da próxima compra nasce quando o pedido é aprovado",
+  "subtitle": "Cada pedido aprovado gera um cupom na sua loja para o cliente voltar a comprar, separado do cashback, com regras, página própria e gatilhos para as automações.",
+  "updatedAt": "2026-10-05",
+  "publishedAt": "2026-10-02",
+  "tags": [
+    "Ferramentas",
+    "Automações",
+    "Audiência"
+  ],
+  "related": [
+    "ferramentas/giftback/visao-geral",
+    "ferramentas/giftback/ativar-o-programa",
+    "ferramentas/giftback/avisar-o-cliente",
+    "ferramentas/giftback/acompanhar-os-giftbacks"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O giftback é uma ferramenta nova, separada do cashback: quando um pedido é aprovado, a Bevean cria na sua loja um cupom de desconto para o cliente usar na próxima compra. Não há saldo para acumular nem resgate para fazer. O cliente recebe o cupom pronto, e você decide quanto ele vale, quando nasce e por quanto tempo dura."
+    },
+    {
+      "type": "paragraph",
+      "content": "Ele chega em Beta, com o selo ao lado do título da tela."
+    },
+    {
+      "type": "pillars",
+      "items": [
+        {
+          "title": "Gerar",
+          "content": "Um cupom na sua loja para cada pedido aprovado, com valor fixo calculado sobre a compra."
+        },
+        {
+          "title": "Controlar",
+          "content": "Porcentagem, carência, validade, pedido mínimo e quais compras entram."
+        },
+        {
+          "title": "Avisar",
+          "content": "Os gatilhos Giftback gerado e Giftback vencendo para as suas automações."
+        },
+        {
+          "title": "Acompanhar",
+          "content": "Quantos cupons nasceram, quantos foram usados e quanto vendeu."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O giftback começa desligado e não altera o cashback. Você liga quando quiser, e os dois programas podem funcionar ao mesmo tempo, cada um com a sua configuração."
+        }
+      ],
+      "title": "Você não precisa mexer em nada do que já tem"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Um cupom para cada pedido aprovado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Quando o pedido entra aprovado, a Bevean registra o giftback e, passada a carência que você definiu, cria o cupom na plataforma da sua loja. O cupom é de valor fixo, de uso único e vale pelos dias que você configurou, contados da criação."
+    },
+    {
+      "type": "paragraph",
+      "content": "Se o pedido for cancelado, reembolsado ou tiver chargeback antes de o cupom nascer, o cupom nem chega a ser criado. Se já tiver nascido, o giftback é cancelado e a Bevean desativa o cupom na loja, nas plataformas que permitem."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Você decide quanto, quando e para quem"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Regra"
+        },
+        {
+          "content": "Para que serve"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Porcentagem e Calcular sobre"
+          },
+          {
+            "content": "Quanto da compra vira cupom, sobre os produtos (sem frete) ou sobre o total pago"
+          }
+        ],
+        [
+          {
+            "content": "Compra mínima para ganhar e Valor máximo do cupom"
+          },
+          {
+            "content": "Os limites do custo do programa"
+          }
+        ],
+        [
+          {
+            "content": "Liberar após (dias)"
+          },
+          {
+            "content": "A carência entre a aprovação do pedido e a criação do cupom"
+          }
+        ],
+        [
+          {
+            "content": "Validade (dias)"
+          },
+          {
+            "content": "Por quanto tempo o cupom vale, contado da criação dele"
+          }
+        ],
+        [
+          {
+            "content": "Pedido mínimo para usar o cupom"
+          },
+          {
+            "content": "Exige um valor fixo, uma proporção do pedido, ou os dois"
+          }
+        ],
+        [
+          {
+            "content": "Só o cupom mais recente vale"
+          },
+          {
+            "content": "Quando o cliente compra de novo, o cupom anterior que ele não usou é desativado"
+          }
+        ],
+        [
+          {
+            "content": "Quais compras participam"
+          },
+          {
+            "content": "Escolha as origens dos pedidos, e se pedidos de loja física e de assinatura entram"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A própria tela escreve o resultado em uma frase enquanto você mexe, no quadro "
+        },
+        {
+          "type": "text",
+          "text": "Resumo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": “Compra de R$ 200,00 gera um cupom de R$ 20,00, liberado na aprovação, válido por 30 dias”."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O cupom é criado na plataforma da loja, e só existe onde ela permite criar cupom por integração: Bagy, Nuvemshop, Shopify, Tray, VNDA, VTEX, wBuy e Yampi. O pedido mínimo no cupom só vale em Shopify, Nuvemshop, Yampi e wBuy. Desativar o cupom de um pedido cancelado, ou do cupom substituído, só funciona em Shopify, Bagy e wBuy. A tela avisa quando a sua plataforma não permite."
+        }
+      ],
+      "title": "Depende da plataforma da sua loja"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O cliente abre uma página com o cupom"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O link pessoal que vai na sua mensagem abre a página "
+        },
+        {
+          "type": "text",
+          "text": "Meu giftback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": o valor, o código pronto para copiar, a validade e o pedido mínimo. O cliente não precisa de login."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Para quem perdeu a mensagem, existe uma consulta opcional por telefone ou e-mail mais CPF ou CNPJ. Ela começa desligada, e quem a liga recebe um endereço único para publicar onde quiser."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Nas automações"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os gatilhos ficam no grupo "
+        },
+        {
+          "type": "text",
+          "text": "Giftback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". "
+        },
+        {
+          "type": "text",
+          "text": "Giftback gerado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " dispara quando o cupom é criado na loja. "
+        },
+        {
+          "type": "text",
+          "text": "Giftback vencendo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " dispara nos dias que a própria automação define, de 0 a 365, com até 20 dias diferentes, para quem tem cupom vencendo sem uso."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No editor da mensagem, o grupo "
+        },
+        {
+          "type": "text",
+          "text": "Giftback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " traz o código, o valor, a validade, o pedido mínimo, os dias até vencer, o pedido de origem e o link da página do cliente."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "spotlight",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A Bevean cria o cupom na loja, mas quem conta ao cliente que ele ganhou é uma automação sua, com o gatilho "
+            },
+            {
+              "type": "text",
+              "text": "Giftback gerado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Sem ela, o cupom existe e ninguém avisa."
+            }
+          ]
+        }
+      ],
+      "title": "O giftback só chega ao cliente se uma automação avisar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Acompanhe na tela e no contato"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.giftback"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", quatro números no topo: cupons gerados, cupons usados (com a taxa de uso e o valor em vendas), aguardando liberação e falhas. A lista mostra cada giftback, e o menu de cada linha traz "
+        },
+        {
+          "type": "text",
+          "text": "Copiar código",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Tentar de novo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", quando algo falha."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No contato, a aba "
+        },
+        {
+          "type": "text",
+          "text": "Informações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ganhou o cartão "
+        },
+        {
+          "type": "text",
+          "text": "Giftback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com o cupom atual e os anteriores. Em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.coupons"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", os cupons do giftback aparecem com a origem "
+        },
+        {
+          "type": "text",
+          "text": "Giftback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Preciso mexer no meu cashback?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. O giftback é separado: tem tela, configuração e permissões próprias, e o cashback continua como estava."
+            }
+          ]
+        },
+        {
+          "question": "Funciona na plataforma da minha loja?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Funciona onde a plataforma permite criar cupom por integração. Quando nenhuma loja conectada permite, a tela avisa com "
+                },
+                {
+                  "type": "text",
+                  "text": "Nenhuma integração cria cupom",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "O cupom serve para qualquer pessoa?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Em Shopify, Bagy e VNDA, quando a Bevean conhece o cadastro do cliente na loja, o cupom fica restrito a ele. Nas outras plataformas é um cupom de uso único: qualquer pessoa com o código consegue usá-lo uma vez."
+            }
+          ]
+        },
+        {
+          "question": "O giftback alcança pedidos de antes de eu ligar?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Só pedidos feitos depois de você ativar o programa geram giftback. Se você desligar e religar, a contagem recomeça da nova ativação."
+            }
+          ]
+        },
+        {
+          "question": "Dá para ligar o giftback e o cashback juntos?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Dá. São programas independentes, e um mesmo pedido pode gerar os dois se entrar nas regras de cada um."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Como configurar cada parte",
+      "items": [
+        {
+          "ref": "ferramentas/giftback/ativar-o-programa",
+          "description": "As regras, o valor do cupom, a liberação e a validade, campo por campo."
+        },
+        {
+          "ref": "ferramentas/giftback/visao-geral",
+          "description": "O caminho de um giftback e como ele se compara ao cashback."
+        },
+        {
+          "ref": "ferramentas/giftback/avisar-o-cliente",
+          "description": "Montar a automação que entrega o cupom e o lembrete de vencimento."
+        },
+        {
+          "ref": "ferramentas/giftback/acompanhar-os-giftbacks",
+          "description": "Ler os números, a lista e o cartão do contato."
+        }
+      ]
+    }
+  ]
+}
