@@ -74,6 +74,13 @@
     ],
     "href": "/content/integrations/credits"
   },
+  "tools.giftback": {
+    "segments": [
+      "Ferramentas",
+      "Giftback"
+    ],
+    "href": "/content/integrations/giftback"
+  },
   "automations": {
     "segments": [
       "Automações"
@@ -237,6 +244,13 @@
       "Carrinhos"
     ],
     "href": "/content/integrations/carts"
+  },
+  "content.coupons": {
+    "segments": [
+      "Conteúdos & Dados",
+      "Cupons"
+    ],
+    "href": "/content/integrations/coupons"
   },
   "campaigns": {
     "segments": [

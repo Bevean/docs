@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funciona o cashback",
   "subtitle": "Entenda quando o crédito nasce, quando ele fica disponível para o cliente e o que acontece se ele não usar.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-05",
   "tags": [
     "cashback",
     "crédito",
@@ -14,7 +14,8 @@
   "related": [
     "ferramentas/cashback/ativar-o-programa",
     "ferramentas/cashback/como-o-cliente-resgata",
-    "ferramentas/cashback/resolver-problemas"
+    "ferramentas/cashback/resolver-problemas",
+    "ferramentas/giftback/visao-geral"
   ],
   "body": [
     {

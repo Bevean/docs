@@ -1,0 +1,903 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "A página do giftback do cliente",
+  "subtitle": "Veja o que o cliente encontra ao abrir o link do giftback e como ele recupera o cupom se perder a mensagem.",
+  "updatedAt": "2026-10-05",
+  "tags": [
+    "meu giftback",
+    "link do giftback",
+    "consulta",
+    "cpf",
+    "cnpj",
+    "cupom",
+    "página pública"
+  ],
+  "related": [
+    "ferramentas/giftback/avisar-o-cliente",
+    "ferramentas/giftback/ativar-o-programa",
+    "ferramentas/giftback/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O cliente não precisa de login para ver o cupom. Ele abre uma página própria, pelo link que vai na sua mensagem, e encontra o código pronto para copiar. Quem perdeu a mensagem pode chegar à mesma página por uma consulta, se você a liberar."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde se configura: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.giftback"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", no cartão "
+        },
+        {
+          "type": "text",
+          "text": "Página de consulta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " das configurações."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o cliente vê"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A página se chama "
+        },
+        {
+          "type": "text",
+          "text": "Meu giftback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e cabe em uma tela de celular: o nome da sua loja, o cumprimento com o primeiro nome do cliente, o cupom e um botão para copiar o código."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "O que a página mostra"
+        },
+        {
+          "content": "Quando aparece"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O cupom: "
+              },
+              {
+                "type": "text",
+                "text": "Seu cupom para a próxima compra",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", o valor de desconto, o código, o botão "
+              },
+              {
+                "type": "text",
+                "text": "Copiar código",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e "
+              },
+              {
+                "type": "text",
+                "text": "Válido até",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " a data"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O cliente tem um giftback "
+              },
+              {
+                "type": "text",
+                "text": "Ativo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Vale em pedidos a partir de",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " um valor"
+              }
+            ]
+          },
+          {
+            "content": "O cupom exige pedido mínimo"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Seu giftback está a caminho",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": “Seu cupom de R$ X será liberado em” a data"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O giftback está "
+              },
+              {
+                "type": "text",
+                "text": "Aguardando",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " a carência"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Nenhum cupom disponível",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": “Você não tem cupom ativo agora. A cada compra aprovada, a loja envia um cupom novo para a próxima.”"
+              }
+            ]
+          },
+          {
+            "content": "Não há giftback ativo nem aguardando"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Cupons anteriores",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", uma linha por cupom com o valor e a situação, como “R$ 20,00 · Usado”, e a data"
+              }
+            ]
+          },
+          {
+            "content": "O cliente tem giftbacks que já foram usados, venceram ou foram cancelados. A página lista, no total, os 10 giftbacks mais recentes dele"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O botão "
+              },
+              {
+                "type": "text",
+                "text": "Ir para a loja",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "A sua conta tem o endereço da loja cadastrado"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Programa indisponível",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": “O giftback não está ativo nesta loja no momento.”"
+              }
+            ]
+          },
+          {
+            "content": "O programa está desligado e o cliente não tem nenhum giftback para mostrar"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Link inválido ou expirado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": “Peça um novo link para a loja.”"
+              }
+            ]
+          },
+          {
+            "content": "O link venceu ou foi alterado"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Passada a validade, o cupom já aparece como "
+            },
+            {
+              "type": "text",
+              "text": "Vencido",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " na lista de anteriores, sem o código. Giftbacks que falharam não aparecem para o cliente."
+            }
+          ]
+        }
+      ],
+      "title": "O código só aparece enquanto o cupom está valendo"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se você desligar "
+            },
+            {
+              "type": "text",
+              "text": "Só o cupom mais recente vale",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", o cliente pode ter vários cupons ativos. A página mostra o código apenas do mais recente. Os outros aparecem na lista de anteriores, com valor e situação, sem o código."
+            }
+          ]
+        }
+      ],
+      "title": "Com mais de um cupom aberto, o código aparece só no mais recente"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O link pessoal"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada cliente tem o seu. Você o coloca em uma mensagem com a informação "
+        },
+        {
+          "type": "text",
+          "text": "Link do giftback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", a mesma que aparece no editor de mensagens das automações. O passo a passo está em "
+        },
+        {
+          "type": "text",
+          "text": "avisar o cliente sobre o giftback",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/giftback/avisar-o-cliente"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O link tem prazo de validade. Depois dele, a página mostra "
+            },
+            {
+              "type": "text",
+              "text": "Link inválido ou expirado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": "Um novo aviso de giftback traz um link novo, então o lembrete de vencimento também renova o acesso do cliente."
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O link funciona mesmo com a "
+            },
+            {
+              "type": "text",
+              "text": "Página de consulta",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " desligada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Quem tiver o link vê o código do cupom. Se o cliente encaminhar a mensagem para outra pessoa, ela pode usar o cupom. Evite publicar o link em post, grupo ou material impresso: ele funciona bem em mensagem individual."
+        }
+      ],
+      "title": "O link é pessoal e mostra o cupom de quem ele identifica"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A consulta por telefone ou e-mail"
+    },
+    {
+      "type": "paragraph",
+      "content": "Além do link pessoal, você pode publicar um endereço único da loja onde o cliente encontra o cupom sem ter a mensagem em mãos. Serve para quem apagou a conversa, e para você colocar o giftback no rodapé do site."
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Ligue a consulta",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Em "
+                },
+                {
+                  "type": "uiPath",
+                  "attrs": {
+                    "ref": "tools.giftback"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", abra "
+                },
+                {
+                  "type": "text",
+                  "text": "Configurações",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", vá ao cartão "
+                },
+                {
+                  "type": "text",
+                  "text": "Página de consulta",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e ligue "
+                },
+                {
+                  "type": "text",
+                  "text": "Permitir consulta por telefone ou e-mail + CPF/CNPJ",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Copie o link da consulta",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Com a chave ligada, o campo "
+                },
+                {
+                  "type": "text",
+                  "text": "Link da consulta",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " aparece com o botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Copiar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". A mensagem "
+                },
+                {
+                  "type": "text",
+                  "text": "Link copiado.",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " confirma. Lembre de clicar em "
+                },
+                {
+                  "type": "text",
+                  "text": "Salvar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Publique o endereço",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Coloque o link no rodapé do site, em uma resposta automática ou onde o cliente costuma procurar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "O cliente faz dois passos:"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Informa o telefone ou o e-mail das compras",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A página "
+                },
+                {
+                  "type": "text",
+                  "text": "Consulte seu giftback",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " pede o "
+                },
+                {
+                  "type": "text",
+                  "text": "Telefone ou e-mail",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " que ele usa na loja e tem o botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Continuar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Confirma o CPF ou CNPJ",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Por segurança, a página pede o "
+                },
+                {
+                  "type": "text",
+                  "text": "CPF ou CNPJ",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " do cadastro. Com o botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Consultar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", ele chega à mesma página "
+                },
+                {
+                  "type": "text",
+                  "text": "Meu giftback",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Só encontra contatos que têm CPF ou CNPJ cadastrado."
+        },
+        {
+          "content": "A consulta só funciona com o programa ativo e a chave de consulta ligada."
+        },
+        {
+          "content": "Consulta que não confere recebe sempre a mesma resposta, sem revelar se aquele telefone ou e-mail existe na sua base."
+        },
+        {
+          "content": "A página aberta pela consulta vale por 30 minutos."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Depois de 5 tentativas em 15 minutos para o mesmo telefone ou e-mail, a página pede para tentar de novo mais tarde. É a proteção contra quem tenta adivinhar o CPF de um cliente."
+        }
+      ],
+      "title": "A consulta tem limite de tentativas"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o cliente lê quando a consulta falha"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Mensagem"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Informe um telefone com DDD ou um e-mail válido."
+          },
+          {
+            "content": "O telefone ou o e-mail digitado não está em um formato válido. No telefone, inclua o DDD"
+          }
+        ],
+        [
+          {
+            "content": "Informe o CPF ou o CNPJ completo."
+          },
+          {
+            "content": "O documento digitado está incompleto ou não é um CPF ou CNPJ válido"
+          }
+        ],
+        [
+          {
+            "content": "Os dados não conferem. Confira o telefone ou e-mail e o documento. Se precisar, fale com a loja."
+          },
+          {
+            "content": "O telefone ou e-mail não existe na base, ou o documento não bate com o cadastro. A tela não diz qual dos dois"
+          }
+        ],
+        [
+          {
+            "content": "Muitas tentativas. Tente de novo em alguns minutos."
+          },
+          {
+            "content": "O limite de tentativas para aquele telefone ou e-mail foi atingido"
+          }
+        ],
+        [
+          {
+            "content": "Não foi possível consultar agora. Tente de novo."
+          },
+          {
+            "content": "Falha momentânea. Tentar de novo costuma resolver"
+          }
+        ],
+        [
+          {
+            "content": "Consulta indisponível: “Esta loja não oferece a consulta de giftback por aqui. Fale com a loja para receber o seu cupom.”"
+          },
+          {
+            "content": "A consulta está desligada, ou o programa está desligado"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "O cliente consegue ver os cupons de outras pessoas?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. A página mostra só o que pertence ao cliente identificado pelo link ou pela consulta, e a consulta exige duas informações que combinam."
+            }
+          ]
+        },
+        {
+          "question": "O cliente precisa ter CPF cadastrado para abrir o link pessoal?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. O CPF ou CNPJ só entra na consulta por telefone ou e-mail. O link pessoal abre a página sem pedir nada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "ferramentas/giftback/resolver-problemas",
+          "description": "O cliente diz que o cupom não funciona, ou o link não abre."
+        },
+        {
+          "ref": "ferramentas/giftback/acompanhar-os-giftbacks",
+          "description": "Conferir os cupons criados, usados e vencidos."
+        }
+      ]
+    }
+  ]
+}

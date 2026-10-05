@@ -1,0 +1,988 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Avisar o cliente sobre o giftback",
+  "subtitle": "Monte a automação que entrega o cupom ao cliente e o lembrete que impede o cupom de vencer sem uso.",
+  "updatedAt": "2026-10-05",
+  "tags": [
+    "automação",
+    "aviso",
+    "gatilho",
+    "giftback gerado",
+    "giftback vencendo",
+    "lembrete",
+    "variáveis"
+  ],
+  "related": [
+    "ferramentas/giftback/visao-geral",
+    "ferramentas/giftback/pagina-do-cliente",
+    "automacoes/automacoes/enviar-uma-mensagem",
+    "ferramentas/giftback/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O giftback não fala com o cliente sozinho. A Bevean cria o cupom na loja, mas quem conta ao cliente que ele ganhou, e entrega o código, é uma automação sua. É ela que decide se o cupom vira uma nova venda ou vence esquecido."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "automations"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os dois gatilhos do giftback"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No gatilho da automação, os dois estão no grupo "
+        },
+        {
+          "type": "text",
+          "text": "Giftback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Gatilho"
+        },
+        {
+          "content": "Dispara quando"
+        },
+        {
+          "content": "Serve para"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Giftback gerado"
+          },
+          {
+            "content": "O cupom de giftback do cliente foi criado na loja depois de uma compra aprovada"
+          },
+          {
+            "content": "Entregar o código: “você ganhou R$ 20 para a próxima compra”"
+          }
+        ],
+        [
+          {
+            "content": "Giftback vencendo"
+          },
+          {
+            "content": "Falta para o vencimento um dos dias que a automação definiu e o cupom ainda não foi usado"
+          },
+          {
+            "content": "O lembrete que evita o cupom vencer sem uso"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Com carência, o gatilho "
+            },
+            {
+              "type": "text",
+              "text": "Giftback gerado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " só dispara no dia em que o cupom nasce. Se o cupom falhar, nenhuma mensagem sai, então o cliente nunca recebe um aviso sem cupom. Quando você usar "
+            },
+            {
+              "type": "text",
+              "text": "Tentar de novo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e o cupom for criado, o aviso sai nesse momento."
+            }
+          ]
+        }
+      ],
+      "title": "O aviso sai quando o cupom é criado, não quando o pedido é aprovado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Os gatilhos de giftback são só esses dois. Não existe um gatilho para giftback usado nem para giftback vencido."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Montar o aviso de entrega"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Crie a automação e escolha o gatilho Giftback gerado",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "O passo a passo geral está em "
+                },
+                {
+                  "type": "text",
+                  "text": "escolher um gatilho",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "automacoes/automacoes/escolher-um-gatilho"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escreva a mensagem",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No editor da mensagem, o grupo "
+                },
+                {
+                  "type": "text",
+                  "text": "Giftback",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " oferece as informações do cupom. "
+                },
+                {
+                  "type": "text",
+                  "text": "Código do cupom",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e "
+                },
+                {
+                  "type": "text",
+                  "text": "Link do giftback",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " são as duas que o cliente precisa para agir. A tabela abaixo mostra todas."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Monte o envio",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Escolha o canal e o conteúdo no passo de envio. Como montar está em "
+                },
+                {
+                  "type": "text",
+                  "text": "enviar uma mensagem",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "automacoes/automacoes/enviar-uma-mensagem"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ative a automação",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A partir daí, cada cupom criado dispara o aviso para o contato dono dele."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que dá para colocar na mensagem"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Informação"
+        },
+        {
+          "content": "O que traz"
+        },
+        {
+          "content": "Exemplo"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Código do cupom"
+          },
+          {
+            "content": "O código que o cliente digita no checkout"
+          },
+          {
+            "content": "GIFT-A1B2C3D4"
+          }
+        ],
+        [
+          {
+            "content": "Valor do giftback"
+          },
+          {
+            "content": "O valor do cupom"
+          },
+          {
+            "content": "R$ 25,50"
+          }
+        ],
+        [
+          {
+            "content": "Validade do cupom"
+          },
+          {
+            "content": "A data em que o cupom vence"
+          },
+          {
+            "content": "03/08/2026"
+          }
+        ],
+        [
+          {
+            "content": "Pedido mínimo para usar"
+          },
+          {
+            "content": "O valor mínimo do pedido que usa o cupom. Sai vazio quando o cupom não exige mínimo"
+          },
+          {
+            "content": "R$ 150,00"
+          }
+        ],
+        [
+          {
+            "content": "Dias até vencer"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Quantos dias faltam para o cupom vencer. Só tem valor no gatilho "
+              },
+              {
+                "type": "text",
+                "text": "Giftback vencendo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "3"
+          }
+        ],
+        [
+          {
+            "content": "Pedido que gerou o giftback"
+          },
+          {
+            "content": "O número do pedido que deu origem ao cupom"
+          },
+          {
+            "content": "1042"
+          }
+        ],
+        [
+          {
+            "content": "Link do giftback"
+          },
+          {
+            "content": "O endereço da página pessoal do cliente, onde ele vê o cupom"
+          },
+          {
+            "content": "https://app.bevean.com/giftback?token=..."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Essas informações só têm valor em automações com um gatilho de giftback. Em qualquer outro fluxo elas saem vazias, e "
+            },
+            {
+              "type": "text",
+              "text": "Dias até vencer",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " sai vazia até no "
+            },
+            {
+              "type": "text",
+              "text": "Giftback gerado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Vazio no meio de uma frase é pior do que não ter escrito nada."
+            }
+          ]
+        }
+      ],
+      "title": "Escolha a informação que combina com o gatilho"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O link tem prazo de validade, e cada aviso de giftback traz um link novo, gerado junto com o aviso. Para saber o que o cliente vê ao abri-lo, veja "
+        },
+        {
+          "type": "text",
+          "text": "a página do giftback do cliente",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/giftback/pagina-do-cliente"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Montar o lembrete de vencimento"
+    },
+    {
+      "type": "paragraph",
+      "content": "É o aviso que impede o cupom de vencer em silêncio. Sem ele, o cupom só é usado se o cliente se lembrar sozinho."
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "C",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "r"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "u"
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "m"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "ç"
+            },
+            {
+              "type": "paragraph",
+              "content": "ã"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "s"
+            },
+            {
+              "type": "paragraph",
+              "content": "c"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "l"
+            },
+            {
+              "type": "paragraph",
+              "content": "h"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "g"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "l"
+            },
+            {
+              "type": "paragraph",
+              "content": "h"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "G"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "f"
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": "b"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "c"
+            },
+            {
+              "type": "paragraph",
+              "content": "k"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "v"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "c"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "d"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            }
+          ]
+        },
+        {
+          "title": "Defina os dias em Quando avisar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "O campo "
+                },
+                {
+                  "type": "text",
+                  "text": "Dias antes do vencimento",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " recebe as antecedências desta automação, por exemplo 7, 3 e 1. O "
+                },
+                {
+                  "type": "text",
+                  "text": "0",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " é o próprio dia do vencimento. Cada dia informado gera um envio para quem tiver cupom de giftback vencendo sem uso."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": "Você pode informar até 20 dias diferentes, de 0 a 365, sem repetir. A automação não publica sem pelo menos um dia."
+            }
+          ]
+        },
+        {
+          "title": "Escreva a mensagem",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Use "
+                },
+                {
+                  "type": "text",
+                  "text": "Dias até vencer",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "Validade do cupom",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "Código do cupom",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e o "
+                },
+                {
+                  "type": "text",
+                  "text": "Link do giftback",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ative a automação",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A automação precisa estar ativa. O lembrete só sai para quem tem o cupom ainda válido e sem uso."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Um aviso de 30 dias antes, em um cupom que vale 15 dias, cairia antes de o cupom existir. O painel marca essas antecedências em vermelho dentro da própria automação, comparando com a "
+            },
+            {
+              "type": "text",
+              "text": "Validade",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " que você configurou no giftback."
+            }
+          ]
+        }
+      ],
+      "title": "Antecedência maior que a validade nunca dispara"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Giftback usado, vencido, cancelado ou substituído por um mais novo não recebe o lembrete. E cada cupom recebe no máximo um aviso por dia de antecedência."
+        }
+      ],
+      "title": "O lembrete só sai para cupom que ainda vale"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Se o cliente perder a mensagem"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O link pessoal vem na mensagem, mas o cliente pode apagar a conversa. Para esse caso existe a "
+        },
+        {
+          "type": "text",
+          "text": "Página de consulta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", opcional, em que ele encontra o cupom informando telefone ou e-mail e CPF ou CNPJ. Você liga em "
+        },
+        {
+          "type": "text",
+          "text": "ativar e configurar o giftback",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/giftback/ativar-o-programa"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e coloca o endereço onde quiser, por exemplo no rodapé do site."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "O cliente que compra de novo recebe um aviso novo?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Recebe. Cada cupom criado dispara o seu próprio "
+                },
+                {
+                  "type": "text",
+                  "text": "Giftback gerado",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Com "
+                },
+                {
+                  "type": "text",
+                  "text": "Só o cupom mais recente vale",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ligado, o cupom anterior é desativado e deixa de receber lembrete."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Dá para avisar o cliente de um cupom que ele já tinha antes de eu criar a automação?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Não pelo gatilho: o "
+                },
+                {
+                  "type": "text",
+                  "text": "Giftback gerado",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " dispara quando o cupom nasce. Para quem já tem cupom ativo, o lembrete de vencimento é o aviso que ainda alcança esse cliente."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "ferramentas/giftback/pagina-do-cliente",
+          "description": "O que o cliente vê ao abrir o link do giftback."
+        },
+        {
+          "ref": "ferramentas/giftback/acompanhar-os-giftbacks",
+          "description": "Conferir os cupons criados, usados e vencidos."
+        }
+      ]
+    }
+  ]
+}

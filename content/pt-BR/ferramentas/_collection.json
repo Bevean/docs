@@ -1,13 +1,14 @@
 {
   "$schema": "../../../.vscode/schemas/collection.schema.json",
   "title": "Ferramentas",
-  "description": "Captura de leads, cashback, gerador de links e o que mais ajuda a captar e converter.",
+  "description": "Captura de leads, cashback, giftback, gerador de links e o que mais ajuda a captar e converter.",
   "icon": "wrench",
   "sections": [
     "formularios",
     "tracking",
     "links",
     "cashback",
+    "giftback",
     "pesquisas"
   ],
   "articles": []

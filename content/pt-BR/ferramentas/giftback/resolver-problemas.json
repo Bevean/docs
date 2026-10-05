@@ -1,0 +1,1382 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O giftback não está funcionando",
+  "subtitle": "Giftback que não foi gerado, cupom que não sai, cupom que falhou, aviso que não chega: onde olhar em cada caso.",
+  "updatedAt": "2026-10-05",
+  "tags": [
+    "problema",
+    "erro",
+    "não gerou",
+    "falhou",
+    "cupom não funciona",
+    "ativo na loja",
+    "tentar de novo"
+  ],
+  "related": [
+    "ferramentas/giftback/visao-geral",
+    "ferramentas/giftback/acompanhar-os-giftbacks",
+    "ferramentas/giftback/avisar-o-cliente",
+    "ferramentas/giftback/pagina-do-cliente"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Quase todo problema de giftback cai em um destes: o giftback não nasceu, o cupom não foi criado, o cupom não funciona no checkout ou o aviso não saiu. Comece pelo sintoma que você ou o cliente notou."
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "list",
+          "style": "bullet",
+          "items": [
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "O programa está ligado. Em "
+                },
+                {
+                  "type": "uiPath",
+                  "attrs": {
+                    "ref": "tools.giftback"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", o aviso "
+                },
+                {
+                  "type": "text",
+                  "text": "Programa de giftback",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " com a marca "
+                },
+                {
+                  "type": "text",
+                  "text": "Inativo",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " não deve aparecer."
+                }
+              ]
+            },
+            {
+              "content": "O pedido em questão está aprovado, não pendente nem cancelado."
+            },
+            {
+              "content": "O pedido foi feito depois de você ativar o programa."
+            }
+          ]
+        }
+      ],
+      "title": "Antes de investigar, confirme três coisas"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O pedido foi aprovado e não apareceu giftback"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O pedido tem um contato vinculado?"
+          },
+          {
+            "content": "Pedido sem cliente identificado não gera giftback. Não há para quem criar o cupom"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "O pedido foi feito antes de você ativar o programa?"
+          },
+          {
+            "content": "Fica de fora, mesmo que tenha sido aprovado depois. O que conta é a data em que o pedido foi feito, não a da aprovação"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O programa chegou a ser desligado e religado?"
+          },
+          {
+            "content": "Religar marca uma data de início nova. Tudo que foi feito no intervalo desligado fica de fora"
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "A loja foi conectada à Bevean depois do pedido?"
+          },
+          {
+            "content": "Pedido anterior à conexão da loja não gera giftback"
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A compra passou da "
+              },
+              {
+                "type": "text",
+                "text": "Compra mínima para ganhar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "?"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A comparação usa a base de cálculo. Com "
+              },
+              {
+                "type": "text",
+                "text": "Produtos (sem frete)",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", o frete não conta e o pedido pode ficar abaixo sem parecer"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "6"
+          },
+          {
+            "content": "A aprovação chegou muito tempo depois do pedido?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Se a aprovação chegar com mais horas que o limite de "
+              },
+              {
+                "type": "text",
+                "text": "Ignorar aprovações com mais de",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", o pedido é ignorado. Acontece quando a integração sincroniza um pagamento atrasado"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "7"
+          },
+          {
+            "content": "A origem do pedido, a loja física ou a assinatura estão excluídas?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Confira o cartão "
+              },
+              {
+                "type": "text",
+                "text": "Quais compras participam",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " nas configurações"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "8"
+          },
+          {
+            "content": "O valor do cupom dá menos de um centavo?"
+          },
+          {
+            "content": "Nada é gerado. Acontece com porcentagem muito baixa em compra pequena"
+          }
+        ],
+        [
+          {
+            "content": "9"
+          },
+          {
+            "content": "O pedido entrou por importação de arquivo?"
+          },
+          {
+            "content": "Importação é carga de histórico e nunca gera giftback"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O giftback está Aguardando e o cupom não sai"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A tela mostra "
+              },
+              {
+                "type": "text",
+                "text": "Libera em",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " com uma data?"
+              }
+            ]
+          },
+          {
+            "content": "É a carência. O cupom só é criado nessa data. Se o pedido for cancelado antes, o giftback é cancelado sem cupom"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "A data de liberação já passou?"
+          },
+          {
+            "content": "A Bevean confere os giftbacks a cada 30 minutos. O cupom pode levar até cerca de uma hora depois da data"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O pedido foi cancelado, reembolsado ou teve chargeback?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O giftback vira "
+              },
+              {
+                "type": "text",
+                "text": "Cancelado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e não cria cupom"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O giftback ficou como Falhou"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando a plataforma da loja recusa a criação, a Bevean tenta algumas vezes, com intervalo entre as tentativas, antes de marcar como "
+        },
+        {
+          "type": "text",
+          "text": "Falhou",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Quando não há onde criar o cupom, ou o programa está desligado, a falha é imediata. A coluna "
+        },
+        {
+          "type": "text",
+          "text": "Situação",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra o "
+        },
+        {
+          "type": "text",
+          "text": "Motivo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Motivo na tela"
+        },
+        {
+          "content": "O que significa"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "coupon_unavailable",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "A Bevean não achou uma loja onde criar o cupom. Nenhuma loja ativa permite criar cupom, ou há mais de uma que permite e o contato não veio de nenhuma delas"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Confira se a loja está conectada e ativa em "
+              },
+              {
+                "type": "uiPath",
+                "attrs": {
+                  "ref": "integrations"
+                }
+              },
+              {
+                "type": "text",
+                "text": ". Depois use "
+              },
+              {
+                "type": "text",
+                "text": "Tentar de novo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "giftback_disabled",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O programa estava desligado quando chegou a hora de criar o cupom"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Ligue o programa e use "
+              },
+              {
+                "type": "text",
+                "text": "Tentar de novo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Uma mensagem da plataforma da loja"
+          },
+          {
+            "content": "A plataforma recusou a criação do cupom. O texto é o que ela devolveu"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Confira se a integração está conectada e com as permissões em dia. Se o texto apontar uma regra da plataforma, resolva lá. Depois use "
+              },
+              {
+                "type": "text",
+                "text": "Tentar de novo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O aviso do gatilho "
+            },
+            {
+              "type": "text",
+              "text": "Giftback gerado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " só sai quando o cupom é criado. Um giftback que falhou não faz o cliente receber uma mensagem sem cupom."
+            }
+          ]
+        }
+      ],
+      "title": "Falha não manda mensagem ao cliente"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O pedido foi cancelado e o cupom continua valendo na loja"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "A sua plataforma é Shopify, Bagy ou wBuy?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Só nelas a Bevean desativa o cupom. Nas outras, o giftback fica "
+              },
+              {
+                "type": "text",
+                "text": "Cancelado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " aqui, com a marca "
+              },
+              {
+                "type": "text",
+                "text": "Ativo na loja",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", e o código segue válido até vencer. Desative à mão no admin da loja, usando o código da coluna "
+              },
+              {
+                "type": "text",
+                "text": "Cupom",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A linha mostra "
+              },
+              {
+                "type": "text",
+                "text": "Cancelado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e o menu tem "
+              },
+              {
+                "type": "text",
+                "text": "Tentar desativar de novo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "?"
+              }
+            ]
+          },
+          {
+            "content": "A plataforma recusou a desativação. Tente de novo. Se continuar, desative o cupom direto na loja"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O cliente já tinha usado o cupom?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Então o giftback continua "
+              },
+              {
+                "type": "text",
+                "text": "Usado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Uso vence cancelamento"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O aviso "
+        },
+        {
+          "type": "text",
+          "text": "Cupom de pedido cancelado pode continuar valendo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no topo da tela, conta quantos giftbacks estão nessa situação."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O cliente diz que o cupom não funciona no checkout"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "Ele já usou esse cupom?"
+          },
+          {
+            "content": "É de uso único. Depois do primeiro pedido, o código não vale mais"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "A validade passou?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O prazo conta a partir da criação do cupom, não da compra. A coluna "
+              },
+              {
+                "type": "text",
+                "text": "Validade",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " mostra a data"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O pedido chega ao valor mínimo?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Se o cupom exige pedido mínimo, a página do cliente mostra "
+              },
+              {
+                "type": "text",
+                "text": "Vale em pedidos a partir de",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e o valor. Abaixo disso a plataforma recusa"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "O cliente comprou com um cadastro diferente do que recebeu o cupom?"
+          },
+          {
+            "content": "Em Shopify, Bagy e VNDA, quando a Bevean conhece o cadastro do cliente na loja, o cupom fica restrito a esse cadastro"
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "Ele tenta somar com outro cupom?"
+          },
+          {
+            "content": "Quem decide se cupons acumulam é a plataforma da loja, não a Bevean"
+          }
+        ],
+        [
+          {
+            "content": "6"
+          },
+          {
+            "content": "O cliente comprou de novo e ganhou um cupom mais novo?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Com "
+              },
+              {
+                "type": "text",
+                "text": "Só o cupom mais recente vale",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ligado, o cupom anterior é desativado. A linha mostra "
+              },
+              {
+                "type": "text",
+                "text": "Cancelado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e o motivo "
+              },
+              {
+                "type": "text",
+                "text": "Substituído por um giftback mais novo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O aviso não saiu para o cliente"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Existe uma automação ativa com o gatilho "
+              },
+              {
+                "type": "text",
+                "text": "Giftback gerado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "?"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Sem ela, o cupom existe e ninguém avisa. A tela do giftback mostra o aviso "
+              },
+              {
+                "type": "text",
+                "text": "Envie o cupom ao cliente",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " enquanto você não monta uma"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A mensagem usa "
+              },
+              {
+                "type": "text",
+                "text": "Código do cupom",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e "
+              },
+              {
+                "type": "text",
+                "text": "Link do giftback",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "?"
+              }
+            ]
+          },
+          {
+            "content": "Sem o código, o cliente não sabe qual digitar. Informações de outros grupos saem vazias neste gatilho"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O giftback chegou a ser criado?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O aviso sai quando o cupom nasce. Um giftback "
+              },
+              {
+                "type": "text",
+                "text": "Aguardando",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou "
+              },
+              {
+                "type": "text",
+                "text": "Falhou",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ainda não disparou nada"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "No lembrete de vencimento, há dias em "
+              },
+              {
+                "type": "text",
+                "text": "Quando avisar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "?"
+              }
+            ]
+          },
+          {
+            "content": "A automação não publica sem pelo menos um dia"
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "O dia do lembrete é menor que a validade do cupom?"
+          },
+          {
+            "content": "Uma antecedência maior que a validade nunca dispara. O painel marca em vermelho dentro da automação"
+          }
+        ],
+        [
+          {
+            "content": "6"
+          },
+          {
+            "content": "O cupom já foi usado, venceu, foi cancelado ou substituído?"
+          },
+          {
+            "content": "O lembrete só sai para cupom que ainda vale e não foi usado"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O passo a passo de montar os dois avisos está em "
+        },
+        {
+          "type": "text",
+          "text": "avisar o cliente sobre o giftback",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/giftback/avisar-o-cliente"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O cliente não consegue abrir a página"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "O que ele vê"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Link inválido ou expirado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O link venceu ou foi alterado. Um novo aviso de giftback, como o lembrete de vencimento, traz um link novo. Se você ligou a consulta, ele pode recuperar o cupom por lá"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Consulta indisponível",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A consulta está desligada ou o programa está desligado. Veja o cartão "
+              },
+              {
+                "type": "text",
+                "text": "Página de consulta",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " nas configurações"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Os dados não conferem",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O telefone ou e-mail não está na base, ou o CPF ou CNPJ não bate com o cadastro. A consulta só encontra contatos com CPF ou CNPJ cadastrado"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Muitas tentativas",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O limite de 5 tentativas em 15 minutos para o mesmo telefone ou e-mail foi atingido. Peça para esperar"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A página e a consulta estão explicadas em "
+        },
+        {
+          "type": "text",
+          "text": "a página do giftback do cliente",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/giftback/pagina-do-cliente"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Dá para dar giftback só para um grupo de clientes?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Não. A regra é uma só para a loja inteira. O que existe é limitar por origem do pedido, por loja física e por assinatura, em "
+                },
+                {
+                  "type": "text",
+                  "text": "Quais compras participam",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Não há regra por cliente, produto ou segmento."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Mudei a porcentagem e os giftbacks antigos continuaram com o valor de antes",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "É o esperado. Cada giftback guarda o valor calculado quando o pedido foi aprovado. A nova porcentagem vale para os pedidos seguintes."
+            }
+          ]
+        },
+        {
+          "question": "O cliente usou o cupom. Esse pedido gera outro giftback?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Gera, se o pedido entrar nas regras. Quando a base é "
+                },
+                {
+                  "type": "text",
+                  "text": "Produtos (sem frete)",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", o desconto do cupom é abatido do valor, como qualquer outro desconto."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Um pedido pode gerar giftback e cashback ao mesmo tempo?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Pode, se os dois programas estiverem ligados e o pedido entrar nas regras de cada um. São programas independentes."
+            }
+          ]
+        },
+        {
+          "question": "O giftback funciona na plataforma da minha loja?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Funciona onde a plataforma permite criar cupom por integração: Bagy, Nuvemshop, Shopify, Tray, VNDA, VTEX, wBuy e Yampi. A tela avisa com "
+                },
+                {
+                  "type": "text",
+                  "text": "Nenhuma integração cria cupom",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " quando nenhuma loja conectada permite."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Veja também",
+      "items": [
+        {
+          "ref": "ferramentas/giftback/acompanhar-os-giftbacks",
+          "description": "Ler os números e a lista do giftback."
+        },
+        {
+          "ref": "ferramentas/giftback/ativar-o-programa",
+          "description": "Rever as regras e os limites de cada campo."
+        }
+      ]
+    }
+  ]
+}

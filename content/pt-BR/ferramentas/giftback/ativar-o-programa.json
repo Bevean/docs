@@ -1,0 +1,1308 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Ativar e configurar o giftback",
+  "subtitle": "Defina quanto o cupom vale, quando ele nasce e por quanto tempo vale, e entenda o que cada regra faz.",
+  "updatedAt": "2026-10-05",
+  "tags": [
+    "ativar giftback",
+    "porcentagem",
+    "carência",
+    "validade",
+    "pedido mínimo",
+    "prefixo",
+    "teto"
+  ],
+  "related": [
+    "ferramentas/giftback/visao-geral",
+    "ferramentas/giftback/avisar-o-cliente",
+    "ferramentas/giftback/pagina-do-cliente",
+    "ferramentas/giftback/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ligar o giftback leva alguns minutos: você define quanto do pedido vira cupom, quando o cupom nasce e por quanto tempo ele vale. A partir do "
+        },
+        {
+          "type": "text",
+          "text": "Salvar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", todo pedido que entrar aprovado começa a gerar giftback."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.giftback"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ativar o programa"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra a tela do giftback",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Na primeira vez, a tela mostra "
+                },
+                {
+                  "type": "text",
+                  "text": "Dê um cupom a cada compra",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e o botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Configurar giftback",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Com o programa configurado e desligado, aparece o aviso "
+                },
+                {
+                  "type": "text",
+                  "text": "Programa de giftback",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " com a marca "
+                },
+                {
+                  "type": "text",
+                  "text": "Inativo",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e o botão "
+                },
+                {
+                  "type": "text",
+                  "text": "Ativar giftback",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Com o programa ligado, o botão no topo se chama "
+                },
+                {
+                  "type": "text",
+                  "text": "Configurações",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ligue a chave Gerar giftback nas compras aprovadas",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Enquanto ela estiver desligada, o resto do formulário continua editável, mas nenhum pedido gera giftback."
+            }
+          ]
+        },
+        {
+          "title": "Preencha Porcentagem e Calcular sobre",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A porcentagem é o único campo que o painel exige com o programa ligado. Os outros têm valor padrão."
+            }
+          ]
+        },
+        {
+          "title": "Confira Prefixo do código e Validade",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Os valores padrão são o prefixo "
+                },
+                {
+                  "type": "text",
+                  "text": "GIFT",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e "
+                },
+                {
+                  "type": "text",
+                  "text": "30",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " dias de validade."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Leia o quadro Resumo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Ao lado do formulário, o "
+                },
+                {
+                  "type": "text",
+                  "text": "Resumo",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " se reescreve enquanto você mexe, com um exemplo sobre um pedido de R$ 200,00: “Compra de R$ 200,00 gera um cupom de R$ 20,00, liberado na aprovação, válido por 30 dias”. Leia antes de salvar."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Clique em Salvar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A mensagem "
+                },
+                {
+                  "type": "text",
+                  "text": "Configurações salvas.",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " confirma."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Salvar as configurações não garante que o cupom vai nascer: ele é criado na loja, e só existe onde a plataforma permite criar cupom por integração:"
+        },
+        {
+          "type": "list",
+          "style": "bullet",
+          "items": [
+            {
+              "content": "Bagy"
+            },
+            {
+              "content": "Nuvemshop"
+            },
+            {
+              "content": "Shopify"
+            },
+            {
+              "content": "Tray"
+            },
+            {
+              "content": "VNDA"
+            },
+            {
+              "content": "VTEX"
+            },
+            {
+              "content": "wBuy"
+            },
+            {
+              "content": "Yampi"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Sem nenhuma dessas plataformas conectada, os pedidos entram na lista, mas nenhum cupom é criado, e a tela avisa com "
+            },
+            {
+              "type": "text",
+              "text": "Nenhuma integração cria cupom",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Quando há mais de uma loja conectada que permite criar cupom, o cupom é criado na loja de onde o contato veio. Se o contato não veio de nenhuma delas, o giftback falha: veja "
+            },
+            {
+              "type": "text",
+              "text": "o giftback não está funcionando",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/giftback/resolver-problemas"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "O cupom é criado na plataforma da sua loja"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quanto o cupom vale"
+    },
+    {
+      "type": "paragraph",
+      "content": "O cupom é uma porcentagem da compra, convertida em valor fixo na hora em que o pedido é aprovado. Com 10%, uma compra de R$ 200 gera um cupom de R$ 20."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que faz"
+        },
+        {
+          "content": "Se ficar vazio"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Porcentagem"
+          },
+          {
+            "content": "Quanto da compra vira cupom"
+          },
+          {
+            "content": "Obrigatória com o programa ligado"
+          }
+        ],
+        [
+          {
+            "content": "Calcular sobre"
+          },
+          {
+            "content": "O valor da compra em que a porcentagem é aplicada. Veja a tabela abaixo"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Começa em "
+              },
+              {
+                "type": "text",
+                "text": "Produtos (sem frete)",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Compra mínima para ganhar"
+          },
+          {
+            "content": "Compras abaixo desse valor não geram giftback"
+          },
+          {
+            "content": "Toda compra gera, por menor que seja"
+          }
+        ],
+        [
+          {
+            "content": "Valor máximo do cupom"
+          },
+          {
+            "content": "Teto do cupom, qualquer que seja o valor da compra"
+          },
+          {
+            "content": "Não há teto"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Calcular sobre"
+        },
+        {
+          "content": "O que entra na conta"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Produtos (sem frete)"
+          },
+          {
+            "content": "Só os produtos, já com os descontos abatidos. O frete fica de fora"
+          }
+        ],
+        [
+          {
+            "content": "Total pago"
+          },
+          {
+            "content": "O valor cheio do pedido, frete incluído"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Um pedido de R$ 200 com R$ 50 de desconto gera giftback sobre R$ 150."
+        }
+      ],
+      "title": "Desconto no pedido reduz o giftback na base Produtos"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Com a base "
+            },
+            {
+              "type": "text",
+              "text": "Produtos (sem frete)",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", um pedido de R$ 110 com R$ 20 de frete vale R$ 90 na comparação. Com compra mínima de R$ 100, ele não gera giftback."
+            }
+          ]
+        }
+      ],
+      "title": "A compra mínima é comparada com a base de cálculo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando o cupom nasce e por quanto tempo vale"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que faz"
+        },
+        {
+          "content": "Faixa aceita"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Liberar após (dias)"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Dias entre a aprovação do pedido e a criação do cupom. "
+              },
+              {
+                "type": "text",
+                "text": "0",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " cria o cupom na aprovação. Se o pedido for cancelado nesse período, o cupom nem chega a ser criado"
+              }
+            ]
+          },
+          {
+            "content": "Número inteiro de 0 a 365"
+          }
+        ],
+        [
+          {
+            "content": "Ignorar aprovações com mais de (horas)"
+          },
+          {
+            "content": "Pedido cuja aprovação chega com mais tempo que esse limite não gera giftback. Protege contra pedidos antigos que chegam atrasados pela integração"
+          },
+          {
+            "content": "Número inteiro de 1 a 8760. O padrão é 72"
+          }
+        ],
+        [
+          {
+            "content": "Validade (dias)"
+          },
+          {
+            "content": "Dias de vida do cupom, contados a partir da criação dele"
+          },
+          {
+            "content": "Número inteiro de 1 a 3650. O padrão é 30"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A validade "
+        },
+        {
+          "type": "text",
+          "text": "começa a contar quando o cupom é criado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", não na compra. Carência de 7 dias com validade de 30 dá 37 dias entre a aprovação do pedido e o vencimento do cupom."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O cupom"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Regra"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Código"
+          },
+          {
+            "content": "O prefixo que você definiu, um hífen e oito caracteres sorteados: GIFT-A1B2C3D4. O prefixo tem de 1 a 16 letras e números, e a tela já o escreve em maiúsculas"
+          }
+        ],
+        [
+          {
+            "content": "Valor"
+          },
+          {
+            "content": "Fixo, igual ao valor calculado para o giftback"
+          }
+        ],
+        [
+          {
+            "content": "Uso"
+          },
+          {
+            "content": "Uma vez só, uma vez por cliente"
+          }
+        ],
+        [
+          {
+            "content": "Dono"
+          },
+          {
+            "content": "Em Shopify, Bagy e VNDA, quando o contato veio dessa loja, o cupom fica restrito ao cadastro dele. Nas outras plataformas, qualquer pessoa com o código consegue usá-lo uma vez"
+          }
+        ],
+        [
+          {
+            "content": "Nome na plataforma"
+          },
+          {
+            "content": "A Bevean cria o cupom com o título “Giftback do pedido” seguido do número do pedido"
+          }
+        ],
+        [
+          {
+            "content": "Prazo"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Vale pelos dias de "
+              },
+              {
+                "type": "text",
+                "text": "Validade",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", contados da criação"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Pedido mínimo para usar o cupom"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em "
+        },
+        {
+          "type": "text",
+          "text": "Pedido mínimo para usar o cupom",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " você pode exigir que o pedido que usa o cupom tenha um valor mínimo, de dois jeitos:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Valor fixo"
+          },
+          {
+            "content": "O pedido precisa ser de pelo menos esse valor. Exemplo: pedidos a partir de R$ 150"
+          }
+        ],
+        [
+          {
+            "content": "O cupom vale no máximo (% do pedido)"
+          },
+          {
+            "content": "O cupom não pode passar dessa porcentagem do pedido. Com 10%, um cupom de R$ 20 exige pedido de R$ 200"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando os dois estão preenchidos, vale o maior. O quadro "
+        },
+        {
+          "type": "text",
+          "text": "Resumo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra a conta antes de você salvar."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Só Shopify, Nuvemshop, Yampi e wBuy aplicam pedido mínimo no cupom. Nas outras, o campo mostra "
+            },
+            {
+              "type": "text",
+              "text": "Não suportado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e o texto “Sua plataforma não aplica pedido mínimo em cupom. O cupom vai valer em qualquer compra.” Com mais de uma loja conectada, basta uma não aceitar para o aviso aparecer."
+            }
+          ]
+        }
+      ],
+      "title": "Depende da plataforma da sua loja"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Só o cupom mais recente vale"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A chave vem ligada. Com ela, quando o cliente compra de novo e ganha um cupom novo, o cupom anterior que ele não usou é desativado: a tela mostra o giftback antigo como "
+        },
+        {
+          "type": "text",
+          "text": "Cancelado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com o motivo "
+        },
+        {
+          "type": "text",
+          "text": "Substituído por um giftback mais novo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A Bevean só consegue desativar o cupom na loja em Shopify, Bagy e wBuy. Nas outras, o giftback antigo aparece como "
+            },
+            {
+              "type": "text",
+              "text": "Cancelado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " aqui, mas o código segue válido na loja até vencer. A própria tela avisa: “Sua plataforma ainda não permite desativar cupom: o anterior segue valendo na loja até vencer.”"
+            }
+          ]
+        }
+      ],
+      "title": "Onde a plataforma não desativa cupom, o anterior continua valendo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Com a chave desligada, todos os cupons valem até vencer, e o cliente pode ter mais de um aberto."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quais compras participam"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que faz"
+        },
+        {
+          "content": "Se ficar vazio ou desligado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Origens"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Só os pedidos das origens escolhidas geram giftback. A lista traz as integrações conectadas e "
+              },
+              {
+                "type": "text",
+                "text": "Pedidos cadastrados no painel",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Todas as origens geram"
+          }
+        ],
+        [
+          {
+            "content": "Pedidos da loja física"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Geram giftback",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou "
+              },
+              {
+                "type": "text",
+                "text": "Não geram giftback",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": vale para pedidos com loja física vinculada"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Começa em "
+              },
+              {
+                "type": "text",
+                "text": "Geram giftback",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Não gerar em pedidos de assinatura"
+          },
+          {
+            "content": "Os pedidos recorrentes de assinatura ficam de fora"
+          },
+          {
+            "content": "Desligado: assinatura gera"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Página de consulta"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O link pessoal que vai nas suas mensagens funciona sempre. A "
+        },
+        {
+          "type": "text",
+          "text": "Página de consulta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", onde o cliente encontra o cupom informando telefone ou e-mail e CPF ou CNPJ, é opcional e começa desligada. O que o cliente vê nas duas está em "
+        },
+        {
+          "type": "text",
+          "text": "a página do giftback do cliente",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/giftback/pagina-do-cliente"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o painel não deixa salvar"
+    },
+    {
+      "type": "paragraph",
+      "content": "O painel não salva enquanto algum campo estiver fora da faixa, e mostra a mensagem abaixo do campo:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "Faixa aceita"
+        },
+        {
+          "content": "Mensagem na tela"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Porcentagem"
+          },
+          {
+            "content": "Maior que 0 e até 100"
+          },
+          {
+            "content": "Informe uma porcentagem entre 0,01 e 100."
+          }
+        ],
+        [
+          {
+            "content": "Origens"
+          },
+          {
+            "content": "Pelo menos uma, ou nenhuma para valer todas"
+          },
+          {
+            "content": "Escolha ao menos uma origem ou deixe em branco para todas."
+          }
+        ],
+        [
+          {
+            "content": "Prefixo do código"
+          },
+          {
+            "content": "1 a 16 caracteres, só letras e números"
+          },
+          {
+            "content": "Use só letras e números (até 16)."
+          }
+        ],
+        [
+          {
+            "content": "Validade (dias)"
+          },
+          {
+            "content": "Número inteiro de 1 a 3650"
+          },
+          {
+            "content": "Informe entre 1 e 3650 dias."
+          }
+        ],
+        [
+          {
+            "content": "O cupom vale no máximo (% do pedido)"
+          },
+          {
+            "content": "Maior que 0 e até 100, ou vazio"
+          },
+          {
+            "content": "Informe uma porcentagem entre 0,01 e 100."
+          }
+        ],
+        [
+          {
+            "content": "Liberar após (dias)"
+          },
+          {
+            "content": "Número inteiro de 0 a 365"
+          },
+          {
+            "content": "Informe entre 0 e 365 dias."
+          }
+        ],
+        [
+          {
+            "content": "Ignorar aprovações com mais de (horas)"
+          },
+          {
+            "content": "Número inteiro de 1 a 8760"
+          },
+          {
+            "content": "Informe entre 1 e 8760 horas."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Só a chave "
+            },
+            {
+              "type": "text",
+              "text": "Gerar giftback nas compras aprovadas",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ligada exige uma porcentagem maior que zero. As demais faixas valem sempre."
+            }
+          ]
+        }
+      ],
+      "title": "Com o programa desligado, a porcentagem pode ficar em zero"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Mudar a configuração depois"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "O valor de um giftback e a data em que ele libera ficam gravados quando o pedido é aprovado. Mudar a porcentagem só afeta os pedidos seguintes."
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Prefixo, validade e pedido mínimo do cupom são lidos na hora em que o cupom é criado. Giftbacks que ainda estão "
+            },
+            {
+              "type": "text",
+              "text": "Aguardando",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " a carência já nascem com a configuração nova."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Desligar o programa para de registrar giftbacks novos. Os cupons que já existem continuam valendo. Se o programa ainda estiver desligado quando chegar a hora de criar o cupom de um giftback "
+            },
+            {
+              "type": "text",
+              "text": "Aguardando",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", ele vira "
+            },
+            {
+              "type": "text",
+              "text": "Falhou",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Depois de religar, use "
+            },
+            {
+              "type": "text",
+              "text": "Tentar de novo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": "Religar o programa marca uma data de início nova: os pedidos feitos enquanto ele estava desligado não geram giftback, nem quando a integração sincroniza depois."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Quem pode ver o giftback não necessariamente pode mudar as configurações: o botão "
+            },
+            {
+              "type": "text",
+              "text": "Configurações",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " só aparece para quem tem essa permissão. As permissões do giftback ficam no grupo "
+            },
+            {
+              "type": "text",
+              "text": "Ferramentas",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", o mesmo do cashback, e quem já tinha acesso ao cashback recebeu também o acesso ao giftback. Veja "
+            },
+            {
+              "type": "text",
+              "text": "usuários e permissões",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "meu-negocio/usuarios-e-permissoes/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Ver e configurar são permissões separadas"
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "ferramentas/giftback/avisar-o-cliente",
+          "description": "Montar a automação que entrega o cupom ao cliente."
+        },
+        {
+          "ref": "ferramentas/giftback/acompanhar-os-giftbacks",
+          "description": "Ver quantos cupons nasceram, quantos foram usados e o que falhou."
+        }
+      ]
+    }
+  ]
+}

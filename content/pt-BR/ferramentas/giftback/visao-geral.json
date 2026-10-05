@@ -1,0 +1,786 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o giftback",
+  "subtitle": "Entenda quando o cupom nasce, quando fica disponível para o cliente e o que acontece se ele não usar.",
+  "updatedAt": "2026-10-05",
+  "tags": [
+    "giftback",
+    "cupom",
+    "recompra",
+    "fidelidade",
+    "carência",
+    "validade"
+  ],
+  "related": [
+    "ferramentas/giftback/ativar-o-programa",
+    "ferramentas/giftback/avisar-o-cliente",
+    "ferramentas/giftback/resolver-problemas",
+    "ferramentas/cashback/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O giftback dá ao cliente um cupom de desconto para a próxima compra, criado na sua loja assim que o pedido é aprovado. Não há saldo para acumular nem resgate para clicar: cada pedido que entra nas regras gera, no máximo, um cupom."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.giftback"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A configuração é uma só e vale para a loja inteira: um percentual, uma carência, uma validade. Não existe regra diferente por produto, por categoria ou por cliente."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O selo "
+            },
+            {
+              "type": "text",
+              "text": "Beta",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " aparece ao lado do título da tela. O recurso já funciona; o selo avisa que ele ainda está recebendo ajustes."
+            }
+          ]
+        }
+      ],
+      "title": "O giftback está em Beta"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O caminho de um giftback"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O pedido é aprovado. A Bevean calcula o percentual e registra o giftback como "
+            },
+            {
+              "type": "text",
+              "text": "Aguardando",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Passada a carência que você definiu, a Bevean cria o cupom na plataforma da sua loja. O giftback vira "
+            },
+            {
+              "type": "text",
+              "text": "Ativo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": "Uma automação sua avisa o cliente e entrega o código. O giftback não envia mensagem sozinho."
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O cliente usa o cupom em um pedido ("
+            },
+            {
+              "type": "text",
+              "text": "Usado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ") ou deixa passar da validade ("
+            },
+            {
+              "type": "text",
+              "text": "Vencido",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ")."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A Bevean cria o cupom na loja, mas quem conta ao cliente que ele ganhou é uma automação com o gatilho "
+            },
+            {
+              "type": "text",
+              "text": "Giftback gerado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Sem ela, o cliente só descobre o cupom se souber procurar."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Veja "
+            },
+            {
+              "type": "text",
+              "text": "como avisar o cliente sobre o giftback",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/giftback/avisar-o-cliente"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Sem automação, o cupom existe e ninguém avisa o cliente"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Giftback ou cashback"
+    },
+    {
+      "type": "paragraph",
+      "content": "São programas independentes, com tela, configuração e permissões próprias. Dá para ligar os dois ao mesmo tempo."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Característica"
+        },
+        {
+          "content": "Giftback"
+        },
+        {
+          "content": "Cashback"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "O que o cliente recebe"
+          },
+          {
+            "content": "Um cupom pronto, a cada pedido aprovado"
+          },
+          {
+            "content": "Um saldo que acumula. O cupom só nasce quando o cliente resgata"
+          }
+        ],
+        [
+          {
+            "content": "Quando o cupom é criado"
+          },
+          {
+            "content": "Na aprovação do pedido, ou depois da carência"
+          },
+          {
+            "content": "No resgate"
+          }
+        ],
+        [
+          {
+            "content": "O que o cliente precisa fazer"
+          },
+          {
+            "content": "Copiar o código e usar na próxima compra"
+          },
+          {
+            "content": "Abrir a página de resgate, resgatar e só então usar o cupom"
+          }
+        ],
+        [
+          {
+            "content": "Mais de um benefício aberto"
+          },
+          {
+            "content": "Por padrão, só o cupom mais recente vale"
+          },
+          {
+            "content": "Por padrão, o saldo soma tudo o que o cliente já ganhou"
+          }
+        ],
+        [
+          {
+            "content": "Onde configurar"
+          },
+          {
+            "content": [
+              {
+                "type": "uiPath",
+                "attrs": {
+                  "ref": "tools.giftback"
+                }
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "uiPath",
+                "attrs": {
+                  "ref": "tools.cashback"
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se a sua ideia é fazer o cliente voltar a comprar logo, o giftback entrega o incentivo pronto. Se é construir um saldo que cresce com o tempo, o cashback faz isso. Veja também "
+        },
+        {
+          "type": "text",
+          "text": "como funciona o cashback",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/cashback/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que gera giftback"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Situação"
+        },
+        {
+          "content": "Gera giftback?"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Pedido entra aprovado, ou passa de pendente para aprovado"
+          },
+          {
+            "content": "Sim, enquanto o programa estiver ativo"
+          }
+        ],
+        [
+          {
+            "content": "Pedido feito antes de você ativar o programa, ou antes de a loja ser conectada à Bevean"
+          },
+          {
+            "content": "Não. A ativação marca uma data de início e o que veio antes fica de fora"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Pedido abaixo da "
+              },
+              {
+                "type": "text",
+                "text": "Compra mínima para ganhar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Não"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Aprovação que chega muito depois (mais do que o limite de "
+              },
+              {
+                "type": "text",
+                "text": "Ignorar aprovações com mais de",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ")"
+              }
+            ]
+          },
+          {
+            "content": "Não. O pedido nem entra na lista"
+          }
+        ],
+        [
+          {
+            "content": "Pedido sem contato vinculado"
+          },
+          {
+            "content": "Não. Não há para quem criar o cupom"
+          }
+        ],
+        [
+          {
+            "content": "Pedido que entrou por importação de arquivo"
+          },
+          {
+            "content": "Não. Importação é carga de histórico"
+          }
+        ],
+        [
+          {
+            "content": "Pedido de uma origem que você deixou de fora, de loja física ou de assinatura, se você escolheu excluí-los"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Não. São as regras de "
+              },
+              {
+                "type": "text",
+                "text": "Quais compras participam",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Pedido cancelado, reembolsado ou com chargeback"
+          },
+          {
+            "content": "Não. E o giftback que ele já tinha é cancelado"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O giftback fica "
+            },
+            {
+              "type": "text",
+              "text": "Cancelado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e a Bevean tenta desativar o cupom na loja. Isso só funciona em Shopify, Bagy e wBuy: nas outras plataformas o cupom segue valendo até vencer, e a tela marca o giftback com "
+            },
+            {
+              "type": "text",
+              "text": "Ativo na loja",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se o cliente já tinha usado o cupom antes do cancelamento, o giftback continua "
+            },
+            {
+              "type": "text",
+              "text": "Usado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Pedido que cai depois de o cupom existir"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando o cupom nasce"
+    },
+    {
+      "type": "paragraph",
+      "content": "A carência é o tempo entre a aprovação do pedido e a criação do cupom. Serve para não dar cupom por um pedido que ainda pode ser cancelado ou devolvido."
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Com carência "
+            },
+            {
+              "type": "text",
+              "text": "zero",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", o cupom é criado logo depois da aprovação."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Com carência, o giftback fica "
+            },
+            {
+              "type": "text",
+              "text": "Aguardando",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e a tela mostra "
+            },
+            {
+              "type": "text",
+              "text": "Libera em",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " com a data. Se o pedido for cancelado nesse período, o cupom nem chega a ser criado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Com 7 dias de carência e 30 de validade, o cliente tem os 30 dias inteiros a partir do sétimo, não 23. Entre a aprovação do pedido e o vencimento do cupom passam 37 dias."
+        }
+      ],
+      "title": "A validade só começa a contar quando o cupom é criado"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os seis estados de um giftback"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada giftback aparece na lista de "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.giftback"
+          }
+        },
+        {
+          "type": "text",
+          "text": " com uma destas situações:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Situação"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Aguardando"
+          },
+          {
+            "content": "O pedido está aprovado, mas o cupom ainda não foi criado: espera a carência ou a criação na loja"
+          }
+        ],
+        [
+          {
+            "content": "Ativo"
+          },
+          {
+            "content": "O cupom existe na loja, está dentro da validade e ainda não foi usado"
+          }
+        ],
+        [
+          {
+            "content": "Usado"
+          },
+          {
+            "content": "O cliente usou o cupom em um pedido"
+          }
+        ],
+        [
+          {
+            "content": "Vencido"
+          },
+          {
+            "content": "Passou da validade sem ser usado. Não volta"
+          }
+        ],
+        [
+          {
+            "content": "Cancelado"
+          },
+          {
+            "content": "Deixou de valer: o pedido que o gerou caiu, ou um giftback mais novo o substituiu. O motivo aparece embaixo da situação"
+          }
+        ],
+        [
+          {
+            "content": "Falhou"
+          },
+          {
+            "content": "A Bevean não conseguiu criar o cupom na loja. O motivo aparece embaixo e dá para tentar de novo"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Como cada situação aparece para você, e o que fazer com as que falham, está em "
+        },
+        {
+          "type": "text",
+          "text": "acompanhar os giftbacks e os cupons",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/giftback/acompanhar-os-giftbacks"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o giftback não faz"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Não dá percentual diferente por produto, categoria ou cliente. A regra é uma só."
+        },
+        {
+          "content": "Não guarda saldo: cada giftback é um cupom de valor fixo e de uso único."
+        },
+        {
+          "content": "Não avisa o cliente por conta própria. O aviso é uma automação que você cria."
+        },
+        {
+          "content": "Não gera giftback para pedido importado por arquivo, nem para pedido feito antes da ativação."
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Não funciona em qualquer plataforma. O cupom é criado na plataforma da sua loja, e nem todas permitem isso. A lista está em "
+            },
+            {
+              "type": "text",
+              "text": "ativar e configurar o giftback",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "ferramentas/giftback/ativar-o-programa"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "ferramentas/giftback/ativar-o-programa",
+          "description": "Ligar o programa e definir percentual, carência, validade e regras."
+        },
+        {
+          "ref": "ferramentas/giftback/avisar-o-cliente",
+          "description": "Montar a automação que entrega o cupom e o lembrete de vencimento."
+        }
+      ]
+    }
+  ]
+}

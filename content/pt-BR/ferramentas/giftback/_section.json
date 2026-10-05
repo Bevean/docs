@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Giftback",
+  "description": "Dê ao cliente um cupom para a próxima compra, criado na sua loja assim que o pedido é aprovado.",
+  "icon": "gift",
+  "articles": [
+    "visao-geral",
+    "ativar-o-programa",
+    "avisar-o-cliente",
+    "pagina-do-cliente",
+    "acompanhar-os-giftbacks",
+    "resolver-problemas"
+  ]
+}

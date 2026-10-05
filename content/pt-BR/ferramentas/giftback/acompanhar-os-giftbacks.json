@@ -1,0 +1,1307 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Acompanhar os giftbacks e os cupons",
+  "subtitle": "Leia os números do topo, entenda cada linha da lista e saiba o que fazer com o giftback que falhou ou que ficou ativo na loja.",
+  "updatedAt": "2026-10-05",
+  "tags": [
+    "acompanhar giftback",
+    "lista",
+    "situação",
+    "tentar de novo",
+    "cupom ativo na loja",
+    "receita"
+  ],
+  "related": [
+    "ferramentas/giftback/visao-geral",
+    "ferramentas/giftback/resolver-problemas",
+    "ferramentas/giftback/ativar-o-programa"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A tela do giftback mostra, em um só lugar, quantos cupons nasceram, quantos voltaram em venda e quais precisam da sua atenção. Cada giftback é uma linha, do pedido que o gerou até o pedido que usou o cupom."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "tools.giftback"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". O resumo de cada contato fica na aba "
+        },
+        {
+          "type": "text",
+          "text": "Informações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " do contato, em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.customers"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", e os cupons ficam também em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.coupons"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Com o programa ligado, o subtítulo da tela resume as regras em uma linha, por exemplo “10% sobre produtos (sem frete) · cupom na aprovação · vale 30 dias”."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os números do topo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Número"
+        },
+        {
+          "content": "O que mede"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Cupons gerados"
+          },
+          {
+            "content": "Quantos cupons foram criados na loja, com o valor somado em “R$ X em cupons”. Conta todos, mesmo os que já foram usados, venceram ou foram cancelados depois"
+          }
+        ],
+        [
+          {
+            "content": "Cupons usados"
+          },
+          {
+            "content": "Quantos cupons voltaram em pedido, a taxa de uso (cupons usados sobre cupons gerados) e o valor dos pedidos em “R$ X em vendas”"
+          }
+        ],
+        [
+          {
+            "content": "Aguardando liberação"
+          },
+          {
+            "content": "Quantos giftbacks esperam a carência ou a criação do cupom, com o valor “a liberar”"
+          }
+        ],
+        [
+          {
+            "content": "Falhas"
+          },
+          {
+            "content": "Quantos giftbacks não tiveram o cupom criado na loja. Embaixo vem também quantos cupons “vencidos sem uso”"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Eles contam o programa inteiro desde o início. Os filtros da tabela mudam só a lista de baixo."
+        }
+      ],
+      "title": "Os números do topo não respeitam os filtros da lista"
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se o pedido que usou o cupom for cancelado ou reembolsado depois, o valor em vendas daquele cupom volta a zero. O cupom continua marcado como "
+            },
+            {
+              "type": "text",
+              "text": "Usado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "A venda de um pedido cancelado deixa de contar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A lista"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Coluna"
+        },
+        {
+          "content": "O que mostra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Contato"
+          },
+          {
+            "content": "O nome do cliente"
+          }
+        ],
+        [
+          {
+            "content": "Valor"
+          },
+          {
+            "content": "O valor do cupom"
+          }
+        ],
+        [
+          {
+            "content": "Situação"
+          },
+          {
+            "content": "A etiqueta do giftback, mais uma linha de apoio quando há o que explicar. Veja a tabela abaixo"
+          }
+        ],
+        [
+          {
+            "content": "Cupom"
+          },
+          {
+            "content": "O código criado na loja. Fica “—” enquanto o cupom não existe"
+          }
+        ],
+        [
+          {
+            "content": "Validade"
+          },
+          {
+            "content": "Quando o cupom vence"
+          }
+        ],
+        [
+          {
+            "content": "Criado em"
+          },
+          {
+            "content": "Quando o pedido foi aprovado e o giftback, registrado"
+          }
+        ],
+        [
+          {
+            "content": "Pedido e Gerado em"
+          },
+          {
+            "content": "O número do pedido que gerou o giftback e a data em que o cupom foi criado. As duas colunas começam ocultas e aparecem no controle de colunas da tabela"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Dá para ordenar por "
+        },
+        {
+          "type": "text",
+          "text": "Valor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Situação",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Validade",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Gerado em",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Criado em",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e filtrar por "
+        },
+        {
+          "type": "text",
+          "text": "Situação",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (uma ou várias) e por "
+        },
+        {
+          "type": "text",
+          "text": "Criado em",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com os atalhos Hoje, Últimos 7 dias, Últimos 30 dias e Últimos 90 dias."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "O que a coluna Situação conta"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Você vê"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Aguardando",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e “Libera em” uma data"
+              }
+            ]
+          },
+          {
+            "content": "O pedido está aprovado e o cupom ainda não foi criado. A data é o fim da carência"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Ativo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O cupom existe na loja e vale. É o único estado em que o cliente consegue usar o código"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Usado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e “Gerou R$ X”"
+              }
+            ]
+          },
+          {
+            "content": "O cupom foi usado. O valor é o do pedido que o usou"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Vencido",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Passou da validade sem uso"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Cancelado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e o motivo"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O motivo é "
+              },
+              {
+                "type": "text",
+                "text": "Pedido cancelado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Pedido reembolsado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Chargeback",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou "
+              },
+              {
+                "type": "text",
+                "text": "Substituído por um giftback mais novo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Cancelado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " com a marca vermelha "
+              },
+              {
+                "type": "text",
+                "text": "Ativo na loja",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O giftback foi cancelado, mas o cupom ainda vale na loja: a plataforma não permite desativar, ou a desativação falhou"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Falhou",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e “Motivo:” um texto"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A Bevean não conseguiu criar o cupom. O texto é o motivo. Veja "
+              },
+              {
+                "type": "text",
+                "text": "o que fazer com cada motivo",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/giftback/resolver-problemas"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "O menu de cada linha"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Ação"
+        },
+        {
+          "content": "Quando aparece"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Copiar código"
+          },
+          {
+            "content": "A linha tem um cupom"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Copia o código. A mensagem "
+              },
+              {
+                "type": "text",
+                "text": "Código copiado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " confirma"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Tentar de novo"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O giftback está "
+              },
+              {
+                "type": "text",
+                "text": "Falhou",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e você tem permissão para alterar o giftback"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Volta o giftback para "
+              },
+              {
+                "type": "text",
+                "text": "Aguardando",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e a Bevean tenta criar o cupom de novo. A mensagem "
+              },
+              {
+                "type": "text",
+                "text": "Pedido enviado. Atualize a lista em alguns instantes.",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " confirma"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Tentar desativar de novo"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O giftback está "
+              },
+              {
+                "type": "text",
+                "text": "Cancelado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e a desativação do cupom na loja falhou"
+              }
+            ]
+          },
+          {
+            "content": "A Bevean tenta desativar o cupom na loja outra vez"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A validade do cupom conta a partir da criação, não do pedido. Um giftback que falhou e foi retomado dias depois começa a validade do dia em que deu certo."
+        }
+      ],
+      "title": "O cupom de um giftback que você tenta de novo nasce na hora"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os avisos no topo da tela"
+    },
+    {
+      "type": "paragraph",
+      "content": "Com o programa ligado, a tela pode mostrar avisos que dizem o que está impedindo o giftback de funcionar bem:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aviso"
+        },
+        {
+          "content": "O que significa"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Nenhuma integração cria cupom",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Nenhuma loja conectada permite criar cupom. Os pedidos entram na lista, mas o cupom não é criado"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Conectar uma plataforma que permita. A lista está em "
+              },
+              {
+                "type": "text",
+                "text": "ativar e configurar o giftback",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/giftback/ativar-o-programa"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Cupom de pedido cancelado pode continuar valendo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "A plataforma da loja não permite desativar cupom pela Bevean. Quando um pedido cai, o giftback é cancelado aqui, mas o cupom segue válido na loja até vencer. O aviso conta também quantos giftbacks estão nessa situação e o valor somado"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Desativar os cupons à mão no admin da loja, usando o código da coluna "
+              },
+              {
+                "type": "text",
+                "text": "Cupom",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Envie o cupom ao cliente",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O cupom é criado na loja, mas a mensagem sai por uma automação. O botão "
+              },
+              {
+                "type": "text",
+                "text": "Criar automação",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " leva a Automações"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Montar a automação do gatilho "
+              },
+              {
+                "type": "text",
+                "text": "Giftback gerado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Veja "
+              },
+              {
+                "type": "text",
+                "text": "avisar o cliente sobre o giftback",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/giftback/avisar-o-cliente"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Programa de giftback",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " com a marca "
+              },
+              {
+                "type": "text",
+                "text": "Inativo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O programa está desligado: nenhuma compra gera giftback. O botão "
+              },
+              {
+                "type": "text",
+                "text": "Ativar giftback",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " abre as configurações"
+              }
+            ]
+          },
+          {
+            "content": "Ligar o programa, se foi sem querer"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Dois estados vazios aparecem quando ainda não há nada para listar: "
+        },
+        {
+          "type": "text",
+          "text": "Nenhum giftback gerado ainda",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com o programa ativo e esperando o primeiro pedido aprovado dentro das regras, e "
+        },
+        {
+          "type": "text",
+          "text": "Nenhum giftback encontrado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", quando os filtros da lista não casam com nenhum giftback."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "No contato"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Abra o contato em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.customers"
+          }
+        },
+        {
+          "type": "text",
+          "text": " e, na aba "
+        },
+        {
+          "type": "text",
+          "text": "Informações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", procure o cartão "
+        },
+        {
+          "type": "text",
+          "text": "Giftback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Ele só aparece quando o contato tem pelo menos um giftback e você tem permissão para ver o giftback."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "O que aparece"
+        },
+        {
+          "content": "O que significa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "O cupom atual"
+          },
+          {
+            "content": "O código do cupom ativo, ou o valor se o cupom ainda não existe, com a etiqueta da situação. Se não houver ativo, o cartão mostra o giftback aguardando"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Valor, "
+              },
+              {
+                "type": "text",
+                "text": "Válido até",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Pedidos a partir de",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Pedido",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O valor do cupom, a validade, o pedido mínimo para usar e o pedido que gerou o giftback"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Libera em",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Para um giftback aguardando, a data em que o cupom será criado"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Nenhum cupom ativo agora.",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O contato só tem giftbacks usados, vencidos, cancelados ou que falharam"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Anteriores",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Os até 5 giftbacks anteriores, com valor e situação. Os cancelados em que o cupom segue valendo na loja trazem a marca "
+              },
+              {
+                "type": "text",
+                "text": "Ativo na loja",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Na lista de cupons"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os cupons do giftback também aparecem em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "content.coupons"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", junto com os da loja e os do cashback. A coluna "
+        },
+        {
+          "type": "text",
+          "text": "Origem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra "
+        },
+        {
+          "type": "text",
+          "text": "Giftback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e dá para filtrar por ela."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Existe um relatório de giftback em Relatórios?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Hoje não há um relatório dedicado, como o de cashback. Os números ficam no topo da tela do giftback e na lista."
+            }
+          ]
+        },
+        {
+          "question": "Dá para cancelar um giftback pelo painel?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não há ação de cancelar. Um giftback é cancelado quando o pedido cai ou quando um mais novo o substitui. Para invalidar um cupom específico, desative o código no admin da sua loja."
+            }
+          ]
+        },
+        {
+          "question": "Por que um giftback que já passou da validade ainda aparece como Ativo?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A situação muda para "
+                },
+                {
+                  "type": "text",
+                  "text": "Vencido",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " quando a Bevean confere os cupons, e essa conferência acontece a cada meia hora. Logo depois da validade, a linha pode levar até cerca de meia hora para mudar. A página do cliente não espera: ela já mostra o cupom como vencido."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "O contato não tem o cartão Giftback. Por quê?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "O cartão só aparece quando o contato tem giftback e você tem permissão para ver o giftback. Contato que nunca gerou cupom não mostra o cartão."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "ferramentas/giftback/resolver-problemas",
+          "description": "O giftback não foi gerado, falhou ou o cupom não funciona."
+        },
+        {
+          "ref": "ferramentas/giftback/avisar-o-cliente",
+          "description": "Montar o aviso e o lembrete de vencimento."
+        }
+      ]
+    }
+  ]
+}
