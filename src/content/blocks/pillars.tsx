@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import type { InlineNode, PillarsBlock } from '#schema'
 import { defineBlock } from '../block-contract.ts'
 import { inlineToPlainText, normalizeInline } from '../inline-normalize.ts'
@@ -7,6 +8,8 @@ import { Inline } from '../renderer/inline-renderer.tsx'
 interface PillarsModel {
   items: { title: string; content: InlineNode[] }[]
 }
+
+const pillarColumns = (count: number) => (count === 4 ? 2 : Math.min(count, 3))
 
 export const pillarsBlock = defineBlock<PillarsBlock, PillarsModel>({
   type: 'pillars',
@@ -19,8 +22,8 @@ export const pillarsBlock = defineBlock<PillarsBlock, PillarsModel>({
   }),
   render: (model, ctx) => (
     <ul
-      className="grid gap-3 sm:grid-cols-2"
-      style={{ gridTemplateColumns: `repeat(${Math.min(model.items.length, 3)}, minmax(0, 1fr))` }}
+      className="grid grid-cols-1 gap-3 sm:[grid-template-columns:repeat(var(--pillar-cols),minmax(0,1fr))]"
+      style={{ '--pillar-cols': pillarColumns(model.items.length) } as CSSProperties}
     >
       {model.items.map((item, i) => (
         <li key={i} className="rounded-xl border border-border bg-card p-5">
