@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como o cliente resgata o cashback",
   "subtitle": "Escolha entre cupom e créditos na loja, e saiba exatamente o que o cliente vê ao abrir o link de resgate.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-05",
   "tags": [
     "resgate",
     "cupom",
@@ -132,7 +132,7 @@
             "content": "Exige cadastro do cliente na loja"
           },
           {
-            "content": "Não, mas quando existe o cupom fica restrito a ele"
+            "content": "Não. Em Shopify, Bagy e VNDA, quando a Bevean conhece o cadastro dele, o cupom fica restrito a ele"
           },
           {
             "content": "Sim. Sem o cadastro na plataforma, o resgate não conclui"
@@ -471,7 +471,7 @@
             "content": "Dono"
           },
           {
-            "content": "Quando a Bevean conhece o cadastro do cliente na plataforma, o cupom fica restrito a ele"
+            "content": "Em Shopify, Bagy e VNDA, quando a Bevean conhece o cadastro do cliente na plataforma, o cupom fica restrito a ele. Nas outras plataformas, qualquer pessoa com o código consegue usá-lo uma vez"
           }
         ],
         [

@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "O cashback não está funcionando",
   "subtitle": "Cashback que não foi gerado, resgate que não conclui, aviso que não sai: onde olhar em cada caso.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-05",
   "tags": [
     "problema",
     "erro",
@@ -477,7 +477,7 @@
             "content": "Ele está comprando com o mesmo cadastro?"
           },
           {
-            "content": "Quando a Bevean conhece o cadastro dele na loja, o cupom fica restrito a esse cadastro"
+            "content": "Em Shopify, Bagy e VNDA, quando a Bevean conhece o cadastro dele na loja, o cupom fica restrito a esse cadastro. Nas outras plataformas, o código vale para qualquer pessoa, uma vez"
           }
         ],
         [
