@@ -1,0 +1,479 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "O Webchat não está funcionando",
+  "subtitle": "Roteiros para quando o chat não aparece, a mensagem do visitante não sai ou a conversa anterior some.",
+  "updatedAt": "2026-10-13",
+  "tags": [
+    "chat não aparece",
+    "não enviada",
+    "chat sumiu",
+    "chat abre sozinho",
+    "erro no chat"
+  ],
+  "related": [
+    "configuracoes/webchat/visao-geral",
+    "configuracoes/webchat/criar-e-configurar",
+    "configuracoes/webchat/instalar-em-outros-sites"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "A maioria dos casos cai em três situações: o chat não aparece no site, a mensagem do visitante fica como Não enviada, ou a conversa anterior não aparece mais."
+    },
+    {
+      "type": "callout",
+      "variant": "success",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Em "
+            },
+            {
+              "type": "uiPath",
+              "attrs": {
+                "ref": "settings.channels.webchat"
+              }
+            },
+            {
+              "type": "text",
+              "text": ", o chat precisa estar "
+            },
+            {
+              "type": "text",
+              "text": "Ativo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Desligado deixa de aparecer nas lojas e não envia mensagens. Veja "
+            },
+            {
+              "type": "text",
+              "text": "Ativo e Desligado",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "configuracoes/webchat/visao-geral"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Antes de investigar, confira o status na lista"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O chat não aparece na loja"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O chat está em Numa loja ou Em todas as lojas?"
+          },
+          {
+            "content": "Só onde eu instalar nunca aparece sozinho na loja. Mude o lugar ou instale o código"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A loja tem o "
+              },
+              {
+                "type": "text",
+                "text": "script da Bevean",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/tracking/visao-geral"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " instalado?"
+              }
+            ]
+          },
+          {
+            "content": "Sem o script, o chat não aparece sozinho. Instale o script ou use o código do chat"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O status do chat é Ativo?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Desligado não aparece nas lojas. Adicione o canal de volta em "
+              },
+              {
+                "type": "uiPath",
+                "attrs": {
+                  "ref": "helpdesk.settings.distribution"
+                }
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "A loja tem outro chat próprio?"
+          },
+          {
+            "content": "O chat da loja aparece no lugar do chat de todas as lojas"
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "O chat tem Domínios permitidos preenchido?"
+          },
+          {
+            "content": "O domínio da loja precisa estar na lista. O curinga *.loja.com.br não cobre loja.com.br"
+          }
+        ],
+        [
+          {
+            "content": "6"
+          },
+          {
+            "content": "Você acabou de salvar?"
+          },
+          {
+            "content": "A mudança leva alguns minutos para chegar ao site. Recarregue a página depois"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O chat não aparece no site onde instalei o código"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O código foi colado inteiro?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O chat precisa da linha que começa com "
+              },
+              {
+                "type": "text",
+                "text": "<script",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". O trecho Embutido não traz essa linha: copie do trecho Botão flutuante"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "O site está em Domínios permitidos?"
+          },
+          {
+            "content": "Com a lista preenchida, um site fora dela não mostra o chat"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O chat foi excluído?"
+          },
+          {
+            "content": "Chat excluído sai do ar em todo lugar. Crie outro e troque o código"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A mensagem do visitante fica como Não enviada"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O chat está Desligado?"
+          },
+          {
+            "content": "Num site com o código instalado, o chat continua visível, mas não envia. Ligue o canal ou remova o código"
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "A mensagem é muito longa?"
+          },
+          {
+            "content": "O limite é 4.000 caracteres por mensagem"
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "O visitante mandou muitas mensagens seguidas?"
+          },
+          {
+            "content": "Mais de 15 mensagens por minuto são recusadas. Basta esperar um pouco e mandar de novo"
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "Apareceu Arquivo acima de 25 MB?"
+          },
+          {
+            "content": "O arquivo passa do limite. Envie um arquivo menor"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O visitante não consegue começar a conversa"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Com o pré-chat ligado, o visitante precisa informar nome e um e-mail válido antes da primeira mensagem. As mensagens que ele vê são "
+        },
+        {
+          "type": "text",
+          "text": "Informe seu nome.",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Informe um e-mail válido.",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Para tirar essa etapa, desligue "
+        },
+        {
+          "type": "text",
+          "text": "Pedir nome e e-mail antes da conversa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "O chat abre sozinho toda hora. Por quê?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Com Abrir sozinho após (segundos) preenchido, o chat abre de novo a cada página que o visitante carrega, mesmo depois de fechado. Aumente o tempo ou deixe o campo vazio."
+            }
+          ]
+        },
+        {
+          "question": "A aba de perguntas frequentes não aparece. O que falta?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Ela precisa de três coisas: o formato Completo, o interruptor Perguntas frequentes ligado e a IA ligada no canal, em "
+                },
+                {
+                  "type": "uiPath",
+                  "attrs": {
+                    "ref": "helpdesk.settings.assistant"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "O cliente diz que a conversa antiga sumiu. O que aconteceu?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "O histórico fica no navegador em que a conversa aconteceu, por 90 dias desde o último uso. Em outro navegador, em outro aparelho ou depois de limpar os dados do site, começa uma conversa nova. As conversas antigas continuam no Atendimento."
+            }
+          ]
+        },
+        {
+          "question": "O cliente aparece como Visitante. Como mostrar o nome?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Ligue o pré-chat para pedir nome e e-mail, ou faça o seu site informar quem é o cliente logado. Veja "
+                },
+                {
+                  "type": "text",
+                  "text": "como identificar o cliente logado",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "configuracoes/webchat/identificar-o-cliente-logado"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Posso ter mais de um chat?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Sim. Cada loja pode ter o seu chat, e você pode criar outros para sites e apps em Só onde eu instalar."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

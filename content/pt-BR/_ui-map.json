@@ -328,5 +328,21 @@
       "Relatórios"
     ],
     "href": "/reports/list"
+  },
+  "settings.channels.webchat": {
+    "segments": [
+      "Configurações",
+      "Canais",
+      "Webchat"
+    ],
+    "href": "/settings/channels/webchat"
+  },
+  "helpdesk.settings.assistant": {
+    "segments": [
+      "Atendimento",
+      "Configurações",
+      "Assistente de IA"
+    ],
+    "href": "/helpdesk/settings/assistant"
   }
 }

@@ -1,0 +1,392 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Instalar o chat num site, landing page ou app",
+  "subtitle": "Use os trechos de código do editor para colocar o chat onde o script da loja não chega.",
+  "updatedAt": "2026-10-13",
+  "tags": [
+    "código do chat",
+    "instalar chat",
+    "landing page",
+    "webview",
+    "fale conosco",
+    "embutir chat"
+  ],
+  "related": [
+    "configuracoes/webchat/visao-geral",
+    "configuracoes/webchat/criar-e-configurar",
+    "configuracoes/webchat/identificar-o-cliente-logado"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Nas lojas escolhidas em Numa loja ou Em todas as lojas, o chat aparece sozinho pelo script da Bevean e não é preciso instalar nada. Os trechos deste artigo são para os outros lugares: um site que não é a loja, uma landing page, uma página de Fale conosco ou um app."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde ficam os trechos: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "no editor do chat, seção "
+        },
+        {
+          "type": "text",
+          "text": "Instalação",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Cada trecho tem um botão "
+        },
+        {
+          "type": "text",
+          "text": "Copiar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e já vem com a chave do seu chat."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Para um chat que não deve aparecer nas lojas, escolha Só onde eu instalar em Onde aparece. Os trechos funcionam com qualquer chat, inclusive os que já aparecem nas lojas."
+        }
+      ],
+      "title": "Chat que só aparece onde você instala"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os três jeitos de instalar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Trecho no editor"
+        },
+        {
+          "content": "Como o chat aparece"
+        },
+        {
+          "content": "Onde colar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Botão flutuante (qualquer site)"
+          },
+          {
+            "content": "O botão no canto da tela, como na loja"
+          },
+          {
+            "content": "No HTML das páginas onde o chat deve aparecer"
+          }
+        ],
+        [
+          {
+            "content": "Embutido numa página (ex.: Fale conosco)"
+          },
+          {
+            "content": "O chat aberto dentro da página, sem botão"
+          },
+          {
+            "content": "No ponto da página onde o chat deve ficar"
+          }
+        ],
+        [
+          {
+            "content": "Link para app (WebView)"
+          },
+          {
+            "content": "O chat ocupando a tela inteira"
+          },
+          {
+            "content": "No app, como endereço de uma tela que abre uma página da web"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Botão flutuante"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Copie o trecho Botão flutuante (qualquer site)",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Ele tem duas linhas: a que carrega o chat e a do próprio chat."
+            }
+          ]
+        },
+        {
+          "title": "Cole no HTML das páginas",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Se o seu site usa um modelo comum para todas as páginas, cole no modelo e o chat aparece no site inteiro."
+            }
+          ]
+        },
+        {
+          "title": "Abra o site e confira",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O botão aparece na posição escolhida em Aparência."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Embutido numa página"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O trecho "
+        },
+        {
+          "type": "text",
+          "text": "Embutido numa página",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " traz só o chat, sem a linha que carrega o código. Cole na mesma página também a primeira linha do trecho Botão flutuante, a que começa com "
+        },
+        {
+          "type": "text",
+          "text": "<script",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O chat embutido ocupa 600 px de altura. Para mudar, troque o valor de "
+        },
+        {
+          "type": "text",
+          "text": "height",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no próprio trecho:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": "html",
+      "code": "<bevean-messenger channel-key=\"…\" gateway-url=\"…\" mode=\"inline\" style=\"display:block;height:600px\"></bevean-messenger>"
+    },
+    {
+      "type": "paragraph",
+      "content": "O chat embutido não tem botão, então não usa o menu do botão nem a abertura automática."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Link para app"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O "
+        },
+        {
+          "type": "text",
+          "text": "Link para app (WebView)",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " é um endereço que abre o chat em tela cheia. Use no seu app numa tela que mostra uma página da web."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Abrir o chat por um botão seu"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Numa página com o chat instalado, um botão seu pode abrir o chat. Por exemplo, um link "
+        },
+        {
+          "type": "text",
+          "text": "Fale com a gente",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no rodapé:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": "html",
+      "code": "<button onclick=\"document.querySelector('bevean-messenger').open()\">Fale com a gente</button>"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para fechar, use "
+        },
+        {
+          "type": "text",
+          "text": "close()",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no lugar de "
+        },
+        {
+          "type": "text",
+          "text": "open()",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Antes de publicar"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Se o chat tem "
+            },
+            {
+              "type": "text",
+              "text": "Domínios permitidos",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " preenchido, inclua o domínio do site onde você instalou. Num site fora da lista, o chat não aparece."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Se o cliente faz login no seu site, informe ao chat quem ele é. Veja "
+            },
+            {
+              "type": "text",
+              "text": "como identificar o cliente logado",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "configuracoes/webchat/identificar-o-cliente-logado"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

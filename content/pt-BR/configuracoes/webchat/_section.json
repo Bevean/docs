@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Webchat",
+  "description": "Coloque um chat no site da sua loja e atenda as mensagens no Atendimento da Bevean.",
+  "icon": "globe",
+  "articles": [
+    "visao-geral",
+    "criar-e-configurar",
+    "instalar-em-outros-sites",
+    "identificar-o-cliente-logado",
+    "resolver-problemas"
+  ]
+}

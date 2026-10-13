@@ -1,0 +1,439 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona o Webchat",
+  "subtitle": "O chat que aparece no site da sua loja. Entenda onde ele aparece, o que o atendente recebe e como o visitante volta para a conversa.",
+  "updatedAt": "2026-10-13",
+  "tags": [
+    "chat no site",
+    "chat da loja",
+    "widget",
+    "live chat",
+    "botão flutuante"
+  ],
+  "related": [
+    "configuracoes/webchat/criar-e-configurar",
+    "configuracoes/webchat/instalar-em-outros-sites",
+    "configuracoes/webchat/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O Webchat é o chat que aparece no site da sua loja. As mensagens chegam na mesma caixa de entrada do Atendimento, com distribuição, SLA e IA, como os outros canais."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.channels.webchat"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Um chat para cada lugar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada Webchat é um canal próprio, com aparência, textos e menu independentes. Você pode ter um chat para cada loja e outros para um app ou uma landing page."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Onde o chat aparece"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao criar um chat, você escolhe "
+        },
+        {
+          "type": "text",
+          "text": "Onde aparece",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". As duas primeiras opções usam o script da Bevean que já está instalado na loja, então não é preciso colar código nenhum."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Opção"
+        },
+        {
+          "content": "Onde o chat aparece"
+        },
+        {
+          "content": "Precisa instalar código?"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Numa loja"
+          },
+          {
+            "content": "Nas páginas da loja escolhida"
+          },
+          {
+            "content": "Não"
+          }
+        ],
+        [
+          {
+            "content": "Em todas as lojas"
+          },
+          {
+            "content": "Em todas as lojas com o script da Bevean que não têm um chat próprio"
+          },
+          {
+            "content": "Não"
+          }
+        ],
+        [
+          {
+            "content": "Só onde eu instalar"
+          },
+          {
+            "content": "Só no site, landing page ou app onde você colar o código"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Sim. Veja "
+              },
+              {
+                "type": "text",
+                "text": "como instalar fora da loja",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "configuracoes/webchat/instalar-em-outros-sites"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A lista de lojas mostra as lojas de e-commerce conectadas em Integrações, com o nome da plataforma e o endereço da loja. Para o chat aparecer sozinho, a loja precisa ter o "
+        },
+        {
+          "type": "text",
+          "text": "script da Bevean",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "ferramentas/tracking/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " instalado."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Uma loja aceita um único chat em Numa loja, e a conta inteira aceita um único chat em Em todas as lojas. Quando a loja tem um chat próprio, ele aparece no lugar do chat de todas as lojas."
+        },
+        {
+          "type": "paragraph",
+          "content": "Só onde eu instalar não tem essa restrição: você pode criar quantos quiser."
+        }
+      ],
+      "title": "Cada loja tem um chat automático por vez"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ativo e Desligado"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O status de cada chat aparece na lista e no topo do editor. Um chat novo nasce "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O chat fica "
+        },
+        {
+          "type": "text",
+          "text": "Desligado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " quando o canal é removido do chat em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.settings.distribution"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", pelo botão "
+        },
+        {
+          "type": "text",
+          "text": "Remover do chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Para ligar de novo, use "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar canal",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na mesma tela."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Nas lojas, o chat desligado deixa de aparecer. Mas num site onde você instalou o código, ele continua visível e as mensagens do visitante não são enviadas: aparecem como Não enviada. Para tirar o chat desse site, remova o código da página ou exclua o chat."
+        }
+      ],
+      "title": "Desligado não tira o chat de um site onde você colou o código"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o atendente recebe"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "A conversa chega na caixa de entrada com o ícone do Webchat. Nas abas e nos filtros, o canal aparece como Web."
+        },
+        {
+          "content": "Visitante que não se identificou aparece como Visitante seguido de um código de 5 caracteres, por exemplo Visitante ABC12."
+        },
+        {
+          "content": "Não existe janela de 24 horas: dá para responder a qualquer momento."
+        },
+        {
+          "content": "O atendente pode enviar imagem, vídeo e documento. Áudio não está disponível neste canal."
+        },
+        {
+          "content": "As mensagens rápidas funcionam como nos outros canais."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "O visitante pode enviar arquivos de qualquer tipo, um por vez, com até 25 MB cada."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando o contato e a conversa são criados"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Abrir o chat não cria nada no CRM. A conversa e o contato nascem quando o visitante manda a primeira mensagem. Quando o seu site informa quem é o cliente, a conversa é ligada a ele: veja "
+        },
+        {
+          "type": "text",
+          "text": "como identificar o cliente logado",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "configuracoes/webchat/identificar-o-cliente-logado"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O visitante volta para a conversa"
+    },
+    {
+      "type": "paragraph",
+      "content": "No mesmo navegador, o visitante continua a conversa de onde parou e vê o histórico, sem precisar de login. Isso vale por 90 dias desde a última vez que ele usou o chat."
+    },
+    {
+      "type": "paragraph",
+      "content": "Em outro navegador ou outro aparelho, ou depois de limpar os dados do site, o visitante começa uma conversa nova."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "IA no Webchat"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um chat novo nasce com a IA desligada. Para ligar, abra "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.settings.assistant"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", aba "
+        },
+        {
+          "type": "text",
+          "text": "Canais",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e ligue o interruptor do seu Webchat. As regras da IA para o canal ficam no botão "
+        },
+        {
+          "type": "text",
+          "text": "Regras",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", na mesma linha."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "No site, enquanto a IA prepara a resposta, o visitante vê o indicador de digitando."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Horário de atendimento"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O Webchat segue o horário de atendimento configurado para o canal na Distribuição, como os outros canais. Veja "
+        },
+        {
+          "type": "text",
+          "text": "como configurar o horário de atendimento",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/distribuicao/configurar-horario-de-atendimento"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ]
+}

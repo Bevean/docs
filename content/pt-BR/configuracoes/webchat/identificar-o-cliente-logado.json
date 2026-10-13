@@ -1,0 +1,490 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Identificar o cliente logado no chat",
+  "subtitle": "Informe ao chat quem é o cliente que já fez login no seu site, e comprove a identidade com o segredo de verificação.",
+  "updatedAt": "2026-10-13",
+  "tags": [
+    "userHash",
+    "identify",
+    "cliente logado",
+    "segredo de verificação",
+    "HMAC"
+  ],
+  "related": [
+    "configuracoes/webchat/instalar-em-outros-sites",
+    "configuracoes/webchat/criar-e-configurar",
+    "configuracoes/webchat/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Quando o cliente já fez login no seu site, você pode informar ao chat quem ele é. O atendente recebe a conversa com o nome do cliente em vez de Visitante, o pré-chat não aparece e o chat usa a Saudação para cliente identificado."
+    },
+    {
+      "type": "paragraph",
+      "content": "Este artigo vale para páginas onde você instalou o código do chat. É trabalho para quem desenvolve o seu site."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Identificado ou verificado"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Nível"
+        },
+        {
+          "content": "Como o chat chega nele"
+        },
+        {
+          "content": "O que garante"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Identificado"
+          },
+          {
+            "content": "O seu site informa nome, e-mail ou telefone"
+          },
+          {
+            "content": "Nada: qualquer pessoa pode informar qualquer e-mail pelo navegador"
+          }
+        ],
+        [
+          {
+            "content": "Verificado"
+          },
+          {
+            "content": "O seu servidor comprova a identidade com o segredo de verificação"
+          },
+          {
+            "content": "Que o cliente é mesmo quem diz ser. A conversa é ligada na hora ao contato com o mesmo e-mail ou telefone"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Use o verificado sempre que o seu site tiver um servidor próprio. O identificado é para quando não há como calcular a verificação."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os dados que você pode informar"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Dado"
+        },
+        {
+          "content": "Formato aceito"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "type"
+              },
+              {
+                "type": "text",
+                "text": "text"
+              },
+              {
+                "type": "text",
+                "text": "marks"
+              }
+            ]
+          },
+          {
+            "content": "De 1 a 120 caracteres"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "type"
+              },
+              {
+                "type": "text",
+                "text": "text"
+              },
+              {
+                "type": "text",
+                "text": "marks"
+              }
+            ]
+          },
+          {
+            "content": "Um e-mail válido"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "type"
+              },
+              {
+                "type": "text",
+                "text": "text"
+              },
+              {
+                "type": "text",
+                "text": "marks"
+              }
+            ]
+          },
+          {
+            "content": "De 10 a 15 dígitos, com DDI e DDD"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "type"
+              },
+              {
+                "type": "text",
+                "text": "text"
+              },
+              {
+                "type": "text",
+                "text": "marks"
+              }
+            ]
+          },
+          {
+            "content": "O código do cliente no seu sistema. De 1 a 120 caracteres"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "type"
+              },
+              {
+                "type": "text",
+                "text": "text"
+              },
+              {
+                "type": "text",
+                "text": "marks"
+              }
+            ]
+          },
+          {
+            "content": "A verificação calculada pelo seu servidor. 64 caracteres"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Identificar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Chame a identificação depois que o chat carregar, com os dados do cliente logado:"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "customElements.whenDefined('bevean-messenger').then(() => {\n  document.querySelector('bevean-messenger').identify({\n    name: 'Maria Silva',\n    email: 'maria@exemplo.com.br',\n    phone: '5547999990000'\n  })\n})"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se a página é montada no servidor, dá para passar os mesmos dados direto na tag do chat, no atributo "
+        },
+        {
+          "type": "text",
+          "text": "user",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Esse atributo não aceita o "
+        },
+        {
+          "type": "text",
+          "text": "userHash",
+          "marks": [
+            {
+              "type": "code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": para verificar, use a chamada acima."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": "html",
+      "code": "<bevean-messenger channel-key=\"…\" gateway-url=\"…\" user='{\"name\":\"Maria Silva\",\"email\":\"maria@exemplo.com.br\"}'></bevean-messenger>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Verificar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Copie o segredo de verificação",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No editor do chat, seção "
+                },
+                {
+                  "type": "text",
+                  "text": "Segurança",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", use "
+                },
+                {
+                  "type": "text",
+                  "text": "Mostrar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ou "
+                },
+                {
+                  "type": "text",
+                  "text": "Copiar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " no "
+                },
+                {
+                  "type": "text",
+                  "text": "Segredo de verificação",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Guarde no seu servidor."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Calcule o userHash no servidor",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "É um HMAC-SHA256 com o segredo, em hexadecimal. O valor assinado é o "
+                },
+                {
+                  "type": "text",
+                  "text": "externalId",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " quando você o envia; sem ele, é o e-mail em letras minúsculas."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Envie o userHash junto com os dados",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Na chamada "
+                },
+                {
+                  "type": "text",
+                  "text": "identify",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", inclua o "
+                },
+                {
+                  "type": "text",
+                  "text": "userHash",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e os mesmos "
+                },
+                {
+                  "type": "text",
+                  "text": "externalId",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ou "
+                },
+                {
+                  "type": "text",
+                  "text": "email",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " usados no cálculo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "code": "const crypto = require('crypto')\n\n// Com externalId, assine o externalId. Sem ele, assine o e-mail em minúsculas.\nconst assinado = customer.id ? String(customer.id) : customer.email.toLowerCase()\nconst userHash = crypto.createHmac('sha256', SEGREDO_DE_VERIFICACAO).update(assinado).digest('hex')",
+      "filename": "servidor.js"
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Quem tiver o segredo consegue se passar por qualquer cliente. Ele fica só no seu servidor: o navegador recebe apenas o userHash já calculado."
+        }
+      ],
+      "title": "O segredo nunca vai para o código do site"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Se você envia o "
+            },
+            {
+              "type": "text",
+              "text": "externalId",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", a verificação é feita sobre ele, não sobre o e-mail. Um userHash calculado com o e-mail, enviado junto com um externalId, não verifica o cliente."
+            }
+          ]
+        }
+      ],
+      "title": "Com externalId, o cálculo muda"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Trocar o segredo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Gerar novo segredo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " troca o segredo na hora: o atual para de funcionar. Atualize o seu servidor com o novo segredo logo em seguida. O chat continua instalado, porque a chave do chat não muda."
+        }
+      ]
+    }
+  ]
+}
