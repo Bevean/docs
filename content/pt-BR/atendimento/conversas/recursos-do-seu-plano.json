@@ -1,103 +1,364 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
-  "title": "Recursos que dependem do seu plano",
-  "subtitle": "O que o Atendimento libera sem o módulo contratado, e onde o aviso de recurso bloqueado aparece.",
-  "updatedAt": "2026-09-08",
+  "title": "O que muda sem o módulo de Atendimento",
+  "subtitle": "O que o atendimento básico permite, o que pede o módulo e onde o aviso de recurso bloqueado aparece.",
+  "updatedAt": "2026-10-13",
   "tags": [
     "plano",
     "contrato",
     "bloqueado",
+    "atendimento básico",
+    "módulo",
+    "responsável",
+    "transferir",
+    "atribuir",
     "pipeline"
   ],
   "related": [
-    "atendimento/pipeline/visao-geral",
-    "atendimento/distribuicao/visao-geral"
+    "atendimento/distribuicao/visao-geral",
+    "atendimento/distribuicao/configurar-times-e-visibilidade",
+    "atendimento/pipeline/visao-geral"
   ],
   "body": [
     {
       "type": "paragraph",
-      "content": "Parte do Atendimento depende de o módulo estar contratado. Os ícones aparecem normalmente na barra lateral mesmo sem contrato — o aviso só surge quando você abre a tela."
+      "content": "Sem o módulo de Atendimento contratado, a sua conta tem o atendimento básico: uma caixa de entrada compartilhada em que toda a equipe vê e responde todas as conversas. Com o módulo, o atendimento vira uma operação com responsável por conversa, distribuição automática, fila, prazo e indicadores."
     },
     {
-      "type": "heading",
-      "level": 2,
-      "content": "O que fica disponível sem o módulo contratado"
-    },
-    {
-      "type": "list",
-      "style": "bullet",
-      "items": [
+      "type": "paragraph",
+      "content": [
         {
-          "content": "Entrar no Atendimento e usar a caixa de entrada."
+          "type": "text",
+          "text": "Onde fica: "
         },
         {
-          "content": "Conversar, anexar arquivos, escrever nota interna."
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.inbox"
+          }
         },
         {
-          "content": "Aplicar marcadores, atribuir e resolver conversas, inclusive com tabulação."
-        },
-        {
-          "content": "O painel do contato e a busca."
-        },
-        {
-          "content": "Minhas mensagens rápidas."
+          "type": "text",
+          "text": "."
         }
       ]
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "O que exige o módulo"
+      "content": "O que muda na caixa de entrada"
     },
     {
       "type": "table",
       "head": [
         {
-          "content": "Recurso"
+          "content": "Característica"
         },
         {
-          "content": "O que acontece sem o contrato"
+          "content": "Atendimento básico"
+        },
+        {
+          "content": "Com o módulo de Atendimento"
         }
       ],
       "rows": [
         [
           {
-            "content": "Pipeline"
+            "content": "Quem vê cada conversa"
           },
           {
-            "content": "A tela abre com o aviso de recurso não incluído."
+            "content": "Toda a equipe vê todas as conversas."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Cada atendente vê o que a visibilidade do canal permite. Veja "
+              },
+              {
+                "type": "text",
+                "text": "como configurar times e visibilidade",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "atendimento/distribuicao/configurar-times-e-visibilidade"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ],
         [
           {
-            "content": "Painel e cockpit"
+            "content": "Abas da lista"
           },
           {
-            "content": "Mesma tela de aviso."
+            "content": [
+              {
+                "type": "text",
+                "text": "Todos",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", com todas as conversas."
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Meus",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Fila",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Todos",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Espera",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e a aba da IA, quando há IA atendendo."
+              }
+            ]
           }
         ],
         [
           {
-            "content": "Configurações do Atendimento"
+            "content": "Responsável pela conversa"
           },
           {
-            "content": "Só a lista de Distribuição fica acessível. As demais seções mostram o aviso."
+            "content": "Nenhuma conversa tem responsável. Responder ou reabrir não deixa a conversa com quem fez isso."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Atribuir a um agente ou a um time, "
+              },
+              {
+                "type": "text",
+                "text": "Transferir",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e o filtro "
+              },
+              {
+                "type": "text",
+                "text": "Responsável",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ],
         [
           {
-            "content": "Etapa no painel do contato"
+            "content": "Conversa nova"
           },
           {
-            "content": "O seletor de etapa simplesmente não aparece."
+            "content": "Aparece em Todos para a equipe inteira."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Chega na pessoa ou no time certo pela "
+              },
+              {
+                "type": "text",
+                "text": "distribuição",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "atendimento/distribuicao/visao-geral"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ],
         [
           {
-            "content": "Sentimento e intenção de compra"
+            "content": "Resolver"
           },
           {
-            "content": "Os filtros e o ícone de alerta na lista não aparecem."
+            "content": [
+              {
+                "type": "text",
+                "text": "Resolver",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " encerra na hora, sem tabulação."
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Resolver",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " pode pedir a tabulação do atendimento."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Espera e SLA"
+          },
+          {
+            "content": "Não existem."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Espera",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", prazo de resposta e o filtro "
+              },
+              {
+                "type": "text",
+                "text": "SLA em atraso",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Veja "
+              },
+              {
+                "type": "text",
+                "text": "como acompanhar o SLA",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "atendimento/conversas/acompanhar-o-sla"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Status Online, Ocupado e Ausente"
+          },
+          {
+            "content": "Não aparece."
+          },
+          {
+            "content": "Fica no menu do seu avatar e decide quem recebe conversa nova."
+          }
+        ],
+        [
+          {
+            "content": "Etapa, sentimento e intenção de compra"
+          },
+          {
+            "content": "Não aparecem."
+          },
+          {
+            "content": "Aparecem no painel do contato e nos filtros da lista."
           }
         ]
       ]
@@ -108,27 +369,35 @@
       "body": [
         {
           "type": "paragraph",
+          "content": "No atendimento básico ninguém é dono de conversa, então ela nunca fica escondida com uma pessoa. A contrapartida é que duas pessoas podem responder o mesmo cliente. Para combinar quem cuida de cada caso, use uma nota interna ou um marcador."
+        }
+      ],
+      "title": "Sem responsável, a conversa é de toda a equipe"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que funciona igual nos dois"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Responder com texto, anexos e áudio."
+        },
+        {
+          "content": "Escrever nota interna."
+        },
+        {
           "content": [
             {
               "type": "text",
-              "text": "Os ícones de Pipeline, Painel e Configurações têm a mesma aparência de um item liberado. O bloqueio aparece só no destino, com o aviso "
+              "text": "Aplicar "
             },
             {
               "type": "text",
-              "text": "Recurso não incluído no seu plano",
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "text": " e o botão "
-            },
-            {
-              "type": "text",
-              "text": "Falar com o comercial",
+              "text": "Marcadores",
               "marks": [
                 {
                   "type": "bold"
@@ -140,32 +409,293 @@
               "text": "."
             }
           ]
-        }
-      ],
-      "title": "Na barra lateral não há cadeado"
-    },
-    {
-      "type": "callout",
-      "variant": "warning",
-      "body": [
+        },
         {
-          "type": "paragraph",
-          "content": "Etapa, sentimento e intenção de compra somem sem nenhum aviso — se você procura um desses campos e não o encontra, é provável que seja o contrato, não um erro."
+          "content": [
+            {
+              "type": "text",
+              "text": "Criar um lembrete com "
+            },
+            {
+              "type": "text",
+              "text": "Lembrar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": "Resolver e reabrir conversas."
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O painel "
+            },
+            {
+              "type": "text",
+              "text": "Dados do contato",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e a busca."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Usar "
+            },
+            {
+              "type": "text",
+              "text": "mensagens rápidas no chat",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "atendimento/mensagens-rapidas/usar-no-chat"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
         }
-      ],
-      "title": "Dentro da conversa o bloqueio é silencioso"
+      ]
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Vincular canais é permitido"
+      "content": "Telas que pedem o módulo"
+    },
+    {
+      "type": "paragraph",
+      "content": "Os itens continuam na barra lateral. Ao abrir uma tela do módulo, ela mostra que o recurso está bloqueado e o que o Atendimento completo libera."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tela"
+        },
+        {
+          "content": "Sem o módulo"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Pipeline",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Abre a tela de recurso bloqueado."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Cockpit",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O painel lateral abre com o aviso de recurso bloqueado."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Painel",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Abre a tela de recurso bloqueado. Se a sua conta tem a Agenda do vendedor, o Painel mostra só a Agenda da equipe."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Qualidade da IA",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Abre a tela de recurso bloqueado."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Configurações",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Mensagens rápidas",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e a lista de "
+              },
+              {
+                "type": "text",
+                "text": "Distribuição",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " continuam abertas. As outras seções mostram a tela de recurso bloqueado."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Na tela de recurso bloqueado, "
+            },
+            {
+              "type": "text",
+              "text": "Falar com especialista",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " abre uma conversa com o time da Bevean. Quem não é administrador da conta vê também "
+            },
+            {
+              "type": "text",
+              "text": "Pedir liberação ao administrador",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", e o botão muda para "
+            },
+            {
+              "type": "text",
+              "text": "Pedido enviado ao administrador",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " depois do clique."
+            }
+          ]
+        }
+      ],
+      "title": "Quem não é administrador pode pedir a liberação pela própria tela"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Na lista de Distribuição"
     },
     {
       "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "text": "Mesmo sem o módulo, a lista de Distribuição permite "
+          "text": "Mesmo sem o módulo, a lista de "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.settings.distribution"
+          }
+        },
+        {
+          "type": "text",
+          "text": " permite "
         },
         {
           "type": "text",
@@ -191,29 +721,20 @@
         },
         {
           "type": "text",
-          "text": ", sem limite de quantidade. O que fica bloqueado é o detalhe do canal — SLA, distribuição automática, horário de atendimento e agentes."
+          "text": ". Canal de e-mail não tem a opção de remover."
         }
       ]
-    },
-    {
-      "type": "paragraph",
-      "content": "Canal de e-mail não tem a opção de remover."
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "content": "Se você perder a navegação nas Configurações"
     },
     {
       "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "text": "Estando na lista de Distribuição, as demais seções continuam aparecendo como links normais. Ao clicar em qualquer uma delas, a tela inteira — menu incluído — é trocada pelo aviso de recurso não incluído. Use o botão "
+          "text": "O detalhe do canal, aberto por "
         },
         {
           "type": "text",
-          "text": "Voltar",
+          "text": "Configurar canal",
           "marks": [
             {
               "type": "bold"
@@ -222,7 +743,114 @@
         },
         {
           "type": "text",
-          "text": " para retomar."
+          "text": " ou clicando na linha, mostra a tela de recurso bloqueado. É ali que ficam SLA, distribuição automática, horário de atendimento e agentes."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para sair de uma tela bloqueada das Configurações, use "
+        },
+        {
+          "type": "text",
+          "text": "Chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na barra lateral ou o botão de voltar do navegador."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Por que vejo as conversas de todo mundo?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "No atendimento básico não existe responsável por conversa, então toda a equipe vê todas. Para cada atendente ver só o que é dele, é preciso o módulo de Atendimento, com a visibilidade configurada por canal."
+            }
+          ]
+        },
+        {
+          "question": "Não encontro o botão de transferir nem de atribuir. É erro?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Não. "
+                },
+                {
+                  "type": "text",
+                  "text": "Transferir",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "Atribuir a um agente",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e "
+                },
+                {
+                  "type": "text",
+                  "text": "Atribuir a um time",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " fazem parte do módulo de Atendimento e não aparecem no atendimento básico."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Respondi um cliente e a conversa não ficou comigo. Por quê?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "No atendimento básico, responder não deixa a conversa com ninguém. Ela continua em Todos, visível para a equipe."
+            }
+          ]
+        },
+        {
+          "question": "Procuro a etapa, o sentimento ou a intenção de compra e não encontro.",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Esses campos somem sem aviso quando o módulo de Atendimento não está contratado. Não é um erro da conversa."
+            }
+          ]
         }
       ]
     },
@@ -230,12 +858,16 @@
       "type": "linkCards",
       "items": [
         {
+          "ref": "atendimento/distribuicao/visao-geral",
+          "description": "Como as conversas chegam em cada atendente com o módulo."
+        },
+        {
           "ref": "atendimento/pipeline/visao-geral",
           "description": "O que o Pipeline faz quando está disponível."
         },
         {
-          "ref": "atendimento/distribuicao/visao-geral",
-          "description": "A distribuição de conversas."
+          "ref": "atendimento/conversas/acompanhar-o-sla",
+          "description": "Prazo de resposta e conversas em espera."
         }
       ]
     }
