@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Usar Ações, Condição e Randomizador",
   "subtitle": "Os passos que agem no contato e decidem por qual caminho a jornada segue.",
-  "updatedAt": "2026-09-15",
+  "updatedAt": "2026-10-16",
   "tags": [
     "automacoes",
     "condicao",
@@ -11,7 +11,8 @@
   ],
   "related": [
     "automacoes/automacoes/montar-o-fluxo",
-    "automacoes/automacoes/controlar-o-tempo"
+    "automacoes/automacoes/controlar-o-tempo",
+    "automacoes/automacoes/esperar-a-resposta-do-contato"
   ],
   "body": [
     {
@@ -302,6 +303,14 @@
         ],
         [
           {
+            "content": "Baseado no histórico de compras"
+          },
+          {
+            "content": "Todos os pedidos do contato, de antes e depois de entrar no fluxo: quantidade, valor total e ticket médio dos pedidos realizados ou aprovados, e o valor e a data do último pedido realizado ou aprovado."
+          }
+        ],
+        [
+          {
             "content": "Segmento"
           },
           {
@@ -326,6 +335,14 @@
         ],
         [
           {
+            "content": "Propriedades personalizadas do pedido e do item do pedido"
+          },
+          {
+            "content": "As propriedades do pedido que iniciou a jornada. Só aparecem com gatilho de pedido. Uma regra de item vale quando pelo menos um item do pedido a atende."
+          }
+        ],
+        [
+          {
             "content": "Baseado no cashback"
           },
           {
@@ -337,7 +354,44 @@
             "content": "Desde a entrada no fluxo"
           },
           {
-            "content": "Quantas vezes o contato fez algo depois de entrar: pedido pago, pedido de qualquer status, pedido expirado, checkout iniciado, produto adicionado ao carrinho, carrinho visto, produto visto, página vista."
+            "content": "Quantas vezes o contato fez algo depois de entrar no fluxo: pedido pago, pedido de qualquer status, pedido expirado, checkout iniciado, frete ou pagamento selecionado no checkout, pagamento recusado no checkout, produto adicionado ao carrinho, carrinho visto, produto visto, página vista, e-mail aberto, e-mail clicado e WhatsApp clicado."
+          }
+        ],
+        [
+          {
+            "content": "Resposta do contato"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O que o contato escreveu num passo Esperar resposta. Só aparece quando o fluxo tem esse passo. Veja "
+              },
+              {
+                "type": "text",
+                "text": "esperar a resposta do contato",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "automacoes/automacoes/esperar-a-resposta-do-contato"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Horário"
+          },
+          {
+            "content": "Se o horário atual está dentro ou fora de uma grade de dias e faixas. Veja abaixo."
           }
         ],
         [
@@ -379,7 +433,221 @@
           "content": [
             {
               "type": "text",
-              "text": "Para restringir horário, o caminho é a janela de envio da automação — veja "
+              "text": "Fez um pedido pago",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", em Desde a entrada no fluxo, conta só os pedidos feitos depois que o contato entrou. Para saber se ele já comprou alguma vez, use o grupo Baseado no histórico de compras. No painel e no cartão, as regras do primeiro grupo aparecem com “(desde a entrada no fluxo)” no fim."
+            }
+          ]
+        }
+      ],
+      "title": "Desde a entrada ou o histórico inteiro?"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Condição de horário"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O grupo "
+        },
+        {
+          "type": "text",
+          "text": "Horário",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " tem o campo "
+        },
+        {
+          "type": "text",
+          "text": "Horário atual",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com "
+        },
+        {
+          "type": "text",
+          "text": "está dentro de",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "está fora de",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " uma grade. Serve, por exemplo, para mandar uma mensagem diferente fora do expediente."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "A grade tem os dias da semana. Em cada dia, marque "
+            },
+            {
+              "type": "text",
+              "text": "Fechado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ou defina uma ou mais faixas de "
+            },
+            {
+              "type": "text",
+              "text": "Início",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Fim",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", com "
+            },
+            {
+              "type": "text",
+              "text": "Adicionar faixa",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Remover faixa",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": "Uma regra nova já vem com segunda a sexta, das 08:00 às 18:00."
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Em "
+            },
+            {
+              "type": "text",
+              "text": "Fuso horário",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", deixe "
+            },
+            {
+              "type": "text",
+              "text": "Padrão da conta",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ou escolha outro fuso."
+            }
+          ]
+        },
+        {
+          "content": "O horário é avaliado no momento em que o contato chega ao passo. Uma faixa com fim antes do início passa da meia-noite, como 22:00 a 02:00."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A regra precisa de pelo menos um dia com horário e de faixas com início e fim diferentes. Sem isso, o passo fica pendente com “Na regra de horário, marque pelo menos um dia e confira as faixas (início e fim diferentes)”."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A condição escolhe o caminho; a janela de envio segura a mensagem até o horário permitido. Veja "
             },
             {
               "type": "text",
@@ -400,7 +668,7 @@
           ]
         }
       ],
-      "title": "Não existe condição de horário do dia"
+      "title": "Condição de horário não substitui a janela de envio"
     },
     {
       "type": "heading",

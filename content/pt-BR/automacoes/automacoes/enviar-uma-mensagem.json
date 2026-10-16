@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Configurar um passo de envio",
   "subtitle": "Escolher o canal, decidir entre modelo e mensagem regular, e o que cada canal entrega de fato.",
-  "updatedAt": "2026-09-25",
+  "updatedAt": "2026-10-16",
   "tags": [
     "automacoes",
     "mensagem",
@@ -441,7 +441,7 @@
           "content": "Botões são descartados em silêncio: chega só o texto, e quem depende de um clique para seguir o fluxo fica parado."
         },
         {
-          "content": "Não há confirmação de entrega nem de leitura — o envio fica sempre como enviado nos resultados."
+          "content": "Quando a operadora confirma, o envio aparece como entregue ou como falha nos resultados."
         }
       ]
     },
@@ -471,6 +471,51 @@
           },
           {
             "content": "A automação tem gatilho de evento — traz os dados do que disparou a jornada."
+          }
+        ],
+        [
+          {
+            "content": "Campos personalizados do contato"
+          },
+          {
+            "content": "A conta tem campos personalizados de contato."
+          }
+        ],
+        [
+          {
+            "content": "Propriedades personalizadas do pedido e do item do pedido"
+          },
+          {
+            "content": "A automação tem gatilho de pedido. A variável de item imprime o valor de todos os itens do pedido, um depois do outro."
+          }
+        ],
+        [
+          {
+            "content": "Resposta do contato"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Existe um passo Esperar resposta antes deste. Veja "
+              },
+              {
+                "type": "text",
+                "text": "esperar a resposta do contato",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "automacoes/automacoes/esperar-a-resposta-do-contato"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ],
         [

@@ -1,0 +1,439 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Esperar a resposta do contato",
+  "subtitle": "Pare a jornada até o contato escrever, guarde o que ele respondeu e use a resposta nas próximas mensagens e na Condição.",
+  "updatedAt": "2026-10-16",
+  "tags": [
+    "esperar resposta",
+    "resposta do contato",
+    "pergunta",
+    "bot",
+    "variável",
+    "sem resposta"
+  ],
+  "related": [
+    "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador",
+    "automacoes/automacoes/enviar-uma-mensagem",
+    "automacoes/automacoes/montar-o-fluxo"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O passo "
+        },
+        {
+          "type": "text",
+          "text": "Esperar resposta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", da categoria "
+        },
+        {
+          "type": "text",
+          "text": "Lógica",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", para a jornada até o contato escrever qualquer texto na conversa. O que ele escreveu vira uma variável: dá para repetir na próxima mensagem ou decidir o caminho pela resposta, como num atendimento automático."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O passo espera texto escrito na conversa, no mesmo canal. Para seguir conforme o botão que o contato tocou, use as saídas da própria mensagem."
+        }
+      ],
+      "title": "Botões e listas não contam como resposta"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Configurar o passo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Guardar a resposta como"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O nome da variável onde a resposta fica. Já vem preenchido com o próximo número livre, como "
+              },
+              {
+                "type": "text",
+                "text": "resposta_1",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", e você pode trocar"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Definir prazo para a resposta"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Liga o prazo. Em "
+              },
+              {
+                "type": "text",
+                "text": "Se não responder em",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", informe um número inteiro e escolha "
+              },
+              {
+                "type": "text",
+                "text": "Minutos",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Horas",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou "
+              },
+              {
+                "type": "text",
+                "text": "Dias",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O passo tem duas saídas: "
+        },
+        {
+          "type": "text",
+          "text": "Respondeu",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Sem resposta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Quem não escreve dentro do prazo segue pela segunda."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Uma espera sem prazo deixaria a jornada parada para sempre. Ao publicar, aparece “Um passo “Esperar resposta” está sem prazo. Defina em quanto tempo seguir se o contato não responder.”"
+        }
+      ],
+      "title": "Sem prazo, a automação não publica"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Usar a resposta"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Onde"
+        },
+        {
+          "content": "Como"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Nas mensagens seguintes"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "No botão de variáveis, o grupo "
+              },
+              {
+                "type": "text",
+                "text": "Resposta do contato",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " traz a resposta de cada passo pelo nome, como "
+              },
+              {
+                "type": "text",
+                "text": "{{vars.resposta_1}}",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", e a última resposta recebida, "
+              },
+              {
+                "type": "text",
+                "text": "{{vars.last_reply}}",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Numa Condição"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O grupo "
+              },
+              {
+                "type": "text",
+                "text": "Resposta do contato",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " oferece "
+              },
+              {
+                "type": "text",
+                "text": "Última resposta",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e "
+              },
+              {
+                "type": "text",
+                "text": "Resposta “nome do passo”",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", com as comparações contém, igual a, contém a palavra, começa com, termina com, diferente de, não contém, está vazia (só mídia) e não está vazia"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Cada “Esperar resposta” sobrescreve a última resposta. Para comparar respostas de perguntas diferentes, use o nome de cada passo."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Como montar os caminhos da Condição está em "
+        },
+        {
+          "type": "text",
+          "text": "usar Ações, Condição e Randomizador",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O nome da variável"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Regra"
+        },
+        {
+          "content": "Mensagem na tela"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "É obrigatório"
+          },
+          {
+            "content": "Dê um nome para a resposta deste passo"
+          }
+        ],
+        [
+          {
+            "content": "Só letras, números e _, começando por letra"
+          },
+          {
+            "content": "O nome da variável só aceita letras, números e _ (começando por letra)"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "last_reply",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " é reservado"
+              }
+            ]
+          },
+          {
+            "content": "O nome “last_reply” já é a variável fixa. Escolha outro"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Dois passos podem usar o mesmo nome. A tela avisa que outro passo também guarda ali, e vale a resposta mais recente."
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador",
+          "description": "Decidir o caminho pela resposta."
+        },
+        {
+          "ref": "automacoes/automacoes/enviar-uma-mensagem",
+          "description": "Usar a resposta numa mensagem."
+        }
+      ]
+    }
+  ]
+}

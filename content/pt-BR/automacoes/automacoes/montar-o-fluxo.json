@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Montar o fluxo",
   "subtitle": "Como adicionar e ligar os passos no quadro, e o que cada passo disponível faz.",
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-10-16",
   "tags": [
     "automacoes",
     "fluxo",
@@ -100,10 +100,32 @@
             "content": "Conteúdo"
           },
           {
-            "content": "WhatsApp Oficial, WhatsApp, Instagram, E-mail, SMS"
+            "content": "WhatsApp Oficial, WhatsApp, Instagram, E-mail, SMS, RCS"
           },
           {
             "content": "Envia uma mensagem pelo canal escolhido."
+          }
+        ],
+        [
+          {
+            "content": "Conteúdo"
+          },
+          {
+            "content": "Agenda do vendedor"
+          },
+          {
+            "content": "Em vez de enviar, cria uma tarefa na agenda do vendedor dono do contato. Fica desativado sem o módulo Agenda do vendedor."
+          }
+        ],
+        [
+          {
+            "content": "Conteúdo"
+          },
+          {
+            "content": "Resposta da IA"
+          },
+          {
+            "content": "A IA responde este passo com uma habilidade específica e devolve o controle ao fluxo. Só em automações."
           }
         ],
         [
@@ -159,6 +181,38 @@
           },
           {
             "content": "Divide o tráfego entre variações, para teste A/B."
+          }
+        ],
+        [
+          {
+            "content": "Lógica"
+          },
+          {
+            "content": "Esperar resposta"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Para a jornada até o contato escrever e guarda a resposta. Veja "
+              },
+              {
+                "type": "text",
+                "text": "esperar a resposta do contato",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "automacoes/automacoes/esperar-a-resposta-do-contato"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ],
         [

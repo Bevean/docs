@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Controlar quando a mensagem sai",
   "subtitle": "O passo de Atraso, o passo Digitando e a janela de horário da automação.",
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-10-16",
   "tags": [
     "automacoes",
     "atraso",
@@ -246,7 +246,28 @@
     },
     {
       "type": "paragraph",
-      "content": "É a única restrição de horário que vale de fato. Fica na configuração de envio da automação, disponível depois que ela está publicada — e pode ser alterada sem destravar a edição do fluxo."
+      "content": [
+        {
+          "type": "text",
+          "text": "É a restrição de horário que segura a mensagem: fora da janela, o envio espera. Fica na configuração de envio da automação, disponível depois que ela está publicada, e pode ser alterada sem destravar a edição do fluxo. Para mandar o contato por outro caminho conforme o horário, use a condição de horário — veja "
+        },
+        {
+          "type": "text",
+          "text": "usar Ações, Condição e Randomizador",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
     },
     {
       "type": "table",

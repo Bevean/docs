@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Disparar a automação por outro sistema",
   "subtitle": "O disparador externo: uma URL exclusiva que outro sistema chama para colocar um contato no fluxo.",
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-10-16",
   "tags": [
     "automacoes",
     "gatilho",
@@ -254,15 +254,286 @@
       ]
     },
     {
-      "type": "callout",
-      "variant": "warning",
-      "body": [
+      "type": "heading",
+      "level": 2,
+      "content": "Quando o contato não existe"
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
-          "type": "paragraph",
-          "content": "Se o dado de identificação não corresponder a nenhum contato da base, o evento é descartado. O disparador externo nunca cadastra contato novo — crie o contato antes, ou use o gatilho de cadastro para isso."
+          "type": "text",
+          "text": "Por padrão, se o dado de identificação não corresponder a nenhum contato da base, o evento é ignorado. Para cadastrar o contato nesse caso, ligue "
+        },
+        {
+          "type": "text",
+          "text": "Cadastrar o contato quando não encontrar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", em Identidade do contato."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Aponte, com "
+            },
+            {
+              "type": "text",
+              "text": "Adicionar campo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", de onde vêm "
+            },
+            {
+              "type": "text",
+              "text": "Nome",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "text",
+              "text": "E-mail",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "text",
+              "text": "Telefone",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Documento",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " no JSON."
+            }
+          ]
+        },
+        {
+          "content": "Mapeie ao menos e-mail, telefone ou documento. Sem um deles a tela avisa, porque é o mínimo para não duplicar cadastro."
+        },
+        {
+          "content": "O contato é criado antes de entrar no fluxo. Contato que já existe não é alterado."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se o e-mail ou o telefone já pertencem a outro contato, o evento não entra e aparece no histórico com o motivo "
+        },
+        {
+          "type": "text",
+          "text": "O e-mail ou o telefone já pertence a outro contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O histórico de eventos"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ver histórico de eventos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra cada chamada recebida por este endereço, com o motivo de quem não entrou no fluxo."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Recurso"
+        },
+        {
+          "content": "Como funciona"
         }
       ],
-      "title": "Contato que não existe é ignorado, não criado"
+      "rows": [
+        [
+          {
+            "content": "Filtros"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Todos",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Processados",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Falhas",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Ignorados",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e "
+              },
+              {
+                "type": "text",
+                "text": "Sem identidade",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Busca"
+          },
+          {
+            "content": "Por e-mail, telefone, chave ou motivo, a partir de 2 caracteres"
+          }
+        ],
+        [
+          {
+            "content": "Paginação"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Carregar mais",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " traz os próximos, com o total em “Mostrando X de Y”"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Reprocessar"
+          },
+          {
+            "content": "Coloca de novo na fila um evento que falhou ou que foi ignorado por falta de contato"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Os números do topo contam o endereço inteiro e não mudam com o filtro ou a busca."
     },
     {
       "type": "heading",

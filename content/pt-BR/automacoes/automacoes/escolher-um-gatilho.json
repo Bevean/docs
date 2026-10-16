@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Escolher um gatilho",
   "subtitle": "O evento que coloca o contato dentro da automação, e o que cada um dos gatilhos disponíveis significa.",
-  "updatedAt": "2026-10-01",
+  "updatedAt": "2026-10-16",
   "tags": [
     "automacoes",
     "gatilho",
@@ -222,6 +222,17 @@
       "rows": [
         [
           {
+            "content": "Formulários"
+          },
+          {
+            "content": "Formulário enviado"
+          },
+          {
+            "content": "Um contato envia um formulário do site."
+          }
+        ],
+        [
+          {
             "content": "Navegação"
           },
           {
@@ -284,6 +295,39 @@
           },
           {
             "content": "Alguém inicia o checkout e deixa itens para trás."
+          }
+        ],
+        [
+          {
+            "content": "Carrinho"
+          },
+          {
+            "content": "Frete selecionado"
+          },
+          {
+            "content": "O cliente escolhe o frete no checkout e não finaliza a compra."
+          }
+        ],
+        [
+          {
+            "content": "Carrinho"
+          },
+          {
+            "content": "Pagamento selecionado"
+          },
+          {
+            "content": "O cliente escolhe a forma de pagamento no checkout e não finaliza a compra."
+          }
+        ],
+        [
+          {
+            "content": "Carrinho"
+          },
+          {
+            "content": "Pagamento recusado no checkout"
+          },
+          {
+            "content": "O pagamento é recusado no checkout e o pedido não chega a ser criado."
           }
         ],
         [
@@ -486,6 +530,28 @@
         ],
         [
           {
+            "content": "Giftback"
+          },
+          {
+            "content": "Giftback gerado"
+          },
+          {
+            "content": "O cupom de giftback do contato é criado na loja depois de uma compra aprovada."
+          }
+        ],
+        [
+          {
+            "content": "Giftback"
+          },
+          {
+            "content": "Giftback vencendo"
+          },
+          {
+            "content": "O cupom de giftback está perto de vencer e ainda não foi usado."
+          }
+        ],
+        [
+          {
             "content": "Atendimento"
           },
           {
@@ -504,6 +570,28 @@
           },
           {
             "content": "O contato manda mensagem no atendimento."
+          }
+        ],
+        [
+          {
+            "content": "Etapa do atendimento"
+          },
+          {
+            "content": "Entrou numa etapa"
+          },
+          {
+            "content": "A conversa entra numa etapa do funil de atendimento."
+          }
+        ],
+        [
+          {
+            "content": "Etapa do atendimento"
+          },
+          {
+            "content": "Saiu de uma etapa"
+          },
+          {
+            "content": "A conversa sai de uma etapa do funil de atendimento."
           }
         ],
         [
@@ -587,10 +675,26 @@
       "rows": [
         [
           {
+            "content": "Formulário enviado"
+          },
+          {
+            "content": "O tracker estiver instalado no site, que é por onde o formulário é enviado."
+          }
+        ],
+        [
+          {
             "content": "Página, Produto e Categoria visualizados; Produto adicionado ao carrinho; Produto abandonado"
           },
           {
             "content": "O tracker estiver instalado na loja e o visitante estiver identificado."
+          }
+        ],
+        [
+          {
+            "content": "Frete selecionado, Pagamento selecionado e Pagamento recusado no checkout"
+          },
+          {
+            "content": "A loja for Yampi, com a sincronização de carrinhos ligada. As outras plataformas ainda não enviam esses eventos, e a tela avisa isso no gatilho."
           }
         ],
         [
@@ -632,10 +736,28 @@
         ],
         [
           {
-            "content": "Crédito expirando"
+            "content": "Crédito expirando e Giftback vencendo"
           },
           {
-            "content": "A automação definir os dias em Quando avisar, ou o cashback ter antecedências configuradas. Sem um dos dois, o gatilho nunca dispara — a própria tela avisa isso."
+            "content": [
+              {
+                "type": "text",
+                "text": "A automação definir pelo menos um dia em "
+              },
+              {
+                "type": "text",
+                "text": "Quando avisar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Sem isso, ela não publica."
+              }
+            ]
           }
         ],
         [

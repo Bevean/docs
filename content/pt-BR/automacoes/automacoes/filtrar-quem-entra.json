@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Filtrar quem entra na automação",
   "subtitle": "Filtros do disparador, filtros de perfil, reentrada e as chaves que interrompem o envio.",
-  "updatedAt": "2026-09-25",
+  "updatedAt": "2026-10-16",
   "tags": [
     "automacoes",
     "gatilho",
@@ -175,6 +175,14 @@
       "rows": [
         [
           {
+            "content": "Formulário enviado"
+          },
+          {
+            "content": "Formulário, Nome do formulário, Cupom deste envio, Prêmio deste envio e Contato (novo ou que já existia)."
+          }
+        ],
+        [
+          {
             "content": "Página visualizada"
           },
           {
@@ -202,7 +210,25 @@
             "content": "Produto adicionado ao carrinho e Carrinho abandonado"
           },
           {
-            "content": "Origem do carrinho, Quantidade de itens, Total do carrinho, Cupom, dados do produto (ID, variação, SKU, nome, marca, categoria, quantidade), item e valor do checkout. Só em Carrinho abandonado: Link do carrinho."
+            "content": [
+              {
+                "type": "text",
+                "text": "Origem do carrinho, Quantidade de itens, Total do carrinho, Cupom, Etapa do checkout, Valor do frete, Tipo de frete, Forma de pagamento, dados do produto (ID, variação, SKU, nome, marca, categoria, quantidade), "
+              },
+              {
+                "type": "text",
+                "text": "Nome de algum produto do carrinho",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", item e valor do checkout. Só em Carrinho abandonado: Link do carrinho."
+              }
+            ]
           }
         ],
         [
@@ -262,6 +288,17 @@
           }
         ]
       ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "É o campo que procura o nome em todos os itens do carrinho, inclusive nos carrinhos que vêm da integração da loja."
+        }
+      ],
+      "title": "Para filtrar pelo produto do carrinho, use “Nome de algum produto do carrinho”"
     },
     {
       "type": "callout",
