@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Sistema bloqueado por fatura em aberto, ou tela vazia",
   "subtitle": "A régua de cobrança até o bloqueio de acesso, e o que fazer se a lista de faturas não aparece.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "sistema bloqueado",
     "fatura em aberto",
@@ -58,10 +58,10 @@
         ],
         [
           {
-            "content": "Mais de 14 dias em atraso"
+            "content": "Fatura vencida há mais tempo, sem pagamento"
           },
           {
-            "content": "Uma tela \"Sistema temporariamente bloqueado\" que não pode ser fechada, até a fatura ser paga."
+            "content": "A conta é bloqueada: no login e em todo o sistema, inclusive no Atendimento, aparece a tela “Sistema temporariamente bloqueado”. Veja abaixo."
           }
         ]
       ]
@@ -74,7 +74,89 @@
           "type": "paragraph",
           "content": "Depois de confirmado o pagamento, o acesso volta automaticamente — a Bevean informa que isso leva cerca de 1 hora."
         }
+      ],
+      "title": "O acesso volta sozinho depois do pagamento"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "“Minha conta está bloqueada”"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tela de conta bloqueada mostra o selo "
+        },
+        {
+          "type": "text",
+          "text": "ACESSO SUSPENSO",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", o título "
+        },
+        {
+          "type": "text",
+          "text": "Sistema temporariamente bloqueado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e o valor vencido com os dias de atraso."
+        }
       ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Na tela"
+        },
+        {
+          "content": "Para que serve"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Regularizar fatura em aberto"
+          },
+          {
+            "content": "Abre a página de pagamento da fatura"
+          }
+        ],
+        [
+          {
+            "content": "Dúvidas? Fale com o suporte: 51 99971-0892"
+          },
+          {
+            "content": "O WhatsApp do suporte da Bevean"
+          }
+        ],
+        [
+          {
+            "content": "Sair da conta"
+          },
+          {
+            "content": "Encerra a sessão"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Depois que o pagamento é confirmado, o acesso volta sozinho em cerca de 1 hora. Quando a conta deixa de estar bloqueada, a própria tela leva você de volta ao CRM."
     },
     {
       "type": "heading",

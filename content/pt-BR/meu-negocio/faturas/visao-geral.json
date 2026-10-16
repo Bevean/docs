@@ -1,8 +1,8 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funcionam as faturas",
-  "subtitle": "A lista de faturas da sua conta, os status possíveis e como visualizar e pagar.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "A lista de faturas da sua conta, os status possíveis, o detalhamento do valor e como visualizar e pagar.",
+  "updatedAt": "2026-10-16",
   "tags": [
     "faturas",
     "cobrança",
@@ -109,7 +109,38 @@
             "content": "Link da fatura"
           },
           {
-            "content": "Botão para visualizar."
+            "content": [
+              {
+                "type": "text",
+                "text": "Os botões "
+              },
+              {
+                "type": "text",
+                "text": "Detalhamento",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e "
+              },
+              {
+                "type": "text",
+                "text": "Visualizar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ]
       ]
@@ -249,6 +280,146 @@
         {
           "type": "text",
           "text": " dentro desse modal para ver em tela cheia. Não existe um botão de baixar PDF ou boleto separado — a página da fatura é a mesma usada para pagar."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Entender o valor: o Detalhamento"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão "
+        },
+        {
+          "type": "text",
+          "text": "Detalhamento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " abre a fatura linha a linha, no bloco "
+        },
+        {
+          "type": "text",
+          "text": "Como chegamos nesse valor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", pronto para mandar ao seu financeiro."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Plano, excedente e descontos aparecem em linhas separadas, com o subtotal de cada serviço e o "
+            },
+            {
+              "type": "text",
+              "text": "Total a pagar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " com o vencimento."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Uso medido em",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " diz de que período é o consumo cobrado."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Copiar explicação",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " copia o texto do detalhamento."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Ver memória de cálculo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " mostra a conta completa, com piso, consumo, franquia, excedente e valor de cada componente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Uma fatura sem esse cálculo mostra "
+        },
+        {
+          "type": "text",
+          "text": "Detalhamento indisponível",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Nesse caso, fale com o suporte."
         }
       ]
     },
