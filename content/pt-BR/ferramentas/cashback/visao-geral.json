@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funciona o cashback",
   "subtitle": "Entenda quando o crédito nasce, quando ele fica disponível para o cliente e o que acontece se ele não usar.",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-16",
   "tags": [
     "cashback",
     "crédito",
@@ -140,6 +140,28 @@
         [
           {
             "content": "Pedido abaixo do pedido mínimo que você configurou"
+          },
+          {
+            "content": "Não"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Pedido de uma origem, de loja física, de assinatura ou de cliente com CNPJ que você deixou de fora no cartão "
+              },
+              {
+                "type": "text",
+                "text": "Regras",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
           },
           {
             "content": "Não"

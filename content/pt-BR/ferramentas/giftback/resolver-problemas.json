@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "O giftback não está funcionando",
   "subtitle": "Giftback que não foi gerado, cupom que não sai, cupom que falhou, aviso que não chega: onde olhar em cada caso.",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-16",
   "tags": [
     "problema",
     "erro",
@@ -230,7 +230,7 @@
             "content": "7"
           },
           {
-            "content": "A origem do pedido, a loja física ou a assinatura estão excluídas?"
+            "content": "A origem do pedido, a loja física, a assinatura ou o CNPJ estão excluídos?"
           },
           {
             "content": [
@@ -249,7 +249,20 @@
               },
               {
                 "type": "text",
-                "text": " nas configurações"
+                "text": " nas configurações. Com "
+              },
+              {
+                "type": "text",
+                "text": "Não gerar giftback para CNPJ",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ligada, cliente cadastrado com CNPJ fica de fora"
               }
             ]
           }
@@ -1271,7 +1284,7 @@
               "content": [
                 {
                   "type": "text",
-                  "text": "Não. A regra é uma só para a loja inteira. O que existe é limitar por origem do pedido, por loja física e por assinatura, em "
+                  "text": "Não. A regra é uma só para a loja inteira. O que existe é limitar por origem do pedido, por loja física, por assinatura e por CNPJ, em "
                 },
                 {
                   "type": "text",

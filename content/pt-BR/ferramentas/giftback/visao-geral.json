@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funciona o giftback",
   "subtitle": "Entenda quando o cupom nasce, quando fica disponível para o cliente e o que acontece se ele não usar.",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-16",
   "tags": [
     "giftback",
     "cupom",
@@ -436,7 +436,7 @@
         ],
         [
           {
-            "content": "Pedido de uma origem que você deixou de fora, de loja física ou de assinatura, se você escolheu excluí-los"
+            "content": "Pedido de uma origem que você deixou de fora, de loja física, de assinatura ou de cliente com CNPJ, se você escolheu excluí-los"
           },
           {
             "content": [

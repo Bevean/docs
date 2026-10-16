@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Ativar e configurar o cashback",
   "subtitle": "Defina quanto devolver, sobre qual valor e por quanto tempo o crédito vale — e entenda o que cada limite faz.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "ativar cashback",
     "percentual",
@@ -378,6 +378,165 @@
         }
       ],
       "title": "O pedido mínimo é comparado com a base de cálculo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quais pedidos participam: o cartão Regras"
+    },
+    {
+      "type": "paragraph",
+      "content": "Por padrão, todo pedido aprovado gera cashback. O cartão Regras deixa você tirar do programa alguns tipos de pedido:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que faz"
+        },
+        {
+          "content": "Padrão"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Origens que geram cashback"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Só os pedidos das origens escolhidas geram cashback. A lista traz as integrações conectadas e "
+              },
+              {
+                "type": "text",
+                "text": "Pedidos manuais e via API",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Sem seleção: todas as origens geram"
+          }
+        ],
+        [
+          {
+            "content": "Pedidos de loja física"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Geram cashback",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou "
+              },
+              {
+                "type": "text",
+                "text": "Não geram cashback",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": vale para o pedido registrado no PDV, com loja de origem"
+              }
+            ]
+          },
+          {
+            "content": "Geram cashback"
+          }
+        ],
+        [
+          {
+            "content": "Créditos do contato"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Acumular",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " soma todos os créditos. "
+              },
+              {
+                "type": "text",
+                "text": "Manter só o último",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " substitui o saldo anterior a cada compra nova, para os créditos gerados a partir dali"
+              }
+            ]
+          },
+          {
+            "content": "Acumular"
+          }
+        ],
+        [
+          {
+            "content": "Não gerar cashback em assinatura"
+          },
+          {
+            "content": "Compras recorrentes deixam de gerar crédito a cada cobrança"
+          },
+          {
+            "content": "Desligada"
+          }
+        ],
+        [
+          {
+            "content": "Não gerar cashback para CNPJ"
+          },
+          {
+            "content": "Pedidos de clientes cadastrados com CNPJ não geram crédito. Clientes sem documento continuam gerando. No resumo, aparece como “exceto CNPJ”"
+          },
+          {
+            "content": "Desligada"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "O que conta como CNPJ",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O contato com documento do tipo CNPJ e 14 dígitos. A chave vale para os pedidos aprovados depois que ela foi ligada: crédito que já foi lançado não é retirado."
+        }
+      ]
     },
     {
       "type": "heading",

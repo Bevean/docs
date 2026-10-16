@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Ativar e configurar o giftback",
   "subtitle": "Defina quanto o cupom vale, quando ele nasce e por quanto tempo vale, e entenda o que cada regra faz.",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-16",
   "tags": [
     "ativar giftback",
     "porcentagem",
@@ -970,7 +970,29 @@
           {
             "content": "Desligado: assinatura gera"
           }
+        ],
+        [
+          {
+            "content": "Não gerar giftback para CNPJ"
+          },
+          {
+            "content": "Pedidos de clientes cadastrados com CNPJ ficam de fora. Clientes sem documento continuam gerando. No quadro Resumo, aparece como “sem CNPJ”"
+          },
+          {
+            "content": "Desligada: cliente com CNPJ gera"
+          }
         ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "O que conta como CNPJ",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O contato com documento do tipo CNPJ e 14 dígitos. A chave vale para os pedidos aprovados depois que ela foi ligada: giftback que já existe não muda."
+        }
       ]
     },
     {

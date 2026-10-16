@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "O cashback não está funcionando",
   "subtitle": "Cashback que não foi gerado, resgate que não conclui, aviso que não sai: onde olhar em cada caso.",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-16",
   "tags": [
     "problema",
     "erro",
@@ -153,6 +153,48 @@
           },
           {
             "content": "Importação é carga de histórico e nunca gera cashback"
+          }
+        ],
+        [
+          {
+            "content": "7"
+          },
+          {
+            "content": "As regras do programa deixam o pedido de fora?"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Confira o cartão "
+              },
+              {
+                "type": "text",
+                "text": "Regras",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": origens, pedidos de loja física, assinatura e "
+              },
+              {
+                "type": "text",
+                "text": "Não gerar cashback para CNPJ",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Com essa chave ligada, cliente cadastrado com CNPJ não gera crédito"
+              }
+            ]
           }
         ]
       ]
