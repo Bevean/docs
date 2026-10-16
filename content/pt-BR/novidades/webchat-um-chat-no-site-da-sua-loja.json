@@ -1,0 +1,275 @@
+{
+  "$schema": "../../../.vscode/schemas/article.schema.json",
+  "title": "Webchat: um chat no site da sua loja, direto no Atendimento",
+  "subtitle": "O visitante conversa pelo site e a mensagem chega na mesma caixa de entrada do WhatsApp, com distribuição, IA e sem janela de 24 horas. Nas lojas conectadas, aparece sem colar código.",
+  "updatedAt": "2026-10-16",
+  "publishedAt": "2026-10-13",
+  "tags": [
+    "Atendimento",
+    "Configurações",
+    "Canais"
+  ],
+  "related": [
+    "configuracoes/webchat/visao-geral",
+    "configuracoes/webchat/criar-e-configurar",
+    "configuracoes/webchat/instalar-em-outros-sites",
+    "configuracoes/webchat/identificar-o-cliente-logado"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O Webchat é um canal novo: um chat no site da sua loja. O visitante escreve pelo botão no canto da tela e a conversa chega na mesma caixa de entrada do Atendimento, ao lado do WhatsApp e do Instagram, com distribuição e IA."
+    },
+    {
+      "type": "pillars",
+      "items": [
+        {
+          "title": "Sem colar código",
+          "content": "Nas lojas conectadas, o chat aparece pelo script da Bevean que já está instalado."
+        },
+        {
+          "title": "Com a cara da sua marca",
+          "content": "Cor, tema, ícone, posição, textos e um menu com WhatsApp e links."
+        },
+        {
+          "title": "No mesmo Atendimento",
+          "content": "Mesma caixa de entrada, distribuição e IA, sem janela de 24 horas."
+        },
+        {
+          "title": "Sabe quem é o cliente",
+          "content": "O site pode informar o cliente logado, e a conversa já chega no contato certo."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O Webchat é um canal novo e não aparece em lugar nenhum até você criar um chat. Seus outros canais continuam iguais."
+        }
+      ],
+      "title": "Nada muda no que você já tem"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Aparece sozinho nas lojas conectadas"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao criar um chat, você escolhe onde ele aparece: "
+        },
+        {
+          "type": "text",
+          "text": "Numa loja",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Em todas as lojas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "Só onde eu instalar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Nas duas primeiras, o chat usa o script da Bevean que já está na loja, sem colar código nenhum. Uma loja pode ter um chat próprio, que aparece no lugar do chat de todas as lojas."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para um app, uma landing page ou um site fora das lojas conectadas, a opção "
+        },
+        {
+          "type": "text",
+          "text": "Só onde eu instalar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " entrega o código pronto para copiar, como botão flutuante, embutido na página ou em tela cheia num app."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Com a cara da sua marca"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "Cor da marca, tema claro ou escuro, cantos, posição e o ícone do botão, inclusive o do WhatsApp ou uma imagem própria."
+        },
+        {
+          "content": "Título, subtítulo e saudações, com uma saudação diferente para o cliente que o site já identificou."
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Formato "
+            },
+            {
+              "type": "text",
+              "text": "Completo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", com tela inicial e aba de perguntas frequentes respondidas pela base de conhecimento da IA, ou "
+            },
+            {
+              "type": "text",
+              "text": "Só o chat",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", direto na conversa."
+            }
+          ]
+        },
+        {
+          "content": "Um menu no botão, com até 5 itens: abrir o chat, chamar no WhatsApp da loja ou abrir um link."
+        },
+        {
+          "content": "Pré-chat com nome e e-mail, abertura automática depois de alguns segundos e a lista de domínios onde o chat pode funcionar."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "No mesmo Atendimento, sem janela de 24 horas"
+    },
+    {
+      "type": "paragraph",
+      "content": "A conversa do Webchat chega como as outras: entra na distribuição e pode ser respondida pela IA. Como não é WhatsApp, não existe janela de 24 horas, e o atendente responde quando quiser, com texto, imagem, vídeo, documento e áudio."
+    },
+    {
+      "type": "paragraph",
+      "content": "O visitante volta para a conversa no mesmo navegador por 90 dias, vendo o histórico, sem precisar de login."
+    },
+    {
+      "type": "callout",
+      "variant": "spotlight",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Em Numa loja ou Em todas as lojas, ele entra no ar sozinho, pelo script da Bevean. Antes de criar, deixe o atendimento pronto para receber as conversas do site, e ligue a IA no canal se quiser que ela responda primeiro."
+        }
+      ],
+      "title": "O chat aparece na loja assim que você o cria"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Sabe quem é o cliente"
+    },
+    {
+      "type": "paragraph",
+      "content": "Quando o cliente está logado no seu site, o site pode informar quem ele é. O pré-chat some e o atendente vê o nome dele. No nível verificado, com o segredo de verificação, a conversa já chega ligada ao contato com o mesmo e-mail ou telefone."
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Preciso instalar alguma coisa na minha loja?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não, se a loja já tem o script da Bevean. Escolha Numa loja ou Em todas as lojas e o chat aparece sozinho. Código só é preciso para sites fora das lojas conectadas."
+            }
+          ]
+        },
+        {
+          "question": "A IA responde no Webchat?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Responde, se você ligar. Um chat novo nasce com a IA desligada; ligue no Assistente de IA, na aba Canais."
+            }
+          ]
+        },
+        {
+          "question": "Onde ficam as conversas antigas do visitante?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "No Atendimento, como as de qualquer canal. O próprio visitante vê o histórico no mesmo navegador por 90 dias desde o último uso."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Como configurar",
+      "items": [
+        {
+          "ref": "configuracoes/webchat/criar-e-configurar",
+          "description": "Criar o chat e ajustar aparência, textos, menu e domínios."
+        },
+        {
+          "ref": "configuracoes/webchat/visao-geral",
+          "description": "Onde o chat aparece e o que o atendente recebe."
+        },
+        {
+          "ref": "configuracoes/webchat/instalar-em-outros-sites",
+          "description": "Colocar o chat num site, landing page ou app."
+        },
+        {
+          "ref": "configuracoes/webchat/identificar-o-cliente-logado",
+          "description": "Informar ao chat quem é o cliente logado."
+        }
+      ]
+    }
+  ]
+}
