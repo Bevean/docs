@@ -226,9 +226,10 @@ function breadcrumbLd(crumbs: { title: string; url: string }[]) {
 
 /** Slug antigo → caminho atual, no formato `_redirects` (Cloudflare/Netlify). */
 async function writeRedirects(manifest: ContentManifest): Promise<void> {
-  const lines = Object.entries(manifest.aliases).map(
-    ([alias, target]) => `/ajuda/${alias} /ajuda/${target} 301`
-  )
+  const lines = Object.entries(manifest.aliases).flatMap(([alias, target]) => [
+    `/ajuda/${alias} /ajuda/${target} 301`,
+    `/ajuda/${alias}/ /ajuda/${target}/ 301`
+  ])
   // `/` existe só como porta de entrada; o site vive sob /ajuda.
   lines.unshift('/ /ajuda 302', '/novidades /ajuda/novidades 301')
   await writeFile(path.join(DIST, '_redirects'), `${lines.join('\n')}\n`, 'utf8')
