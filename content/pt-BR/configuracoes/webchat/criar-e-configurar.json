@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Criar e configurar um Webchat",
   "subtitle": "Crie o chat, escolha onde ele aparece e ajuste aparência, textos, menu do botão e segurança.",
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-16",
   "tags": [
     "criar chat",
     "botão flutuante",
@@ -311,7 +311,7 @@
             "content": "Título"
           },
           {
-            "content": "80 caracteres"
+            "content": "60 caracteres, obrigatório"
           }
         ],
         [
@@ -358,21 +358,24 @@
         ],
         [
           {
-            "content": "Pergunta de abertura"
-          },
-          {
-            "content": "120 caracteres"
-          }
-        ],
-        [
-          {
             "content": "Texto do campo de mensagem"
           },
           {
-            "content": "80 caracteres"
+            "content": "60 caracteres"
           }
         ]
       ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A tela deixa digitar até 80 nesses dois campos, mas acima de 60 o chat não salva e aparece “Não foi possível salvar. Tente de novo.”"
+        }
+      ],
+      "title": "Título e texto do campo de mensagem vão até 60 caracteres"
     },
     {
       "type": "paragraph",
@@ -460,7 +463,7 @@
         },
         {
           "type": "text",
-          "text": ", em Páginas do chat, mostra ao visitante uma aba de ajuda com busca na base de conhecimento do assistente de IA deste canal. Ela só aparece quando a IA está ligada no canal. Se a busca não resolver, o visitante pode mandar a pergunta direto para o chat."
+          "text": ", em Páginas do chat, mostra ao visitante uma aba de ajuda com busca na base de conhecimento do assistente de IA deste canal. Ela só aparece quando a IA está ligada no canal e a base de conhecimento do assistente tem pelo menos um conteúdo ativo. Se a busca não resolver, o visitante pode mandar a pergunta direto para o chat."
         }
       ]
     },
@@ -899,6 +902,14 @@
           },
           {
             "content": "O link do item precisa começar com https://"
+          }
+        ],
+        [
+          {
+            "content": "Não foi possível salvar. Tente de novo."
+          },
+          {
+            "content": "Confira se o Título está preenchido e tem até 60 caracteres, se o Texto do campo de mensagem tem até 60, se há no máximo 20 domínios e se cada domínio é só o endereço do site, sem caminho"
           }
         ]
       ]

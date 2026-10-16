@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "O Webchat não está funcionando",
   "subtitle": "Roteiros para quando o chat não aparece, a mensagem do visitante não sai ou a conversa anterior some.",
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-16",
   "tags": [
     "chat não aparece",
     "não enviada",
@@ -315,20 +315,31 @@
             "content": "O visitante mandou muitas mensagens seguidas?"
           },
           {
-            "content": "Mais de 15 mensagens por minuto são recusadas. Basta esperar um pouco e mandar de novo"
-          }
-        ],
-        [
-          {
-            "content": "4"
-          },
-          {
-            "content": "Apareceu Arquivo acima de 25 MB?"
-          },
-          {
-            "content": "O arquivo passa do limite. Envie um arquivo menor"
+            "content": "Mais de 15 envios por minuto são recusados, e mandar um arquivo conta como dois. Basta esperar um pouco e mandar de novo"
           }
         ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Arquivo acima de 25 MB nem chega a virar mensagem: o aviso "
+        },
+        {
+          "type": "text",
+          "text": "Arquivo acima de 25 MB.",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " aparece no próprio campo de mensagem, e o visitante precisa mandar um arquivo menor."
+        }
       ]
     },
     {
@@ -409,7 +420,7 @@
               "content": [
                 {
                   "type": "text",
-                  "text": "Ela precisa de três coisas: o formato Completo, o interruptor Perguntas frequentes ligado e a IA ligada no canal, em "
+                  "text": "Ela precisa de quatro coisas: o formato Completo, o interruptor Perguntas frequentes ligado, a IA ligada no canal e pelo menos um conteúdo ativo na base de conhecimento do assistente, em "
                 },
                 {
                   "type": "uiPath",

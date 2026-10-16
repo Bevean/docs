@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funciona o Webchat",
   "subtitle": "O chat que aparece no site da sua loja. Entenda onde ele aparece, o que o atendente recebe e como o visitante volta para a conversa.",
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-16",
   "tags": [
     "chat no site",
     "chat da loja",
@@ -288,7 +288,7 @@
       "style": "bullet",
       "items": [
         {
-          "content": "A conversa chega na caixa de entrada com o ícone do Webchat. Nas abas e nos filtros, o canal aparece como Web."
+          "content": "A conversa chega na caixa de entrada com o ícone do Webchat. Nas abas, o canal aparece pelo nome que você deu a ele; sem nome, como Web."
         },
         {
           "content": "Visitante que não se identificou aparece como Visitante seguido de um código de 5 caracteres, por exemplo Visitante ABC12."
@@ -297,10 +297,10 @@
           "content": "Não existe janela de 24 horas: dá para responder a qualquer momento."
         },
         {
-          "content": "O atendente pode enviar imagem, vídeo e documento. Áudio não está disponível neste canal."
+          "content": "O atendente pode enviar imagem, vídeo, documento e áudio gravado pelo microfone."
         },
         {
-          "content": "As mensagens rápidas funcionam como nos outros canais."
+          "content": "As mensagens rápidas funcionam como nos outros canais, menos as que têm áudio, que não aparecem no Webchat."
         }
       ]
     },
@@ -318,7 +318,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Abrir o chat não cria nada no CRM. A conversa e o contato nascem quando o visitante manda a primeira mensagem. Quando o seu site informa quem é o cliente, a conversa é ligada a ele: veja "
+          "text": "Abrir o chat não cria nada no CRM. A conversa e o contato nascem quando o visitante manda a primeira mensagem. A exceção é o cliente verificado, cujo contato já é ligado ou criado no momento da identificação. Quando o seu site informa quem é o cliente, a conversa é ligada a ele: veja "
         },
         {
           "type": "text",

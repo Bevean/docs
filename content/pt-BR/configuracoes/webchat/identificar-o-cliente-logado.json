@@ -18,7 +18,7 @@
   "body": [
     {
       "type": "paragraph",
-      "content": "Quando o cliente já fez login no seu site, você pode informar ao chat quem ele é. O atendente recebe a conversa com o nome do cliente em vez de Visitante, o pré-chat não aparece e o chat usa a Saudação para cliente identificado."
+      "content": "Quando o cliente já fez login no seu site, você pode informar ao chat quem ele é. O pré-chat não aparece e, quando o seu site informa o nome, o atendente vê esse nome em vez de Visitante e o chat usa a Saudação para cliente identificado. Só com o e-mail, o visitante continua como Visitante e recebe a saudação comum."
     },
     {
       "type": "paragraph",
@@ -62,7 +62,7 @@
             "content": "O seu servidor comprova a identidade com o segredo de verificação"
           },
           {
-            "content": "Que o cliente é mesmo quem diz ser. A conversa é ligada na hora ao contato com o mesmo e-mail ou telefone"
+            "content": "Que o cliente é mesmo quem diz ser. A conversa é ligada na hora ao contato com o mesmo e-mail ou telefone. Se não houver um, o contato é criado"
           }
         ]
       ]
