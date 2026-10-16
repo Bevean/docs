@@ -1,0 +1,587 @@
+{
+  "$schema": "../../../.vscode/schemas/article.schema.json",
+  "title": "Automações que conversam, o pedido inteiro no e-mail e dois relatórios novos",
+  "subtitle": "Duas semanas de entregas: a automação espera a resposta do cliente e olha o relógio, o e-mail mostra o pedido completo, e você enxerga o consumo do WhatsApp e o funil do atendimento.",
+  "updatedAt": "2026-10-16",
+  "publishedAt": "2026-10-15",
+  "tags": [
+    "Automações",
+    "Atendimento",
+    "Conteúdos",
+    "Análises"
+  ],
+  "related": [
+    "automacoes/automacoes/esperar-a-resposta-do-contato",
+    "conteudos/modelos/usar-variaveis",
+    "analises/analises/consumo-whatsapp-oficial",
+    "atendimento/mensagens-rapidas/liberar-templates-para-reabrir-conversas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Nas duas primeiras semanas de outubro, as automações ganharam o que faltava para conversar de verdade com o cliente: esperar a resposta dele, decidir pelo que ele escreveu e pelo horário, e saber o que ele já comprou. O e-mail passou a mostrar o pedido inteiro, e dois relatórios novos mostram o consumo do WhatsApp Oficial e o funil do atendimento."
+    },
+    {
+      "type": "pillars",
+      "items": [
+        {
+          "title": "Automações que conversam",
+          "content": "Esperar a resposta, decidir pelo texto e pelo horário, e gatilhos novos."
+        },
+        {
+          "title": "O pedido no e-mail",
+          "content": "Produtos, resumo, pagamento, PIX e endereço de entrega, prontos para usar."
+        },
+        {
+          "title": "Relatórios novos",
+          "content": "Consumo do WhatsApp Oficial e funil do atendimento, por etapa."
+        },
+        {
+          "title": "Mais integrações",
+          "content": "TKTR e GestãoClick chegam; Conta Azul conecta sem credencial."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Fora da janela de 24 horas do WhatsApp Oficial, quem reabre a conversa agora é um modelo aprovado e liberado para o chat. As mensagens rápidas que estavam aprovadas na Meta viraram modelos e já aparecem na aba WhatsApp Templates. As mensagens rápidas continuam no “/” do chat, como sempre."
+        }
+      ],
+      "title": "Uma mudança no que você já usa: mensagem rápida não reabre mais conversa"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Automações que conversam com o cliente"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O passo "
+        },
+        {
+          "type": "text",
+          "text": "Esperar resposta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para a jornada até o contato escrever e guarda o texto numa variável. Na Condição, o grupo "
+        },
+        {
+          "type": "text",
+          "text": "Resposta do contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " decide o caminho pelo que ele escreveu: dá para montar um atendimento automático de perguntas e respostas sem sair do fluxo."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Condição de horário:",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " manda o contato por um caminho dentro do expediente e por outro fora dele, com dias, faixas e fuso."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Histórico de compras:",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " a Condição sabe quantos pedidos o contato já fez, quanto gastou e quando foi a última compra, de toda a vida dele, não só desde que entrou no fluxo."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Gatilhos novos:",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " Formulário enviado, com o cupom e o prêmio da roleta; Giftback gerado e Giftback vencendo; Entrou e Saiu de uma etapa do atendimento; e, na Yampi, frete selecionado, pagamento selecionado e pagamento recusado no checkout."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Disparador externo:",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " pode cadastrar o contato quando ele ainda não existe, e o histórico de eventos ganhou filtros, busca e reprocessar."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "SMS e RCS",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " agora aparecem como entregues ou com falha nos resultados."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O pedido inteiro no e-mail"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O editor de e-mail ganhou o bloco "
+        },
+        {
+          "type": "text",
+          "text": "Pedido",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": a lista de produtos com imagem, quantidade e preço, e o resumo com subtotal, desconto, frete e total. Nas mensagens, o grupo de variáveis "
+        },
+        {
+          "type": "text",
+          "text": "Pedido",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " passou a trazer forma e status do pagamento, código PIX copia e cola, link do boleto, vencimento e o endereço de entrega, inteiro ou em partes."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "É o que faltava para a confirmação de pedido e o lembrete de pagamento saírem completos."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Atendimento: modelos liberados para reabrir conversas"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em Configurações › Mensagens rápidas, a aba nova "
+        },
+        {
+          "type": "text",
+          "text": "WhatsApp Templates",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " reúne os modelos aprovados que o atendente pode usar para reabrir uma conversa depois de 24 horas. Você também libera direto no editor do modelo, com a chave "
+        },
+        {
+          "type": "text",
+          "text": "Usar como abertura de janela no chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "E no WhatsApp Web, o anexo que o cliente mandou e não baixou não some mais: ele aparece com o botão para tentar baixar de novo."
+    },
+    {
+      "type": "callout",
+      "variant": "spotlight",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Sem nenhum modelo liberado, o atendente vê “Nenhum modelo aprovado encontrado para este canal.” e não tem como voltar a falar com o cliente fora da janela de 24 horas."
+        }
+      ],
+      "title": "Para reabrir conversas no WhatsApp Oficial, libere os modelos na aba WhatsApp Templates"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Dois relatórios novos"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Consumo WhatsApp Oficial:",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " quantas respostas cada número enviou, quanto já usou da franquia de 1.000 por mês, a projeção até o fim do mês e o custo, por contato, atendente e time."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Funil de atendimento:",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " quantos atendimentos entraram, a taxa de ganho, o tempo até encerrar, os parados há mais de 24 horas, o funil por etapa e os motivos de perda, com a base para exportar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Integrações"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "TKTR",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", a plataforma de venda de ingressos, e "
+            },
+            {
+              "type": "text",
+              "text": "GestãoClick",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", de gestão, entram no catálogo."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Conta Azul",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " conecta só com a autorização na própria Conta Azul, sem criar aplicativo nem copiar credencial."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Nuvemshop",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Tiny",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ganham "
+            },
+            {
+              "type": "text",
+              "text": "Reconectar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", que renova o acesso sem perder configurações nem dados."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "wBuy",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " passa a enviar pedidos, clientes, produtos e carrinhos na hora, por aviso automático."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "E mais"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Cashback e giftback",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ganharam a opção de não gerar para clientes cadastrados com CNPJ."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Roleta",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " dos formulários: o formulário não publica com uma fatia incompleta ou com chances que não somam 100%, em vez de esconder a fatia em silêncio."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Faturas",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ganharam o botão "
+            },
+            {
+              "type": "text",
+              "text": "Detalhamento",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", que explica o valor linha a linha."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Minhas mensagens rápidas que estavam aprovadas na Meta sumiram?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Elas viraram modelos e estão na aba WhatsApp Templates, já liberadas para reabrir conversas."
+            }
+          ]
+        },
+        {
+          "question": "Os gatilhos de frete, pagamento selecionado e pagamento recusado funcionam na minha loja?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Por enquanto, só nas lojas Yampi com a sincronização de carrinhos ligada. Nas outras plataformas, o próprio gatilho avisa que a loja ainda não envia esses eventos."
+            }
+          ]
+        },
+        {
+          "question": "Preciso mudar alguma automação que já funciona?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Tudo o que entrou é novo e opcional. A única mudança de comportamento é a de reabrir conversas, que agora usa os modelos liberados."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Como usar cada parte",
+      "items": [
+        {
+          "ref": "automacoes/automacoes/esperar-a-resposta-do-contato",
+          "description": "Esperar a resposta e decidir o caminho pelo que o cliente escreveu."
+        },
+        {
+          "ref": "automacoes/automacoes/usar-acoes-condicoes-e-o-randomizador",
+          "description": "Condição de horário e histórico de compras."
+        },
+        {
+          "ref": "conteudos/modelos/criar-um-modelo-de-email",
+          "description": "O bloco Pedido no editor de e-mail."
+        },
+        {
+          "ref": "atendimento/mensagens-rapidas/liberar-templates-para-reabrir-conversas",
+          "description": "Liberar modelos para reabrir conversas."
+        },
+        {
+          "ref": "analises/analises/consumo-whatsapp-oficial",
+          "description": "Ler o Consumo WhatsApp Oficial."
+        },
+        {
+          "ref": "analises/analises/funil-de-atendimento",
+          "description": "Ler o Funil de atendimento."
+        }
+      ]
+    }
+  ]
+}
