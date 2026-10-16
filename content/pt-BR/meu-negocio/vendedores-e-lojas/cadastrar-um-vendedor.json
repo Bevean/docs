@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Cadastrar um vendedor",
   "subtitle": "Os campos do cadastro, e a diferença entre desativar e excluir.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "cadastrar vendedor",
     "novo vendedor",
@@ -119,6 +119,133 @@
           }
         ]
       ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Encontrar um vendedor na lista"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A lista de vendedores mostra a "
+        },
+        {
+          "type": "text",
+          "text": "Loja",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e o "
+        },
+        {
+          "type": "text",
+          "text": "Usuário",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " de cada um, e tem dois filtros fixos no topo:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Filtro"
+        },
+        {
+          "content": "Opções"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Loja"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Com loja",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Sem loja",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou uma loja específica"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Usuário"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Com usuário",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Sem usuário",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou um usuário específico"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Os filtros servem, por exemplo, para achar quem ainda não está ligado a uma loja ou a um usuário da equipe."
     },
     {
       "type": "heading",

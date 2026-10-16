@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Vendedor ou loja não aparece no cliente",
   "subtitle": "Por que o cadastro sozinho não conecta vendedor/loja a um cliente, e onde não fica o desempenho de vendas.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "vendedor não aparece",
     "loja não aparece",
@@ -28,7 +28,51 @@
     },
     {
       "type": "paragraph",
-      "content": "Essa tela não tem relatório de vendas por vendedor. A aba \"Top sellers\" que aparece em Segmentos mostra os produtos mais vendidos — não o desempenho de uma pessoa."
+      "content": [
+        {
+          "type": "text",
+          "text": "Não nesta tela. Em "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "reports"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", o relatório "
+        },
+        {
+          "type": "text",
+          "text": "Vendas por vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra as vendas de cada vendedor. Veja o "
+        },
+        {
+          "type": "text",
+          "text": "catálogo de relatórios",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "analises/analises/catalogo-de-relatorios"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". A aba “Top sellers” que aparece em Segmentos é outra coisa: mostra os produtos mais vendidos, não o desempenho de uma pessoa."
+        }
+      ]
     },
     {
       "type": "heading",
