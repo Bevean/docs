@@ -1,13 +1,14 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Catálogo de relatórios de Atendimento",
-  "subtitle": "Os 14 relatórios do helpdesk: produtividade, SLA, CSAT, tabulação e sentimento.",
-  "updatedAt": "2026-09-08",
+  "subtitle": "Os 15 relatórios do helpdesk: produtividade, SLA, CSAT, tabulação, funil e sentimento.",
+  "updatedAt": "2026-10-16",
   "tags": [
     "relatórios de atendimento",
     "csat",
     "sla",
-    "produtividade dos atendentes"
+    "produtividade dos atendentes",
+    "funil de atendimento"
   ],
   "related": [
     "analises/analises/catalogo-de-relatorios",
@@ -23,7 +24,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Na lista, doze deles aparecem como "
+          "text": "Na lista, treze deles aparecem como "
         },
         {
           "type": "text",
@@ -166,6 +167,14 @@
           },
           {
             "content": "Motivo de fechamento por atendimento — ranking, taxa de tabulação e por atendente."
+          }
+        ],
+        [
+          {
+            "content": "Funil de atendimento"
+          },
+          {
+            "content": "Volume, tempo e resultado por etapa, por atendente e por motivo, com a base para exportar."
           }
         ],
         [

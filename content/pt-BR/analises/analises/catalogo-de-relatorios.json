@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Catálogo de relatórios",
   "subtitle": "A lista completa de relatórios de Receita & Vendas, Clientes & Base, Retenção & LTV, Produtos e Mensageria.",
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-10-16",
   "tags": [
     "catálogo de relatórios",
     "lista de relatórios",
@@ -536,8 +536,27 @@
           {
             "content": "Entrega, leitura, resposta e conexão do WhatsApp."
           }
+        ],
+        [
+          {
+            "content": "Consumo WhatsApp Oficial"
+          },
+          {
+            "content": "Quantas respostas saíram por número, quanto passou da franquia e o custo."
+          }
         ]
       ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O relatório mostra o consumo por contato e por atendente, que é dado de conversa. Por isso, além da permissão de Análises, abrir ele exige a de Atendimento."
+        }
+      ],
+      "title": "Consumo WhatsApp Oficial pede também a permissão de Atendimento"
     },
     {
       "type": "callout",

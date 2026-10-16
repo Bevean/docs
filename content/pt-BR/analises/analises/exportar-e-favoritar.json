@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Exportar e favoritar um relatório",
   "subtitle": "O CSV pronto para o Excel em português, e como favoritar um relatório para achar mais rápido depois.",
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-10-16",
   "tags": [
     "exportar csv",
     "favoritar relatório"
@@ -63,10 +63,58 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "Nesses dois o botão fica sempre visível, apenas desabilitado quando não há linhas — e a exportação baixa o resultado inteiro, até cinco mil linhas, não apenas a página que está na tela."
+          "content": "Nesses três a exportação baixa o resultado inteiro, até 5.000 linhas, não apenas a página que está na tela. Quando o período passa disso, o Relatório de SLA e o Funil de atendimento avisam, por exemplo: “O período tem 7.200 atendimentos; a exportação traz os 5.000 mais recentes.”"
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "O CSV do Relatório de SLA traz também a coluna "
+            },
+            {
+              "type": "text",
+              "text": "Tipo da tabulação",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". O Funil de atendimento exporta duas bases: "
+            },
+            {
+              "type": "text",
+              "text": "Atendimentos",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Movimentações de etapa",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
         }
       ],
-      "title": "No Relatório de SLA e na Primeira resposta é diferente"
+      "title": "No Relatório de SLA, na Primeira resposta e no Funil de atendimento é diferente"
     },
     {
       "type": "callout",
