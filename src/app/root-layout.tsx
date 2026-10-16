@@ -7,7 +7,11 @@ import { BeveanLogo, BeveanMark } from './logo.tsx'
 import { ThemeToggle } from './theme-toggle.tsx'
 import { NEWS_URL } from '@/content/news.ts'
 
-const EXTERNAL_NAV = [{ label: 'CRM Club', href: 'https://bevean.com/crm-club' }]
+const EXTERNAL_NAV = [
+  { label: 'API', href: 'https://api.bevean.com/docs/' },
+  { label: 'MCP', href: 'https://mcp.bevean.com/docs' },
+  { label: 'CRM Club', href: 'https://bevean.com/crm-club' }
+]
 
 export function RootLayout() {
   const [searchOpen, setSearchOpen] = useState(false)
