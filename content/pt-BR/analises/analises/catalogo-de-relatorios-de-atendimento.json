@@ -174,7 +174,28 @@
             "content": "Funil de atendimento"
           },
           {
-            "content": "Volume, tempo e resultado por etapa, por atendente e por motivo, com a base para exportar."
+            "content": [
+              {
+                "type": "text",
+                "text": "Volume, tempo e resultado por etapa, por atendente e por motivo, com a base para exportar. Veja "
+              },
+              {
+                "type": "text",
+                "text": "como ler",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "analises/analises/funil-de-atendimento"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ],
         [

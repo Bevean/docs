@@ -542,7 +542,28 @@
             "content": "Consumo WhatsApp Oficial"
           },
           {
-            "content": "Quantas respostas saíram por número, quanto passou da franquia e o custo."
+            "content": [
+              {
+                "type": "text",
+                "text": "Quantas respostas saíram por número, quanto passou da franquia e o custo. Veja "
+              },
+              {
+                "type": "text",
+                "text": "como ler",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "analises/analises/consumo-whatsapp-oficial"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ]
       ]

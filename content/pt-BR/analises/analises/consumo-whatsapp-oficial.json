@@ -1,0 +1,424 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Consumo WhatsApp Oficial",
+  "subtitle": "Quantas respostas saíram por número, quanto passou da franquia de 1.000 por mês e quanto isso custa.",
+  "updatedAt": "2026-10-16",
+  "tags": [
+    "consumo whatsapp",
+    "franquia",
+    "respostas cobradas",
+    "custo",
+    "whatsapp oficial"
+  ],
+  "related": [
+    "analises/analises/catalogo-de-relatorios",
+    "configuracoes/whatsapp-oficial/adicionar-forma-de-pagamento-na-meta",
+    "analises/analises/ler-um-relatorio"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O relatório mostra quanto o atendimento usa de cada número de WhatsApp Oficial: as respostas enviadas, quanto da franquia mensal já foi consumido e o custo do que passou dela."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "reports"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", em "
+        },
+        {
+          "type": "text",
+          "text": "Mensageria",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no relatório "
+        },
+        {
+          "type": "text",
+          "text": "Consumo WhatsApp Oficial",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Abrir exige a permissão de Análises e também a de Atendimento, porque ele mostra o consumo por contato e por atendente."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como contamos"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Termo"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Resposta"
+          },
+          {
+            "content": "Mensagem enviada ao cliente dentro da conversa pelo atendente, pelo agente de IA ou pela automação do atendimento. Templates de campanha, notas internas, linhas de transferência e envios com erro não contam"
+          }
+        ],
+        [
+          {
+            "content": "Franquia"
+          },
+          {
+            "content": "1.000 respostas por número a cada mês. Não acumula de um mês para o outro"
+          }
+        ],
+        [
+          {
+            "content": "Resposta cobrada"
+          },
+          {
+            "content": "A partir da 1.000ª resposta do número no mês"
+          }
+        ],
+        [
+          {
+            "content": "Anúncios"
+          },
+          {
+            "content": "Conversas iniciadas por anúncio Click-to-WhatsApp têm 72 horas grátis e não consomem a franquia"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os filtros e o preço"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Escolha o período e o "
+        },
+        {
+          "type": "text",
+          "text": "Número",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", ou "
+        },
+        {
+          "type": "text",
+          "text": "Todos os números",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O campo "
+        },
+        {
+          "type": "text",
+          "text": "R$ por resposta cobrada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " vem com o preço da sua condição comercial; altere para simular outro preço. O custo do relatório é sempre respostas cobradas vezes esse preço."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os números do topo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Número"
+        },
+        {
+          "content": "O que mede"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Total de respostas"
+          },
+          {
+            "content": "Todas as respostas enviadas, incluindo as grátis de anúncio"
+          }
+        ],
+        [
+          {
+            "content": "Respostas cobradas"
+          },
+          {
+            "content": "As respostas acima das 1.000 do mês de cada número"
+          }
+        ],
+        [
+          {
+            "content": "Respostas por conversa"
+          },
+          {
+            "content": "Total de respostas dividido pelas conversas com resposta"
+          }
+        ],
+        [
+          {
+            "content": "Custo por conversa"
+          },
+          {
+            "content": "Custo dividido pelas conversas com ao menos uma resposta"
+          }
+        ],
+        [
+          {
+            "content": "Custo no período"
+          },
+          {
+            "content": "Respostas cobradas vezes o preço por resposta"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os blocos da tela"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Bloco"
+        },
+        {
+          "content": "O que mostra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Evolução"
+          },
+          {
+            "content": "As respostas ao longo do período, em linhas ou barras"
+          }
+        ],
+        [
+          {
+            "content": "Uso da franquia"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "As respostas acumuladas no mês por número, com a linha das 1.000 grátis e a projeção tracejada até o fim do mês. Cada número ganha a marca "
+              },
+              {
+                "type": "text",
+                "text": "Passou no dia",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Deve passar dia",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou "
+              },
+              {
+                "type": "text",
+                "text": "Dentro da franquia",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Custo por número"
+          },
+          {
+            "content": "Respostas, conversas e custo de cada número no período"
+          }
+        ],
+        [
+          {
+            "content": "Por consumo"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Os 10 maiores do período, nas abas "
+              },
+              {
+                "type": "text",
+                "text": "Contato",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "Atendente",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e "
+              },
+              {
+                "type": "text",
+                "text": "Time",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Respostas da IA e da automação aparecem juntas como "
+              },
+              {
+                "type": "text",
+                "text": "IA / automação",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A franquia é do número e vai sendo consumida na ordem em que as respostas saem. Por isso o valor cobrado de cada contato, atendente ou time é uma divisão proporcional, não uma atribuição exata. A soma fecha com o total."
+        }
+      ],
+      "title": "O cobrado por contato, atendente ou time é um rateio"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para o WhatsApp Oficial continuar enviando depois da franquia, a conta da Meta precisa de uma forma de pagamento. Veja "
+        },
+        {
+          "type": "text",
+          "text": "adicionar a forma de pagamento na Meta",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "configuracoes/whatsapp-oficial/adicionar-forma-de-pagamento-na-meta"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Veja também",
+      "items": [
+        {
+          "ref": "analises/analises/catalogo-de-relatorios",
+          "description": "Os outros relatórios de Mensageria."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Funil de atendimento",
+  "subtitle": "Volume, tempo e resultado por etapa do funil, por atendente e por motivo, com a base de atendimentos para exportar.",
+  "updatedAt": "2026-10-16",
+  "tags": [
+    "funil de atendimento",
+    "taxa de ganho",
+    "motivos de perda",
+    "etapas",
+    "pipeline"
+  ],
+  "related": [
+    "analises/analises/catalogo-de-relatorios-de-atendimento",
+    "analises/analises/exportar-e-favoritar",
+    "atendimento/pipeline/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O relatório mostra quantos atendimentos entraram, quantos terminaram em ganho ou perda, quanto tempo levaram e por onde passaram no funil do atendimento."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "reports"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", na área de Atendimento, no relatório "
+        },
+        {
+          "type": "text",
+          "text": "Funil de atendimento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Ele exige a permissão de Análises e a de Atendimento juntas."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Filtros"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Além do período, filtre por "
+        },
+        {
+          "type": "text",
+          "text": "Canal",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Time",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Atendente",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os números do topo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Número"
+        },
+        {
+          "content": "O que mede"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Atendimentos"
+          },
+          {
+            "content": "Atendimentos que entraram no período. Uma conversa reaberta conta como outro atendimento"
+          }
+        ],
+        [
+          {
+            "content": "Taxa de ganho"
+          },
+          {
+            "content": "Ganhos sobre o total de atendimentos com resultado, ganho ou perda"
+          }
+        ],
+        [
+          {
+            "content": "Tempo médio até encerrar"
+          },
+          {
+            "content": "Tempo médio entre a entrada e o encerramento, só dos atendimentos encerrados, incluindo os que expiraram sem resposta"
+          }
+        ],
+        [
+          {
+            "content": "Parados há mais de 24 h"
+          },
+          {
+            "content": "Atendimentos abertos, não adiados, sem mensagem de cliente ou atendente há mais de 24 horas. É um retrato de agora"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O resultado de cada atendimento é o que está marcado no motivo de encerramento usado, nas configurações do atendimento. Atendimento encerrado com um motivo sem resultado não entra na taxa de ganho."
+        }
+      ],
+      "title": "Ganho e perda vêm do motivo de encerramento"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os blocos da tela"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Bloco"
+        },
+        {
+          "content": "O que mostra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Funil por etapa"
+          },
+          {
+            "content": "Para cada etapa: as conversas que entraram, a porcentagem, o tempo médio na etapa e quantos atendimentos estão abertos nela agora"
+          }
+        ],
+        [
+          {
+            "content": "Motivos de perda"
+          },
+          {
+            "content": "Os motivos marcados como perda, do mais frequente ao menos"
+          }
+        ],
+        [
+          {
+            "content": "Resultado por atendente, time ou canal"
+          },
+          {
+            "content": "Atendimentos, ganhos, perdas, taxa de ganho e tempo médio de cada um"
+          }
+        ],
+        [
+          {
+            "content": "Atendimentos"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A lista linha a linha, com entrada, cliente, atendente, time, canal, status, etapa atual, motivo, resultado, primeira resposta e duração. "
+              },
+              {
+                "type": "text",
+                "text": "Ver caminho no funil",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " mostra as etapas por onde aquele atendimento passou"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Os filtros de atendente, time e canal não se aplicam a esse bloco. E o histórico de etapas tem uma data de início, que a própria tela informa: movimentações anteriores não aparecem."
+        }
+      ],
+      "title": "O Funil por etapa só considera o período"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Exportar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A exportação traz duas bases: "
+        },
+        {
+          "type": "text",
+          "text": "Atendimentos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com uma linha por atendimento, e "
+        },
+        {
+          "type": "text",
+          "text": "Movimentações de etapa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com uma linha por troca de etapa. A exportação considera até os 5.000 atendimentos mais recentes do período; quando há mais, a tela avisa."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Veja também",
+      "items": [
+        {
+          "ref": "analises/analises/catalogo-de-relatorios-de-atendimento",
+          "description": "Os outros relatórios de Atendimento."
+        },
+        {
+          "ref": "analises/analises/exportar-e-favoritar",
+          "description": "Como funciona a exportação em CSV."
+        }
+      ]
+    }
+  ]
+}
