@@ -240,7 +240,7 @@
             "content": "A TKTR recusou o Client ID ou o Client Secret informados. Confira se são as credenciais de produção da loja."
           },
           {
-            "content": "Confira se copiou os dois valores inteiros e se são de produção, não de homologação"
+            "content": "Confira se copiou os dois valores inteiros e se são as credenciais de produção da loja"
           }
         ],
         [
