@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Enviar mensagens e notas internas",
   "subtitle": "O que pode ser enviado ao cliente, o que muda fora da janela de 24h, e como escrever uma nota que só a equipe vê.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "enviar mensagem",
     "nota interna",
@@ -61,7 +61,115 @@
     },
     {
       "type": "paragraph",
-      "content": "Em WhatsApp Oficial, Instagram e Messenger, depois de 24h sem mensagem do cliente, o texto livre trava e só um modelo aprovado pode reabrir a conversa — o compositor troca sozinho para \"Selecionar modelo\"."
+      "content": [
+        {
+          "type": "text",
+          "text": "Em WhatsApp Oficial, Instagram e Messenger, depois de 24 horas sem mensagem do cliente, o texto livre trava. O compositor mostra "
+        },
+        {
+          "type": "text",
+          "text": "Janela de 24 horas encerrada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e os botões "
+        },
+        {
+          "type": "text",
+          "text": "Selecionar modelo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Acionar automação",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (para quem pode acionar) e "
+        },
+        {
+          "type": "text",
+          "text": "Escrever nota interna",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No WhatsApp Oficial, "
+        },
+        {
+          "type": "text",
+          "text": "Selecionar modelo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " lista os modelos aprovados pela Meta e liberados para o chat daquela conta. Quem decide quais são é quem configura o atendimento, em "
+        },
+        {
+          "type": "text",
+          "text": "liberar templates para reabrir conversas",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/mensagens-rapidas/liberar-templates-para-reabrir-conversas"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Sem nenhum liberado, aparece "
+        },
+        {
+          "type": "text",
+          "text": "Nenhum modelo aprovado encontrado para este canal.",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Instagram e Messenger não usam modelos. Fora da janela, a conversa volta quando o cliente escrever de novo."
     },
     {
       "type": "heading",

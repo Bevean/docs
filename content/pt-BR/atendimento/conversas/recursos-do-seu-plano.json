@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "O que muda sem o módulo de Atendimento",
   "subtitle": "O que o atendimento básico permite, o que pede o módulo e onde o aviso de recurso bloqueado aparece.",
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-16",
   "tags": [
     "plano",
     "contrato",
@@ -141,20 +141,7 @@
               },
               {
                 "type": "text",
-                "text": ", "
-              },
-              {
-                "type": "text",
-                "text": "Todos",
-                "marks": [
-                  {
-                    "type": "bold"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "text": ", "
+                "text": " e "
               },
               {
                 "type": "text",
@@ -167,7 +154,20 @@
               },
               {
                 "type": "text",
-                "text": " e a aba da IA, quando há IA atendendo."
+                "text": " para todos. "
+              },
+              {
+                "type": "text",
+                "text": "Todos",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e a aba da IA, quando há IA atendendo, só para quem coordena o atendimento."
               }
             ]
           }
@@ -358,7 +358,7 @@
             "content": "Não aparecem."
           },
           {
-            "content": "Aparecem no painel do contato e nos filtros da lista."
+            "content": "A etapa aparece no painel do contato, a intenção de compra nos filtros da lista, e o sentimento nos dois."
           }
         ]
       ]
@@ -418,7 +418,7 @@
             },
             {
               "type": "text",
-              "text": "Lembrar",
+              "text": "Lembrar em",
               "marks": [
                 {
                   "type": "bold"
@@ -488,7 +488,51 @@
     },
     {
       "type": "paragraph",
-      "content": "Os itens continuam na barra lateral. Ao abrir uma tela do módulo, ela mostra que o recurso está bloqueado e o que o Atendimento completo libera."
+      "content": [
+        {
+          "type": "text",
+          "text": "Os ícones continuam na barra lateral para quem já os via: "
+        },
+        {
+          "type": "text",
+          "text": "Painel",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " aparece só para supervisores, "
+        },
+        {
+          "type": "text",
+          "text": "Ajustes",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " só para quem configura o atendimento, e "
+        },
+        {
+          "type": "text",
+          "text": "Qualidade da IA",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " fica no menu do seu avatar, para supervisores de contas com IA. Ao abrir uma tela do módulo, ela mostra que o recurso está bloqueado e o que o Atendimento completo libera."
+        }
+      ]
     },
     {
       "type": "table",
@@ -578,12 +622,16 @@
             "content": [
               {
                 "type": "text",
-                "text": "Configurações",
+                "text": "Ajustes",
                 "marks": [
                   {
                     "type": "bold"
                   }
                 ]
+              },
+              {
+                "type": "text",
+                "text": " (Configurações)"
               }
             ]
           },
@@ -629,7 +677,7 @@
           "content": [
             {
               "type": "text",
-              "text": "Na tela de recurso bloqueado, "
+              "text": "Quando há uma oferta, a tela de recurso bloqueado mostra "
             },
             {
               "type": "text",
@@ -642,7 +690,7 @@
             },
             {
               "type": "text",
-              "text": " abre uma conversa com o time da Bevean. Quem não é administrador da conta vê também "
+              "text": ", que abre uma conversa com o time da Bevean. O administrador da conta pode liberar o módulo ali mesmo. Quem não é administrador vê "
             },
             {
               "type": "text",
@@ -671,9 +719,31 @@
               "text": " depois do clique."
             }
           ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Sem oferta, aparece só "
+            },
+            {
+              "type": "text",
+              "text": "Falar com o comercial",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
         }
       ],
-      "title": "Quem não é administrador pode pedir a liberação pela própria tela"
+      "title": "Dá para pedir a liberação pela própria tela"
     },
     {
       "type": "heading",
@@ -734,12 +804,7 @@
         },
         {
           "type": "text",
-          "text": "Configurar canal",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "text": "o ícone de lápis"
         },
         {
           "type": "text",

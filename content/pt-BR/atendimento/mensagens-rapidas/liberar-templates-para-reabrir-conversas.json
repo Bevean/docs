@@ -1,0 +1,468 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Liberar templates para reabrir conversas",
+  "subtitle": "Escolha quais modelos aprovados pela Meta o atendente pode usar para voltar a falar com o cliente depois de 24 horas sem resposta.",
+  "updatedAt": "2026-10-16",
+  "tags": [
+    "reabrir conversa",
+    "janela de 24 horas",
+    "template",
+    "whatsapp templates",
+    "modelo aprovado",
+    "aprovação meta"
+  ],
+  "aliases": [
+    "atendimento/mensagens-rapidas/aprovar-na-meta"
+  ],
+  "related": [
+    "atendimento/conversas/enviar-mensagens-e-notas",
+    "conteudos/modelos/aprovar-um-modelo-de-whatsapp-oficial",
+    "atendimento/mensagens-rapidas/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "No WhatsApp Oficial, depois de 24 horas sem mensagem do cliente, a conversa só reabre com um modelo aprovado pela Meta. Quem decide quais modelos o atendente pode usar nessa hora é você."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.settings.quick_replies"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", aba "
+        },
+        {
+          "type": "text",
+          "text": "WhatsApp Templates",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Mensagens rápidas servem para o “/” do chat, com a conversa aberta, e não passam pela Meta. Para reabrir a janela, o modelo é criado e aprovado em "
+            },
+            {
+              "type": "uiPath",
+              "attrs": {
+                "ref": "content.templates"
+              }
+            },
+            {
+              "type": "text",
+              "text": " e depois liberado para o chat."
+            }
+          ]
+        }
+      ],
+      "title": "Mensagem rápida não reabre conversa"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Liberar modelos que já estão aprovados"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra a aba WhatsApp Templates",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A lista mostra os modelos já liberados, com a situação na Meta e a categoria de cada um."
+            }
+          ]
+        },
+        {
+          "title": "Clique em Selecionar templates",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A janela mostra os modelos aprovados pela Meta que ainda não estão no chat. Busque pelo nome e marque quantos quiser."
+            }
+          ]
+        },
+        {
+          "title": "Clique em Liberar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "O botão diz quantos você marcou, por exemplo "
+                },
+                {
+                  "type": "text",
+                  "text": "Liberar 2 templates",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". A mensagem "
+                },
+                {
+                  "type": "text",
+                  "text": "2 templates liberados para o chat",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " confirma."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ainda não tem o modelo? O botão "
+        },
+        {
+          "type": "text",
+          "text": "Criar template no CRM",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " abre o editor de modelos numa nova aba. O passo a passo da aprovação está em "
+        },
+        {
+          "type": "text",
+          "text": "aprovar um modelo de WhatsApp Oficial",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "conteudos/modelos/aprovar-um-modelo-de-whatsapp-oficial"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Liberar direto no editor do modelo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No editor de modelo de WhatsApp Oficial, ligue "
+        },
+        {
+          "type": "text",
+          "text": "Usar como abertura de janela no chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no fim da barra lateral. É a mesma liberação da aba WhatsApp Templates: o que você liga num lugar aparece no outro. A chave só aparece se a sua conta tem o módulo de Atendimento."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na lista de modelos, os liberados ganham o selo "
+        },
+        {
+          "type": "text",
+          "text": "Chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e o filtro "
+        },
+        {
+          "type": "text",
+          "text": "Chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " separa "
+        },
+        {
+          "type": "text",
+          "text": "Liberado no chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " de "
+        },
+        {
+          "type": "text",
+          "text": "Fora do chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Dá para liberar um modelo que ainda está em análise, mas ele só aparece na conversa quando a Meta aprova. E a aprovação vale por conta de WhatsApp Oficial: um modelo aprovado numa conta não aparece nas conversas de outra."
+        }
+      ],
+      "title": "O atendente só vê o modelo depois de aprovado"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Remover um modelo do chat"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na aba WhatsApp Templates, clique em "
+        },
+        {
+          "type": "text",
+          "text": "Remover do chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na linha do modelo e confirme em "
+        },
+        {
+          "type": "text",
+          "text": "Remover",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Ele deixa de aparecer para o atendente, mas continua em Modelos e pode voltar depois."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o atendente vê"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Com a janela fechada, o compositor mostra "
+        },
+        {
+          "type": "text",
+          "text": "Janela de 24 horas encerrada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e o botão "
+        },
+        {
+          "type": "text",
+          "text": "Selecionar modelo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". A lista traz só os modelos aprovados e liberados da conta de WhatsApp Oficial daquela conversa. O atendente escolhe um, preenche o que o modelo pedir e envia."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Sem nenhum modelo disponível, aparece "
+        },
+        {
+          "type": "text",
+          "text": "Nenhum modelo aprovado encontrado para este canal.",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Para quem configura o atendimento, a mensagem vem com o link "
+        },
+        {
+          "type": "text",
+          "text": "Gerenciar templates do chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que abre esta aba."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Um modelo liberado não aparece para o atendente. Por quê?",
+          "answer": [
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                {
+                  "content": "Ele ainda não foi aprovado pela Meta."
+                },
+                {
+                  "content": "Ele foi aprovado em outra conta de WhatsApp Oficial, não na da conversa."
+                },
+                {
+                  "content": "A conversa é do Instagram ou do Messenger, que não usam modelos: fora da janela, é preciso esperar o cliente escrever de novo."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Apareceu “Não foi possível salvar. Confira se você tem permissão para editar templates.”",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Liberar e remover mexem no próprio modelo, então além de configurar o atendimento você precisa da permissão de editar modelos. Peça a quem administra a conta."
+            }
+          ]
+        },
+        {
+          "question": "As mensagens rápidas que antes eram aprovadas na Meta sumiram?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. As que estavam aprovadas viraram modelos e aparecem na aba WhatsApp Templates. Mensagem rápida não vai mais para a Meta."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Veja também",
+      "items": [
+        {
+          "ref": "atendimento/conversas/enviar-mensagens-e-notas",
+          "description": "O que muda no compositor fora da janela de 24 horas."
+        },
+        {
+          "ref": "conteudos/modelos/aprovar-um-modelo-de-whatsapp-oficial",
+          "description": "Criar e aprovar o modelo na Meta."
+        }
+      ]
+    }
+  ]
+}

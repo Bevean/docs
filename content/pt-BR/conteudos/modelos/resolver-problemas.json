@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Modelo rejeitado, travado para edição, ou carrossel não aparece",
   "subtitle": "O que fazer com um modelo rejeitado pela Meta, por que um modelo aprovado não pode ser editado direto, e por que o carrossel some no WhatsApp Web.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "modelo rejeitado",
     "não consigo editar modelo",
@@ -83,7 +83,32 @@
           "answer": [
             {
               "type": "paragraph",
-              "content": "Modelos de WhatsApp, SMS e RCS têm uma opção \"Habilitar para o chat\" — quando marcada, o modelo pode ser usado como mensagem rápida durante o atendimento."
+              "content": "Não como mensagem rápida do “/”. Um modelo de WhatsApp Oficial aprovado pode ser liberado para o atendente reabrir conversas depois de 24 horas sem resposta, com a chave Usar como abertura de janela no chat no editor do modelo."
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Veja "
+                },
+                {
+                  "type": "text",
+                  "text": "liberar templates para reabrir conversas",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "atendimento/mensagens-rapidas/liberar-templates-para-reabrir-conversas"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
             }
           ]
         }

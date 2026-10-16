@@ -1,15 +1,15 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
-  "title": "Mensagem rápida não aparece, ou não consigo editar",
-  "subtitle": "Anexo incompatível com o canal escondendo a mensagem, e a edição travada durante a análise da Meta.",
-  "updatedAt": "2026-09-03",
+  "title": "Mensagem rápida não aparece, ou o modelo para reabrir não está na lista",
+  "subtitle": "Anexo incompatível com o canal escondendo a mensagem, e o modelo que não aparece ao reabrir uma conversa.",
+  "updatedAt": "2026-10-16",
   "tags": [
     "mensagem rápida não aparece",
     "não consigo editar mensagem rápida"
   ],
   "related": [
     "atendimento/mensagens-rapidas/usar-no-chat",
-    "atendimento/mensagens-rapidas/aprovar-na-meta"
+    "atendimento/mensagens-rapidas/liberar-templates-para-reabrir-conversas"
   ],
   "body": [
     {
@@ -24,11 +24,32 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "\"Não consigo editar uma mensagem rápida\""
+      "content": "“Não acho um modelo para reabrir a conversa”"
     },
     {
       "type": "paragraph",
-      "content": "Ela está em análise na Meta. Edição e reenvio ficam bloqueados até a análise terminar — exclusão continua disponível."
+      "content": [
+        {
+          "type": "text",
+          "text": "Fora da janela de 24 horas, quem reabre a conversa é um modelo aprovado e liberado para o chat, não uma mensagem rápida. Veja como liberar e por que um modelo pode não aparecer em "
+        },
+        {
+          "type": "text",
+          "text": "liberar templates para reabrir conversas",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/mensagens-rapidas/liberar-templates-para-reabrir-conversas"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
     },
     {
       "type": "heading",

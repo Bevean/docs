@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funcionam as mensagens rápidas",
   "subtitle": "A diferença entre mensagens do time e mensagens pessoais, e por que uma não vira a outra depois de criada.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "mensagens rápidas",
     "macro",
@@ -54,6 +54,51 @@
     {
       "type": "paragraph",
       "content": "Uma mensagem não pode trocar de time para pessoal (ou o contrário) depois de criada — o alcance é decidido na hora da criação, pela tela que você abriu."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A tela de Mensagens rápidas em Configurações tem também a aba "
+            },
+            {
+              "type": "text",
+              "text": "WhatsApp Templates",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". É lá que você libera os modelos aprovados pela Meta que o atendente usa para reabrir uma conversa no WhatsApp Oficial depois de 24 horas. Mensagem rápida serve só para o “/”, com a conversa aberta. Veja "
+            },
+            {
+              "type": "text",
+              "text": "liberar templates para reabrir conversas",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "atendimento/mensagens-rapidas/liberar-templates-para-reabrir-conversas"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Mensagem rápida não reabre conversa"
     },
     {
       "type": "linkCards",

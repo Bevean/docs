@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Criar um modelo de WhatsApp, SMS ou RCS",
   "subtitle": "As seções disponíveis por canal, os tipos de botão e os limites de caracteres.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "modelo de whatsapp",
     "modelo de sms",
@@ -288,6 +288,110 @@
         {
           "type": "paragraph",
           "content": "Modelos em carrossel só são exibidos no aplicativo do WhatsApp no celular. No WhatsApp Web a mensagem chega, mas os cards não aparecem."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Liberar o modelo para reabrir conversas no chat"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No modelo de WhatsApp Oficial, a chave "
+        },
+        {
+          "type": "text",
+          "text": "Usar como abertura de janela no chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no fim da barra lateral, deixa o atendente usar este modelo para reabrir uma conversa depois de 24 horas sem resposta. Ele não aparece no “/” do chat. A chave só existe quando a sua conta tem o módulo de Atendimento."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na lista de modelos, os liberados ganham o selo "
+        },
+        {
+          "type": "text",
+          "text": "Chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e o filtro "
+        },
+        {
+          "type": "text",
+          "text": "Chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " separa "
+        },
+        {
+          "type": "text",
+          "text": "Liberado no chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " de "
+        },
+        {
+          "type": "text",
+          "text": "Fora do chat",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Mais detalhes em "
+        },
+        {
+          "type": "text",
+          "text": "liberar templates para reabrir conversas",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/mensagens-rapidas/liberar-templates-para-reabrir-conversas"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
         }
       ]
     },

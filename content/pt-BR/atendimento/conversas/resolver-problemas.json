@@ -1,12 +1,14 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Não vejo todas as conversas, ou não consigo colocar em espera",
-  "subtitle": "Permissões de aba e filtro, o bloqueio de espera quando o cliente falou por último, e o envio de áudio.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "Permissões de aba e filtro, o bloqueio de espera quando o cliente falou por último, o envio de áudio e o anexo que não baixou.",
+  "updatedAt": "2026-10-16",
   "tags": [
     "não vejo conversas",
     "não consigo colocar em espera",
-    "enviar áudio"
+    "enviar áudio",
+    "anexo não baixou",
+    "arquivo não abre"
   ],
   "related": [
     "atendimento/conversas/gerenciar-uma-conversa",
@@ -48,6 +50,68 @@
     {
       "type": "paragraph",
       "content": "Áudio só é enviado gravando na hora, pelo microfone. Um arquivo de áudio já pronto sai como um arquivo comum, não como mensagem de voz."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "“Apareceu ‘Anexo não pôde ser baixado do WhatsApp.’”"
+    },
+    {
+      "type": "paragraph",
+      "content": "O cliente mandou um arquivo, mas o WhatsApp não entregou o conteúdo para a Bevean. A mensagem fica na conversa com o nome do arquivo e esse aviso, em vez de sumir."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique no ícone de "
+        },
+        {
+          "type": "text",
+          "text": "Tentar baixar novamente",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", ao lado do aviso. Se o WhatsApp falhar de novo, aparece "
+        },
+        {
+          "type": "text",
+          "text": "O WhatsApp não entregou o anexo de novo. Peça para o cliente reenviar.",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando o aviso é "
+        },
+        {
+          "type": "text",
+          "text": "Anexo grande demais para exibir aqui.",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", não há o que tentar de novo: o arquivo passa do tamanho que o chat mostra. Peça ao cliente para mandar por outro meio."
+        }
+      ]
     },
     {
       "type": "heading",
