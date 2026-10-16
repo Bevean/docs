@@ -1,12 +1,13 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
-  "title": "Conectar a ContaAzul",
-  "subtitle": "Criar o aplicativo na ContaAzul e autorizar.",
-  "updatedAt": "2026-09-03",
+  "title": "Conectar a Conta Azul",
+  "subtitle": "Sem aplicativo para criar nem credencial para copiar: você autoriza o aplicativo da Bevean na Conta Azul e a sincronização começa.",
+  "updatedAt": "2026-10-16",
   "tags": [
+    "conta azul",
     "contaazul",
-    "client id",
-    "client secret"
+    "autorizar",
+    "erp"
   ],
   "related": [
     "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
@@ -18,7 +19,7 @@
       "content": [
         {
           "type": "text",
-          "text": "O resultado é a ContaAzul aparecendo como "
+          "text": "O resultado é a Conta Azul aparecendo como "
         },
         {
           "type": "text",
@@ -76,34 +77,274 @@
       ]
     },
     {
-      "type": "heading",
-      "level": 2,
-      "content": "Criar o app na ContaAzul"
-    },
-    {
-      "type": "steps",
-      "items": [
+      "type": "callout",
+      "variant": "info",
+      "body": [
         {
-          "title": "Cadastre um aplicativo na ContaAzul"
-        },
-        {
-          "title": "Copie o Client ID e o Client Secret"
+          "type": "paragraph",
+          "content": "A Bevean usa o próprio aplicativo. Você só faz login na Conta Azul e autoriza. Client ID e Client Secret não são pedidos."
         }
-      ]
+      ],
+      "title": "Não é mais preciso criar um aplicativo na Conta Azul"
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Conectar na Bevean"
+      "content": "Conectar"
     },
     {
       "type": "steps",
       "items": [
         {
-          "title": "Informe as credenciais na Bevean e clique em Conectar"
+          "title": "Clique em Instalar e depois em Conectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A janela de autenticação avisa que você será levado à Conta Azul para autorizar o aplicativo da Bevean."
+            }
+          ]
         },
         {
-          "title": "Autorize na ContaAzul para concluir a conexão"
+          "title": "F",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "ç"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "l"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "g"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "C"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "A"
+            },
+            {
+              "type": "paragraph",
+              "content": "z"
+            },
+            {
+              "type": "paragraph",
+              "content": "u"
+            },
+            {
+              "type": "paragraph",
+              "content": "l"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "u"
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "r"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "z"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "p"
+            },
+            {
+              "type": "paragraph",
+              "content": "l"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "c"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "v"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "d"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "B"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "v"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            }
+          ]
+        },
+        {
+          "title": "Aguarde a sincronização inicial",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Você volta para a Bevean, e a integração começa a trazer os dados."
+            }
+          ]
         }
       ]
     },
@@ -139,13 +380,13 @@
     },
     {
       "type": "linkCards",
+      "title": "Próximos passos",
       "items": [
         {
           "ref": "integracoes/lojas-e-erps/resolver-problemas",
           "description": "A autorização não conclui, ou dado que não chega."
         }
-      ],
-      "title": "Próximos passos"
+      ]
     }
   ]
 }

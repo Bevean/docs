@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a WBuy",
   "subtitle": "O usuário e a senha de API que a WBuy gera para colar na Bevean.",
-  "updatedAt": "2026-10-01",
+  "updatedAt": "2026-10-16",
   "tags": [
     "wbuy",
     "usuário de api",
@@ -149,6 +149,10 @@
       "type": "heading",
       "level": 2,
       "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ao conectar, a Bevean registra na WBuy os avisos automáticos de clientes, pedidos e mudanças de status, produtos e carrinhos abandonados. Esses dados chegam na hora, sem esperar a sincronização periódica."
     },
     {
       "type": "paragraph",

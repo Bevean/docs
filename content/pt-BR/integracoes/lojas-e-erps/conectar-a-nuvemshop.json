@@ -2,11 +2,12 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a Nuvemshop",
   "subtitle": "Sem credencial para copiar — é um aplicativo que você autoriza direto na Nuvemshop, e a sincronização começa sozinha.",
-  "updatedAt": "2026-10-01",
+  "updatedAt": "2026-10-16",
   "tags": [
     "nuvemshop",
     "app",
-    "autorizar"
+    "autorizar",
+    "reconectar"
   ],
   "related": [
     "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
@@ -140,6 +141,120 @@
           "text": " o que cada tipo de dado significa e como desligar algum depois de conectado."
         }
       ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Reconectar sem perder nada"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se a integração ficou "
+        },
+        {
+          "type": "text",
+          "text": "Inativa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " porque o acesso expirou ou o app foi desautorizado, abra a integração e use "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " › "
+        },
+        {
+          "type": "text",
+          "text": "Reconectar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Suas configurações e os dados já sincronizados são mantidos; só o acesso é renovado."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra a integração e clique em Mais ações › Reconectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A opção aparece quando a integração está Ativa ou Inativa. Se houver alterações não salvas na tela, salve ou descarte antes."
+            }
+          ]
+        },
+        {
+          "title": "Confirme em Reconectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Você é levado à Nuvemshop para autorizar o app da Bevean de novo."
+            }
+          ]
+        },
+        {
+          "title": "Autorize usando a mesma loja que já estava conectada",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Ao voltar, a mensagem "
+                },
+                {
+                  "type": "text",
+                  "text": "Integração reconectada! A sincronização volta a rodar automaticamente.",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " confirma."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "A reconexão só renova o acesso da loja que já estava conectada. Se você autorizar outra loja da Nuvemshop, ela não é aceita e aparece “Não foi possível reconectar a integração. Confira as credenciais e tente novamente.”"
+        }
+      ],
+      "title": "Use a mesma loja"
     },
     {
       "type": "linkCards",

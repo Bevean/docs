@@ -2,12 +2,13 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar o Tiny",
   "subtitle": "Criar o aplicativo nas configurações do Tiny e autorizar.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "tiny",
     "olist tiny",
     "client id",
-    "client secret"
+    "client secret",
+    "reconectar"
   ],
   "related": [
     "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
@@ -157,6 +158,337 @@
         {
           "type": "text",
           "text": " o que cada tipo de dado significa."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Reconectar sem perder nada"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se a integração ficou "
+        },
+        {
+          "type": "text",
+          "text": "Inativa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", por exemplo depois de você gerar um novo Client Secret no Tiny, abra a integração e use "
+        },
+        {
+          "type": "text",
+          "text": "Mais ações",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " › "
+        },
+        {
+          "type": "text",
+          "text": "Reconectar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Suas configurações e os dados já sincronizados são mantidos; só as credenciais são substituídas."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra a integração e clique em Mais ações › Reconectar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A opção aparece quando a integração está Ativa ou Inativa. Se houver alterações não salvas na tela, salve ou descarte antes."
+            }
+          ]
+        },
+        {
+          "title": "S",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "g"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "r"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "u"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "u"
+            },
+            {
+              "type": "paragraph",
+              "content": "m"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "v"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "C"
+            },
+            {
+              "type": "paragraph",
+              "content": "l"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "S"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "c"
+            },
+            {
+              "type": "paragraph",
+              "content": "r"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "T"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "y"
+            },
+            {
+              "type": "paragraph",
+              "content": ","
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "f"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "r"
+            },
+            {
+              "type": "paragraph",
+              "content": "m"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "-"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "j"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "l"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            }
+          ]
+        },
+        {
+          "title": "Confirme em Reconectar e autorize no Tiny",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Use a mesma conta do Tiny que já estava conectada. Ao voltar, a mensagem "
+                },
+                {
+                  "type": "text",
+                  "text": "Integração reconectada! A sincronização volta a rodar automaticamente.",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " confirma."
+                }
+              ]
+            }
+          ]
         }
       ]
     },

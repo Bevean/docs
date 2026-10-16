@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Uma integração não está sincronizando",
   "subtitle": "Roteiros para quando a integração fica Inativa, um tipo de dado nunca chega, ela trava em Conectado sem virar Ativa, ou você precisa desconectar sem perder o histórico.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "inativo",
     "não sincroniza",
@@ -88,7 +88,38 @@
             "content": "O app da Bevean foi desinstalado ou desautorizado na plataforma?"
           },
           {
-            "content": "Precisa reconectar do zero, gerando credenciais novas"
+            "content": [
+              {
+                "type": "text",
+                "text": "Na Nuvemshop e no Tiny, use "
+              },
+              {
+                "type": "text",
+                "text": "Mais ações",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " › "
+              },
+              {
+                "type": "text",
+                "text": "Reconectar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": o acesso é renovado e as configurações e os dados ficam. Nas outras integrações, é preciso conectar de novo, com credenciais novas"
+              }
+            ]
           }
         ],
         [
