@@ -123,7 +123,18 @@
     },
     {
       "type": "paragraph",
-      "content": "Tipos de botão disponíveis: Resposta rápida, Abrir URL, Ligar, Copiar código (inclusive um modo \"Copiar cupom\" automático, que puxa o valor da campanha ou automação que enviar a mensagem). RCS tem também Evento no calendário e localização."
+      "content": "Tipos de botão disponíveis: Resposta rápida, Abrir URL, Ligar, Copiar código (inclusive um modo \"Copiar cupom\" automático). RCS tem também Evento no calendário e localização."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "No envio, a Bevean usa o primeiro que existir: o Cupom de conversão da campanha, o cupom do próprio evento (do carrinho, do cashback ou do giftback) e, por último, o código digitado no botão do modelo. Sem nenhum deles, o envio falha."
+        }
+      ],
+      "title": "De onde vem o cupom do Copiar cupom"
     },
     {
       "type": "heading",

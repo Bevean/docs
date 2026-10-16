@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Aprovar um modelo de WhatsApp Oficial",
   "subtitle": "A categoria da mensagem, o fluxo de aprovação da Meta e o que fazer se o modelo for rejeitado.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "aprovação meta",
     "categoria da mensagem",
@@ -62,6 +62,31 @@
         {
           "type": "paragraph",
           "content": "A Meta pode reclassificar como Marketing um modelo criado como Utilitário, se identificar conteúdo promocional."
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Para reduzir esse risco, a Bevean manda à Meta exemplos realistas nas variáveis do sistema. Nas Variáveis 1 a 5, escreva uma Amostra que pareça um dado de verdade, não o nome do campo. Veja "
+            },
+            {
+              "type": "text",
+              "text": "usar variáveis",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "conteudos/modelos/usar-variaveis"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
         }
       ]
     },

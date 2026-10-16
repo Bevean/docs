@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Criar um modelo de e-mail",
   "subtitle": "Os blocos do editor visual, as preferências gerais e o modo avançado de HTML.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "editor de e-mail",
     "blocos de e-mail",
@@ -133,6 +133,45 @@
         ],
         [
           {
+            "content": "Pedido"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Mostra os produtos do pedido, com imagem, nome, quantidade, preço por unidade e total da linha, e um resumo com Subtotal, Desconto, Frete e Total. Só tem dados num e-mail enviado por automação com gatilho de pedido. Você escolhe a "
+              },
+              {
+                "type": "text",
+                "text": "Quantidade máxima de produtos",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", de 1 a 20, e se quer "
+              },
+              {
+                "type": "text",
+                "text": "Exibir resumo de valores",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
             "content": "Produto"
           },
           {
@@ -218,9 +257,33 @@
         },
         {
           "type": "text",
-          "text": " da barra lateral: Tipografia, texto de Descadastro, Plano de fundo e Largura máxima — valem para o e-mail inteiro, não para um bloco específico."
+          "text": " da barra lateral: a "
+        },
+        {
+          "type": "text",
+          "text": "Fonte principal",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", o texto de Descadastro, o Plano de fundo e a Largura máxima. Valem para o e-mail inteiro, não para um bloco específico."
         }
       ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O Gmail não carrega fontes externas. Por isso o seletor oferece a Fonte padrão, a Roboto e fontes do sistema: Arial, Helvetica, Verdana, Trebuchet MS, Times New Roman, Georgia, Book Antiqua, Courier New e Lucida Console. O seletor também aparece em blocos como Texto, Título, Botão e Produto."
+        }
+      ],
+      "title": "A lista de fontes só tem o que o Gmail mostra"
     },
     {
       "type": "heading",

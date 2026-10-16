@@ -2,11 +2,15 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Usar variáveis num modelo",
   "subtitle": "Como inserir um dado dinâmico no texto, os grupos disponíveis, e a diferença entre amostra e valor padrão.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "variáveis",
     "personalização",
-    "dados dinâmicos"
+    "dados dinâmicos",
+    "pedido",
+    "endereço de entrega",
+    "pix",
+    "giftback"
   ],
   "related": [
     "conteudos/modelos/criar-um-modelo-de-whatsapp-ou-sms",
@@ -42,38 +46,43 @@
       "content": "Grupos de variáveis"
     },
     {
+      "type": "paragraph",
+      "content": "O seletor tem três abas:"
+    },
+    {
       "type": "table",
       "head": [
         {
-          "content": "Grupo"
+          "content": "Aba"
         },
         {
-          "content": "Exemplos"
+          "content": "Grupos"
+        },
+        {
+          "content": "O que traz"
         }
       ],
       "rows": [
         [
           {
-            "content": "Comunicação"
+            "content": "Uso geral"
           },
           {
-            "content": "Dados do próprio envio."
+            "content": "Comunicação, Loja e Cliente"
+          },
+          {
+            "content": "O cupom do envio, o link da loja e os dados do destinatário: primeiro nome, nome, e-mail, telefone e data de nascimento"
           }
         ],
         [
           {
-            "content": "Loja"
+            "content": "Use em automações"
           },
           {
-            "content": "Dados da sua conta Bevean."
-          }
-        ],
-        [
-          {
-            "content": "Cliente"
+            "content": "Pedido, Checkout iniciado, Produto abandonado, Cashback, Giftback e Pesquisa"
           },
           {
-            "content": "Nome, e-mail, telefone do destinatário."
+            "content": "Os dados do evento que disparou a automação. Só têm valor quando o modelo é enviado por uma automação com o gatilho daquele grupo"
           }
         ],
         [
@@ -81,18 +90,88 @@
             "content": "Personalizadas"
           },
           {
-            "content": "Os campos que você criou em Propriedades personalizadas."
+            "content": "Variável 1 a Variável 5"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Campos livres. O valor é o "
+              },
+              {
+                "type": "text",
+                "text": "Valor padrão",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " que você define no modelo"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O grupo Pedido"
+    },
+    {
+      "type": "paragraph",
+      "content": "Além do número, do valor total, da previsão de entrega, do rastreio e da nota fiscal, o grupo Pedido traz:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Assunto"
+        },
+        {
+          "content": "Variáveis"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Resumo"
+          },
+          {
+            "content": "Quantidade de itens, Subtotal dos produtos, Desconto do pedido, Valor do frete, Forma de entrega e Cupom utilizado"
           }
         ],
         [
           {
-            "content": "Automação"
+            "content": "Pagamento"
           },
           {
-            "content": "Só aparece quando o modelo é usado numa automação — Pedido criado, Checkout iniciado, Produto abandonado, Cashback, Pesquisa."
+            "content": "Forma de pagamento, Status do pagamento, Código PIX (copia e cola), Link do boleto e Vencimento do PIX ou boleto"
+          }
+        ],
+        [
+          {
+            "content": "Endereço de entrega"
+          },
+          {
+            "content": "O endereço completo, a linha com rua, número e complemento, e cada parte separada: rua, número, complemento, bairro, cidade, estado, CEP e país, por extenso"
           }
         ]
       ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "No seletor, essas variáveis têm um ícone de alerta que explica quando ficam vazias. Por exemplo: Desconto do pedido fica vazia sem desconto, Valor do frete mostra “Grátis” quando o frete é zero, Código PIX só é preenchido em pedidos pagos com PIX, e o endereço fica vazio quando a integração da loja não envia o endereço do pedido. Rastreio, transportadora e nota fiscal só existem depois que o pedido é despachado."
+        }
+      ],
+      "title": "Algumas variáveis ficam vazias conforme o pedido"
     },
     {
       "type": "heading",
@@ -137,7 +216,7 @@
             "content": "Amostra"
           },
           {
-            "content": "O valor enviado à Meta só para a análise de aprovação — nunca aparece num envio real."
+            "content": "O valor enviado à Meta só para a análise de aprovação. Nunca aparece num envio real."
           }
         ],
         [
@@ -149,6 +228,17 @@
           }
         ]
       ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Em Primeiro nome, Nome, ID do pedido, Código do pedido, Valor total, Previsão de entrega, Código de rastreio e Número da Nota Fiscal, a Meta recebe um exemplo pronto, como “Maria” ou “R$ 189,90”, no lugar da Amostra digitada. Um exemplo com o nome do campo, como “Olá Primeiro nome”, faz a Meta reclassificar o modelo como Marketing. Nas outras variáveis, escreva uma Amostra que pareça um dado de verdade."
+        }
+      ],
+      "title": "Para as variáveis do sistema, a Bevean manda um exemplo realista"
     }
   ]
 }
