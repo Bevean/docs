@@ -183,17 +183,6 @@
       ]
     },
     {
-      "type": "callout",
-      "variant": "warning",
-      "body": [
-        {
-          "type": "paragraph",
-          "content": "A conexão é sempre com o ambiente de produção da TKTR. Credencial de homologação é recusada na validação."
-        }
-      ],
-      "title": "Use as credenciais de produção"
-    },
-    {
       "type": "heading",
       "level": 2,
       "content": "Conectar na Bevean"
