@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Criar e publicar um formulário",
   "subtitle": "Do botão Criar formulário até o formulário no ar, e o que fazer quando o botão Publicar está bloqueado.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "publicar",
     "pendências",
@@ -756,6 +756,43 @@
           },
           {
             "content": "Edite a propriedade personalizada e cadastre as opções antes de usá-la."
+          }
+        ],
+        [
+          {
+            "content": "Revise a roleta: preencha prêmio e cupom em cada fatia, com chances maiores que zero e soma de 100%."
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Complete cada fatia do bloco Roleta e ajuste as chances para somar 100%. Veja "
+              },
+              {
+                "type": "text",
+                "text": "roleta e cupom",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/formularios/roleta-e-cupom"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Revise o contador: escolha a data de término ou uma duração entre 1 segundo e 365 dias."
+          },
+          {
+            "content": "No bloco do contador, preencha a data de término ou uma duração dentro da faixa."
           }
         ]
       ]

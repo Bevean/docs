@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "O formulário não está funcionando",
   "subtitle": "Roteiros para os três casos mais comuns: ele não aparece, o lead não chegou, ou você editou e nada mudou.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "não aparece",
     "problema",
@@ -437,14 +437,14 @@
           ]
         },
         {
-          "question": "Configurei prêmios na roleta e nem todos aparecem",
+          "question": "Não consigo publicar o formulário com a roleta",
           "answer": [
             {
               "type": "paragraph",
               "content": [
                 {
                   "type": "text",
-                  "text": "Fatias sem código de cupom ou com chance zero são descartadas em silêncio. Veja "
+                  "text": "Toda fatia precisa de prêmio, código de cupom e chance maior que zero, e as chances somadas têm de dar 100%. Veja "
                 },
                 {
                   "type": "text",

@@ -2,21 +2,23 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Roleta de prêmios e cupom",
   "subtitle": "Como montar o sorteio, por que o mesmo e-mail sempre ganha o mesmo prêmio e o que a Bevean não faz pelos seus cupons.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-16",
   "tags": [
     "roleta",
     "cupom",
     "sorteio",
     "gamificação",
-    "desconto"
+    "desconto",
+    "último cupom da roleta"
   ],
   "related": [
-    "ferramentas/formularios/campos-e-conteudo"
+    "ferramentas/formularios/campos-e-conteudo",
+    "automacoes/automacoes/escolher-um-gatilho"
   ],
   "body": [
     {
       "type": "paragraph",
-      "content": "A roleta troca o desconto por um cadastro: a pessoa preenche o e-mail, gira e recebe um cupom. Ela é um bloco como qualquer outro, e o cupom ganho aparece na tela de sucesso."
+      "content": "A roleta troca o desconto por um cadastro: a pessoa preenche o cadastro, gira e recebe um cupom. Ela é um bloco como qualquer outro, e o cupom ganho aparece na tela de sucesso."
     },
     {
       "type": "heading",
@@ -76,7 +78,7 @@
                 },
                 {
                   "type": "text",
-                  "text": "."
+                  "text": ". As chances somadas têm de dar 100%."
                 }
               ]
             }
@@ -139,11 +141,11 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "O mesmo e-mail sempre ganha o mesmo prêmio"
+      "content": "O mesmo contato sempre ganha o mesmo prêmio"
     },
     {
       "type": "paragraph",
-      "content": "O resultado do sorteio é calculado a partir do e-mail informado. Isso é intencional: impede que a pessoa recarregue a página e gire de novo até tirar o melhor prêmio."
+      "content": "O resultado do sorteio é calculado a partir do e-mail informado, ou do telefone quando o formulário não pede e-mail. Isso é intencional: impede que a pessoa recarregue a página e gire de novo até tirar o melhor prêmio."
     },
     {
       "type": "callout",
@@ -199,7 +201,7 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "Regras que fazem a roleta sumir ou encolher"
+      "content": "Regras para publicar e girar"
     },
     {
       "type": "table",
@@ -214,18 +216,26 @@
       "rows": [
         [
           {
-            "content": "Mínimo de 2 fatias válidas"
+            "content": "Pelo menos 2 fatias completas"
           },
           {
-            "content": "A roleta não é publicada no formulário — o visitante não vê nada no lugar dela."
+            "content": "O formulário não publica."
           }
         ],
         [
           {
-            "content": "Cada fatia precisa de prêmio, cupom e chance maior que zero"
+            "content": "Cada fatia com prêmio, cupom e chance maior que zero"
           },
           {
-            "content": "Fatias sem um desses são descartadas em silêncio."
+            "content": "O formulário não publica."
+          }
+        ],
+        [
+          {
+            "content": "Chances somando 100%"
+          },
+          {
+            "content": "O formulário não publica."
           }
         ],
         [
@@ -238,7 +248,7 @@
         ],
         [
           {
-            "content": "O e-mail precisa estar preenchido para girar"
+            "content": "E-mail ou telefone preenchido para girar"
           },
           {
             "content": "O giro é recusado."
@@ -252,10 +262,102 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "É a causa mais comum. Duas fatias provavelmente ficaram sem código de cupom ou com chance zero, e foram descartadas sem aviso. Revise fatia por fatia."
+          "content": "A mensagem completa é “Revise a roleta: preencha prêmio e cupom em cada fatia, com chances maiores que zero e soma de 100%.” Confira fatia por fatia: uma fatia sem código de cupom, uma chance zerada ou chances que somam 90% bastam para travar."
         }
       ],
-      "title": "“Configurei cinco prêmios e só aparecem três”"
+      "title": "“Não consigo publicar: Revise a roleta”"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Onde o resultado fica"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "No contato, nas propriedades personalizadas "
+            },
+            {
+              "type": "text",
+              "text": "Último cupom da roleta",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Último prêmio da roleta",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". Elas guardam o último giro, e um novo giro substitui o anterior."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "No gatilho "
+            },
+            {
+              "type": "text",
+              "text": "Formulário enviado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " das automações, nos filtros "
+            },
+            {
+              "type": "text",
+              "text": "Cupom deste envio",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Prêmio deste envio",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". É assim que dá para mandar o cupom por WhatsApp ou e-mail logo depois do cadastro."
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "heading",
