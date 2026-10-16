@@ -1,0 +1,577 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Conectar o GestãoClick",
+  "subtitle": "O Access Token e o Secret Access que o GestãoClick gera para colar na Bevean.",
+  "updatedAt": "2026-10-16",
+  "tags": [
+    "gestaoclick",
+    "gestão click",
+    "erp",
+    "access token",
+    "secret access"
+  ],
+  "related": [
+    "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
+    "integracoes/lojas-e-erps/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O resultado é o GestãoClick aparecendo como "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na lista de integrações."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "integrations"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Antes de conectar, veja "
+        },
+        {
+          "type": "text",
+          "text": "como funcionam as integrações",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Gerar as credenciais no GestãoClick"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "N",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "G"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "s"
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": "ã"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "C"
+            },
+            {
+              "type": "paragraph",
+              "content": "l"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "c"
+            },
+            {
+              "type": "paragraph",
+              "content": "k"
+            },
+            {
+              "type": "paragraph",
+              "content": ","
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "c"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "s"
+            },
+            {
+              "type": "paragraph",
+              "content": "s"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "M"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "u"
+            },
+            {
+              "type": "paragraph",
+              "content": "s"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "p"
+            },
+            {
+              "type": "paragraph",
+              "content": "l"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "c"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "v"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "s"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "›"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "A"
+            },
+            {
+              "type": "paragraph",
+              "content": "P"
+            },
+            {
+              "type": "paragraph",
+              "content": "I"
+            }
+          ]
+        },
+        {
+          "title": "C",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "l"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "q"
+            },
+            {
+              "type": "paragraph",
+              "content": "u"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "m"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "T"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "k"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "d"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "p"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "i"
+            },
+            {
+              "type": "paragraph",
+              "content": "s"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "m"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "G"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "r"
+            },
+            {
+              "type": "paragraph",
+              "content": "a"
+            },
+            {
+              "type": "paragraph",
+              "content": "r"
+            },
+            {
+              "type": "paragraph",
+              "content": " "
+            },
+            {
+              "type": "paragraph",
+              "content": "t"
+            },
+            {
+              "type": "paragraph",
+              "content": "o"
+            },
+            {
+              "type": "paragraph",
+              "content": "k"
+            },
+            {
+              "type": "paragraph",
+              "content": "e"
+            },
+            {
+              "type": "paragraph",
+              "content": "n"
+            }
+          ]
+        },
+        {
+          "title": "Copie o Access Token e o Secret Access",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No GestãoClick, o segundo código aparece como "
+                },
+                {
+                  "type": "text",
+                  "text": "Secret Access",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Na Bevean, o campo se chama "
+                },
+                {
+                  "type": "text",
+                  "text": "Secret Access Token",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O GestãoClick tem um passo a passo próprio: "
+        },
+        {
+          "type": "text",
+          "text": "Como gerar token da API para usar externamente",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://ajuda.gestaoclick.com.br/hc/pt-br/articles/360059920934-Como-gerar-token-da-API-para-usar-externamente"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conectar na Bevean"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cole os dois valores em "
+        },
+        {
+          "type": "text",
+          "text": "Access Token",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Secret Access Token",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e clique em "
+        },
+        {
+          "type": "text",
+          "text": "Conectar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". A Bevean valida as credenciais na hora."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que é sincronizado"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clientes, Pedidos e Produtos. A Bevean busca os dados de todas as lojas da conta do GestãoClick, não só da loja matriz, sem você precisar escolher."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O GestãoClick não envia avisos automáticos de pedido ou de cliente. As novidades aparecem a cada ciclo de sincronização, não no mesmo instante."
+        }
+      ],
+      "title": "Os dados chegam pela sincronização periódica"
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "integracoes/lojas-e-erps/resolver-problemas",
+          "description": "Credenciais inválidas, ou dado que não chega."
+        }
+      ]
+    }
+  ]
+}
