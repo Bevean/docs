@@ -387,10 +387,28 @@
             "content": "1"
           },
           {
-            "content": "Há alguma antecedência em Avisar sobre o vencimento?"
+            "content": [
+              {
+                "type": "text",
+                "text": "A automação tem dias em "
+              },
+              {
+                "type": "text",
+                "text": "Quando avisar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "?"
+              }
+            ]
           },
           {
-            "content": "Sem antecedência configurada o gatilho nunca dispara, e a automação fica ativa em silêncio"
+            "content": "Sem pelo menos um dia, a automação não publica. Confira se ela está ativa"
           }
         ],
         [
@@ -420,10 +438,10 @@
             "content": "4"
           },
           {
-            "content": "O filtro Dias até vencer da automação bate com as antecedências configuradas?"
+            "content": "O filtro Dias até vencer da automação bate com os dias de Quando avisar?"
           },
           {
-            "content": "Filtro em uma antecedência que não existe no cashback não casa com nada"
+            "content": "Filtro num dia que não está em Quando avisar não casa com nada"
           }
         ]
       ]

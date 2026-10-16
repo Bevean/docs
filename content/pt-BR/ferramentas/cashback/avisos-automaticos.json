@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Avisar o cliente sobre o cashback",
   "subtitle": "Monte as automações que contam ao cliente que ele tem saldo — e o lembrete que impede o crédito de vencer em silêncio.",
-  "updatedAt": "2026-09-15",
+  "updatedAt": "2026-10-16",
   "tags": [
     "automação",
     "aviso",
@@ -87,7 +87,7 @@
             "content": "Crédito expirando"
           },
           {
-            "content": "Falta para o vencimento um dos dias que a automação definiu (ou uma das antecedências do cashback)"
+            "content": "Falta para o vencimento um dos dias que a automação definiu"
           },
           {
             "content": "O lembrete que evita a perda do saldo"
@@ -135,7 +135,7 @@
     },
     {
       "type": "paragraph",
-      "content": "É o aviso que mais devolve resultado, e o único que depende de uma configuração fora da automação."
+      "content": "É o aviso que mais devolve resultado."
     },
     {
       "type": "steps",
@@ -177,41 +177,13 @@
                 },
                 {
                   "type": "text",
-                  "text": " é o próprio dia do vencimento, e cada dia informado aqui passa a ser avisado pelo cashback mesmo que não esteja na configuração geral."
+                  "text": " é o próprio dia do vencimento."
                 }
               ]
             },
             {
               "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Deixando vazio, a automação dispara em todas as antecedências configuradas em "
-                },
-                {
-                  "type": "uiPath",
-                  "attrs": {
-                    "ref": "tools.cashback"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": ", no campo "
-                },
-                {
-                  "type": "text",
-                  "text": "Avisar sobre o vencimento",
-                  "marks": [
-                    {
-                      "type": "bold"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " — uma vez em cada uma."
-                }
-              ]
+              "content": "Você pode informar até 20 dias diferentes, de 0 a 365. A automação não publica sem pelo menos um dia."
             }
           ]
         },
@@ -293,28 +265,6 @@
         {
           "type": "paragraph",
           "content": "Um aviso de 7 dias antes, em um cashback que vale 5 dias, cai em uma data em que o crédito ainda não existia. O painel marca essas antecedências em vermelho na hora de salvar."
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "type": "text",
-              "text": "Sem dias na automação e sem nenhuma antecedência no cashback, o gatilho "
-            },
-            {
-              "type": "text",
-              "text": "Crédito expirando",
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "text": " não dispara nunca — a automação fica ativa e em silêncio."
-            }
-          ]
         }
       ],
       "title": "Antecedência maior que a validade nunca dispara"

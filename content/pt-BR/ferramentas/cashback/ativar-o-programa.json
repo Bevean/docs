@@ -691,14 +691,6 @@
           {
             "content": "Número inteiro a partir de 1"
           }
-        ],
-        [
-          {
-            "content": "Avisar sobre o vencimento"
-          },
-          {
-            "content": "No máximo 5 avisos, cada um de 0 a 3650 dias"
-          }
         ]
       ]
     },
