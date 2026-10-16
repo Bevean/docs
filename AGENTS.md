@@ -651,12 +651,14 @@ nos dois lados. Confira sempre; não generalize o achado de uma tela pra outra.)
 **Uma premissa que você mesmo escreveu no prompt de pesquisa pode estar
 errada — o agente que a recebe deve verificar, não repetir.** Ao pedir a
 pesquisa de Modelos, passei como contexto uma memória antiga ("macro nunca é
-enviado à Meta"). O agente leu o código atual, achou que isso mudou — uma
-macro global do WhatsApp Oficial HOJE pode, sim, ser aprovada pela Meta pra
+enviado à Meta"). O agente leu o código da época, achou que isso tinha mudado —
+uma macro global do WhatsApp Oficial podia, sim, ser aprovada pela Meta pra
 reabrir conversa fora da janela de 24h — e corrigiu a premissa no relatório em
 vez de aceitá-la. Isso é o comportamento certo: instruções de pesquisa podem
 carregar contexto desatualizado sem querer, e "confirme X" não deveria nunca
-virar "assuma X".
+virar "assuma X". (E mudou de novo em 12/10/2026: mensagem rápida não vai mais
+à Meta; quem reabre a conversa é um modelo do CRM liberado para o chat. O
+próprio exemplo envelheceu, que é o ponto.)
 
 **Botão de estado vazio pode ter rota errada, copiada de outra tela.** O
 "Criar Carrinho" da lista de Carrinhos abre a criação de um Modelo — claramente
