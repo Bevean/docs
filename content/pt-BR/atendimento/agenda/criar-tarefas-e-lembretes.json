@@ -1,0 +1,606 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar tarefas e lembretes",
+  "subtitle": "Marque para depois um contato que você mesmo quer retomar, pela Agenda ou de dentro da conversa.",
+  "updatedAt": "2026-10-19",
+  "tags": [
+    "nova tarefa",
+    "lembrete",
+    "lembrar",
+    "tarefa manual",
+    "retomar contato"
+  ],
+  "related": [
+    "atendimento/agenda/visao-geral",
+    "atendimento/conversas/gerenciar-uma-conversa"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Além das tarefas que chegam das campanhas, você pode criar as suas. Há dois jeitos, e os dois funcionam em qualquer conta, com ou sem o módulo Agenda do vendedor:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Jeito"
+        },
+        {
+          "content": "Onde"
+        },
+        {
+          "content": "Quando usar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Nova tarefa",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Na Agenda"
+          },
+          {
+            "content": "Para um cliente com quem você quer falar num dia, com ou sem conversa aberta."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Lembrar em",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Dentro de uma conversa"
+          },
+          {
+            "content": "Para retomar aquela conversa num horário certo."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Criar uma tarefa manual"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em + Nova tarefa",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No canto direito do topo da "
+                },
+                {
+                  "type": "uiPath",
+                  "attrs": {
+                    "ref": "helpdesk.agenda"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escolha o Contato",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Busque por nome ou telefone, a partir de 3 letras ou números. Só aparecem contatos com telefone válido."
+            }
+          ]
+        },
+        {
+          "title": "Escolha Para quando",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Hoje",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "Amanhã",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ou "
+                },
+                {
+                  "type": "text",
+                  "text": "Em 7 dias",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", ou uma "
+                },
+                {
+                  "type": "text",
+                  "text": "Data",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". O "
+                },
+                {
+                  "type": "text",
+                  "text": "Horário",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " é opcional: sem ele, o prazo vai até o fim do dia. Não dá para escolher um dia ou horário que já passou."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escreva a Tarefa",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O título que aparece na lista, por exemplo \"retomar orçamento do vestido\"."
+            }
+          ]
+        },
+        {
+          "title": "Complete, se quiser",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Observação (só você vê)",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e "
+                },
+                {
+                  "type": "text",
+                  "text": "Mensagem sugerida",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " — o texto que vai pré-preenchido na conversa quando você abrir a tarefa."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Clique em Criar tarefa"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para hoje, a tarefa entra na sua Agenda na hora. Para outro dia, ela fica em "
+        },
+        {
+          "type": "text",
+          "text": "Próximas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e entra na lista no dia marcado. A tarefa manual é sempre sua; para passar a outra pessoa, um supervisor pode reatribuir — veja "
+        },
+        {
+          "type": "text",
+          "text": "Acompanhar a equipe",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/agenda/acompanhar-a-equipe"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Criar um lembrete de dentro da conversa"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Lembrar em",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Nas ações da conversa."
+            }
+          ]
+        },
+        {
+          "title": "Escolha quando",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "20 minutos",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "1 hora",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "6 horas",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "12 horas",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "Amanhã",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " (às 9h) ou "
+                },
+                {
+                  "type": "text",
+                  "text": "Definir data e horário",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escreva O que fazer",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Opcional, por exemplo \"confirmar se o pedido chegou\"."
+            }
+          ]
+        },
+        {
+          "title": "Clique em Lembrar"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O lembrete vira uma tarefa na sua Agenda e a conversa mostra "
+        },
+        {
+          "type": "text",
+          "text": "Lembrete para",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e a data, na lista e numa faixa no topo. Quando vence, a linha passa a mostrar "
+        },
+        {
+          "type": "text",
+          "text": "Venceu há",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " em vermelho."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na faixa do topo da conversa, você pode "
+        },
+        {
+          "type": "text",
+          "text": "Editar lembrete",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (data e anotação) ou "
+        },
+        {
+          "type": "text",
+          "text": "Concluir lembrete",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O lembrete é pessoal: se a conversa for transferida, colocada em espera ou resolvida, ele continua na Agenda de quem marcou. Outra pessoa que abrir a conversa vê de quem é o lembrete e pode "
+        },
+        {
+          "type": "text",
+          "text": "Retomar conversa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", sem concluir o lembrete."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Se o cliente responder antes da hora e depois você responder nessa conversa, o lembrete é concluído automaticamente."
+        }
+      ],
+      "title": "Quando o lembrete conclui sozinho"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os avisos da Agenda"
+    },
+    {
+      "type": "paragraph",
+      "content": "Com o Atendimento aberto, a Agenda avisa você:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aviso"
+        },
+        {
+          "content": "Quando"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Lembrete",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Na hora marcada, com som e um botão para abrir a conversa. Só quem marcou o lembrete recebe."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Tarefa manual",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Quando chega o dia ou o horário dela."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Campanha nova",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Quando uma campanha cria tarefas para você — um aviso por campanha."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Resumo do dia",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Uma vez por dia, a partir das 8h, com quantas tarefas você tem para hoje e quantas estão atrasadas."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "No aplicativo para computador, os avisos saem como notificação do sistema. No navegador, a notificação só aparece se você já deu permissão e a aba do Atendimento não está na frente; com a aba aberta, o aviso aparece na própria tela."
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "atendimento/agenda/trabalhar-as-tarefas",
+          "description": "Trabalhe as tarefas do dia."
+        }
+      ]
+    }
+  ]
+}

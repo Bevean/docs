@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../.vscode/schemas/section.schema.json",
+  "title": "Agenda",
+  "description": "Tarefas, lembretes e campanhas de contato de cada vendedor e atendente, num só lugar.",
+  "icon": "calendar-check",
+  "articles": [
+    "visao-geral",
+    "ativar-e-configurar",
+    "trabalhar-as-tarefas",
+    "envio-direto-e-em-lote",
+    "criar-tarefas-e-lembretes",
+    "criar-tarefas-pela-automacao",
+    "campanhas-e-meta",
+    "acompanhar-a-equipe",
+    "resolver-problemas"
+  ]
+}

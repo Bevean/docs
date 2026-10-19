@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Cadastrar um vendedor",
   "subtitle": "Os campos do cadastro, e a diferença entre desativar e excluir.",
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-19",
   "tags": [
     "cadastrar vendedor",
     "novo vendedor",
@@ -10,7 +10,8 @@
   ],
   "related": [
     "meu-negocio/vendedores-e-lojas/visao-geral",
-    "meu-negocio/vendedores-e-lojas/cadastrar-uma-loja"
+    "meu-negocio/vendedores-e-lojas/cadastrar-uma-loja",
+    "atendimento/agenda/ativar-e-configurar"
   ],
   "body": [
     {
@@ -117,8 +118,82 @@
           {
             "content": "Opcional — associe a um usuário da sua equipe, se ele também tiver login no painel."
           }
+        ],
+        [
+          {
+            "content": "Assento na Agenda do vendedor"
+          },
+          {
+            "content": "Com o módulo Agenda do vendedor, liga o vendedor na Agenda: ele recebe as tarefas das automações. Conta como assento de vendedor na fatura e só funciona com um usuário vinculado."
+          }
+        ],
+        [
+          {
+            "content": "Cupom pessoal"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Opcional. Vira a variável "
+              },
+              {
+                "type": "text",
+                "text": "Cupom do vendedor",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " na mensagem sugerida das tarefas da Agenda."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Meta de contatos por dia"
+          },
+          {
+            "content": "Opcional. A meta do vendedor na Agenda; vazio = usa a meta padrão da conta."
+          }
         ]
       ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Os campos de assento, cupom pessoal e meta valem para a Agenda do vendedor. Veja como pedir o módulo e o que cada um faz em "
+            },
+            {
+              "type": "text",
+              "text": "Ativar e configurar a Agenda do vendedor",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "atendimento/agenda/ativar-e-configurar"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Agenda do vendedor"
     },
     {
       "type": "heading",
@@ -156,7 +231,33 @@
         },
         {
           "type": "text",
-          "text": " de cada um, e tem dois filtros fixos no topo:"
+          "text": " de cada um — e, com a Agenda do vendedor, o "
+        },
+        {
+          "type": "text",
+          "text": "Assento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e a "
+        },
+        {
+          "type": "text",
+          "text": "Meta/dia",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — e tem dois filtros fixos no topo:"
         }
       ]
     },

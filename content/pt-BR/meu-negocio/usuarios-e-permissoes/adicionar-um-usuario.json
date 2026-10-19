@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Adicionar um usuário",
   "subtitle": "O passo a passo para convidar alguém da sua equipe e definir o que essa pessoa pode ver e fazer.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-19",
   "tags": [
     "adicionar usuário",
     "convidar",
@@ -158,6 +158,64 @@
           "title": "Clique em salvar"
         }
       ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ligue "
+            },
+            {
+              "type": "text",
+              "text": "É vendedor (Agenda do vendedor)",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " no cadastro e escolha o "
+            },
+            {
+              "type": "text",
+              "text": "Vendedor do ERP",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " correspondente — ou crie um vendedor novo com o nome do usuário. Assim ela recebe as tarefas da Agenda do vendedor. Veja "
+            },
+            {
+              "type": "text",
+              "text": "Ativar e configurar a Agenda do vendedor",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "atendimento/agenda/ativar-e-configurar"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "A pessoa também vende?"
     },
     {
       "type": "heading",

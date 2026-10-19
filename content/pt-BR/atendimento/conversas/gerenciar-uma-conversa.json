@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Gerenciar uma conversa",
   "subtitle": "Resolver, transferir, lembrar depois ou colocar em espera — e quando o motivo de encerramento é obrigatório.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-19",
   "tags": [
     "resolver conversa",
     "transferir conversa",
@@ -63,7 +63,28 @@
             "content": "Lembrar em"
           },
           {
-            "content": "Some da sua lista e volta sozinha no prazo escolhido (20 min, 1h, 6h, 12h, ou uma data específica)."
+            "content": [
+              {
+                "type": "text",
+                "text": "A conversa sai da sua lista e volta no horário escolhido (20 minutos, 1 hora, 6 horas, 12 horas, amanhã ou uma data), com uma anotação opcional. O lembrete também entra na sua "
+              },
+              {
+                "type": "text",
+                "text": "Agenda",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "atendimento/agenda/criar-tarefas-e-lembretes"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ],
         [

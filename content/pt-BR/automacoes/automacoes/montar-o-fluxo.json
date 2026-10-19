@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Montar o fluxo",
   "subtitle": "Como adicionar e ligar os passos no quadro, e o que cada passo disponível faz.",
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-19",
   "tags": [
     "automacoes",
     "fluxo",
@@ -114,7 +114,28 @@
             "content": "Agenda do vendedor"
           },
           {
-            "content": "Em vez de enviar, cria uma tarefa na agenda do vendedor dono do contato. Fica desativado sem o módulo Agenda do vendedor."
+            "content": [
+              {
+                "type": "text",
+                "text": "Em vez de enviar, cria uma tarefa na agenda do vendedor dono do contato. Fica desativado sem o módulo Agenda do vendedor. Veja "
+              },
+              {
+                "type": "text",
+                "text": "Criar tarefas pela automação",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "atendimento/agenda/criar-tarefas-pela-automacao"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ],
         [

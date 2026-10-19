@@ -1,0 +1,279 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Envio direto e envio em lote",
+  "subtitle": "Mande a mensagem sugerida de várias tarefas sem abrir uma por uma, com intervalo entre os envios.",
+  "updatedAt": "2026-10-19",
+  "tags": [
+    "envio direto",
+    "envio em lote",
+    "enviar várias tarefas",
+    "agenda"
+  ],
+  "related": [
+    "atendimento/agenda/trabalhar-as-tarefas",
+    "atendimento/agenda/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando a tarefa já traz a mensagem pronta, você não precisa abrir o detalhe para enviar. O "
+        },
+        {
+          "type": "text",
+          "text": "Envio direto",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " manda a mensagem com um clique; o "
+        },
+        {
+          "type": "text",
+          "text": "envio em lote",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " manda para até 10 clientes de uma vez."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.agenda"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — a caixa "
+        },
+        {
+          "type": "text",
+          "text": "Envio direto",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " fica no topo da lista, em todas as abas menos Concluídas."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Envio direto"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Com a caixa "
+        },
+        {
+          "type": "text",
+          "text": "Envio direto",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " marcada, o botão do canal em cada linha envia a mensagem sugerida na hora e já conclui a tarefa. Quando a tarefa usa um template do WhatsApp Oficial, vai o template, desde que todas as variáveis tenham valor."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A escolha fica guardada no seu computador ou celular. Tarefas com "
+        },
+        {
+          "type": "text",
+          "text": "WhatsApp do vendedor (link)",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " continuam abrindo o seu WhatsApp, mesmo com o Envio direto ligado."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Se a tarefa não tem mensagem sugerida, nada é enviado e aparece o aviso para revisar e enviar pelo detalhe."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Envio em lote"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Marque as tarefas",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Clique no avatar do cliente, à esquerda da linha, para colocar a tarefa no lote. Clique de novo para tirar. Cabem até 10 tarefas por lote."
+            }
+          ]
+        },
+        {
+          "title": "Escolha o intervalo",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Na barra do lote, escolha quanto tempo esperar entre um envio e outro: 5, 15, 30 ou 60 segundos. O padrão é 15."
+            }
+          ]
+        },
+        {
+          "title": "Clique em Enviar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A barra mostra o andamento e quanto falta para o próximo envio. "
+                },
+                {
+                  "type": "text",
+                  "text": "Parar",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " interrompe depois do envio em curso."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "No fim, a barra mostra quantas foram enviadas e quantas não. As enviadas são concluídas; as que não foram continuam na lista para você resolver pelo detalhe. Trocar de aba ou de campanha limpa a seleção."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quais tarefas entram"
+    },
+    {
+      "type": "paragraph",
+      "content": "Só dá para enviar direto ou em lote uma tarefa que:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "esteja aberta e já no dia dela (não uma agendada para depois);"
+        },
+        {
+          "content": "tenha um contato com telefone;"
+        },
+        {
+          "content": "não seja um lembrete;"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "não use o "
+            },
+            {
+              "type": "text",
+              "text": "WhatsApp do vendedor (link)",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tarefa sem mensagem sugerida, sem canal disponível ou com template com variável sem valor conta como "
+        },
+        {
+          "type": "text",
+          "text": "não enviada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "atendimento/agenda/trabalhar-as-tarefas",
+          "description": "Abra a tarefa para revisar a mensagem antes de enviar."
+        }
+      ]
+    }
+  ]
+}

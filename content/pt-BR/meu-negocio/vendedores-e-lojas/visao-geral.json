@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funcionam vendedores e lojas",
   "subtitle": "Dois cadastros independentes que aparecem na ficha do cliente e no pedido, sempre por vínculo automático.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-19",
   "tags": [
     "vendedores",
     "lojas",
@@ -10,7 +10,8 @@
   ],
   "related": [
     "meu-negocio/vendedores-e-lojas/cadastrar-um-vendedor",
-    "meu-negocio/vendedores-e-lojas/cadastrar-uma-loja"
+    "meu-negocio/vendedores-e-lojas/cadastrar-uma-loja",
+    "atendimento/agenda/visao-geral"
   ],
   "body": [
     {
@@ -83,6 +84,62 @@
         }
       ],
       "title": "Cadastrar um vendedor não faz ele aparecer sozinho num cliente"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Agenda do vendedor"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Com o módulo adicional "
+        },
+        {
+          "type": "text",
+          "text": "Agenda do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", o vendedor ligado a um usuário da equipe ganha uma agenda no Atendimento, com as tarefas de contato que as automações criam para os clientes dele. A faixa "
+        },
+        {
+          "type": "text",
+          "text": "Agenda do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no topo da aba Vendedores, mostra se o módulo está ativo, quantos assentos estão em uso e a meta padrão. Veja "
+        },
+        {
+          "type": "text",
+          "text": "Ativar e configurar a Agenda do vendedor",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/agenda/ativar-e-configurar"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
     },
     {
       "type": "linkCards",

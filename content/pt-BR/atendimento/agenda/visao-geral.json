@@ -1,0 +1,677 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Como funciona a Agenda",
+  "subtitle": "A lista de quem você precisa contatar hoje: lembretes, tarefas manuais e, com o módulo Agenda do vendedor, as tarefas das campanhas.",
+  "updatedAt": "2026-10-19",
+  "tags": [
+    "agenda",
+    "agenda do vendedor",
+    "tarefas",
+    "lembretes",
+    "follow-up"
+  ],
+  "related": [
+    "atendimento/agenda/trabalhar-as-tarefas",
+    "atendimento/agenda/ativar-e-configurar"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A Agenda junta, num só lugar, os contatos que você combinou de retomar. Cada item é uma "
+        },
+        {
+          "type": "text",
+          "text": "tarefa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": um cliente, um prazo e, quando houver, uma mensagem pronta para enviar. Você abre a tarefa, fala com o cliente pelo canal indicado e ela sai da lista."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.agenda"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — o item "
+        },
+        {
+          "type": "text",
+          "text": "Agenda",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na barra lateral do Atendimento, com um contador das tarefas atrasadas e das de hoje. Também dá para chegar pela busca de comandos, em "
+        },
+        {
+          "type": "text",
+          "text": "Abrir agenda",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que vale para todos e o que depende do módulo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A Agenda aparece para todo usuário ativo da conta. O que muda com o módulo pago "
+        },
+        {
+          "type": "text",
+          "text": "Agenda do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " é a origem das tarefas:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tarefa"
+        },
+        {
+          "content": "Quem usa"
+        },
+        {
+          "content": "Precisa do módulo?"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Lembrete",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — criado em "
+              },
+              {
+                "type": "text",
+                "text": "Lembrar em",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", dentro de uma conversa"
+              }
+            ]
+          },
+          {
+            "content": "Qualquer atendente"
+          },
+          {
+            "content": "Não"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Tarefa manual",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — criada em "
+              },
+              {
+                "type": "text",
+                "text": "+ Nova tarefa",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " na própria Agenda"
+              }
+            ]
+          },
+          {
+            "content": "Qualquer atendente"
+          },
+          {
+            "content": "Não"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Tarefa de campanha",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " — criada por uma automação ou disparo, com o passo "
+              },
+              {
+                "type": "text",
+                "text": "Agenda do vendedor",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Vendedores com assento na Agenda"
+          },
+          {
+            "content": "Sim"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Com o módulo ativo, quem tem assento também vê a aba "
+        },
+        {
+          "type": "text",
+          "text": "Campanhas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e o seletor de campanha no topo da Agenda. Veja como pedir e configurar o módulo em "
+        },
+        {
+          "type": "text",
+          "text": "Ativar e configurar a Agenda do vendedor",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/agenda/ativar-e-configurar"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A Agenda é pessoal: mostra apenas as tarefas em que você é o responsável. Quem acompanha a equipe usa a aba "
+            },
+            {
+              "type": "text",
+              "text": "Agenda da equipe",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", no Painel — veja "
+            },
+            {
+              "type": "text",
+              "text": "Acompanhar a equipe",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "atendimento/agenda/acompanhar-a-equipe"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Cada pessoa vê só as próprias tarefas"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As abas"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aba"
+        },
+        {
+          "content": "O que mostra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Hoje"
+          },
+          {
+            "content": "Tarefas abertas com prazo até o fim do dia, e as que não têm prazo."
+          }
+        ],
+        [
+          {
+            "content": "Semana"
+          },
+          {
+            "content": "Tarefas abertas com prazo nos próximos 7 dias, inclusive as que você agendou para um desses dias."
+          }
+        ],
+        [
+          {
+            "content": "Próximas"
+          },
+          {
+            "content": "O que você agendou ou reagendou para um dia que ainda não chegou, e tarefas com prazo depois da semana. A lista vem agrupada por dia."
+          }
+        ],
+        [
+          {
+            "content": "Atrasadas"
+          },
+          {
+            "content": "Tarefas abertas com o prazo vencido."
+          }
+        ],
+        [
+          {
+            "content": "Concluídas"
+          },
+          {
+            "content": "Tarefas concluídas, descartadas ou expiradas nos últimos 7 dias."
+          }
+        ],
+        [
+          {
+            "content": "Campanhas"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O quadro das campanhas que criaram tarefas para você. Só com o módulo e assento — veja "
+              },
+              {
+                "type": "text",
+                "text": "Campanhas e meta",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "atendimento/agenda/campanhas-e-meta"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hoje, Semana, Próximas e Atrasadas mostram ao lado a quantidade de tarefas. Nas abas Hoje, Semana e Atrasadas, a chave "
+        },
+        {
+          "type": "text",
+          "text": "Finalizadas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " inclui na lista o que você já finalizou hoje."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que cada linha mostra"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Coluna"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Contato"
+          },
+          {
+            "content": "Nome e telefone do cliente. O ícone ao lado abre a ficha do cliente numa nova aba."
+          }
+        ],
+        [
+          {
+            "content": "Chance"
+          },
+          {
+            "content": "A chance de o cliente comprar agora, de 0 a 100 (alta a partir de 60, média a partir de 30). Passe o mouse para ver os motivos, como o ciclo de compra do cliente ou uma conversa recente no WhatsApp."
+          }
+        ],
+        [
+          {
+            "content": "Origem · observação"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "De onde veio a tarefa (o nome da campanha, "
+              },
+              {
+                "type": "text",
+                "text": "Tarefa manual",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou "
+              },
+              {
+                "type": "text",
+                "text": "Lembrete",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ") e a sua anotação. Mostra também se a tarefa foi reagendada."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Prazo"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Quando vence, ou o estado da tarefa: "
+              },
+              {
+                "type": "text",
+                "text": "em atendimento",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "concluída",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", "
+              },
+              {
+                "type": "text",
+                "text": "descartada",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou "
+              },
+              {
+                "type": "text",
+                "text": "expirada",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Canal"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O botão para falar com o cliente. Veja "
+              },
+              {
+                "type": "text",
+                "text": "Trabalhar as tarefas",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "atendimento/agenda/trabalhar-as-tarefas"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A lista começa pelas atrasadas; entre as demais, quem tem mais chance de comprar aparece primeiro."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A meta do dia"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No canto direito do topo fica a contagem do dia. Sem meta definida, ela mostra quantas tarefas você concluiu hoje. Com meta, mostra o andamento, por exemplo "
+        },
+        {
+          "type": "text",
+          "text": "12/20 meta do dia",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e a barra fica verde quando você bate a meta. Lembretes não contam para a meta."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A meta é definida pelo gestor na tela de vendedores — veja "
+        },
+        {
+          "type": "text",
+          "text": "Ativar e configurar a Agenda do vendedor",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/agenda/ativar-e-configurar"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "atendimento/agenda/trabalhar-as-tarefas",
+          "description": "Contate o cliente, conclua, reagende ou descarte uma tarefa."
+        },
+        {
+          "ref": "atendimento/agenda/criar-tarefas-e-lembretes",
+          "description": "Crie uma tarefa manual ou um lembrete a partir de uma conversa."
+        },
+        {
+          "ref": "atendimento/agenda/ativar-e-configurar",
+          "description": "Peça o módulo Agenda do vendedor e defina assentos e metas."
+        }
+      ]
+    }
+  ]
+}

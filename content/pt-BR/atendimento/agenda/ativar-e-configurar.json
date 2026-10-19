@@ -1,0 +1,718 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Ativar e configurar a Agenda do vendedor",
+  "subtitle": "Peça o módulo, dê assento a quem vai receber as tarefas das campanhas e defina a meta de contatos por dia.",
+  "updatedAt": "2026-10-19",
+  "tags": [
+    "agenda do vendedor",
+    "assento",
+    "meta de contatos",
+    "ativar agenda",
+    "vendedor"
+  ],
+  "related": [
+    "atendimento/agenda/visao-geral",
+    "meu-negocio/vendedores-e-lojas/cadastrar-um-vendedor",
+    "atendimento/agenda/criar-tarefas-pela-automacao"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Lembretes e tarefas manuais funcionam em qualquer conta. O módulo "
+        },
+        {
+          "type": "text",
+          "text": "Agenda do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " acrescenta as tarefas criadas pelas automações e disparos, que vão direto para a agenda do vendedor de cada cliente."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "settings.sellers"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — a faixa "
+        },
+        {
+          "type": "text",
+          "text": "Agenda do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no topo da aba Vendedores."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Pedir o módulo"
+    },
+    {
+      "type": "paragraph",
+      "content": "A Agenda do vendedor é um módulo adicional, com cobrança extra na fatura. Ela é liberada pelo contrato com a Bevean, não por uma chave na tela."
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra a aba Vendedores",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Com o módulo desligado, a faixa "
+                },
+                {
+                  "type": "text",
+                  "text": "Agenda do vendedor",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " aparece com o selo "
+                },
+                {
+                  "type": "text",
+                  "text": "Desativada",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Clique em Quero ativar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Confira o aviso de cobrança e clique em "
+                },
+                {
+                  "type": "text",
+                  "text": "Enviar pedido",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Aguarde o contato",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "O time da Bevean recebe o pedido e entra em contato para incluir o módulo no seu contrato e liberar. Enquanto isso, o botão mostra "
+                },
+                {
+                  "type": "text",
+                  "text": "Pedido enviado em",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " e a data."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Com o módulo ligado, a faixa passa a mostrar "
+        },
+        {
+          "type": "text",
+          "text": "Ativa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", quantos "
+        },
+        {
+          "type": "text",
+          "text": "Assentos",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " estão em uso, a "
+        },
+        {
+          "type": "text",
+          "text": "Meta padrão",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e o botão "
+        },
+        {
+          "type": "text",
+          "text": "Configurar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quem recebe as tarefas: o assento"
+    },
+    {
+      "type": "paragraph",
+      "content": "Só recebe tarefas das campanhas o vendedor que tem as três coisas:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Status "
+            },
+            {
+              "type": "text",
+              "text": "Ativo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " no cadastro de vendedor."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "A chave "
+            },
+            {
+              "type": "text",
+              "text": "Assento na Agenda do vendedor",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ligada."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Um "
+            },
+            {
+              "type": "text",
+              "text": "Usuário vinculado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ativo — é com esse login que a pessoa abre a Agenda."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Um vendedor importado do ERP, com assento mas sem usuário vinculado, ocupa um assento no contador da tela e mesmo assim nunca recebe tarefa. Vincule um usuário a ele ou desligue o assento."
+        }
+      ],
+      "title": "Vendedor sem usuário não recebe tarefa"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada assento ligado conta como assento de vendedor na fatura. A sua conta pode ter um limite de assentos: a faixa mostra "
+        },
+        {
+          "type": "text",
+          "text": "X de Y em uso",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", ou só "
+        },
+        {
+          "type": "text",
+          "text": "em uso",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " quando não há limite. Ao chegar no limite, aparece o aviso "
+        },
+        {
+          "type": "text",
+          "text": "Limite de assentos da Agenda atingido",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — desligue o assento de alguém ou fale com o suporte para aumentar."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Dar assento a um vendedor"
+    },
+    {
+      "type": "paragraph",
+      "content": "Há dois caminhos, e os dois chegam no mesmo lugar."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Pela ficha do vendedor"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra o vendedor",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Em "
+                },
+                {
+                  "type": "uiPath",
+                  "attrs": {
+                    "ref": "settings.sellers"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", clique no ícone de editar do vendedor, ou em "
+                },
+                {
+                  "type": "text",
+                  "text": "Adicionar vendedor",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escolha o Usuário vinculado",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "É o login da equipe que vai usar a Agenda."
+            }
+          ]
+        },
+        {
+          "title": "Ligue Assento na Agenda do vendedor",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Com a chave ligada, ele recebe as tarefas das automações e vê a Agenda no Atendimento."
+            }
+          ]
+        },
+        {
+          "title": "Salve"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Pelo cadastro do usuário"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra o usuário",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Em "
+                },
+                {
+                  "type": "uiPath",
+                  "attrs": {
+                    "ref": "settings.users"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ", edite o usuário ou adicione um novo."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ligue É vendedor (Agenda do vendedor)"
+        },
+        {
+          "title": "Escolha o Vendedor do ERP",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Se a pessoa já existe como vendedor importado do ERP, escolha-a na lista para não duplicar o cadastro. Se não existe, escolha "
+                },
+                {
+                  "type": "text",
+                  "text": "Criar um vendedor novo com o nome deste usuário",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Salve",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "O usuário é salvo e o vendedor escolhido fica vinculado a ele, com o assento ligado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Desligar "
+        },
+        {
+          "type": "text",
+          "text": "É vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " desliga o assento, mas mantém o vínculo entre o usuário e o vendedor. Trocar o vendedor escolhido tira o vínculo e o assento do anterior."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A meta de contatos por dia"
+    },
+    {
+      "type": "paragraph",
+      "content": "A meta aparece no topo da Agenda de cada vendedor e no relatório da Agenda do vendedor. Ela conta as tarefas concluídas no dia — lembretes ficam de fora."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Meta"
+        },
+        {
+          "content": "Onde definir"
+        },
+        {
+          "content": "Regra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Meta padrão de contatos",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Botão "
+              },
+              {
+                "type": "text",
+                "text": "Configurar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " na faixa da Agenda do vendedor"
+              }
+            ]
+          },
+          {
+            "content": "Vale para quem não tem meta própria. Número inteiro de 0 a 10.000; vazio = sem meta."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Meta de contatos por dia",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Ficha de cada vendedor"
+          },
+          {
+            "content": "Vazio = usa a meta padrão da conta. Número inteiro de 0 a 10.000."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A coluna "
+        },
+        {
+          "type": "text",
+          "text": "Meta/dia",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " da lista de vendedores mostra a meta que vale para cada um."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Cupom pessoal"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O campo "
+        },
+        {
+          "type": "text",
+          "text": "Cupom pessoal",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", na ficha do vendedor, vira a variável "
+        },
+        {
+          "type": "text",
+          "text": "Cupom do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na mensagem sugerida das tarefas. Assim cada cliente recebe o cupom do próprio vendedor."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "atendimento/agenda/criar-tarefas-pela-automacao",
+          "description": "Monte a automação que cria as tarefas."
+        },
+        {
+          "ref": "atendimento/agenda/acompanhar-a-equipe",
+          "description": "Acompanhe a agenda de cada vendedor."
+        }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Catálogo de relatórios",
   "subtitle": "A lista completa de relatórios de Receita & Vendas, Clientes & Base, Retenção & LTV, Produtos e Mensageria.",
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-19",
   "tags": [
     "catálogo de relatórios",
     "lista de relatórios",
@@ -179,6 +179,35 @@
           },
           {
             "content": "Quanto cada vendedor vendeu no período — receita, pedidos, ticket médio e participação."
+          }
+        ],
+        [
+          {
+            "content": "Agenda do vendedor"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Por loja e vendedor: vendas, vendas que a Agenda gerou, contatos feitos e meta. Veja "
+              },
+              {
+                "type": "text",
+                "text": "Acompanhar a equipe",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "atendimento/agenda/acompanhar-a-equipe"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
           }
         ],
         [

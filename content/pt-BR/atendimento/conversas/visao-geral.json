@@ -2,7 +2,7 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funciona o Atendimento",
   "subtitle": "O helpdesk é uma aplicação própria: as abas Meus, Fila, Todos e Espera, e o que cada linha da lista mostra.",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-10-19",
   "tags": [
     "atendimento",
     "helpdesk",
@@ -124,6 +124,36 @@
         },
         {
           "content": "Até 3 marcadores."
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Lembrete para",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e a data, quando a conversa tem um lembrete — e "
+            },
+            {
+              "type": "text",
+              "text": "Venceu há",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", em vermelho, depois que passa da hora."
+            }
+          ]
         }
       ]
     },
@@ -134,7 +164,41 @@
     },
     {
       "type": "paragraph",
-      "content": "Não lidas, canal específico, marcador, responsável (\"Não atribuídas\" incluso — mesma restrição da aba Todos), SLA em atraso, e favoritas."
+      "content": [
+        {
+          "type": "text",
+          "text": "Não lidas, canal específico, marcador, responsável (\"Não atribuídas\" incluso — mesma restrição da aba Todos), SLA em atraso, e favoritas. Com o módulo Agenda do vendedor, também "
+        },
+        {
+          "type": "text",
+          "text": "Campanha",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — veja "
+        },
+        {
+          "type": "text",
+          "text": "Campanhas e meta",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/agenda/campanhas-e-meta"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
     },
     {
       "type": "linkCards",

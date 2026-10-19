@@ -344,5 +344,19 @@
       "Assistente de IA"
     ],
     "href": "/helpdesk/settings/assistant"
+  },
+  "helpdesk.agenda": {
+    "segments": [
+      "Atendimento",
+      "Agenda"
+    ],
+    "href": "/helpdesk/agenda"
+  },
+  "helpdesk.dashboard": {
+    "segments": [
+      "Atendimento",
+      "Painel"
+    ],
+    "href": "/helpdesk/dashboard"
   }
 }

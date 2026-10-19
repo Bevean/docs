@@ -1,0 +1,467 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Acompanhar a equipe",
+  "subtitle": "A Agenda da equipe no Painel, a agenda de cada vendedor, como reatribuir tarefas e o relatório Agenda do vendedor.",
+  "updatedAt": "2026-10-19",
+  "tags": [
+    "agenda da equipe",
+    "reatribuir tarefa",
+    "relatório agenda do vendedor",
+    "supervisor",
+    "meta da equipe"
+  ],
+  "related": [
+    "atendimento/agenda/visao-geral",
+    "analises/analises/catalogo-de-relatorios"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quem supervisiona o atendimento acompanha a Agenda de toda a equipe em dois lugares: a aba "
+        },
+        {
+          "type": "text",
+          "text": "Agenda da equipe",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no Painel do Atendimento, para o dia a dia, e o relatório "
+        },
+        {
+          "type": "text",
+          "text": "Agenda do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", para fechar o período."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A Agenda da equipe"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.dashboard"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — aba "
+        },
+        {
+          "type": "text",
+          "text": "Agenda da equipe",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O Painel aparece só para supervisores: o dono da conta e quem enxerga todas as conversas de pelo menos um canal."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No topo, quando a conta tem lojas, dá para filtrar por loja. O resumo "
+        },
+        {
+          "type": "text",
+          "text": "Por onde a equipe falou com os clientes",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra, nos últimos 7 dias, quantos contatos foram feitos por Link (o WhatsApp do vendedor), Web e Oficial."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A tabela mostra uma linha para cada vendedor com assento e para quem mais tiver tarefas abertas ou recentes, como atendentes com lembretes:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Coluna"
+        },
+        {
+          "content": "O que mostra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Vendedor"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O nome. Quem não tem assento aparece com o selo "
+              },
+              {
+                "type": "text",
+                "text": "sem assento",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Abertas"
+          },
+          {
+            "content": "Tarefas abertas agora."
+          }
+        ],
+        [
+          {
+            "content": "Atrasadas"
+          },
+          {
+            "content": "Tarefas com o prazo vencido."
+          }
+        ],
+        [
+          {
+            "content": "Hoje × meta"
+          },
+          {
+            "content": "O que foi concluído hoje comparado com a meta do dia."
+          }
+        ],
+        [
+          {
+            "content": "7 dias"
+          },
+          {
+            "content": "O que foi concluído nos últimos 7 dias."
+          }
+        ],
+        [
+          {
+            "content": "Expiradas 7d"
+          },
+          {
+            "content": "Tarefas que expiraram sem contato nos últimos 7 dias."
+          }
+        ],
+        [
+          {
+            "content": "Contato por (7 dias)"
+          },
+          {
+            "content": "Por qual canal os contatos foram feitos."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ver a agenda de um vendedor e reatribuir"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clique num vendedor para abrir a agenda dele, com as abas Hoje, Semana, Atrasadas e Concluídas. A agenda é só de leitura: quem trabalha as tarefas é o vendedor."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A exceção é "
+        },
+        {
+          "type": "text",
+          "text": "Reatribuir",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que aparece em toda tarefa aberta ou em atendimento:"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Reatribuir",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Na tarefa que quer passar adiante."
+            }
+          ]
+        },
+        {
+          "title": "Escolha o Novo responsável",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A lista mostra os vendedores com assento, começando pelos da mesma loja."
+            }
+          ]
+        },
+        {
+          "title": "Confirme",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A tarefa volta a ficar aberta, agora na agenda do novo responsável."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Desativar um vendedor ou desligar o assento dele não passa as tarefas abertas para outra pessoa. Elas ficam com ele até expirarem — reatribua as que ainda valem."
+        }
+      ],
+      "title": "Vendedor que saiu continua com as tarefas"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O relatório Agenda do vendedor"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "reports"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — relatório "
+        },
+        {
+          "type": "text",
+          "text": "Agenda do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Ele mostra, por loja e por vendedor, as vendas, as vendas que a Agenda gerou, os contatos feitos e a meta no período escolhido."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Indicador"
+        },
+        {
+          "content": "Como é calculado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Vendas das lojas"
+          },
+          {
+            "content": "Pedidos aprovados com loja ou vendedor no pedido — as vendas do PDV ou do ERP. Pedidos do e-commerce sem loja nem vendedor ficam fora."
+          }
+        ],
+        [
+          {
+            "content": "Vendas pela agenda"
+          },
+          {
+            "content": "Pedidos aprovados do cliente em até 7 dias depois do contato de uma tarefa concluída (de campanha ou manual). Cada pedido conta uma vez, para a última tarefa."
+          }
+        ],
+        [
+          {
+            "content": "Contatos realizados"
+          },
+          {
+            "content": "Tarefas concluídas sobre as tarefas que começaram no período."
+          }
+        ],
+        [
+          {
+            "content": "Meta de contatos"
+          },
+          {
+            "content": "Contatos feitos sobre a meta de cada vendedor com assento, somada nos dias do período até hoje."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "As vendas pela agenda se dividem em "
+        },
+        {
+          "type": "text",
+          "text": "Com o próprio vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (a venda saiu com quem fez o contato), "
+        },
+        {
+          "type": "text",
+          "text": "Mesma loja, outro vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Outro canal",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (site ou outra loja)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tabela tem duas visões: "
+        },
+        {
+          "type": "text",
+          "text": "Por loja",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que abre os vendedores de cada loja, e "
+        },
+        {
+          "type": "text",
+          "text": "Por vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Lembretes e tarefas de teste não entram no relatório. Todo vendedor com assento aparece, mesmo sem nenhuma tarefa no período."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "atendimento/agenda/ativar-e-configurar",
+          "description": "Ajuste assentos e metas."
+        },
+        {
+          "ref": "analises/analises/catalogo-de-relatorios",
+          "description": "Veja os outros relatórios de vendas."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,768 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Trabalhar as tarefas",
+  "subtitle": "Fale com o cliente pelo canal certo e conclua, reagende ou descarte cada tarefa da sua Agenda.",
+  "updatedAt": "2026-10-19",
+  "tags": [
+    "concluir tarefa",
+    "reagendar tarefa",
+    "descartar tarefa",
+    "desfazer",
+    "mensagem sugerida"
+  ],
+  "related": [
+    "atendimento/agenda/visao-geral",
+    "atendimento/agenda/envio-direto-e-em-lote"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Cada tarefa é um contato a fazer. O caminho normal é abrir a tarefa, falar com o cliente pelo canal indicado e deixar a tarefa concluir sozinha. Quando não for a hora, reagende; quando não fizer mais sentido, descarte."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.agenda"
+          }
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Abrir a tarefa"
+    },
+    {
+      "type": "paragraph",
+      "content": "Clique na linha para abrir o detalhe. À esquerda fica a tarefa; à direita, a ficha do cliente."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Parte"
+        },
+        {
+          "content": "O que mostra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Tarefa"
+          },
+          {
+            "content": "O título, por exemplo \"Retomar contato com o cliente\"."
+          }
+        ],
+        [
+          {
+            "content": "Instruções (só você vê)"
+          },
+          {
+            "content": "A orientação de quem criou a tarefa. Não vai para o cliente."
+          }
+        ],
+        [
+          {
+            "content": "Anotação"
+          },
+          {
+            "content": "O que você escreveu ao reagendar, quando a tarefa já foi reagendada."
+          }
+        ],
+        [
+          {
+            "content": "Mensagem sugerida ou Template aprovado"
+          },
+          {
+            "content": "O texto pronto para enviar ao cliente, ou o template que será usado no WhatsApp Oficial."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Falar com o cliente"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão principal do detalhe já vem com a melhor forma de contato para aquele cliente, conforme o canal em que você atende e a conversa que já existe. Em "
+        },
+        {
+          "type": "text",
+          "text": "Outros canais",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " dá para escolher outra opção."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Botão"
+        },
+        {
+          "content": "O que acontece"
+        },
+        {
+          "content": "Quando a tarefa conclui"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Abrir conversa",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Abre a conversa com o cliente, com a mensagem sugerida já na caixa de texto para você revisar e enviar."
+          },
+          {
+            "content": "30 segundos depois do clique."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Iniciar conversa",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Quando ainda não há conversa: escreva a "
+              },
+              {
+                "type": "text",
+                "text": "Primeira mensagem",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e clique em "
+              },
+              {
+                "type": "text",
+                "text": "Enviar e abrir conversa",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "content": "Na hora do envio."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Enviar template",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "No WhatsApp Oficial, fora da janela de 24 horas: escolha um template aprovado e envie."
+          },
+          {
+            "content": "Na hora do envio."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Abrir no meu WhatsApp",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Abre o WhatsApp do seu celular ou computador com a mensagem pronta. O envio é feito por lá, fora da plataforma."
+          },
+          {
+            "content": "30 segundos depois do clique."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O botão do canal, na própria linha da lista, faz o mesmo sem abrir o detalhe. Com o "
+        },
+        {
+          "type": "text",
+          "text": "Envio direto",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ligado, ele envia a mensagem sugerida na hora — veja "
+        },
+        {
+          "type": "text",
+          "text": "Envio direto e envio em lote",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/agenda/envio-direto-e-em-lote"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Enquanto a tarefa está "
+            },
+            {
+              "type": "text",
+              "text": "em atendimento",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", aparece uma barra no rodapé com o nome do cliente e a contagem. Clique em "
+            },
+            {
+              "type": "text",
+              "text": "Desfazer",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " para a tarefa voltar para a Agenda — por exemplo, se abriu o cliente errado."
+            }
+          ]
+        }
+      ],
+      "title": "Os 30 segundos têm Desfazer"
+    },
+    {
+      "type": "paragraph",
+      "content": "Se o cliente não tem telefone, ou se você não atende em nenhum número de WhatsApp conectado, o detalhe avisa e não mostra botão de contato. Nesse caso, conclua sem contato, descarte a tarefa ou peça ao gestor para liberar um canal para você."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As outras ações"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Ação"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Concluir",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Marca a tarefa como feita, com os mesmos 30 segundos para desfazer. Quando não há canal de contato, o botão aparece como "
+              },
+              {
+                "type": "text",
+                "text": "Concluir sem contato",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Reagendar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Tira a tarefa da lista de agora e devolve no dia escolhido. Veja abaixo."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Descartar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Encerra a tarefa sem contato. Ela vai para Concluídas como "
+              },
+              {
+                "type": "text",
+                "text": "descartada",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Reabrir",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Aparece numa tarefa concluída e devolve a tarefa para a Agenda. Só funciona no mesmo dia em que ela foi concluída."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Reagendar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Reagendar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "No detalhe da tarefa."
+            }
+          ]
+        },
+        {
+          "title": "Escolha o dia",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Use os atalhos "
+                },
+                {
+                  "type": "text",
+                  "text": "Hoje",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "Amanhã",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ou "
+                },
+                {
+                  "type": "text",
+                  "text": "Em 7 dias",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", ou escolha uma "
+                },
+                {
+                  "type": "text",
+                  "text": "Data",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". O "
+                },
+                {
+                  "type": "text",
+                  "text": "Horário",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " é opcional: sem ele, o prazo vai até o fim do dia."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Anote o motivo, se quiser",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A "
+                },
+                {
+                  "type": "text",
+                  "text": "Anotação",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " aceita até 500 caracteres, por exemplo \"pediu para chamar depois do dia 10\". Ela aparece na tarefa quando voltar."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Clique em Reagendar"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Até o dia escolhido, a tarefa fica em "
+        },
+        {
+          "type": "text",
+          "text": "Próximas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (ou em "
+        },
+        {
+          "type": "text",
+          "text": "Semana",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", se o dia cai nos próximos 7 dias). Escolher "
+        },
+        {
+          "type": "text",
+          "text": "Hoje",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " traz a tarefa de volta para a lista na hora. A data pode ser de até 1 ano à frente."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Lembretes"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Um lembrete funciona um pouco diferente: o botão "
+        },
+        {
+          "type": "text",
+          "text": "Abrir conversa",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " só abre a conversa e não conclui nada. Conclua o lembrete pelo botão "
+        },
+        {
+          "type": "text",
+          "text": "Concluir",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " do detalhe ou pela faixa "
+        },
+        {
+          "type": "text",
+          "text": "Concluir lembrete",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", no topo da conversa. Lembretes também concluem sozinhos quando, depois de o cliente responder, você responde a ele. Veja "
+        },
+        {
+          "type": "text",
+          "text": "Criar tarefas e lembretes",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/agenda/criar-tarefas-e-lembretes"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Tarefas que expiram"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tarefas de campanha podem ter prazo de expiração, definido na automação que as criou. Ao expirar, a tarefa sai da Agenda e aparece em "
+        },
+        {
+          "type": "text",
+          "text": "Concluídas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " como "
+        },
+        {
+          "type": "text",
+          "text": "expirada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " — ela não fica atrasada para sempre."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "atendimento/agenda/envio-direto-e-em-lote",
+          "description": "Envie a mensagem sugerida sem abrir cada tarefa."
+        },
+        {
+          "ref": "atendimento/agenda/resolver-problemas",
+          "description": "Uma tarefa sumiu ou não abre o contato."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,628 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Campanhas e meta",
+  "subtitle": "O quadro que mostra, para cada vendedor, as campanhas que criaram tarefas, a meta do dia, a sequência e as medalhas.",
+  "updatedAt": "2026-10-19",
+  "tags": [
+    "campanhas do vendedor",
+    "meta do dia",
+    "medalha",
+    "sequência",
+    "vendas da campanha"
+  ],
+  "related": [
+    "atendimento/agenda/criar-tarefas-pela-automacao",
+    "atendimento/agenda/visao-geral"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada automação ou disparo que cria tarefas para um vendedor vira uma "
+        },
+        {
+          "type": "text",
+          "text": "campanha",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " na Agenda dele. A aba "
+        },
+        {
+          "type": "text",
+          "text": "Campanhas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " junta todas, com a meta de cada dia e quanto a campanha já vendeu."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "helpdesk.agenda"
+          }
+        },
+        {
+          "type": "text",
+          "text": " — aba "
+        },
+        {
+          "type": "text",
+          "text": "Campanhas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Ela aparece só com o módulo Agenda do vendedor ativo e para quem tem assento."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O quadro"
+    },
+    {
+      "type": "paragraph",
+      "content": "No alto fica a campanha em destaque, com:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "o status — "
+            },
+            {
+              "type": "text",
+              "text": "Ativa",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "text",
+              "text": "Agendada",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ou "
+            },
+            {
+              "type": "text",
+              "text": "Encerrada",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — e há quantos dias seguidos você bate a meta;"
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "a regra do dia, por exemplo "
+            },
+            {
+              "type": "text",
+              "text": "Cada vendedor precisa fazer 20 contatos por dia",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", e o período da campanha;"
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Vendas da campanha",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", em reais e número de pedidos;"
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "a barra "
+            },
+            {
+              "type": "text",
+              "text": "Meta de hoje",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ";"
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "os botões "
+            },
+            {
+              "type": "text",
+              "text": "Ver detalhes",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Ver tarefas da campanha",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Abaixo, as campanhas ficam em três grupos: "
+        },
+        {
+          "type": "text",
+          "text": "Em andamento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Agendadas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (que vão começar numa data marcada) e "
+        },
+        {
+          "type": "text",
+          "text": "Histórico de metas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (as encerradas, com medalha)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Um disparo é uma campanha só, do primeiro ao último dia das tarefas. Uma automação vira uma campanha por mês, por exemplo \"Aniversariantes do mês · Setembro\" — assim o histórico mostra o resultado de cada mês."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "De onde vem a meta da campanha"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Situação"
+        },
+        {
+          "content": "Meta do dia"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O passo da automação tem "
+              },
+              {
+                "type": "text",
+                "text": "Limitar tarefas por vendedor por dia",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ligado"
+              }
+            ]
+          },
+          {
+            "content": "O teto do passo."
+          }
+        ],
+        [
+          {
+            "content": "Sem teto no passo"
+          },
+          {
+            "content": "A meta de contatos por dia do vendedor (ou a meta padrão da conta)."
+          }
+        ],
+        [
+          {
+            "content": "Sem nenhuma das duas"
+          },
+          {
+            "content": "Não há meta: a campanha mostra só quantas tarefas tem."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "A meta de um dia nunca passa do que você tinha para fazer naquele dia: se só chegaram 5 tarefas, fazer as 5 bate a meta."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Sequência e medalhas"
+    },
+    {
+      "type": "paragraph",
+      "content": "A sequência conta os dias seguidos em que você bateu a meta. Dias sem tarefa não quebram a sequência."
+    },
+    {
+      "type": "paragraph",
+      "content": "Quando a campanha termina, ela ganha uma medalha pelo resultado do período:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Medalha"
+        },
+        {
+          "content": "Resultado"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Ouro"
+          },
+          {
+            "content": "100% da meta do período"
+          }
+        ],
+        [
+          {
+            "content": "Prata"
+          },
+          {
+            "content": "80% ou mais"
+          }
+        ],
+        [
+          {
+            "content": "Bronze"
+          },
+          {
+            "content": "50% ou mais"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os detalhes da campanha"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em "
+        },
+        {
+          "type": "text",
+          "text": "Ver detalhes",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", a campanha mostra:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Hoje",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "text",
+              "text": "No período",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " (ou "
+            },
+            {
+              "type": "text",
+              "text": "Resultado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", se encerrada), "
+            },
+            {
+              "type": "text",
+              "text": "Sequência",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Vendas",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ";"
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Dia a dia",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — os últimos 31 dias, com o que foi feito e a meta de cada dia;"
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Resultado dos contatos",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " e "
+            },
+            {
+              "type": "text",
+              "text": "Como falou",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — por qual canal os contatos foram feitos: WhatsApp do vendedor, WhatsApp Web ou WhatsApp Oficial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "As vendas da campanha contam os pedidos aprovados do cliente em até 7 dias depois do contato."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Filtrar conversas por campanha"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Com o módulo ativo, as conversas e a Pipeline ganham o filtro "
+        },
+        {
+          "type": "text",
+          "text": "Campanha",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Ele lista as campanhas dos últimos 30 dias e mostra as conversas com tarefa daquela campanha ou cujo contato recebeu a mensagem dela."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na conversa, o painel do contato também mostra o bloco "
+        },
+        {
+          "type": "text",
+          "text": "Agenda",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com as tarefas ligadas àquela conversa: de qual campanha vieram, quem é o vendedor e se já foram feitas."
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "atendimento/agenda/acompanhar-a-equipe",
+          "description": "Veja como a equipe inteira está indo."
+        },
+        {
+          "ref": "atendimento/agenda/criar-tarefas-pela-automacao",
+          "description": "Ajuste o teto e a frequência do passo."
+        }
+      ]
+    }
+  ]
+}

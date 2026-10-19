@@ -1,0 +1,431 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Resolver problemas na Agenda",
+  "subtitle": "Vendedor que não recebe tarefas, tarefa que sumiu, botão de contato que não aparece e outros casos comuns.",
+  "updatedAt": "2026-10-19",
+  "tags": [
+    "vendedor não recebe tarefa",
+    "tarefa sumiu",
+    "agenda não aparece",
+    "limite de assentos",
+    "tarefa não criada"
+  ],
+  "related": [
+    "atendimento/agenda/visao-geral",
+    "atendimento/agenda/ativar-e-configurar",
+    "atendimento/agenda/criar-tarefas-pela-automacao"
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"O vendedor não recebe as tarefas da automação\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Confira, nesta ordem:"
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O módulo Agenda do vendedor está ativo: a faixa em "
+            },
+            {
+              "type": "uiPath",
+              "attrs": {
+                "ref": "settings.sellers"
+              }
+            },
+            {
+              "type": "text",
+              "text": " mostra "
+            },
+            {
+              "type": "text",
+              "text": "Ativa",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O vendedor está "
+            },
+            {
+              "type": "text",
+              "text": "Ativo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", com "
+            },
+            {
+              "type": "text",
+              "text": "Assento na Agenda do vendedor",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ligado e um "
+            },
+            {
+              "type": "text",
+              "text": "Usuário vinculado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ativo. Sem usuário, ele ocupa assento mas nunca recebe tarefa."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O cliente tem esse vendedor como "
+            },
+            {
+              "type": "text",
+              "text": "Vendedor preferido",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ou "
+            },
+            {
+              "type": "text",
+              "text": "Último vendedor",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — conforme a opção escolhida no passo."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "A saída "
+            },
+            {
+              "type": "text",
+              "text": "Não criada",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " do passo: os números do passo mostram quantas tarefas não foram criadas, e cada cliente que saiu por ali leva o motivo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Veja todos os motivos em "
+        },
+        {
+          "type": "text",
+          "text": "Criar tarefas pela automação",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/agenda/criar-tarefas-pela-automacao"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Limite de assentos da Agenda atingido\""
+    },
+    {
+      "type": "paragraph",
+      "content": "A sua conta já usa todos os assentos contratados. Desligue o assento de quem não precisa mais dele ou fale com o suporte para aumentar o limite. Quando o aviso aparece ao salvar um usuário, o usuário é salvo mesmo assim — só o assento fica desligado."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Uma tarefa sumiu da minha Agenda\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Veja a aba "
+        },
+        {
+          "type": "text",
+          "text": "Concluídas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": ela mostra o que foi concluído, descartado ou expirou nos últimos 7 dias. Tarefas de campanha expiram no prazo definido na automação e saem da lista. Se a tarefa foi reagendada, ela está em "
+        },
+        {
+          "type": "text",
+          "text": "Próximas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou em "
+        },
+        {
+          "type": "text",
+          "text": "Semana",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". E um supervisor pode tê-la reatribuído para outra pessoa."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Esta tarefa já mudou de estado\""
+    },
+    {
+      "type": "paragraph",
+      "content": "A tarefa foi alterada em outro lugar — em outra aba, no aplicativo ou pelo sistema, por exemplo ao expirar. A lista é atualizada sozinha; confira o novo estado e siga."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"O detalhe não mostra botão para falar com o cliente\""
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "O contato não tem telefone",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": conclua sem contato ou descarte a tarefa."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Você não atende em nenhum número de WhatsApp conectado",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ": peça ao gestor para liberar um canal para você no Atendimento."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Clico no WhatsApp do vendedor e nada abre\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se aparecer o aviso "
+        },
+        {
+          "type": "text",
+          "text": "Não foi possível abrir o WhatsApp",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", atualize o aplicativo da Bevean para computador e tente de novo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Outras perguntas"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Preciso do módulo para usar a Agenda?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. Lembretes e tarefas manuais funcionam para qualquer usuário ativo. O módulo traz as tarefas criadas pelas automações e disparos, a aba Campanhas e o filtro Campanha nas conversas."
+            }
+          ]
+        },
+        {
+          "question": "A mensagem que eu envio pela conversa conclui a tarefa?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Sim, se a tarefa já está "
+                },
+                {
+                  "type": "text",
+                  "text": "em atendimento",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " — ou seja, você clicou para contatar o cliente pela Agenda. Uma tarefa ainda aberta não é concluída por uma mensagem avulsa; conclua pela Agenda."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "question": "A venda do cliente conclui a tarefa?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. A venda é atribuída à tarefa concluída e aparece nas vendas da campanha e no relatório, mas quem conclui a tarefa é o vendedor."
+            }
+          ]
+        },
+        {
+          "question": "Posso reabrir uma tarefa concluída por engano?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Sim, com "
+                },
+                {
+                  "type": "text",
+                  "text": "Reabrir",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " no detalhe, no mesmo dia da conclusão. Nos primeiros 30 segundos, o "
+                },
+                {
+                  "type": "text",
+                  "text": "Desfazer",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " da barra no rodapé faz o mesmo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

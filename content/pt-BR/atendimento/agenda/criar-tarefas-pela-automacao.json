@@ -1,0 +1,994 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Criar tarefas pela automação",
+  "subtitle": "O passo Agenda do vendedor: em vez de enviar uma mensagem, a automação entrega o cliente para o vendedor dele contatar.",
+  "updatedAt": "2026-10-19",
+  "tags": [
+    "agenda do vendedor",
+    "passo agenda",
+    "tarefa automática",
+    "rodízio",
+    "campanha de vendedor"
+  ],
+  "related": [
+    "atendimento/agenda/ativar-e-configurar",
+    "automacoes/automacoes/montar-o-fluxo",
+    "atendimento/agenda/campanhas-e-meta"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O passo "
+        },
+        {
+          "type": "text",
+          "text": "Agenda do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " cria uma tarefa na agenda do vendedor do cliente. Quem fala com o cliente é a pessoa, pelo Atendimento — com a mensagem e as instruções que você deixou prontas no passo."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: ",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "no editor de "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "automations"
+          }
+        },
+        {
+          "type": "text",
+          "text": " ou de um disparo, no menu de passos, grupo Conteúdo. Ele só fica disponível com o módulo Agenda do vendedor ativo; sem o módulo, aparece com o selo "
+        },
+        {
+          "type": "text",
+          "text": "desativada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Veja "
+        },
+        {
+          "type": "text",
+          "text": "Ativar e configurar a Agenda do vendedor",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "atendimento/agenda/ativar-e-configurar"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "A tarefa"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que é"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Título da tarefa",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Obrigatório. É o que o vendedor lê na lista, por exemplo \"Retomar contato com o cliente\"."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Instruções para o vendedor",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Só o vendedor lê — não vai para o cliente."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Mensagem sugerida",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Aparece pré-preenchida na conversa, no WhatsApp, ou vira as variáveis do template, no WhatsApp Oficial."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os três campos aceitam variáveis, em "
+        },
+        {
+          "type": "text",
+          "text": "Inserir variável",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Além das variáveis do contato, há o grupo "
+        },
+        {
+          "type": "text",
+          "text": "Vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ("
+        },
+        {
+          "type": "text",
+          "text": "Nome do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Cupom do vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") e o grupo "
+        },
+        {
+          "type": "text",
+          "text": "Cashback do contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (saldo, data de vencimento e dias até vencer, com o valor do momento em que a tarefa é criada). Também dá para anexar uma pesquisa ao passo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Como contatar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em "
+        },
+        {
+          "type": "text",
+          "text": "Canal de contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", escolha por onde o vendedor vai falar com o cliente:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Opção"
+        },
+        {
+          "content": "Como funciona"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O vendedor escolhe (canal em que atende)",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O padrão. A Agenda usa o canal em que o vendedor atende."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "WhatsApp (abre a conversa)",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Abre a conversa com a mensagem sugerida na caixa de texto."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "WhatsApp Oficial (template aprovado)",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Envia um template. Exige escolher o "
+              },
+              {
+                "type": "text",
+                "text": "Número",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e o "
+              },
+              {
+                "type": "text",
+                "text": "Template aprovado",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "WhatsApp do vendedor (link)",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O vendedor abre o WhatsApp do próprio celular ou computador com a mensagem pronta e envia por lá. Não precisa de número conectado, mas a plataforma não vê a mensagem."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Nas opções de WhatsApp, o "
+        },
+        {
+          "type": "text",
+          "text": "Número",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " é opcional: sem escolher, vale o número em que o vendedor atende."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quem recebe"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em "
+        },
+        {
+          "type": "text",
+          "text": "Vendedor do contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", escolha qual vendedor da carteira do cliente recebe a tarefa: o "
+        },
+        {
+          "type": "text",
+          "text": "Vendedor preferido (com quem mais compra)",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que é o padrão, ou o "
+        },
+        {
+          "type": "text",
+          "text": "Último vendedor (pedido mais recente)",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Se o escolhido não tem assento, a Agenda tenta o outro."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em "
+        },
+        {
+          "type": "text",
+          "text": "Contato sem vendedor",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", decida o que fazer quando o cliente não tem um vendedor com assento:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Não criar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — o padrão. O cliente sai pela saída "
+            },
+            {
+              "type": "text",
+              "text": "Não criada",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Rodízio entre os escolhidos",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " — a tarefa vai, em rodízio, para os agentes ou grupos que você escolher. Entram no rodízio só os que têm assento de vendedor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "O vendedor precisa estar ativo, com assento na Agenda e um usuário vinculado. Quem está online ou a quantidade de conversas abertas não contam na escolha."
+        }
+      ],
+      "title": "Só recebe quem tem assento e usuário"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Prazo e duração"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Campo"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Fazer em até",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O prazo da tarefa, em horas ou dias, a partir de quando ela aparece. Padrão: 24 horas. Passado o prazo, a tarefa fica em Atrasadas."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Aparece a partir de",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Opcional. Uma data para a tarefa entrar na agenda. Em branco, ela aparece assim que é criada."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Expira",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Depois de N dias",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " (padrão 7), "
+              },
+              {
+                "type": "text",
+                "text": "Em uma data fixa",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " ou "
+              },
+              {
+                "type": "text",
+                "text": "Nunca",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Ao expirar, a tarefa sai da agenda."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Frequência e teto"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Opção"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Não criar se o contato já recebeu tarefa recentemente",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Ligada por padrão, com 2 dias. Evita que o mesmo cliente seja abordado duas vezes seguidas. Vale para tarefas de qualquer campanha; lembretes e tarefas manuais não contam."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Limitar tarefas por vendedor por dia",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Desligada por padrão. Acima do teto, a tarefa não é criada. Conta as tarefas de campanha de todas as automações no dia."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Além disso, cada passo cria no máximo uma tarefa aberta por cliente: se o cliente já tem uma tarefa aberta deste passo, outra não é criada."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "As saídas do passo"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Saída"
+        },
+        {
+          "content": "Quando o cliente segue por ela"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Tarefa criada",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Logo depois de a tarefa ser criada."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Não criada",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Quando a tarefa não pôde ser criada — veja os motivos abaixo."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Concluída",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Quando o vendedor conclui a tarefa."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Expirou",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Quando a tarefa expira sem ser feita."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "As saídas "
+        },
+        {
+          "type": "text",
+          "text": "Concluída",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Expirou",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " permitem continuar o fluxo depois do contato do vendedor, por exemplo enviando uma mensagem automática para quem não foi contatado."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Por que uma tarefa não foi criada"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quem sai por "
+        },
+        {
+          "type": "text",
+          "text": "Não criada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " leva o motivo junto:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        {
+          "content": "O módulo Agenda do vendedor não está ativo na conta."
+        },
+        {
+          "content": "Contato não encontrado, ou contato sem telefone."
+        },
+        {
+          "content": "A data de fim da tarefa já passou."
+        },
+        {
+          "content": "O contato foi abordado há poucos dias (a regra de frequência)."
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "Sem vendedor para este contato, com a opção "
+            },
+            {
+              "type": "text",
+              "text": "Não criar",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "content": "O vendedor já bateu o teto de tarefas do dia."
+        },
+        {
+          "content": "Já existe uma tarefa aberta deste passo para o contato."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os números no passo"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Depois de publicado, o passo mostra quantas tarefas foram criadas, concluídas, expiradas e não criadas, e por onde os vendedores falaram com os clientes ("
+        },
+        {
+          "type": "text",
+          "text": "Link",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Web",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "Oficial",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "No teste do editor, a tarefa vai para quem está testando, nunca para o vendedor real — e só é criada se essa pessoa tiver assento de vendedor. Tarefas de teste não entram nos números nem nas regras de frequência e teto."
+        }
+      ],
+      "title": "Testar sem incomodar o vendedor"
+    },
+    {
+      "type": "linkCards",
+      "title": "Próximos passos",
+      "items": [
+        {
+          "ref": "atendimento/agenda/campanhas-e-meta",
+          "description": "Acompanhe as campanhas na Agenda de cada vendedor."
+        },
+        {
+          "ref": "automacoes/automacoes/montar-o-fluxo",
+          "description": "Monte o restante do fluxo."
+        }
+      ]
+    }
+  ]
+}
