@@ -1,6 +1,6 @@
 {
   "$schema": "../../../../.vscode/schemas/section.schema.json",
-  "title": "Agenda",
+  "title": "Agenda do vendedor",
   "description": "Tarefas, lembretes e campanhas de contato de cada vendedor e atendente, num só lugar.",
   "icon": "calendar-check",
   "articles": [

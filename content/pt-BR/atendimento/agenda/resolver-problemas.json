@@ -1,6 +1,6 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
-  "title": "Resolver problemas na Agenda",
+  "title": "Resolver problemas na Agenda do vendedor",
   "subtitle": "Vendedor que não recebe tarefas, tarefa que sumiu, botão de contato que não aparece e outros casos comuns.",
   "updatedAt": "2026-10-19",
   "tags": [

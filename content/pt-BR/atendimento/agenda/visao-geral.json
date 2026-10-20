@@ -1,6 +1,6 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
-  "title": "Como funciona a Agenda",
+  "title": "Como funciona a Agenda do vendedor",
   "subtitle": "A lista de quem você precisa contatar hoje: lembretes, tarefas manuais e, com o módulo Agenda do vendedor, as tarefas das campanhas.",
   "updatedAt": "2026-10-19",
   "tags": [
