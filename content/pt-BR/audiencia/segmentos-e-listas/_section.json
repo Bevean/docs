@@ -6,8 +6,12 @@
   "articles": [
     "visao-geral",
     "criar-um-segmento-dinamico",
+    "condicoes-do-segmento",
     "criar-uma-lista-fixa",
+    "atualizar-uma-lista-por-condicao",
+    "painel-do-segmento",
     "gerenciar-um-segmento-ou-lista",
+    "pastas-e-lixeira",
     "resolver-problemas"
   ]
 }

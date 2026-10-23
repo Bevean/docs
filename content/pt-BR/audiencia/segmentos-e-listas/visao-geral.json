@@ -1,34 +1,29 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Como funcionam segmentos e listas",
-  "subtitle": "Segmento dinâmico, lista fixa e RFV: o que muda entre os 3, e onde cada um é usado depois.",
-  "updatedAt": "2026-09-03",
+  "subtitle": "Segmento, lista e faixa RFV: o que muda entre os três, de quanto em quanto tempo atualizam e onde são usados depois.",
+  "updatedAt": "2026-10-23",
   "tags": [
-    "segmentos",
-    "listas",
+    "público",
     "audiência",
-    "público de campanha"
+    "segmentação"
   ],
   "related": [
     "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
-    "audiencia/segmentos-e-listas/criar-uma-lista-fixa"
+    "audiencia/segmentos-e-listas/criar-uma-lista-fixa",
+    "audiencia/segmentos-e-listas/painel-do-segmento"
   ],
   "body": [
     {
       "type": "paragraph",
-      "content": "Segmentos e listas agrupam contatos para você mandar uma campanha, disparar uma automação ou simplesmente entender um pedaço da sua base."
+      "content": "Segmentos e listas agrupam contatos para você mandar uma campanha, disparar uma automação ou entender um pedaço da sua base."
     },
     {
       "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "text": "Onde fica: ",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "text": "Onde fica: "
         },
         {
           "type": "uiPath",
@@ -45,7 +40,7 @@
     {
       "type": "heading",
       "level": 2,
-      "content": "Os 3 tipos"
+      "content": "Os três tipos"
     },
     {
       "type": "table",
@@ -55,87 +50,370 @@
         },
         {
           "content": "Como funciona"
+        },
+        {
+          "content": "Quem decide quem está dentro"
         }
       ],
       "rows": [
         [
           {
-            "content": "Segmento (dinâmico)"
+            "content": [
+              {
+                "type": "text",
+                "text": "Segmento",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "content": "Um filtro. Contatos entram e saem sozinhos, conforme passam a bater (ou deixam de bater) com as condições."
+            "content": "Uma regra. Os contatos entram e saem sozinhos, conforme passam a atender ou deixam de atender às condições."
+          },
+          {
+            "content": "As condições, sempre. Não dá para incluir ou tirar alguém à mão."
           }
         ],
         [
-          {
-            "content": "Lista (fixa)"
-          },
-          {
-            "content": "Um recorte fixo. Você escolhe as condições (que ficam congeladas no momento da criação) ou seleciona os contatos manualmente — não muda sozinha depois."
-          }
-        ],
-        [
-          {
-            "content": "RFV"
-          },
           {
             "content": [
               {
                 "type": "text",
-                "text": "Gerada automaticamente pela "
-              },
-              {
-                "type": "text",
-                "text": "Matriz RFV",
+                "text": "Lista",
                 "marks": [
                   {
-                    "type": "docLink",
-                    "attrs": {
-                      "ref": "audiencia/matriz-rfv/visao-geral"
-                    }
+                    "type": "bold"
                   }
                 ]
-              },
-              {
-                "type": "text",
-                "text": " — você só visualiza, sem criar ou editar."
               }
             ]
+          },
+          {
+            "content": "Um grupo fixo. Você monta a partir de uma condição, que guarda quem atende naquele momento, ou marca os contatos um a um. Não muda sozinha depois."
+          },
+          {
+            "content": "Você. A lista só muda quando você reaplica a condição ou adiciona e remove contatos."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "RFV",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "As faixas da Matriz RFV (Campeões, Em perigo, Perdidos e as demais), geradas automaticamente."
+          },
+          {
+            "content": "A Matriz RFV. Você não cria, não edita e não exclui."
           }
         ]
       ]
     },
     {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Na listagem, use os filtros "
+        },
+        {
+          "type": "text",
+          "text": "Tipo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (Segmento ou Lista) e "
+        },
+        {
+          "type": "text",
+          "text": "Status",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (Ativos ou Inativos). As faixas RFV ficam em "
+        },
+        {
+          "type": "text",
+          "text": "Matriz RFV",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "audiencia/matriz-rfv/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", mas podem ser usadas como condição de um segmento."
+        }
+      ]
+    },
+    {
       "type": "heading",
       "level": 2,
-      "content": "Onde um segmento é usado depois"
+      "content": "De quanto em quanto tempo um segmento atualiza"
     },
     {
       "type": "paragraph",
-      "content": "Além de servir para consulta, um segmento dinâmico pode ser o gatilho de uma automação — \"Quando entra no segmento\" ou \"Quando sai do segmento\" — e tanto segmentos quanto listas podem ser escolhidos como público de uma campanha. É a diferença prática entre os dois: só o segmento dinâmico dispara esse tipo de evento de entrada/saída."
+      "content": [
+        {
+          "type": "text",
+          "text": "Um segmento não acompanha o contato em tempo real. A Bevean recalcula quem está dentro "
+        },
+        {
+          "type": "text",
+          "text": "duas vezes por dia",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e também logo depois que você cria ou muda as condições."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Situação"
+        },
+        {
+          "content": "Atualiza sozinho?"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Segmento com status Ativo"
+          },
+          {
+            "content": "Sim, duas vezes por dia."
+          }
+        ],
+        [
+          {
+            "content": "Segmento com status Inativo"
+          },
+          {
+            "content": "Não. Só quando você salva o segmento de novo."
+          }
+        ],
+        [
+          {
+            "content": "Segmento ou lista na Lixeira"
+          },
+          {
+            "content": "Não."
+          }
+        ],
+        [
+          {
+            "content": "Lista"
+          },
+          {
+            "content": "Nunca. Ela muda só quando você reaplica a condição ou mexe nos contatos."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Ao criar um segmento, a tela mostra o andamento (\"Compilando filtros\", \"Buscando contatos\", \"Gerando segmento\") até a primeira contagem ficar pronta."
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Contato suprimido fica fora de todo segmento e de toda lista, e também da base usada para calcular os percentuais. Veja "
+            },
+            {
+              "type": "text",
+              "text": "Suprimir ou excluir um contato",
+              "marks": [
+                {
+                  "type": "docLink",
+                  "attrs": {
+                    "ref": "audiencia/contatos/suprimir-ou-excluir-um-contato"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "title": "Contatos suprimidos nunca entram"
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Estado e atualização"
+      "content": "Onde segmentos e listas são usados"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Uso"
+        },
+        {
+          "content": "Segmento"
+        },
+        {
+          "content": "Lista"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Público de uma campanha"
+          },
+          {
+            "content": "Sim"
+          },
+          {
+            "content": "Sim"
+          }
+        ],
+        [
+          {
+            "content": "Gatilho de automação \"Entrou no segmento\" ou \"Saiu do segmento\""
+          },
+          {
+            "content": "Sim, a cada atualização"
+          },
+          {
+            "content": "Sim, quando você adiciona ou remove contatos, ou reaplica a condição"
+          }
+        ],
+        [
+          {
+            "content": "Condição de outro segmento (\"Está em\" ou \"Não está em\")"
+          },
+          {
+            "content": "Sim"
+          },
+          {
+            "content": "Sim"
+          }
+        ]
+      ]
     },
     {
       "type": "paragraph",
-      "content": "Um segmento ou lista pode estar Ativo ou Inativo (chave na tela de edição). A contagem de contatos de um segmento dinâmico não é instantânea: ao salvar, ele entra em processamento (\"Compilando filtros\" → \"Buscando contatos\" → \"Gerando segmento\") e, depois de pronto, é recalculado periodicamente — não a cada mudança de comportamento de um contato, em tempo real."
+      "content": [
+        {
+          "type": "text",
+          "text": "A aba "
+        },
+        {
+          "type": "text",
+          "text": "Em uso",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " de cada segmento mostra as campanhas e automações que o usam. Um segmento em uso não pode ir para a Lixeira: veja "
+        },
+        {
+          "type": "text",
+          "text": "Pastas e Lixeira",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "audiencia/segmentos-e-listas/pastas-e-lixeira"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ver segmentos e listas, e criar, editar ou excluir, depende do perfil de acesso de cada pessoa. Veja "
+        },
+        {
+          "type": "text",
+          "text": "Como funcionam usuários e permissões",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "meu-negocio/usuarios-e-permissoes/visao-geral"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
     },
     {
       "type": "linkCards",
+      "title": "Próximos passos",
       "items": [
         {
           "ref": "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
-          "description": "Monte um filtro que se atualiza sozinho."
+          "description": "Monte uma regra que se atualiza sozinha."
         },
         {
           "ref": "audiencia/segmentos-e-listas/criar-uma-lista-fixa",
-          "description": "Escolha um recorte fixo de contatos."
+          "description": "Guarde um grupo fixo de contatos."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/painel-do-segmento",
+          "description": "Entenda quem está dentro e como se comporta."
         }
-      ],
-      "title": "Próximos passos"
+      ]
     }
   ]
 }

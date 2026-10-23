@@ -1,34 +1,29 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
-  "title": "Criar um segmento dinâmico",
-  "subtitle": "O passo a passo do filtro e a lista completa de condições disponíveis, por grupo.",
-  "updatedAt": "2026-09-03",
+  "title": "Criar um segmento",
+  "subtitle": "Monte a regra com condições ligadas por E e OU, confira a contagem e salve.",
+  "updatedAt": "2026-10-23",
   "tags": [
+    "segmento dinâmico",
     "criar segmento",
-    "condições",
-    "filtro dinâmico",
-    "segmentação"
+    "construtor"
   ],
   "related": [
-    "audiencia/segmentos-e-listas/visao-geral",
-    "audiencia/segmentos-e-listas/gerenciar-um-segmento-ou-lista"
+    "audiencia/segmentos-e-listas/condicoes-do-segmento",
+    "audiencia/segmentos-e-listas/painel-do-segmento",
+    "audiencia/segmentos-e-listas/visao-geral"
   ],
   "body": [
     {
       "type": "paragraph",
-      "content": "O resultado é um segmento que atualiza sozinho a lista de contatos, conforme eles passam a bater (ou deixam de bater) com as condições."
+      "content": "O resultado é um segmento que atualiza sozinho quem está dentro, conforme os contatos passam a atender às condições ou deixam de atender."
     },
     {
       "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "text": "Onde fica: ",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "text": "Onde fica: "
         },
         {
           "type": "uiPath",
@@ -38,7 +33,7 @@
         },
         {
           "type": "text",
-          "text": " — botão "
+          "text": ", botão "
         },
         {
           "type": "text",
@@ -51,7 +46,7 @@
         },
         {
           "type": "text",
-          "text": " → "
+          "text": ", opção "
         },
         {
           "type": "text",
@@ -64,23 +59,7 @@
         },
         {
           "type": "text",
-          "text": ". Antes de começar, veja "
-        },
-        {
-          "type": "text",
-          "text": "como funcionam segmentos e listas",
-          "marks": [
-            {
-              "type": "docLink",
-              "attrs": {
-                "ref": "audiencia/segmentos-e-listas/visao-geral"
-              }
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": "."
+          "text": ". Se você estiver dentro de uma pasta, o segmento já nasce nela."
         }
       ]
     },
@@ -93,121 +72,501 @@
       "type": "steps",
       "items": [
         {
-          "title": "Dê um nome ao segmento — a cor e o título da tag são sugeridos automaticamente, mas você pode trocar"
-        },
-        {
-          "title": "Adicione uma condição",
+          "title": "Dê um nome ao segmento",
           "body": [
             {
               "type": "paragraph",
-              "content": "Escolha um grupo, um campo, um operador e um valor. Clique em Adicionar condição para incluir outras, combinando com E ou OU."
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No cartão Informações gerais, preencha "
+                },
+                {
+                  "type": "text",
+                  "text": "Nome do segmento ou lista",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". O título e a cor da tag são sugeridos a partir do nome, e você pode trocar."
+                }
+              ]
             }
           ]
         },
         {
-          "title": "Clique em Visualizar audiência",
+          "title": "Adicione a primeira condição",
           "body": [
             {
               "type": "paragraph",
-              "content": "Mostra quantos contatos batem com as condições agora, e o % da sua base — sem salvar nada ainda."
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Clique em "
+                },
+                {
+                  "type": "text",
+                  "text": "+ E",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Em \"Que tipo de condição?\", escolha "
+                },
+                {
+                  "type": "text",
+                  "text": "O que o contato fez ou não fez",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "text": "Dados do contato",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ou "
+                },
+                {
+                  "type": "text",
+                  "text": "Está ou não está em",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", e preencha. Cada tipo está detalhado em "
+                },
+                {
+                  "type": "text",
+                  "text": "As condições do segmento",
+                  "marks": [
+                    {
+                      "type": "docLink",
+                      "attrs": {
+                        "ref": "audiencia/segmentos-e-listas/condicoes-do-segmento"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
             }
           ]
         },
         {
-          "title": "Salve"
+          "title": "Combine as condições",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Use "
+                },
+                {
+                  "type": "text",
+                  "text": "+ E",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " para uma condição que também precisa valer. Use "
+                },
+                {
+                  "type": "text",
+                  "text": "+ OU",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", dentro de uma condição, para uma alternativa: basta uma delas valer."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Confira a contagem",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Cada condição mostra quantos contatos atende sozinha, e o cartão "
+                },
+                {
+                  "type": "text",
+                  "text": "Resumo da audiência",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", ao lado, mostra o total e o percentual da sua base. A contagem se atualiza a cada mudança, sem precisar de botão."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Escolha o status e salve",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No cartão "
+                },
+                {
+                  "type": "text",
+                  "text": "Status",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", deixe "
+                },
+                {
+                  "type": "text",
+                  "text": "Ativo",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " para o segmento se atualizar sozinho. Clique em "
+                },
+                {
+                  "type": "text",
+                  "text": "Salvar Segmento",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ". Depois de salvar, você vai para o painel do segmento."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "As condições disponíveis"
+      "content": "Como E e OU se combinam"
     },
     {
       "type": "paragraph",
-      "content": "O grupo muda o que você pode escolher depois. Alguns grupos só aparecem se você já tiver o recurso correspondente configurado (propriedades personalizadas, pesquisas de satisfação)."
+      "content": [
+        {
+          "type": "text",
+          "text": "As condições de cima são sempre ligadas por "
+        },
+        {
+          "type": "text",
+          "text": "E",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": o contato precisa atender a todas. Dentro de uma condição, as alternativas ligadas por "
+        },
+        {
+          "type": "text",
+          "text": "OU",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " se somam: basta uma valer."
+        }
+      ]
     },
     {
       "type": "table",
       "head": [
         {
-          "content": "Grupo"
+          "content": "Você quer"
         },
         {
-          "content": "Você pode filtrar por"
+          "content": "Monte assim"
         }
       ],
       "rows": [
         [
           {
-            "content": "Perfil do contato"
+            "content": "Quem comprou e abriu um e-mail"
           },
           {
-            "content": "Nome, e-mail, telefone, gênero, aniversário, origem e data de cadastro, tipo de documento, status do e-mail/WhatsApp, opt-in de e-mail e telefone, país, estado, cidade, bairro, CEP, e se é lead ou já é cliente."
+            "content": [
+              {
+                "type": "text",
+                "text": "Duas condições ligadas por "
+              },
+              {
+                "type": "text",
+                "text": "+ E",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
           }
         ],
         [
           {
-            "content": "Segmentos ou listas"
+            "content": "Quem comprou o produto A ou o produto B"
           },
           {
-            "content": "Está em / não está em outro segmento ou lista — permite combinar segmentos."
+            "content": [
+              {
+                "type": "text",
+                "text": "Uma condição \"Comprou\" com os dois produtos, ou duas alternativas com "
+              },
+              {
+                "type": "text",
+                "text": "+ OU",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
           }
         ],
         [
           {
-            "content": "Tags do contato"
+            "content": "Quem é de SP ou RJ e comprou nos últimos 30 dias"
           },
           {
-            "content": "Tem tag / não tem tag."
+            "content": [
+              {
+                "type": "text",
+                "text": "Uma condição de estado com "
+              },
+              {
+                "type": "text",
+                "text": "+ OU",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " para o segundo estado, e uma condição \"Comprou\" ligada por "
+              },
+              {
+                "type": "text",
+                "text": "+ E",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "\"Não fez A\" OU \"Não fez B\" vale para quase todo mundo, porque basta não ter feito uma das duas. A tela avisa quando isso acontece. Na maioria dos casos, a intenção era ligar por E."
+        }
+      ],
+      "title": "Duas negações ligadas por OU trazem quase toda a base"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ao editar um segmento em uso"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Se o segmento é usado por uma automação ativa ou em rascunho, ou por uma campanha agendada, em envio ou pausada, salvar mostra o aviso "
+        },
+        {
+          "type": "text",
+          "text": "Este segmento está em uso",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O público novo passa a valer para elas: quem entrar pode receber a automação, e a campanha vai para quem estiver no segmento na hora do envio."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Ver onde é usado",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para conferir antes, ou em "
+        },
+        {
+          "type": "text",
+          "text": "Salvar mesmo assim",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para seguir."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Segmentos criados no construtor anterior"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao abrir um segmento antigo para editar, a tela mostra o cartão "
+        },
+        {
+          "type": "text",
+          "text": "Segmento do construtor anterior",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " com as condições já convertidas para o formato novo."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "O cartão diz"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "\"Convertemos as condições deste segmento para o novo formato.\""
+          },
+          {
+            "content": "Confira as condições e salve para concluir."
           }
         ],
         [
           {
-            "content": "Histórico de compras"
+            "content": "Que uma ou mais condições não têm equivalente automático"
           },
           {
-            "content": "Quantidade e valor de pedidos (realizados ou aprovados), ticket médio, data e valor do último pedido, vendedor e loja preferidos."
+            "content": "Recrie essas condições com as opções novas antes de salvar. A lista do que faltou aparece no próprio cartão."
           }
         ],
         [
           {
-            "content": "Carrinho abandonado"
+            "content": "\"Público atual do segmento\""
           },
           {
-            "content": "Abandonou (e quando) ou não abandonou, e o valor do carrinho."
-          }
-        ],
-        [
-          {
-            "content": "Detalhes de um pedido"
-          },
-          {
-            "content": "Data, número de itens, valor, cupom usado, desconto, vendedor, loja, se é assinatura, status do pedido/pagamento/entrega, forma de pagamento, produto, SKU e variação."
-          }
-        ],
-        [
-          {
-            "content": "Engajamento"
-          },
-          {
-            "content": "Data do último e-mail ou WhatsApp recebido, aberto, clicado ou (no WhatsApp) respondido."
-          }
-        ],
-        [
-          {
-            "content": "Propriedades personalizadas"
-          },
-          {
-            "content": "Qualquer campo que você criou em Contatos ou em Pedidos."
-          }
-        ],
-        [
-          {
-            "content": "Pesquisa"
-          },
-          {
-            "content": "Respondeu, faixa de satisfação, nota e data de resposta de uma pesquisa publicada."
+            "content": "Compare esse número com a contagem do Resumo da audiência antes de salvar."
           }
         ]
       ]
@@ -221,53 +580,81 @@
           "content": [
             {
               "type": "text",
-              "text": "Não existe uma condição de \"pontuação RFV\" aqui — a Matriz RFV é um agrupamento à parte, gerado automaticamente. Veja "
+              "text": "No construtor anterior, as condições de compra contavam pedidos de qualquer status. A conversão mantém isso ligando "
             },
             {
               "type": "text",
-              "text": "a Matriz RFV",
+              "text": "Incluir pedidos não aprovados",
               "marks": [
                 {
-                  "type": "docLink",
-                  "attrs": {
-                    "ref": "audiencia/matriz-rfv/visao-geral"
-                  }
+                  "type": "bold"
                 }
               ]
             },
             {
               "type": "text",
-              "text": "."
+              "text": ". Desligue para contar só pedidos aprovados."
             }
           ]
         }
-      ]
+      ],
+      "title": "Compras de qualquer status, como antes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Enquanto você não salvar, o segmento antigo continua funcionando como antes."
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "Automações vinculadas"
+      "content": "O que impede de salvar"
     },
     {
-      "type": "callout",
-      "variant": "warning",
-      "body": [
+      "type": "table",
+      "head": [
         {
-          "type": "paragraph",
-          "content": "Se o segmento já tem uma automação ativa ou em rascunho vinculada, a Bevean avisa antes de salvar: mudar as condições pode fazer novos contatos que passem a entrar no segmento disparar essa automação."
+          "content": "Mensagem"
+        },
+        {
+          "content": "O que resolve"
         }
       ],
-      "title": "Salvar pode disparar automações"
+      "rows": [
+        [
+          {
+            "content": "Complete todas as condições antes de salvar."
+          },
+          {
+            "content": "Alguma condição está pela metade: falta escolher o produto, o período, a campanha ou automação, o segmento ou o valor de um campo."
+          }
+        ],
+        [
+          {
+            "content": "O valor é inválido"
+          },
+          {
+            "content": "Uma condição \"Está em\" aponta para o próprio segmento, ou para um segmento que depende deste. Troque o segmento escolhido."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "O nome e o título da tag precisam de pelo menos 3 caracteres."
     },
     {
       "type": "linkCards",
+      "title": "Continue",
       "items": [
         {
-          "ref": "audiencia/segmentos-e-listas/gerenciar-um-segmento-ou-lista",
-          "description": "Veja quem está no segmento, exporte ou exclua."
+          "ref": "audiencia/segmentos-e-listas/condicoes-do-segmento",
+          "description": "Tudo o que dá para usar em cada tipo de condição."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/painel-do-segmento",
+          "description": "Leia quem entrou no segmento."
         }
-      ],
-      "title": "Próximos passos"
+      ]
     }
   ]
 }

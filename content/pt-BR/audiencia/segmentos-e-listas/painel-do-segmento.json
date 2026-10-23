@@ -1,0 +1,723 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Ler o painel do segmento",
+  "subtitle": "Quem são, como alcançar, o que compram, como reagem e quanto rendem, comparado com a sua base.",
+  "updatedAt": "2026-10-23",
+  "tags": [
+    "painel",
+    "insights",
+    "leituras",
+    "sem canal"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/gerenciar-um-segmento-ou-lista",
+    "audiencia/segmentos-e-listas/criar-um-segmento-dinamico"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O painel é a primeira aba de cada segmento e lista. Ele responde em cartões quem está dentro e como esse grupo se comporta, sempre comparando com a sua base."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.segments"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", abra um segmento ou lista. A aba "
+        },
+        {
+          "type": "text",
+          "text": "Painel",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " é a que abre primeiro."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O topo do painel"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Parte"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Regra",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A regra do segmento em frase, com segmentos e tags pelo nome. "
+              },
+              {
+                "type": "text",
+                "text": "ver tudo",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " abre a regra inteira e "
+              },
+              {
+                "type": "text",
+                "text": "Editar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " leva ao construtor. Não aparece em listas, e faixas RFV não têm o Editar."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "30 dias, 90 dias, 12 meses",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "O período dos números de compra, mensagens e receita. Começa em 90 dias."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Atualizar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Recalcula o painel agora, em vez de usar o resultado guardado."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Os cartões"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Cartão"
+        },
+        {
+          "content": "O que mostra"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Quem são?",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Total de contatos e quanto isso é da base, os estados, faixas de idade, gêneros e faixas RFV mais comuns."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Quem eu alcanço?",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Quantos têm pelo menos um canal válido, e a divisão entre E-mail válido, Telefone, Descadastrados e Sem canal."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O que compram?",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Ticket médio, quantos compraram no período, número de pedidos, quantos já eram clientes, e as categorias mais compradas. Sem catálogo de categorias, mostra por produto."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Como reagem?",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Abertura e clique por canal nos envios feitos para este segmento no período."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Como se move?",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Quantos entraram e saíram nos últimos 30 dias, o saldo e por que saíram (comprando, ao abrir ou responder, ou porque venceu o prazo)."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Quanto rende?",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Receita dos contatos no período, quanto isso é da loja, receita por contato e a receita atribuída aos envios para o segmento."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Onde é usado?",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "As campanhas e automações que usam o segmento e a data do último envio."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Em "
+        },
+        {
+          "type": "text",
+          "text": "Quem são?",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "O que compram?",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Quanto rende?",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", o número de comparação é a "
+        },
+        {
+          "type": "text",
+          "text": "base",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": todos os contatos ativos da conta, sem os suprimidos. Em "
+        },
+        {
+          "type": "text",
+          "text": "Como reagem?",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", a comparação é com a "
+        },
+        {
+          "type": "text",
+          "text": "conta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": a média de todos os envios da conta no período."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Um contato tem canal válido quando tem e-mail preenchido, não inválido e não descadastrado, ou telefone nas mesmas condições. Quem não tem nenhum dos dois não recebe campanha nem automação."
+        }
+      ],
+      "title": "O que é \"sem canal\""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Leituras"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Acima dos cartões, as "
+        },
+        {
+          "type": "text",
+          "text": "Leituras",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " destacam até quatro números que saíram do normal, com um botão para agir. Passe o mouse para ver de qual cartão veio cada uma."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Leitura"
+        },
+        {
+          "content": "Quando aparece"
+        },
+        {
+          "content": "Botão"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Contatos sem canal"
+          },
+          {
+            "content": "3% ou mais do segmento sem nenhum canal válido."
+          },
+          {
+            "content": "Ver contatos"
+          }
+        ],
+        [
+          {
+            "content": "Rende muito acima do peso"
+          },
+          {
+            "content": "Receita por contato duas vezes ou mais acima do que o segmento pesa na base."
+          },
+          {
+            "content": "Criar campanha"
+          }
+        ],
+        [
+          {
+            "content": "Segmento parado"
+          },
+          {
+            "content": "30 dias ou mais sem envio, com pelo menos 100 contatos alcançáveis."
+          },
+          {
+            "content": "Criar campanha"
+          }
+        ],
+        [
+          {
+            "content": "Saídas por compra"
+          },
+          {
+            "content": "40% ou mais de quem saiu, saiu comprando."
+          },
+          {
+            "content": "Ajustar público"
+          }
+        ],
+        [
+          {
+            "content": "E-mail frio, WhatsApp bom"
+          },
+          {
+            "content": "O e-mail abre menos da metade da média da conta, o WhatsApp está na média ou acima e o telefone alcança 60% ou mais do segmento, com pelo menos 100 envios em cada canal."
+          },
+          {
+            "content": "Criar campanha"
+          }
+        ],
+        [
+          {
+            "content": "Entradas em alta ou em queda"
+          },
+          {
+            "content": "Entradas variaram 30% ou mais. Não aparece em listas."
+          },
+          {
+            "content": "Ver evolução"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Quando nada sai do normal, o painel diz \"Nada que chame atenção por enquanto\"."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Ver e baixar os contatos de um número"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em "
+        },
+        {
+          "type": "text",
+          "text": "+N",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " entraram, "
+        },
+        {
+          "type": "text",
+          "text": "−N",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " saíram ou "
+        },
+        {
+          "type": "text",
+          "text": "Ver sem canal",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para abrir a lista desses contatos, com e-mail, telefone, último pedido e, nas saídas, o motivo provável."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Botão"
+        },
+        {
+          "content": "O que faz"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Baixar CSV",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Baixa a lista inteira, até 50 mil contatos."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Copiar CSV",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Copia só as linhas já carregadas na tela."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Adicionar à lista",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Coloca esses contatos numa lista fixa existente ou numa lista nova, até 50 mil."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A tela carrega 25 contatos por vez, até 1.000. Para mais que isso, use "
+        },
+        {
+          "type": "text",
+          "text": "Baixar CSV",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "Adicionar à lista",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Entrar na lista dispara as automações que usam essa lista como gatilho, como em qualquer adição manual."
+        }
+      ],
+      "title": "Adicionar à lista dispara automação"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Quando o painel demora"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O painel fica guardado por até 24 horas. Ele é recalculado quando o segmento é atualizado, quando passam 24 horas ou quando você clica em "
+        },
+        {
+          "type": "text",
+          "text": "Atualizar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Na primeira abertura do dia, a Bevean também calcula os números da base inteira para comparar. Isso pode levar até um minuto. Os cartões aparecem conforme ficam prontos, e as aberturas seguintes são imediatas."
+    },
+    {
+      "type": "linkCards",
+      "title": "Continue",
+      "items": [
+        {
+          "ref": "audiencia/segmentos-e-listas/gerenciar-um-segmento-ou-lista",
+          "description": "As outras abas do segmento."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/criar-uma-lista-fixa",
+          "description": "Guarde um recorte do painel numa lista."
+        }
+      ]
+    }
+  ]
+}

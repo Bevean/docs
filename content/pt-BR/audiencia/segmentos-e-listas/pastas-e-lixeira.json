@@ -1,0 +1,487 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Pastas e Lixeira",
+  "subtitle": "Organize segmentos e listas em pastas, mande para a Lixeira, restaure ou apague de vez.",
+  "updatedAt": "2026-10-23",
+  "tags": [
+    "pasta",
+    "lixeira",
+    "restaurar",
+    "apagar",
+    "excluir segmento"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/gerenciar-um-segmento-ou-lista",
+    "audiencia/segmentos-e-listas/resolver-problemas"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "Pastas agrupam segmentos e listas na listagem. A Lixeira guarda o que você excluiu até você restaurar ou apagar de vez."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.segments"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". As pastas aparecem no topo da listagem, com "
+        },
+        {
+          "type": "text",
+          "text": "Nova pasta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e o atalho "
+        },
+        {
+          "type": "text",
+          "text": "Lixeira",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ao lado."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Pastas"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Para"
+        },
+        {
+          "content": "Faça"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Criar uma pasta"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Clique em "
+              },
+              {
+                "type": "text",
+                "text": "Nova pasta",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", dê um nome e clique em "
+              },
+              {
+                "type": "text",
+                "text": "Salvar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Renomear"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "No menu da pasta, clique em "
+              },
+              {
+                "type": "text",
+                "text": "Renomear",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Mover um segmento ou lista"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "No menu da linha, clique em "
+              },
+              {
+                "type": "text",
+                "text": "Mover para pasta",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e escolha a pasta, ou "
+              },
+              {
+                "type": "text",
+                "text": "Sem pasta",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " para tirar de qualquer uma. Marcando várias linhas, dá para mover todas de uma vez."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Criar direto numa pasta"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Abra a pasta e clique em "
+              },
+              {
+                "type": "text",
+                "text": "Criar segmento ou lista",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Não existe pasta dentro de pasta. Cada pasta mostra quantos itens tem, sem contar os da Lixeira."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Excluir uma pasta"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No menu da pasta, clique em "
+        },
+        {
+          "type": "text",
+          "text": "Excluir pasta",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Os segmentos e listas que estavam nela vão para a Lixeira e, se restaurados, voltam fora de qualquer pasta."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Se algum item da pasta estiver em uso, nada é excluído e a tela mostra quais itens estão em uso."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Mandar para a Lixeira"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "No menu da linha, clique em "
+        },
+        {
+          "type": "text",
+          "text": "Mover para a Lixeira",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Marcando várias linhas, dá para mandar todas de uma vez: as que estão em uso ficam de fora, e a tela diz quantas não foram."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Na Lixeira, o segmento deixa de ser atualizado, mas guarda os contatos que tinha. Ele também não aparece mais para ser escolhido como condição de outro segmento."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que impede de mandar para a Lixeira"
+    },
+    {
+      "type": "paragraph",
+      "content": "Um segmento ou lista em uso não pode ser excluído. Quando isso acontece, a mensagem termina com \"O valor está vinculado à\" e o tipo de uso."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "A mensagem cita"
+        },
+        {
+          "content": "O que usa o segmento"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Fluxos"
+          },
+          {
+            "content": "Uma campanha ou automação agendada, em andamento ou pausada."
+          },
+          {
+            "content": "Troque o público ou conclua a campanha ou automação. Rascunho e concluída não bloqueiam."
+          }
+        ],
+        [
+          {
+            "content": "Comunicações"
+          },
+          {
+            "content": "Uma campanha de Campanhas anteriores, mesmo já enviada."
+          },
+          {
+            "content": "Essas campanhas continuam ligadas ao segmento. Inative o segmento em vez de excluir."
+          }
+        ],
+        [
+          {
+            "content": "Segmentos"
+          },
+          {
+            "content": "Outro segmento ou lista que usa este em \"Está em\" ou \"Não está em\"."
+          },
+          {
+            "content": "Tire a condição do outro segmento e tente de novo."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Deixe o segmento com status "
+            },
+            {
+              "type": "text",
+              "text": "Inativo",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ", no construtor. Ele para de ser recalculado e continua disponível para quem o usa."
+            }
+          ]
+        }
+      ],
+      "title": "Quer só parar de atualizar?"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Restaurar"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Abra a "
+        },
+        {
+          "type": "text",
+          "text": "Lixeira",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e no menu da linha clique em "
+        },
+        {
+          "type": "text",
+          "text": "Restaurar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Marcando várias, dá para restaurar todas de uma vez. Um segmento restaurado volta a ser atualizado na próxima rodada de atualização."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao abrir um item que está na Lixeira, o topo avisa que ele não é atualizado e oferece "
+        },
+        {
+          "type": "text",
+          "text": "Restaurar",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ali mesmo."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Apagar de vez"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Dentro da Lixeira, no menu da linha, clique em "
+        },
+        {
+          "type": "text",
+          "text": "Apagar definitivamente",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O segmento ou lista é apagado para sempre, junto com a relação de contatos. Essa ação não pode ser desfeita, e só existe uma linha por vez."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "danger",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Ao apagar de vez, todos os contatos saem do segmento ao mesmo tempo, e cada um vira um disparo. Uma automação ativa com o gatilho \"Saiu do segmento\" sem filtro de segmento roda para a base inteira daquele segmento. Pause essa automação antes. Mandar para a Lixeira não dispara nada."
+        }
+      ],
+      "title": "Apagar de vez dispara \"Saiu do segmento\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Nada é apagado sozinho: os itens ficam na Lixeira até alguém restaurar ou apagar."
+    },
+    {
+      "type": "linkCards",
+      "title": "Continue",
+      "items": [
+        {
+          "ref": "audiencia/segmentos-e-listas/gerenciar-um-segmento-ou-lista",
+          "description": "As abas e ações de cada segmento."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/resolver-problemas",
+          "description": "Quando a exclusão é recusada."
+        }
+      ]
+    }
+  ]
+}

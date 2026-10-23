@@ -1,64 +1,306 @@
 {
   "$schema": "../../../../.vscode/schemas/article.schema.json",
-  "title": "A contagem não bate, ou não consigo editar quem está dentro",
-  "subtitle": "Por que a atualização de um segmento não é instantânea, e por que não dá para remover um contato manualmente.",
-  "updatedAt": "2026-09-03",
+  "title": "O segmento não atualizou ou não consigo excluir",
+  "subtitle": "Por que a contagem não mudou, por que um \"não fez\" traz menos gente que o esperado e o que fazer quando a exclusão é recusada.",
+  "updatedAt": "2026-10-23",
   "tags": [
-    "segmento não atualiza",
-    "remover contato do segmento"
+    "contagem",
+    "não atualiza",
+    "não consigo excluir",
+    "vinculado"
   ],
   "related": [
-    "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
-    "audiencia/segmentos-e-listas/criar-uma-lista-fixa"
+    "audiencia/segmentos-e-listas/visao-geral",
+    "audiencia/segmentos-e-listas/pastas-e-lixeira"
   ],
   "body": [
     {
-      "type": "heading",
-      "level": 2,
-      "content": "\"A contagem do meu segmento não mudou ainda\""
-    },
-    {
       "type": "paragraph",
-      "content": "Um segmento dinâmico não atualiza em tempo real — a lista de contatos é recalculada periodicamente, não a cada mudança de comportamento. Se você acabou de mudar uma condição, a Bevean mostra uma tela de processamento até terminar; depois disso, uma nova atualização leva um tempo para refletir contatos que mudaram de comportamento."
+      "content": "A maioria dos casos se resolve conferindo três coisas: se o segmento está com status Ativo, se não está na Lixeira e quando foi a última sincronização (no topo da página do segmento)."
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "\"Não consigo remover um contato específico de um segmento\""
+      "content": "\"A contagem do meu segmento não mudou\""
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "#"
+        },
+        {
+          "content": "Verifique"
+        },
+        {
+          "content": "Se for isso"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "1"
+          },
+          {
+            "content": "O status do segmento"
+          },
+          {
+            "content": "Segmento Inativo não é atualizado sozinho. Ative no construtor e salve."
+          }
+        ],
+        [
+          {
+            "content": "2"
+          },
+          {
+            "content": "Se está na Lixeira"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Na Lixeira ele não é atualizado. Restaure: veja "
+              },
+              {
+                "type": "text",
+                "text": "Pastas e Lixeira",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "audiencia/segmentos-e-listas/pastas-e-lixeira"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "3"
+          },
+          {
+            "content": "\"Sincronizado há…\" no topo"
+          },
+          {
+            "content": "Segmentos ativos são atualizados duas vezes por dia. Uma mudança no contato de agora aparece na próxima atualização."
+          }
+        ],
+        [
+          {
+            "content": "4"
+          },
+          {
+            "content": "Se é uma lista"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Lista não atualiza sozinha. Use "
+              },
+              {
+                "type": "text",
+                "text": "Reaplicar condição",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ": veja "
+              },
+              {
+                "type": "text",
+                "text": "Atualizar uma lista criada por condição",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "audiencia/segmentos-e-listas/atualizar-uma-lista-por-condicao"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "5"
+          },
+          {
+            "content": "Se o contato está suprimido"
+          },
+          {
+            "content": "Contato suprimido nunca entra em segmento nem em lista."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"O 'não comprou' trouxe menos gente do que eu esperava\""
     },
     {
       "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "text": "Em um segmento dinâmico isso é esperado — quem está dentro é decidido inteiramente pelas condições, nunca por escolha manual de um contato. Se você precisa controlar quem entra e sai manualmente, "
+          "text": "\"Não fez\" com período considera só quem já era contato antes do início do período. \"Não comprou nos últimos 30 dias\" deixa de fora quem se cadastrou nesses 30 dias. Para incluir todo mundo, use \"em qualquer período\" ou combine com uma condição de data de cadastro em "
         },
         {
           "type": "text",
-          "text": "crie uma lista fixa",
+          "text": "Dados do contato",
           "marks": [
             {
-              "type": "docLink",
-              "attrs": {
-                "ref": "audiencia/segmentos-e-listas/criar-uma-lista-fixa"
-              }
+              "type": "bold"
             }
           ]
         },
         {
           "type": "text",
-          "text": " no lugar."
+          "text": "."
         }
       ]
     },
     {
       "type": "heading",
       "level": 2,
-      "content": "\"Apaguei um segmento e minha automação parou\""
+      "content": "\"Meu segmento trouxe quase a base inteira\""
     },
     {
       "type": "paragraph",
-      "content": "Confira a aba Automações do segmento antes de excluir — ela mostra tudo que usa aquele segmento como gatilho ou público. A Bevean não bloqueia a exclusão de um segmento em uso."
+      "content": [
+        {
+          "type": "text",
+          "text": "Duas condições \"Não fez\" ou \"Não está em\" ligadas por "
+        },
+        {
+          "type": "text",
+          "text": "OU",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " valem para quase todo mundo, porque basta não ter feito uma delas. Ligue por "
+        },
+        {
+          "type": "text",
+          "text": "E",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", com "
+        },
+        {
+          "type": "text",
+          "text": "+ E",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"Não consigo excluir o segmento\""
+    },
+    {
+      "type": "paragraph",
+      "content": "A exclusão é recusada quando o segmento está em uso. A mensagem termina com \"O valor está vinculado à\" e o tipo de uso:"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "A mensagem cita"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Fluxos"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Uma campanha ou automação agendada, em andamento ou pausada usa o segmento. Veja na aba "
+              },
+              {
+                "type": "text",
+                "text": "Em uso",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", troque o público ou conclua."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Comunicações"
+          },
+          {
+            "content": "Uma campanha de Campanhas anteriores usa o segmento, mesmo que já tenha sido enviada. Deixe o segmento Inativo em vez de excluir."
+          }
+        ],
+        [
+          {
+            "content": "Segmentos"
+          },
+          {
+            "content": "Outro segmento ou lista usa este em \"Está em\" ou \"Não está em\". Tire essa condição do outro segmento."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "\"A contagem do construtor é diferente do segmento antigo\""
+    },
+    {
+      "type": "paragraph",
+      "content": "Ao abrir um segmento do construtor anterior, compare o \"Público atual do segmento\" com a contagem do Resumo da audiência antes de salvar. Se alguma condição não teve equivalente automático, o cartão lista qual foi: recrie essa parte antes de salvar. Enquanto você não salvar, o segmento continua como era."
     },
     {
       "type": "heading",
@@ -69,22 +311,63 @@
       "type": "faq",
       "items": [
         {
-          "question": "Um segmento RFV pode ser editado?",
+          "question": "Dá para tirar um contato específico de um segmento?",
           "answer": [
             {
               "type": "paragraph",
-              "content": "Não — segmentos RFV são gerados automaticamente pela Matriz RFV e não têm opção de editar nem excluir."
+              "content": "Não. Quem está num segmento é sempre decidido pelas condições. Se você precisa escolher à mão quem entra e quem sai, use uma lista."
             }
           ]
         },
         {
-          "question": "Dá para combinar \"E\" e \"OU\" na mesma condição?",
+          "question": "Dá para montar um segmento por faixa etária?",
           "answer": [
             {
               "type": "paragraph",
-              "content": "Sim — um grupo de condições combinadas com OU pode ficar dentro de uma condição maior combinada com E."
+              "content": "Ainda não. \"Data de aniversário\" compara só dia e mês e ignora o ano, por isso serve para aniversário, não para idade. A idade aparece como leitura no cartão \"Quem são?\" do painel."
             }
           ]
+        },
+        {
+          "question": "Um segmento RFV pode ser editado?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. As faixas RFV são geradas pela Matriz RFV e não têm opção de editar nem excluir. Dá para usá-las como condição de um segmento, em \"Está ou não está em\"."
+            }
+          ]
+        },
+        {
+          "question": "Dá para combinar E e OU?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Sim. As condições de cima são ligadas por E, e dentro de cada uma você soma alternativas com + OU."
+            }
+          ]
+        },
+        {
+          "question": "O painel diz \"Primeira abertura do dia nesta conta\". Está travado?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. A Bevean está calculando os números da base para comparar, o que pode levar até um minuto. Os cartões aparecem conforme ficam prontos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Veja também",
+      "items": [
+        {
+          "ref": "audiencia/segmentos-e-listas/visao-geral",
+          "description": "Como e quando um segmento atualiza."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/pastas-e-lixeira",
+          "description": "O que bloqueia a exclusão."
         }
       ]
     }

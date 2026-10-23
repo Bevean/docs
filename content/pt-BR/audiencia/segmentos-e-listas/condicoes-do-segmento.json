@@ -1,0 +1,676 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "As condições do segmento",
+  "subtitle": "O que dá para filtrar em cada tipo de condição: o que o contato fez, os dados dele e onde ele está.",
+  "updatedAt": "2026-10-23",
+  "tags": [
+    "condições",
+    "filtros",
+    "comprou",
+    "não comprou",
+    "carrinho abandonado",
+    "engajamento"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+    "audiencia/segmentos-e-listas/criar-uma-lista-fixa"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "As mesmas condições servem para segmentos e para listas criadas a partir de uma condição. Ao adicionar uma, você escolhe entre três tipos."
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Tipo"
+        },
+        {
+          "content": "Para quê"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "O que o contato fez ou não fez",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Comprou, abandonou carrinho, viu produto no site, recebeu, abriu ou clicou mensagem."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Dados do contato",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Perfil, endereço, totais de compra, último engajamento, cashback, pesquisas e campos personalizados."
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Está ou não está em",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Segmento, lista, tag ou faixa RFV."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que o contato fez ou não fez"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Escolha "
+        },
+        {
+          "type": "text",
+          "text": "Fez",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "Não fez",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", o evento e o período. Uma condição nova começa como \"Fez · Comprou · nos últimos 30 dias\"."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Evento"
+        },
+        {
+          "content": "Observação"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Comprou"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Conta só pedidos aprovados, a não ser que você ligue "
+              },
+              {
+                "type": "text",
+                "text": "Incluir pedidos não aprovados",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Abandonou carrinho"
+          },
+          {
+            "content": "Carrinho que não virou pedido, com a última atividade dentro do período."
+          }
+        ],
+        [
+          {
+            "content": "Recebeu mensagem, Abriu mensagem, Clicou em mensagem, Respondeu mensagem, Interagiu com mensagem"
+          },
+          {
+            "content": "Envios de campanhas e automações."
+          }
+        ],
+        [
+          {
+            "content": "Recebeu e não abriu mensagem"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Só existe com "
+              },
+              {
+                "type": "text",
+                "text": "Fez",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": "Viu produto, Viu categoria, Viu página"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Navegação no site. Precisa do script da Bevean instalado: veja "
+              },
+              {
+                "type": "text",
+                "text": "Tracking",
+                "marks": [
+                  {
+                    "type": "docLink",
+                    "attrs": {
+                      "ref": "ferramentas/tracking/visao-geral"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Viu produto, Viu categoria e Viu página contam só quem navegou identificado no site: logado ou vindo de um link de campanha. Visitante anônimo não entra."
+        }
+      ],
+      "title": "Navegação só conta quem estava identificado"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Quantas vezes"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Para "
+        },
+        {
+          "type": "text",
+          "text": "Comprou",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " com "
+        },
+        {
+          "type": "text",
+          "text": "Fez",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", escolha a frequência: \"pelo menos uma vez\", número de pedidos (em pelo menos, em no máximo, em exatamente, entre), valor somado (somando pelo menos, no máximo, exatamente, entre) ou número de itens (pelo menos, no máximo, exatamente, entre). Para navegação, \"pelo menos uma vez\" ou \"pelo menos (vezes)\"."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Quando"
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Período"
+        },
+        {
+          "content": "Exemplo"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "nos últimos N dias"
+          },
+          {
+            "content": "Comprou nos últimos 30 dias."
+          }
+        ],
+        [
+          {
+            "content": "entre A e B dias atrás"
+          },
+          {
+            "content": "Comprou entre 60 e 90 dias atrás."
+          }
+        ],
+        [
+          {
+            "content": "entre as datas"
+          },
+          {
+            "content": "Comprou entre o início e o fim da Black Friday."
+          }
+        ],
+        [
+          {
+            "content": "em qualquer período"
+          },
+          {
+            "content": "Comprou alguma vez."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "\"Não comprou nos últimos 30 dias\" traz só quem já estava na sua base antes desses 30 dias. Quem se cadastrou ontem não entra, mesmo sem ter comprado. Vale para compra e para mensagens, não para carrinho nem navegação. A tela lembra disso embaixo da condição."
+        }
+      ],
+      "title": "\"Não fez\" num período só considera quem já era contato antes dele"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Filtros"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em "
+        },
+        {
+          "type": "text",
+          "text": "+ adicionar filtro",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para refinar o evento."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Evento"
+        },
+        {
+          "content": "Filtros"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": "Comprou"
+          },
+          {
+            "content": "Produto, SKU, Categoria ou Marca (um por vez); Valor do pedido no mínimo e no máximo; Loja; Vendedor; Incluir pedidos não aprovados; Outro campo do pedido."
+          }
+        ],
+        [
+          {
+            "content": "Mensagens"
+          },
+          {
+            "content": "Canal (WhatsApp, E-mail ou SMS) e Campanha ou automação."
+          }
+        ],
+        [
+          {
+            "content": "Abandonou carrinho"
+          },
+          {
+            "content": "Valor do carrinho no mínimo."
+          }
+        ],
+        [
+          {
+            "content": "Viu produto, Viu categoria"
+          },
+          {
+            "content": "O produto ou a categoria, ou Nome contém."
+          }
+        ],
+        [
+          {
+            "content": "Viu página"
+          },
+          {
+            "content": "URL contém."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Categoria aparece só se a sua loja tem categorias de produto, e Marca só se algum produto tem marca. Loja e Vendedor aparecem só se a conta tem lojas ou vendedores cadastrados. Os filtros de um mesmo evento valem para o "
+        },
+        {
+          "type": "text",
+          "text": "mesmo pedido",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": \"Produto A\" com \"Valor do pedido no mínimo R$ 200\" é um pedido com o produto A que somou pelo menos R$ 200."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Dados do contato"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Escolha um campo e a condição. Os campos ficam agrupados em "
+        },
+        {
+          "type": "text",
+          "text": "Perfil e endereço",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Compras (totais do contato)",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Engajamento (última vez)",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Cashback",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Pesquisas",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Campos personalizados aparecem junto com os demais, se você tiver criado algum: veja "
+        },
+        {
+          "type": "text",
+          "text": "Tags e propriedades personalizadas",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "audiencia/contatos/tags-e-propriedades-personalizadas"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "\"Data de aniversário entre 01/01/1990 e 31/12/1999\" traz quem faz aniversário nesse intervalo de dias, de qualquer idade: o ano é ignorado. A condição serve para campanha de aniversário, não para faixa etária."
+        }
+      ],
+      "title": "Data de aniversário compara só dia e mês"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Compras (totais do contato)",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " usa os números acumulados do contato, como quantidade de pedidos e ticket médio, sem período. Para \"comprou nos últimos 30 dias\", use "
+        },
+        {
+          "type": "text",
+          "text": "O que o contato fez ou não fez",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Está ou não está em"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Escolha "
+        },
+        {
+          "type": "text",
+          "text": "Está em",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "Não está em",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e depois "
+        },
+        {
+          "type": "text",
+          "text": "segmento, lista ou RFV",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", ou "
+        },
+        {
+          "type": "text",
+          "text": "tag",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". A busca traz segmentos, listas e as faixas da Matriz RFV, menos o próprio segmento e os que estão na Lixeira."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Um segmento que depende de outro usa a última atualização desse outro. Se o outro ainda não foi recalculado, o resultado pode chegar com algumas horas de atraso."
+    },
+    {
+      "type": "linkCards",
+      "title": "Continue",
+      "items": [
+        {
+          "ref": "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+          "description": "Monte e salve o segmento."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/criar-uma-lista-fixa",
+          "description": "Use as mesmas condições numa lista fixa."
+        }
+      ]
+    }
+  ]
+}

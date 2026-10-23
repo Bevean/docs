@@ -1,0 +1,325 @@
+{
+  "$schema": "../../../../.vscode/schemas/article.schema.json",
+  "title": "Atualizar uma lista criada por condição",
+  "subtitle": "Traga quem passou a atender, tire quem deixou de atender, ou transforme a lista num segmento que se atualiza sozinho.",
+  "updatedAt": "2026-10-23",
+  "tags": [
+    "reaplicar condição",
+    "lista",
+    "transformar em segmento"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/criar-uma-lista-fixa"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Uma lista criada a partir de uma condição guarda quem atendia no dia em que foi salva. A aba "
+        },
+        {
+          "type": "text",
+          "text": "Condição de origem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra quanto ela já se distanciou da condição e deixa você atualizar quando quiser."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Onde fica: "
+        },
+        {
+          "type": "uiPath",
+          "attrs": {
+            "ref": "audience.segments"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", abra a lista e vá na aba "
+        },
+        {
+          "type": "text",
+          "text": "Condição de origem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". A aba só aparece em listas criadas a partir de uma condição."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "O que a aba mostra"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "O cartão "
+        },
+        {
+          "type": "text",
+          "text": "Condição de origem",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " traz a condição, a data em que foi aplicada e a comparação com hoje: quantos contatos atendem agora, quantos passaram a atender e quantos deixaram de atender desde a última aplicação. Quando nada mudou, ele diz que todos ainda atendem e que ninguém novo passou a atender."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao lado, o "
+        },
+        {
+          "type": "text",
+          "text": "Resumo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " mostra os contatos da lista, a origem, os ajustes feitos à mão e quantos atendem hoje. O "
+        },
+        {
+          "type": "text",
+          "text": "Histórico da lista",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " registra a criação, as adições à mão e cada reaplicação."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Reaplicar a condição"
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Clique em Reaplicar condição",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A condição é rodada de novo na hora."
+            }
+          ]
+        },
+        {
+          "title": "Escolha o que fazer com as diferenças",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Adicionar quem passou a atender",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " vem ligado. "
+                },
+                {
+                  "type": "text",
+                  "text": "Remover quem deixou de atender",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " vem desligado: ligue se quiser tirar essas pessoas."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": "A tela mostra quantos contatos a lista terá depois e quantos tinha antes."
+            }
+          ]
+        },
+        {
+          "title": "Confirme em Reaplicar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A mensagem \"Condição reaplicada\" mostra quantos entraram e quantos saíram."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Reaplicar a condição não remove contatos que entraram na lista à mão, mesmo com "
+            },
+            {
+              "type": "text",
+              "text": "Remover quem deixou de atender",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ligado."
+            }
+          ]
+        }
+      ],
+      "title": "Quem foi adicionado à mão nunca sai por aqui"
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Quem entra pela reaplicação conta como contato novo na lista. Automações com gatilho de entrada nessa lista rodam para eles."
+        }
+      ],
+      "title": "Os novos contatos disparam automação"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Mudar a condição"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Clique em "
+        },
+        {
+          "type": "text",
+          "text": "Editar condição",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Salvar guarda a condição nova sem mexer em quem já está na lista. Reaplique depois para a lista refletir a condição nova."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Transformar em segmento"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quando a lista precisa se manter sozinha, clique em "
+        },
+        {
+          "type": "text",
+          "text": "Transformar em segmento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e confirme em "
+        },
+        {
+          "type": "text",
+          "text": "Criar segmento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Um segmento novo é criado com a mesma condição e o nome da lista seguido de \"(segmento)\". A lista continua como está."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Campanhas e automações que usam a lista continuam usando a lista. Para que passem a usar o segmento, troque o público em cada uma."
+    },
+    {
+      "type": "linkCards",
+      "title": "Continue",
+      "items": [
+        {
+          "ref": "audiencia/segmentos-e-listas/criar-uma-lista-fixa",
+          "description": "Como criar uma lista a partir de uma condição."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+          "description": "Como funciona um segmento."
+        }
+      ]
+    }
+  ]
+}
