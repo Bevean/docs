@@ -324,7 +324,25 @@
           "answer": [
             {
               "type": "paragraph",
-              "content": "Ainda não. \"Data de aniversário\" compara só dia e mês e ignora o ano, por isso serve para aniversário, não para idade. A idade aparece como leitura no cartão \"Quem são?\" do painel."
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Sim, com a condição "
+                },
+                {
+                  "type": "text",
+                  "text": "Idade",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ", em Dados do contato › Perfil e endereço. Não use \"Data de aniversário\" para isso: ela compara só dia e mês e ignora o ano. Contatos sem data de nascimento cadastrada ficam fora de qualquer faixa."
+                }
+              ]
             }
           ]
         },

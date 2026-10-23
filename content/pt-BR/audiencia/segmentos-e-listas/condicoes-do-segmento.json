@@ -9,7 +9,9 @@
     "comprou",
     "não comprou",
     "carrinho abandonado",
-    "engajamento"
+    "engajamento",
+    "idade",
+    "faixa etária"
   ],
   "related": [
     "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
@@ -552,10 +554,98 @@
       "body": [
         {
           "type": "paragraph",
-          "content": "\"Data de aniversário entre 01/01/1990 e 31/12/1999\" traz quem faz aniversário nesse intervalo de dias, de qualquer idade: o ano é ignorado. A condição serve para campanha de aniversário, não para faixa etária."
+          "content": [
+            {
+              "type": "text",
+              "text": "\"Data de aniversário entre 01/01/1990 e 31/12/1999\" traz quem faz aniversário nesse intervalo de dias, de qualquer idade: o ano é ignorado. A condição serve para campanha de aniversário. Para faixa etária, use "
+            },
+            {
+              "type": "text",
+              "text": "Idade",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
         }
       ],
       "title": "Data de aniversário compara só dia e mês"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Idade",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", em Perfil e endereço, é calculada pela data de nascimento do contato, no dia de hoje. Escolha "
+        },
+        {
+          "type": "text",
+          "text": "a partir de",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "até",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ou "
+        },
+        {
+          "type": "text",
+          "text": "entre",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e digite os anos: \"entre 18 e 24\" inclui quem tem 18 e quem tem 24. Quem não tem data de nascimento cadastrada fica de fora; para encontrar essas pessoas, use "
+        },
+        {
+          "type": "text",
+          "text": "não informada",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
     },
     {
       "type": "paragraph",
