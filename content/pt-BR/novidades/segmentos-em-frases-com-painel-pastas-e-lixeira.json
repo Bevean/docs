@@ -1,0 +1,318 @@
+{
+  "$schema": "../../../.vscode/schemas/article.schema.json",
+  "title": "Segmentos em frases, com painel, pastas e Lixeira",
+  "subtitle": "Monte o público como você falaria — quem comprou, quem não comprou, quem abriu — e veja num painel quem entrou e como esse grupo se comporta.",
+  "updatedAt": "2026-10-23",
+  "publishedAt": "2026-10-23",
+  "tags": [
+    "Audiência",
+    "Segmentos",
+    "Listas"
+  ],
+  "related": [
+    "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+    "audiencia/segmentos-e-listas/condicoes-do-segmento",
+    "audiencia/segmentos-e-listas/painel-do-segmento",
+    "audiencia/segmentos-e-listas/pastas-e-lixeira"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "content": "O construtor de segmentos mudou. Em vez de escolher grupo, campo e operador, você monta o público em frases: \"Fez · Comprou · nos últimos 30 dias\", \"Não fez · Abriu mensagem · nos últimos 60 dias\", \"Está em · Campeões\". E cada segmento ganhou um painel que mostra quem está dentro."
+    },
+    {
+      "type": "pillars",
+      "items": [
+        {
+          "title": "Monte em frases",
+          "content": "O que o contato fez ou não fez, os dados dele e onde ele está, ligados por E e OU."
+        },
+        {
+          "title": "\"Não comprou\" de verdade",
+          "content": "Comprou ou não comprou, abriu ou não abriu, num período, com produto, categoria, marca ou canal."
+        },
+        {
+          "title": "Um painel por segmento",
+          "content": "Quem são, como alcançar, o que compram, como reagem e quanto rendem, comparado com a base."
+        },
+        {
+          "title": "Pastas e Lixeira",
+          "content": "Organize a listagem e restaure o que foi excluído sem querer."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Nada muda em quem está dentro dos segmentos que você já tem. Ao abrir um segmento antigo para editar, as condições aparecem no formato novo. Se alguma não tiver equivalente, a tela avisa e mostra o público atual para você comparar antes de salvar."
+        }
+      ],
+      "title": "Seus segmentos continuam com o mesmo público"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Monte o público em frases"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cada condição é uma frase. Use "
+        },
+        {
+          "type": "text",
+          "text": "+ E",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para algo que também precisa valer e "
+        },
+        {
+          "type": "text",
+          "text": "+ OU",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para uma alternativa. A contagem aparece sozinha, por condição e no total, sem precisar de botão."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ao adicionar uma condição, escolha entre "
+        },
+        {
+          "type": "text",
+          "text": "O que o contato fez ou não fez",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "text",
+          "text": "Dados do contato",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "text",
+          "text": "Está ou não está em",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que agora inclui as faixas da Matriz RFV."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Comprou, não comprou, abriu, não abriu"
+    },
+    {
+      "type": "paragraph",
+      "content": "\"Fez\" e \"Não fez\" valem para compra, carrinho, navegação e mensagens, no período que você quiser: nos últimos dias, entre dias atrás, entre datas ou em qualquer período. A compra filtra por produto, SKU, categoria ou marca, valor do pedido, loja e vendedor. As mensagens, por canal e por campanha ou automação."
+    },
+    {
+      "type": "paragraph",
+      "content": "Também dá para usar a navegação no site: quem viu um produto, uma categoria ou uma página, desde que estivesse identificado."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Um painel para cada segmento"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A primeira aba de cada segmento agora é o "
+        },
+        {
+          "type": "text",
+          "text": "Painel",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Ele mostra quantos contatos dá para alcançar, quem não tem nenhum canal válido, o ticket médio, a abertura das mensagens enviadas e a receita, sempre ao lado da média da sua base."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "As "
+        },
+        {
+          "type": "text",
+          "text": "Leituras",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " destacam o que saiu do normal, como contatos sem canal ou um segmento parado sem envio, com o botão para agir. Quem entrou, saiu ou está sem canal pode ser baixado em CSV ou adicionado a uma lista."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Listas que você atualiza quando quiser"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Uma lista pode nascer de uma condição e guardar quem atende naquele momento. Depois, "
+        },
+        {
+          "type": "text",
+          "text": "Reaplicar condição",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " traz quem passou a atender e, se você quiser, tira quem deixou. Quando ela precisar se manter sozinha, "
+        },
+        {
+          "type": "text",
+          "text": "Transformar em segmento",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Pastas e Lixeira"
+    },
+    {
+      "type": "paragraph",
+      "content": "Agrupe segmentos e listas em pastas. Excluir manda para a Lixeira, de onde dá para restaurar. Um segmento usado por campanha, automação ou outro segmento não pode ser excluído: a tela recusa, para nada parar de funcionar sem você perceber."
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Meus segmentos antigos mudaram?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Não. O público continua o mesmo. Ao editar, as condições aparecem no formato novo; as de compra mantêm \"Incluir pedidos não aprovados\" ligado, porque o construtor anterior contava pedidos de qualquer status."
+            }
+          ]
+        },
+        {
+          "question": "Por que não consigo excluir um segmento?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Porque ele está em uso por uma campanha ou automação agendada, em andamento ou pausada, por uma campanha anterior ou por outro segmento. Veja o que fazer em cada caso no artigo Pastas e Lixeira."
+            }
+          ]
+        },
+        {
+          "question": "O painel demorou para abrir. É normal?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "Na primeira abertura do dia, a Bevean calcula os números da base inteira para comparar, o que pode levar até um minuto. Os cartões aparecem conforme ficam prontos, e as aberturas seguintes são imediatas."
+            }
+          ]
+        },
+        {
+          "question": "\"Não comprou nos últimos 30 dias\" trouxe menos gente do que eu esperava.",
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": "\"Não fez\" num período considera só quem já era contato antes do início do período. Quem se cadastrou nesses 30 dias fica de fora, mesmo sem ter comprado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "linkCards",
+      "title": "Como usar",
+      "items": [
+        {
+          "ref": "audiencia/segmentos-e-listas/criar-um-segmento-dinamico",
+          "description": "Monte e salve um segmento."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/condicoes-do-segmento",
+          "description": "Tudo o que dá para usar em cada condição."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/painel-do-segmento",
+          "description": "Leia cada cartão e cada leitura do painel."
+        },
+        {
+          "ref": "audiencia/segmentos-e-listas/pastas-e-lixeira",
+          "description": "Organize, exclua e restaure."
+        }
+      ]
+    }
+  ]
+}
