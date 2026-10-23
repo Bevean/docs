@@ -2,12 +2,15 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Conectar a Nuvemshop",
   "subtitle": "Sem credencial para copiar — é um aplicativo que você autoriza direto na Nuvemshop, e a sincronização começa sozinha.",
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-23",
   "tags": [
     "nuvemshop",
     "app",
     "autorizar",
-    "reconectar"
+    "reconectar",
+    "webhooks",
+    "verificar webhooks",
+    "reinstalar webhooks"
   ],
   "related": [
     "integracoes/lojas-e-erps/como-funcionam-as-integracoes",
@@ -255,6 +258,216 @@
         }
       ],
       "title": "Use a mesma loja"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Conferir os avisos automáticos"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os avisos automáticos (webhooks) fazem pedidos, clientes e produtos novos chegarem à Bevean quase na hora. Se eles somem da Nuvemshop, a integração continua com o status "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e os dados continuam chegando, só que pela sincronização periódica, com atraso. Por isso vale conferir quando pedidos novos demoram a aparecer ou uma automação dispara mais tarde que o esperado."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": "Abra a integração e vá até a aba Webhooks"
+        },
+        {
+          "title": "Clique em Verificar webhooks",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "A Bevean consulta a Nuvemshop e compara os avisos registrados na loja com os que a integração precisa. Nada é alterado nessa consulta."
+            }
+          ]
+        },
+        {
+          "title": "Siga o que o aviso indicar",
+          "body": [
+            {
+              "type": "paragraph",
+              "content": "Os resultados possíveis estão na tabela abaixo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        {
+          "content": "Aviso"
+        },
+        {
+          "content": "O que significa"
+        },
+        {
+          "content": "O que fazer"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Webhooks instalados corretamente",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Todos os avisos dos tipos de dado ligados estão registrados na Nuvemshop"
+          },
+          {
+            "content": "Nada"
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Webhooks incompletos na Nuvemshop",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "Faltam avisos na Nuvemshop, ou há avisos de um tipo de dado que você desligou. O aviso lista quais são"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Clique em "
+              },
+              {
+                "type": "text",
+                "text": "Reinstalar webhooks",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "A Nuvemshop recusou o acesso",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "A autorização da loja venceu ou foi removida"
+          },
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Clique em "
+              },
+              {
+                "type": "text",
+                "text": "Reconectar",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " e siga os passos de reconexão acima"
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Não foi possível consultar a Nuvemshop",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "A Nuvemshop não respondeu naquele momento"
+          },
+          {
+            "content": "Tente de novo em alguns instantes"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "info",
+      "title": "Reinstalar não muda sua configuração",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Reinstalar webhooks",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " recria só os avisos dos tipos de dado ligados na aba Webhooks. A sincronização, o mapeamento de status e os dados que já chegaram continuam como estão. Depois de reinstalar, a verificação roda de novo sozinha."
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "linkCards",

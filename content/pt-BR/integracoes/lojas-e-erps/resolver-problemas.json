@@ -2,13 +2,16 @@
   "$schema": "../../../../.vscode/schemas/article.schema.json",
   "title": "Uma integração não está sincronizando",
   "subtitle": "Roteiros para quando a integração fica Inativa, um tipo de dado nunca chega, ela trava em Conectado sem virar Ativa, ou você precisa desconectar sem perder o histórico.",
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-23",
   "tags": [
     "inativo",
     "não sincroniza",
     "conectado mas não ativo",
     "desconectar",
-    "erro"
+    "erro",
+    "atraso",
+    "demora",
+    "webhooks"
   ],
   "related": [
     "integracoes/lojas-e-erps/como-funcionam-as-integracoes"
@@ -198,6 +201,75 @@
             "content": "Nem toda plataforma oferece todos os tipos — confira o que a sua integração sincroniza no artigo específico dela"
           }
         ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Pedidos novos demoram a aparecer"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A integração está com o status "
+        },
+        {
+          "type": "text",
+          "text": "Ativo",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e os dados chegam, mas com atraso. O mais comum é a loja ter perdido os avisos automáticos (webhooks) que fazem os dados chegarem quase na hora. Na Nuvemshop, isso se confere na aba "
+        },
+        {
+          "type": "text",
+          "text": "Webhooks",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " da integração, pelo botão "
+        },
+        {
+          "type": "text",
+          "text": "Verificar webhooks",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O passo a passo está em "
+        },
+        {
+          "type": "text",
+          "text": "conferir os avisos automáticos da Nuvemshop",
+          "marks": [
+            {
+              "type": "docLink",
+              "attrs": {
+                "ref": "integracoes/lojas-e-erps/conectar-a-nuvemshop"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
       ]
     },
     {
